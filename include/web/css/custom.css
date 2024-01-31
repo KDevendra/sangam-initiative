@@ -1,0 +1,8 @@
+.service-info .title{font-size: 16px;height:20px}
+.service-info .icon img{height:60px;margin-bottom: 10px;}
+.single-service-item .service-info .shape.icon-shape img{opacity: 0.1;}
+.service-info .icon-shape{top: 9px;}
+.single-service-item .service-info .shape.icon-shape {
+    right: 0 !important;
+    bottom: 0;
+}

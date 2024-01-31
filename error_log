@@ -1,0 +1,8 @@
+[04-Feb-2023 07:18:26 UTC] PHP Fatal error:  Cannot use temporary expression in write context in /home/tqgouejh/public_html/demo/application/controllers/Welcome.php on line 193
+[04-Feb-2023 07:18:26 UTC] PHP Fatal error:  Cannot use temporary expression in write context in /home/tqgouejh/public_html/demo/application/controllers/Welcome.php on line 193
+[02-Mar-2023 05:45:24 UTC] PHP Fatal error:  Cannot use empty array elements in arrays in /home/tqgouejh/public_html/demo/application/controllers/Admin.php on line 67
+[02-Mar-2023 13:19:43 Asia/kolkata] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/tqgouejh/public_html/demo/application/views/common/adminHead.php on line 42
+[31-Mar-2023 04:21:39 UTC] PHP Warning:  POST Content-Length of 21528379 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[31-Mar-2023 04:23:18 UTC] PHP Warning:  POST Content-Length of 21528379 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[31-Mar-2023 04:30:36 UTC] PHP Warning:  POST Content-Length of 21528379 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[31-Mar-2023 04:36:07 UTC] PHP Warning:  POST Content-Length of 21528379 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
