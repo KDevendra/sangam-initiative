@@ -51,10 +51,8 @@
                         <div class="row no-gutters">
                             <div class="col-lg-4 sidebar-widget">
                                 <div class="sidebar-info-widget">
-                                    <a href="index.html" class="footer-logo"><img src="<?php echo base_url(''); ?>include/web/images/logo/logo-white.png" alt="Brand Logo"></a>
-                                    <p>Sed ut perspiciatis unde omni natus voluptatem accusantium doloremque laudantium aperia maquep quae abillo
-                                        inventore veritatis architecto
-                                    </p>
+                                    <a href="index.html" class="footer-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications_White.png" alt="Brand Logo"></a>
+                                    <p>Sangam is on a mission to transform infrastructure planning and design by converging digital technologies and data. </p>
                                     <div class="social-item">
                                         <h6>Follow Us</h6>
                                         <ul class="social-link">
@@ -170,13 +168,24 @@
         <div class="header-navigation">
             <div class="nav-overlay"></div>
             <div class="container-fluid">
+                <div class="header-top-bar text-white main-bg d-xl-block topNavbar">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="imgPerent">
+                                <img src="<?php echo base_url('') ?>include/web/custom/india-gov-in.png" alt="">
+                                <img src="<?php echo base_url('') ?>include/web/custom/g20-logo.png" alt="">
+                                <img src="<?php echo base_url('') ?>include/web/custom/swachh-bharat.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="primary-menu">
                     <div class="site-branding">
-                        <a href="index.html" class="brand-logo"><img src="<?php echo base_url(''); ?>include/web/images/logo/logo-black.png" alt="Site Logo"></a>
+                        <a href="index.html" class="brand-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications.png" alt="Site Logo"></a>
                     </div>
                     <div class="nav-menu">
                         <div class="mobile-logo mb-30 d-block d-xl-none">
-                            <a href="index.html" class="brand-logo"><img src="<?php echo base_url(''); ?>include/web/images/logo/logo-black.png" alt="Site Logo"></a>
+                            <a href="index.html" class="brand-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications.png" alt="Site Logo"></a>
                         </div>
                         <div class="nav-search mb-30 d-block d-xl-none ">
                             <form>
@@ -410,7 +419,7 @@
         <div class="container">
             <div class="row align-items-xl-center">
                 <div class="col-xl-6">
-                    <div class="about-one_image-box mb-50 p-r z-1 wow fadeInLeft">
+                    <div class="about-one_image-box  p-r z-1 wow fadeInLeft">
                         <div class="shape shape-one"><span></span></div>
                         <img src="<?php echo base_url(''); ?>include/web/custom/Environmental_Data.jpg" class="about-img-one" alt="About Image">
                         <img src="<?php echo base_url(''); ?>include/web/custom/Generation_Planning.jpg" class="about-img-two" alt="About Image">
@@ -618,7 +627,7 @@
                         </div>
                     </div>
                     <div class="col-xl-4">
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-center width100EligibilityBox">
                             <div class="col-md-12">
                                 <a href="">
                                     <div class="single-info-item style-one mb-20 wow fadeInUp" style="visibility: visible;">
@@ -1029,7 +1038,8 @@
         <div class="container">
             <div class="row align-items-xl-center">
                 <div class="col-lg-12 text-center">
-                    <div class="section-title mb-55 wow fadeInLeft" style="visibility: visible;"><span class="sub-title"><img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt=""> Answers to Common Queries about Participation and Submission</span>
+                    <div class="section-title mb-55 wow fadeInLeft" style="visibility: visible;">
+                        <span class="sub-title"><img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt=""> Answers to Common Queries about Participation and Submission</span>
                         <h2>Frequently Asked Questions</h2>
                     </div>
                 </div>
@@ -1213,7 +1223,7 @@
                         </div>
                         <div class="member-info text-center">
                             <h4 class="title"><a href="">Benjamin Hughes</a></h4>
-                            <p>Senior Gardener</p>
+                            <p>Senior Speaker</p>
                         </div>
                     </div>
                 </div>
@@ -1232,7 +1242,7 @@
                         </div>
                         <div class="member-info text-center">
                             <h4 class="title"><a href="">Chester J. Thurman</a></h4>
-                            <p>Junior Gardener</p>
+                            <p>Junior Speaker</p>
                         </div>
                     </div>
                 </div>
@@ -1251,7 +1261,7 @@
                         </div>
                         <div class="member-info text-center">
                             <h4 class="title"><a href="">Benjamin Hughes</a></h4>
-                            <p>Senior Gardener</p>
+                            <p>Senior Speaker</p>
                         </div>
                     </div>
                 </div>
@@ -1356,7 +1366,7 @@
                             <div class="footer-widget footer-about-widget mb-40 pr-lg-70 wow fadeInDown">
                                 <div class="widget-content">
                                     <div class="footer-logo mb-25">
-                                        <a href="index.html"><img src="<?php echo base_url(''); ?>include/web/images/logo/logo-white.png" alt="Logo"></a>
+                                        <a href="index.html"><img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications_White.png" alt="Logo"></a>
                                     </div>
                                     <p>Sangam is on a mission to transform infrastructure planning and design by converging digital technologies and data.
                                     </p>
@@ -1426,6 +1436,19 @@
             </div>
         </div>
     </footer>
+    <div class="wrapper">
+        <section>
+            <i class="bx bx-cookie"></i>
+            <h4>Cookies Consent</h4>
+        </section>
+        <div class="content">
+            <p>This website use cookies to help you have a superior and more relevant browsing experience on the website.</p>
+        </div>
+        <div class="controls">
+            <button class="button" id="acceptBtn">Accept</button>
+            <button class="button" id="declineBtn">Decline</button>
+        </div>
+    </div>
     <a href="#" class="back-to-top"><i class="far fa-angle-up"></i></a>
     <script src="<?php echo base_url(''); ?>include/web/vendor/jquery-3.6.0.min.js"></script>
     <script src="<?php echo base_url(''); ?>include/web/vendor/popper/popper.min.js"></script>
@@ -1460,6 +1483,21 @@
                 }
             });
         });
+        const cookieBox = document.querySelector(".wrapper"),
+            buttons = document.querySelectorAll(".button");
+        const executeCodes = () => {
+            if (document.cookie.includes("codinglab")) return;
+            cookieBox.classList.add("show");
+            buttons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    cookieBox.classList.remove("show");
+                    if (button.id == "acceptBtn") {
+                        document.cookie = "cookieBy= codinglab; max-age=" + 60 * 60 * 24 * 30;
+                    }
+                });
+            });
+        };
+        window.addEventListener("load", executeCodes);
     </script>
 </body>
 
