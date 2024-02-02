@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Circle with Image and Text</title>
+  <style>
+    .circle {
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      position: relative;
+      background: conic-gradient(
+        #3498db 0deg 120deg,
+        #2ecc71 120deg 240deg,
+        #e74c3c 240deg 360deg
+      ); 
+    }
+    .text {
+      position: absolute;
+      color: white;
+      font-size: 12px;
+      transform: translateX(-50%);
+    }
+    .text-1 {
+      top: 90%;
+      left: 50%;
+      transform: translateX(-50%) rotate(-90deg); /* Rotate text */
+    }
+    .text-2 {
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%) rotate(90deg); /* Rotate text */
+    }
+    .text-3 {
+      top: 50%;
+      left: 90%;
+      transform: translateY(-50%); /* Center text */
+    }
+    .center-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 380px; /* Adjust image size */
+      height: 380px; /* Adjust image size */
+      border-radius: 50%;
+      border: 3px solid white; /* Optional: Add border to image */
+    }
+  </style>
+</head>
+<body>
+  <div class="circle">
+    <div class="text text-1">Text 1</div>
+    <div class="text text-2">Text 2</div>
+    <div class="text text-3">Text 3</div>
+    <img src="https://via.placeholder.com/380" alt="Center Image" class="center-image"> <!-- Replace with your image URL -->
+  </div>
+</body>
+</html>
