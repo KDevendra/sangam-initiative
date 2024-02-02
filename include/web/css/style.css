@@ -31,22 +31,22 @@
     
 -----------------------------------------------------------------------------------*/
 h1, h2, h3, .hero-content .sub-title, h4, h5, .comments-area .comment .comment-wrap .comment-author-content span.author-name, h6, .main-btn.filled-btn, .btn-link, .hero-slider-two .slick-arrow:hover, .client-quote-box .text h2.number, .sidebar-widget-area .widget-newsletter .sidebar-content .form_control::-webkit-input-placeholder, .sub-title, .btn-link:hover, .header-navigation.breakpoint-on .nav-search .search-btn, .header-one .header-navigation .main-menu ul > li .search-btn, .header-two .header-navigation.sticky .main-menu ul > li > a, .header-two .header-navigation.sticky .nav-right-item .lang-dropdown .nice-select, .header-three .header-navigation .nav-right-item .nice-select ul.list li, .about-two_content-box .about-inner-content .experience-box-two h6, .about-features-item .icon, .circle-logo .inner-circle i, .features-thumb-item .content .icon i, .features-thumb-item .content .icon-btn, .features-thumb-item-two .text .icon i, .single-features-item .icon i, .single-features-item .text h5.title, .features-list li, .single-category-item .icon i, .single-service-item .service-info .icon i, .project-filter li, .single-project-item-three .project-img .icon-btn, .project-details-wrapper .project-info-widget .info-content ul li span, .single-gallery-item .gallery-img .hover-overlay .icon-btn, .team-details-wrapper .member-info .member-meta .member-contact-info p, .team-details-wrapper .member-info .member-meta .member-contact-info ul.social-link li a, .single-pricing-item:hover .pricing-body .pricing-button .main-btn, .product-details-wrapper .product-info .product-meta li span, .product-details-wrapper .product-info ul.social-link li span, .sidebar-widget-area .widget-search form .form_control::-webkit-input-placeholder, .sidebar-widget-area .widget-service-nav ul li a, .sidebar-widget-area .widget-tag-cloud a, .sidebar-widget-area .widget-price-filter .price-number input, .gadden-pagination li a, .single-information-item .icon, .single-info-item.style-three .info span, .single-info-item.style-three .info h4.title, .footer-experience-widget .experience-box-two h2.number, .footer-gallery-widget .gallery-list li a .hover-overlay i {
-  color: #0B3D2C; }
+  color: #3d3d99; }
 h1, h2, h3, .hero-content .sub-title, h4, h5, .comments-area .comment .comment-wrap .comment-author-content span.author-name, h6, .main-btn.filled-btn, .btn-link, .hero-slider-two .slick-arrow:hover, .client-quote-box .text h2.number, .sidebar-widget-area .widget-newsletter .sidebar-content .form_control:-ms-input-placeholder, .sub-title, .btn-link:hover, .header-navigation.breakpoint-on .nav-search .search-btn, .header-one .header-navigation .main-menu ul > li .search-btn, .header-two .header-navigation.sticky .main-menu ul > li > a, .header-two .header-navigation.sticky .nav-right-item .lang-dropdown .nice-select, .header-three .header-navigation .nav-right-item .nice-select ul.list li, .about-two_content-box .about-inner-content .experience-box-two h6, .about-features-item .icon, .circle-logo .inner-circle i, .features-thumb-item .content .icon i, .features-thumb-item .content .icon-btn, .features-thumb-item-two .text .icon i, .single-features-item .icon i, .single-features-item .text h5.title, .features-list li, .single-category-item .icon i, .single-service-item .service-info .icon i, .project-filter li, .single-project-item-three .project-img .icon-btn, .project-details-wrapper .project-info-widget .info-content ul li span, .single-gallery-item .gallery-img .hover-overlay .icon-btn, .team-details-wrapper .member-info .member-meta .member-contact-info p, .team-details-wrapper .member-info .member-meta .member-contact-info ul.social-link li a, .single-pricing-item:hover .pricing-body .pricing-button .main-btn, .product-details-wrapper .product-info .product-meta li span, .product-details-wrapper .product-info ul.social-link li span, .sidebar-widget-area .widget-search form .form_control:-ms-input-placeholder, .sidebar-widget-area .widget-service-nav ul li a, .sidebar-widget-area .widget-tag-cloud a, .sidebar-widget-area .widget-price-filter .price-number input, .gadden-pagination li a, .single-information-item .icon, .single-info-item.style-three .info span, .single-info-item.style-three .info h4.title, .footer-experience-widget .experience-box-two h2.number, .footer-gallery-widget .gallery-list li a .hover-overlay i {
-  color: #0B3D2C; }
+  color: #3d3d99; }
 h1, h2, h3, .hero-content .sub-title, h4, h5, .comments-area .comment .comment-wrap .comment-author-content span.author-name, h6, .main-btn.filled-btn, .btn-link, .hero-slider-two .slick-arrow:hover, .client-quote-box .text h2.number, .sidebar-widget-area .widget-newsletter .sidebar-content .form_control::-ms-input-placeholder, .sub-title, .btn-link:hover, .header-navigation.breakpoint-on .nav-search .search-btn, .header-one .header-navigation .main-menu ul > li .search-btn, .header-two .header-navigation.sticky .main-menu ul > li > a, .header-two .header-navigation.sticky .nav-right-item .lang-dropdown .nice-select, .header-three .header-navigation .nav-right-item .nice-select ul.list li, .about-two_content-box .about-inner-content .experience-box-two h6, .about-features-item .icon, .circle-logo .inner-circle i, .features-thumb-item .content .icon i, .features-thumb-item .content .icon-btn, .features-thumb-item-two .text .icon i, .single-features-item .icon i, .single-features-item .text h5.title, .features-list li, .single-category-item .icon i, .single-service-item .service-info .icon i, .project-filter li, .single-project-item-three .project-img .icon-btn, .project-details-wrapper .project-info-widget .info-content ul li span, .single-gallery-item .gallery-img .hover-overlay .icon-btn, .team-details-wrapper .member-info .member-meta .member-contact-info p, .team-details-wrapper .member-info .member-meta .member-contact-info ul.social-link li a, .single-pricing-item:hover .pricing-body .pricing-button .main-btn, .product-details-wrapper .product-info .product-meta li span, .product-details-wrapper .product-info ul.social-link li span, .sidebar-widget-area .widget-search form .form_control::-ms-input-placeholder, .sidebar-widget-area .widget-service-nav ul li a, .sidebar-widget-area .widget-tag-cloud a, .sidebar-widget-area .widget-price-filter .price-number input, .gadden-pagination li a, .single-information-item .icon, .single-info-item.style-three .info span, .single-info-item.style-three .info h4.title, .footer-experience-widget .experience-box-two h2.number, .footer-gallery-widget .gallery-list li a .hover-overlay i {
-  color: #0B3D2C; }
+  color: #3d3d99; }
 h1, h2, h3, .hero-content .sub-title, h4, h5, .comments-area .comment .comment-wrap .comment-author-content span.author-name, h6, .main-btn.filled-btn, .btn-link, .hero-slider-two .slick-arrow:hover, .client-quote-box .text h2.number, .sidebar-widget-area .widget-newsletter .sidebar-content .form_control::placeholder, .sub-title, .btn-link:hover, .header-navigation.breakpoint-on .nav-search .search-btn, .header-one .header-navigation .main-menu ul > li .search-btn, .header-two .header-navigation.sticky .main-menu ul > li > a, .header-two .header-navigation.sticky .nav-right-item .lang-dropdown .nice-select, .header-three .header-navigation .nav-right-item .nice-select ul.list li, .about-two_content-box .about-inner-content .experience-box-two h6, .about-features-item .icon, .circle-logo .inner-circle i, .features-thumb-item .content .icon i, .features-thumb-item .content .icon-btn, .features-thumb-item-two .text .icon i, .single-features-item .icon i, .single-features-item .text h5.title, .features-list li, .single-category-item .icon i, .single-service-item .service-info .icon i, .project-filter li, .single-project-item-three .project-img .icon-btn, .project-details-wrapper .project-info-widget .info-content ul li span, .single-gallery-item .gallery-img .hover-overlay .icon-btn, .team-details-wrapper .member-info .member-meta .member-contact-info p, .team-details-wrapper .member-info .member-meta .member-contact-info ul.social-link li a, .single-pricing-item:hover .pricing-body .pricing-button .main-btn, .product-details-wrapper .product-info .product-meta li span, .product-details-wrapper .product-info ul.social-link li span, .sidebar-widget-area .widget-search form .form_control::placeholder, .sidebar-widget-area .widget-service-nav ul li a, .sidebar-widget-area .widget-tag-cloud a, .sidebar-widget-area .widget-price-filter .price-number input, .gadden-pagination li a, .single-information-item .icon, .single-info-item.style-three .info span, .single-info-item.style-three .info h4.title, .footer-experience-widget .experience-box-two h2.number, .footer-gallery-widget .gallery-list li a .hover-overlay i {
-  color: #0B3D2C; }
+  color: #3d3d99; }
 
 .header-navigation .main-menu ul > li .sub-menu li a:hover, .header-navigation .main-menu ul > li .sub-menu li:hover > a, .header-navigation .main-menu ul > li:hover > a, .header-top-bar .top-right ul.social-link li a:hover, .header-top-bar-two .top-left span b, .header-top-bar-two .top-left span i, .header-top-bar-two .top-left span:hover a, .header-top-bar-two .top-right .social-link li a:hover, .header-one .header-navigation .main-menu ul > li .search-btn:hover, .header-two .header-navigation.sticky .main-menu ul > li .sub-menu li a:hover, .header-two .header-navigation .main-menu ul > li:hover > a, .header-three .header-navigation .nav-right-item .menu-button .main-btn.secondary-btn:hover, .navigation-white.header-navigation .main-menu ul > li:hover > a, .hero-play .video-popup, .about-two_content-box .about-inner-content .experience-box-two h2.number, .fancy-about-item .text h5 i, .experience-box .btn-link, .experience-box-two h6, .fancy-icon-box .icon i, .fancy-icon-box-two .icon i, .single-process-item .icon, .cta-two_content-box h4, .single-service-item .service-info h4.title:hover, .navigation-item .text h3.title:hover, .project-filter li:hover, .project-filter li.active, .single-project-item-four .project-img .project-content .text h3.title:hover, .single-team-item .member-info h3.title:hover, .team-details-wrapper .member-info .member-meta .member-contact-info p a:hover, .single-pricing-item .pricing-body ul li i, .single-pricing-item-two .pricing-body ul li i, .single-product-item .product-info h4:hover, .product-details-wrapper .product-info ul.ratings li a:hover, .product-details-wrapper .product-info span.price, .product-details-wrapper .product-info .product-meta li a:hover, .product-details-wrapper .product-info ul.social-link li a, .checkout-faqs .alert h6 a:hover, .post-meta span:hover, .single-blog-post .entry-content .cat-link:hover, .single-blog-post .entry-content h4.entry-title:hover, .single-blog-post-two .entry-content .author h6:hover a, .single-blog-post-two .entry-content h4.entry-title:hover, .single-blog-post-three .entry-content .author h6:hover a, .single-blog-post-three .entry-content h3.title:hover, .single-blog-post-four .entry-content h4.entry-title:hover, .single-blog-post-four .entry-content .btn-link:hover, .blog-details-wrapper .blog-post .entry-footer .social-share a:hover, .post-author-box .author-content ul.social-link li a:hover, .post-navigation-item .post-nav-item .content h6:hover, .post-navigation-item .post-nav-item .content span.post-date:hover, .sidebar-widget-area .widget-recent-post .recent-post-list .post-thumbnail-content .post-title-date span.posted-on:hover, .sidebar-widget-area .widget-recent-post .recent-post-list .post-thumbnail-content .post-title-date h6:hover, .contact-info-item .info h6:hover a, .contact-info-item-two h6.title i, .single-information-item .info h5:hover a, .contact-info-widget .info-list li a:hover, .footer-nav-widget .footer-nav li a:hover {
-  color: #2A7D2E; }
+  color: #29c5f6; }
 
 .main-btn.golden-btn, .header-navigation .main-menu ul > li > a, .header-middle .menu-right-item span, .header-two .header-navigation .nav-right-item .lang-dropdown .nice-select .list li, .choose-content-box .thumb-content .check-style-one li, .features-thumb-item .content h5.title, .single-process-item .step, .single-counter-item p, .project-details-wrapper .project-info-widget .info-content h6, .single-team-item .member-img .icon-btn, .single-pricing-item .pricing-body h2.price span.duration, .single-pricing-item-two .pricing-body .pricing-title h2.price span.duration, .single-blog-post .entry-content .author-meta .author h6 span, .single-information-item .info span, .footer-experience-widget .experience-box-two h6 {
   color: #000000; }
 
 .text-white .sub-title, .social-box ul.social-link li a:hover, .single-testimonial-item-three .testimonial-inner-content ul.ratings li i, .single-testimonial-item-three .testimonial-inner-content .quote-title .title p.position, .single-info-item.style-two .info span, .sidebar-panel-wrapper .close:hover {
-  color: #F1D2A9; }
+  color: #29c5f6; }
 
 .text-white h1,
 .text-white h2,
@@ -59,13 +59,13 @@ h1, h2, h3, .hero-content .sub-title, h4, h5, .comments-area .comment .comment-w
   color: #fff; }
 
 .main-bg, .main-btn.primary-btn, .main-btn.secondary-btn:hover, .main-btn.filled-btn.filled-white:hover, .header-navigation .main-menu ul > li .sub-menu, .header-navigation.breakpoint-on .nav-menu .main-menu ul li .dd-trigger, .header-top-bar-two .top-right .social-link li a:after, .header-one .header-navigation .nav-right-item .navbar-toggler span, .header-two .header-navigation .navbar-toggler span, ul.check-style-one li i, .experience-box-two .icon-btn, .client-avatar-box-two .avatar-thumbs ul li .icon-btn, .fancy-icon-box-two:hover, .single-process-item:hover .step, .single-process-item:hover .icon, .social-box ul.social-link, .single-category-item:hover .icon i, .project-filter li:after, .project-details-wrapper .project-info-widget .info-content h6:after, .team-details-wrapper .member-info .member-meta .member-contact-info ul.social-link li a:hover, .single-pricing-item:hover, .single-pricing-item-two:hover .pricing-body .pricing-button .main-btn, .single-product-item .discount, .single-blog-post .entry-content .cat-link:before, .single-blog-post .entry-content .author-meta .icon-btn, .sidebar-widget-area .sidebar-widget h4.widget-title:after, .sidebar-widget-area .widget-post-author .author-content ul.social-link li a, .sidebar-widget-area .widget-service-nav ul li a:hover, .sidebar-widget-area .widget-banner, .sidebar-widget-area .widget-tag-cloud a:hover, .sidebar-widget-area .widget-price-filter .ui-slider-range, .sidebar-widget-area .widget-price-filter .ui-slider-horizontal .ui-slider-handle, .single-info-item.style-one .info .main-btn.golden-btn:hover, .single-info-item.style-two, .gray-bg .footer-widget h4.widget-title:after, .footer-about-widget .widget-content form .submit-btn, .testimonial-wrapper-two {
-  background-color: #0B3D2C; }
+  background-color: #3d3d99; }
 
 .main-btn.primary-btn:hover, .main-btn.secondary-btn, .main-btn.golden-btn:hover, .main-btn.filled-btn:hover, .back-to-top:hover, .back-to-top:focus, .header-two .header-navigation .site-branding a.brand-logo, .choose-nav-tab .nav-link.active:after, .choose-content-box .thumb-content .check-style-one li i, .features-thumb-item-two:hover .text .icon, .single-counter-item:hover .icon, .single-service-item .service-img .icon-btn i, .service-info-wrapper ul.check-style-one li i, .single-project-item-two .project-img .project-overlay .hover-content, .single-project-item-three .project-img .hover-content, .project-details-wrapper ul.check-style-one li i, .single-team-item:hover .member-img .icon-btn, .single-skill-bar .progress-bar .progress, .skill-image-box .circle-logo, .team-details-wrapper .member-info .member-meta .member-contact-info .icon, ul.slick-dots li:after, .product-details-wrapper .product-info ul.social-link li a:hover, .description-wrapper .content-box ul.check-style-one li i, .single-blog-post .entry-content .cat-link:hover:before, .blog-details-wrapper .blog-post .entry-content .wp-block-quote span:before, .blog-details-wrapper .blog-post .entry-footer .tag-links a:hover, .sidebar-widget-area .widget-post-author .author-content ul.social-link li a:hover, .gadden-pagination li a:hover, .single-info-item.style-one, .footer-about-widget .widget-content .main-btn.filled-btn:hover, .footer-about-widget .widget-content form .submit-btn:hover, .footer-nav-widget .footer-nav li a:after, .features-section-two .experience-box-two .icon-btn, .sidebar-panel-wrapper .sidebar-wrapper .sidebar-information-area .sidebar-info-widget .social-item ul.social-link li a:hover {
-  background-color: #2A7D2E; }
+  background-color: #29c5f6; }
 
 .main-btn.golden-btn, .hero-slider-two .slick-arrow:hover, .features-thumb-item:hover .content, .single-features-item-two:hover, .single-process-item .step, .single-counter-item, .single-counter-item-two .icon, .single-service-item-two:hover .icon, .single-service-item-two:hover .text .icon-btn, .projects-slider-one .slick-dots li:after, .single-project-item-two .project-img .project-overlay .icon-btn, .single-project-item-three .project-img .icon-btn, .single-gallery-item .gallery-img .hover-overlay .icon-btn, .testimonial-slider-one .slick-arrow:hover, .single-pricing-item:hover .pricing-body .pricing-button .main-btn, .single-information-item .icon, .single-info-item.style-three, .footer-widget h4.widget-title:after, .footer-gallery-widget .gallery-list li a .hover-overlay i, .sidebar-panel-wrapper .sidebar-wrapper .sidebar-information-area .sidebar-info-widget h4.title:after {
-  background-color: #F1D2A9; }
+  background-color: #29c5f6; }
 
 .page-title-area:after, .sidebar-panel-wrapper .sidebar-wrapper {
   background-color: #000000; }
@@ -599,7 +599,7 @@ button {
   .preloader .pre-box {
     width: 50px;
     height: 50px;
-    background: #0B3D2C;
+    background: #3d3d99;
     -webkit-animation: loaderAnimate .5s linear infinite;
     animation: loaderAnimate .5s linear infinite;
     position: absolute;
@@ -664,7 +664,7 @@ button {
 
 /*====== Start Back to top css ======*/
 .back-to-top {
-  background-color: #0B3D2C;
+  background-color: #3d3d99;
   border-radius: 50%;
   bottom: 30px;
   color: #fff;
@@ -758,7 +758,7 @@ button {
     position: absolute;
     left: 0;
     top: 120%;
-    width: 250px;
+    width: 360px;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all 0.2s;
@@ -806,7 +806,7 @@ button {
       .header-navigation .main-menu ul > li .sub-menu li:hover .sub-menu {
         top: 0%; }
       .header-navigation .main-menu ul > li .sub-menu li:hover > a {
-        border-color: #2A7D2E; }
+        border-color: #29c5f6; }
   .header-navigation .main-menu ul > li:hover > .sub-menu {
     opacity: 1;
     visibility: visible;
@@ -1379,10 +1379,10 @@ button {
   .hero-wrapper-one .shape {
     position: absolute; }
     .hero-wrapper-one .shape.shape-one {
-      top: 150px;
+      top: 115px;
       left: 0; }
     .hero-wrapper-one .shape.shape-two {
-      top: 150px;
+      top: 115px;
       right: 0; }
       @media (max-width: 1199px) {
         .hero-wrapper-one .shape.shape-two {
@@ -1701,13 +1701,13 @@ button {
 .choose-nav-tab {
   margin-bottom: 33px; }
   .choose-nav-tab .nav-item:not(:last-child) .nav-link {
-    padding-left: 0; }
+    padding-left:8px; }
   .choose-nav-tab .nav-link {
     position: relative;
     padding: 0 30px 30px;
     background-color: transparent;
     font: 600 24px "Montserrat", sans-serif;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    border-left: 1px solid rgba(0, 0, 0, 0.1); }
     @media (max-width: 575px) {
       .choose-nav-tab .nav-link {
         font-size: 16px;
@@ -1722,7 +1722,7 @@ button {
 
 /*-=== Choose Content Box ====-*/
 .choose-content-box > p {
-  margin-bottom: 35px; }
+  margin-bottom: 35px; font: 500 16px "Montserrat", sans-serif;line-height: 29.6px;}
 
 .choose-content-box .thumb-content {
   display: -webkit-box;
@@ -1860,7 +1860,7 @@ ul.check-style-one li {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 2px dashed #0B3D2C;
+    border: 2px dashed #3d3d99;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1880,7 +1880,7 @@ ul.check-style-one li {
 .experience-box h4 {
   color: #2F2F2F;
   padding-bottom: 21px;
-  border-bottom: 1px solid #0B3D2C;
+  border-bottom: 1px solid #3d3d99;
   margin-bottom: 22px; }
 
 .experience-box-two {
@@ -1888,8 +1888,8 @@ ul.check-style-one li {
   max-width: 200px;
   text-align: center;
   padding: 25px 40px 35px;
-  border: 1px solid #0B3D2C;
-  border-top: 5px solid #0B3D2C; }
+  border: 1px solid #3d3d99;
+  border-top: 5px solid #3d3d99; }
   .experience-box-two h2.number {
     margin-bottom: 15px; }
   .experience-box-two h6 {
@@ -2235,7 +2235,7 @@ ul.check-style-one li {
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg); }
   .features-list li:hover {
-    border-color: #0B3D2C; }
+    border-color: #3d3d99; }
 
 /*--==== Process Item ====--*/
 .single-process-item {
@@ -2358,7 +2358,9 @@ ul.check-style-one li {
     margin-bottom: 27px;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
-    display: inline-flex; }
+    display: none;
+    /* display: inline-flex; */
+   }
     .single-counter-item-two .icon i {
       font-size: 18px; }
   .single-counter-item-two h2.number {
@@ -2853,7 +2855,7 @@ ul.check-style-one li {
     margin-top: 60px;
     text-align: center; }
     .projects-slider-one .slick-dots li.slick-active {
-      border-color: #F1D2A9; }
+      border-color: #29c5f6; }
 
 .projects-slider-two {
   margin-left: -15px;
@@ -3766,7 +3768,7 @@ ul.slick-dots li {
     height: 7px;
     border-radius: 50%; }
   ul.slick-dots li.slick-active {
-    border-color: #2A7D2E; }
+    border-color: #29c5f6; }
 
 /*--==== Testimonial Slider ====--*/
 .testimonial-slider-one {
@@ -4186,7 +4188,7 @@ ul.slick-dots li {
     .single-pricing-item-two {
       padding: 30px 40px 25px; } }
   .single-pricing-item-two:hover {
-    border-color: #0B3D2C; }
+    border-color: #3d3d99; }
   .single-pricing-item-two .pricing-body .pricing-title {
     padding-bottom: 29px;
     border-bottom: 1px solid rgba(11, 61, 44, 0.1); }
@@ -4381,7 +4383,7 @@ ul.slick-dots li {
       padding: 0 15px 20px;
       font-size: 16px; } }
   .description-tabs .nav-link:hover, .description-tabs .nav-link.active {
-    border-color: #0B3D2C; }
+    border-color: #3d3d99; }
 
 /*--==== Description Wrapper ====--*/
 .description-wrapper .content-box p {
@@ -4416,13 +4418,13 @@ ul.slick-dots li {
   border-radius: 10px;
   line-height: 1.5; }
   .review-form .form_control.placeholder {
-    color: #0B3D2C; }
+    color: #3d3d99; }
   .review-form .form_control:-moz-placeholder {
-    color: #0B3D2C; }
+    color: #3d3d99; }
   .review-form .form_control::-moz-placeholder {
-    color: #0B3D2C; }
+    color: #3d3d99; }
   .review-form .form_control::-webkit-input-placeholder {
-    color: #0B3D2C; }
+    color: #3d3d99; }
 
 /*--==== Product Slider ====--*/
 .recent-product-slider {
@@ -4525,17 +4527,17 @@ ul.slick-dots li {
       font: 600 16px "Montserrat", sans-serif;
       background-color: transparent;
       border: 1px solid rgba(11, 61, 44, 0.1);
-      color: #0B3D2C; }
+      color: #3d3d99; }
       .checkout-faqs .alert form .form_control.placeholder {
-        color: #0B3D2C; }
+        color: #3d3d99; }
       .checkout-faqs .alert form .form_control:-moz-placeholder {
-        color: #0B3D2C; }
+        color: #3d3d99; }
       .checkout-faqs .alert form .form_control::-moz-placeholder {
-        color: #0B3D2C; }
+        color: #3d3d99; }
       .checkout-faqs .alert form .form_control::-webkit-input-placeholder {
-        color: #0B3D2C; }
+        color: #3d3d99; }
       .checkout-faqs .alert form .form_control:focus {
-        border-color: #2A7D2E; }
+        border-color: #29c5f6; }
   .checkout-faqs .alert .form-footer {
     margin-bottom: 10px; }
     .checkout-faqs .alert .form-footer .main-btn {
@@ -4560,7 +4562,7 @@ ul.slick-dots li {
     margin-bottom: 20px;
     padding: 17px 20px;
     line-height: 1.5;
-    color: #0B3D2C;
+    color: #3d3d99;
     -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
@@ -4568,19 +4570,19 @@ ul.slick-dots li {
     transition: all 0.3s ease-out 0s; }
     .checkout-form .nice-select.placeholder,
     .checkout-form .form_control.placeholder {
-      color: #0B3D2C; }
+      color: #3d3d99; }
     .checkout-form .nice-select:-moz-placeholder,
     .checkout-form .form_control:-moz-placeholder {
-      color: #0B3D2C; }
+      color: #3d3d99; }
     .checkout-form .nice-select::-moz-placeholder,
     .checkout-form .form_control::-moz-placeholder {
-      color: #0B3D2C; }
+      color: #3d3d99; }
     .checkout-form .nice-select::-webkit-input-placeholder,
     .checkout-form .form_control::-webkit-input-placeholder {
-      color: #0B3D2C; }
+      color: #3d3d99; }
     .checkout-form .nice-select:focus,
     .checkout-form .form_control:focus {
-      border-color: #2A7D2E; }
+      border-color: #29c5f6; }
   .checkout-form .nice-select:after {
     right: 30px; }
 
@@ -4913,7 +4915,7 @@ ul.slick-dots li {
   font-size: 30px;
   -webkit-padding-start: 40px;
   padding-inline-start: 40px;
-  border-left: 5px solid #0B3D2C;
+  border-left: 5px solid #3d3d99;
   font-size: 30px;
   margin-bottom: 18px; }
   @media (max-width: 767px) {
@@ -5283,7 +5285,7 @@ ul.slick-dots li {
   .sidebar-widget-area .widget-category ul li a i {
     float: right; }
   .sidebar-widget-area .widget-category ul li a:hover {
-    border-color: #0B3D2C; }
+    border-color: #3d3d99; }
 
 .sidebar-widget-area .widget-recent-post .recent-post-list .post-thumbnail-content {
   display: -webkit-box;
@@ -5554,26 +5556,26 @@ ul.slick-dots li {
   padding-bottom: 24px;
   border-bottom: 1px solid rgba(11, 61, 44, 0.1);
   margin-bottom: 25px;
-  color: #0B3D2C;
+  color: #3d3d99;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s; }
   .contact-form .form_control.placeholder {
-    color: #0B3D2C;
+    color: #3d3d99;
     opacity: 1; }
   .contact-form .form_control:-moz-placeholder {
-    color: #0B3D2C;
+    color: #3d3d99;
     opacity: 1; }
   .contact-form .form_control::-moz-placeholder {
-    color: #0B3D2C;
+    color: #3d3d99;
     opacity: 1; }
   .contact-form .form_control::-webkit-input-placeholder {
     color: #0B3D2C;
     opacity: 1; }
   .contact-form .form_control:focus {
-    border-color: #2A7D2E; }
+    border-color: #29c5f6; }
 
 .contact-form textarea.form_control {
   padding-top: 0; }
@@ -5685,7 +5687,7 @@ ul.slick-dots li {
     transition: all 0.4s ease-out 0s; }
 
 .footer-experience-widget .experience-box-two {
-  border-top-color: #F1D2A9; }
+  border-top-color: #29c5f6; }
 
 .footer-gallery-widget .gallery-list {
   display: -webkit-box;
@@ -5828,7 +5830,7 @@ ul.slick-dots li {
     content: '';
     width: 100%;
     height: 100%;
-    background-color: rgba(18, 74, 47, 0.9);
+    background-color: rgba(61, 61, 153, 0.8);
     z-index: -1; }
 
 .cta-bg-section {
@@ -5840,7 +5842,7 @@ ul.slick-dots li {
     content: '';
     width: 100%;
     height: 100%;
-    background-color: rgba(18, 74, 47, 0.8);
+    background-color: rgba(61, 61, 153, 0.8);
     z-index: -1; }
 
 .service-bgc-section .shape {
@@ -5990,7 +5992,7 @@ ul.slick-dots li {
     .about-wrapper {
       padding: 30px 15px 30px; } }
   .about-wrapper .about-three_content-box {
-    padding-top: 50px; }
+    padding-top: 30px; }
 
 .about-wrapper-two {
   padding: 30px;
@@ -6041,7 +6043,8 @@ ul.slick-dots li {
   z-index: 1;
   max-width: 1160px;
   padding: 70px;
-  margin-top: -80px; }
+  /* margin-top: -80px; */
+   }
   @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .features-wrapper-two {
       max-width: 100%; } }
@@ -6239,7 +6242,8 @@ ul.slick-dots li {
         display: none; } }
 
 .main-bg .counter-area {
-  border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
+ }
 
 .main-bg .client-quote-box .icon {
   border-color: rgba(255, 255, 255, 0.1); }
