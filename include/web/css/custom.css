@@ -135,6 +135,11 @@ ul.check-style-one li i {
     overflow: hidden;
     z-index: 1;
     border-radius: 20px;
+    width: 100%;
+}
+
+.width100EligibilityBox a {
+    width: 100%;
 }
 
 .buttonForRegistration {
@@ -183,12 +188,135 @@ ul.check-style-one li i {
 .buttonTab .nav-link.active:after {
     background-color: #3D3D99;
 }
+
 .accordion-card {
     padding: 22px 35px 20px;
     border-radius: 20px;
     background-color: #29c5f6;
     color: #fff;
 }
-.accordion-card .accordion-header h6.accordion-title{
+
+.accordion-card .accordion-header h6.accordion-title {
     color: #fff;
+}
+
+.topNavbar {
+    background-color: #29c5f670;
+}
+
+.imgPerent {
+    justify-content: center;
+    display: flex;
+    height: 52px;
+}
+
+.header-top-bar {
+    padding: 8px 50px;
+    border-radius: 0px 0px 27.5px 27.5px;
+}
+
+.site-branding img {
+    height: 70px;
+}
+
+.single-project-item-four .project-img .hover-content .text h3.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.single-project-item-four .project-img .hover-content .text p {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: -370px;
+    max-width: 345px;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px 25px 22px;
+    transition: right 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.wrapper.show {
+    right: 20px;
+}
+
+.wrapper section {
+    display: flex;
+    align-items: center;
+    /* column-gap: 15px; */
+}
+
+/* section i {
+    color: #3d3d99;
+    font-size: 32px;
+}
+
+section h2 {
+    color: #3d3d99;
+    font-weight: 500;
+} */
+
+.wrapper .content {
+    margin-top: 16px;
+}
+
+.wrapper .content p {
+    color: #333;
+    font-size: 16px;
+}
+
+.content p a {
+    color: #3d3d99;
+    text-decoration: none;
+}
+
+.content p a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .controls {
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls .button {
+    border: none;
+    color: #fff;
+    padding: 8px 0;
+    border-radius: 20px;
+    background: #3d3d99;
+    cursor: pointer;
+    width: calc(100% / 2 - 10px);
+    transition: all 0.2s ease;
+}
+
+.controls #acceptBtn:hover {
+    background-color: #29c5f6;
+}
+
+#declineBtn {
+    border: 2px solid #3d3d99;
+    background-color: #fff;
+    color: #3d3d99;
+}
+
+#declineBtn:hover {
+    background-color: #3d3d99;
+    color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+    .imgPerent img {
+        height: 45px;
+    }
 }
