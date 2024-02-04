@@ -51,7 +51,7 @@
                         <div class="row no-gutters">
                             <div class="col-lg-4 sidebar-widget">
                                 <div class="sidebar-info-widget">
-                                    <a href="index.html" class="footer-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications_White.png" alt="Brand Logo"></a>
+                                    <a href="index.html" class="footer-logo"><img src="<?php echo base_url(''); ?>include/web/custom/c:\Users\Lenovo\Downloads\Sangam_Initiative.png.png" alt="Brand Logo"></a>
                                     <p>Sangam is on a mission to transform infrastructure planning and design by converging digital technologies and data. </p>
                                     <div class="social-item">
                                         <h6>Follow Us</h6>
@@ -181,11 +181,11 @@
                 </div>
                 <div class="primary-menu">
                     <div class="site-branding">
-                        <a href="index.html" class="brand-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications.png" alt="Site Logo"></a>
+                        <a href="index.html" class="brand-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative.png" alt="Site Logo"></a>
                     </div>
                     <div class="nav-menu">
                         <div class="mobile-logo mb-30 d-block d-xl-none">
-                            <a href="index.html" class="brand-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications.png" alt="Site Logo"></a>
+                            <a href="index.html" class="brand-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative.png" alt="Site Logo"></a>
                         </div>
                         <div class="nav-search mb-30 d-block d-xl-none ">
                             <form>
@@ -1366,7 +1366,7 @@
                             <div class="footer-widget footer-about-widget mb-40 pr-lg-70 wow fadeInDown">
                                 <div class="widget-content">
                                     <div class="footer-logo mb-25">
-                                        <a href="index.html"><img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications_White.png" alt="Logo"></a>
+                                        <a href="index.html"><img src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative_White.png" alt="Logo"></a>
                                     </div>
                                     <p>Sangam is on a mission to transform infrastructure planning and design by converging digital technologies and data.
                                     </p>

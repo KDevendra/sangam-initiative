@@ -29,7 +29,7 @@
                                         <div class="position-relative h-100 d-flex flex-column">
                                             <div class="mb-4">
                                                 <a href="<?php echo base_url(''); ?>" class="d-block">
-                                                    <img src="<?php echo base_url(''); ?>include/admin/images/logo-light.png" alt="" height="18" />
+                                                    <img src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative_White.png" alt="" height="18" />
                                                 </a>
                                             </div>
                                             <div class="mt-auto">

@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 // route for base URL's
 $route['default_controller'] = 'BaseController';
+$route['registration'] = 'Authorization/signUp';
 // route for authorization
 $route['sign-up'] = 'Authorization/signUp';
 $route['sign-in'] = 'Authorization/signIn';

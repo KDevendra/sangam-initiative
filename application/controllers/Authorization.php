@@ -2,7 +2,7 @@
 defined("BASEPATH") or exit("No direct script access allowed");
 class Authorization extends CI_Controller
 {
-    var $projectTitle = "Project Title";
+    var $projectTitle = "Sangam Initiative";
     private function mainEmailConfig($to, $subject, $message, $cc = "", $attach = "")
     {
         try {
@@ -44,124 +44,6 @@ class Authorization extends CI_Controller
             return false;
         }
     }
-    private function sendactivation_code($email, $activation_codeEmail)
-    {
-        $getuser_name = $this->BaseModel->getData("login", ["user_id" => $email])->row()->user_name;
-        $subject = "Verification Code - " . $activation_codeEmail . " Project Title";
-        $output = "";
-        $output =
-            '<!DOCTYPE html>
-        <html>
-        <head>
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            <title>Project Title</title>
-            <style type="text/css">
-            body {
-                margin: 0;
-                padding: 0;
-                min-width: 100% !important;
-                background-color: #000;
-                color: #ffffff;
-            }
-            .content {
-                width: 100%;
-                max-width: 600px;
-                margin: 0 auto;
-                background-color: #ffffff;
-                color: #000000;
-            }
-            .header {
-                background-color: #000;
-                text-align: center;
-                color: #ffffff;
-            }
-            .header img {
-              height: 80px;
-              padding: 1rem;
-            }
-            .inner-content {
-                min-height: 120px;
-                margin-top: 40px;
-                margin-bottom: 40px;
-                padding: 40px;
-                background-color: #ffffff;
-            }
-            .otp-code {
-                text-align: center;
-              margin-top: 1rem;
-            }
-            .otp-value {
-                font-weight: bold;
-            }
-            .greeting {
-                font-weight: bold;
-            }
-            .instructions {
-                margin-top: 10px;
-            }
-            .regards {
-                text-align: left;
-            }
-            .footer {
-                background: linear-gradient(#000, #000);
-                text-align: center;
-                color: #ffffff;
-                height: 40px;
-                line-height: 40px;
-            }
-
-            </style>
-        </head>
-        <body>
-            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
-                <tr>
-                    <td><img src="" height="100px" ></td>
-                </tr>
-            </table>
-            <table class="content inner-content" align="center" cellpadding="0" cellspacing="0" border="0">
-
-                                        <tr>
-                                            <td colspan="2" class="greeting">Dear Mr. / Mrs. ' .
-            $getuser_name .
-            ',</td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="instructions">Please enter the given code to verify your account.</td>
-                </tr>
-              <tr>
-                  <td><br></td>
-              </tr>
-              <tr  class="otp-code">
-                <td><b>Verification Code  <span class="otp-value">: ' .
-            $activation_codeEmail .
-            '</span></b> </td>
-
-                                    </tr>
-                <tr><td><br></td></tr>
-                <tr><td><br></td></tr>
-
-                <tr>
-                    <th class="regards">Regards</th>
-                </tr>
-                <tr>
-                    <th class="regards">Project Title</th>
-                </tr>
-            </table>
-            <table width="100%" class="footer">
-                <tr>
-                     <td>&copy; ' .
-            date("Y") .
-            ' Project Title. All rights reserved.</td>
-                </tr>
-            </table>
-        </body>
-        </html>';
-        if ($this->mainEmailConfig($email, $subject, $output, "", "")) {
-            return true;
-        } else {
-            return false;
-        }
-    }
     public function __construct()
     {
         parent::__construct();
@@ -187,10 +69,23 @@ class Authorization extends CI_Controller
     public function postSignUp()
     {
         if ($this->input->method() === "post") {
+            $this->form_validation->set_rules("register_as", "register as", 'trim|required|min_length[3]|max_length[50]|regex_match[/^[A-Za-z\s]+$/]');
+            $this->form_validation->set_rules("datOfBirth", "date of birth", 'trim|required');
             $this->form_validation->set_rules("fullName", "Full Name", 'trim|required|min_length[3]|max_length[50]|regex_match[/^[A-Za-z\s]+$/]');
-            $this->form_validation->set_rules("contactNo", "Contact No.", "trim|max_length[10]|min_length[10]");
-            $this->form_validation->set_rules("email", "Email", "trim|required|valid_email|max_length[100]");
+            $this->form_validation->set_rules("contactNo", "Contact No.", "trim|max_length[10]|min_length[10]|is_unique[login.contact_no]");
+            $this->form_validation->set_rules("email", "Email", "trim|required|valid_email|max_length[100]|is_unique[login.email]");
             $this->form_validation->set_rules("password", "password", "trim|required|min_length[8]|max_length[16]");
+            $this->form_validation->set_rules("coreCompetency[]", "core competency", 'trim|required');
+            if ($this->input->post('register_as') === 'Individual') {
+                $this->form_validation->set_rules("experience", "experience", 'trim|required|min_length[3]|regex_match[/^[A-Za-z\s]+$/]');
+            }
+            if ($this->input->post('register_as') === 'Organization') {
+                $this->form_validation->set_rules("OrganizationName", "Organization Name", 'trim|required|min_length[3]|regex_match[/^[A-Za-z\s]+$/]');
+                $this->form_validation->set_rules("potentialInterestAreas[]", "Potential Interest Areas", 'trim|required|min_length[3]|max_length[50]|regex_match[/^[A-Za-z\s]+$/]');
+                $this->form_validation->set_rules("officeAddress", "office address", 'trim|required|min_length[3]|max_length[50]|regex_match[/^[A-Za-z\s]+$/]');
+                $this->form_validation->set_rules("organisationHQAddress", "organisation HQ address", 'trim|min_length[3]|max_length[50]|regex_match[/^[A-Za-z\s]+$/]');
+                $this->form_validation->set_rules("websiteURL", "Website URL", 'trim|valid_url|min_length[3]|max_length[50]|regex_match[/^[A-Za-z\s]+$/]');
+            }
             if ($this->form_validation->run() === false) {
                 $response = ["status" => "validation_errors", "message" => validation_errors()];
             } else {
@@ -200,25 +95,39 @@ class Authorization extends CI_Controller
                 $password = hash("SHA512", $this->input->post("password"));
                 $set = "1234567890";
                 $activation_code = substr(str_shuffle($set), 0, 6);
-                $cond = ["user_level" => $email, "user_level" => 2];
+                $cond = ["email" => $email, "user_level" => 2];
                 $checkEmailDuplicate = $this->BaseModel->getData("login", $cond);
                 if ($checkEmailDuplicate->num_rows() > 0) {
                     $response = ["status" => "error", "message" => "Email address is already in use."];
                 } else {
-                    $userData = [
-                        "user_name" => $user_name,
-                        "is_active" => 0,
-                        "user_id" => $email,
-                        "password" => $password,
-                        "activation_code" => $activation_code,
-                        "contact_no" => $contactNo,
-                        "user_level" => 2,
-                        "created_at" => date("Y-m-d H:i:s"),
+                    $postData = [
+                        'register_as' => $this->input->post('register_as'),
+                        'dat_of_birth' => $this->input->post('datOfBirth'),
+                        'user_name' => $this->input->post('fullName'),
+                        'full_name' => $this->input->post('fullName'),
+                        'contact_no' => $this->input->post('contactNo'),
+                        'email' => $this->input->post('email'),
+                        'password' => $password,
+                        'core_competency' => json_encode($this->input->post('coreCompetency')),
+                        'user_level' => 2,
                     ];
-                    $insertResult = $this->BaseModel->insertData("login", $userData);
-                    $insert_id = $this->db->insert_id();
-                    if ($insertResult && $insert_id !== null) {
-                        $response = ["status" => "success", "data" => $insert_id, "message" => "Signup successful! Verification code sent on the registered email address."];
+                    if ($this->input->post('register_as') === 'Individual') {
+                        $postData['experience'] = $this->input->post('experience');
+                    } elseif ($this->input->post('register_as') === 'Organization') {
+                        $postData['organization_name'] = $this->input->post('OrganizationName');
+                        $postData['potential_interest_areas'] = json_encode($this->input->post('potentialInterestAreas'));
+                        $postData['office_address'] = $this->input->post('officeAddress');
+                        $postData['organisation_hq_address'] = $this->input->post('organisationHQAddress');
+                        $postData['website_url'] = $this->input->post('websiteURL');
+                    }
+                    $insertResult = $this->BaseModel->insertData("login", $postData);
+                    $inserted_Id = $this->db->insert_id();
+                    $user_id = "USR" . date("Y") . str_pad($inserted_Id, 4, "0", STR_PAD_LEFT);
+                    $updateData = ["user_id" => $user_id];
+                    $updateCondition = ["login_id" => $inserted_Id];
+                    $updateQuery = $this->BaseModel->updateData("login", $updateData, $updateCondition);
+                    if ($updateQuery) {
+                        $response = ["status" => "success", "email" => $email, 'user_id' => $user_id, "message" => "Signup successful! Verification code sent on the registered email address."];
                     } else {
                         $response = ["status" => "error", "message" => "Signup failed. Please try again later."];
                     }
@@ -278,9 +187,7 @@ class Authorization extends CI_Controller
                                         $response["message"] = "User does not active.";
                                     } else {
                                         $sessData = ["login_id" => $details->login_id, "user_name" => $details->user_name, "user_level" => $details->user_level, "user_id" => $details->user_id, "user_level" => $details->user_level];
-                                   
                                         if ($details->user_level === '0') {
-            
                                             $this->session->set_userdata("login", $sessData);
                                             AntiFixationInit();
                                             $this->session->salt = generateSalt();
@@ -310,274 +217,63 @@ class Authorization extends CI_Controller
         $data["title"] = $this->projectTitle . " : Reset password";
         $this->load->view("authorization/reset-password", $data);
     }
-    public function verifyResetpassword($id)
+    public function verifyResetPassword($id)
     {
         $data["title"] = $this->projectTitle . " : Verify Reset password";
-        $record = $this->BaseModel->getData("login", ["login_id" => $id]);
-        if ($record->num_rows() == 0) {
-            $this->session->set_flashdata("verified", "Your account is already created. Please log in");
-            $this->load->view("authorization/sign-in", $data);
-        } else {
-            $details = $record->row();
-            $data["user_id"] = $details->user_id;
-            $set = "1234567890";
-            $activation_code = substr(str_shuffle($set), 0, 6);
-            $cond = ["user_id" => $details->user_id];
-            $subject = "Verification Code - " . $activation_code . " Project Title";
-            $output = "";
-            $output =
-                '<!DOCTYPE html>
-                        <html>
-                        <head>
-                            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                            <title>Project Title</title>
-                            <style type="text/css">
-                            body {
-                                margin: 0;
-                                padding: 0;
-                                min-width: 100% !important;
-                                background-color: #000;
-                                color: #ffffff;
-                            }
-                            .content {
-                                width: 100%;
-                                max-width: 600px;
-                                margin: 0 auto;
-                                background-color: #ffffff;
-                                color: #000000;
-                            }
-                            .header {
-                                background-color: #000;
-                                text-align: center;
-                                color: #ffffff;
-                            }
-                            .header img {
-                              height: 80px;
-                              padding: 1rem;
-                            }
-                            .inner-content {
-                                min-height: 120px;
-                                margin-top: 40px;
-                                margin-bottom: 40px;
-                                padding: 40px;
-                                background-color: #ffffff;
-                            }
-                            .otp-code {
-                                text-align: center;
-                              margin-top: 1rem;
-                            }
-                            .otp-value {
-                                font-weight: bold;
-                            }
-                            .greeting {
-                                font-weight: bold;
-                            }
-                            .instructions {
-                                margin-top: 10px;
-                            }
-                            .regards {
-                                text-align: left;
-                            }
-                            .footer {
-                                background: linear-gradient(#000, #000);
-                                text-align: center;
-                                color: #ffffff;
-                                height: 40px;
-                                line-height: 40px;
-                            }
-
-                            </style>
-                        </head>
-                        <body>
-                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
-                                <tr>
-                                    <td><img src="https://kecss.keywordhike.com/include/web/custom/KECSS_Logo.png" height="100px" ></td>
-                                </tr>
-                            </table>
-                            <table class="content inner-content" align="center" cellpadding="0" cellspacing="0" border="0">
-
-                                <tr>
-                                    <td colspan="2" class="greeting">Dear Mr. / Mrs. ' .
-                $details->user_name .
-                ',</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="instructions">Please enter the given code to verify your account.</td>
-                                </tr>
-                              <tr>
-                                  <td><br></td>
-                              </tr>
-                              <tr  class="otp-code">
-                                <td><b>Verification Code  <span class="otp-value">: ' .
-                $activation_code .
-                '</span></b> </td>
-
-                              </tr>
-
-                               <tr><td><br></td></tr>
-                                <tr><th class="regards">Regards</th></tr>
-                                <tr>
-                                    <th class="regards">Project Title</th>
-                                </tr>
-                            </table>
-                            <table width="100%" class="footer">
-                                <tr>
-                                    <td>&copy; ' .
-                date("Y") .
-                ' Project Title. All rights reserved.</td>
-                                </tr>
-                            </table>
-                        </body>
-                        </html>';
-            $sendactivation_code = $this->mainEmailConfig($details->user_id, $subject, $output);
-            if ($sendactivation_code) {
-                $updateactivation_code = $this->BaseModel->updateData("login", ["activation_code" => $activation_code], $cond);
-                if ($updateactivation_code) {
-                    $this->load->view("authorization/verify-reset-password", $data);
-                } else {
-                    throw new Exception("Failed to update activation code in the database");
-                }
-            } else {
-                echo "server down";
-            }
-        }
-    }
-    public function verifyAccount($id)
-    {
-        $data["title"] = $this->projectTitle . " : Verify Account";
         try {
             $record = $this->BaseModel->getData("login", ["login_id" => $id]);
             if ($record->num_rows() == 0) {
                 $this->session->set_flashdata("verified", "Your account is already created. Please log in");
-                $this->load->view("authorization/sign-in", $data);
-            } else {
-                $details = $record->row();
-                $data["user_id"] = $details->user_id;
-                $set = "1234567890";
-                $activation_code = substr(str_shuffle($set), 0, 6);
-                $cond = ["user_id" => $details->user_id];
-                $subject = "Verification Code - " . $activation_code . " Project Title";
-                $output = "";
-                $output =
-                    '<!DOCTYPE html>
-                            <html>
-                            <head>
-                                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                                <title>Project Title</title>
-                                <style type="text/css">
-                                body {
-                                    margin: 0;
-                                    padding: 0;
-                                    min-width: 100% !important;
-                                    background-color: #000;
-                                    color: #ffffff;
-                                }
-                                .content {
-                                    width: 100%;
-                                    max-width: 600px;
-                                    margin: 0 auto;
-                                    background-color: #ffffff;
-                                    color: #000000;
-                                }
-                                .header {
-                                    background-color: #000;
-                                    text-align: center;
-                                    color: #ffffff;
-                                }
-                                .header img {
-                                  height: 80px;
-                                  padding: 1rem;
-                                }
-                                .inner-content {
-                                    min-height: 120px;
-                                    margin-top: 40px;
-                                    margin-bottom: 40px;
-                                    padding: 40px;
-                                    background-color: #ffffff;
-                                }
-                                .otp-code {
-                                    text-align: center;
-                                  margin-top: 1rem;
-                                }
-                                .otp-value {
-                                    font-weight: bold;
-                                }
-                                .greeting {
-                                    font-weight: bold;
-                                }
-                                .instructions {
-                                    margin-top: 10px;
-                                }
-                                .regards {
-                                    text-align: left;
-                                }
-                                .footer {
-                                    background: linear-gradient(#000, #000);
-                                    text-align: center;
-                                    color: #ffffff;
-                                    height: 40px;
-                                    line-height: 40px;
-                                }
-
-                                </style>
-                            </head>
-                            <body>
-                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
-                                    <tr>
-                                        <td><img src="https://kecss.keywordhike.com/include/web/custom/KECSS_Logo.png" height="100px" ></td>
-                                    </tr>
-                                </table>
-                                <table class="content inner-content" align="center" cellpadding="0" cellspacing="0" border="0">
-
-                                                            <tr>
-                                                                <td colspan="2" class="greeting">Dear Mr. / Mrs. ' .
-                    $details->user_name .
-                    ',</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2" class="instructions">Please enter the given code to verify your account.</td>
-                                    </tr>
-                                  <tr>
-                                      <td><br></td>
-                                  </tr>
-                                  <tr  class="otp-code">
-                                    <td><b>Verification Code  <span class="otp-value">: ' .
-                    $activation_code .
-                    '</span></b> </td></tr>
-
-
-                               <tr><td><br></td></tr>
-
-                                    <tr>
-                                        <th class="regards">Regards</th>
-                                    </tr>
-                                    <tr>
-                                        <th class="regards">Project Title</th>
-                                    </tr>
-                                </table>
-                                <table width="100%" class="footer">
-                                    <tr>
-                                         <td>&copy; ' .
-                    date("Y") .
-                    ' Project Title. All rights reserved.</td>
-                                    </tr>
-                                </table>
-                            </body>
-                            </html>';
-                $sendactivation_code = $this->mainEmailConfig($details->user_id, $subject, $output);
-                if ($sendactivation_code) {
-                    $updateactivation_code = $this->BaseModel->updateData("login", ["activation_code" => $activation_code], $cond);
-                    if ($updateactivation_code) {
-                        $this->load->view("authorization/verify-account", $data);
-                    } else {
-                        throw new Exception("Failed to update activation code in the database");
-                    }
-                } else {
-                    return redirect('server-down');
-                }
+                return redirect('authorization/sign-in', $data);
             }
+            $details = $record->row();
+            $user_id = $details->user_id;
+            $verification_code = $this->generateVerificationCode();
+            $cond = ["user_id" => $user_id];
+            $sendVerificationCode = $this->sendEmailVerificationCode($details->email, $details->user_name, $verification_code);
+            if (!$sendVerificationCode) {
+                return redirect('server-down');
+            }
+            $updateActivationCode = $this->BaseModel->updateData("login", ["activation_code" => $verification_code], $cond);
+            if (!$updateActivationCode) {
+                throw new Exception("Failed to update activation code in the database");
+            }
+            $this->load->view("authorization/verify-reset-password", $data);
         } catch (Exception $e) {
             log_message("error", $e->getMessage());
+            // Provide feedback to the user about the error
+            $this->session->set_flashdata("error", "An error occurred during password reset verification. Please try again later.");
+            return redirect('server-down');
+        }
+    }
+    public function verifyAccount($user_id)
+    {
+        $data["title"] = "Verify Account :" . $this->projectTitle;
+        try {
+            $record = $this->BaseModel->getData("login", ["user_id" => $user_id]);
+            if ($record->num_rows() == 0) {
+                $this->session->set_flashdata("verified", "Your account is already created. Please log in");
+                return redirect('authorization/sign-in', $data);
+            }
+            $details = $record->row();
+            $user_id = $details->user_id;
+            $verification_code = $this->generateVerificationCode();
+            $cond = ["user_id" => $user_id];
+            $sendVerificationCode = $this->sendEmailVerificationCode($details->email, $details->user_name, $verification_code);
+            if (!$sendVerificationCode) {
+                return redirect('server-down');
+            }
+            $updateActivationCode = $this->BaseModel->updateData("login", ["activation_code" => $verification_code], $cond);
+            if (!$updateActivationCode) {
+                throw new Exception("Failed to update activation code in the database");
+            }
+            $data["user_id"] = $user_id;
+            $data["email"] = $details->email;
+            $this->load->view("authorization/verify-account", $data);
+        } catch (Exception $e) {
+            log_message("error", $e->getMessage());
+            $this->session->set_flashdata("error", "An error occurred during account verification. Please try again later.");
+            return redirect('server-down');
         }
     }
     public function postResetVerifyAccount()
@@ -720,195 +416,49 @@ class Authorization extends CI_Controller
     }
     public function resendOTP()
     {
-        $data["title"] = $this->projectTitle . " : Verify Reset password";
-        $record = $this->BaseModel->getData("login", ["user_id" => $this->input->post("user_id")]);
-        if ($record->num_rows() == 0) {
-            $this->session->set_flashdata("verified", "Your account is already created. Please log in");
-            $this->load->view("authorization/sign-in", $data);
-        } else {
+        try {
+            $user_id = $this->input->post("user_id");
+            $record = $this->BaseModel->getData("login", ["user_id" => $user_id]);
+            if ($record->num_rows() == 0) {
+                $this->session->set_flashdata("verified", "Your account is already created. Please log in");
+                $this->load->view("authorization/sign-in", ["title" => $this->projectTitle . " : Verify Reset password"]);
+                return;
+            }
             $details = $record->row();
-            $data["user_id"] = $details->user_id;
-            $set = "1234567890";
-            $activation_code = substr(str_shuffle($set), 0, 6);
-            $cond = ["user_id" => $details->user_id];
-            $subject = "Verification Code - " . $activation_code . " Project Title";
-            $output = "";
-            $output =
-                '<!DOCTYPE html>
-                        <html>
-                        <head>
-                            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                            <title>Project Title</title>
-                            <style type="text/css">
-                            body {
-
-                                margin: 0;
-
-                                padding: 0;
-
-                                min-width: 100% !important;
-
-                                background-color: #eaedf7;
-
-                                color: #ffffff;
-
-                                }
-
-                                .content {
-
-                                width: 100%;
-
-                                max-width: 600px;
-
-                                margin: 0 auto;
-
-                                background-color: #351C42;
-
-                                color: #000000;
-
-                                }
-
-                                .header {
-
-                                background-color: #351C42;
-
-                                text-align: center;
-
-                                color: #ffffff;
-
-                                }
-
-                                .header img {
-
-                                height: 80px;
-
-                                padding: 1rem;
-
-                                }
-
-                                .inner-content {
-
-                                min-height: 120px;
-
-                                margin-top: 40px;
-
-                                margin-bottom: 40px;
-
-                                padding: 40px;
-
-                                background-color: #ffffff;
-
-                                  border-radius: 0.2rem;
-
-                                  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
-                                }
-
-                                .otp-code {
-
-                                text-align: center;
-
-                                margin-top: 1rem;
-
-                                }
-
-                                .otp-value {
-
-                                font-weight: bold;
-
-                                }
-
-                                .greeting {
-
-                                font-weight: bold;
-
-                                }
-
-                                .instructions {
-
-                                margin-top: 10px;
-
-                                }
-
-                                .regards {
-
-                                text-align: left;
-
-                                }
-
-                                .footer {
-
-                                background: linear-gradient(#351C42, #351C42);
-
-                                text-align: center;
-
-                                color: #ffffff;
-
-                                height: 40px;
-
-                                line-height: 40px;
-
-                                }
-
-
-                            </style>
-                        </head>
-                        <body>
-                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
-                                <tr>
-                                    <td><img src="https://kecss.keywordhike.com/include/web/custom/KECSS_Logo.png" height="100px" ></td>
-                                </tr>
-                            </table>
-                            <table class="content inner-content" align="center" cellpadding="0" cellspacing="0" border="0">
-
-                                                        <tr>
-                                                            <td colspan="2" class="greeting">Dear Mr. / Mrs. ' .
-                $details->user_name .
-                ',</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="instructions">Please enter the given code to verify your account.</td>
-                                </tr>
-                              <tr>
-                                  <td><br></td>
-                              </tr>
-                              <tr  class="otp-code">
-                                <td><b>Verification Code  <span class="otp-value">: ' .
-                $activation_code .
-                '</span></b> </td>
-
-                                                    </tr>
-                               <tr><td><br></td></tr>
-
-                                <tr>
-                                    <th class="regards">Regards</th>
-                                </tr>
-                                <tr>
-                                    <th class="regards">Project Title</th>
-                                </tr>
-                            </table>
-                            <table width="100%" class="footer">
-                                <tr>
-                                     <td>&copy; ' .
-                date("Y") .
-                ' Project Title. All rights reserved.</td>
-                                </tr>
-                            </table>
-                        </body>
-                        </html>';
-            $sendactivation_code = $this->mainEmailConfig($details->user_id, $subject, $output);
-            if ($sendactivation_code) {
-                $updateactivation_code = $this->BaseModel->updateData("login", ["activation_code" => $activation_code], $cond);
-                if ($updateactivation_code) {
-                    $response = ["status" => "success", "message" => "Verification code send to registered Email ID."];
-                    $this->output->set_content_type("application/json");
-                    echo json_encode($response);
+            $user_id = $details->user_id;
+            $verification_code = $this->generateVerificationCode();
+            $cond = ["user_id" => $user_id];
+            $sendVerificationCode = $this->sendEmailVerificationCode($details->email, $details->user_name, $verification_code);
+            if ($sendVerificationCode) {
+                $updateVerificationCode = $this->BaseModel->updateData("login", ["activation_code" => $verification_code], $cond);
+                if ($updateVerificationCode) {
+                    $response = ["status" => "success", "message" => "Verification code sent to registered Email ID."];
+                    $this->output->set_content_type("application/json")->set_output(json_encode($response));
+                    return;
                 } else {
                     throw new Exception("Failed to update activation code in the database");
                 }
             } else {
-                echo "server down";
+                throw new Exception("Failed to send activation code. Please try again later.");
             }
+        } catch (Exception $e) {
+            $response = ["status" => "error", "message" => $e->getMessage()];
+            $this->output->set_content_type("application/json")->set_output(json_encode($response));
         }
+    }
+    private function generateVerificationCode()
+    {
+        $set = "1234567890";
+        return substr(str_shuffle($set), 0, 6);
+    }
+    private function sendEmailVerificationCode($email, $user_name, $verification_code)
+    {
+        $templateFile = FCPATH . 'include/email/registration/temp_email_format.html';
+        $subject = "Registration Verification Code for 'Digital Twin: Sangam' Initiative";
+        $messageBody = file_get_contents($templateFile);
+        $placeholders = ['{user_name}', '{verification_code}'];
+        $values = [$user_name, $verification_code];
+        $messageBody = str_replace($placeholders, $values, $messageBody);
+        return $this->mainEmailConfig($email, $subject, $messageBody, "", "");
     }
 }

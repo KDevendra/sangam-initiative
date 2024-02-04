@@ -2241,7 +2241,7 @@ button {
 /* Header Sticky */
 .sticky {
   position: fixed;
-  top: -70px;
+  top: -52px;
   left: 0;
   right: 0;
   z-index: 999;

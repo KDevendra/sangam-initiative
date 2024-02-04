@@ -3,15 +3,18 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Sign Up | Sangam Initiative - Admin & Dashboard Template</title>
+    <title>Register | Sangam Initiative </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="<?php echo base_url(''); ?>include/admin/images/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo base_url(''); ?>include/web/custom/favicon.png" />
     <script src="<?php echo base_url(''); ?>include/admin/js/layout.js"></script>
     <link href="<?php echo base_url(''); ?>include/admin/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(''); ?>include/admin/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(''); ?>include/admin/css/app.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(''); ?>include/admin/css/custom.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(''); ?>include/admin/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 
 <body>
@@ -23,13 +26,13 @@
                     <div class="col-lg-12">
                         <div class="card overflow-hidden m-0 card-bg-fill galaxy-border-none">
                             <div class="row justify-content-center g-0">
-                                <div class="col-lg-6">
-                                    <div class="p-lg-5 p-4 auth-one-bg h-100">
+                                <div class="col-lg-4">
+                                    <div class="p-lg-4 p-4 auth-one-bg h-100">
                                         <div class="bg-overlay"></div>
-                                        <div class="position-relative h-100 d-flex flex-column">
+                                        <div class="position-relative h-100 d-flex flex-column" id="signUpPage">
                                             <div class="mb-4">
-                                                <a href="<?php echo base_url(''); ?>" class="d-block">
-                                                    <img src="<?php echo base_url(''); ?>include/admin/images/logo-light.png" alt="" height="18" />
+                                                <a href="<?php echo base_url(''); ?>" class="d-flex justify-content-center">
+                                                    <img src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative_White.png" alt="" height="18" />
                                                 </a>
                                             </div>
                                             <div class="mt-auto">
@@ -44,13 +47,13 @@
                                                     </div>
                                                     <div class="carousel-inner text-center text-white-50 pb-5">
                                                         <div class="carousel-item active">
-                                                            <p class="fs-15 fst-italic">" Great! Clean code, clean design, easy for customization. Thanks very much! "</p>
+                                                            <p class="fs-15 fst-italic">"Embark on a Journey Through GIS and Satellite Imagery to Uncover New Horizons"</p>
                                                         </div>
                                                         <div class="carousel-item">
-                                                            <p class="fs-15 fst-italic">" The theme is really great with an amazing customer support."</p>
+                                                            <p class="fs-15 fst-italic">"Connect the World: Telecom Experts Paving the Path Forward."</p>
                                                         </div>
                                                         <div class="carousel-item">
-                                                            <p class="fs-15 fst-italic">" Great! Clean code, clean design, easy for customization. Thanks very much! "</p>
+                                                            <p class="fs-15 fst-italic">"Lead the Way in Intelligence with AI, ML, and Big Data Analytics"</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -58,67 +61,159 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="p-lg-5 p-4">
+                                <div class="col-lg-8">
+                                    <div class="p-lg-4 p-4">
                                         <div>
-                                            <h5 class="text-primary">Register Account</h5>
-                                            <p class="text-muted">Embark on the Future: Create Your Sangam Account Now.</p>
+                                            <h5 class="text-primary">Register for 'Digital Twin: Sangam Initiative'</h5>
+                                            <p class="text-muted">Join the Transformation of Infrastructure Planning.</p>
                                         </div>
                                         <div class="mt-4">
                                             <form id="sign-up" class="needs-validation" novalidate>
-                                                <div class="mb-3">
-                                                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-                                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" required />
-                                                    <div class="invalid-feedback">
-                                                        Please enter email
-                                                    </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" checked name="register_as" id="register_as1" value="Individual">
+                                                    <label class="form-check-label" for="register_as1">Individual</label>
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label for="contactNo" class="form-label">Contact Number <span class="text-danger">*</span></label>
-                                                    <input type="contactNo" class="form-control" id="contactNo" name="contactNo" placeholder="Enter contact number" required />
-                                                    <div class="invalid-feedback">
-                                                        Please enter contact number
-                                                    </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="register_as" id="register_as2" value="Organization">
+                                                    <label class="form-check-label" for="register_as2">Organization</label>
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label for="username" class="form-label">Username <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter username" required />
-                                                    <div class="invalid-feedback">
-                                                        Please enter username
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="password-input">Password</label>
-                                                    <div class="position-relative auth-pass-inputgroup">
-                                                        <input type="password" class="form-control pe-5 password-input" onpaste="return false" placeholder="Enter password" name="password" id="password-input" aria-describedby="passwordInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
-                                                        <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon material-shadow-none" type="button" id="password-addon">
-                                                            <i class="ri-eye-fill align-middle"></i>
-                                                        </button>
-                                                        <div class="invalid-feedback">
-                                                            Please enter password
+                                                <div id="contanterIndividual">
+                                                    <div class="row mt-3">
+                                                        <div class="mb-3 col-md-6">
+                                                            <label for="username" class="form-label"> Full Name<span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter full name" required />
+                                                            <div class="invalid-feedback">
+                                                                Please enter name
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 col-md-6">
+                                                            <label for="dateOfBirth" id="dateOfBirthLable" class="form-label d-flex">
+                                                                <span> Date of Birth </span>
+                                                                <div data-bs-toggle="tooltip" data-bs-placement="top" title="Age 18 years or older to register">
+                                                                    <a href="javascript:void(0)" class="text-muted"><i class="ri-info-i"></i></a>
+                                                                </div>
+                                                            </label>
+                                                            <input type="date" class="form-control" id="datOfBirth" name="datOfBirth" required>
+                                                            <div class="invalid-feedback">
+                                                                Please select date of birth
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 col-md-6">
+                                                            <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+                                                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" required />
+                                                            <div class="invalid-feedback">
+                                                                Please enter email
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 col-md-6">
+                                                            <label for="contactNo" class="form-label">Contact Number<span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Enter contact number" required />
+                                                            <div class="invalid-feedback">
+                                                                Please enter contact number
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 col-md-6">
+                                                            <label class="form-label" for="password-input">Password<span class="text-danger">*</span></label>
+                                                            <div class="position-relative auth-pass-inputgroup">
+                                                                <input type="password" class="form-control pe-5 password-input" onpaste="return false" placeholder="Enter password" name="password" id="password-input" aria-describedby="passwordInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
+                                                                <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon material-shadow-none" type="button" id="password-addon">
+                                                                    <i class="ri-eye-fill align-middle"></i>
+                                                                </button>
+                                                                <div class="invalid-feedback">
+                                                                    Please enter password
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 col-md-6" id="feildExperience">
+                                                            <label for="Experience" class="form-label">Experience<span class="text-danger">*</span></label>
+                                                            <textarea name="experience" class="form-control" required id="experience" rows="1" placeholder="Enter experience" width="100%"></textarea>
+                                                            <div class="invalid-feedback">
+                                                                Please enter experience
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 col-md-6">
+                                                            <label for="coreCompetency" class="form-label">Core Competencies<span class="text-danger">*</span></label>
+                                                            <select class="form-control" id="coreCompetency" style="height: 40px !important;" name="coreCompetency[]" multiple="multiple" required>
+                                                                <option value="Virtual/Digital Twin Layer">Virtual/Digital Twin Layer</option>
+                                                                <option value="Dynamic Information Layer">Dynamic Information Layer</option>
+                                                                <option value="Utility/Network Layer">Utility/Network Layer</option>
+                                                                <option value="Built Environment Layer">Built Environment Layer</option>
+                                                                <option value="GIS (Landscape) Layer">GIS (Landscape) Layer</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Please select Core Competencies
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-4 col-md-12">
+                                                            <p class="mb-0 fs-12 text-muted fst-italic">
+                                                                By Registration implies acceptance of the Sangam Initiative <a href="#" class="text-primary text-decoration-underline fst-normal fw-medium">Guidelines</a>
+                                                            </p>
+                                                        </div>
+                                                        <div id="password-contain" class="p-3 bg-light mb-2 rounded">
+                                                            <h5 class="fs-13">Password must contain:</h5>
+                                                            <p id="pass-length" class="invalid fs-12 mb-2">Minimum <b>8 characters</b></p>
+                                                            <p id="pass-lower" class="invalid fs-12 mb-2">At <b>lowercase</b> letter (a-z)</p>
+                                                            <p id="pass-upper" class="invalid fs-12 mb-2">At least <b>uppercase</b> letter (A-Z)</p>
+                                                            <p id="pass-number" class="invalid fs-12 mb-0">A least <b>number</b> (0-9)</p>
+                                                        </div>
+                                                        <div class="mt-0 d-flex justify-content-center">
+                                                            <button class="btn btn-primary" id="submitBtn" type="submit">Register Now</button>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="mb-4">
-                                                    <p class="mb-0 fs-12 text-muted fst-italic">
-                                                        By registering you agree to the Sangam Initiative <a href="#" class="text-primary text-decoration-underline fst-normal fw-medium">Terms of Use</a>
-                                                    </p>
-                                                </div>
-                                                <div id="password-contain" class="p-3 bg-light mb-2 rounded">
-                                                    <h5 class="fs-13">Password must contain:</h5>
-                                                    <p id="pass-length" class="invalid fs-12 mb-2">Minimum <b>8 characters</b></p>
-                                                    <p id="pass-lower" class="invalid fs-12 mb-2">At <b>lowercase</b> letter (a-z)</p>
-                                                    <p id="pass-upper" class="invalid fs-12 mb-2">At least <b>uppercase</b> letter (A-Z)</p>
-                                                    <p id="pass-number" class="invalid fs-12 mb-0">A least <b>number</b> (0-9)</p>
-                                                </div>
-                                                <div class="mt-4">
-                                                    <button class="btn btn-success w-100" type="submit">Sign Up</button>
-                                                </div>
+                                                <div id="contanterOrganization">
+                                                    <div class="row mt-3">
+                                                        <div class="mb-3 col-md-6">
+                                                            <label for="organizationname" class="form-label"> Organization Name<span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control" id="organizationName" name="OrganizationName" placeholder="Enter organization  name" required />
+                                                            <div class="invalid-feedback">
+                                                                Please enter organization name
+                                                            </div>
+                                                        </div>
 
+                                                        <div class="mb-3 col-md-6">
+                                                            <label for="potentialInterestAreas" class="form-label">Potential Interest Areas<span class="text-danger">*</span></label>
+                                                            <select class="form-control" id="potentialInterestAreas" style="height: 40px !important;" name="potentialInterestAreas[]" multiple="multiple" required>
+                                                                <option value="Virtual/Digital Twin Layer">Virtual/Digital Twin Layer</option>
+                                                                <option value="Dynamic Information Layer">Dynamic Information Layer</option>
+                                                                <option value="Utility/Network Layer">Utility/Network Layer</option>
+                                                                <option value="Built Environment Layer">Built Environment Layer</option>
+                                                                <option value="GIS (Landscape) Layer">GIS (Landscape) Layer</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Please select Potential Interest Areas
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 col-md-6">
+                                                            <label for="officeAddress" class="form-label">Office Address<span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control" id="officeAddress" name="officeAddress" placeholder="Enter office address" required />
+                                                            <div class="invalid-feedback">
+                                                                Please enter office address
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 col-md-6">
+                                                            <label for="organisationHQAddress" class="form-label">Organisation HQ address</label>
+                                                            <input type="text" class="form-control" id="organisationHQAddress" name="organisationHQAddress" placeholder="Enter organisation HQ address" />
+                                                            <div class="invalid-feedback">
+                                                                Please enter organisation HQ address
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 col-md-6">
+                                                            <label for="websiteURL" class="form-label">Website URL of the organisation</label>
+                                                            <input type="url" class="form-control" id="websiteURL" name="websiteURL" placeholder="Enter Website URL of the organisation" />
+                                                            <div class="invalid-feedback">
+                                                                Please enter Website URL
+                                                            </div>
+                                                        </div>
+                                                        <div class="mt-0 d-flex justify-content-center">
+                                                            <button class="btn btn-primary" id="submitBtn" type="submit">Register Now</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </form>
                                         </div>
-                                        <div class="mt-5 text-center">
-                                            <p class="mb-0">Already have an account ? <a href="<?php echo base_url('sign-in'); ?>" class="fw-semibold text-primary text-decoration-underline"> Signin</a></p>
+                                        <div class="mt-2 text-center">
+                                            <p class="mb-0">Already have an account ? <a href="<?php echo base_url('sign-in'); ?>" class="fw-semibold text-primary text-decoration-underline">Login</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -138,7 +233,7 @@
                                 <script>
                                     document.write(new Date().getFullYear());
                                 </script>
-                                <span class="text-white">Sangam Initiative</span>. Website Design & Developed by <a class="text-white" href="https://www.apwebworld.com" target="_blank">AP Web World</a>
+                                <span class="text-white">Sangam Initiative</span> All Rights Reserved.</a>
                             </p>
                         </div>
                     </div>
@@ -146,7 +241,6 @@
             </div>
         </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="<?php echo base_url(''); ?>include/admin/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?php echo base_url(''); ?>include/admin/libs/simplebar/simplebar.min.js"></script>
     <script src="<?php echo base_url(''); ?>include/admin/libs/node-waves/waves.min.js"></script>
@@ -157,8 +251,11 @@
     <script src="<?php echo base_url(''); ?>include/admin/js/pages/passowrd-create.init.js"></script>
     <script src="<?php echo base_url(''); ?>include/admin/libs/sweetalert2/sweetalert2.min.js"></script>
     <script src="<?php echo base_url(''); ?>include/admin/js/pages/sweetalerts.init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
         $(document).ready(function() {
+            $('[data-bs-toggle="tooltip"]').tooltip();
+
             function showLoader() {
                 $(".loader").show();
                 $('button[type="submit"]').prop("disabled", true).html('<span class="loader"></span>');
@@ -166,7 +263,7 @@
 
             function hideLoader() {
                 $(".loader").hide();
-                $('button[type="submit"]').prop("disabled", false).html("Sign Up");
+                $('button[type="submit"]').prop("disabled", false).html("Register Now");
             }
 
             function submitForm(formData) {
@@ -194,7 +291,7 @@
                                 showCloseButton: !0,
                             }).then((result) => {
                                 if (result.isConfirmed) {
-                                    window.location.href = "<?php echo base_url('verify-account/') ?>" + response.data;
+                                    window.location.href = "<?php echo base_url('verify-account/') ?>" + response.user_id;
                                 }
                             });
                         } else {
@@ -213,13 +310,126 @@
                     },
                 });
             }
+
             $("#sign-up").on("submit", function(event) {
-                event.preventDefault();
-                var $signUp = $(this);
-                var formData = $signUp.serialize();
-                submitForm(formData);
+                if (validateForm()) {
+                    var $signUp = $(this);
+                    var formData = $signUp.serialize();
+                    submitForm(formData);
+                }
             });
+
+            $('#contanterOrganization').hide();
+
+            $('input[type="radio"][name="register_as"]').change(function() {
+                if (this.value === 'Organization') {
+                    $('#feildExperience').hide();
+                    $('#feildCoreCompetency').hide();
+                    $('#submitBtn').attr('type', 'button').text('Next Step').attr('id', 'btnNextStapeOrgnation');
+                } else if (this.value === 'Individual') {
+                    $('#contanterIndividual').show();
+                    $('#contanterOrganization').hide();
+                    $('#feildExperience').show();
+                    $('#feildCoreCompetency').show();
+                    $('#btnNextStapeOrgnation').attr('type', 'submit').text('Register Now').attr('id', 'submitBtn');
+                }
+            });
+
+            $('#coreCompetency').select2({
+                placeholder: 'Select core competencies...',
+                allowClear: true
+            });
+
+            $('#potentialInterestAreas').select2({
+                placeholder: 'Select potential interest Areas...',
+                allowClear: true
+            });
+
+            function validateForm() {
+                var isValid = true;
+
+                var fullName = $("#fullName").val();
+                if (!fullName) {
+                    $("#fullName").addClass("is-invalid");
+                    isValid = false;
+                } else {
+                    $("#fullName").removeClass("is-invalid");
+                }
+
+                var dateOfBirth = $("#datOfBirth").val();
+                if (!dateOfBirth) {
+                    $("#datOfBirth").addClass("is-invalid");
+                    isValid = false;
+                } else {
+                    var dob = new Date(dateOfBirth);
+                    var today = new Date();
+                    var eighteenYearsAgo = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+                    if (dob > eighteenYearsAgo) {
+                        $("#datOfBirth").addClass("is-invalid");
+                        $("#datOfBirth").next(".invalid-feedback").text("You must be 18 years or older to register.");
+                        isValid = false;
+                    } else {
+                        $("#datOfBirth").removeClass("is-invalid");
+                    }
+                }
+
+                var email = $("#email").val();
+                var emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if (!email || !emailPattern.test(email)) {
+                    $("#email").addClass("is-invalid");
+                    isValid = false;
+                } else {
+                    $("#email").removeClass("is-invalid");
+                }
+
+                var contactNo = $("#contactNo").val();
+                if (!contactNo) {
+                    $("#contactNo").addClass("is-invalid");
+                    isValid = false;
+                } else {
+                    $("#contactNo").removeClass("is-invalid");
+                }
+
+                var password = $("#password-input").val();
+                if (!password) {
+                    $("#password-input").addClass("is-invalid");
+                    isValid = false;
+                } else {
+                    $("#password-input").removeClass("is-invalid");
+                }
+
+                var coreCompetency = $("#coreCompetency").val();
+                if (!coreCompetency) {
+                    $("#coreCompetency").addClass("is-invalid");
+                    isValid = false;
+                } else {
+                    $("#coreCompetency").removeClass("is-invalid");
+                }
+                var registerAs = $("input[name='register_as']:checked").val();
+                if (registerAs === "Individual") {
+                    var experience = $("#experience").val();
+                    if (!experience) {
+                        $("#experience").addClass("is-invalid");
+                        isValid = false;
+                    } else {
+                        $("#experience").removeClass("is-invalid");
+                    }
+                }
+                return isValid;
+            }
+
+            $(document).on("click", "#btnNextStapeOrgnation", function() {
+                if (validateForm()) {
+                    $('#contanterOrganization').show();
+                    $('#contanterIndividual').hide();
+                    $('#btnNextStapeOrgnation').attr('type', 'submit').text('Register Now').attr('id', 'submitBtn');
+                } else {
+
+                }
+            });
+
         });
     </script>
 </body>
+
 </html>

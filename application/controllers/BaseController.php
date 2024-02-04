@@ -27,4 +27,5 @@ class BaseController extends CI_Controller {
         $this->load->view('base/index', $data);
     }
 
+
 }
