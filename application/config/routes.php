@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // route for base URL's
 $route['default_controller'] = 'BaseController';
 $route['registration'] = 'Authorization/signUp';
+$route['login'] = 'Authorization/signIn';
 // Routes for About section
 $route['about'] = 'BaseController/about';
 $route['about/why-sangam'] = 'BaseController/whySangam';

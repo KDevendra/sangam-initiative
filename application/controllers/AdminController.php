@@ -52,7 +52,7 @@ private function handleFileUpload($inputName, $uploadPath, $allowedTypes, $maxSi
         $this->load->driver("cache");
         $this->session->sess_destroy();
         $this->cache->clean();
-        return redirect("sign-in");
+        return redirect("login");
     }
     public function profile() {
         $user_id = $this->session->login['login_id'];

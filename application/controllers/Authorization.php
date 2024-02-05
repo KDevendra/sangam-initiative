@@ -7,19 +7,7 @@ class Authorization extends CI_Controller
     {
         try {
             $this->load->library("email");
-            $config = [
-                "protocol" => "smtp",
-                "smtp_host" => "smtp.hostinger.com",
-                "smtp_port" => 465,
-                "smtp_user" => "developers@keywordhike.com",
-                "smtp_pass" => "DevelopersTeam@#2023",
-                "smtp_crypto" => "ssl",
-                "mailtype" => "html",
-                "crlf" => "\r\n",
-                "newline" => "\r\n",
-                "charset" => "utf-8",
-                "wordwrap" => true,
-            ];
+            $config = ["protocol" => "smtp", "smtp_host" => "smtp.hostinger.com", "smtp_port" => 465, "smtp_user" => "developers@keywordhike.com", "smtp_pass" => "DevelopersTeam@#2023", "smtp_crypto" => "ssl", "mailtype" => "html", "crlf" => "\r\n", "newline" => "\r\n", "charset" => "utf-8", "wordwrap" => true,];
             $this->email->initialize($config);
             $this->email->set_crlf("\r\n");
             $this->email->set_newline("\r\n");
@@ -100,17 +88,7 @@ class Authorization extends CI_Controller
                 if ($checkEmailDuplicate->num_rows() > 0) {
                     $response = ["status" => "error", "message" => "Email address is already in use."];
                 } else {
-                    $postData = [
-                        'register_as' => $this->input->post('register_as'),
-                        'dat_of_birth' => $this->input->post('datOfBirth'),
-                        'user_name' => $this->input->post('fullName'),
-                        'full_name' => $this->input->post('fullName'),
-                        'contact_no' => $this->input->post('contactNo'),
-                        'email' => $this->input->post('email'),
-                        'password' => $password,
-                        'core_competency' => json_encode($this->input->post('coreCompetency')),
-                        'user_level' => 2,
-                    ];
+                    $postData = ['register_as' => $this->input->post('register_as'), 'dat_of_birth' => $this->input->post('datOfBirth'), 'user_name' => $this->input->post('fullName'), 'full_name' => $this->input->post('fullName'), 'contact_no' => $this->input->post('contactNo'), 'email' => $this->input->post('email'), 'password' => $password, 'core_competency' => json_encode($this->input->post('coreCompetency')), 'user_level' => 2, 'created_at'=>date('Y-m-d H:i:s')];
                     if ($this->input->post('register_as') === 'Individual') {
                         $postData['experience'] = $this->input->post('experience');
                     } elseif ($this->input->post('register_as') === 'Organization') {
@@ -145,19 +123,31 @@ class Authorization extends CI_Controller
     {
         $response = ["status" => "error", "message" => ""];
         if ($this->input->post()) {
-            $this->form_validation->set_rules("email", "User Id", "trim|required");
+            $this->form_validation->set_rules("login_id", "User Id", "trim|required");
             $this->form_validation->set_rules("password", "User password", "trim|required");
             if ($this->form_validation->run() == false) {
                 $response = ["status" => "validation_errors", "message" => $this->form_validation->error_array()];
             } else {
-                $user_id = $this->input->post("email");
+                $user_id = $this->input->post("login_id");
                 $password = hash("SHA512", $this->input->post("password"));
-                $record = $this->BaseModel->getData("login", ["user_id" => $user_id]);
+          
+                if (filter_var($user_id, FILTER_VALIDATE_EMAIL)) {
+
+                    $record = $this->BaseModel->getData("login", ["email" => $user_id]);
+                } else {
+
+                    $record = $this->BaseModel->getData("login", ["user_id" => $user_id]);
+                }
                 if ($record->num_rows() == 0) {
                     $response["message"] = "This email is not registered please register yourself";
                 } else {
                     $details = $record->row();
-                    $dbuser_id = $details->user_id;
+                    
+                    if (filter_var($user_id, FILTER_VALIDATE_EMAIL)) {
+                        $dbuser_id = $details->email;
+                    } else {
+                        $dbuser_id = $details->user_id;
+                    }
                     $dbpassword = $details->password;
                     $userEnterpassword = hash("SHA512", $password);
                     $encapassword = hash("SHA512", $dbpassword);
@@ -177,9 +167,9 @@ class Authorization extends CI_Controller
                             if ($user_id != $dbuser_id) {
                                 $response["message"] = "Please enter correct user name & password.";
                             } else {
-                                $userStatus = $details->is_active;
-                                if ($userStatus == 0) {
-                                    $response["data"] = $details->login_id;
+                                $userStatus = $details->is_verified;
+                                if ($userStatus === 0) {
+                                    $response["data"] = $details->user_id;
                                     $response["status"] = "verify";
                                     $response["message"] = "User does not verified.";
                                 } else {
@@ -187,7 +177,7 @@ class Authorization extends CI_Controller
                                         $response["message"] = "User does not active.";
                                     } else {
                                         $sessData = ["login_id" => $details->login_id, "user_name" => $details->user_name, "user_level" => $details->user_level, "user_id" => $details->user_id, "user_level" => $details->user_level];
-                                        if ($details->user_level === '0') {
+                                        if ($details->user_level) {
                                             $this->session->set_userdata("login", $sessData);
                                             AntiFixationInit();
                                             $this->session->salt = generateSalt();
@@ -212,6 +202,7 @@ class Authorization extends CI_Controller
         header("Content-Type: application/json");
         echo json_encode($response);
     }
+
     public function resetpassword()
     {
         $data["title"] = $this->projectTitle . " : Reset password";
@@ -368,21 +359,17 @@ class Authorization extends CI_Controller
         if ($this->input->method() === "post") {
             $this->form_validation->set_rules("activation_code", "Activation Code", "trim|required|exact_length[6]");
             $this->form_validation->set_rules("user_id", "User ID", "trim|required");
-
             if ($this->form_validation->run() === false) {
                 $response = ["status" => "validation_errors", "message" => validation_errors()];
             } else {
                 $activation_code = $this->input->post("activation_code");
                 $user_id = $this->input->post("user_id");
-
                 $cond = ["user_id" => $user_id, "activation_code" => $activation_code];
                 $checkVerificationCode = $this->BaseModel->getData("login", $cond);
-
                 if ($checkVerificationCode->num_rows() > 0) {
                     $updateData = ["is_active" => 1, 'is_verified' => 1];
                     $updateCond = ["user_id" => $user_id];
                     $updateUserActivation = $this->BaseModel->updateData("login", $updateData, $updateCond);
-
                     if ($updateUserActivation) {
                         $response = ["status" => "success", "message" => "User verified successfully."];
                         $details = $checkVerificationCode->row();
@@ -411,11 +398,9 @@ class Authorization extends CI_Controller
         } else {
             $response = ["status" => "error", "message" => "Invalid request method."];
         }
-
         $this->output->set_content_type("application/json");
         echo json_encode($response);
     }
-
     public function resendOTP()
     {
         try {
@@ -463,7 +448,7 @@ class Authorization extends CI_Controller
         $messageBody = str_replace($placeholders, $values, $messageBody);
         return $this->mainEmailConfig($email, $subject, $messageBody, "", "");
     }
-    private function  sendEmailVerified($email, $user_name, $registration_id, $full_name, $contact_number, $registered_as)
+    private function sendEmailVerified($email, $user_name, $registration_id, $full_name, $contact_number, $registered_as)
     {
         $templateFile = FCPATH . 'include/email/registration/temp_email_verified_format.html';
         $subject = "Welcome to 'Digital Twin: Sangam Initiative!'";
