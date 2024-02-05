@@ -400,7 +400,7 @@
                                 </a>
                             </div>
                             <div class="col-md-12">
-                                <a href="">
+                                <a href="<?php echo base_url('registration');?>">
                                     <div class="single-info-item style-one mb-20 wow fadeInUp" style="visibility: visible;">
                                         <div class="shape shape-one"><span><img src="<?php echo base_url(''); ?>include/web/images/shape/info-shape-2.png" alt="shape"></span></div>
                                         <div class="info">

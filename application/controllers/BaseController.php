@@ -17,122 +17,128 @@ class BaseController extends CI_Controller
     }
     public function index()
     {
-        $data['title'] = "Home" . $this->projectTitle;
+        $data['title'] = "Home: " . $this->projectTitle;
         $this->load->view('base/index', $data);
     }
     public function about()
     {
-        $data['title'] = "About" . $this->projectTitle;
+        $data['title'] = "About: " . $this->projectTitle;
         $this->load->view('base/about', $data);
     }
     public function whySangam()
     {
-        $data['title'] = "Why Sangam" . $this->projectTitle;
+        $data['title'] = "Why Sangam: " . $this->projectTitle;
         $this->load->view('base/why-sangam', $data);
     }
     public function whyNow()
     {
-        $data['title'] = "why-now" . $this->projectTitle;
+        $data['title'] = "why-now: " . $this->projectTitle;
         $this->load->view('base/why-now', $data);
     }
     public function whyJoin()
     {
-        $data['title'] = "Why Join" . $this->projectTitle;
+        $data['title'] = "Why Join: " . $this->projectTitle;
         $this->load->view('base/why-join', $data);
     }
     public function participate()
     {
-        $data['title'] = "Participate" . $this->projectTitle;
+        $data['title'] = "Participate: " . $this->projectTitle;
         $this->load->view('base/participate', $data);
     }
     public function process()
     {
-        $data['title'] = "Process" . $this->projectTitle;
+        $data['title'] = "Process: " . $this->projectTitle;
         $this->load->view('base/process', $data);
     }
     public function faqs()
     {
-        $data['title'] = "FAQ's" . $this->projectTitle;
+        $data['title'] = "FAQ's: " . $this->projectTitle;
         $this->load->view('base/faqs', $data);
     }
     public function curatedContent()
     {
-        $data['title'] = "Curated Content" . $this->projectTitle;
+        $data['title'] = "Curated Content: " . $this->projectTitle;
         $this->load->view('base/curated-content', $data);
     }
     public function preRegistration()
     {
-        $data['title'] = "Pre Registration" . $this->projectTitle;
+        $data['title'] = "Pre Registration: " . $this->projectTitle;
         $this->load->view('base/pre-registration', $data);
+    }
+
+    public function events()
+    {
+        $data['title'] = "Upcoming Events: " . $this->projectTitle;
+        $this->load->view('base/events', $data);
     }
     public function upcomingEvents()
     {
-        $data['title'] = "Upcoming Events" . $this->projectTitle;
+        $data['title'] = "Upcoming Events: " . $this->projectTitle;
         $this->load->view('base/upcoming-events', $data);
     }
     public function dashboard()
     {
-        $data['title'] = "Dashboard" . $this->projectTitle;
+        $data['title'] = "Dashboard: " . $this->projectTitle;
         $this->load->view('base/dashboard', $data);
     }
     public function whyAttend()
     {
-        $data['title'] = "Why Attend" . $this->projectTitle;
+        $data['title'] = "Why Attend: " . $this->projectTitle;
         $this->load->view('base/why-attend', $data);
     }
     public function speakers()
     {
-        $data['title'] = "Speakers" . $this->projectTitle;
+        $data['title'] = "Speakers: " . $this->projectTitle;
         $this->load->view('base/speakers', $data);
     }
     public function schedule()
     {
-        $data['title'] = "Schedule" . $this->projectTitle;
+        $data['title'] = "Schedule: " . $this->projectTitle;
         $this->load->view('base/schedule', $data);
     }
     public function registerEvent()
     {
-        $data['title'] = "Register Event" . $this->projectTitle;
+        $data['title'] = "Register Event: " . $this->projectTitle;
         $this->load->view('base/register-event', $data);
     }
     public function expressionOfInterest()
     {
-        $data['title'] = "Expression of Interest" . $this->projectTitle;
+        $data['title'] = "Expression of Interest: " . $this->projectTitle;
         $this->load->view('base/expression-of-interest', $data);
     }
     public function aboutEoi()
     {
-        $data['title'] = "About EoI" . $this->projectTitle;
+        $data['title'] = "About EoI: " . $this->projectTitle;
         $this->load->view('base/about-eoi', $data);
     }
     public function purposeEoi()
     {
-        $data['title'] = "Purpose EoI" . $this->projectTitle;
+        $data['title'] = "Purpose EoI: " . $this->projectTitle;
         $this->load->view('base/purpose-eoi', $data);
     }
     public function stagesEoi()
     {
-        $data['title'] = "Stages EoI" . $this->projectTitle;
+        $data['title'] = "Stages EoI: " . $this->projectTitle;
         $this->load->view('base/stages-eoi', $data);
     }
     public function whyParticipate()
     {
-        $data['title'] = "Why Participate" . $this->projectTitle;
+        $data['title'] = "Why Participate: " . $this->projectTitle;
         $this->load->view('base/why-participate', $data);
     }
     public function participationDetails()
     {
-        $data['title'] = "Participation Details" . $this->projectTitle;
+        $data['title'] = "Participation Details: " . $this->projectTitle;
         $this->load->view('base/participation-details', $data);
     }
     public function submitResponse()
     {
-        $data['title'] = "Submit Response" . $this->projectTitle;
+        $data['title'] = "Submit Response: " . $this->projectTitle;
         $this->load->view('base/submit-response', $data);
     }
     public function registration()
     {
-        $data['title'] = "Registration :" . $this->projectTitle;
+        $data['title'] = "Registration :: " . $this->projectTitle;
         $this->load->view('base/sign-up', $data);
     }
 }

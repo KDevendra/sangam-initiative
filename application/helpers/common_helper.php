@@ -1,37 +1,38 @@
 <?php defined("BASEPATH") or exit("No direct script access allowed");
-function generateSalt($length = 6) {
+function generateSalt($length = 6)
+{
     $str = "";
     $characters = array_merge(range("A", "Z"), range("a", "z"), range("0", "9"));
     $max = count($characters) - 1;
-    for ($i = 0;$i < $length;$i++) {
+    for ($i = 0; $i < $length; $i++) {
         $rand = mt_rand(0, $max);
-        $str.= $characters[$rand];
+        $str .= $characters[$rand];
     }
     $str = hash("sha512", $str);
     return $str;
 }
-function AntiFixationInit() {
-    $obj = & get_instance();
+function AntiFixationInit()
+{
+    $obj = &get_instance();
     $value = generateSalt();
     $obj->load->helper('cookie');
     set_cookie("ci_fixation", $value, 30 * 60);
     $obj->session->ci_fixation = $value;
 }
-function generateOTP($length = 4) {
+function generateOTP($length = 4)
+{
     $str = "";
     $characters = array_merge(range("0", "9"));
     $max = count($characters) - 1;
-    for ($i = 0;$i < $length;$i++) {
+    for ($i = 0; $i < $length; $i++) {
         $rand = mt_rand(0, $max);
-        $str.= $characters[$rand];
+        $str .= $characters[$rand];
     }
     return $str;
 }
-function customEncrypt($string) {
-    // Check if $string is null and handle it appropriately
+function customEncrypt($string)
+{
     if ($string === null) {
-        $string = ''; // Or handle it in another way that makes sense for your application
-        
     }
     $secretKey = 'evbDXau3dj9ASJG3PWundQ==';
     $cipher = 'AES-256-CBC';
@@ -44,7 +45,8 @@ function customEncrypt($string) {
     $output = base64_encode($output);
     return $output;
 }
-function customDecrypt($string) {
+function customDecrypt($string)
+{
     $secretKey = 'evbDXau3dj9ASJG3PWundQ==';
     $cipher = 'AES-256-CBC';
     $iv = '!#%&\'()*+,/:;=?@[]';
@@ -54,46 +56,87 @@ function customDecrypt($string) {
     $output = rtrim($output);
     return $output;
 }
-function hasAccess($userId, $menuItemAccess) {
-    $CI = &get_instance();
-    $query = $CI->db->where(['UserId'=>$userId, 'MenuItemId'=>$menuItemAccess])->get('user_menu_access');
-    return $query->result_array();
+if (!function_exists('checkMenuAccess')) {
+    function checkMenuAccess($userLevel)
+    {
+        $CI = &get_instance();
+        $menuItems = $CI->db->get('master_menu_items')->result_array();
+        $accessQuery = $CI->db->get_where('user_menu_access', ['user_level' => $userLevel]);
+        $accessData = $accessQuery->result_array();
+        $menuTree = buildMenuTreeWithAccess($menuItems, $accessData);
+        return $menuTree;
+    }
 }
-function menuItems() {
+function buildMenuTreeWithAccess($menuItems, $accessData, $parent = 0)
+{
+    $tree = [];
+    foreach ($menuItems as $menuItem) {
+        if ($menuItem['menu_item_level'] == $parent) {
+            $hasAccess = hasAccess($menuItem['menu_item_id'], $accessData);
+            if ($hasAccess) {
+                $menuItem['has_access'] = true;
+                $children = buildMenuTreeWithAccess($menuItems, $accessData, $menuItem['menu_item_id']);
+                if ($children) {
+                    $menuItem['children'] = $children;
+                }
+                $tree[] = $menuItem;
+            }
+        }
+    }
+    return $tree;
+}
+function hasAccess($menuItemId, $accessData)
+{
+    foreach ($accessData as $access) {
+        if ($access['menu_item_id'] == $menuItemId) {
+            return true;
+        }
+    }
+    return false;
+}
+function checkPermissionHelper($userLevel, $userId)
+{
+    if ($userLevel === 0 || $userLevel === 1) {
+        $permissions = array('set_user_permission' => true, 'client_add' => true, 'client_view' => true, 'client_edit' => true, 'client_delete' => true,);
+    } else {
+        $CI = &get_instance();
+        $CI->load->database();
+        $query = $CI->db->get_where('user_permissions', array('login_id' => $userId));
+        $row = $query->row();
+        $permissions = array('client_add' => false, 'client_view' => false, 'client_edit' => false, 'client_delete' => false,);
+        if ($row) {
+            $permissions['client_add'] = $row->client_add;
+            $permissions['client_view'] = $row->client_view;
+            $permissions['client_edit'] = $row->client_edit;
+            $permissions['client_delete'] = $row->client_delete;
+        }
+    }
+    return json_encode($permissions);
+}
+function checkLanguage()
+{
     $CI = &get_instance();
-    $query = $CI->db->get('menu_items')->result_array();
+    $query = $CI->db->where(['status' => 1])->get('language')->result_array();
     return $query;
 }
-function checkLanguage() {
-    $CI = &get_instance();
-    $query = $CI->db->where(['status'=>1])->get('language')->result_array();
-    return $query;
-}
-function countVisitors() {
+function countVisitors()
+{
     $CI = &get_instance();
     $query = $CI->db->get('visitors')->result_array();
     return $query;
 }
-function themeCustomizerOptions() {
+function themeCustomizerOptions()
+{
     $CI = &get_instance();
-    $query = $CI->db->where(['id'=>1])->get('theme_customizer_options')->row();
+    $query = $CI->db->where(['id' => 1])->get('theme_customizer_options')->row();
     if (!empty($query)) {
         return $query;
     } else {
-        return (object) array(
-            'layout' => 'vertical',
-            'topbar' => 'light',
-            'sidebar' => 'dark',
-            'sidebar_size' => 'lg',
-            'sidebar_image' => 'none',
-            'preloader' => 'disable',
-            'theme' => 'default',
-            'theme_colors' => 'default'
-        );
+        return (object)['layout' => 'vertical', 'topbar' => 'light', 'sidebar' => 'dark', 'sidebar_size' => 'lg', 'sidebar_image' => 'none', 'preloader' => 'disable', 'theme' => 'default', 'theme_colors' => 'default'];
     }
 }
-
-function encryptAndPartiallyDisplayEmail($email) {
+function encryptAndPartiallyDisplayEmail($email)
+{
     $parts = explode('@', $email);
     $username = $parts[0];
     $domain = $parts[1];
@@ -102,13 +145,15 @@ function encryptAndPartiallyDisplayEmail($email) {
     $hiddenUsername = substr($username, 0, $len - $hiddenChars) . str_repeat('*', $hiddenChars);
     return $hiddenUsername . '@' . $domain;
 }
-function dd($data=null){
+function dd($data = null)
+{
     echo "<pre>";
     print_r($data);
     echo "</pre>";
-    die;
+    die();
 }
-function pr($data=null){
+function pr($data = null)
+{
     echo "<pre>";
     print_r($data);
     echo "</pre>";

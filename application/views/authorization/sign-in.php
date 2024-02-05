@@ -3,9 +3,13 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Sign In</title>
+    <title><?php if (isset($title) && !empty($title)) {
+                echo $title;
+            } else {
+                echo "Sangam Initiative";
+            } ?> </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="<?php echo base_url(''); ?>include/admin/images/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo base_url(''); ?>include/web/custom/favicon.png" />
     <script src="<?php echo base_url(''); ?>include/admin/js/layout.js"></script>
     <link href="<?php echo base_url(''); ?>include/admin/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(''); ?>include/admin/css/icons.min.css" rel="stylesheet" type="text/css" />
@@ -13,6 +17,7 @@
     <link href="<?php echo base_url(''); ?>include/admin/css/custom.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(''); ?>include/admin/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
     <div class="auth-page-wrapper auth-bg-cover py-5 d-flex justify-content-center align-items-center min-vh-100">
         <div class="bg-overlay"></div>
@@ -22,12 +27,12 @@
                     <div class="col-lg-12">
                         <div class="card overflow-hidden m-0 card-bg-fill galaxy-border-none">
                             <div class="row justify-content-center g-0">
-                                <div class="col-lg-6">
-                                    <div class="p-lg-5 p-4 auth-one-bg h-100">
+                                <div class="col-lg-4">
+                                    <div class="p-lg-4 p-4 auth-one-bg h-100">
                                         <div class="bg-overlay"></div>
-                                        <div class="position-relative h-100 d-flex flex-column">
+                                        <div class="position-relative h-100 d-flex flex-column" id="signUpPage">
                                             <div class="mb-4">
-                                                <a href="<?php echo base_url(''); ?>" class="d-block">
+                                                <a href="<?php echo base_url(''); ?>" class="d-flex justify-content-center">
                                                     <img src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative_White.png" alt="" height="18" />
                                                 </a>
                                             </div>
@@ -43,13 +48,13 @@
                                                     </div>
                                                     <div class="carousel-inner text-center text-white-50 pb-5">
                                                         <div class="carousel-item active">
-                                                            <p class="fs-15 fst-italic">" Great! Clean code, clean design, easy for customization. Thanks very much! "</p>
+                                                            <p class="fs-15 fst-italic">"Embark on a Journey Through GIS and Satellite Imagery to Uncover New Horizons"</p>
                                                         </div>
                                                         <div class="carousel-item">
-                                                            <p class="fs-15 fst-italic">" The theme is really great with an amazing customer support."</p>
+                                                            <p class="fs-15 fst-italic">"Connect the World: Telecom Experts Paving the Path Forward."</p>
                                                         </div>
                                                         <div class="carousel-item">
-                                                            <p class="fs-15 fst-italic">" Great! Clean code, clean design, easy for customization. Thanks very much! "</p>
+                                                            <p class="fs-15 fst-italic">"Lead the Way in Intelligence with AI, ML, and Big Data Analytics"</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -57,57 +62,59 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-8">
                                     <div class="p-lg-5 p-4">
                                         <div>
-                                            <h5 class="text-primary">Login Account</h5>
-                                            <p class="text-muted">Welcome to Sangam: Your Gateway to Digital Transformation.</p>
+                                            <h5 class="text-primary" style="display: flex;justify-content: space-between;">Login Account for 'Digital Twin: Sangam Initiative' <a href="<?php echo base_url('') ?>"><i class="ri-home-smile-fill"></i></a> </h5>
+                                            <p class="text-muted">Welcome to Sangam: Your gateway to digital transformation.</p>
                                             <div id="serverSideValidation"></div>
                                         </div>
                                         <div class="mt-4">
                                             <form id="sign-in" class="needs-validation" novalidate>
-                                                <div class="mb-3">
-                                                    <label for="useremail" class="form-label">Email <span class="text-danger">*</span></label>
-                                                    <input type="email" class="form-control" name="email" id="useremail" placeholder="Enter email address" required />
-                                                    <div class="invalid-feedback">
-                                                        Please enter email
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="password-input">Password</label>
-                                                    <div class="position-relative auth-pass-inputgroup">
-                                                        <input type="password" class="form-control pe-5 password-input" name="password" onpaste="return false" placeholder="Enter password" id="password-input" aria-describedby="passwordInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
-                                                        <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon material-shadow-none" type="button" id="password-addon">
-                                                            <i class="ri-eye-fill align-middle"></i>
-                                                        </button>
+                                                <div class="row">
+                                                    <div class="mb-3 col-md-6">
+                                                        <label for="useremail" class="form-label">Email or User Id <span class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" name="login_id" id="useremail" placeholder="Enter email or user id" required />
                                                         <div class="invalid-feedback">
-                                                            Please enter password
+                                                            Please enter email or user id
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="captcha-input">Captcha</label>
-                                                    <div class="position-relative auth-pass-inputgroup">
-                                                        <div class="catpchaparent">
-                                                            <div class="capchchild">
-                                                                <input type="text" class="form-control" id="valiIpt" placeholder="Enter CAPTCHA" name="captcha_code" maxlength="4" autocomplete="off" pattern="[0-9 .]+" required />
-                                                                <div class="invalid-feedback" id="captchaValidationMessage">
-                                                                    Please enter a valid Captcha
+                                                    <div class="mb-3 col-md-6">
+                                                        <label class="form-label" for="password-input">Password <span class="text-danger">*</span></label>
+                                                        <div class="position-relative auth-pass-inputgroup">
+                                                            <input type="password" class="form-control pe-5 password-input" name="password" onpaste="return false" placeholder="Enter password" id="password-input" aria-describedby="passwordInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
+                                                            <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon material-shadow-none" type="button" id="password-addon">
+                                                                <i class="ri-eye-fill align-middle"></i>
+                                                            </button>
+                                                            <div class="invalid-feedback">
+                                                                Please enter password
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="captcha-input">Captcha <span class="text-danger">*</span></label>
+                                                        <div class="position-relative auth-pass-inputgroup">
+                                                            <div class="catpchaparent">
+                                                                <div class="capchchild">
+                                                                    <input type="text" class="form-control" id="valiIpt" placeholder="Enter CAPTCHA" name="captcha_code" maxlength="4" autocomplete="off" pattern="[0-9 .]+" required />
+                                                                    <div class="invalid-feedback" id="captchaValidationMessage">
+                                                                        Please enter a valid Captcha
+                                                                    </div>
+                                                                </div>
+                                                                <div class="capchchild">
+                                                                    <canvas id="valicode"></canvas>
+                                                                </div>
+                                                                <div class="capchchild" id="toggle" style="cursor: pointer;margin-top: 8px;">
+                                                                    <button type="button" class="btn btn-sm btn-danger" id="refreshButton"><i class="ri-restart-line"></i> Refresh</button>
                                                                 </div>
                                                             </div>
-                                                            <div class="capchchild">
-                                                                <canvas id="valicode"></canvas>
-                                                            </div>
-                                                            <div class="capchchild" id="toggle" style="cursor: pointer;">
-                                                                <button type="button" class="btn btn-sm btn-primary" id="refreshButton"><i class="ri-restart-line"></i> Refresh</button>
-                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="mb-4">
-                                                    <p class="mb-0 fs-12 text-muted fst-italic">
-                                                        By registering you agree to the Sangam Initiative <a href="#" class="text-primary text-decoration-underline fst-normal fw-medium">Terms of Use</a>
-                                                    </p>
+                                                    <div class="mb-4">
+                                                        <p class="mb-0 fs-12 text-muted fst-italic">
+                                                            By Registration implies acceptance of the Sangam Initiative <a href="#" class="text-primary text-decoration-underline fst-normal fw-medium">Guidelines</a>
+                                                        </p>
+                                                    </div>
                                                 </div>
                                                 <div id="password-contain" class="p-3 bg-light mb-2 rounded">
                                                     <h5 class="fs-13">Password must contain:</h5>
@@ -116,13 +123,13 @@
                                                     <p id="pass-upper" class="invalid fs-12 mb-2">At least <b>uppercase</b> letter (A-Z)</p>
                                                     <p id="pass-number" class="invalid fs-12 mb-0">A least <b>number</b> (0-9)</p>
                                                 </div>
-                                                <div class="mt-4">
-                                                    <button class="btn btn-success w-100" type="submit"><span class="loader"></span> Sign In</button>
+                                                <div class="mt-0 d-flex justify-content-center">
+                                                    <button class="btn btn-primary" type="submit">Login</button>
                                                 </div>
                                             </form>
                                         </div>
-                                        <div class="mt-5 text-center">
-                                            <p class="mb-0">Don't have an account ? <a href="<?php echo base_url('sign-up'); ?>" class="fw-semibold text-primary text-decoration-underline"> Signup</a></p>
+                                        <div class="mt-2 text-center">
+                                            <p class="mb-0">Don't have an account ? <a href="<?php echo base_url('registration'); ?>" class="fw-semibold text-primary text-decoration-underline">Register</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -142,7 +149,7 @@
                                 <script>
                                     document.write(new Date().getFullYear());
                                 </script>
-                                <span class="text-white">Sangam Initiative</span>. Website Design & Developed by <a class="text-white" href="https://www.apwebworld.com" target="_blank">AP Web World</a>
+                                <span class="text-white">Sangam Initiative</span> All Rights Reserved.</a>
                             </p>
                         </div>
                     </div>
@@ -163,6 +170,7 @@
     <script src="<?php echo base_url(''); ?>include/admin/js/pages/sweetalerts.init.js"></script>
     <script>
         let rightCode = "";
+
         function randomColor() {
             let r = Math.floor(Math.random() * 256);
             let g = Math.floor(Math.random() * 256);
@@ -274,7 +282,7 @@
 
             function hideLoader() {
                 $(".loader").hide();
-                $('button[type="submit"]').prop("disabled", false).html("Sign In");
+                $('button[type="submit"]').prop("disabled", false).html("Login");
             }
 
             function submitForm(formData) {
@@ -293,7 +301,7 @@
                             } else if (response.user_level === "1") {
                                 window.location.href = "<?php echo base_url('admin-dashboard'); ?>";
                             } else {
-                                window.location.href = "<?php echo base_url('user-dashboard'); ?>";
+                                window.location.href = "<?php echo base_url('admin-dashboard'); ?>";
                             }
                         } else {
                             console.log("Error case");

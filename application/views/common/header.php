@@ -4,14 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Landscaping, Gardening, Florists, Groundskeeping">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?php if (isset($title) && !empty($title)) {
                 echo $title;
             } else {
                 echo "Sangam Initiative";
             } ?></title>
-    <link rel="shortcut icon" href="<?php echo base_url(''); ?>include/web/images/favicon.ico" type="image/png">
+    <link rel="shortcut icon" href="<?php echo base_url(''); ?>include/web/custom/favicon.png" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/fonts/flaticon/flaticon_gadden.css">
     <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/fonts/fontawesome/css/all.min.css">

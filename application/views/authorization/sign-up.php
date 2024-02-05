@@ -219,7 +219,7 @@
                                             </form>
                                         </div>
                                         <div class="mt-2 text-center">
-                                            <p class="mb-0">Already have an account ? <a href="<?php echo base_url('sign-in'); ?>" class="fw-semibold text-primary text-decoration-underline">Login</a></p>
+                                            <p class="mb-0">Already have an account ? <a href="<?php echo base_url('login'); ?>" class="fw-semibold text-primary text-decoration-underline">Login</a></p>
                                         </div>
                                     </div>
                                 </div>
