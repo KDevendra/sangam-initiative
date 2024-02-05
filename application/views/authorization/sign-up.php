@@ -69,7 +69,7 @@
                                     <div class="p-lg-4 p-4">
                                         <div>
                                             <h5 class="text-primary" style="display: flex;justify-content: space-between;">Register for 'Digital Twin: Sangam Initiative' <a href="<?php echo base_url('') ?>"><i class="ri-home-smile-fill"></i></a> </h5>
-                                            <p class="text-muted">Join the Transformation of Infrastructure Planning.</p>
+                                            <p class="text-muted">Join the transformation of infrastructure planning.</p>
                                         </div>
                                         <div class="mt-4">
                                             <form id="sign-up" class="needs-validation" novalidate>
