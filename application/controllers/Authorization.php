@@ -81,10 +81,10 @@ class Authorization extends CI_Controller
             }
             if ($this->input->post('register_as') === 'Organization') {
                 $this->form_validation->set_rules("OrganizationName", "Organization Name", 'trim|required|min_length[3]|regex_match[/^[A-Za-z\s]+$/]');
-                $this->form_validation->set_rules("potentialInterestAreas[]", "Potential Interest Areas", 'trim|required|min_length[3]|max_length[50]|regex_match[/^[A-Za-z\s]+$/]');
+                $this->form_validation->set_rules("potentialInterestAreas[]", "Potential Interest Areas", 'trim|required');
                 $this->form_validation->set_rules("officeAddress", "office address", 'trim|required|min_length[3]|max_length[50]|regex_match[/^[A-Za-z\s]+$/]');
                 $this->form_validation->set_rules("organisationHQAddress", "organisation HQ address", 'trim|min_length[3]|max_length[50]|regex_match[/^[A-Za-z\s]+$/]');
-                $this->form_validation->set_rules("websiteURL", "Website URL", 'trim|valid_url|min_length[3]|max_length[50]|regex_match[/^[A-Za-z\s]+$/]');
+                $this->form_validation->set_rules("websiteURL", "Website URL", 'trim|valid_url|min_length[3]|max_length[50]');
             }
             if ($this->form_validation->run() === false) {
                 $response = ["status" => "validation_errors", "message" => validation_errors()];
@@ -127,7 +127,7 @@ class Authorization extends CI_Controller
                     $updateCondition = ["login_id" => $inserted_Id];
                     $updateQuery = $this->BaseModel->updateData("login", $updateData, $updateCondition);
                     if ($updateQuery) {
-                        $response = ["status" => "success", "email" => $email, 'user_id' => $user_id, "message" => "Signup successful! Verification code sent on the registered email address."];
+                        $response = ["status" => "success", "email" => $email, 'user_id' => $user_id, "message" => "Registered successful! A verification code has been sent to the email address you provided."];
                     } else {
                         $response = ["status" => "error", "message" => "Signup failed. Please try again later."];
                     }
@@ -251,9 +251,9 @@ class Authorization extends CI_Controller
         $data["title"] = "Verify Account :" . $this->projectTitle;
         try {
             $record = $this->BaseModel->getData("login", ["user_id" => $user_id]);
-            if ($record->num_rows() == 0) {
-                $this->session->set_flashdata("verified", "Your account is already created. Please log in");
-                return redirect('authorization/sign-in', $data);
+            if ($record->num_rows() === 0) {
+                $this->session->set_flashdata("error", "It seems that your ID was not found. Please register correctly");
+                return redirect('authorization/registration', $data);
             }
             $details = $record->row();
             $user_id = $details->user_id;
@@ -366,54 +366,56 @@ class Authorization extends CI_Controller
     public function postVerifyAccount()
     {
         if ($this->input->method() === "post") {
-            $this->form_validation->set_rules("activation_code", "Activation Code", "trim|required|min_length[6]|max_length[6]");
-            $this->form_validation->set_rules("user_id", "user_id", "trim|required");
+            $this->form_validation->set_rules("activation_code", "Activation Code", "trim|required|exact_length[6]");
+            $this->form_validation->set_rules("user_id", "User ID", "trim|required");
+
             if ($this->form_validation->run() === false) {
                 $response = ["status" => "validation_errors", "message" => validation_errors()];
             } else {
                 $activation_code = $this->input->post("activation_code");
                 $user_id = $this->input->post("user_id");
-                $cond = ["user_id" => $this->input->post("user_id"), "activation_code" => $activation_code];
+
+                $cond = ["user_id" => $user_id, "activation_code" => $activation_code];
                 $checkVerificationCode = $this->BaseModel->getData("login", $cond);
+
                 if ($checkVerificationCode->num_rows() > 0) {
-                    try {
-                        $cond = ["user_id" => $user_id];
-                        $updateData = ["is_active" => 1];
-                        $updateUserActivation = $this->BaseModel->updateData("login", $updateData, $cond);
-                        if ($updateUserActivation) {
-                            $response = ["status" => "success", "message" => "User verified successfully."];
-                            $details = $checkVerificationCode->row();
-                            $sessData = ["login_id" => $details->login_id, "user_name" => $details->user_name, "user_level" => $details->user_level, "user_id" => $details->user_id, "user_level" => $details->user_level];
-                            if ($details->user_level) {
-                                $this->session->set_userdata("login", $sessData);
-                                AntiFixationInit();
-                                $this->session->salt = generateSalt();
-                                $this->load->helper("cookie");
-                                $duration = 30 * 60;
-                                set_cookie("AuthoToken", $this->session->salt, $duration);
-                                $this->BaseModel->updateData("login", ["wrong_attempt" => 0, "current_login_time" => date("Y-m-d H:i:s")], $cond);
-                                $response["status"] = "success";
-                                $response["user_level"] = $details->user_level;
-                                $response["message"] = "Redirect to dashboard......";
-                            } else {
-                                $response["message"] = "User does not have the required privilege.";
-                            }
+                    $updateData = ["is_active" => 1, 'is_verified' => 1];
+                    $updateCond = ["user_id" => $user_id];
+                    $updateUserActivation = $this->BaseModel->updateData("login", $updateData, $updateCond);
+
+                    if ($updateUserActivation) {
+                        $response = ["status" => "success", "message" => "User verified successfully."];
+                        $details = $checkVerificationCode->row();
+                        $sessData = ["login_id" => $details->login_id, "user_name" => $details->user_name, "user_id" => $details->user_id, "user_level" => $details->user_level];
+                        if ($details->user_level) {
+                            $this->sendEmailVerified($details->email, $details->user_name, $details->user_id, $details->full_name, $details->contact_no, $details->register_as);
+                            $this->session->set_userdata("login", $sessData);
+                            AntiFixationInit();
+                            $this->session->salt = generateSalt();
+                            $this->load->helper("cookie");
+                            $duration = 30 * 60;
+                            set_cookie("AuthoToken", $this->session->salt, $duration);
+                            $this->BaseModel->updateData("login", ["wrong_attempt" => 0, "current_login_time" => date("Y-m-d H:i:s")], $updateCond);
+                            $response["user_level"] = $details->user_level;
+                            $response["message"] = "Redirect to dashboard......";
                         } else {
-                            $response = ["status" => "error", "message" => "Failed. Please try again later."];
+                            $response["message"] = "User does not have the required privilege.";
                         }
-                    } catch (Exception $e) {
-                        $response = ["status" => "error", "message" => "Failed. Please try again later."];
+                    } else {
+                        $response = ["status" => "error", "message" => "Failed to update user activation status. Please try again later."];
                     }
                 } else {
-                    $response = ["status" => "error", "message" => "Invalid Verification code."];
+                    $response = ["status" => "error", "message" => "Invalid verification code."];
                 }
             }
         } else {
             $response = ["status" => "error", "message" => "Invalid request method."];
         }
+
         $this->output->set_content_type("application/json");
         echo json_encode($response);
     }
+
     public function resendOTP()
     {
         try {
@@ -458,6 +460,16 @@ class Authorization extends CI_Controller
         $messageBody = file_get_contents($templateFile);
         $placeholders = ['{user_name}', '{verification_code}'];
         $values = [$user_name, $verification_code];
+        $messageBody = str_replace($placeholders, $values, $messageBody);
+        return $this->mainEmailConfig($email, $subject, $messageBody, "", "");
+    }
+    private function  sendEmailVerified($email, $user_name, $registration_id, $full_name, $contact_number, $registered_as)
+    {
+        $templateFile = FCPATH . 'include/email/registration/temp_email_verified_format.html';
+        $subject = "Welcome to 'Digital Twin: Sangam Initiative!'";
+        $messageBody = file_get_contents($templateFile);
+        $placeholders = ['{user_name}', '{registration_id}', '{full_name}', '{email_address}', '{contact_number}', '{registered_as}'];
+        $values = [$user_name, $registration_id, $full_name, $email, $contact_number, $registered_as];
         $messageBody = str_replace($placeholders, $values, $messageBody);
         return $this->mainEmailConfig($email, $subject, $messageBody, "", "");
     }

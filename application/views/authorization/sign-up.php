@@ -3,7 +3,11 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Register | Sangam Initiative </title>
+    <title><?php if (isset($title) && !empty($title)) {
+                echo $title;
+            } else {
+                echo "Sangam Initiative";
+            } ?> </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="<?php echo base_url(''); ?>include/web/custom/favicon.png" />
     <script src="<?php echo base_url(''); ?>include/admin/js/layout.js"></script>
@@ -64,7 +68,7 @@
                                 <div class="col-lg-8">
                                     <div class="p-lg-4 p-4">
                                         <div>
-                                            <h5 class="text-primary">Register for 'Digital Twin: Sangam Initiative'</h5>
+                                            <h5 class="text-primary" style="display: flex;justify-content: space-between;">Register for 'Digital Twin: Sangam Initiative' <a href="<?php echo base_url('') ?>"><i class="ri-home-smile-fill"></i></a> </h5>
                                             <p class="text-muted">Join the Transformation of Infrastructure Planning.</p>
                                         </div>
                                         <div class="mt-4">
@@ -93,7 +97,8 @@
                                                                     <a href="javascript:void(0)" class="text-muted"><i class="ri-info-i"></i></a>
                                                                 </div>
                                                             </label>
-                                                            <input type="date" class="form-control" id="datOfBirth" name="datOfBirth" required>
+                                                            <input type="date" class="form-control" id="datOfBirth" name="datOfBirth" required="" placeholder="DD-MM-YYYY">
+
                                                             <div class="invalid-feedback">
                                                                 Please select date of birth
                                                             </div>
@@ -107,7 +112,7 @@
                                                         </div>
                                                         <div class="mb-3 col-md-6">
                                                             <label for="contactNo" class="form-label">Contact Number<span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Enter contact number" required />
+                                                            <input type="text" class="form-control" minlength="10" maxlength="10" pattern="[789][0-9]{9}" title="Phone number with 7-9 and remaing 9 digit with 0-9" id="contactNo" name="contactNo" placeholder="Enter contact number" required />
                                                             <div class="invalid-feedback">
                                                                 Please enter contact number
                                                             </div>
@@ -141,7 +146,7 @@
                                                                 <option value="GIS (Landscape) Layer">GIS (Landscape) Layer</option>
                                                             </select>
                                                             <div class="invalid-feedback">
-                                                                Please select Core Competencies
+                                                                Please select core competencies
                                                             </div>
                                                         </div>
                                                         <div class="mb-4 col-md-12">
@@ -205,7 +210,8 @@
                                                                 Please enter Website URL
                                                             </div>
                                                         </div>
-                                                        <div class="mt-0 d-flex justify-content-center">
+                                                        <div class="mt-0 d-flex justify-content-center" style="gap: 10px;">
+                                                            <button class="btn btn-secondary" type="button" id="btnBackToTypeSelection">Previous Step</button>
                                                             <button class="btn btn-primary" id="submitBtn" type="submit">Register Now</button>
                                                         </div>
                                                     </div>
@@ -324,13 +330,11 @@
             $('input[type="radio"][name="register_as"]').change(function() {
                 if (this.value === 'Organization') {
                     $('#feildExperience').hide();
-                    $('#feildCoreCompetency').hide();
                     $('#submitBtn').attr('type', 'button').text('Next Step').attr('id', 'btnNextStapeOrgnation');
                 } else if (this.value === 'Individual') {
                     $('#contanterIndividual').show();
                     $('#contanterOrganization').hide();
                     $('#feildExperience').show();
-                    $('#feildCoreCompetency').show();
                     $('#btnNextStapeOrgnation').attr('type', 'submit').text('Register Now').attr('id', 'submitBtn');
                 }
             });
@@ -399,12 +403,13 @@
                 }
 
                 var coreCompetency = $("#coreCompetency").val();
-                if (!coreCompetency) {
-                    $("#coreCompetency").addClass("is-invalid");
+                if (!coreCompetency || coreCompetency.length === 0) {
+                    $("#coreCompetency").next(".select2-container").addClass("is-invalid");
                     isValid = false;
                 } else {
-                    $("#coreCompetency").removeClass("is-invalid");
+                    $("#coreCompetency").next(".select2-container").removeClass("is-invalid");
                 }
+
                 var registerAs = $("input[name='register_as']:checked").val();
                 if (registerAs === "Individual") {
                     var experience = $("#experience").val();
@@ -422,11 +427,17 @@
                 if (validateForm()) {
                     $('#contanterOrganization').show();
                     $('#contanterIndividual').hide();
-                    $('#btnNextStapeOrgnation').attr('type', 'submit').text('Register Now').attr('id', 'submitBtn');
-                } else {
-
+                    $('#btnNextStapeOrgnation').text('Register Now').attr('id', 'submitBtn');
                 }
             });
+            $(document).on("click", "#btnBackToTypeSelection", function() {
+                $('#contanterOrganization').hide();
+                $('#contanterIndividual').show();
+                $('#submitBtn').text('Next Step').attr('id', 'btnNextStapeOrgnation');
+
+            });
+
+
 
         });
     </script>

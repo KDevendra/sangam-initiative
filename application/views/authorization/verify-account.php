@@ -15,6 +15,7 @@
     <link href="<?php echo base_url(''); ?>include/admin/css/custom.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(''); ?>include/admin/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
     <div class="auth-page-wrapper auth-bg-cover py-5 d-flex justify-content-center align-items-center min-vh-100">
         <div class="bg-overlay"></div>
@@ -126,7 +127,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="mt-2 d-flex justify-content-center">
-                                                    <button type="button" class="btn btn-primary" id="verifyAccountBtn"><span class="loader"></span> Verify OTP</button>
+                                                    <button type="submit" class="btn btn-primary" id="verifyAccountBtn">Verify OTP</button>
                                                 </div>
                                             </form>
                                         </div>
@@ -147,11 +148,11 @@
                     <div class="col-lg-12">
                         <div class="text-center">
                             <p class="mb-0">
-                                &copy;
+                                Copyright &copy;
                                 <script>
                                     document.write(new Date().getFullYear());
                                 </script>
-                                Velzon. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand
+                                <span class="text-white">Sangam Initiative</span> All Rights Reserved.</a>
                             </p>
                         </div>
                     </div>
@@ -172,6 +173,7 @@
     <script>
         $(document).ready(function() {
             $(".loader").hide();
+      
 
             function showLoader() {
                 $(".loader").show();
@@ -180,7 +182,7 @@
 
             function hideLoader() {
                 $(".loader").hide();
-                $('button[type="submit"]').prop("disabled", false).html("Confirm");
+                $('button[type="submit"]').prop("disabled", false).html("Verify OTP");
             }
 
             function submitForm(formData) {

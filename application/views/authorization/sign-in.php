@@ -13,7 +13,6 @@
     <link href="<?php echo base_url(''); ?>include/admin/css/custom.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(''); ?>include/admin/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
     <div class="auth-page-wrapper auth-bg-cover py-5 d-flex justify-content-center align-items-center min-vh-100">
         <div class="bg-overlay"></div>
@@ -120,7 +119,6 @@
                                                 <div class="mt-4">
                                                     <button class="btn btn-success w-100" type="submit"><span class="loader"></span> Sign In</button>
                                                 </div>
-
                                             </form>
                                         </div>
                                         <div class="mt-5 text-center">
@@ -165,7 +163,6 @@
     <script src="<?php echo base_url(''); ?>include/admin/js/pages/sweetalerts.init.js"></script>
     <script>
         let rightCode = "";
-
         function randomColor() {
             let r = Math.floor(Math.random() * 256);
             let g = Math.floor(Math.random() * 256);

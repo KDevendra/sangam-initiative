@@ -1,260 +1,5 @@
 <?php include_once __DIR__ . '/../common/header.php'; ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Landscaping, Gardening, Florists, Groundskeeping">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Sangam Initiative</title>
-    <link rel="shortcut icon" href="<?php echo base_url(''); ?>include/web/images/favicon.ico" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/fonts/flaticon/flaticon_gadden.css">
-    <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/fonts/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/vendor/magnific-popup/dist/magnific-popup.css">
-    <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/vendor/slick/slick.css">
-    <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/vendor/jquery-ui/jquery-ui.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/vendor/nice-select/css/nice-select.css">
-    <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/vendor/animate.css">
-    <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/css/default.css">
-    <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/css/style.css">
-    <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/css/custom.css">
-</head>
-
-<body>
-    <div class="preloader">
-        <div class="loader">
-            <div class="pre-shadow"></div>
-            <div class="pre-box"></div>
-        </div>
-    </div>
-    <div class="modal fade search-modal" id="search-modal">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <form>
-                    <div class="form_group">
-                        <input type="search" class="form_control" placeholder="Search here" name="search">
-                        <label><i class="fa fa-search"></i></label>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade sidebar-panel-wrapper" id="sidebar-modal">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <button class="close" data-dismiss="modal"><i class="far fa-times"></i></button>
-                <div class="sidebar-wrapper">
-                    <div class="sidebar-information-area">
-                        <div class="row no-gutters">
-                            <div class="col-lg-4 sidebar-widget">
-                                <div class="sidebar-info-widget">
-                                    <a href="index.html" class="footer-logo"><img src="<?php echo base_url(''); ?>include/web/custom/c:\Users\Lenovo\Downloads\Sangam_Initiative.png.png" alt="Brand Logo"></a>
-                                    <p>Sangam is on a mission to transform infrastructure planning and design by converging digital technologies and data. </p>
-                                    <div class="social-item">
-                                        <h6>Follow Us</h6>
-                                        <ul class="social-link">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 sidebar-widget">
-                                <div class="sidebar-info-widget">
-                                    <h4 class="title">Get In Touch</h4>
-                                    <div class="contact-info-item-two">
-                                        <h6 class="title"><i class="far fa-map-marker-alt"></i>Location</h6>
-                                        <p>558 Main Street, 2nd Block
-                                            Melbourne, Australia
-                                        </p>
-                                    </div>
-                                    <div class="contact-info-item-two">
-                                        <h6 class="title"><i class="far fa-envelope-open"></i>Email Us</h6>
-                                        <p><a href="mailto:support@gmail.com">support@gmail.com</a></p>
-                                    </div>
-                                    <div class="contact-info-item-two">
-                                        <h6 class="title"><i class="far fa-phone-plus"></i>Hotline</h6>
-                                        <p><a href="tel:+000(123)45688">+000 (123) 456 88</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 sidebar-widget">
-                                <div class="sidebar-info-widget">
-                                    <h4 class="title">Newsletter</h4>
-                                    <form>
-                                        <div class="form_group">
-                                            <input type="email" class="form_control" placeholder="Email Address" required>
-                                            <button class="main-btn secondary-btn">Subscribe Now</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sidebar-gallery pt-80">
-                        <div class="row">
-                            <div class="col-lg-2 col-md-4 col-4">
-                                <div class="single-gallery-item">
-                                    <div class="gallery-img">
-                                        <img src="<?php echo base_url(''); ?>include/web/images/gallery/sgl-1.jpg" alt="Gallery Image">
-                                        <div class="hover-overlay">
-                                            <a href="<?php echo base_url(''); ?>include/web/images/gallery/sgl-1.jpg" class="img-popup icon-btn"><i class="far fa-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-4">
-                                <div class="single-gallery-item">
-                                    <div class="gallery-img">
-                                        <img src="<?php echo base_url(''); ?>include/web/images/gallery/sgl-2.jpg" alt="Gallery Image">
-                                        <div class="hover-overlay">
-                                            <a href="<?php echo base_url(''); ?>include/web/images/gallery/sgl-2.jpg" class="img-popup icon-btn"><i class="far fa-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-4">
-                                <div class="single-gallery-item">
-                                    <div class="gallery-img">
-                                        <img src="<?php echo base_url(''); ?>include/web/images/gallery/sgl-3.jpg" alt="Gallery Image">
-                                        <div class="hover-overlay">
-                                            <a href="<?php echo base_url(''); ?>include/web/images/gallery/sgl-3.jpg" class="img-popup icon-btn"><i class="far fa-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-4">
-                                <div class="single-gallery-item">
-                                    <div class="gallery-img">
-                                        <img src="<?php echo base_url(''); ?>include/web/images/gallery/sgl-4.jpg" alt="Gallery Image">
-                                        <div class="hover-overlay">
-                                            <a href="<?php echo base_url(''); ?>include/web/images/gallery/sgl-4.jpg" class="img-popup icon-btn"><i class="far fa-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-4">
-                                <div class="single-gallery-item">
-                                    <div class="gallery-img">
-                                        <img src="<?php echo base_url(''); ?>include/web/images/gallery/sgl-5.jpg" alt="Gallery Image">
-                                        <div class="hover-overlay">
-                                            <a href="<?php echo base_url(''); ?>include/web/images/gallery/sgl-6.jpg" class="img-popup icon-btn"><i class="far fa-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-4">
-                                <div class="single-gallery-item">
-                                    <div class="gallery-img">
-                                        <img src="<?php echo base_url(''); ?>include/web/images/gallery/sgl-6.jpg" alt="Gallery Image">
-                                        <div class="hover-overlay">
-                                            <a href="<?php echo base_url(''); ?>include/web/images/gallery/sgl-6.jpg" class="img-popup icon-btn"><i class="far fa-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <header class="header-area header-one transparent-header">
-        <div class="header-navigation">
-            <div class="nav-overlay"></div>
-            <div class="container-fluid">
-                <div class="header-top-bar text-white main-bg d-xl-block topNavbar">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="imgPerent">
-                                <img src="<?php echo base_url('') ?>include/web/custom/india-gov-in.png" alt="">
-                                <img src="<?php echo base_url('') ?>include/web/custom/g20-logo.png" alt="">
-                                <img src="<?php echo base_url('') ?>include/web/custom/swachh-bharat.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="primary-menu">
-                    <div class="site-branding">
-                        <a href="index.html" class="brand-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative.png" alt="Site Logo"></a>
-                    </div>
-                    <div class="nav-menu">
-                        <div class="mobile-logo mb-30 d-block d-xl-none">
-                            <a href="index.html" class="brand-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative.png" alt="Site Logo"></a>
-                        </div>
-                        <div class="nav-search mb-30 d-block d-xl-none ">
-                            <form>
-                                <div class="form_group">
-                                    <input type="email" class="form_control" placeholder="Search Here" name="email" required>
-                                    <button class="search-btn"><i class="fas fa-search"></i></button>
-                                </div>
-                            </form>
-                        </div>
-                        <nav class="main-menu">
-                            <ul>
-                                <li class="menu-item"><a href="">Home</a></li>
-                                <li class="menu-item"><a href="">About</a></li>
-                                <li class="menu-item"><a href="">Schedule</a></li>
-                                <li class="menu-item has-children">
-                                    <a href="#">Outreach</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="">Sequence of Events
-                                            </a>
-                                        </li>
-                                        <li><a href="">Speakers</a></li>
-                                        <li><a href="">Registration details
-                                            </a>
-                                        </li>
-                                        <li><a href="">Who can participate
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item has-children">
-                                    <a href="#">Networking</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="">Individual</a></li>
-                                        <li><a href="">Group</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item has-children">
-                                    <a href="#">EOI</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="">Skilled Independent</a></li>
-                                        <li><a href="">Skilled Nominated </a></li>
-                                        <li><a href="">Skilled worked Regional</a></li>
-                                        <li><a href="">Business Innovation and Investment</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item"><a href="">Why Attending</a></li>
-                            </ul>
-                        </nav>
-                        <div class="menu-button mt-40 d-xl-none">
-                            <a href="" class="main-btn secondary-btn">Registration</a>
-                        </div>
-                    </div>
-                    <div class="nav-right-item">
-                        <div class="menu-button d-xl-block d-none">
-                            <a href="" class="main-btn primary-btn">Registration</a>
-                        </div>
-                        <div class="bar-button" data-toggle="modal" data-target="#sidebar-modal">
-                            <img src="<?php echo base_url(''); ?>include/web/images/bar.png" alt="Image">
-                        </div>
-                        <div class="navbar-toggler">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
     <section class="banner-section">
         <div class="hero-wrapper-one gray-bg">
             <div class="shape shape-one animate-float-y"><span><img src="<?php echo base_url(''); ?>include/web/images/hero/shape-1.png" alt="shape"></span></div>
@@ -296,7 +41,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-9 col-lg-12">
                     <div class="section-title text-white text-center mb-50 wow fadeInDown">
-                        <span class="sub-title text-white"><img src="http://localhost/sangam-initiative/include/web/custom/technology_white.png" alt=""> What We Do</span>
+                        <span class="sub-title text-white"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt=""> What We Do</span>
                         <h2>The Sangam Initiative caters to individuals like you and your work</h2>
                     </div>
                 </div>
@@ -399,12 +144,12 @@
                 <div class="container">
                     <div class="row align-items-xl-center">
                         <div class="col-xl-5 col-lg-12">
-                            <div class="about-two_image-box wow fadeInLeft" style="visibility: visible;"><img src="<?php echo base_url('') ?>include/web/custom/Upcoming_Future.jpg"></div>
+                            <div class="about-two_image-box wow fadeInLeft" style="visibility: visible;"><img src="<?php echo base_url('') ?>include/web/custom/Sangam_Initiative.png"></div>
                         </div>
                         <div class="col-xl-7 col-lg-12">
                             <div class="about-three_content-box pl-lg-70 wow fadeInRight" style="visibility: visible;">
                                 <div class="section-title mb-25 wow fadeInUp" style="visibility: visible;">
-                                    <span class="sub-title"><img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt="">Transforming Infrastructure Planning</span>
+                                    <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt="">Transforming Infrastructure Planning</span>
                                     <h2>Upcoming Future Infrastructure Summit 2024</h2>
                                 </div>
                                 <p class="mb-40 wow fadeInDown" style="visibility: visible;">Get ready for the upcoming Future Infrastructure Summit 2024! Explore revolutionary opportunities in infrastructure planning and design, from integrating Digital Twin technology to crafting future-ready frameworks. Connect with industry leaders and experts to shape the future of infrastructure. Join us and be part of the revolution.</p>
@@ -451,7 +196,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-9 col-lg-12">
                     <div class="section-title text-white text-center mb-50 wow fadeInDown">
-                        <span class="sub-title text-white"><img src="http://localhost/sangam-initiative/include/web/custom/technology_white.png" alt=""> Why Choose Us</span>
+                        <span class="sub-title text-white"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt=""> Why Choose Us</span>
                         <h2>Why Join 'Digital Twin: Sangam' PoC?</h2>
                     </div>
                 </div>
@@ -1039,7 +784,7 @@
             <div class="row align-items-xl-center">
                 <div class="col-lg-12 text-center">
                     <div class="section-title mb-55 wow fadeInLeft" style="visibility: visible;">
-                        <span class="sub-title"><img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt=""> Answers to Common Queries about Participation and Submission</span>
+                        <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> Answers to Common Queries about Participation and Submission</span>
                         <h2>Frequently Asked Questions</h2>
                     </div>
                 </div>
@@ -1280,7 +1025,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-12">
                     <div class="section-title text-center mb-50 wow fadeInDown">
-                        <span class="sub-title"><img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt=""> Discussion</span>
+                        <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> Discussion</span>
                         <h2>Join the Tech Talk</h2>
                     </div>
                 </div>
@@ -1353,153 +1098,5 @@
             </div>
         </div>
     </section>
-    <footer class="footer-area footer-wave pt-50 p-r z-1">
-        <div class="wave-shapes">
-            <img src="<?php echo base_url(''); ?>include/web/images/shape/wave-shape-1.png" class="w-shape one" alt="wave shape">
-            <img src="<?php echo base_url(''); ?>include/web/images/shape/wave-shape-2.png" class="w-shape two" alt="wave shape">
-        </div>
-        <div class="footer-wrapper text-white main-bg p-r z-1">
-            <div class="container">
-                <div class="footer-widget-area pt-55 pb-40 p-r z-1">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="footer-widget footer-about-widget mb-40 pr-lg-70 wow fadeInDown">
-                                <div class="widget-content">
-                                    <div class="footer-logo mb-25">
-                                        <a href="index.html"><img src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative_White.png" alt="Logo"></a>
-                                    </div>
-                                    <p>Sangam is on a mission to transform infrastructure planning and design by converging digital technologies and data.
-                                    </p>
-                                    <a href="" class="main-btn filled-btn filled-white">Contact Us</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <div class="footer-widget contact-info-widget mb-40 wow fadeInUp">
-                                <h4 class="widget-title">Get In Touch</h4>
-                                <div class="widget-content">
-                                    <ul class="info-list">
-                                        <li>558 Main Street, 2nd Block
-                                            Melbourne, India
-                                        </li>
-                                        <li><a href="mailto:support@gmail.com">support@gmail.com</a></li>
-                                        <li><a href="tel:+000(123)45688">+000 (123) 456 88</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-12">
-                            <div class="footer-widget footer-nav-widget mb-40 wow fadeInDown">
-                                <h4 class="widget-title">Quick Link</h4>
-                                <div class="widget-content">
-                                    <ul class="footer-nav">
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Schedule</a></li>
-                                        <li><a href="#">Sequence of Events</a></li>
-                                        <li><a href="#">Speakers</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-12">
-                            <div class="footer-widget footer-nav-widget mb-40 wow fadeInDown">
-                                <h4 class="widget-title">Important Link</h4>
-                                <div class="widget-content">
-                                    <ul class="footer-nav">
-                                        <li><a href="#">EOI</a></li>
-                                        <li><a href="#"> Why Attending</a></li>
-                                        <li><a href="#">Registration Details</a></li>
-                                        <li><a href="#">Registration</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="copyright-area">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="copyright-text">
-                                <P>Copy&copy; 2023 Sangam Initiative. All Rights Reserved.</P>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="copyright-nav float-lg-right">
-                                <ul>
-                                    <li><a href="#">Setting & Privacy</a></li>
-                                    <li><a href="#">Faqs</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div class="wrapper">
-        <section>
-            <i class="bx bx-cookie"></i>
-            <h4>Cookies Consent</h4>
-        </section>
-        <div class="content">
-            <p>This website use cookies to help you have a superior and more relevant browsing experience on the website.</p>
-        </div>
-        <div class="controls">
-            <button class="button" id="acceptBtn">Accept</button>
-            <button class="button" id="declineBtn">Decline</button>
-        </div>
-    </div>
-    <a href="#" class="back-to-top"><i class="far fa-angle-up"></i></a>
-    <script src="<?php echo base_url(''); ?>include/web/vendor/jquery-3.6.0.min.js"></script>
-    <script src="<?php echo base_url(''); ?>include/web/vendor/popper/popper.min.js"></script>
-    <script src="<?php echo base_url(''); ?>include/web/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?php echo base_url(''); ?>include/web/vendor/slick/slick.min.js"></script>
-    <script src="<?php echo base_url(''); ?>include/web/vendor/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-    <script src="<?php echo base_url(''); ?>include/web/vendor/isotope.min.js"></script>
-    <script src="<?php echo base_url(''); ?>include/web/vendor/imagesloaded.min.js"></script>
-    <script src="<?php echo base_url(''); ?>include/web/vendor/jquery.counterup.min.js"></script>
-    <script src="<?php echo base_url(''); ?>include/web/vendor/jquery.waypoints.js"></script>
-    <script src="<?php echo base_url(''); ?>include/web/vendor/nice-select/js/jquery.nice-select.min.js"></script>
-    <script src="<?php echo base_url(''); ?>include/web/vendor/jquery-ui/jquery-ui.min.js"></script>
-    <script src="<?php echo base_url(''); ?>include/web/vendor/wow.min.js"></script>
-    <script src="<?php echo base_url(''); ?>include/web/js/theme.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.nav-link').hover(function() {
-                var target = $(this).data('target');
-                $('.tab-pane').removeClass('active');
-                $(target).addClass('active');
-                $('.nav-link').removeClass('active');
-                $(this).addClass('active');
-            });
-            $(".content-organizations").hide();
-            $(".buttonTab ul li button").click(function() {
-                var tabKey = $(this).attr("data-rb-event-key");
-                $(".fancy-about-item").hide();
-                if (tabKey === "tab1") {
-                    $(".content-individuals").show();
-                } else if (tabKey === "tab2") {
-                    $(".content-organizations").show();
-                }
-            });
-        });
-        const cookieBox = document.querySelector(".wrapper"),
-            buttons = document.querySelectorAll(".button");
-        const executeCodes = () => {
-            if (document.cookie.includes("codinglab")) return;
-            cookieBox.classList.add("show");
-            buttons.forEach((button) => {
-                button.addEventListener("click", () => {
-                    cookieBox.classList.remove("show");
-                    if (button.id == "acceptBtn") {
-                        document.cookie = "cookieBy= codinglab; max-age=" + 60 * 60 * 24 * 30;
-                    }
-                });
-            });
-        };
-        window.addEventListener("load", executeCodes);
-    </script>
-</body>
-
-</html>
+  
 <?php include_once __DIR__ . '/../common/footer.php'; ?>
