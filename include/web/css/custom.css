@@ -66,7 +66,7 @@ ul.check-style-one li {
     line-height: normal;
     line-height: 29.6px;
 }
-
+.d-block li{display: block !important;}
 .nav-item button {
     text-align: left;
 }
@@ -315,6 +315,7 @@ section h2 {
     color: #fff;
 }
 
+.mt___147{margin-top: 147px;}
 @media only screen and (max-width: 767px) {
     .imgPerent img {
         height: 30px;

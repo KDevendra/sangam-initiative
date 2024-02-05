@@ -511,7 +511,7 @@ ul.slick-dots li:after,
 
 .page-title-area:after,
 .sidebar-panel-wrapper .sidebar-wrapper {
-  background-color: #000000;
+  background-color: #3d3d99;
 }
 
 .gray-bg,
@@ -2617,12 +2617,12 @@ button {
 .page-title-area {
   position: relative;
   z-index: 1;
-  padding-top: 225px;
+  padding-top: 60px;
 }
 
 @media (max-width: 767px) {
   .page-title-area {
-    padding-top: 150px;
+    padding-top: 40px;
   }
 }
 
@@ -2650,11 +2650,11 @@ button {
 
 .page-title-area .gd-breadcrumb {
   padding: 23px 30px;
-  background-color: rgba(11, 61, 44, 0.85);
+  background-color:rgb(61, 61, 153);
   border-radius: 20px 20px 0px 0px;
   max-width: 775px;
   margin: 0 auto;
-  margin-top: 135px;
+  margin-top: 40px;
 }
 
 @media (max-width: 575px) {
@@ -5576,7 +5576,7 @@ ul.check-style-one li i {
 
 .skill-two_image-box .skill-img-two {
   width: 42%;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
