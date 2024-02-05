@@ -207,7 +207,7 @@ ul.check-style-one li i {
 .imgPerent {
     justify-content: center;
     display: flex;
-    height: 52px;
+    height: 35px;
 }
 
 .header-top-bar {
@@ -216,7 +216,7 @@ ul.check-style-one li i {
 }
 
 .site-branding img {
-    height: 70px;
+    height: 85px;
 }
 
 .single-project-item-four .project-img .hover-content .text h3.title {
@@ -317,6 +317,6 @@ section h2 {
 
 @media only screen and (max-width: 767px) {
     .imgPerent img {
-        height: 45px;
+        height: 30px;
     }
 }

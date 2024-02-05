@@ -11,7 +11,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
         'hostname' => 'localhost:2023', 
         'username' => 'root',     
         'password' => 'root',     
-        'database' => 'db_codeIgniter_3_starter',
+        'database' => 'sangam_initiative',
         'dbdriver' => 'mysqli',
         'dbprefix' => '',
         'pconnect' => FALSE,

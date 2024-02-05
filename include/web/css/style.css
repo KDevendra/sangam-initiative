@@ -1607,7 +1607,7 @@ button {
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   border-radius: 0;
-  line-height: 2.5;
+  line-height: 32px;
   margin: 0;
   border: 1px dashed #fff;
   border-radius: 5px;
@@ -2241,7 +2241,7 @@ button {
 /* Header Sticky */
 .sticky {
   position: fixed;
-  top: -70px;
+  top: -52px;
   left: 0;
   right: 0;
   z-index: 999;
@@ -9445,7 +9445,7 @@ ul.slick-dots li.slick-active {
 }
 
 .sidebar-panel-wrapper .sidebar-wrapper .sidebar-information-area .sidebar-info-widget .footer-logo {
-  margin-bottom: 53px;
+  margin-bottom: 10px;
 }
 
 .sidebar-panel-wrapper .sidebar-wrapper .sidebar-information-area .sidebar-info-widget p {
