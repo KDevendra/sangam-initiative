@@ -111,6 +111,19 @@
 		color: #fff;
 		padding: 0px;
 }
+#additionalInformation{
+		display: flex;
+}
+#additionalInformation .ri-info-i {
+	background-color: #344372;
+	border-radius: 50%;
+	margin-left: 5px;
+	border-color: #344372;
+	color: #fff;
+	padding: 0px;
+
+}
+#progressionEoISteps .nav-item{z-index: 999;}
 .form-control.is-invalid,
 .was-validated .form-control:invalid {
 	border-color:#d0d6dc !important;

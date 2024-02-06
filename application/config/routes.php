@@ -52,6 +52,7 @@ $route['edit-profile/(:any)'] = 'AdminController/editProfile/$1';
 $route['logout'] = 'AdminController/logout';
 $route['change-password'] = 'AdminController/changePassword';
 $route['post-change-password'] = 'AdminController/postChangePassword';
+$route['eoi-form'] = 'AdminController/eoiForm';
 //route for theme-customizer-options
 $route['project-settings'] = 'AdminController/projectSettings';
 $route['theme-customizer-options'] = 'AdminController/themeCustomizerOptions';

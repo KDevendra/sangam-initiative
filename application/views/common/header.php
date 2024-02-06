@@ -176,7 +176,7 @@
                             <div class="imgPerent">
                                 <img src="<?php echo base_url('') ?>include/web/custom/sancharsaathi.png" alt="<?php echo base_url(''); ?>">
                                 <img src="<?php echo base_url('') ?>include/web/custom/india-gov-in.png" alt="<?php echo base_url(''); ?>">
-                                <img src="<?php echo base_url('') ?>include/web/custom/Department_Of_Telecommunications.png" alt="<?php echo base_url(''); ?>">
+                                <!-- <img src="<?php echo base_url('') ?>include/web/custom/Department_Of_Telecommunications.png" alt="<?php echo base_url(''); ?>"> -->
                                 <img src="<?php echo base_url('') ?>include/web/custom/g20-logo.png" alt="<?php echo base_url(''); ?>">
                                 <img src="<?php echo base_url('') ?>include/web/custom/azadi-mahotsav.png" alt="<?php echo base_url(''); ?>">
                             </div>
@@ -185,11 +185,11 @@
                 </div>
                 <div class="primary-menu">
                     <div class="site-branding">
-                        <a href="<?php echo base_url(''); ?>" class="brand-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative.png" alt="Site Logo"></a>
+                        <a href="<?php echo base_url(''); ?>" class="brand-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications.png" alt="Site Logo"></a>
                     </div>
                     <div class="nav-menu">
                         <div class="mobile-logo mb-30 d-block d-xl-none">
-                            <a href="<?php echo base_url(''); ?>" class="brand-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative.png" alt="Site Logo"></a>
+                            <a href="<?php echo base_url(''); ?>" class="brand-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications.png" alt="Site Logo"></a>
                         </div>
                         <div class="nav-search mb-30 d-block d-xl-none ">
                             <form>
@@ -209,7 +209,7 @@
                                             </a>
                                         </li>
                                         <li><a href="<?php echo base_url('about/why-now'); ?>">Why does it matter now?</a></li>
-                                        <li><a href="<?php echo base_url('about/why-join'); ?>">Why to join
+                                        <li><a href="<?php echo base_url(''); ?>#why-to-Join">Why to join
                                             </a>
                                         </li>
                                         <li><a href="<?php echo base_url('about/participate'); ?>">Participate
@@ -218,14 +218,14 @@
                                         <li><a href="<?php echo base_url('about/process'); ?>">Process of Sangam
                                             </a>
                                         </li>
-                                        <li><a href="<?php echo base_url('about/faqs'); ?>">FAQs
+                                        <li><a href="<?php echo base_url(''); ?>#faqs">FAQs
                                             </a>
                                         </li>
                                         <li><a href="<?php echo base_url('about/curated-content'); ?>">Curated Content
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="<?php echo base_url('about/pre-registration'); ?>">Pre-registration for Sangam Initiative </a>
+                                            <a href="<?php echo base_url('registration'); ?>">Pre-registration for Sangam Initiative </a>
                                         </li>
                                     </ul>
                                 </li>
@@ -252,6 +252,7 @@
                                         <li><a href="<?php echo base_url('expression-of-interest/submit'); ?>">Submit Response</a></li>
                                     </ul>
                                 </li>
+                                <li class="menu-item"><a href="<?php echo base_url(''); ?>">Contact Us</a></li>
                             </ul>
                         </nav>
                         <div class="menu-button mt-40 d-xl-none">
