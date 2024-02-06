@@ -44,8 +44,15 @@ private function handleFileUpload($inputName, $uploadPath, $allowedTypes, $maxSi
 }
 
     public function adminDashboard() {
-        $data['title'] = $this->projectTitle . ": Dashboard";
+        $data['title'] = "Dashboard : ".$this->projectTitle;
         $data["page_name"] = "pages/dashboard";
+        $this->load->view("component/index", $data);
+    }
+    public function eoiForm()
+    {
+        $data['title'] = "EoI Form : " . $this->projectTitle;
+        $data["page_name"] = "pages/eoi-form";
+        $data['userDetail'] = $this->BaseModel->getData('login', ['user_id'=>$this->session->login['user_id']])->row();
         $this->load->view("component/index", $data);
     }
     public function logout() {

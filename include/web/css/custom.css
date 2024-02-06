@@ -208,6 +208,7 @@ ul.check-style-one li i {
     justify-content: center;
     display: flex;
     height: 35px;
+    gap: 48px;
 }
 
 .header-top-bar {
@@ -315,9 +316,92 @@ section h2 {
     color: #fff;
 }
 
+ .main-btn__custom{padding: 12px 15px !important;margin-left: 0px !important; }
 .mt___147{margin-top: 147px;}
+
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+
+
+.tooltip-container {
+    position: relative;
+
+    &:hover {
+        .tooltip-content {
+            visibility: visible;
+            opacity: 1;
+            transition: .25s all ease;
+            transition-delay: 0s;
+            top: -125px;
+        }
+    }
+}
+
+.tooltip-content {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background:rgb(255, 255, 255);
+    left: -38px;
+    top: -130px;
+    padding: 0 15px;
+    margin: 16px;
+    font-size: 14px;
+    transition: .25s all ease;
+    transition-delay: .25s;
+    z-index: 2;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 15px;
+        text-align: justify;
+     
+        border-radius: 5px;
+    color: #2F2F2F;
+
+    .align-right {
+        text-align: right;
+
+        a {
+            color: red;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.tooltip-content p{
+    font-size: 14px;
+
+        margin-bottom: 0;
+        line-height: 25px !important;
+        font: inherit;
+}
+
 @media only screen and (max-width: 767px) {
-    .imgPerent img {
+.imgPerent {
+        justify-content: center;
+        display: flex;
         height: 30px;
+        gap: 0px;
     }
 }

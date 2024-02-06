@@ -81,6 +81,16 @@
                                                     <input class="form-check-input" type="radio" name="register_as" id="register_as2" value="Organization">
                                                     <label class="form-check-label" for="register_as2">Organization</label>
                                                 </div>
+                                                <div class="step-arrow-nav mb-3 mt-3" style="display: none;">
+                                                    <ul class="nav nav-pills custom-nav nav-justified" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                            <button type="button" class="nav-link active" id="steparrow-gen-info-tab">Personal Details</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button type="button" class="nav-link" id="steparrow-description-info-tab">Organisation Details</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                                 <div id="contanterIndividual">
                                                     <div class="row mt-3">
                                                         <div class="mb-3 col-md-6">
@@ -98,7 +108,6 @@
                                                                 </div>
                                                             </label>
                                                             <input type="date" class="form-control" id="datOfBirth" name="datOfBirth" required="" placeholder="DD-MM-YYYY">
-
                                                             <div class="invalid-feedback">
                                                                 Please select date of birth
                                                             </div>
@@ -175,7 +184,20 @@
                                                                 Please enter organization name
                                                             </div>
                                                         </div>
-
+                                                        <div class="mb-3 col-md-6">
+                                                            <label for="websiteURL" class="form-label">Website URL of the organisation</label>
+                                                            <input type="url" class="form-control" required id="websiteURL" name="websiteURL" placeholder="Enter Website URL of the organisation" />
+                                                            <div class="invalid-feedback">
+                                                                Please enter Website URL
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 col-md-6">
+                                                            <label for="organizationEmail" class="form-label"> Organization Email<span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control" id="organizationEmail" name="organizationEmail" placeholder="Enter organization  email" required />
+                                                            <div class="invalid-feedback">
+                                                                Please enter organization email
+                                                            </div>
+                                                        </div>
                                                         <div class="mb-3 col-md-6">
                                                             <label for="potentialInterestAreas" class="form-label">Potential Interest Areas<span class="text-danger">*</span></label>
                                                             <select class="form-control" id="potentialInterestAreas" style="height: 40px !important;" name="potentialInterestAreas[]" multiple="multiple" required>
@@ -203,13 +225,7 @@
                                                                 Please enter organisation HQ address
                                                             </div>
                                                         </div>
-                                                        <div class="mb-3 col-md-6">
-                                                            <label for="websiteURL" class="form-label">Website URL of the organisation</label>
-                                                            <input type="url" class="form-control" id="websiteURL" name="websiteURL" placeholder="Enter Website URL of the organisation" />
-                                                            <div class="invalid-feedback">
-                                                                Please enter Website URL
-                                                            </div>
-                                                        </div>
+
                                                         <div class="mt-0 d-flex justify-content-center" style="gap: 10px;">
                                                             <button class="btn btn-secondary" type="button" id="btnBackToTypeSelection">Previous Step</button>
                                                             <button class="btn btn-primary" id="submitBtn" type="submit">Register Now</button>
@@ -317,38 +333,6 @@
                 });
             }
 
-            $("#sign-up").on("submit", function(event) {
-                if (validateForm()) {
-                    var $signUp = $(this);
-                    var formData = $signUp.serialize();
-                    submitForm(formData);
-                }
-            });
-
-            $('#contanterOrganization').hide();
-
-            $('input[type="radio"][name="register_as"]').change(function() {
-                if (this.value === 'Organization') {
-                    $('#feildExperience').hide();
-                    $('#submitBtn').attr('type', 'button').text('Next Step').attr('id', 'btnNextStapeOrgnation');
-                } else if (this.value === 'Individual') {
-                    $('#contanterIndividual').show();
-                    $('#contanterOrganization').hide();
-                    $('#feildExperience').show();
-                    $('#btnNextStapeOrgnation').attr('type', 'submit').text('Register Now').attr('id', 'submitBtn');
-                }
-            });
-
-            $('#coreCompetency').select2({
-                placeholder: 'Select core competencies...',
-                allowClear: true
-            });
-
-            $('#potentialInterestAreas').select2({
-                placeholder: 'Select potential interest Areas...',
-                allowClear: true
-            });
-
             function validateForm() {
                 var isValid = true;
 
@@ -423,22 +407,105 @@
                 return isValid;
             }
 
+            function validateContactNumber() {
+                var contactNo = $("#contactNo").val();
+                if (!contactNo || !/^[789][0-9]{9}$/.test(contactNo)) {
+                    $("#contactNo").addClass("is-invalid");
+                    isValid = false;
+                } else {
+                    $("#contactNo").removeClass("is-invalid");
+                }
+            }
+
+            function validateOrganizationEmail() {
+                var websiteURL = $("#websiteURL").val().trim();
+                var organizationEmail = $("#organizationEmail").val().trim();
+
+                var domainRegex = /(?:https?:\/\/)?(?:www\.)?([^\/]+)\//i;
+                var domainMatch = websiteURL.match(domainRegex);
+
+                if (domainMatch && domainMatch[1]) {
+                    var websiteDomain = domainMatch[1];
+                    var emailRegex = new RegExp("^[a-zA-Z0-9._%+-]+@" + websiteDomain + "$", "i");
+
+                    if (!emailRegex.test(organizationEmail)) {
+                        $("#organizationEmail").addClass("is-invalid");
+                        $("#organizationEmailError").html("Organization email does not match the domain");
+                        return false;
+                    } else {
+                        $("#organizationEmail").removeClass("is-invalid");
+                        $("#organizationEmailError").html("");
+                        return true;
+                    }
+                } else {
+                    $("#organizationEmail").addClass("is-invalid");
+                    $("#organizationEmailError").html("Please enter a valid website URL");
+                    return false;
+                }
+            }
+            $("#organizationEmail").on("input", validateOrganizationEmail);
+            $("#sign-up").on("submit", function(event) {
+                if (validateForm()) {
+                    var $signUp = $(this);
+                    var formData = $signUp.serialize();
+                    submitForm(formData);
+                }
+            });
+            $('#contanterOrganization').hide();
+            $('input[type="radio"][name="register_as"]').change(function() {
+                if (this.value === 'Organization') {
+                    $('#feildExperience').hide();
+                    $(".step-arrow-nav").show();
+                    $('#submitBtn').attr('type', 'button').text('Next Step').attr('id', 'btnNextStapeOrgnation');
+                } else if (this.value === 'Individual') {
+                    $('#contanterIndividual').show();
+                    $('#contanterOrganization').hide();
+                    $('#feildExperience').show();
+                    $(".step-arrow-nav").hide();
+                    $('#btnNextStapeOrgnation').attr('type', 'submit').text('Register Now').attr('id', 'submitBtn');
+                }
+            });
+            $('#coreCompetency').select2({
+                placeholder: 'Select core competencies...',
+                allowClear: true
+            });
+            $('#potentialInterestAreas').select2({
+                placeholder: 'Select potential interest Areas...',
+                allowClear: true
+            });
+            $("#contactNo").on("input", function() {
+                $(this).val(function(index, value) {
+                    return value.replace(/\D/g, "");
+                });
+
+                validateContactNumber();
+            });
+            $("#contactNo").on("keypress", function(event) {
+                var keyCode = event.keyCode || event.which;
+                var keyValue = String.fromCharCode(keyCode);
+                var numericRegex = /^[0-9]$/;
+
+                if (!numericRegex.test(keyValue)) {
+                    event.preventDefault();
+                }
+            });
             $(document).on("click", "#btnNextStapeOrgnation", function() {
                 if (validateForm()) {
                     $('#contanterOrganization').show();
                     $('#contanterIndividual').hide();
+                    $("#steparrow-gen-info-tab").removeClass('active');
+                    $("#steparrow-description-info-tab").addClass('active');
                     $('#btnNextStapeOrgnation').text('Register Now').attr('id', 'submitBtn');
                 }
             });
             $(document).on("click", "#btnBackToTypeSelection", function() {
                 $('#contanterOrganization').hide();
                 $('#contanterIndividual').show();
+                $("#steparrow-gen-info-tab").addClass('active');
+                $("#steparrow-description-info-tab").removeClass('active');
                 $('#submitBtn').text('Next Step').attr('id', 'btnNextStapeOrgnation');
 
             });
-
-
-
         });
     </script>
 </body>

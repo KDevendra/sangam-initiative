@@ -35,7 +35,7 @@
                    <img src="<?php echo base_url(''); ?>include/admin/images/logo-sm.png" alt="" height="22" />
                </span>
                <span class="logo-lg">
-                   <img src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative_White.png" alt="" height="17" />
+                   <img src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative_White.png" alt="" height="70" />
                </span>
            </a>
            <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
