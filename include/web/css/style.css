@@ -30,6 +30,7 @@
     17. Sections css
     
 -----------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 h1,
 h2,
 h3,
@@ -731,7 +732,7 @@ h4,
 h5,
 h6 {
   margin: 0px;
-  font-family: "Montserrat", sans-serif;
+  font-family:  'Montserrat Alternates', sans-serif;
 }
 
 ul,
@@ -1003,7 +1004,7 @@ textarea.form_control {
 .sub-title {
   font-size: 22px;
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
+  font-family:  'Montserrat Alternates', sans-serif;
 }
 
 .sub-title i {
@@ -1019,6 +1020,7 @@ textarea.form_control {
 
 .section-title h2 {
   letter-spacing: -0.02em;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -1056,7 +1058,7 @@ button {
   -ms-flex-pack: center;
   justify-content: center;
   padding: 18px 40px;
-  font: 600 16px "Montserrat", sans-serif;
+  font: 600 16px  'Montserrat Alternates', sans-serif;
   text-transform: capitalize;
   border-radius: 20px;
   line-height: 20px;
@@ -1549,7 +1551,7 @@ button {
 .header-navigation .main-menu ul>li>a {
   position: relative;
   display: block;
-  font: 600 18px "Montserrat", sans-serif;
+  font: 600 18px  'Montserrat Alternates', sans-serif;
   padding: 38px 0;
   text-transform: capitalize;
   line-height: 1;
@@ -1957,7 +1959,7 @@ button {
 }
 
 .header-one .header-navigation .nav-right-item .menu-button {
-  border-right: 1px solid rgba(18, 74, 47, 0.1);
+  /* border-right: 1px solid rgba(18, 74, 47, 0.1); */
   padding: 20px 50px;
 }
 
@@ -2128,7 +2130,7 @@ button {
 .header-two .header-navigation .nav-right-item .lang-dropdown .nice-select {
   padding: 10px;
   background-color: transparent;
-  font: 600 18px "Montserrat", sans-serif;
+  font: 600 18px  'Montserrat Alternates', sans-serif;
   height: auto;
   line-height: 0;
 }
@@ -2353,7 +2355,7 @@ button {
 }
 
 .hero-content .sub-title {
-  font-family: "Montserrat", sans-serif;
+  font-family:  'Montserrat Alternates', sans-serif;
   margin-bottom: 22px;
 }
 
@@ -2378,7 +2380,7 @@ button {
 }
 
 .hero-content h1 {
-  margin-bottom: 33px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 767px) {
@@ -2389,7 +2391,7 @@ button {
 }
 
 .hero-content p {
-  font: 500 24px "Roboto", sans-serif;
+  font: 'Montserrat Alternates', sans-serif;
   line-height: 26.4px;
   margin-bottom: 43px;
 }
@@ -2462,10 +2464,19 @@ button {
   top: 185px;
   left: 0;
 }
+.hero-wrapper-one .shape.shape-one-copy {
+  top: 411px;
+  left: 0;
+}
 
 .hero-wrapper-one .shape.shape-two {
   top: 165px;
   right: 0;
+}
+
+.hero-wrapper-one .shape.shape-two-copy {
+  top: 165px;
+  right: 449px;
 }
 
 @media (max-width: 1199px) {
@@ -2499,13 +2510,14 @@ button {
 }
 
 .hero-wrapper-one .hero-content h1 {
-  font-size: 60px;
+  font-size: 32px;
   letter-spacing: -0.03em;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .hero-wrapper-one .hero-content h1 {
-    font-size: 52px;
+    font-size: 32px;
   }
 }
 
@@ -2540,17 +2552,17 @@ button {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: -30%;
+  right: -0%;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .hero-wrapper-one .hero-image-box .shape.hero-svg {
-    right: -15%;
+    right: -0%;
   }
 }
 
 .hero-wrapper-one .hero-image-box img {
-  width: 100%;
+  width: 80%;
   border-radius: 50%;
 }
 
@@ -2851,6 +2863,8 @@ button {
   flex-basis: min-content;
   -webkit-margin-start: 20px;
   margin-inline-start: 20px;
+  margin-top: -35px;
+  text-align: center;
 }
 
 .about-two_image-box {
@@ -2875,11 +2889,12 @@ button {
 /*-=== About Features Item ====-*/
 .about-features-item {
   position: relative;
-  padding: 30px;
+  padding: 15px 0;
   overflow: hidden;
   z-index: 2;
   border-radius: 20px;
 }
+
 
 .about-features-item.item-active .hover-bg {
   visibility: visible;
@@ -2909,7 +2924,7 @@ button {
   content: '';
   width: 100%;
   height: 100%;
-  background-color: rgba(11, 61, 44, 0.9);
+  background-color: rgba(61, 61, 153, 0.86);
 }
 
 .about-features-item .icon {
@@ -2920,15 +2935,19 @@ button {
   display: -ms-inline-flexbox;
   display: inline-flex;
   font-size: 60px;
-  margin-bottom: 33px;
+  margin-bottom: 20px;
 }
 
 .about-features-item h3.title {
   margin-bottom: 12px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .about-features-item p {
   margin-bottom: 16px;
+  line-height: 25px;
+    color: #fff;
+    
 }
 
 .fancy-about-item .text h5 {
@@ -2953,7 +2972,7 @@ button {
   position: relative;
   padding: 0 30px 30px;
   background-color: transparent;
-  font: 600 24px "Montserrat", sans-serif;
+  font: 600 24px  'Montserrat', sans-serif;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -2976,7 +2995,7 @@ button {
 /*-=== Choose Content Box ====-*/
 .choose-content-box>p {
   margin-bottom: 35px;
-  font: 500 16px "Montserrat", sans-serif;
+  font: 500 16px  'Montserrat Alternates', sans-serif;
   line-height: 29.6px;
 }
 
@@ -3030,7 +3049,7 @@ button {
 }
 
 .choose-content-box .thumb-content .check-style-one li {
-  font: 600 16px "Montserrat", sans-serif;
+  font: 600 16px  'Montserrat Alternates', sans-serif;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -3136,7 +3155,7 @@ ul.check-style-one li {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font: 500 18px "Montserrat", sans-serif;
+  font: 500 18px  'Montserrat Alternates', sans-serif;
 }
 
 ul.check-style-one li:not(:last-child) {
@@ -3346,7 +3365,7 @@ ul.check-style-one li i {
 }
 
 .client-avatar-box-two ul.ratings li span {
-  font: 600 18px "Montserrat", sans-serif;
+  font: 600 18px  'Montserrat Alternates', sans-serif;
 }
 
 .features-thumb-item {
@@ -3651,7 +3670,7 @@ ul.check-style-one li i {
   align-items: flex-start;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(11, 61, 44, 0.1);
-  font: 600 22px "Montserrat", sans-serif;
+  font: 600 22px  'Montserrat Alternates', sans-serif;
   margin-bottom: 40px;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
@@ -3662,7 +3681,7 @@ ul.check-style-one li i {
 
 @media (max-width: 1199px) {
   .features-list li {
-    font: 600 20px "Montserrat", sans-serif;
+    font: 600 20px  'Montserrat Alternates', sans-serif;
   }
 }
 
@@ -3715,7 +3734,7 @@ ul.check-style-one li i {
   padding: 6px 25px;
   letter-spacing: -0.02em;
   border-radius: 5px;
-  font: 600 16px "Montserrat", sans-serif;
+  font: 600 16px  'Montserrat Alternates', sans-serif;
   text-transform: uppercase;
   line-height: 20px;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -4471,7 +4490,7 @@ ul.check-style-one li i {
 .project-filter li {
   position: relative;
   display: inline-block;
-  font: 600 18px "Montserrat", sans-serif;
+  font: 600 18px  'Montserrat Alternates', sans-serif;
   cursor: pointer;
   -webkit-margin-end: 43px;
   margin-inline-end: 43px;
@@ -4568,7 +4587,7 @@ ul.check-style-one li i {
 
 .projects-slider-three .slick-dots {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 .projects-slider-four {
@@ -5137,7 +5156,7 @@ ul.check-style-one li i {
 }
 
 .project-details-wrapper .project-info-widget .info-content ul li span {
-  font: 400 18px "Montserrat", sans-serif;
+  font: 400 18px  'Montserrat Alternates', sans-serif;
   letter-spacing: -0.02em;
 }
 
@@ -5399,7 +5418,7 @@ ul.check-style-one li i {
 }
 
 .single-skill-bar span.number {
-  font: 600 20px "Montserrat", sans-serif;
+  font: 600 20px  'Montserrat Alternates', sans-serif;
 }
 
 .single-skill-bar-two h6.title {
@@ -5662,7 +5681,7 @@ ul.check-style-one li i {
 }
 
 .team-details-wrapper .member-info .member-meta ul.check-style-one li {
-  font: 600 16px "Montserrat", sans-serif;
+  font: 600 16px  'Montserrat Alternates', sans-serif;
 }
 
 .team-details-wrapper .member-info .member-meta ul.check-style-one li:not(:last-child) {
@@ -5957,7 +5976,7 @@ ul.slick-dots li.slick-active {
 }
 
 .single-testimonial-item-two>p {
-  font: 600 30px "Montserrat", sans-serif;
+  font: 600 30px  'Montserrat Alternates', sans-serif;
   line-height: 50px;
   color: #fff;
   letter-spacing: -0.02em;
@@ -5980,7 +5999,7 @@ ul.slick-dots li.slick-active {
 
 @media (max-width: 575px) {
   .single-testimonial-item-two>p {
-    font: 400 16px "Montserrat", sans-serif;
+    font: 400 16px  'Montserrat Alternates', sans-serif;
     line-height: 30px;
   }
 }
@@ -6080,7 +6099,7 @@ ul.slick-dots li.slick-active {
 }
 
 .single-testimonial-item-three .testimonial-inner-content>p {
-  font: 400 22px "Montserrat", sans-serif;
+  font: 400 22px  'Montserrat Alternates', sans-serif;
   line-height: 36px;
   letter-spacing: -0.02em;
   margin-bottom: 35px;
@@ -6088,7 +6107,7 @@ ul.slick-dots li.slick-active {
 
 @media (max-width: 1199px) {
   .single-testimonial-item-three .testimonial-inner-content>p {
-    font: 400 18px "Montserrat", sans-serif;
+    font: 400 18px  'Montserrat Alternates', sans-serif;
     line-height: 30px;
   }
 }
@@ -6511,7 +6530,7 @@ ul.slick-dots li.slick-active {
 }
 
 .single-product-item .product-info span.price {
-  font: 600 18px "Montserrat", sans-serif;
+  font: 600 18px  'Montserrat Alternates', sans-serif;
 }
 
 .product-gallery-area .product-big-slider .product-img a {
@@ -6555,7 +6574,7 @@ ul.slick-dots li.slick-active {
 }
 
 .product-details-wrapper .product-info span.price {
-  font: 600 20px "Montserrat", sans-serif;
+  font: 600 20px  'Montserrat Alternates', sans-serif;
   margin-bottom: 20px;
 }
 
@@ -6587,7 +6606,7 @@ ul.slick-dots li.slick-active {
 }
 
 .product-details-wrapper .product-info .product-meta li span {
-  font: 600 16px "Montserrat", sans-serif;
+  font: 600 16px  'Montserrat Alternates', sans-serif;
   width: 30%;
 }
 
@@ -6606,7 +6625,7 @@ ul.slick-dots li.slick-active {
 }
 
 .product-details-wrapper .product-info ul.social-link li span {
-  font: 600 16px "Montserrat", sans-serif;
+  font: 600 16px  'Montserrat Alternates', sans-serif;
   -webkit-margin-end: 25px;
   margin-inline-end: 25px;
 }
@@ -6628,7 +6647,7 @@ ul.slick-dots li.slick-active {
 .description-tabs .nav-link {
   position: relative;
   padding: 0 30px 20px;
-  font: 600 18px "Montserrat", sans-serif;
+  font: 600 18px  'Montserrat Alternates', sans-serif;
   border-bottom: 2px solid transparent;
   margin-bottom: 20px;
 }
@@ -6737,7 +6756,7 @@ ul.slick-dots li.slick-active {
 }
 
 .cart-table table td.thumbnail-title span.title {
-  font: 600 18px "Montserrat", sans-serif;
+  font: 600 18px  'Montserrat Alternates', sans-serif;
 }
 
 .cart-table table td.subtotal {
@@ -6847,7 +6866,7 @@ ul.slick-dots li.slick-active {
 .checkout-faqs .alert form .form_control {
   padding: 17px 20px;
   line-height: 1.5;
-  font: 600 16px "Montserrat", sans-serif;
+  font: 600 16px  'Montserrat Alternates', sans-serif;
   background-color: transparent;
   border: 1px solid rgba(11, 61, 44, 0.1);
   color: #3d3d99;
@@ -6905,7 +6924,7 @@ ul.slick-dots li.slick-active {
 
 .checkout-form .nice-select,
 .checkout-form .form_control {
-  font: 600 16px "Montserrat", sans-serif;
+  font: 600 16px  'Montserrat Alternates', sans-serif;
   border: 1px solid rgba(11, 61, 44, 0.1);
   margin-bottom: 20px;
   padding: 17px 20px;
@@ -7027,7 +7046,7 @@ ul.slick-dots li.slick-active {
 }
 
 .single-blog-post .entry-content .cat-link {
-  font: 600 16px "Montserrat", sans-serif;
+  font: 600 16px  'Montserrat Alternates', sans-serif;
   margin-bottom: 9px;
 }
 
@@ -7322,12 +7341,12 @@ ul.slick-dots li.slick-active {
 }
 
 .single-blog-post-four .entry-content {
-  padding: 40px 60px 40px 40px;
+  padding: 15px;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 7px 60px rgba(0, 0, 0, 0.07);
-  box-shadow: 0px 7px 60px rgba(0, 0, 0, 0.07);
-  max-width: 345px;
-  margin-top: 45px;
+  /* -webkit-box-shadow: 0px 7px 60px rgba(0, 0, 0, 0.07); */
+  /* box-shadow: 0px 7px 60px rgba(0, 0, 0, 0.07); */
+  max-width: 100%;
+  margin-top: 0px;
 }
 
 @media (max-width: 1199px) {
@@ -7352,21 +7371,26 @@ ul.slick-dots li.slick-active {
 }
 
 .single-blog-post-four .entry-content h4.entry-title {
-  font-size: 18px;
+font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.02em;
   margin-bottom: 23px;
-  padding-bottom: 23px;
+  /* padding-bottom: 10px; */
   border-bottom: 1px solid rgba(11, 61, 44, 0.1);
+  padding: 8px 0px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .single-blog-post-four .entry-content p {
   margin-bottom: 15px;
+
 }
 
 .single-blog-post-four .post-thumbnail {
   -webkit-margin-start: -35px;
   margin-inline-start: -35px;
+  display: none;
 }
 
 @media (max-width: 1199px) {
@@ -7400,7 +7424,7 @@ ul.slick-dots li.slick-active {
 .blog-details-wrapper .blog-post .post-meta span.author a {
   line-height: 19px;
   letter-spacing: -0.02em;
-  font: 600 16px "Montserrat", sans-serif;
+  font: 600 16px  'Montserrat Alternates', sans-serif;
 }
 
 .blog-details-wrapper .blog-post .post-meta span.author a span {
@@ -7539,7 +7563,7 @@ ul.slick-dots li.slick-active {
 
 .blog-details-wrapper .blog-post .entry-footer .tag-links a {
   padding: 7px 20px;
-  font: 600 14px "Montserrat", sans-serif;
+  font: 600 14px  'Montserrat Alternates', sans-serif;
   line-height: 1.2;
   border: 1px solid rgba(11, 61, 44, 0.1);
   border-radius: 5px;
@@ -7918,7 +7942,7 @@ ul.slick-dots li.slick-active {
   background-color: rgba(11, 61, 44, 0.07);
   border-radius: 20px;
   padding: 19px 25px;
-  font: 600 18px "Montserrat", sans-serif;
+  font: 600 18px  'Montserrat Alternates', sans-serif;
 }
 
 .sidebar-widget-area .widget-category ul li:not(:last-child) {
@@ -7927,7 +7951,7 @@ ul.slick-dots li.slick-active {
 
 .sidebar-widget-area .widget-category ul li a {
   display: block;
-  font: 600 18px "Montserrat", sans-serif;
+  font: 600 18px  'Montserrat Alternates', sans-serif;
   letter-spacing: -0.02em;
   padding-bottom: 13px;
   border-bottom: 1px solid rgba(11, 61, 44, 0.15);
@@ -7981,7 +8005,7 @@ ul.slick-dots li.slick-active {
 }
 
 .sidebar-widget-area .widget-banner .banner-content h3.title {
-  font: 700 30px "Montserrat", sans-serif;
+  font: 700 30px  'Montserrat Alternates', sans-serif;
   line-height: 36px;
   letter-spacing: -0.02em;
   margin-bottom: 10px;
@@ -8026,7 +8050,7 @@ ul.slick-dots li.slick-active {
 
 .sidebar-widget-area .widget-price-filter .price-number input {
   border: none;
-  font: 600 16px "Montserrat", sans-serif;
+  font: 600 16px  'Montserrat Alternates', sans-serif;
 }
 
 .sidebar-widget-area .widget-price-filter .ui-widget-content {
@@ -8244,7 +8268,7 @@ ul.slick-dots li.slick-active {
 }
 
 .single-information-item .info span {
-  font: 400 16px "Montserrat", sans-serif;
+  font: 400 16px  'Montserrat Alternates', sans-serif;
   line-height: 16.5px;
   margin-bottom: 11.5px;
 }
@@ -8299,7 +8323,7 @@ ul.slick-dots li.slick-active {
 }
 
 .single-info-item .info .main-btn {
-  font: 600 16px "Montserrat", sans-serif;
+  font: 600 16px  'Montserrat Alternates', sans-serif;
   padding: 15px 30px;
   line-height: 20px;
 }
@@ -8324,7 +8348,7 @@ ul.slick-dots li.slick-active {
 }
 
 .contact-form .form_control {
-  font: 600 16px "Montserrat", sans-serif;
+  font: 600 16px  'Montserrat Alternates', sans-serif;
   height: auto;
   -webkit-padding-start: 30px;
   padding-inline-start: 30px;

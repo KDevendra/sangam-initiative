@@ -53,7 +53,7 @@
                         <div class="row no-gutters">
                             <div class="col-lg-4 sidebar-widget">
                                 <div class="sidebar-info-widget">
-                                    <a href="<?php echo base_url(''); ?>" class="footer-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative_White.png" height="100px" alt="Brand Logo"></a>
+                                    <a href="<?php echo base_url(''); ?>" class="footer-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications_White.png" height="100px" alt="Brand Logo"></a>
                                     <p>Sangam is on a mission to transform infrastructure planning and design by converging digital technologies and data. </p>
                                     <div class="social-item">
                                         <h6>Follow Us</h6>
@@ -205,7 +205,7 @@
                                 <li class="menu-item has-children">
                                     <a href="<?php echo base_url('about'); ?>">About</a>
                                     <ul class="sub-menu">
-                                        <li><a href="<?php echo base_url('about/why-sangam'); ?>">Why is Sangam an apt choice?
+                                        <li><a href="<?php echo base_url(''); ?>#apt-choice">Why is Sangam an apt choice?
                                             </a>
                                         </li>
                                         <li><a href="<?php echo base_url('about/why-now'); ?>">Why does it matter now?</a></li>
@@ -256,16 +256,16 @@
                             </ul>
                         </nav>
                         <div class="menu-button mt-40 d-xl-none">
-                            <a href="<?php echo base_url('registration') ?>" class="main-btn secondary-btn">Registration</a>
+                            <a href="<?php echo base_url('registration') ?>" class="main-btn secondary-btn">Pre-Registration</a>
                         </div>
                     </div>
                     <div class="nav-right-item">
                         <div class="menu-button d-xl-block d-none">
-                            <a href="<?php echo base_url('registration') ?>" class="main-btn primary-btn">Registration</a>
+                            <a href="<?php echo base_url('registration') ?>" class="main-btn primary-btn">Pre-Registration</a>
                         </div>
-                        <div class="bar-button" data-toggle="modal" data-target="#sidebar-modal">
+                        <!-- <div class="bar-button" data-toggle="modal" data-target="#sidebar-modal">
                             <img src="<?php echo base_url(''); ?>include/web/images/bar.png" alt="Image">
-                        </div>
+                        </div> -->
                         <div class="navbar-toggler">
                             <span></span>
                             <span></span>

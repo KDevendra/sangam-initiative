@@ -45,51 +45,51 @@
                                     <div class="nav flex-column custom-nav nav-pills" role="tablist" aria-orientation="vertical">
                                         <button class="nav-link active" id="personal-information-tab" data-bs-toggle="pill" data-bs-target="#personal-information" type="button" role="tab" aria-controls="personal-information" aria-selected="true">
                                             <span class="step-title me-2">
-                                                <i class="ri-close-circle-fill step-icon me-2"></i> Step 1
+                                                <i class="ri-shield-user-fill"></i> Step 1
                                             </span>
                                             Personal Information
                                         </button>
                                         <button class="nav-link" id="additiona-information-tab" data-bs-toggle="pill" data-bs-target="#additiona-information" type="button" role="tab" aria-controls="additiona-information" aria-selected="false">
                                             <span class="step-title me-2">
-                                                <i class="ri-close-circle-fill step-icon me-2"></i> Step 2
+                                                <i class="ri-file-info-fill"></i> Step 2
                                             </span>
                                             Additional Information
                                         </button>
                                         <button class="nav-link" id="details-of-submission-tab" data-bs-toggle="pill" data-bs-target="#details-of-submission" type="button" role="tab" aria-controls="details-of-submission" aria-selected="false">
                                             <span class="step-title me-2">
-                                                <i class="ri-close-circle-fill step-icon me-2"></i> Step 3
+                                                <i class="ri-lightbulb-flash-fill"></i> Step 3
                                             </span>
                                             Details of Submission
                                         </button>
                                         <button class="nav-link" id="technological-resources-tab" data-bs-toggle="pill" data-bs-target="#technological-resources" type="button" role="tab" aria-controls="technological-resources" aria-selected="false">
                                             <span class="step-title me-2">
-                                                <i class="ri-close-circle-fill step-icon me-2"></i> Step 4
+                                                <i class="ri-file-edit-fill"></i> Step 4
                                             </span>
                                             Technological Resources
                                         </button>
                                         <button class="nav-link" id="huuman-resources-commitment-tab" data-bs-toggle="pill" data-bs-target="#huuman-resources-commitment" type="button" role="tab" aria-controls="huuman-resources-commitment" aria-selected="false">
                                             <span class="step-title me-2">
-                                                <i class="ri-close-circle-fill step-icon me-2"></i> Step 5
+                                                <i class="ri-survey-fill"></i> Step 5
                                             </span>
                                             Human Resources Commitment
                                         </button>
                                         <button class="nav-link" id="other-information-tab" data-bs-toggle="pill" data-bs-target="#other-information" type="button" role="tab" aria-controls="other-information" aria-selected="false">
                                             <span class="step-title me-2">
-                                                <i class="ri-close-circle-fill step-icon me-2"></i> Step 6
+                                                <i class="ri-booklet-fill"></i> Step 6
                                             </span>
                                             Other Information
                                         </button>
                                         <button class="nav-link" id="certification-tab" data-bs-toggle="pill" data-bs-target="#certification" type="button" role="tab" aria-controls="certification" aria-selected="false">
                                             <span class="step-title me-2">
-                                                <i class="ri-close-circle-fill step-icon me-2"></i> Step 7
+                                                <i class="ri-shield-check-fill"></i> Step 7
                                             </span>
                                             Certification
                                         </button>
                                         <button class="nav-link" id="lock-application-tab" data-bs-toggle="pill" data-bs-target="#lock-application" type="button" role="tab" aria-controls="lock-application" aria-selected="false">
                                             <span class="step-title me-2">
-                                                <i class="ri-close-circle-fill step-icon me-2"></i> Step 8
+                                                <i class="ri-file-lock-fill"></i> Step 8
                                             </span>
-                                            Lock Application
+                                            Lock Application Submission
                                         </button>
                                     </div>
                                 </div>
@@ -98,7 +98,7 @@
                                         <div class="tab-content">
                                             <div class="tab-pane fade active show" id="personal-information" role="tabpanel" aria-labelledby="personal-information-tab">
                                                 <div>
-                                                    <h5>Personal Information</h5>
+                                                    <h5 class="text-primary">Personal Information</h5>
                                                     <p class="text-muted">Please provide your personal details to begin the Expression of Interest (EoI) process.</p>
                                                 </div>
                                                 <div>
@@ -132,7 +132,7 @@
                                             </div>
                                             <div class="tab-pane fade" id="additiona-information" role="tabpanel" aria-labelledby="additiona-information-tab">
                                                 <div>
-                                                    <h5>Additional Information</h5>
+                                                    <h5 class="text-primary">Additional Information</h5>
                                                     <p class="text-muted">Share your previous experience and achievements relevant to the Digital Twin - Sangam project.</p>
                                                 </div>
                                                 <div>
@@ -164,13 +164,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
-                                                    <button type="button" class="btn btn-light btn-label previestab" data-previous="personal-information-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                    <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
                                                     <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="details-of-submission" role="tabpanel" aria-labelledby="details-of-submission-tab">
                                                 <div>
-                                                    <h5>Details of Submission</h5>
+                                                    <h5 class="text-primary">Details of Submission</h5>
                                                     <p class="text-muted">Outline your proposed approach and methodology for the PoC, and ensure alignment with project goals.</p>
                                                 </div>
                                                 <div>
@@ -222,13 +222,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
-                                                    <button type="button" class="btn btn-light btn-label previestab" data-previous="additiona-information-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                    <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
                                                     <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="technological-resources" role="tabpanel" aria-labelledby="technological-resources-tab">
                                                 <div>
-                                                    <h5>Technological Resources</h5>
+                                                    <h5 class="text-primary">Technological Resources</h5>
                                                     <p class="text-muted">Detail the resources you plan to utilize or offer for the development and demonstration phases of the PoC</p>
                                                 </div>
                                                 <div>
@@ -261,13 +261,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
-                                                    <button type="button" class="btn btn-light btn-label previestab" data-previous="personal-information-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                    <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
                                                     <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="huuman-resources-commitment" role="tabpanel" aria-labelledby="huuman-resources-commitment-tab">
                                                 <div>
-                                                    <h5>Human Resources Commitment</h5>
+                                                    <h5 class="text-primary">Human Resources Commitment</h5>
                                                     <p class="text-muted">Provide information on the expert resources and developers dedicated to the PoC.</p>
                                                 </div>
                                                 <div>
@@ -285,13 +285,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
-                                                    <button type="button" class="btn btn-light btn-label previestab" data-previous="personal-information-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                    <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
                                                     <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="other-information" role="tabpanel" aria-labelledby="other-information-tab">
                                                 <div>
-                                                    <h5>Other Information</h5>
+                                                    <h5 class="text-primary">Other Information</h5>
                                                     <p class="text-muted">Share any other pertinent facts, items, or unique offerings related to your participation in the EoI process.</p>
                                                 </div>
                                                 <div>
@@ -309,13 +309,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
-                                                    <button type="button" class="btn btn-light btn-label previestab" data-previous="personal-information-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                    <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
                                                     <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="certification" role="tabpanel" aria-labelledby="certification-tab">
                                                 <div>
-                                                    <h5>Certification</h5>
+                                                    <h5 class="text-primary">Certification</h5>
                                                     <p class="text-muted">Certify your organization's authorization to submit the Expression of Interest (EoI) response.</p>
                                                     <div>
                                                         <div class="row g-3">
@@ -329,8 +329,21 @@
                                                     </div>
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
-                                                    <button type="button" class="btn btn-light btn-label previestab" data-previous="personal-information-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                    <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
                                                     <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="lock-application" role="tabpanel" aria-labelledby="lock-application-tab">
+                                                <div>
+                                                    <h5 class="text-primary">Lock Application Submission</h5>
+                                                    <p class="text-muted">Certify your organization's authorization to submit the Expression of Interest (EoI) response.</p>
+                                                    <div>
+                                                        <div class="row g-3">
+                                                            <div class="col-sm-12">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -349,63 +362,50 @@
         placeholder: 'Select core competencies...',
         allowClear: true
     });
-    $(".form-steps").each(function() {
-        var l = $(this);
-
-        l.find(".nexttab").each(function() {
-            var t = $(this);
-            var e = l.find('button[data-bs-toggle="pill"]');
-
-            e.on("show.bs.tab", function() {
-                $(this).addClass("done");
+    $(document).ready(function() {
+        function validateFields() {
+            var isValid = true;
+            $('.tab-pane.active').find('input, textarea').each(function() {
+                if ($(this).prop('required') && !$(this).val()) {
+                    isValid = false;
+                    $(this).addClass('is-invalid');
+                } else {
+                    $(this).removeClass('is-invalid');
+                }
             });
+            return isValid;
+        }
 
-            t.on("click", function() {
-                l.addClass("was-validated");
-                l.find(".tab-pane.show .form-control").each(function() {
-                    var e = $(this);
-                    if (e.val().length > 0 && e.val().match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
-                        var t = $(this).attr("data-nexttab");
-                        $("#" + t).click();
-                        l.removeClass("was-validated");
-                    }
-                });
-            });
+        function goToNextStep() {
+            if (validateFields()) {
+                var activeTab = $('.nav-link.active');
+                var nextTab = activeTab.next('.nav-link');
+                if (nextTab.length !== 0) {
+                    activeTab.removeClass('active');
+                    nextTab.addClass('active');
+                    var targetId = nextTab.attr('data-bs-target');
+                    $(targetId).addClass('active show').siblings('.tab-pane').removeClass('active show');
+                }
+            }
+        }
+
+        function goToPreviousStep() {
+            var activeTab = $('.nav-link.active');
+            var prevTab = activeTab.prev('.nav-link');
+            if (prevTab.length !== 0) {
+                activeTab.removeClass('active');
+                prevTab.addClass('active');
+                var targetId = prevTab.attr('data-bs-target');
+                $(targetId).addClass('active show').siblings('.tab-pane').removeClass('active show');
+            }
+        }
+
+        $('.goToNextStep').click(function() {
+            goToNextStep();
         });
 
-        l.find(".previestab").each(function() {
-            var o = $(this);
-            o.on("click", function() {
-                var e = o.attr("data-previous");
-                var t = o.closest("form").find(".custom-nav .done").length;
-                for (var r = t - 1; r < t; r++) {
-                    if (o.closest("form").find(".custom-nav .done")[r]) {
-                        o.closest("form").find(".custom-nav .done")[r].classList.remove("done");
-                    }
-                }
-                $("#" + e).click();
-            });
-        });
-
-        var a = l.find('button[data-bs-toggle="pill"]');
-        a.each(function(o, r) {
-            $(r).attr("data-position", o);
-            $(r).on("click", function() {
-                l.removeClass("was-validated");
-                if ($(r).attr("data-progressbar")) {
-                    var e = $("#custom-progress-bar").find("li").length - 1;
-                    var t = o / e * 100;
-                    $("#custom-progress-bar").find(".progress-bar").css("width", t + "%");
-                }
-                l.find(".custom-nav .done").removeClass("done");
-                for (var t = 0; t <= o; t++) {
-                    if ($(a[t]).hasClass("active")) {
-                        $(a[t]).removeClass("done");
-                    } else {
-                        $(a[t]).addClass("done");
-                    }
-                }
-            });
+        $('.goToPreviousStep').click(function() {
+            goToPreviousStep();
         });
     });
 </script>

@@ -349,7 +349,7 @@
             infinite: true,
             speed: 800,
             autoplay: true,
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1,
             prevArrow: '<div class="prev"><i class="far fa-angle-left"></i></div>',
             nextArrow: '<div class="next"><i class="far fa-angle-right"></i></div>',
