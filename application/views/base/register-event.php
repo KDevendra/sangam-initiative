@@ -1,7 +1,7 @@
 <?php include_once __DIR__ . '/../common/header.php'; ?>
 <section class="about-section mt-150">
     <div class="container-fluid">
-        <div class="about-wrapper gray-bg wow fadeInUp" style="visibility: visible;">
+        <div class="about-wrapper wow fadeInUp" style="visibility: visible;">
             <div class="container">
                 <div class="row align-items-xl-center">
                     <div class="col-xl-12 col-lg-12">

@@ -234,7 +234,7 @@ ul.check-style-one li i {
     width: 100%;
     opacity: 0.8;
 }
-.preRegisBtn{color: #fff !important}
+.preRegisBtn{color: #fff !important; background-color: #3d3d99 !important;}
 .preRegisBtn:hover {
     color: #ffffffb4 !important;
 }

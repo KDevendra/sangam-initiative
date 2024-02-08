@@ -153,6 +153,14 @@
               scrollTop: offset
           }, 1000);
       });
+      $('#exploreBtn').on('click', function(event) {
+          event.preventDefault();
+          var offset = $('#exploreBtnDes').offset().top - 210;
+          $('html, body').animate({
+              scrollTop: offset
+          }, 1000);
+      });
+
 
 
       window.addEventListener("load", executeCodes);

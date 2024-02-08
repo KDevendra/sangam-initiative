@@ -1,25 +1,39 @@
 <?php include_once __DIR__ . '/../common/header.php'; ?>
+<style>
+    .banner-section {
+        position: relative;
+    }
+
+    .hero-wrapper-one {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+    }
+</style>
 <section class="banner-section mt__150">
-    <div id="videoContainer" class="d-flex align-items-center">
-        <video autoplay="" muted="" loop="" id="bgVideo">
-            <source src="<?php echo base_url('') ?>include/web/custom/bg_video.mp4" type="video/mp4">
-        </video>
-        <div class="position-absolute __mp__100" width="100%">
+    <video autoplay="" muted="" loop="" id="bgVideo">
+        <source src="<?php echo base_url('') ?>include/web/custom/bg_video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-wrapper-one __mp__100">
+        <div class="container text-center">
             <div class="row align-items-lg-center">
-                <div class="col-xl-12 col-lg-12">
-                    <div class="hero-content">
-                        <h6 class="mb-2" style="color: #fff;font-size: 20px;background-color: #00000082;padding: 20px;border-radius: 5px;    width: fit-content;">
-                            Department of Telecommunications calls for Expression of Interest For</h6>
-                        <h1 class="wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Sangam: Digital Twin</h1>
-                        <p class="wow fadeInDown" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInDown;">Confluence of Innovation: Revolutionizing Future Infrastructure Planning</p>
-                        <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;"><a style="gap: 5px;" class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration"> <i class="far  fa-table" aria-hidden="true"></i> Pre-Registration</a><a class="main-btn filled-btn mb-10 exploreBtn" href="javascript:void(0)">Explore More</a></div>
-                    </div>
+                <div class="col-md-12">
+                    <h6 class="mb-20" style="color: #fff;font-size: 20px;background-color: #00000082;padding: 20px;border-radius: 5px;">
+                        Department of Telecommunications calls for Expression of Interest For
+                    </h6>
+                    <h1 class="fadeInUp mb-20" style="visibility: visible;  animation-name: fadeInUp;color: #fff;">Sangam: Digital Twin</h1>
+                    <p class="fadeInDown mb-20" style="color: #fff;font-size: 24px;padding: 12px 30px;border-radivisibility: visible; animation-delay: 0.6s; animation-name: fadeInDown;/*! background-colorus: 5px;font-weight: bold;">Confluence of Innovation: Revolutionizing Future Infrastructure Planning</p>
+                    <div class="hero-button mb-20  fadeInUp" style="visibility: visible; margin: 15px; animation-name: fadeInUp;"><a style="gap: 5px;margin:5px" class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration"> <i class="far  fa-table" aria-hidden="true"></i> Pre-Registration</a><a class="main-btn filled-btn mb-10 exploreBtn" id="exploreBtn" style="margin:5px" href="javascript:void(0)">Explore More</a></div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 </section>
-<section class="about-section pb-50">
+<section class="about-section pb-50" id="exploreBtnDes">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10">
@@ -327,8 +341,8 @@
             </div>
             <div class="col-lg-12 p-0">
                 <div class="features-image-box mb-20 wow fadeInLeft d-flex justify-content-center" style="visibility: visible;">
-                <img src="<?php echo base_url(''); ?>include/web/custom/Matters_Now.png" alt="Features Image">
-            </div>
+                    <img src="<?php echo base_url(''); ?>include/web/custom/Matters_Now.png" alt="Features Image">
+                </div>
             </div>
         </div>
     </div>
