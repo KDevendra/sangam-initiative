@@ -33,7 +33,7 @@
                                         <div class="position-relative h-100 d-flex flex-column" id="signUpPage">
                                             <div class="mb-4">
                                                 <a href="<?php echo base_url(''); ?>" class="d-flex justify-content-center">
-                                                    <img src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative_White.png" alt="" height="18" />
+                                                    <img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications_White.png" alt="" height="18" />
                                                 </a>
                                             </div>
                                             <div class="mt-auto">

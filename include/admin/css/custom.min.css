@@ -114,6 +114,9 @@
 #additionalInformation{
 		display: flex;
 }
+.custom-nav .nav-link span i{
+		color: #405189;
+}
 #additionalInformation .ri-info-i {
 	background-color: #344372;
 	border-radius: 50%;

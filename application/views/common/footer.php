@@ -11,7 +11,7 @@
                           <div class="footer-widget footer-about-widget mb-40 pr-lg-70 wow fadeInDown">
                               <div class="widget-content">
                                   <div class="footer-logo mb-10">
-                                      <a href="<?php echo base_url(''); ?>"><img height="80px" src="<?php echo base_url(''); ?>include/web/custom/Sangam_Initiative_White.png" alt="Logo"></a>
+                                      <a href="<?php echo base_url(''); ?>"><img height="80px" src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications_White.png" alt="Logo"></a>
                                   </div>
                                   <p>Sangam is on a mission to transform infrastructure planning and design by converging digital technologies and data.
                                   </p>
@@ -148,6 +148,29 @@
       };
       window.addEventListener("load", executeCodes);
   </script>
+  <script>
+      $(document).ready(function() {
+          $(".read-more").click(function() {
+              $(".about-features-item").not($(this).closest(".about-features-item")).slideUp();
+              $(this).closest(".about-features-item").parent().removeClass("col-lg-4 col-md-6 col-sm-12").addClass("col-md-12");
+              $(this).closest(".about-features-item").find(".description").slideDown(1000);
+              $(this).closest(".about-features-item").find(".back-button").show();
+              $(this).hide(); 
+              $(this).closest(".about-features-item").find('.text p').hide(); 
+          });
+
+          $(".back-button").click(function() {
+              $(this).closest(".about-features-item").parent().addClass("col-md-12").addClass("col-lg-4 col-md-6 col-sm-12");
+              $(this).closest(".about-features-item").find(".description").slideUp();
+              $(".about-features-item").slideDown(1000);
+              $(".back-button").hide();
+              $(".read-more").slideDown(1000); 
+              $(".about-features-item .text p").slideDown(1000); 
+          });
+      });
+  </script>
+
+
   </body>
 
   </html>

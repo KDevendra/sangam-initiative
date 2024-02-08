@@ -2,50 +2,94 @@
 <section class="banner-section">
     <div class="hero-wrapper-one gray-bg">
         <div class="shape shape-one animate-float-y"><span><img src="<?php echo base_url(''); ?>include/web/images/hero/shape-1.png" alt="shape"></span></div>
+        <div class="shape shape-one-copy animate-float-y"><span><img src="<?php echo base_url(''); ?>include/web/images/hero/shape-1.png" alt="shape"></span></div>
         <div class="shape shape-two animate-float-x"><span><img src="<?php echo base_url(''); ?>include/web/images/hero/shape-2.png" alt="shape"></span></div>
         <div class="shape shape-three animate-float-x"><span><img src="<?php echo base_url(''); ?>include/web/images/hero/shape-3.png" alt="shape"></span></div>
+        <div class="shape shape-two-copy animate-float-x"><span><img src="<?php echo base_url(''); ?>include/web/images/hero/shape-2.png" alt="shape"></span></div>
         <div class="container">
             <div class="row align-items-lg-center">
-                <div class="col-xl-6 col-lg-12">
+                <div class="col-md-6">
                     <div class="hero-content">
-                        <h1 class="wow fadeInUp" data-wow-delay=".4s">Sangam: Digital Twin</h1>
-                        <p class="wow fadeInDown" data-wow-delay=".6s">Confluence of Innovation: Revolutionizing Future Infrastructure Planning</p>
-                        <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
-                            <div class="tooltip-container">
-                                <a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="left" title="" class="main-btn golden-btn mb-10 main-btn__custom">Empowering Innovation</a>
-                                <div class="tooltip-content">
-                                    <h6 class="text-center mb-2">The Dawn of Collaborative Infrastructure Design</h6>
-                                    <p>
-                                        Welcome to the forefront of a transformative journey with ' Digital Twin: Sangam,' where we envision reshaping the world of infrastructure planning and design. Historically, the process of planning and designing infrastructure has been constrained by limited experimental iterations, a lack of feedback loops, and a narrow scope of imagination due to restricted access to comprehensive data. " Digital Twin: Sangam" aims to revolutionise this paradigm by unlocking the full potential of unlimited data access, harnessing the advancements in computation, connectivity, and collaborative innovation..
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="tooltip-container">
-                                <a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="left" title="Age 18 years or older to register" class="main-btn filled-btn mb-10  main-btn__custom">Breaking Boundaries</a>
-                                <div class="tooltip-content">
-                                    <h6 class="text-center mb-2">From Limited Data to Infinite Possibilities</h6>
-                                    <p>
-                                        Our mission is to break free from traditional silos and foster a dynamic environment of co-designing and co-creation. By integrating cutting-edge computational and communication technologies with collective intelligence, we open a new realm of possibilities where infrastructure planning becomes a participatory, inclusive, and iterative process. Imagine a world where every stakeholder has a voice in shaping our shared future, where feedback loops enrich our understanding, and where our imagination is bound only by the extent of our data.
-                                </div>
-                            </div>
-                            <div class="tooltip-container">
-                                <a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="left" title="Age 18 years or older to register" class="main-btn filled-btn mb-10  main-btn__custom">Shaping the Future</a>
-                                <div class="tooltip-content">
-                                    <h6 class="text-center mb-2">Co-Creation for a Sustainable World</h6>
-                                    <p>
-                                        Join us in pioneering an approach that not only addresses the current challenges in infrastructure development but also sets a new standard for how societies build, adapt, and thrive. "Digital Twin: Sangam" is not just about creating more efficient and sustainable infrastructure; it's about creating a future where technology and collaboration pave the way for a world that understands and meets the needs of its inhabitants like never before.
-                                </div>
-                            </div>
-                        </div>
+                        <h6 class="mb-3" style="color: #0086b0;font-size: 20px;">
+                            Department of Telecommunications calls for Expression of Interest For</h5>
+                            <h1 class="wow fadeInUp mb-3" data-wow-delay=".4s">Sangam: Digital Twin</h1>
+                            <p class="wow fadeInDown mb-3" data-wow-delay=".6s">Confluence of Innovation: Revolutionizing Future Infrastructure Planning</p>
+                            <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.7s;"><a style="gap: 5px;" class="main-btn golden-btn mb-10" href="<?php echo base_url('registration'); ?>"> <i class="far  fa-table" aria-hidden="true"></i> Pre-Registration</a><a class="main-btn filled-btn mb-10" href="<?php echo base_url(''); ?>#why-to-Join">Why to Join</a></div>
                     </div>
                 </div>
-                <div class="col-xl-6 col-lg-12">
+                <div class="col-md-6">
                     <div class="hero-image-box d-xl-block  wow fadeInRight" data-wow-delay=".75s">
                         <img src="<?php echo base_url(''); ?>include/web/custom/Experience_the_future_of_planning.jpg" alt="Hero Image">
                         <div class="shape hero-svg">
-                            <svg width="237" height="569" viewBox="0 0 237 569" fill="none">
+                            <svg width="200" height="520" viewBox="0 0 237 569" fill="none">
                                 <path d="M0.552583 568.307L1.99989 0.226473C1.99989 0.226473 237.025 -9.37181 236.276 284.731C235.527 578.834 0.552583 568.307 0.552583 568.307Z" fill="#29c5f6" />
                             </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about-section pb-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="about-wrapper-two gray-bg mt-minus-110 p-r wow fadeInDown" style="visibility: visible;" id="aboutWrapperTwo">
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="about-features-item text-center">
+                                <div class="icon"><i class="flaticon-target"></i></div>
+                                <div class="text">
+                                    <h3 class="title">Empowering Innovation</h3>
+                                    <p>Welcome to the forefront of a transformative journey with "Digital Twin: Sangam," where</p>
+                                    <a class="btn-link read-more" href="javascript:void(0)" data-target="#empowering-innovation">Read More<i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <div class="description" style="display: none;">
+                                    <blockquote class="text-white">
+                                        The Dawn of Collaborative Infrastructure Design
+                                    </blockquote>
+                                    <p>Welcome to the forefront of a transformative journey with "Digital Twin: Sangam," where we envision reshaping the world of infrastructure planning and design. Historically, the process of planning and designing infrastructure has been constrained by limited experimental iterations, a lack of feedback loops, and a narrow scope of imagination due to restricted access to comprehensive data. "Digital Twin: Sangam" aims to revolutionise this paradigm by unlocking the full potential of unlimited data access, harnessing the advancements in computation, connectivity, and collaborative innovation.</p>
+                                </div>
+                                <a class="btn-link back-button" href="javascript:void(0)" style="display: none;">Back<i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="about-features-item item-active text-center">
+                                <div class="hover-bg bg_cover" style="background-image: url(<?php echo base_url('') ?>include/web/custom/Environmental_Data.jpg);"></div>
+                                <div class="icon"><i class="flaticon-vision"></i></div>
+                                <div class="text">
+                                    <h3 class="title">Breaking Boundaries</h3>
+                                    <p>Our mission is to break free from traditional silos and foster a dynamic environment</p>
+                                    <a class="btn-link read-more" href="javascript:void(0)" data-target="#breaking-boundaries">Read More<i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <div class="description" style="display: none;">
+                                    <blockquote class="text-white" id="font_white">
+                                        From Limited Data to Infinite Possibilities
+                                    </blockquote>
+                                    <p>Our mission is to break free from traditional silos and foster a dynamic environment of co-designing and co-creation. By integrating cutting-edge computational and communication technologies with collective intelligence, we open a new realm of possibilities where infrastructure planning becomes a participatory, inclusive, and iterative process. Imagine a world where every stakeholder has a voice in shaping our shared future, where feedback loops enrich our understanding, and where our imagination is bound only by the extent of our data.
+                                    </p>
+                                </div>
+                                <a class="btn-link back-button" id="font_white" href="javascript:void(0)" style="display: none;">Back<i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="about-features-item text-center">
+                                <div class="icon"><i class="flaticon-management"></i></div>
+                                <div class="text">
+                                    <h3 class="title">Shaping the Future</h3>
+                                    <p>Join us in pioneering an approach that not only addresses the current challenges in infrastructure development</p>
+                                    <a class="btn-link read-more" href="javascript:void(0)" data-target="#shaping-the-future">Read More<i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <div class="description" style="display: none;">
+                                    <blockquote class="text-white">
+                                        Co-Creation for a Sustainable World
+                                    </blockquote>
+                                    <p>Join us in pioneering an approach that not only addresses the current challenges in infrastructure development but also sets a new standard for how societies build, adapt, and thrive. "Digital Twin: Sangam" is not just about creating more efficient and sustainable infrastructure; it's about creating a future where technology and collaboration pave the way for a world that understands and meets the needs of its inhabitants like never before.
+                                    </p>
+                                </div>
+                                <a class="btn-link back-button" href="javascript:void(0)" style="display: none;">Back<i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -59,13 +103,14 @@
             <div class="col-xl-6">
                 <div class="about-one_image-box  p-r z-1 wow fadeInLeft">
                     <div class="shape shape-one"><span></span></div>
-                    <img src="<?php echo base_url(''); ?>include/web/custom/Environmental_Data.jpg" class="about-img-one" alt="About Image">
+                    <img src="<?php echo base_url(''); ?>include/web/custom/Environmental_Data_01.jpg" class="about-img-one" alt="About Image">
                     <img src="<?php echo base_url(''); ?>include/web/custom/Generation_Planning.jpg" class="about-img-two" alt="About Image">
                     <img src="<?php echo base_url(''); ?>include/web/custom/About_M2M_&_IoT.png" class="about-img-three" alt="About Image">
                     <div class="experience-item">
-                        <h2 class="number"><span class="count">10</span>+</h2>
-                        <h4>Years Of
-                            Experience
+                        <!-- <h2 class="number"><span class="count">Revolutionising Future Infrastructure
+                     Planning</span>+</h2> -->
+                        <h4>Revolutionising Future Infrastructure
+                            Planning
                         </h4>
                     </div>
                 </div>
@@ -73,8 +118,8 @@
             <div class="col-xl-6">
                 <div class="about-content-box pl-lg-60 mb-50 wow fadeInRight">
                     <div class="section-title mb-30">
-                        <span class="sub-title"> <img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> About Sangam Initiative</span>
-                        <h2>A journey to next generation planning</h2>
+                        <span class="sub-title"> <img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> A journey to Next Generation Planning</span>
+                        <h2>About Sangam Initiative</h2>
                     </div>
                     <p class="mb-10 text-justify">Welcome to "Sangam: Digital Twin," a pioneering invitation to collaborate on the future of infrastructure planning and design. This initiative is a call to action for public entities, infrastructure planners, tech giants, startups, and academia to break free from silos and engage in a whole-of-government approach. At the heart of Sangam is the fusion of unified data and collective intelligence, aimed at leveraging advancements in telecom technologies, including 5G and IoT, alongside the latest in computational technologies. Sangam offers a unique platform to visualise existing conditions, predict future scenarios, and test hypotheses in a virtual world, all powered by Digital Twins, AI, and predictive models.</p>
                     <div class="">
@@ -93,12 +138,122 @@
                                 <h6 class="text-center mb-2">Building Tomorrow's Infrastructure Today</h6>
                                 <p>
                                     Join us in this ambitious journey to redefine infrastructure design and planning, where your expertise and insights can contribute to building a more connected, sustainable, and innovative world. Together, let's build a foundation for visionary infrastructure, informed by the collective intelligence and unified data of today's brightest minds.
-
                                 </p>
                             </div>
                         </div>
                     </div>
-
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="gallery-section gray-bg  pt-50 pb-50" id="apt-choice">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="section-title text-center mb-50 wow fadeInDown">
+                    <span class="sub-title"> <img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> Why is Sangam an Apt Choice?</span>
+                    <h2>The Blueprint for Future Infrastructure Planning</h2>
+                </div>
+            </div>
+        </div>
+        <div class="projects-slider-three wow fadeInUp">
+            <div class="single-project-item-three mb-30">
+                <div class="single-blog-post-four mb-40 wow fadeInLeft">
+                    <div class="entry-content">
+                        <h4 class="entry-title"><a href="javascript:void(0)">Sangam as a Model for National Infrastructure</a></h4>
+                        <h6>Sangam: A Model for National Infrastructure
+                            Excellence</h6>
+                        <p>Explore how Sangam serves as a microcosm for
+                            national infrastructure planning, showcasing cutting-edge
+                            approaches in design and strategy.</p>
+                    </div>
+                    <div class="post-thumbnail">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/National_Infrastructure.jpg" alt="Post Thumbnail">
+                    </div>
+                </div>
+            </div>
+            <div class="single-project-item-three mb-30">
+                <div class="single-blog-post-four mb-40 wow fadeInLeft">
+                    <div class="entry-content">
+                        <h4 class="entry-title"><a href="javascript:void(0)">Bridging the Gap Between Reality and Planning</a></h4>
+                        <h6>Transforming Insights into Action</h6>
+                        <p>Discover how Sangam leverages nuanced, contextualized insights to create plans that closely align with real-world scenarios and needs.</p>
+                    </div>
+                    <div class="post-thumbnail">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/National_Infrastructure.jpg" alt="Post Thumbnail">
+                    </div>
+                </div>
+            </div>
+            <div class="single-project-item-three mb-30">
+                <div class="single-blog-post-four mb-40 wow fadeInLeft">
+                    <div class="entry-content">
+                        <h4 class="entry-title"><a href="javascript:void(0)">Navigating Uncertainties with Scenario Thinking</a></h4>
+                        <h6>Mastering Uncertainties in Infrastructure Design</h6>
+                        <p>Learn how Sangam employs scenario thinking to
+                            anticipate and mitigate uncertainties, leading to more resilient
+                            infrastructure development..</p>
+                    </div>
+                    <div class="post-thumbnail">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/National_Infrastructure.jpg" alt="Post Thumbnail">
+                    </div>
+                </div>
+            </div>
+            <div class="single-project-item-three mb-30">
+                <div class="single-blog-post-four mb-40 wow fadeInLeft">
+                    <div class="entry-content">
+                        <h4 class="entry-title"><a href="javascript:void(0)">Breaking Silos in Collaborative Planning</a></h4>
+                        <h6>Fostering Collaboration in Infrastructure Planning</h6>
+                        <p>See how Sangam encourages the sharing of ideas and
+                            resources, breaking traditional silos and enhancing collective
+                            input during the planning process.</p>
+                    </div>
+                    <div class="post-thumbnail">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/National_Infrastructure.jpg" alt="Post Thumbnail">
+                    </div>
+                </div>
+            </div>
+            <div class="single-project-item-three mb-30">
+                <div class="single-blog-post-four mb-40 wow fadeInLeft">
+                    <div class="entry-content">
+                        <h4 class="entry-title"><a href="javascript:void(0)">Cognitive Approach: Bridging Planning and Execution</a></h4>
+                        <h6>Enhancing Execution with Cognitive Clarity</h6>
+                        <p>Discover Sangam’s cognitive approach, which
+                            emphasises clear, continuous communication and proactive
+                            responses to bridge the gap between plans and their execution.</p>
+                    </div>
+                    <div class="post-thumbnail">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/National_Infrastructure.jpg" alt="Post Thumbnail">
+                    </div>
+                </div>
+            </div>
+            <div class="single-project-item-three mb-30">
+                <div class="single-blog-post-four mb-40 wow fadeInLeft">
+                    <div class="entry-content">
+                        <h4 class="entry-title"><a href="javascript:void(0)">From Thought to Reality: Opportunity to Innovate</a></h4>
+                        <h6>Transforming Ideas into Tangible Solutions</h6>
+                        <p>Sangam offers a unique opportunity to morph
+                            innovative thoughts into tangible realities, paving the way for
+                            groundbreaking infrastructure development.</p>
+                    </div>
+                    <div class="post-thumbnail">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/National_Infrastructure.jpg" alt="Post Thumbnail">
+                    </div>
+                </div>
+            </div>
+            <div class="single-project-item-three mb-30">
+                <div class="single-blog-post-four mb-40 wow fadeInLeft">
+                    <div class="entry-content">
+                        <h4 class="entry-title"><a href="javascript:void(0)">Engaging the Public in Design and Planning</a></h4>
+                        <h6>Incorporating Public Insight into Infrastructure
+                            Design</h6>
+                        <p>Learn about Sangam’s inclusive approach, where
+                            public engagement is integral to the planning and design phase,
+                            ensuring every suggestion is valued and considered.</p>
+                    </div>
+                    <div class="post-thumbnail">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/National_Infrastructure.jpg" alt="Post Thumbnail">
+                    </div>
                 </div>
             </div>
         </div>
@@ -116,6 +271,8 @@
                 <div class="section-title text-white text-center mb-50 wow fadeInDown">
                     <span class="sub-title text-white"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt=""> Why to Join</span>
                     <h2>The Sangam Initiative caters to individuals like you and your work</h2>
+                    <p class="mt-1">Be part of a collaborative effort to redefine infrastructure planning and design. The "Digital Twin: Sangam" PoC is not just a project; it's a leap into the future of how we conceive, plan, and build our world. Your expertise and innovation can help shape sustainable, efficient, and integrated infrastructure systems for generations to come.
+                    </p>
                 </div>
             </div>
         </div>
@@ -980,7 +1137,7 @@
 <section class="testimonial-section pt-50 pb-50">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-xl-6 col-lg-12">
+            <div class="col-md-12">
                 <div class="section-title text-center mb-50 wow fadeInDown">
                     <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> Discussion</span>
                     <h2>Join the Tech Talk</h2>
