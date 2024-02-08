@@ -1,37 +1,25 @@
 <?php include_once __DIR__ . '/../common/header.php'; ?>
-<section class="banner-section">
-    <div class="hero-wrapper-one gray-bg">
-        <div class="shape shape-one animate-float-y"><span><img src="<?php echo base_url(''); ?>include/web/images/hero/shape-1.png" alt="shape"></span></div>
-        <div class="shape shape-one-copy animate-float-y"><span><img src="<?php echo base_url(''); ?>include/web/images/hero/shape-1.png" alt="shape"></span></div>
-        <div class="shape shape-two animate-float-x"><span><img src="<?php echo base_url(''); ?>include/web/images/hero/shape-2.png" alt="shape"></span></div>
-        <div class="shape shape-three animate-float-x"><span><img src="<?php echo base_url(''); ?>include/web/images/hero/shape-3.png" alt="shape"></span></div>
-        <div class="shape shape-two-copy animate-float-x"><span><img src="<?php echo base_url(''); ?>include/web/images/hero/shape-2.png" alt="shape"></span></div>
-        <div class="container">
+<section class="banner-section mt__150">
+    <div id="videoContainer" class="d-flex align-items-center">
+        <video autoplay="" muted="" loop="" id="bgVideo">
+            <source src="<?php echo base_url('') ?>include/web/custom/bg_video.mp4" type="video/mp4">
+        </video>
+        <div class="position-absolute __mp__100" width="100%">
             <div class="row align-items-lg-center">
-                <div class="col-md-6">
+                <div class="col-xl-12 col-lg-12">
                     <div class="hero-content">
-                        <h6 class="mb-3" style="color: #0086b0;font-size: 20px;">
-                            Department of Telecommunications calls for Expression of Interest For</h5>
-                            <h1 class="wow fadeInUp mb-3" data-wow-delay=".4s">Sangam: Digital Twin</h1>
-                            <p class="wow fadeInDown mb-3" data-wow-delay=".6s">Confluence of Innovation: Revolutionizing Future Infrastructure Planning</p>
-                            <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.7s;"><a style="gap: 5px;" class="main-btn golden-btn mb-10" href="<?php echo base_url('registration'); ?>"> <i class="far  fa-table" aria-hidden="true"></i> Pre-Registration</a><a class="main-btn filled-btn mb-10" href="<?php echo base_url(''); ?>#why-to-Join">Why to Join</a></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="hero-image-box d-xl-block  wow fadeInRight" data-wow-delay=".75s">
-                        <img src="<?php echo base_url(''); ?>include/web/custom/Experience_the_future_of_planning.jpg" alt="Hero Image">
-                        <div class="shape hero-svg">
-                            <svg width="200" height="520" viewBox="0 0 237 569" fill="none">
-                                <path d="M0.552583 568.307L1.99989 0.226473C1.99989 0.226473 237.025 -9.37181 236.276 284.731C235.527 578.834 0.552583 568.307 0.552583 568.307Z" fill="#29c5f6" />
-                            </svg>
-                        </div>
+                        <h6 class="mb-2" style="color: #fff;font-size: 20px;background-color: #00000082;padding: 20px;border-radius: 5px;    width: fit-content;">
+                            Department of Telecommunications calls for Expression of Interest For</h6>
+                        <h1 class="wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Sangam: Digital Twin</h1>
+                        <p class="wow fadeInDown" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInDown;">Confluence of Innovation: Revolutionizing Future Infrastructure Planning</p>
+                        <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;"><a style="gap: 5px;" class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration"> <i class="far  fa-table" aria-hidden="true"></i> Pre-Registration</a><a class="main-btn filled-btn mb-10 exploreBtn" href="javascript:void(0)">Explore More</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="about-section pb-100">
+<section class="about-section pb-50">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10">
@@ -97,7 +85,7 @@
         </div>
     </div>
 </section>
-<section class="about-section pt-50 pb-50">
+<section class="about-section gray-bg pt-50 pb-50">
     <div class="container">
         <div class="row align-items-xl-center">
             <div class="col-xl-6">
@@ -107,10 +95,7 @@
                     <img src="<?php echo base_url(''); ?>include/web/custom/Generation_Planning.jpg" class="about-img-two" alt="About Image">
                     <img src="<?php echo base_url(''); ?>include/web/custom/About_M2M_&_IoT.png" class="about-img-three" alt="About Image">
                     <div class="experience-item">
-                        <!-- <h2 class="number"><span class="count">Revolutionising Future Infrastructure
-                     Planning</span>+</h2> -->
-                        <h4>Revolutionising Future Infrastructure
-                            Planning
+                        <h4>Bring Ideas into Life
                         </h4>
                     </div>
                 </div>
@@ -147,6 +132,28 @@
         </div>
     </div>
 </section>
+<section class="about-section">
+    <div class="container-fluid">
+        <div class="about-wrapper  wow fadeInUp" style="visibility: visible;">
+            <div class="container">
+                <div class="row align-items-xl-center">
+                    <div class="col-xl-5 col-lg-12">
+                        <div class="about-two_image-box wow fadeInLeft" style="visibility: visible;"><img src="<?php echo base_url('') ?>include/web/custom/Sangam_Initiative.png"></div>
+                    </div>
+                    <div class="col-xl-7 col-lg-12">
+                        <div class="about-three_content-box pl-lg-70 wow fadeInRight" style="visibility: visible;">
+                            <div class="section-title mb-25 wow fadeInUp" style="visibility: visible;">
+                                <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt="">Transforming Infrastructure Planning</span>
+                                <h2>Upcoming Future Infrastructure Summit 2024</h2>
+                            </div>
+                            <p class="mb-40 wow fadeInDown" style="visibility: visible;">Get ready for the upcoming Future Infrastructure Summit 2024! Explore revolutionary opportunities in infrastructure planning and design, from integrating Digital Twin technology to crafting future-ready frameworks. Connect with industry leaders and experts to shape the future of infrastructure. Join us and be part of the revolution.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="gallery-section gray-bg  pt-50 pb-50" id="apt-choice">
     <div class="container">
         <div class="row justify-content-center">
@@ -162,14 +169,22 @@
                 <div class="single-blog-post-four mb-40 wow fadeInLeft">
                     <div class="entry-content">
                         <h4 class="entry-title"><a href="javascript:void(0)">Sangam as a Model for National Infrastructure</a></h4>
-                        <h6>Sangam: A Model for National Infrastructure
-                            Excellence</h6>
-                        <p>Explore how Sangam serves as a microcosm for
-                            national infrastructure planning, showcasing cutting-edge
-                            approaches in design and strategy.</p>
-                    </div>
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url(''); ?>include/web/custom/National_Infrastructure.jpg" alt="Post Thumbnail">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h6>Sangam: A Model for National Infrastructure
+                                    Excellence
+                                </h6>
+                                <p>Explore how Sangam serves as a microcosm for
+                                    national infrastructure planning, showcasing cutting-edge
+                                    approaches in design and strategy.
+                                </p>
+                            </div>
+                            <div class="d-none d-lg-block col-md-3">
+                                <div class="d-flex justify-content-center">
+                                    <img src="<?php echo base_url(''); ?>include/web/custom/National_Infrastructure.jpg" alt="Post Thumbnail">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -177,11 +192,18 @@
                 <div class="single-blog-post-four mb-40 wow fadeInLeft">
                     <div class="entry-content">
                         <h4 class="entry-title"><a href="javascript:void(0)">Bridging the Gap Between Reality and Planning</a></h4>
-                        <h6>Transforming Insights into Action</h6>
-                        <p>Discover how Sangam leverages nuanced, contextualized insights to create plans that closely align with real-world scenarios and needs.</p>
-                    </div>
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url(''); ?>include/web/custom/National_Infrastructure.jpg" alt="Post Thumbnail">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h6>Transforming Insights into Action</h6>
+                                <p>Discover how Sangam leverages nuanced, contextualized insights to create plans that closely align with real-world scenarios and needs.</p>
+                                </p>
+                            </div>
+                            <div class="d-none d-lg-block col-md-3">
+                                <div class="d-flex justify-content-center">
+                                    <img src="<?php echo base_url(''); ?>include/web/custom/Reality_and_Planning.jpg" alt="Post Thumbnail">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -189,13 +211,20 @@
                 <div class="single-blog-post-four mb-40 wow fadeInLeft">
                     <div class="entry-content">
                         <h4 class="entry-title"><a href="javascript:void(0)">Navigating Uncertainties with Scenario Thinking</a></h4>
-                        <h6>Mastering Uncertainties in Infrastructure Design</h6>
-                        <p>Learn how Sangam employs scenario thinking to
-                            anticipate and mitigate uncertainties, leading to more resilient
-                            infrastructure development..</p>
-                    </div>
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url(''); ?>include/web/custom/National_Infrastructure.jpg" alt="Post Thumbnail">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h6>Mastering Uncertainties in Infrastructure Design</h6>
+                                <p>Learn how Sangam employs scenario thinking to
+                                    anticipate and mitigate uncertainties, leading to more resilient
+                                    infrastructure development..
+                                </p>
+                            </div>
+                            <div class="d-none d-lg-block col-md-3">
+                                <div class="d-flex justify-content-center">
+                                    <img src="<?php echo base_url(''); ?>include/web/custom/Scenario_Thinking.jpg" alt="Post Thumbnail">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -203,13 +232,20 @@
                 <div class="single-blog-post-four mb-40 wow fadeInLeft">
                     <div class="entry-content">
                         <h4 class="entry-title"><a href="javascript:void(0)">Breaking Silos in Collaborative Planning</a></h4>
-                        <h6>Fostering Collaboration in Infrastructure Planning</h6>
-                        <p>See how Sangam encourages the sharing of ideas and
-                            resources, breaking traditional silos and enhancing collective
-                            input during the planning process.</p>
-                    </div>
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url(''); ?>include/web/custom/National_Infrastructure.jpg" alt="Post Thumbnail">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h6>Fostering Collaboration in Infrastructure Planning</h6>
+                                <p>See how Sangam encourages the sharing of ideas and
+                                    resources, breaking traditional silos and enhancing collective
+                                    input during the planning process.
+                                </p>
+                            </div>
+                            <div class="d-none d-lg-block col-md-3">
+                                <div class="d-flex justify-content-center">
+                                    <img src="<?php echo base_url(''); ?>include/web/custom/Collaborative_Planning.jpg" alt="Post Thumbnail">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -217,13 +253,20 @@
                 <div class="single-blog-post-four mb-40 wow fadeInLeft">
                     <div class="entry-content">
                         <h4 class="entry-title"><a href="javascript:void(0)">Cognitive Approach: Bridging Planning and Execution</a></h4>
-                        <h6>Enhancing Execution with Cognitive Clarity</h6>
-                        <p>Discover Sangam’s cognitive approach, which
-                            emphasises clear, continuous communication and proactive
-                            responses to bridge the gap between plans and their execution.</p>
-                    </div>
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url(''); ?>include/web/custom/National_Infrastructure.jpg" alt="Post Thumbnail">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h6>Enhancing Execution with Cognitive Clarity</h6>
+                                <p>Discover Sangam’s cognitive approach, which
+                                    emphasises clear, continuous communication and proactive
+                                    responses to bridge the gap between plans and their execution.
+                                </p>
+                            </div>
+                            <div class="d-none d-lg-block col-md-3">
+                                <div class="d-flex justify-content-center">
+                                    <img src="<?php echo base_url(''); ?>include/web/custom/Planning_and_Execution.jpg" alt="Post Thumbnail">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -231,13 +274,20 @@
                 <div class="single-blog-post-four mb-40 wow fadeInLeft">
                     <div class="entry-content">
                         <h4 class="entry-title"><a href="javascript:void(0)">From Thought to Reality: Opportunity to Innovate</a></h4>
-                        <h6>Transforming Ideas into Tangible Solutions</h6>
-                        <p>Sangam offers a unique opportunity to morph
-                            innovative thoughts into tangible realities, paving the way for
-                            groundbreaking infrastructure development.</p>
-                    </div>
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url(''); ?>include/web/custom/National_Infrastructure.jpg" alt="Post Thumbnail">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h6>Transforming Ideas into Tangible Solutions</h6>
+                                <p>Sangam offers a unique opportunity to morph
+                                    innovative thoughts into tangible realities, paving the way for
+                                    groundbreaking infrastructure development.
+                                </p>
+                            </div>
+                            <div class="d-none d-lg-block col-md-3">
+                                <div class="d-flex justify-content-center">
+                                    <img src="<?php echo base_url(''); ?>include/web/custom/Opportunity_to_Innovate.jpg" alt="Post Thumbnail">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -245,15 +295,67 @@
                 <div class="single-blog-post-four mb-40 wow fadeInLeft">
                     <div class="entry-content">
                         <h4 class="entry-title"><a href="javascript:void(0)">Engaging the Public in Design and Planning</a></h4>
-                        <h6>Incorporating Public Insight into Infrastructure
-                            Design</h6>
-                        <p>Learn about Sangam’s inclusive approach, where
-                            public engagement is integral to the planning and design phase,
-                            ensuring every suggestion is valued and considered.</p>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h6>Incorporating Public Insight into Infrastructure
+                                    Design
+                                </h6>
+                                <p>Learn about Sangam’s inclusive approach, where
+                                    public engagement is integral to the planning and design phase,
+                                    ensuring every suggestion is valued and considered.
+                                </p>
+                            </div>
+                            <div class="d-none d-lg-block col-md-3">
+                                <div class="d-flex justify-content-center">
+                                    <img src="<?php echo base_url(''); ?>include/web/custom/Tech_Infrastructure.jpg" alt="Post Thumbnail">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="post-thumbnail">
-                        <img src="<?php echo base_url(''); ?>include/web/custom/National_Infrastructure.jpg" alt="Post Thumbnail">
-                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="features-seciton pt-50 pb-0" id="does-it-matter">
+    <div class="container-fluid p-0">
+        <div class="row align-items-xl-end">
+            <div class="col-md-12">
+                <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                    <h2>Why It Matters Now?</h2>
+                </div>
+            </div>
+            <div class="col-lg-12 p-0">
+                <div class="features-image-box mb-20 wow fadeInLeft d-flex justify-content-center" style="visibility: visible;">
+                <img src="<?php echo base_url(''); ?>include/web/custom/Matters_Now.png" alt="Features Image">
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="features-seciton pt-50 pb-50" id="does-it-matter">
+    <div class="container">
+        <div class="row align-items-xl-end">
+            <div class="col-md-12">
+                <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                    <span class="sub-title"> <img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt=""> The Evolution of Digital Twin Technology</span>
+                    <h2>Decade of Change in Data and Processing</h2>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="features-image-box mb-20 wow fadeInLeft" style="visibility: visible;"><img src="<?php echo base_url(''); ?>include/web/custom/BG_Element.png" alt="Features Image"></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="features-content-box mb-20 wow fadeInRight" style="visibility: visible;">
+                    <p class="mb-35">From 3D Modelling to full Digital Technology with AI-Driven Insight</p>
+                    <ul class="features-list">
+                        <li><i class="fal fa-long-arrow-right"></i>The Origins in 3D Modelling: Setting the Foundation</li>
+                        <li><i class="fal fa-long-arrow-right"></i>The IoT Revolution: Bringing the Real World into Digital</li>
+                        <li><i class="fal fa-long-arrow-right"></i>The Role of Cloud Computing: Scalability and Accessibility </li>
+                        <li><i class="fal fa-long-arrow-right"></i>The Rise of AI: Enhancing Perception and Decision-Making </li>
+                        <li><i class="fal fa-long-arrow-right"></i>The Power of Community, Tools, and Standards: Accelerating Innovation </li>
+                    </ul>
+                    <a class="main-btn primary-btn" href="">Learn More Us</a>
                 </div>
             </div>
         </div>
@@ -368,21 +470,18 @@
         </div>
     </div>
 </section>
-<section class="about-section">
+<section class="about-section" id="participate">
     <div class="container-fluid">
-        <div class="about-wrapper gray-bg wow fadeInUp" style="visibility: visible;">
+        <div class="about-wrapper gray-bg wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
             <div class="container">
                 <div class="row align-items-xl-center">
-                    <div class="col-xl-5 col-lg-12">
-                        <div class="about-two_image-box wow fadeInLeft" style="visibility: visible;"><img src="<?php echo base_url('') ?>include/web/custom/Sangam_Initiative.png"></div>
-                    </div>
-                    <div class="col-xl-7 col-lg-12">
-                        <div class="about-three_content-box pl-lg-70 wow fadeInRight" style="visibility: visible;">
-                            <div class="section-title mb-25 wow fadeInUp" style="visibility: visible;">
-                                <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt="">Transforming Infrastructure Planning</span>
-                                <h2>Upcoming Future Infrastructure Summit 2024</h2>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="about-three_content-box pl-lg-70 wow fadeInRight text-center" style="visibility: visible; animation-name: fadeInRight;">
+                            <div class="section-title mb-25 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                <span class="sub-title">Get Involved</span>
+                                <h2>Participate in Our Exciting Upcoming Content!</h2>
                             </div>
-                            <p class="mb-40 wow fadeInDown" style="visibility: visible;">Get ready for the upcoming Future Infrastructure Summit 2024! Explore revolutionary opportunities in infrastructure planning and design, from integrating Digital Twin technology to crafting future-ready frameworks. Connect with industry leaders and experts to shape the future of infrastructure. Join us and be part of the revolution.</p>
+                            <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Join us as we embark on an exhilarating journey of content creation! Your participation is key to shaping the direction of our upcoming material. Dive into interactive discussions, share your ideas, and contribute your unique perspective. Together, let's make our content truly exceptional.</p>
                         </div>
                     </div>
                 </div>
@@ -390,7 +489,6 @@
         </div>
     </div>
 </section>
-
 <section class="choose-bg-section bg_cover p-r z-1 pt-50 pb-50" style="background-image: url(<?php echo base_url(''); ?>include/web/custom/Banner_1.jpg);">
     <div class="container">
         <div class="row justify-content-center">
@@ -519,8 +617,8 @@
         </div>
     </div>
 </section>
-<section class="about-section">
-    <div class="container-fluid">
+<section class="about-section pt-50 pb-50">
+    <div class="container">
         <div class="about-wrapper white-bg wow fadeInUp">
             <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
                 <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> Requirements</span>

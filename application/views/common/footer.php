@@ -146,6 +146,15 @@
               });
           });
       };
+      $('#EoILearnMore').on('click', function(event) {
+          event.preventDefault();
+          var offset = $('#EoILearnMoreDes').offset().top - 200;
+          $('html, body').animate({
+              scrollTop: offset
+          }, 1000);
+      });
+
+
       window.addEventListener("load", executeCodes);
   </script>
   <script>
@@ -155,8 +164,8 @@
               $(this).closest(".about-features-item").parent().removeClass("col-lg-4 col-md-6 col-sm-12").addClass("col-md-12");
               $(this).closest(".about-features-item").find(".description").slideDown(1000);
               $(this).closest(".about-features-item").find(".back-button").show();
-              $(this).hide(); 
-              $(this).closest(".about-features-item").find('.text p').hide(); 
+              $(this).hide();
+              $(this).closest(".about-features-item").find('.text p').hide();
           });
 
           $(".back-button").click(function() {
@@ -164,8 +173,8 @@
               $(this).closest(".about-features-item").find(".description").slideUp();
               $(".about-features-item").slideDown(1000);
               $(".back-button").hide();
-              $(".read-more").slideDown(1000); 
-              $(".about-features-item .text p").slideDown(1000); 
+              $(".read-more").slideDown(1000);
+              $(".about-features-item .text p").slideDown(1000);
           });
       });
   </script>

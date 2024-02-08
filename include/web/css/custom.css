@@ -62,13 +62,37 @@ ul.check-style-one li {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font: 500 16px  'Montserrat Alternates', sans-serif;
+    font: 500 16px  'Montserrat', sans-serif;
     line-height: normal;
     line-height: 29.6px;
+    text-align: justify;
 }
-
+ul.check-style-one li b{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.eoi_li li{
+    margin-bottom: 8px !important;
+}
 .d-block li {
     display: block !important;
+}
+.slick-slide img {
+    display: block;
+    border-radius: 5px;
+}
+.features-list li
+{
+    color: #2F2F2F !important;
+    cursor: pointer;
+}
+.fs_20{
+    margin-top: 20px;;
+    font-size: 18px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.features-list li:hover {
+    color: #3d3d99 !important;
+    cursor: pointer;
 }
 
 .nav-item button {
@@ -170,6 +194,7 @@ ul.check-style-one li i {
 .buttonTab .nav-item:not(:last-child) .nav-link {
     /* padding-left: 0; */
 }
+.p-0{padding: 0 !important;}
 
 .buttonTab .nav-link {
     position: relative;
@@ -179,6 +204,8 @@ ul.check-style-one li i {
         sans-serif;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+.skills-section .buttonTab .nav-link{font: 600 22px "Montserrat",
+        sans-serif;}
 
 .buttonTab .nav-link.active:after {
     position: absolute;
@@ -196,14 +223,36 @@ ul.check-style-one li i {
 .accordion-card {
     padding: 22px 35px 20px;
     border-radius: 20px;
-    background-color: #29c5f6;
-    color: #fff;
+    background-color: #FCFAF7;
+    /* color: #fff; */
 }
 
 .accordion-card .accordion-header h6.accordion-title {
-    color: #fff;
+    /* color: #fff; */
+}
+#bgVideo {
+    width: 100%;
+    opacity: 0.8;
+}
+.preRegisBtn{color: #fff !important}
+.preRegisBtn:hover {
+    color: #ffffffb4 !important;
+}
+.exploreBtn {
+    background-color: #fff !important;
+    color: #3D3D99 !important
+}
+.exploreBtn:hover{
+    background-color: #ffffffc0 !important;
+    color: #6d6de1 !important
 }
 
+.__mp__100{
+    margin-top: -100px;
+}
+.mt__150{
+    margin-top: 148px;
+}
 .topNavbar {
     background-color: #29c5f670;
 }

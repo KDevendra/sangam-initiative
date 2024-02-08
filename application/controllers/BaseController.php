@@ -25,6 +25,7 @@ class BaseController extends CI_Controller
         $data['title'] = "About: " . $this->projectTitle;
         $this->load->view('base/about', $data);
     }
+
     public function whySangam()
     {
         $data['title'] = "Why Sangam: " . $this->projectTitle;
@@ -140,5 +141,20 @@ class BaseController extends CI_Controller
     {
         $data['title'] = "Registration :: " . $this->projectTitle;
         $this->load->view('base/sign-up', $data);
+    }
+    public function getCoreCompetency()
+    {
+        try {
+            $core_competenciesList = $this->BaseModel->getData("core_competencies")->result_array();
+            if ($core_competenciesList !== null) {
+                $responseData = ["status" => "success", "data" => $core_competenciesList];
+            } else {
+                $responseData = ["status" => "error", "message" => "Error fetching core_competencies data.",];
+            }
+            echo json_encode($responseData);
+        } catch (Exception $e) {
+            log_message("error", $e->getMessage());
+            echo json_encode(["status" => "error", "message" => "Internal server error.",]);
+        }    
     }
 }

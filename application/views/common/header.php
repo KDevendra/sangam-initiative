@@ -208,11 +208,11 @@
                                         <li><a href="<?php echo base_url(''); ?>#apt-choice">Why is Sangam an apt choice?
                                             </a>
                                         </li>
-                                        <li><a href="<?php echo base_url('about/why-now'); ?>">Why does it matter now?</a></li>
+                                        <li><a href="<?php echo base_url(''); ?>#does-it-matter">Why does it matter now?</a></li>
                                         <li><a href="<?php echo base_url(''); ?>#why-to-Join">Why to join
                                             </a>
                                         </li>
-                                        <li><a href="<?php echo base_url('about/participate'); ?>">Participate
+                                        <li><a href="<?php echo base_url(''); ?>#participate">Participate
                                             </a>
                                         </li>
                                         <li><a href="<?php echo base_url('about/process'); ?>">Process of Sangam
