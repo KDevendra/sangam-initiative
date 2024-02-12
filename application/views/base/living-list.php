@@ -7,10 +7,9 @@
                     <div class="col-xl-12 col-lg-12">
                         <div class="about-three_content-box pl-lg-70 wow fadeInRight text-center" style="visibility: visible;">
                             <div class="section-title mb-25 wow fadeInUp" style="visibility: visible;">
-                                <span class="sub-title">Under Construction</span>
-                                <h2>Comming Soon!</h2>
+                                <h2>Living List</h2>
                             </div>
-                            <p class="mb-40 wow fadeInDown" style="visibility: visible;">Thank you for visiting our website! We're excited to bring you an amazing new experience. Our team is hard at work behind the scenes to enhance your browsing experience and deliver fresh content.</p>
+                            <p class="mb-40 wow fadeInDown" style="visibility: visible;">Living list is a dynamic and evolving list of pontential use cases. One can contribute to it by participating in the initiative. Kindly get pre-registered to get connected and engaged.</p>
                         </div>
                     </div>
                 </div>

@@ -170,7 +170,7 @@
               scrollToElement('EoILearnMoreDes', 200);
               var buttonId = $(this).attr('id');
               localStorage.setItem(buttonId + '_scrollTarget', 'stagesOfEoIDes');
-              window.location.href = 'https://sangam.onehouses.com/';
+              window.location.href = 'https://sangam.onehouses.com/expression-of-interest';
           });
           $('#exploreBtn').on('click', function(event) {
               event.preventDefault();
@@ -263,39 +263,39 @@
           });
       };
       window.addEventListener("load", executeCodes);
-    //   $(document).on("contextmenu", function() {
-    //       return false;
-    //   });
-    //   $("body").css({
-    //       "-webkit-user-select": "none",
-    //       "-moz-user-select": "none",
-    //       "-ms-user-select": "none",
-    //       "user-select": "none",
-    //   });
+      //   $(document).on("contextmenu", function() {
+      //       return false;
+      //   });
+      //   $("body").css({
+      //       "-webkit-user-select": "none",
+      //       "-moz-user-select": "none",
+      //       "-ms-user-select": "none",
+      //       "user-select": "none",
+      //   });
 
-    //   $("input, textarea").css({
-    //       "-webkit-user-select": "auto",
-    //       "-moz-user-select": "auto",
-    //       "-ms-user-select": "auto",
-    //       "user-select": "auto",
-    //   });
-    //   $(document).on("keydown", function(event) {
-    //       if ((event.ctrlKey || event.metaKey) && (event.keyCode === 70 || event.keyCode === 85)) {
-    //           event.preventDefault();
-    //       }
-    //   });
-    //   document.addEventListener("keydown", function(event) {
-    //       if ((event.ctrlKey || event.metaKey) && (event.keyCode === 67 || event.keyCode === 77)) {
-    //           event.preventDefault();
-    //       }
-    //   });
+      //   $("input, textarea").css({
+      //       "-webkit-user-select": "auto",
+      //       "-moz-user-select": "auto",
+      //       "-ms-user-select": "auto",
+      //       "user-select": "auto",
+      //   });
+      //   $(document).on("keydown", function(event) {
+      //       if ((event.ctrlKey || event.metaKey) && (event.keyCode === 70 || event.keyCode === 85)) {
+      //           event.preventDefault();
+      //       }
+      //   });
+      //   document.addEventListener("keydown", function(event) {
+      //       if ((event.ctrlKey || event.metaKey) && (event.keyCode === 67 || event.keyCode === 77)) {
+      //           event.preventDefault();
+      //       }
+      //   });
 
-    //   document.addEventListener("keydown", function(event) {
-    //       if ((event.ctrlKey || event.metaKey) && event.shiftKey && (event.code === "KeyC" || event.code === "KeyM")) {
-    //           event.preventDefault();
-    //           event.stopPropagation();
-    //       }
-    //   });
+      //   document.addEventListener("keydown", function(event) {
+      //       if ((event.ctrlKey || event.metaKey) && event.shiftKey && (event.code === "KeyC" || event.code === "KeyM")) {
+      //           event.preventDefault();
+      //           event.stopPropagation();
+      //       }
+      //   });
   </script>
   </body>
 

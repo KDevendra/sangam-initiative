@@ -2,8 +2,8 @@
 <section class="page-title-area text-white bg_cover mt___147" style="background-image: url('<?php echo base_url(); ?>include/web/custom/About_Banner.jpg');">
     <div class="container">
         <div class="page-title-inner text-center">
-            <h1 class="page-title">Expression of Interest</h1>
-            <div class="gd-breadcrumb"><span class="breadcrumb-entry"><a href="<?php echo base_url(''); ?>">Home</a></span><span class="separator"></span><span class="breadcrumb-entry active">Expression of Interest</span></div>
+            <h1 class="page-title">About EoI</h1>
+            <div class="gd-breadcrumb"><span class="breadcrumb-entry"><a href="<?php echo base_url(''); ?>">Home</a></span><span class="separator"></span><span class="breadcrumb-entry active">About EoI</span></div>
         </div>
     </div>
 </section>
@@ -25,7 +25,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-xl-12">
+            <div class="col-xl-12" id="stagesOfEoIDes">
                 <div class="row align-items-xl-center">
                     <div class="col-lg-6">
                         <div class="section-title mb-55 wow fadeInLeft" style="visibility: visible;">
@@ -212,7 +212,7 @@
     </div>
 </section>
 <div class="sticky-button-eoi">
-    <a href="<?php echo base_url(''); ?>include/web/custom/Download_EoI.pdf" download="" target="_blank" >
+    <a href="<?php echo base_url(''); ?>include/web/custom/Download_EoI.pdf" download="" target="_blank">
         <span>Download EoI</span>
         <i class="far fa-download" aria-hidden="true"></i>
     </a>

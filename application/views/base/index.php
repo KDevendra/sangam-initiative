@@ -23,7 +23,7 @@
                         <a class="main-btn golden-btn mb-10 preRegisBtn btn_green" href="javascript:void(0)" id="whyToJoinBtn">
                             <i class="far fa-question-circle" aria-hidden="true"></i> Why to Join
                         </a>
-                        <a class="main-btn golden-btn mb-10 preRegisBtn btn_yellow" href="<?php echo base_url('') ?>registration">
+                        <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration">
                             <i class="far fa-user" aria-hidden="true"></i> How to Join
                         </a>
                     </div>
@@ -59,15 +59,19 @@
                             <div class="about-features-item text-center">
                                 <div class="icon"><i class="flaticon-target"></i></div>
                                 <div class="text">
-                                    <h3 class="title">Empowering Innovation</h3>
-                                    <p>Welcome to the forefront of a transformative journey with "Digital Twin: Sangam," where</p>
+                                    <h3 class="title">Embracing the Future Together</h3>
+                                    <p>Fostering Collaboration Across Sectors</p>
                                     <a class="btn-link read-more" href="javascript:void(0)" data-target="#empowering-innovation">Read More<i class="fas fa-arrow-right"></i></a>
                                 </div>
                                 <div class="description" style="display: none;">
                                     <blockquote class="text-white">
-                                        The Dawn of Collaborative Infrastructure Design
+                                        The Sangam Digital Twin Initiative
                                     </blockquote>
-                                    <p>Welcome to the forefront of a transformative journey with "Digital Twin: Sangam," where we envision reshaping the world of infrastructure planning and design. Historically, the process of planning and designing infrastructure has been constrained by limited experimental iterations, a lack of feedback loops, and a narrow scope of imagination due to restricted access to comprehensive data. "Digital Twin: Sangam" aims to revolutionise this paradigm by unlocking the full potential of unlimited data access, harnessing the advancements in computation, connectivity, and collaborative innovation.</p>
+                                    <ul>
+                                        <li>Fostering Collaboration Across Sectors.</li>
+                                        <li>Harnessing Unified Data and Collective Intelligence.</li>
+                                        <li>Innovating with Digital Twins and AI.</li>
+                                    </ul>
                                 </div>
                                 <a class="btn-link back-button" href="javascript:void(0)" style="display: none;">Back<i class="fas fa-arrow-right"></i></a>
                             </div>
@@ -77,16 +81,19 @@
                                 <div class="hover-bg bg_cover" style="background-image: url(<?php echo base_url('') ?>include/web/custom/Environmental_Data.jpg);"></div>
                                 <div class="icon"><i class="flaticon-vision"></i></div>
                                 <div class="text">
-                                    <h3 class="title">Breaking Boundaries</h3>
-                                    <p>Our mission is to break free from traditional silos and foster a dynamic environment</p>
+                                    <h3 class="title">Crafting the Blueprint</h3>
+                                    <p>Shaping Future Infrastructure with Precision</p>
                                     <a class="btn-link read-more" href="javascript:void(0)" data-target="#breaking-boundaries">Read More<i class="fas fa-arrow-right"></i></a>
                                 </div>
                                 <div class="description" style="display: none;">
                                     <blockquote class="text-white" id="font_white">
-                                        From Limited Data to Infinite Possibilities
+                                        A Collaborative Journey Towards Innovative
                                     </blockquote>
-                                    <p>Our mission is to break free from traditional silos and foster a dynamic environment of co-designing and co-creation. By integrating cutting-edge computational and communication technologies with collective intelligence, we open a new realm of possibilities where infrastructure planning becomes a participatory, inclusive, and iterative process. Imagine a world where every stakeholder has a voice in shaping our shared future, where feedback loops enrich our understanding, and where our imagination is bound only by the extent of our data.
-                                    </p>
+                                    <ul>
+                                        <li>Shaping Future Infrastructure with Precision.</li>
+                                        <li>Empowering Visionary Design with Real-World Data.</li>
+                                        <li>Cultivating a Culture of Iterative Innovation.</li>
+                                    </ul>
                                 </div>
                                 <a class="btn-link back-button" id="font_white" href="javascript:void(0)" style="display: none;">Back<i class="fas fa-arrow-right"></i></a>
                             </div>
@@ -95,16 +102,20 @@
                             <div class="about-features-item text-center">
                                 <div class="icon"><i class="flaticon-management"></i></div>
                                 <div class="text">
-                                    <h3 class="title">Shaping the Future</h3>
-                                    <p>Join us in pioneering an approach that not only addresses the current challenges in infrastructure development</p>
+                                    <h3 class="title">Pioneering Precision</h3>
+                                    <p>Redefining Infrastructure for a Connected World</p>
                                     <a class="btn-link read-more" href="javascript:void(0)" data-target="#shaping-the-future">Read More<i class="fas fa-arrow-right"></i></a>
                                 </div>
                                 <div class="description" style="display: none;">
                                     <blockquote class="text-white">
-                                        Co-Creation for a Sustainable World
+                                        Building Tomorrow's Infrastructure Today
+
                                     </blockquote>
-                                    <p>Join us in pioneering an approach that not only addresses the current challenges in infrastructure development but also sets a new standard for how societies build, adapt, and thrive. "Digital Twin: Sangam" is not just about creating more efficient and sustainable infrastructure; it's about creating a future where technology and collaboration pave the way for a world that understands and meets the needs of its inhabitants like never before.
-                                    </p>
+                                    <ul>
+                                        <li>Redefining Infrastructure for a Connected World.</li>
+                                        <li>Collaborative Foundation for Visionary Infrastructure.</li>
+                                        <li>Harnessing Unified Data for Sustainable Solutions.</li>
+                                    </ul>
                                 </div>
                                 <a class="btn-link back-button" href="javascript:void(0)" style="display: none;">Back<i class="fas fa-arrow-right"></i></a>
                             </div>
@@ -159,7 +170,7 @@
         </div>
     </div>
 </section>
- <section class="gallery-section gray-bg  pt-50 pb-50" id="aptChoiceDes">
+<section class="gallery-section gray-bg  pt-50 pb-50" id="aptChoiceDes">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -322,7 +333,7 @@
         </div>
     </div>
 </section>
- <section class="features-seciton pt-50 pb-0" id="matterNowDes">
+<section class="features-seciton pt-50 pb-0" id="matterNowDes">
     <div class="container-fluid p-0">
         <div class="row align-items-xl-end">
             <div class="col-md-12">
@@ -339,7 +350,7 @@
         </div>
     </div>
 </section>
- <section class="features-seciton pt-50 pb-20">
+<section class="features-seciton pt-50 pb-20">
     <div class="container">
         <div class="row align-items-xl-end">
             <div class="col-lg-6">
@@ -355,13 +366,13 @@
                         <li><i class="fal fa-long-arrow-right"></i>The Rise of AI: Enhancing Perception and Decision-Making </li>
                         <li><i class="fal fa-long-arrow-right"></i>The Power of Community, Tools, and Standards: Accelerating Innovation </li>
                     </ul>
-                    <a class="main-btn primary-btn" href="<?php echo base_url('why-does-it-matter-now')?>">Learn More</a>
+                    <a class="main-btn primary-btn" href="<?php echo base_url('why-does-it-matter-now') ?>">Learn More</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
- <section class="service-bgc-section p-r z-1 main-bg pt-50 pb-50" id="whyToJoinDes">
+<section class="service-bgc-section p-r z-1 main-bg pt-50 pb-50" id="whyToJoinDes">
     <div class="shape shape-one"><span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png"></span></div>
     <div class="shape shape-two"><span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png"></span></div>
     <div class="shape shape-three">
@@ -482,7 +493,7 @@
         </div>
     </div>
 </section>
- <section class="about-section" id="participateDes">
+<section class="about-section" id="participateDes">
     <div class="container-fluid">
         <div class="about-wrapper gray-bg wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
             <div class="container">
@@ -501,7 +512,7 @@
         </div>
     </div>
 </section>
- <section class="about-section pt-50 pb-50" id="processOfSangamDes">
+<section class="about-section pt-50 pb-50" id="processOfSangamDes">
     <div class="container-fluid">
         <div class="about-wrapper wow fadeInUp" style="visibility: visible;">
             <div class="container">
@@ -583,7 +594,7 @@
                                             <p class="hideMobile">
                                                 <br><small>&nbsp;</small>
                                                 <br><small>&nbsp;</small>
-                                           
+
                                             </p>
                                         </div>
                                     </div>
@@ -596,7 +607,7 @@
         </div>
     </div>
 </section>
- <section class="about-section pt-50 pb-50">
+<section class="about-section pt-50 pb-50">
     <div class="container">
         <div class="about-wrapper white-bg wow fadeInUp">
             <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
@@ -695,7 +706,7 @@
         </div>
     </div>
 </section>
- <section class="project-section  pt-50 pb-50">
+<section class="project-section  pt-50 pb-50">
     <div class="container">
         <div class="row justify-content-center ">
             <div class="col-lg-10">
@@ -922,7 +933,7 @@
         </div>
     </div>
 </section>
- <section class="features-section mt-50" id="faqsDes">
+<section class="features-section mt-50" id="faqsDes">
     <div class="container">
         <div class="row align-items-xl-center">
             <div class="col-lg-12 text-center">
@@ -934,7 +945,7 @@
         </div>
     </div>
 </section>
- <section class="faq-section">
+<section class="faq-section">
     <div class="container">
         <div class="accordion" id="accordionOne">
             <div class="row">
@@ -1085,7 +1096,7 @@
         </div>
     </div>
 </section>
- <section class="about-section" id="curatedContentDes">
+<section class="about-section" id="curatedContentDes">
     <div class="container-fluid">
         <div class="about-wrapper gray-bg wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
             <div class="container">
@@ -1094,7 +1105,7 @@
                         <div class="about-three_content-box pl-lg-0 wow fadeInRight text-center" style="visibility: visible; animation-name: fadeInRight;">
                             <div class="section-title mb-25 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                                 <span class="sub-title">Curated Content </span>
-                                <h2>Comming Soon!</h2>
+                                <h2>Coming Soon!</h2>
                             </div>
                             <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Join us as we embark on an exhilarating journey of content creation! Your participation is key to shaping the direction of our upcoming material. Dive into interactive discussions, share your ideas, and contribute your unique perspective. Together, let's make our content truly exceptional.</p>
                         </div>

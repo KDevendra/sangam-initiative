@@ -751,9 +751,18 @@ section h2 {
 .about-two_image-box img {
     border-radius: 50%;
 }
-
+.about-features-item .description ul li{color: #fff;}
 
 @media only screen and (max-width: 969px) {
+    .header-navigation .main-menu ul>li>a {
+            position: relative;
+            display: block;
+            font: 600 14px 'Montserrat Alternates', sans-serif;
+            line-height: normal;
+            padding: 38px 0;
+            text-transform: capitalize;
+            line-height: 1;
+        }
     .tooltip-container {
         position: relative;
         display: inherit;

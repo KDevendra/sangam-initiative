@@ -148,25 +148,22 @@
                                                         <div class="mb-3 col-md-6">
                                                             <label for="coreCompetency" class="form-label">Core Competencies<span class="text-danger">*</span></label>
                                                             <select class="js-example-basic-multiple" id="coreCompetency" class="form-control" name="coreCompetency[]" multiple="multiple">
-
                                                             </select>
                                                             <div class="invalid-feedback">
                                                                 Please select core competencies
                                                             </div>
                                                         </div>
                                                         <div class="mb-3 col-md-6">
-                                                            <label for="coreCompetency" class="form-label">Category<span class="text-danger">*</span></label>
+                                                            <label for="coreCompetencyCategory" class="form-label">Category</label>
                                                             <select class="js-example-basic-multiple" id="coreCompetencyCategory" class="form-control" name="coreCompetencyCategory[]" multiple="multiple">
-
                                                             </select>
                                                             <div class="invalid-feedback">
                                                                 Please select core competency category
                                                             </div>
                                                         </div>
                                                         <div class="mb-3 col-md-6">
-                                                            <label for="coreCompetency" class="form-label">Sub Category<span class="text-danger">*</span></label>
+                                                            <label for="coreCompetencySubCategory" class="form-label">Sub Category</label>
                                                             <select class="js-example-basic-multiple" id="coreCompetencySubCategory" class="form-control" name="coreCompetencySubCategory[]" multiple="multiple">
-
                                                             </select>
                                                             <div class="invalid-feedback">
                                                                 Please select core competencies sub category
@@ -239,7 +236,6 @@
                                                                 Please enter organisation HQ address
                                                             </div>
                                                         </div>
-
                                                         <div class="mt-0 d-flex justify-content-center" style="gap: 10px;">
                                                             <button class="btn btn-secondary" type="button" id="btnBackToTypeSelection">Previous Step</button>
                                                             <button class="btn btn-primary" id="submitBtn" type="submit">Register Now</button>
@@ -291,6 +287,12 @@
     <script>
         $(document).ready(function() {
             $('[data-bs-toggle="tooltip"]').tooltip();
+            $("#coreCompetencyCategory").select2({
+                placeholder: "Select a category"
+            });
+            $("#coreCompetencySubCategory").select2({
+                placeholder: "Select a sub category"
+            });
 
             function showLoader() {
                 $(".loader").show();
@@ -458,75 +460,6 @@
                 }
             }
 
-            function getcoreCompetency() {
-                try {
-                    $.ajax({
-                        url: "<?php echo base_url('get-core-competency') ?>",
-                        method: "GET",
-                        dataType: "json",
-                        success: function(response) {
-                            if (response.status === "success") {
-                                if (Array.isArray(response.data)) {
-
-                                    const groupedData = {};
-                                    response.data.forEach(item => {
-                                        if (!groupedData[item.layer]) {
-                                            groupedData[item.layer] = [];
-                                        }
-                                        groupedData[item.layer].push({
-                                            id: item.id,
-                                            text: item.layer_child
-                                        });
-                                    });
-
-
-                                    $(".js-example-basic-multiple").empty();
-
-
-                                    for (const layer in groupedData) {
-                                        if (groupedData.hasOwnProperty(layer)) {
-                                            $(".js-example-basic-multiple").append("<optgroup label='" + layer + "'>");
-                                            groupedData[layer].forEach(option => {
-                                                $(".js-example-basic-multiple").append("<option value='" + option.id + "'>" + option.text + "</option>");
-                                            });
-                                            $(".js-example-basic-multiple").append("</optgroup>");
-                                        }
-                                    }
-
-
-                                    $(".js-example-basic-multiple").select2({
-                                        placeholder: "Select an option"
-                                    });
-
-
-                                    $(".js-example-basic-multiple").on('select2:select', function(e) {
-                                        const selectedOption = $(".select2-container--default .select2-results__option--selected");
-                                        selectedOption.append('<i class="ri-checkbox-circle-fill"></i>');
-                                    });
-
-                                    $(".js-example-basic-multiple").on('select2:unselect', function(e) {
-                                        const selectedOption = $(".select2-container--default .select2-results__option--selected");
-                                        selectedOption.find('i.ri-checkbox-circle-fill').remove();
-                                    });
-                                } else {
-                                    console.error("Error in response: Invalid data format");
-                                }
-                            } else {
-                                console.error("Error in response:", response.message);
-                            }
-                        },
-                        error: function(jqXHR, textStatus, errorThrown) {
-                            console.error("AJAX Error:", textStatus, errorThrown);
-                        },
-                    });
-                } catch (error) {
-                    console.error("Exception:", error);
-                }
-            }
-            getcoreCompetency();
-
-
-
 
             $("#organizationEmail").on("input", validateOrganizationEmail);
             $("#sign-up").on("submit", function(event) {
@@ -591,6 +524,82 @@
                 $('#submitBtn').text('Next Step').attr('id', 'btnNextStapeOrgnation');
 
             });
+
+            function getCoreCompetency(callback) {
+                try {
+                    $.ajax({
+                        url: "<?php echo base_url('get-core-competency') ?>",
+                        method: "GET",
+                        dataType: "json",
+                        success: function(response) {
+                            if (response.status === "success") {
+                                var layers = new Set();
+                                response.data.forEach(item => {
+                                    layers.add(item.layer);
+                                });
+
+                                callback(Array.from(layers), response.data);
+                            } else {
+                                console.error("Error in response:", response.message);
+                            }
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            console.error("AJAX Error:", textStatus, errorThrown);
+                        },
+                    });
+                } catch (error) {
+                    console.error("Exception:", error);
+                }
+            }
+
+            function populateDropdowns(layers, data) {
+                $("#coreCompetency").empty();
+                $("#coreCompetencyCategory").empty();
+                $("#coreCompetencySubCategory").empty();
+
+                layers.forEach(layer => {
+                    if (layer !== null) {
+                        $("#coreCompetency").append("<option value='" + layer + "'>" + layer + "</option>");
+                    }
+                });
+
+                $("#coreCompetency").select2({
+                    placeholder: "Select core competency"
+                });
+            }
+
+            $(document).on("change", "#coreCompetency", function() {
+                var selectedCoreCompetencies = $(this).val();
+
+                getCoreCompetency(function(uniqueLayers, responseData) {
+                    var filteredData = [];
+                    responseData.forEach(item => {
+                        if (selectedCoreCompetencies.includes(item.layer)) {
+                            filteredData.push(item);
+                        }
+                    });
+
+                    var categories = [];
+                    filteredData.forEach(item => {
+                        if (!categories.includes(item.category) && item.category !== null) {
+                            categories.push(item.category);
+                            $("#coreCompetencyCategory").append("<option value='" + item.category + "'>" + item.category + "</option>");
+                        }
+                    });
+
+                    var subcategories = [];
+                    filteredData.forEach(item => {
+                        if (item.category && !subcategories.includes(item.sub_category) && item.sub_category !== null) {
+                            subcategories.push(item.sub_category);
+                            $("#coreCompetencySubCategory").append("<option value='" + item.sub_category + "'>" + item.sub_category + "</option>");
+                        }
+                    });
+                });
+            });
+
+            getCoreCompetency(populateDropdowns);
+
+
         });
     </script>
 </body>

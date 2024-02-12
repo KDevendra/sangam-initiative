@@ -32,7 +32,7 @@
             <div class="pre-box"></div>
         </div>
     </div>
-    <div class="modal fade search-modal" id="search-modal">
+    <!-- <div class="modal fade search-modal" id="search-modal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <form>
@@ -43,7 +43,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="modal fade sidebar-panel-wrapper" id="sidebar-modal">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
@@ -191,14 +191,14 @@
                         <div class="mobile-logo mb-30 d-block d-xl-none">
                             <a href="<?php echo base_url(''); ?>" class="brand-logo"><img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications.png" alt="Site Logo"></a>
                         </div>
-                        <div class="nav-search mb-30 d-block d-xl-none ">
+                        <!-- <div class="nav-search mb-30 d-block d-xl-none ">
                             <form>
                                 <div class="form_group">
                                     <input type="email" class="form_control" placeholder="Search Here" name="email" required>
                                     <button class="search-btn"><i class="fas fa-search"></i></button>
                                 </div>
                             </form>
-                        </div>
+                        </div> -->
                         <nav class="main-menu">
                             <ul>
                                 <li class="menu-item"><a href="<?php echo base_url(''); ?>">Home</a></li>
@@ -245,19 +245,20 @@
                                     <a href="javascript:void(0)">Expression of Interest</a>
                                     <ul class="sub-menu">
                                         <li><a href="<?php echo base_url('expression-of-interest'); ?>">About EoI</a></li>
-                                        <li><a href="javascript:void(0)" class="processOfSangamBtn">Purpose of EoI </a></li>
-                                        <li><a href="<?php echo base_url('expression-of-interest'); ?>" >Stages of EoI</a></li>
+                                        <li><a href="<?php echo base_url('expression-of-interest/purpose') ?>">Purpose of EoI </a></li>
+                                        <li><a href="javascrip:void(0)" class="stagesOfEoIBtn">Stages of EoI</a></li>
                                         <li><a href="javascript:void(0)" class="whyToJoinBtn">Why Participate</a></li>
-                                        <li><a href="<?php echo base_url('expression-of-interest/participation-details');?>" class="participateBtn">Participation Details</a></li>
+                                        <li><a href="<?php echo base_url('expression-of-interest/participation-details'); ?>" class="participateBtn">Participation Details</a></li>
                                         <li><a href="<?php echo base_url('registration'); ?>">Submit Response</a></li>
-                          
+
                                     </ul>
                                 </li>
                                 <li class="menu-item"><a href="javascript:void(0)" class="contactUsBtn">Contact Us</a></li>
                             </ul>
                         </nav>
-                        <div class="menu-button mt-40 d-xl-none">
-                            <a href="<?php echo base_url('registration') ?>" class="main-btn secondary-btn">Pre-Registration</a>
+                        <div class="menu-button mt-40 d-xl-none text-center">
+                            <a href="<?php echo base_url('living-list') ?>" class="main-btn primary-btn mb-10">Living List</a>
+                            <a href="<?php echo base_url('registration') ?>" class="main-btn secondary-btn mb-10">Pre-Registration</a>
                         </div>
                     </div>
                     <div class="nav-right-item">
