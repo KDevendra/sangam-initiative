@@ -147,12 +147,8 @@
                                                         </div>
                                                         <div class="mb-3 col-md-6">
                                                             <label for="coreCompetency" class="form-label">Core Competencies<span class="text-danger">*</span></label>
-                                                            <select class="form-control" id="coreCompetency" style="height: 40px !important;" name="coreCompetency[]" multiple="multiple" required>
-                                                                <option value="Virtual/Digital Twin Layer">Virtual/Digital Twin Layer</option>
-                                                                <option value="Dynamic Information Layer">Dynamic Information Layer</option>
-                                                                <option value="Utility/Network Layer">Utility/Network Layer</option>
-                                                                <option value="Built Environment Layer">Built Environment Layer</option>
-                                                                <option value="GIS (Landscape) Layer">GIS (Landscape) Layer</option>
+                                                            <select class="js-example-basic-multiple" id="coreCompetency" class="form-control" name="coreCompetency[]" multiple="multiple">
+
                                                             </select>
                                                             <div class="invalid-feedback">
                                                                 Please select core competencies
@@ -443,6 +439,77 @@
                     return false;
                 }
             }
+
+            function getcoreCompetency() {
+                try {
+                    $.ajax({
+                        url: "<?php echo base_url('get-core-competency') ?>",
+                        method: "GET",
+                        dataType: "json",
+                        success: function(response) {
+                            if (response.status === "success") {
+                                if (Array.isArray(response.data)) {
+                                   
+                                    const groupedData = {};
+                                    response.data.forEach(item => {
+                                        if (!groupedData[item.layer]) {
+                                            groupedData[item.layer] = [];
+                                        }
+                                        groupedData[item.layer].push({
+                                            id: item.id,
+                                            text: item.layer_child
+                                        });
+                                    });
+
+                                   
+                                    $(".js-example-basic-multiple").empty();
+
+                                   
+                                    for (const layer in groupedData) {
+                                        if (groupedData.hasOwnProperty(layer)) {
+                                            $(".js-example-basic-multiple").append("<optgroup label='" + layer + "'>");
+                                            groupedData[layer].forEach(option => {
+                                                $(".js-example-basic-multiple").append("<option value='" + option.id + "'>" + option.text + "</option>");
+                                            });
+                                            $(".js-example-basic-multiple").append("</optgroup>");
+                                        }
+                                    }
+
+                                   
+                                    $(".js-example-basic-multiple").select2({
+                                        placeholder: "Select an option"
+                                    });
+
+                                   
+                                    $(".js-example-basic-multiple").on('select2:select', function(e) {
+                                        const selectedOption = $(".select2-container--default .select2-results__option--selected");
+                                        selectedOption.append('<i class="ri-checkbox-circle-fill"></i>');
+                                    });
+
+                                    $(".js-example-basic-multiple").on('select2:unselect', function(e) {
+                                        const selectedOption = $(".select2-container--default .select2-results__option--selected");
+                                        selectedOption.find('i.ri-checkbox-circle-fill').remove();
+                                    });
+                                } else {
+                                    console.error("Error in response: Invalid data format");
+                                }
+                            } else {
+                                console.error("Error in response:", response.message);
+                            }
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            console.error("AJAX Error:", textStatus, errorThrown);
+                        },
+                    });
+                } catch (error) {
+                    console.error("Exception:", error);
+                }
+            }
+            getcoreCompetency();
+
+
+
+
             $("#organizationEmail").on("input", validateOrganizationEmail);
             $("#sign-up").on("submit", function(event) {
                 if (validateForm()) {

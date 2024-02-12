@@ -205,23 +205,23 @@
                                 <li class="menu-item has-children">
                                     <a href="<?php echo base_url('about'); ?>">About</a>
                                     <ul class="sub-menu">
-                                        <li><a href="<?php echo base_url(''); ?>#apt-choice">Why is Sangam an apt choice?
+                                        <li><a href="javascript:void(0)" id="aptChoiceBtn">Why is Sangam an apt choice?
                                             </a>
                                         </li>
-                                        <li><a href="<?php echo base_url('about/why-now'); ?>">Why does it matter now?</a></li>
-                                        <li><a href="<?php echo base_url(''); ?>#why-to-Join">Why to join
+                                        <li><a href="javascript:void(0)" id="matterNowBtn">Why does it matter now?</a></li>
+                                        <li><a href="javascript:void(0)" class="whyToJoinBtn">Why to join
                                             </a>
                                         </li>
-                                        <li><a href="<?php echo base_url('about/participate'); ?>">Participate
+                                        <li><a href=" javascript:void(0)" class="participateBtn">Participate
                                             </a>
                                         </li>
-                                        <li><a href="<?php echo base_url('about/process'); ?>">Process of Sangam
+                                        <li><a href="javascript:void(0)" class="processOfSangamBtn">Process of Sangam
                                             </a>
                                         </li>
-                                        <li><a href="<?php echo base_url(''); ?>#faqs">FAQs
+                                        <li><a href="javascript:void(0)" class="faqsBtn">FAQs
                                             </a>
                                         </li>
-                                        <li><a href="<?php echo base_url('about/curated-content'); ?>">Curated Content
+                                        <li><a href="javascript:void(0)" id="curatedContentBtn">Curated Content
                                             </a>
                                         </li>
                                         <li>
@@ -242,17 +242,18 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item has-children">
-                                    <a href="<?php echo base_url('expression-of-interest'); ?>">Expression of Interest</a>
+                                    <a href="javascript:void(0)">Expression of Interest</a>
                                     <ul class="sub-menu">
-                                        <li><a href="<?php echo base_url('expression-of-interest/about-eoi'); ?>">About EoI</a></li>
-                                        <li><a href="<?php echo base_url('expression-of-interest/purpose'); ?>">Purpose of EoI </a></li>
-                                        <li><a href="<?php echo base_url('expression-of-interest/stages'); ?>">Stages of EoI</a></li>
-                                        <li><a href="<?php echo base_url('expression-of-interest/why-participate'); ?>">Why Participate</a></li>
-                                        <li><a href="<?php echo base_url('expression-of-interest/participation-details'); ?>">Participation Details</a></li>
-                                        <li><a href="<?php echo base_url('expression-of-interest/submit'); ?>">Submit Response</a></li>
+                                        <li><a href="<?php echo base_url('expression-of-interest'); ?>">About EoI</a></li>
+                                        <li><a href="javascript:void(0)" class="processOfSangamBtn">Purpose of EoI </a></li>
+                                        <li><a href="javascript:void(0)" class="stagesOfEoIBtn">Stages of EoI</a></li>
+                                        <li><a href="javascript:void(0)" class="whyToJoinBtn">Why Participate</a></li>
+                                        <li><a href=" javascript:void(0)" class="participateBtn">Participation Details</a></li>
+                                        <li><a href="<?php echo base_url('registration'); ?>">Submit Response</a></li>
+                                        <li><a href="<?php echo base_url('registration'); ?>">Submit Response</a></li>
                                     </ul>
                                 </li>
-                                <li class="menu-item"><a href="<?php echo base_url(''); ?>">Contact Us</a></li>
+                                <li class="menu-item"><a href="javascript:void(0)" class="contactUsBtn">Contact Us</a></li>
                             </ul>
                         </nav>
                         <div class="menu-button mt-40 d-xl-none">
@@ -261,6 +262,7 @@
                     </div>
                     <div class="nav-right-item">
                         <div class="menu-button d-xl-block d-none">
+                            <a href="<?php echo base_url('living-list') ?>" class="main-btn primary-btn">Living List</a>
                             <a href="<?php echo base_url('registration') ?>" class="main-btn primary-btn">Pre-Registration</a>
                         </div>
                         <!-- <div class="bar-button" data-toggle="modal" data-target="#sidebar-modal">

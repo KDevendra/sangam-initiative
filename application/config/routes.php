@@ -6,6 +6,8 @@ $route['registration'] = 'Authorization/signUp';
 $route['login'] = 'Authorization/signIn';
 // Routes for About section
 $route['about'] = 'BaseController/about';
+$route['living-list'] = 'BaseController/livingList';
+$route['get-core-competency'] = 'BaseController/getCoreCompetency';
 $route['about/why-sangam'] = 'BaseController/whySangam';
 $route['about/why-now'] = 'BaseController/whyNow';
 $route['about/why-join'] = 'BaseController/whyJoin';
