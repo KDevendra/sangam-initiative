@@ -355,7 +355,7 @@
                         <li><i class="fal fa-long-arrow-right"></i>The Rise of AI: Enhancing Perception and Decision-Making </li>
                         <li><i class="fal fa-long-arrow-right"></i>The Power of Community, Tools, and Standards: Accelerating Innovation </li>
                     </ul>
-                    <a class="main-btn primary-btn" href="">Learn More</a>
+                    <a class="main-btn primary-btn" href="<?php echo base_url('why-does-it-matter-now')?>">Learn More</a>
                 </div>
             </div>
         </div>

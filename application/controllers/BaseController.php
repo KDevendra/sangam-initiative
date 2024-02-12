@@ -34,7 +34,7 @@ class BaseController extends CI_Controller
     public function whySangam()
     {
         $data['title'] = "Why Sangam: " . $this->projectTitle;
-        $this->load->view('base/why-sangam', $data);
+        $this->load->view('base/why-does-it-matter-now', $data);
     }
     public function whyNow()
     {
