@@ -288,10 +288,10 @@
         $(document).ready(function() {
             $('[data-bs-toggle="tooltip"]').tooltip();
             $("#coreCompetencyCategory").select2({
-                placeholder: "Select a category"
+                placeholder: "Select a category",
             });
             $("#coreCompetencySubCategory").select2({
-                placeholder: "Select a sub category"
+                placeholder: "Select a sub category",
             });
 
             function showLoader() {
@@ -322,7 +322,7 @@
                                 html: '<div class="mt-3"><div class="avatar-lg mx-auto"><div class="avatar-title bg-light text-success display-5 rounded-circle"><i class="ri-mail-send-fill"></i></div></div><div class="mt-4 pt-2 fs-15"><h4 class="fs-20 fw-semibold">Verify Your Email</h4><p class="text-muted mb-0 mt-3 fs-13">We have sent you a verification email, <br/> Please check it.</p></div></div>',
                                 showCancelButton: !1,
                                 customClass: {
-                                    confirmButton: "btn btn-primary mb-1"
+                                    confirmButton: "btn btn-primary mb-1",
                                 },
                                 confirmButtonText: "Verify Email",
                                 buttonsStyling: !1,
@@ -436,7 +436,6 @@
             function validateOrganizationEmail() {
                 var websiteURL = $("#websiteURL").val().trim();
                 var organizationEmail = $("#organizationEmail").val().trim();
-
                 var domainRegex = /(?:https?:\/\/)?(?:www\.)?([^\/]+)\//i;
                 var domainMatch = websiteURL.match(domainRegex);
 
@@ -460,71 +459,6 @@
                 }
             }
 
-
-            $("#organizationEmail").on("input", validateOrganizationEmail);
-            $("#sign-up").on("submit", function(event) {
-                if (validateForm()) {
-                    var $signUp = $(this);
-                    var formData = $signUp.serialize();
-                    submitForm(formData);
-                }
-            });
-            $('#contanterOrganization').hide();
-            $('input[type="radio"][name="register_as"]').change(function() {
-                if (this.value === 'Organization') {
-                    $('#feildExperience').hide();
-                    $(".step-arrow-nav").show();
-                    $('#submitBtn').attr('type', 'button').text('Next Step').attr('id', 'btnNextStapeOrgnation');
-                } else if (this.value === 'Individual') {
-                    $('#contanterIndividual').show();
-                    $('#contanterOrganization').hide();
-                    $('#feildExperience').show();
-                    $(".step-arrow-nav").hide();
-                    $('#btnNextStapeOrgnation').attr('type', 'submit').text('Register Now').attr('id', 'submitBtn');
-                }
-            });
-            $('#coreCompetency').select2({
-                placeholder: 'Select core competencies...',
-                allowClear: true
-            });
-            $('#potentialInterestAreas').select2({
-                placeholder: 'Select potential interest Areas...',
-                allowClear: true
-            });
-            $("#contactNo").on("input", function() {
-                $(this).val(function(index, value) {
-                    return value.replace(/\D/g, "");
-                });
-
-                validateContactNumber();
-            });
-            $("#contactNo").on("keypress", function(event) {
-                var keyCode = event.keyCode || event.which;
-                var keyValue = String.fromCharCode(keyCode);
-                var numericRegex = /^[0-9]$/;
-
-                if (!numericRegex.test(keyValue)) {
-                    event.preventDefault();
-                }
-            });
-            $(document).on("click", "#btnNextStapeOrgnation", function() {
-                if (validateForm()) {
-                    $('#contanterOrganization').show();
-                    $('#contanterIndividual').hide();
-                    $("#steparrow-gen-info-tab").removeClass('active');
-                    $("#steparrow-description-info-tab").addClass('active');
-                    $('#btnNextStapeOrgnation').text('Register Now').attr('id', 'submitBtn');
-                }
-            });
-            $(document).on("click", "#btnBackToTypeSelection", function() {
-                $('#contanterOrganization').hide();
-                $('#contanterIndividual').show();
-                $("#steparrow-gen-info-tab").addClass('active');
-                $("#steparrow-description-info-tab").removeClass('active');
-                $('#submitBtn').text('Next Step').attr('id', 'btnNextStapeOrgnation');
-
-            });
-
             function getCoreCompetency(callback) {
                 try {
                     $.ajax({
@@ -534,7 +468,7 @@
                         success: function(response) {
                             if (response.status === "success") {
                                 var layers = new Set();
-                                response.data.forEach(item => {
+                                response.data.forEach((item) => {
                                     layers.add(item.layer);
                                 });
 
@@ -557,30 +491,91 @@
                 $("#coreCompetencyCategory").empty();
                 $("#coreCompetencySubCategory").empty();
 
-                layers.forEach(layer => {
+                layers.forEach((layer) => {
                     if (layer !== null) {
                         $("#coreCompetency").append("<option value='" + layer + "'>" + layer + "</option>");
                     }
                 });
 
                 $("#coreCompetency").select2({
-                    placeholder: "Select core competency"
+                    placeholder: "Select core competency",
                 });
             }
+            $("#organizationEmail").on("input", validateOrganizationEmail);
+            $("#sign-up").on("submit", function(event) {
+                if (validateForm()) {
+                    var $signUp = $(this);
+                    var formData = $signUp.serialize();
+                    submitForm(formData);
+                }
+            });
+            $("#contanterOrganization").hide();
+            $('input[type="radio"][name="register_as"]').change(function() {
+                if (this.value === "Organization") {
+                    $("#feildExperience").hide();
+                    $(".step-arrow-nav").show();
+                    $("#submitBtn").attr("type", "button").text("Next Step").attr("id", "btnNextStapeOrgnation");
+                } else if (this.value === "Individual") {
+                    $("#contanterIndividual").show();
+                    $("#contanterOrganization").hide();
+                    $("#feildExperience").show();
+                    $(".step-arrow-nav").hide();
+                    $("#btnNextStapeOrgnation").attr("type", "submit").text("Register Now").attr("id", "submitBtn");
+                }
+            });
+            $("#coreCompetency").select2({
+                placeholder: "Select core competencies...",
+                allowClear: true,
+            });
+            $("#potentialInterestAreas").select2({
+                placeholder: "Select potential interest Areas...",
+                allowClear: true,
+            });
+            $("#contactNo").on("input", function() {
+                $(this).val(function(index, value) {
+                    return value.replace(/\D/g, "");
+                });
 
+                validateContactNumber();
+            });
+            $("#contactNo").on("keypress", function(event) {
+                var keyCode = event.keyCode || event.which;
+                var keyValue = String.fromCharCode(keyCode);
+                var numericRegex = /^[0-9]$/;
+
+                if (!numericRegex.test(keyValue)) {
+                    event.preventDefault();
+                }
+            });
+            $(document).on("click", "#btnNextStapeOrgnation", function() {
+                if (validateForm()) {
+                    $("#contanterOrganization").show();
+                    $("#contanterIndividual").hide();
+                    $("#steparrow-gen-info-tab").removeClass("active");
+                    $("#steparrow-description-info-tab").addClass("active");
+                    $("#btnNextStapeOrgnation").text("Register Now").attr("id", "submitBtn");
+                }
+            });
+            $(document).on("click", "#btnBackToTypeSelection", function() {
+                $("#contanterOrganization").hide();
+                $("#contanterIndividual").show();
+                $("#steparrow-gen-info-tab").addClass("active");
+                $("#steparrow-description-info-tab").removeClass("active");
+                $("#submitBtn").text("Next Step").attr("id", "btnNextStapeOrgnation");
+            });
             $(document).on("change", "#coreCompetency", function() {
                 var selectedCoreCompetencies = $(this).val();
 
                 getCoreCompetency(function(uniqueLayers, responseData) {
                     var filteredData = [];
-                    responseData.forEach(item => {
+                    responseData.forEach((item) => {
                         if (selectedCoreCompetencies.includes(item.layer)) {
                             filteredData.push(item);
                         }
                     });
 
                     var categories = [];
-                    filteredData.forEach(item => {
+                    filteredData.forEach((item) => {
                         if (!categories.includes(item.category) && item.category !== null) {
                             categories.push(item.category);
                             $("#coreCompetencyCategory").append("<option value='" + item.category + "'>" + item.category + "</option>");
@@ -588,7 +583,7 @@
                     });
 
                     var subcategories = [];
-                    filteredData.forEach(item => {
+                    filteredData.forEach((item) => {
                         if (item.category && !subcategories.includes(item.sub_category) && item.sub_category !== null) {
                             subcategories.push(item.sub_category);
                             $("#coreCompetencySubCategory").append("<option value='" + item.sub_category + "'>" + item.sub_category + "</option>");
@@ -596,12 +591,23 @@
                     });
                 });
             });
+            $(document).on("change", "#coreCompetencyCategory", function() {
+                var selectedCategory = $(this).val();
 
+                getCoreCompetency(function(uniqueLayers, responseData) {
+                    var filteredData = responseData.filter((item) => item.category === selectedCategory);
+
+                    var subcategories = [];
+                    filteredData.forEach((item) => {
+                        if (item.sub_category && !subcategories.includes(item.sub_category)) {
+                            subcategories.push(item.sub_category);
+                            $("#coreCompetencySubCategory").append("<option value='" + item.sub_category + "'>" + item.sub_category + "</option>");
+                        }
+                    });
+                });
+            });
             getCoreCompetency(populateDropdowns);
-
-
         });
     </script>
 </body>
-
 </html>
