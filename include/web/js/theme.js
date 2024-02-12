@@ -345,7 +345,7 @@
     if ($('.projects-slider-three').length) {
         $('.projects-slider-three').slick({
             dots: true,
-            arrows: false,
+            arrows: true,
             infinite: true,
             speed: 800,
             autoplay: true,

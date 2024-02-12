@@ -205,14 +205,14 @@
                                 <li class="menu-item has-children">
                                     <a href="<?php echo base_url('about'); ?>">About</a>
                                     <ul class="sub-menu">
-                                        <li><a href="<?php echo base_url(''); ?>#apt-choice">Why is Sangam an apt choice?
+                                        <li><a href="javascript:void(0)" id="aptChoiceBtn">Why is Sangam an apt choice?
                                             </a>
                                         </li>
-                                        <li><a href="<?php echo base_url(''); ?>#does-it-matter">Why does it matter now?</a></li>
+                                        <li><a href="javascript:void(0)" id="matterNowBtn">Why does it matter now?</a></li>
                                         <li><a href="<?php echo base_url(''); ?>#why-to-Join">Why to join
                                             </a>
                                         </li>
-                                        <li><a href="<?php echo base_url(''); ?>#participate">Participate
+                                        <li><a href="javascript:void(0)" id="participateBtn">Participate
                                             </a>
                                         </li>
                                         <li><a href="<?php echo base_url('about/process'); ?>">Process of Sangam
@@ -261,6 +261,7 @@
                     </div>
                     <div class="nav-right-item">
                         <div class="menu-button d-xl-block d-none">
+                            <a href="<?php echo base_url('registration') ?>" class="main-btn primary-btn">Living List</a>
                             <a href="<?php echo base_url('registration') ?>" class="main-btn primary-btn">Pre-Registration</a>
                         </div>
                         <!-- <div class="bar-button" data-toggle="modal" data-target="#sidebar-modal">

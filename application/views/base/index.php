@@ -1,37 +1,43 @@
 <?php include_once __DIR__ . '/../common/header.php'; ?>
-<style>
-    .banner-section {
-        position: relative;
-    }
-
-    .hero-wrapper-one {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        width: 100%;
-    }
-</style>
 <section class="banner-section mt__150">
-    <video autoplay="" muted="" loop="" id="bgVideo">
+    <video autoplay muted loop id="bgVideo">
         <source src="<?php echo base_url('') ?>include/web/custom/bg_video.mp4" type="video/mp4">
     </video>
     <div class="hero-wrapper-one __mp__100">
         <div class="container text-center">
             <div class="row align-items-lg-center">
                 <div class="col-md-12">
-                    <h6 class="mb-20" style="color: #fff;font-size: 20px;background-color: #00000082;padding: 20px;border-radius: 5px;">
-                        Department of Telecommunications calls for Expression of Interest For
-                    </h6>
-                    <h1 class="fadeInUp mb-20" style="visibility: visible;  animation-name: fadeInUp;color: #fff;">Sangam: Digital Twin</h1>
-                    <p class="fadeInDown mb-20" style="color: #fff;font-size: 24px;padding: 12px 30px;border-radivisibility: visible; animation-delay: 0.6s; animation-name: fadeInDown;/*! background-colorus: 5px;font-weight: bold;">Confluence of Innovation: Revolutionizing Future Infrastructure Planning</p>
-                    <div class="hero-button mb-20  fadeInUp" style="visibility: visible; margin: 15px; animation-name: fadeInUp;"><a style="gap: 5px;margin:5px" class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration"> <i class="far  fa-table" aria-hidden="true"></i> Pre-Registration</a><a class="main-btn filled-btn mb-10 exploreBtn" id="exploreBtn" style="margin:5px" href="javascript:void(0)">Explore More</a></div>
+                    <h6 class="banner-subtitle">Department of Telecommunications calls for Expression of Interest For</h6>
+                    <div class="box_overlay">
+
+                        <h1 class="banner-title">Sangam: <span>Digital Twin</span></h1>
+                        <h4 class="banner-title-sub">With AI-driven Insights</h4>
+                        <p class="banner-description">Confluence of Innovation: Revolutionizing Future Infrastructure Planning</p>
+                    </div>
+                    <div class="hero-button mb-20">
+                        <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration">
+                            <i class="far fa-table" aria-hidden="true"></i> Pre-Registration
+                        </a>
+                        <a class="main-btn golden-btn mb-10 preRegisBtn" href="javascript:void(0)" id="whyToJoinBtn">
+                            <i class="far fa-question-circle" aria-hidden="true"></i> Why to Join
+                        </a>
+                        <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration">
+                            <i class="far fa-user" aria-hidden="true"></i> How to Join
+                        </a>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="sticky-button">
+        <a href="javascript:void(0)" id="exploreBtn">
+
+            <span>Explore More</span>
+            <i class="far fa-angle-double-down" aria-hidden="true"></i>
+        </a>
     </div>
+
 </section>
 <section class="about-section pb-50" id="exploreBtnDes">
     <div class="container">
@@ -105,9 +111,9 @@
             <div class="col-xl-6">
                 <div class="about-one_image-box  p-r z-1 wow fadeInLeft">
                     <div class="shape shape-one"><span></span></div>
-                    <img src="<?php echo base_url(''); ?>include/web/custom/Environmental_Data_01.jpg" class="about-img-one" alt="About Image">
-                    <img src="<?php echo base_url(''); ?>include/web/custom/Generation_Planning.jpg" class="about-img-two" alt="About Image">
-                    <img src="<?php echo base_url(''); ?>include/web/custom/About_M2M_&_IoT.png" class="about-img-three" alt="About Image">
+                    <img src="<?php echo base_url(''); ?>include/web/custom/Environmental_Data_02.jpeg" class="about-img-one" alt="About Image">
+                    <img src="<?php echo base_url(''); ?>include/web/custom/Generation_Planning_01.jpeg" class="about-img-two" alt="About Image">
+                    <img src="<?php echo base_url(''); ?>include/web/custom/About_Img_02.jpeg" class="about-img-three" alt="About Image">
                     <div class="experience-item">
                         <h4>Bring Ideas into Life
                         </h4>
@@ -146,13 +152,13 @@
         </div>
     </div>
 </section>
-<section class="about-section">
+<!-- <section class="about-section">
     <div class="container-fluid">
         <div class="about-wrapper  wow fadeInUp" style="visibility: visible;">
             <div class="container">
                 <div class="row align-items-xl-center">
                     <div class="col-xl-5 col-lg-12">
-                        <div class="about-two_image-box wow fadeInLeft" style="visibility: visible;"><img src="<?php echo base_url('') ?>include/web/custom/Sangam_Initiative.png"></div>
+                        <div class="about-two_image-box wow fadeInLeft" style="visibility: visible;"><img src="<?php echo base_url('') ?>include/web/custom/Transforming_Infrastructure_Planning.png"></div>
                     </div>
                     <div class="col-xl-7 col-lg-12">
                         <div class="about-three_content-box pl-lg-70 wow fadeInRight" style="visibility: visible;">
@@ -167,8 +173,8 @@
             </div>
         </div>
     </div>
-</section>
-<section class="gallery-section gray-bg  pt-50 pb-50" id="apt-choice">
+</section> -->
+<section class="gallery-section gray-bg  pt-50 pb-50" id="aptChoiceDes">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -179,7 +185,7 @@
             </div>
         </div>
         <div class="projects-slider-three wow fadeInUp">
-            <div class="single-project-item-three mb-30">
+            <div class="single-project-item-three">
                 <div class="single-blog-post-four mb-40 wow fadeInLeft">
                     <div class="entry-content">
                         <h4 class="entry-title"><a href="javascript:void(0)">Sangam as a Model for National Infrastructure</a></h4>
@@ -202,7 +208,7 @@
                     </div>
                 </div>
             </div>
-            <div class="single-project-item-three mb-30">
+            <div class="single-project-item-three">
                 <div class="single-blog-post-four mb-40 wow fadeInLeft">
                     <div class="entry-content">
                         <h4 class="entry-title"><a href="javascript:void(0)">Bridging the Gap Between Reality and Planning</a></h4>
@@ -221,7 +227,7 @@
                     </div>
                 </div>
             </div>
-            <div class="single-project-item-three mb-30">
+            <div class="single-project-item-three">
                 <div class="single-blog-post-four mb-40 wow fadeInLeft">
                     <div class="entry-content">
                         <h4 class="entry-title"><a href="javascript:void(0)">Navigating Uncertainties with Scenario Thinking</a></h4>
@@ -242,7 +248,7 @@
                     </div>
                 </div>
             </div>
-            <div class="single-project-item-three mb-30">
+            <div class="single-project-item-three">
                 <div class="single-blog-post-four mb-40 wow fadeInLeft">
                     <div class="entry-content">
                         <h4 class="entry-title"><a href="javascript:void(0)">Breaking Silos in Collaborative Planning</a></h4>
@@ -263,7 +269,7 @@
                     </div>
                 </div>
             </div>
-            <div class="single-project-item-three mb-30">
+            <div class="single-project-item-three">
                 <div class="single-blog-post-four mb-40 wow fadeInLeft">
                     <div class="entry-content">
                         <h4 class="entry-title"><a href="javascript:void(0)">Cognitive Approach: Bridging Planning and Execution</a></h4>
@@ -284,7 +290,7 @@
                     </div>
                 </div>
             </div>
-            <div class="single-project-item-three mb-30">
+            <div class="single-project-item-three">
                 <div class="single-blog-post-four mb-40 wow fadeInLeft">
                     <div class="entry-content">
                         <h4 class="entry-title"><a href="javascript:void(0)">From Thought to Reality: Opportunity to Innovate</a></h4>
@@ -305,7 +311,7 @@
                     </div>
                 </div>
             </div>
-            <div class="single-project-item-three mb-30">
+            <div class="single-project-item-three">
                 <div class="single-blog-post-four mb-40 wow fadeInLeft">
                     <div class="entry-content">
                         <h4 class="entry-title"><a href="javascript:void(0)">Engaging the Public in Design and Planning</a></h4>
@@ -331,12 +337,13 @@
         </div>
     </div>
 </section>
-<section class="features-seciton pt-50 pb-0" id="does-it-matter">
+<section class="features-seciton pt-50 pb-0" id="matterNowDes">
     <div class="container-fluid p-0">
         <div class="row align-items-xl-end">
             <div class="col-md-12">
                 <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                    <h2>Why It Matters Now?</h2>
+                    <span class="sub-title"> <img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt=""> The Evolution of Digital Twin Technology</span>
+                    <h2>Decade of Change in Data and Processing</h2>
                 </div>
             </div>
             <div class="col-lg-12 p-0">
@@ -347,15 +354,9 @@
         </div>
     </div>
 </section>
-<section class="features-seciton pt-50 pb-50" id="does-it-matter">
+<section class="features-seciton pt-50 pb-50">
     <div class="container">
         <div class="row align-items-xl-end">
-            <div class="col-md-12">
-                <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                    <span class="sub-title"> <img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt=""> The Evolution of Digital Twin Technology</span>
-                    <h2>Decade of Change in Data and Processing</h2>
-                </div>
-            </div>
             <div class="col-lg-6">
                 <div class="features-image-box mb-20 wow fadeInLeft" style="visibility: visible;"><img src="<?php echo base_url(''); ?>include/web/custom/BG_Element.png" alt="Features Image"></div>
             </div>
@@ -369,13 +370,89 @@
                         <li><i class="fal fa-long-arrow-right"></i>The Rise of AI: Enhancing Perception and Decision-Making </li>
                         <li><i class="fal fa-long-arrow-right"></i>The Power of Community, Tools, and Standards: Accelerating Innovation </li>
                     </ul>
-                    <a class="main-btn primary-btn" href="">Learn More Us</a>
+                    <a class="main-btn primary-btn" href="">Learn More</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="service-bgc-section p-r z-1 main-bg pt-50 pb-50" id="why-to-Join">
+
+<section class="service-bgc-section p-r z-1 main-bg pt-50 pb-50" id="whyToJoinDes">
+    <div class="shape shape-one"><span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png"></span></div>
+    <div class="shape shape-two"><span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png"></span></div>
+    <div class="shape shape-three">
+        <span><img src="<?php echo base_url(''); ?>include/web/images/shape/leaf-3.png" alt="Leaf Png"></span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-xl-9 col-lg-12">
+                <div class="section-title text-white text-center mb-50 wow fadeInDown">
+                    <span class="sub-title text-white"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt=""> Why to Join</span>
+                    <h2>The Sangam Initiative caters to individuals like you and your work</h2>
+                    <p class="mt-1">Be part of a collaborative effort to redefine infrastructure planning and design. The "Digital Twin: Sangam" PoC is not just a project; it's a leap into the future of how we conceive, plan, and build our world. Your expertise and innovation can help shape sustainable, efficient, and integrated infrastructure systems for generations to come.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="single-service-item-two mb-80 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s;">
+                    <div class="icon"><i class="flaticon-scissors"></i></div>
+                    <div class="text">
+                        <h4 class="title"><a href="javascript:void(0)">Spring Cleaning</a></h4>
+                        <p>Sed ut perspiciatis omnisey natus voluptate accusa</p><a class="icon-btn" href="javascript:void(0)"><i class="fal fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="single-service-item-two mb-80 wow fadeInUp" data-wow-delay=".25s" style="visibility: visible; animation-delay: 0.25s;">
+                    <div class="icon"><i class="flaticon-watering"></i></div>
+                    <div class="text">
+                        <h4 class="title"><a href="javascript:void(0)">Irrigation &amp; Drainage</a></h4>
+                        <p>Quis autem reprehe volutate esse quam molestiae</p><a class="icon-btn" href="javascript:void(0)"><i class="fal fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="single-service-item-two mb-80 wow fadeInDown" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s;">
+                    <div class="icon"><i class="flaticon-yard"></i></div>
+                    <div class="text">
+                        <h4 class="title"><a href="javascript:void(0)">Snow &amp; Ice Removal</a></h4>
+                        <p>We denounce with righteous indignation and dislike</p><a class="icon-btn" href="javascript:void(0)"><i class="fal fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="single-service-item-two mb-80 wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s;">
+                    <div class="icon"><i class="flaticon-growing"></i></div>
+                    <div class="text">
+                        <h4 class="title"><a href="javascript:void(0)">Lawn Fertilization</a></h4>
+                        <p>To take triviale exam which undertakes laborious</p><a class="icon-btn" href="javascript:void(0)"><i class="fal fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="testimonial-section">
+    <div class="container-fluid">
+        <div class="testimonial-wrapper main-bg wow fadeInDown" style="visibility: visible;">
+            <div class="shape shape-one"><span><img src="<?php echo base_url('');?>include/web/images/testimonial/img-1.jpg" alt="image"></span></div>
+            <div class="shape shape-two"><span><img src="<?php echo base_url('');?>include/web/images/testimonial/img-2.jpg" alt="image"></span></div>
+            <div class="shape shape-three"><span><img src="<?php echo base_url('');?>include/web/images/testimonial/img-3.jpg" alt="image"></span></div>
+            <div class="shape shape-four"><span><img src="<?php echo base_url('');?>include/web/images/testimonial/tree.png" alt="Tree image"></span></div>
+            <div class="shape shape-five"><span><img src="<?php echo base_url('');?>include/web/images/testimonial/tree2.png" alt="Tree image"></span></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+           
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <section class="service-bgc-section p-r z-1 main-bg pt-50 pb-50" id="whyToJoinDes">
     <div class="shape shape-one"><span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png"></span></div>
     <div class="shape shape-two"><span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png"></span></div>
     <div class="shape shape-three">
@@ -483,8 +560,8 @@
             </div>
         </div>
     </div>
-</section>
-<section class="about-section" id="participate">
+</section> -->
+<section class="about-section" id="participateDes">
     <div class="container-fluid">
         <div class="about-wrapper gray-bg wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
             <div class="container">
@@ -730,7 +807,7 @@
         </div>
     </div>
 </section>
-<section class="features-section-two p-r z-1">
+<!-- <section class="features-section-two p-r z-1">
     <div class="features-wrapper-two main-bg wow fadeInDown">
         <div class="counter-area">
             <div class="row">
@@ -777,7 +854,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <section class="project-section  pt-50 pb-50">
     <div class="container">
         <div class="row justify-content-center ">
@@ -1168,7 +1245,7 @@
         </div>
     </div>
 </section>
-<section class="team-section pt-50">
+<!-- <section class="team-section pt-50">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
@@ -1323,5 +1400,5 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <?php include_once __DIR__ . '/../common/footer.php'; ?>
