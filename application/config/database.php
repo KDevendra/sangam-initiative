@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 $active_group = 'default';
 $query_builder = TRUE;
@@ -8,10 +8,10 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     // Local Development Configuration
     $db['default'] = array(
         'dsn'      => '',
-        'hostname' => 'localhost:2023', 
-        'username' => 'root',     
-        'password' => 'root',     
-        'database' => 'sangam_initiative',
+        'hostname' => '103.86.177.233',
+        'username' => 'onehouses_sangam',
+        'password' => '$,#8;P#gSi%R',
+        'database' => 'onehouses_sangam',
         'dbdriver' => 'mysqli',
         'dbprefix' => '',
         'pconnect' => FALSE,
@@ -31,14 +31,14 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     // Live/Production Configuration
     $db['default'] = array(
         'dsn'      => '',
-        'hostname' => 'localhost', 
-        'username' => '',        
-        'password' => '',   
-        'database' => '',       
+        'hostname' => 'localhost',
+        'username' => 'onehouses_sangam',
+        'password' => '$,#8;P#gSi%R',
+        'database' => 'onehouses_sangam',
         'dbdriver' => 'mysqli',
         'dbprefix' => '',
         'pconnect' => FALSE,
-        'db_debug' => FALSE, 
+        'db_debug' => FALSE,
         'cache_on' => FALSE,
         'cachedir' => '',
         'char_set' => 'utf8',
@@ -48,6 +48,6 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
         'compress' => FALSE,
         'stricton' => FALSE,
         'failover' => array(),
-        'save_queries' => FALSE 
+        'save_queries' => FALSE
     );
 }

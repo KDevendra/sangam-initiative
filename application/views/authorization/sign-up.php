@@ -154,6 +154,24 @@
                                                                 Please select core competencies
                                                             </div>
                                                         </div>
+                                                        <div class="mb-3 col-md-6">
+                                                            <label for="coreCompetency" class="form-label">Category<span class="text-danger">*</span></label>
+                                                            <select class="js-example-basic-multiple" id="coreCompetencyCategory" class="form-control" name="coreCompetencyCategory[]" multiple="multiple">
+
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Please select core competency category
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 col-md-6">
+                                                            <label for="coreCompetency" class="form-label">Sub Category<span class="text-danger">*</span></label>
+                                                            <select class="js-example-basic-multiple" id="coreCompetencySubCategory" class="form-control" name="coreCompetencySubCategory[]" multiple="multiple">
+
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Please select core competencies sub category
+                                                            </div>
+                                                        </div>
                                                         <div class="mb-4 col-md-12">
                                                             <p class="mb-0 fs-12 text-muted fst-italic">
                                                                 By Registration implies acceptance of the Sangam Initiative <a href="#" class="text-primary text-decoration-underline fst-normal fw-medium">Guidelines</a>
@@ -449,7 +467,7 @@
                         success: function(response) {
                             if (response.status === "success") {
                                 if (Array.isArray(response.data)) {
-                                   
+
                                     const groupedData = {};
                                     response.data.forEach(item => {
                                         if (!groupedData[item.layer]) {
@@ -461,10 +479,10 @@
                                         });
                                     });
 
-                                   
+
                                     $(".js-example-basic-multiple").empty();
 
-                                   
+
                                     for (const layer in groupedData) {
                                         if (groupedData.hasOwnProperty(layer)) {
                                             $(".js-example-basic-multiple").append("<optgroup label='" + layer + "'>");
@@ -475,12 +493,12 @@
                                         }
                                     }
 
-                                   
+
                                     $(".js-example-basic-multiple").select2({
                                         placeholder: "Select an option"
                                     });
 
-                                   
+
                                     $(".js-example-basic-multiple").on('select2:select', function(e) {
                                         const selectedOption = $(".select2-container--default .select2-results__option--selected");
                                         selectedOption.append('<i class="ri-checkbox-circle-fill"></i>');

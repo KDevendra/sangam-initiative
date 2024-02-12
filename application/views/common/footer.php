@@ -263,6 +263,39 @@
           });
       };
       window.addEventListener("load", executeCodes);
+    //   $(document).on("contextmenu", function() {
+    //       return false;
+    //   });
+    //   $("body").css({
+    //       "-webkit-user-select": "none",
+    //       "-moz-user-select": "none",
+    //       "-ms-user-select": "none",
+    //       "user-select": "none",
+    //   });
+
+    //   $("input, textarea").css({
+    //       "-webkit-user-select": "auto",
+    //       "-moz-user-select": "auto",
+    //       "-ms-user-select": "auto",
+    //       "user-select": "auto",
+    //   });
+    //   $(document).on("keydown", function(event) {
+    //       if ((event.ctrlKey || event.metaKey) && (event.keyCode === 70 || event.keyCode === 85)) {
+    //           event.preventDefault();
+    //       }
+    //   });
+    //   document.addEventListener("keydown", function(event) {
+    //       if ((event.ctrlKey || event.metaKey) && (event.keyCode === 67 || event.keyCode === 77)) {
+    //           event.preventDefault();
+    //       }
+    //   });
+
+    //   document.addEventListener("keydown", function(event) {
+    //       if ((event.ctrlKey || event.metaKey) && event.shiftKey && (event.code === "KeyC" || event.code === "KeyM")) {
+    //           event.preventDefault();
+    //           event.stopPropagation();
+    //       }
+    //   });
   </script>
   </body>
 

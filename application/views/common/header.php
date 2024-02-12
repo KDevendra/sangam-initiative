@@ -246,11 +246,11 @@
                                     <ul class="sub-menu">
                                         <li><a href="<?php echo base_url('expression-of-interest'); ?>">About EoI</a></li>
                                         <li><a href="javascript:void(0)" class="processOfSangamBtn">Purpose of EoI </a></li>
-                                        <li><a href="javascript:void(0)" class="stagesOfEoIBtn">Stages of EoI</a></li>
+                                        <li><a href="<?php echo base_url('expression-of-interest'); ?>" >Stages of EoI</a></li>
                                         <li><a href="javascript:void(0)" class="whyToJoinBtn">Why Participate</a></li>
-                                        <li><a href=" javascript:void(0)" class="participateBtn">Participation Details</a></li>
+                                        <li><a href="<?php echo base_url('expression-of-interest/participation-details');?>" class="participateBtn">Participation Details</a></li>
                                         <li><a href="<?php echo base_url('registration'); ?>">Submit Response</a></li>
-                                        <li><a href="<?php echo base_url('registration'); ?>">Submit Response</a></li>
+                          
                                     </ul>
                                 </li>
                                 <li class="menu-item"><a href="javascript:void(0)" class="contactUsBtn">Contact Us</a></li>

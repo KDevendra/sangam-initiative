@@ -48,12 +48,6 @@
             </div>
         </div>
     </div>
-    <!-- <div class="sticky-button">
-        <a href="javascript:void(0)" id="exploreBtn">
-            <span>Explore More</span>
-            <i class="far fa-angle-double-down" aria-hidden="true"></i>
-        </a>
-    </div> -->
 </section>
 <section class="about-section pb-50" id="exploreBtnDes">
     <div class="container">
@@ -126,7 +120,6 @@
         <div class="row align-items-xl-center">
             <div class="col-xl-6">
                 <div class="about-one_image-box  p-r z-1 wow fadeInLeft">
-                    <div class="shape shape-one"><span></span></div>
                     <img src="<?php echo base_url(''); ?>include/web/custom/Environmental_Data_02.jpeg" class="about-img-one" alt="About Image">
                     <img src="<?php echo base_url(''); ?>include/web/custom/Generation_Planning_01.jpeg" class="about-img-two" alt="About Image">
                     <img src="<?php echo base_url(''); ?>include/web/custom/About_Img_02.jpeg" class="about-img-three" alt="About Image">
@@ -143,24 +136,22 @@
                         <h2>About Sangam Initiative</h2>
                     </div>
                     <p class="mb-10 text-justify">Welcome to "Sangam: Digital Twin," a pioneering invitation to collaborate on the future of infrastructure planning and design. This initiative is a call to action for public entities, infrastructure planners, tech giants, startups, and academia to break free from silos and engage in a whole-of-government approach. At the heart of Sangam is the fusion of unified data and collective intelligence, aimed at leveraging advancements in telecom technologies, including 5G and IoT, alongside the latest in computational technologies. Sangam offers a unique platform to visualise existing conditions, predict future scenarios, and test hypotheses in a virtual world, all powered by Digital Twins, AI, and predictive models.</p>
-                    <div class="">
-                        <div class="tooltip-container">
-                            <a href="javascript:void(0)" " class=" main-btn primary-btn main-btn__custom mb-10">Crafting the Blueprint</a>
-                            <div class="tooltip-content">
-                                <h6 class="text-center mb-2">A Collaborative Journey Towards Innovative Infrastructure</h6>
-                                <p>
-                                    This effort is more than just an exploration; it's an opportunity to shape future infrastructure with precision and purpose. By bringing together diverse minds and data, we aim to foster a space where imagining possibilities and perfecting solutions through iterative experiments and data-driven feedback becomes the norm. Visionary design, informed by reality, is at the core of Sangam, empowering participants to harness the full potential of Digital Twins and AI for infrastructure that is not only future-ready but is crafted with informed, purposeful precision.
-                                </p>
-                            </div>
+                    <div class="tooltip-container">
+                        <a href="javascript:void(0)" " class=" main-btn primary-btn main-btn__custom mb-10">Crafting the Blueprint</a>
+                        <div class="tooltip-content">
+                            <h6 class="text-center mb-2">A Collaborative Journey Towards Innovative Infrastructure</h6>
+                            <p>
+                                This effort is more than just an exploration; it's an opportunity to shape future infrastructure with precision and purpose. By bringing together diverse minds and data, we aim to foster a space where imagining possibilities and perfecting solutions through iterative experiments and data-driven feedback becomes the norm. Visionary design, informed by reality, is at the core of Sangam, empowering participants to harness the full potential of Digital Twins and AI for infrastructure that is not only future-ready but is crafted with informed, purposeful precision.
+                            </p>
                         </div>
-                        <div class="tooltip-container">
-                            <a href="javascript:void(0)" class="main-btn filled-btn mb-10  main-btn__custom">Pioneering Precision</a>
-                            <div class="tooltip-content">
-                                <h6 class="text-center mb-2">Building Tomorrow's Infrastructure Today</h6>
-                                <p>
-                                    Join us in this ambitious journey to redefine infrastructure design and planning, where your expertise and insights can contribute to building a more connected, sustainable, and innovative world. Together, let's build a foundation for visionary infrastructure, informed by the collective intelligence and unified data of today's brightest minds.
-                                </p>
-                            </div>
+                    </div>
+                    <div class="tooltip-container">
+                        <a href="javascript:void(0)" class="main-btn filled-btn mb-10  main-btn__custom">Pioneering Precision</a>
+                        <div class="tooltip-content">
+                            <h6 class="text-center mb-2">Building Tomorrow's Infrastructure Today</h6>
+                            <p>
+                                Join us in this ambitious journey to redefine infrastructure design and planning, where your expertise and insights can contribute to building a more connected, sustainable, and innovative world. Together, let's build a foundation for visionary infrastructure, informed by the collective intelligence and unified data of today's brightest minds.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -168,29 +159,7 @@
         </div>
     </div>
 </section>
-<!-- <section class="about-section">
-   <div class="container-fluid">
-       <div class="about-wrapper  wow fadeInUp" style="visibility: visible;">
-           <div class="container">
-               <div class="row align-items-xl-center">
-                   <div class="col-xl-5 col-lg-12">
-                       <div class="about-two_image-box wow fadeInLeft" style="visibility: visible;"><img src="<?php echo base_url('') ?>include/web/custom/Transforming_Infrastructure_Planning.png"></div>
-                   </div>
-                   <div class="col-xl-7 col-lg-12">
-                       <div class="about-three_content-box pl-lg-0 wow fadeInRight" style="visibility: visible;">
-                           <div class="section-title mb-25 wow fadeInUp" style="visibility: visible;">
-                               <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt="">Transforming Infrastructure Planning</span>
-                               <h2>Upcoming Future Infrastructure Summit 2024</h2>
-                           </div>
-                           <p class="mb-40 wow fadeInDown" style="visibility: visible;">Get ready for the upcoming Future Infrastructure Summit 2024! Explore revolutionary opportunities in infrastructure planning and design, from integrating Digital Twin technology to crafting future-ready frameworks. Connect with industry leaders and experts to shape the future of infrastructure. Join us and be part of the revolution.</p>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
-   </section> -->
-<section class="gallery-section gray-bg  pt-50 pb-50" id="aptChoiceDes">
+ <section class="gallery-section gray-bg  pt-50 pb-50" id="aptChoiceDes">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -353,24 +322,24 @@
         </div>
     </div>
 </section>
-<section class="features-seciton pt-50 pb-0" id="matterNowDes">
+ <section class="features-seciton pt-50 pb-0" id="matterNowDes">
     <div class="container-fluid p-0">
         <div class="row align-items-xl-end">
             <div class="col-md-12">
                 <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                    <span class="sub-title"> <img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt=""> The Evolution of Digital Twin Technology</span>
+                    <span class="sub-title"> <img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> The Evolution of Digital Twin Technology</span>
                     <h2>Decade of Change in Data and Processing</h2>
                 </div>
             </div>
             <div class="col-lg-12 p-0">
                 <div class="features-image-box mb-20 wow fadeInLeft d-flex justify-content-center" style="visibility: visible;">
-                    <img src="<?php echo base_url(''); ?>include/web/custom/Matters_Now.png" alt="Features Image">
+                    <img src="<?php echo base_url(''); ?>include/web/custom/Matters_Now.png" width="100%" alt="Features Image">
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="features-seciton pt-50 pb-20">
+ <section class="features-seciton pt-50 pb-20">
     <div class="container">
         <div class="row align-items-xl-end">
             <div class="col-lg-6">
@@ -392,7 +361,7 @@
         </div>
     </div>
 </section>
-<section class="service-bgc-section p-r z-1 main-bg pt-50 pb-50" id="whyToJoinDes">
+ <section class="service-bgc-section p-r z-1 main-bg pt-50 pb-50" id="whyToJoinDes">
     <div class="shape shape-one"><span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png"></span></div>
     <div class="shape shape-two"><span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png"></span></div>
     <div class="shape shape-three">
@@ -513,116 +482,7 @@
         </div>
     </div>
 </section>
-<!-- <section class="service-bgc-section p-r z-1 main-bg pt-50 pb-50" id="whyToJoinDes">
-   <div class="shape shape-one"><span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png"></span></div>
-   <div class="shape shape-two"><span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png"></span></div>
-   <div class="shape shape-three">
-       <span><img src="<?php echo base_url(''); ?>include/web/images/shape/leaf-3.png" alt="Leaf Png"></span>
-   </div>
-   <div class="container">
-       <div class="row justify-content-center">
-           <div class="col-xl-9 col-lg-12">
-               <div class="section-title text-white text-center mb-50 wow fadeInDown">
-                   <span class="sub-title text-white"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt=""> Why to Join</span>
-                   <h2>The Sangam Initiative caters to individuals like you and your work</h2>
-                   <p class="mt-1">Be part of a collaborative effort to redefine infrastructure planning and design. The "Digital Twin: Sangam" PoC is not just a project; it's a leap into the future of how we conceive, plan, and build our world. Your expertise and innovation can help shape sustainable, efficient, and integrated infrastructure systems for generations to come.
-                   </p>
-               </div>
-           </div>
-       </div>
-       <div class="row">
-           <div class="col-xl-3 col-lg-6 col-sm-12">
-               <div class="single-service-item mb-30 wow fadeInUp" data-wow-delay=".2s">
-                   <div class="service-info">
-                       <div class="shape icon-shape"> <img src="<?php echo base_url(''); ?>include/web/custom/GIS.png" alt=""></div>
-                       <div class="icon">
-                           <img src="<?php echo base_url(''); ?>include/web/custom/Top_GIS_Sat Imagery.png" alt="">
-                       </div>
-                       <h4 class="title"><a href="">GIS/Sat Imagery</a></h4>
-                   </div>
-               </div>
-           </div>
-           <div class="col-xl-3 col-lg-6 col-sm-12">
-               <div class="single-service-item mb-30 wow fadeInUp" data-wow-delay=".2s">
-                   <div class="service-info">
-                       <div class="shape icon-shape"> <img src="<?php echo base_url(''); ?>include/web/custom/BIM_Gen_Designers.png" alt=""></div>
-                       <div class="icon">
-                           <img src="<?php echo base_url(''); ?>include/web/custom/Top_BIM_Gen Designers.png" alt="">
-                       </div>
-                       <h4 class="title"><a href="">BIM/Gen Designers</a></h4>
-                   </div>
-               </div>
-           </div>
-           <div class="col-xl-3 col-lg-6 col-sm-12">
-               <div class="single-service-item mb-30 wow fadeInUp" data-wow-delay=".2s">
-                   <div class="service-info">
-                       <div class="shape icon-shape"> <img src="<?php echo base_url(''); ?>include/web/custom/artifical-intelligence.png" alt=""></div>
-                       <div class="icon">
-                           <img src="<?php echo base_url(''); ?>include/web/custom/Top_Artifical_Intelligence.png" alt="">
-                       </div>
-                       <h4 class="title"><a href="">AI/ML Experts/Big Data Analysts</a></h4>
-                   </div>
-               </div>
-           </div>
-           <div class="col-xl-3 col-lg-6 col-sm-12">
-               <div class="single-service-item mb-30 wow fadeInUp" data-wow-delay=".2s">
-                   <div class="service-info">
-                       <div class="shape icon-shape"> <img src="<?php echo base_url(''); ?>include/web/custom/internet-of-things.png" alt=""></div>
-                       <div class="icon">
-                           <img src="<?php echo base_url(''); ?>include/web/custom/Top_Internet_of_Things.png" alt="">
-                       </div>
-                       <h4 class="title"><a href="">M2M & IoT</a></h4>
-                   </div>
-               </div>
-           </div>
-           <div class="col-xl-3 col-lg-6 col-sm-12">
-               <div class="single-service-item mb-30 wow fadeInUp" data-wow-delay=".2s">
-                   <div class="service-info">
-                       <div class="shape icon-shape"> <img src="<?php echo base_url(''); ?>include/web/custom/System-Integration.png" alt=""></div>
-                       <div class="icon">
-                           <img src="<?php echo base_url(''); ?>include/web/custom/Top_System_Integration.png" alt="">
-                       </div>
-                       <h4 class="title"><a href="">System Integration</a></h4>
-                   </div>
-               </div>
-           </div>
-           <div class="col-xl-3 col-lg-6 col-sm-12">
-               <div class="single-service-item mb-30 wow fadeInUp" data-wow-delay=".2s">
-                   <div class="service-info">
-                       <div class="shape icon-shape"> <img src="<?php echo base_url(''); ?>include/web/custom/Environmental-Data-Experts.png" alt=""></div>
-                       <div class="icon">
-                           <img src="<?php echo base_url(''); ?>include/web/custom/Top_Environmental_Data_Experts.png" alt="">
-                       </div>
-                       <h4 class="title"><a href="">Environmental Data Experts</a></h4>
-                   </div>
-               </div>
-           </div>
-           <div class="col-xl-3 col-lg-6 col-sm-12">
-               <div class="single-service-item mb-30 wow fadeInUp" data-wow-delay=".2s">
-                   <div class="service-info">
-                       <div class="shape icon-shape"> <img src="<?php echo base_url(''); ?>include/web/custom/Event-Planners.png" alt=""></div>
-                       <div class="icon">
-                           <img src="<?php echo base_url(''); ?>include/web/custom/Top_Event_Planners.png" alt="">
-                       </div>
-                       <h4 class="title"><a href="">Event Planners</a></h4>
-                   </div>
-               </div>
-           </div>
-           <div class="col-xl-3 col-lg-6 col-sm-12">
-               <div class="single-service-item mb-30 wow fadeInUp" data-wow-delay=".2s">
-                   <div class="service-info">
-                       <div class="shape icon-shape"> <img src="<?php echo base_url(''); ?>include/web/custom/Telecom-Experts.png" alt=""></div>
-                       <div class="icon">
-                           <img src="<?php echo base_url(''); ?>include/web/custom/Top_Telecom_Experts.png" alt="">
-                       </div>
-                       <h4 class="title"><a href="">Telecom Experts</a></h4>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
-   </section> -->
-<section class="about-section" id="participateDes">
+ <section class="about-section" id="participateDes">
     <div class="container-fluid">
         <div class="about-wrapper gray-bg wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
             <div class="container">
@@ -641,7 +501,7 @@
         </div>
     </div>
 </section>
-<section class="about-section pt-50 pb-50" id="processOfSangamDes">
+ <section class="about-section pt-50 pb-50" id="processOfSangamDes">
     <div class="container-fluid">
         <div class="about-wrapper wow fadeInUp" style="visibility: visible;">
             <div class="container">
@@ -723,7 +583,7 @@
                                             <p class="hideMobile">
                                                 <br><small>&nbsp;</small>
                                                 <br><small>&nbsp;</small>
-                                                <!-- <br><small>&nbsp;</small> -->
+                                           
                                             </p>
                                         </div>
                                     </div>
@@ -736,135 +596,7 @@
         </div>
     </div>
 </section>
-<!-- <section class="choose-bg-section bg_cover p-r z-1 pt-50 pb-50" style="background-image: url(<?php echo base_url(''); ?>include/web/custom/Banner_1.jpg);">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-9 col-lg-12">
-                <div class="section-title text-white text-center mb-50 wow fadeInDown">
-                    <span class="sub-title text-white"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt=""> Why Choose Us</span>
-                    <h2>Why Join 'Digital Twin: Sangam' PoC?</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="choose-wrapper wow fadeInUp">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="choose-tab-pane">
-                                <div class="choose-nav-tab">
-                                    <ul class="nav">
-                                        <li class="nav-item">
-                                            <button class="nav-link " data-toggle="tab" data-target="#tab1">Generating Social Impact</button>
-                                        </li>
-                                        <li class="nav-item">
-                                            <button class="nav-link active" data-toggle="tab" data-target="#tab2">Exploring Innovative Opportunities in Digital Twins</button>
-                                        </li>
-                                        <li class="nav-item">
-                                            <button class="nav-link" data-toggle="tab" data-target="#tab3">Influencing Socially Relevant Infrastructure Projects</button>
-                                        </li>
-                                        <li class="nav-item">
-                                            <button class="nav-link" data-toggle="tab" data-target="#tab4">Engaging with GIS and BIM Professionals</button>
-                                        </li>
-                                        <li class="nav-item">
-                                            <button class="nav-link" data-toggle="tab" data-target="#tab5">Contributing to Developing Foundational Models</button>
-                                        </li>
-                                        <li class="nav-item">
-                                            <button class="nav-link" data-toggle="tab" data-target="#tab6">Addressing Practical Challenges</button>
-                                        </li>
-                                        <li class="nav-item">
-                                            <button class="nav-link" data-toggle="tab" data-target="#tab7">Focusing on Sustainable Development Goals (SDGs)</button>
-                                        </li>
-                                        <li class="nav-item">
-                                            <button class="nav-link" data-toggle="tab" data-target="#tab8">Being Part of Technological Advancement</button>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="tab-content">
-                                <div class="tab-pane " id="tab1">
-                                    <div class="choose-content-box">
-                                        <h5 class="mb-10">Generating Social Impact Through Innovative Infrastructure Planning</h5>
-                                        <p>Through an innovative approach for planning and designing public infrastructures.</p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane show active" id="tab2">
-                                    <div class="choose-content-box">
-                                        <ul class="check-style-one">
-                                            <h5 class="mb-10">Exploring Innovative Opportunities in Digital Twins</h5>
-                                            <li>Pioneering the fusion of Digital Twin technology with AI, ML, and IoT to revolutionize infrastructure planning.</li>
-                                            <li>Utilizing data to generate vital insights for infrastructure progress and exploring monetization strategies.</li>
-                                            <li>Showcasing solutions that facilitate data sharing with an emphasis on cutting-edge computation and telecom technologies while enhancing privacy</li>
-                                            <li>Developing data fusion techniques to enrich insights by incorporating diverse sources through advanced statistical and mathematical modeling.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="tab3">
-                                    <div class="choose-content-box">
-                                        <h5 class="mb-10">Influencing Socially Relevant Infrastructure Projects</h5>
-                                        <p>Utilizing Generative AI to synthesize public input into actionable design insights effectively mapped onto Digital Twins.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="tab4">
-                                    <div class="choose-content-box">
-                                        <h5 class="mb-10">Engaging with GIS and BIM Professionals</h5>
-                                        <p>Collaborating with professionals from GIS, BIM, telecom, virtual worlds, and more in a dynamic environment.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="tab5">
-                                    <div class="choose-content-box">
-                                        <h5 class="mb-10">Contributing to Developing Foundational Models</h5>
-                                        <ul class="check-style-one">
-                                            <li>Developing a foundational model framework applicable across a wide range of data insight-driven solutions.
-                                            </li>
-                                            <li>Learning from the creation of state-of-the-art solutions in infrastructure planning, designing, and management.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="tab6">
-                                    <div class="choose-content-box">
-                                        <h5 class="mb-10">Addressing Practical Challenges</h5>
-                                        <ul class="check-style-one">
-                                            <li>Playing a key role in managing large-scale events and complex infrastructure.
-                                            </li>
-                                            <li>Receiving acknowledgment for contributions to a pioneering project with national and global implications.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="tab7">
-                                    <div class="choose-content-box">
-                                        <h5 class="mb-10">Focusing on Sustainable Development Goals (SDGs)</h5>
-                                        <ul class="check-style-one">
-                                            <li>Tackling SDG challenges focusing on environmental impact mitigation and sustainability.
-                                            </li>
-                                            <li>Connecting with industry leaders, innovators, and government bodies to broaden professional circles.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="tab8">
-                                    <div class="choose-content-box">
-                                        <h5 class="mb-10">Being Part of Technological Advancement</h5>
-                                        <p>Being an integral part of a project that propels technological advancement and digital development in India.
-                                        </p>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<section class="about-section pt-50 pb-50">
+ <section class="about-section pt-50 pb-50">
     <div class="container">
         <div class="about-wrapper white-bg wow fadeInUp">
             <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
@@ -963,55 +695,7 @@
         </div>
     </div>
 </section>
-<!-- <section class="features-section-two p-r z-1">
-   <div class="features-wrapper-two main-bg wow fadeInDown">
-       <div class="counter-area">
-           <div class="row">
-               <div class="col-lg-3 col-sm-6">
-                   <div class="single-counter-item-two wow fadeInDown">
-                       <div class="inner-counter">
-                           <div class="icon">
-                           </div>
-                           <h2 class="number"><span class="count">7</span></h2>
-                           <p>Events</p>
-                       </div>
-                   </div>
-               </div>
-               <div class="col-lg-3 col-sm-6">
-                   <div class="single-counter-item-two wow fadeInUp">
-                       <div class="inner-counter">
-                           <div class="icon">
-                           </div>
-                           <h2 class="number"><span class="count">10000</span>+</h2>
-                           <p>Attendance and Participation</p>
-                       </div>
-                   </div>
-               </div>
-               <div class="col-lg-3 col-sm-6">
-                   <div class="single-counter-item-two wow fadeInDown">
-                       <div class="inner-counter">
-                           <div class="icon">
-                           </div>
-                           <h2 class="number"><span class="count">20</span>+</h2>
-                           <p>Area Of Interest</p>
-                       </div>
-                   </div>
-               </div>
-               <div class="col-lg-3 col-sm-6">
-                   <div class="single-counter-item-two wow fadeInUp">
-                       <div class="inner-counter">
-                           <div class="icon">
-                           </div>
-                           <h2 class="number"><span class="count">20</span>+</h2>
-                           <p>Sponsor's</p>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
-   </section> -->
-<section class="project-section  pt-50 pb-50">
+ <section class="project-section  pt-50 pb-50">
     <div class="container">
         <div class="row justify-content-center ">
             <div class="col-lg-10">
@@ -1238,7 +922,7 @@
         </div>
     </div>
 </section>
-<section class="features-section mt-50" id="faqsDes">
+ <section class="features-section mt-50" id="faqsDes">
     <div class="container">
         <div class="row align-items-xl-center">
             <div class="col-lg-12 text-center">
@@ -1250,7 +934,7 @@
         </div>
     </div>
 </section>
-<section class="faq-section">
+ <section class="faq-section">
     <div class="container">
         <div class="accordion" id="accordionOne">
             <div class="row">
@@ -1401,7 +1085,7 @@
         </div>
     </div>
 </section>
-<section class="about-section" id="curatedContentDes">
+ <section class="about-section" id="curatedContentDes">
     <div class="container-fluid">
         <div class="about-wrapper gray-bg wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
             <div class="container">
@@ -1420,160 +1104,4 @@
         </div>
     </div>
 </section>
-<!-- <section class="team-section pt-50">
-   <div class="container">
-       <div class="row justify-content-center">
-           <div class="col-lg-8">
-               <div class="section-title text-center mb-50 wow fadeInDown">
-                   <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> Team Member</span>
-                   <h2>Meet Our Speaker's</h2>
-               </div>
-           </div>
-       </div>
-       <div class="row">
-           <div class="col-lg-3 col-sm-6">
-               <div class="single-team-item-two mb-40 wow fadeInDown" data-wow-delay=".2s">
-                   <div class="member-img">
-                       <img src="<?php echo base_url(''); ?>include/web/custom/Benjamin_Hughes.jpg" alt="Team Image">
-                       <div class="social-box">
-                           <ul class="social-link">
-                               <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                               <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                               <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                               <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                           </ul>
-                       </div>
-                   </div>
-                   <div class="member-info text-center">
-                       <h4 class="title"><a href="">Benjamin Hughes</a></h4>
-                       <p>Senior Speaker</p>
-                   </div>
-               </div>
-           </div>
-           <div class="col-lg-3 col-sm-6">
-               <div class="single-team-item-two mb-40 wow fadeInUp" data-wow-delay=".25s">
-                   <div class="member-img">
-                       <img src="<?php echo base_url(''); ?>include/web/custom/Chester_J_Thurman.jpg" alt="Team Image">
-                       <div class="social-box">
-                           <ul class="social-link">
-                               <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                               <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                               <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                               <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                           </ul>
-                       </div>
-                   </div>
-                   <div class="member-info text-center">
-                       <h4 class="title"><a href="">Chester J. Thurman</a></h4>
-                       <p>Junior Speaker</p>
-                   </div>
-               </div>
-           </div>
-           <div class="col-lg-3 col-sm-6">
-               <div class="single-team-item-two mb-40 wow fadeInDown" data-wow-delay=".3s">
-                   <div class="member-img">
-                       <img src="<?php echo base_url(''); ?>include/web/custom/Benjamin_Hughes_.jpg" alt="Team Image">
-                       <div class="social-box">
-                           <ul class="social-link">
-                               <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                               <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                               <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                               <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                           </ul>
-                       </div>
-                   </div>
-                   <div class="member-info text-center">
-                       <h4 class="title"><a href="">Benjamin Hughes</a></h4>
-                       <p>Senior Speaker</p>
-                   </div>
-               </div>
-           </div>
-           <div class="col-lg-3 col-sm-6">
-               <div class="experience-box mt-25 mb-40 text-center wow fadeInUp" data-wow-delay=".35s">
-                   <h2 class="fill-text">25+</h2>
-                   <h4>Experience Speaker's</h4>
-                   <a href="" class="btn-link">View All Member <i class="far fa-arrow-right"></i></a>
-               </div>
-           </div>
-       </div>
-   </div>
-   </section>
-   <section class="testimonial-section pt-50 pb-50">
-   <div class="container">
-       <div class="row justify-content-center">
-           <div class="col-md-12">
-               <div class="section-title text-center mb-50 wow fadeInDown">
-                   <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> Discussion</span>
-                   <h2>Join the Tech Talk</h2>
-               </div>
-           </div>
-       </div>
-       <div class="testimonial-slider-one wow fadeInUp">
-           <div class="single-testimonial-item">
-               <div class="testimonial-inner-content">
-                   <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium
-                       doloremque laudantium, totam rem aperiam eaque quae abillo inventore veritatis et quasi architecto
-                   </p>
-                   <div class="author-thumb-title">
-                       <div class="author-thumb">
-                           <img src="<?php echo base_url(''); ?>include/web/images/testimonial/thumb-1.jpg" alt="Author Image">
-                       </div>
-                       <div class="author-title">
-                           <h6 class="title">Douglas D. Hall</h6>
-                           <p class="position">CEO & Founder</p>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <div class="single-testimonial-item">
-               <div class="testimonial-inner-content">
-                   <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium
-                       doloremque laudantium, totam rem aperiam eaque quae abillo inventore veritatis et quasi architecto
-                   </p>
-                   <div class="author-thumb-title">
-                       <div class="author-thumb">
-                           <img src="<?php echo base_url(''); ?>include/web/images/testimonial/thumb-2.jpg" alt="Author Image">
-                       </div>
-                       <div class="author-title">
-                           <h6 class="title">Douglas D. Hall</h6>
-                           <p class="position">CEO & Founder</p>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <div class="single-testimonial-item">
-               <div class="testimonial-inner-content">
-                   <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium
-                       doloremque laudantium, totam rem aperiam eaque quae abillo inventore veritatis et quasi architecto
-                   </p>
-                   <div class="author-thumb-title">
-                       <div class="author-thumb">
-                           <img src="<?php echo base_url(''); ?>include/web/images/testimonial/thumb-3.jpg" alt="Author Image">
-                       </div>
-                       <div class="author-title">
-                           <h6 class="title">Brian L. Swinton</h6>
-                           <p class="position">Web Designer</p>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <div class="single-testimonial-item">
-               <div class="testimonial-inner-content">
-                   <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium
-                       doloremque laudantium, totam rem aperiam eaque quae abillo inventore veritatis et quasi architecto
-                   </p>
-                   <div class="author-thumb-title">
-                       <div class="author-thumb">
-                           <img src="<?php echo base_url(''); ?>include/web/images/testimonial/thumb-1.jpg" alt="Author Image">
-                       </div>
-                       <div class="author-title">
-                           <h6 class="title">Timothy V. Kim</h6>
-                           <p class="position">SR Manager</p>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
-   </section> -->
 <?php include_once __DIR__ . '/../common/footer.php'; ?>

@@ -752,7 +752,40 @@ section h2 {
     border-radius: 50%;
 }
 
+
 @media only screen and (max-width: 969px) {
+    .tooltip-container {
+        position: relative;
+        display: inherit;
+        margin-right: 0;
+    }
+
+    .tooltip-container:hover .tooltip-content {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .tooltip-content {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        background: rgb(61 61 153 / 90%);
+        left: 50%;
+        bottom: calc(100% + 10px);
+        transform: translateX(-50%);
+        padding: 15px;
+        font-size: 16px;
+        transition: .25s all ease;
+        transition-delay: 0s;
+        transition-delay: .25s;
+        z-index: 2;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        text-align: justify;
+        border-radius: 5px;
+        color: #ffffff;
+        width: 100%;
+    }
+
     .sticky {
         position: fixed;
         top: -30px;
@@ -867,12 +900,166 @@ section h2 {
         font-weight: bold;
         font-family: 'Montserrat', sans-serif;
     }
-        .banner-subtitle span {
-            font-size: 14px;
-            font-family: 'Montserrat Alternates', sans-serif;
-            margin-top: 3px;
-        }
-                .banner-para {
-                    margin-bottom: 0px;
-                }
+
+    .banner-subtitle span {
+        font-size: 14px;
+        font-family: 'Montserrat Alternates', sans-serif;
+        margin-top: 3px;
+    }
+
+    .banner-para {
+        margin-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .__mp__100 {
+        margin-top: 124px;
+    }
+
+    .banner-para {
+        margin-bottom: 0px;
+        margin-top: -10px;
+    }
+
+    .banner-title {
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    .banner-title-sub {
+        font-size: 14px;
+        color: #fff;
+        margin-top: 0px;
+    }
+
+    .box_overlay h5 {
+        color: #fff;
+        margin-bottom: 5px;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .box_overlay h6 {
+        color: #fff;
+        margin-bottom: 0;
+        font-size: 11px;
+    }
+
+    .banner-description {
+        color: #fff;
+        font-size: 12px;
+        padding: 5px 5px;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-bottom: 0;
+        line-height: 18px;
+    }
+
+    .banner-subtitle span {
+        font-size: 12px;
+        font-family: 'Montserrat Alternates', sans-serif;
+        margin-top: 3px;
+    }
+
+    .box_overlay {
+        background-color: #3d3d9933;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        padding: 0 0px;
+        color: white;
+        width: 300px;
+        text-align: center;
+        opacity: 0.8;
+    }
+
+    .mt-minus-110 {
+        margin-top: 255px;
+    }
+
+    .about-wrapper-two {
+        padding: 8px;
+        z-index: 1;
+    }
+
+    .about-one_image-box .experience-item {
+        width: 100%;
+        display: block;
+    }
+
+    .about-one_image-box {
+        min-height: inherit;
+        max-width: 630px;
+        margin-bottom: 30px;
+    }
+
+    .sub-title {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Montserrat Alternates', sans-serif;
+    }
+
+    .section-title h2 {
+        font-size: 22px;
+    }
+
+    #processOfSangamDes .first_stage {
+        padding: 16px 20px;
+        background-color: #fee4d2;
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    #processOfSangamDes .second_stage {
+        padding: 10px 20px;
+        background-color: #d8d8eb;
+        border-radius: 0px 0px 5px 5px;
+    }
+
+    .tooltip-container {
+        position: relative;
+        display: inherit;
+        margin-right: 0;
+    }
+
+    .tooltip-container:hover .tooltip-content {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .tooltip-content {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        background: rgb(61 61 153 / 90%);
+        left: 50%;
+        bottom: calc(100% + 10px);
+        transform: translateX(-50%);
+        padding: 15px;
+        font-size: 16px;
+        transition: .25s all ease;
+        transition-delay: 0s;
+        transition-delay: .25s;
+        z-index: 2;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        text-align: justify;
+        border-radius: 5px;
+        color: #ffffff;
+        width: 100%;
+    }
+
+    .sticky {
+        position: fixed;
+        top: -50px;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        -webkit-animation: sticky 1.2s;
+        animation: sticky 1.2s;
+    }
 }
