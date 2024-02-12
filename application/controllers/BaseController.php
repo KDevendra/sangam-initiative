@@ -25,6 +25,11 @@ class BaseController extends CI_Controller
         $data['title'] = "About: " . $this->projectTitle;
         $this->load->view('base/about', $data);
     }
+    public function livingList()
+    {
+        $data['title'] = "Living List: " . $this->projectTitle;
+        $this->load->view('base/living-list', $data);
+    }
 
     public function whySangam()
     {

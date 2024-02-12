@@ -810,7 +810,7 @@ body {
 }
 
 .mt-minus-110 {
-  margin-top: -335px;
+  margin-top: -150px;
 }
 
 .mt-minus-130 {
@@ -4372,7 +4372,7 @@ display: -webkit-box;
 }
 
 .single-service-item-two .text p {
-  margin-bottom: 23px;
+  /* margin-bottom: 23px; */
 }
 
 .single-service-item-two .text .icon-btn {

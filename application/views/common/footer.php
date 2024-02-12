@@ -1,4 +1,4 @@
-  <footer class="footer-area footer-wave pt-50 p-r z-1">
+  <footer class="footer-area footer-wave pt-50 p-r z-1" id="contactUsDes">
       <div class="wave-shapes">
           <img src="<?php echo base_url(''); ?>include/web/images/shape/wave-shape-1.png" class="w-shape one" alt="wave shape">
           <img src="<?php echo base_url(''); ?>include/web/images/shape/wave-shape-2.png" class="w-shape two" alt="wave shape">
@@ -24,11 +24,10 @@
                               <h4 class="widget-title">Get In Touch</h4>
                               <div class="widget-content">
                                   <ul class="info-list">
-                                      <li>558 Main Street, 2nd Block
-                                          Melbourne, India
+                                      <li>C-DOT Campus, Mandi Road, Mehrauli New Delhi - 110030, India
                                       </li>
-                                      <li><a href="mailto:support@gmail.com">support@gmail.com</a></li>
-                                      <li><a href="tel:+000(123)45688">+000 (123) 456 88</a></li>
+                                      <li><a href="mailto:info@tcoe.in">Email ID: info[at]tcoe[dot]in</a></li>
+                                      <li><a href="tel:+911-26598681-82">+911-26598681-82</a></li>
                                   </ul>
                               </div>
                           </div>
@@ -38,22 +37,22 @@
                               <h4 class="widget-title">Quick Link</h4>
                               <div class="widget-content">
                                   <ul class="footer-nav">
-                                      <li><a href="#">About</a></li>
-                                      <li><a href="#">Schedule</a></li>
-                                      <li><a href="#">Sequence of Events</a></li>
-                                      <li><a href="#">Speakers</a></li>
+                                      <li><a href="<?php echo base_url('about') ?>">About</a></li>
+                                      <li class="processOfSangamBtn"><a href="javascript:void(0)">Process of Sangam</a></li>
+                                      <!-- <li><a href="#">Sequence of Events</a></li> -->
+                                      <li class="faqsBtn"><a href="javascript:void(0)">FAQs</a></li>
                                   </ul>
                               </div>
                           </div>
                       </div>
                       <div class="col-lg-2 col-md-6 col-sm-12">
-                          <div class="footer-widget footer-nav-widget mb-40 wow fadeInDown">
+                          <div class="footer-widget footer-nav-widget mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
                               <h4 class="widget-title">Important Link</h4>
                               <div class="widget-content">
                                   <ul class="footer-nav">
                                       <li><a href="#">EOI</a></li>
-                                      <li><a href="#"> Why Attending</a></li>
-                                      <li><a href="#">Registration Details</a></li>
+                                      <li><a href="#"> Why Join</a></li>
+                                      <li><a href="#">Events</a></li>
                                       <li><a href="#">Registration</a></li>
                                   </ul>
                               </div>
@@ -166,6 +165,13 @@
               localStorage.setItem(buttonId + '_scrollTarget', 'EoILearnMoreDes');
               window.location.href = 'https://sangam.onehouses.com/';
           });
+          $('.stagesOfEoIBtn').on('click', function(event) {
+              event.preventDefault();
+              scrollToElement('EoILearnMoreDes', 200);
+              var buttonId = $(this).attr('id');
+              localStorage.setItem(buttonId + '_scrollTarget', 'stagesOfEoIDes');
+              window.location.href = 'https://sangam.onehouses.com/';
+          });
           $('#exploreBtn').on('click', function(event) {
               event.preventDefault();
               var offset = $('#exploreBtnDes').offset().top - 420;
@@ -173,13 +179,7 @@
                   scrollTop: offset
               }, 1500);
           });
-          $('#whyToJoinBtn').on('click', function(event) {
-              event.preventDefault();
-              var offset = $('#whyToJoinDes').offset().top - 90;
-              $('html, body').animate({
-                  scrollTop: offset
-              }, 1500);
-          });
+
           $('#aptChoiceBtn').on('click', function(event) {
               event.preventDefault();
               scrollToElement('aptChoiceDes', 0);
@@ -194,14 +194,49 @@
               localStorage.setItem(buttonId + '_scrollTarget', 'matterNowDes');
               window.location.href = 'https://sangam.onehouses.com/';
           });
-          $('#participateBtn').on('click', function(event) {
+          $('.whyToJoinBtn').on('click', function(event) {
+              event.preventDefault();
+              scrollToElement('aptChoiceDes', 0);
+              var buttonId = $(this).attr('id');
+              localStorage.setItem(buttonId + '_scrollTarget', 'whyToJoinDes');
+              window.location.href = 'https://sangam.onehouses.com/';
+          });
+          $('.contactUsBtn').on('click', function(event) {
+              event.preventDefault();
+              scrollToElement('aptChoiceDes', 0);
+              var buttonId = $(this).attr('id');
+              localStorage.setItem(buttonId + '_scrollTarget', 'contactUsDes');
+              window.location.href = 'https://sangam.onehouses.com/';
+          });
+          $('.participateBtn').on('click', function(event) {
               event.preventDefault();
               scrollToElement('participateDes', 0);
               var buttonId = $(this).attr('id');
               localStorage.setItem(buttonId + '_scrollTarget', 'participateDes');
               window.location.href = 'https://sangam.onehouses.com/';
           });
-          $('#EoILearnMore, #aptChoiceBtn, #matterNowBtn, #participateBtn').each(function() {
+          $('.processOfSangamBtn').on('click', function(event) {
+              event.preventDefault();
+              scrollToElement('participateDes', 0);
+              var buttonId = $(this).attr('id');
+              localStorage.setItem(buttonId + '_scrollTarget', 'processOfSangamDes');
+              window.location.href = 'https://sangam.onehouses.com/';
+          });
+          $('.faqsBtn').on('click', function(event) {
+              event.preventDefault();
+              scrollToElement('participateDes', 0);
+              var buttonId = $(this).attr('id');
+              localStorage.setItem(buttonId + '_scrollTarget', 'faqsDes');
+              window.location.href = 'https://sangam.onehouses.com/';
+          });
+          $('#curatedContentBtn').on('click', function(event) {
+              event.preventDefault();
+              scrollToElement('participateDes', 0);
+              var buttonId = $(this).attr('id');
+              localStorage.setItem(buttonId + '_scrollTarget', 'curatedContentDes');
+              window.location.href = 'https://sangam.onehouses.com/';
+          });
+          $('#EoILearnMore, #aptChoiceBtn, #matterNowBtn, .participateBtn, .whyToJoinBtn,.contactUsBtn, .processOfSangamBtn, .stagesOfEoIBtn, .faqsBtn, #curatedContentBtn').each(function() {
               var buttonId = $(this).attr('id');
               var scrollTarget = localStorage.getItem(buttonId + '_scrollTarget');
               if (scrollTarget) {

@@ -211,4 +211,10 @@
         </div>
     </div>
 </section>
+<div class="sticky-button-eoi">
+    <a href="<?php echo base_url(''); ?>include/web/custom/Download_EoI.pdf" download="" target="_blank" >
+        <span>Download EoI</span>
+        <i class="far fa-download" aria-hidden="true"></i>
+    </a>
+</div>
 <?php include_once __DIR__ . '/../common/footer.php'; ?>
