@@ -170,11 +170,11 @@
         </div>
     </div>
 </section>
-<section class="gallery-section gray-bg  pt-50 pb-50" id="aptChoiceDes">
+<!-- <section class="gallery-section gray-bg  pt-50 pb-50" id="aptChoiceDes">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div class="section-title text-center mb-50 wow fadeInDown">
+                <div class="section-title text-center mb-20 wow fadeInDown">
                     <span class="sub-title"> <img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> Why is Sangam an Apt Choice?</span>
                     <h2>The Blueprint for Future Infrastructure Planning</h2>
                 </div>
@@ -332,19 +332,19 @@
             </div>
         </div>
     </div>
-</section>
-<section class="features-seciton pt-50 pb-0" id="matterNowDes">
-    <div class="container-fluid p-0">
-        <div class="row align-items-xl-end">
+</section> -->
+<section class="features-section pt-50 pb-0" id="matterNowDes">
+    <div class="container">
+        <div class="row align-items-end">
             <div class="col-md-12">
-                <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
                     <span class="sub-title"> <img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> The Evolution of Digital Twin Technology</span>
                     <h2>Decade of Change in Data and Processing</h2>
                 </div>
             </div>
-            <div class="col-lg-12 p-0">
-                <div class="features-image-box mb-20 wow fadeInLeft d-flex justify-content-center" style="visibility: visible;">
-                    <img src="<?php echo base_url(''); ?>include/web/custom/Matters_Now.png" width="100%" alt="Features Image">
+            <div class="col-lg-12">
+                <div class="features-image-box mb-20 wow fadeInLeft text-center" style="visibility: visible;">
+                    <img src="<?php echo base_url(''); ?>include/web/custom/Matters_Now.png" class="img-fluid" alt="Features Image">
                 </div>
             </div>
         </div>
@@ -378,7 +378,7 @@
     <div class="shape shape-three">
         <span><img src="<?php echo base_url(''); ?>include/web/images/shape/leaf-3.png" alt="Leaf Png"></span>
     </div>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-9 col-lg-12">
                 <div class="section-title text-white text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
@@ -513,93 +513,67 @@
     </div>
 </section>
 <section class="about-section pt-50 pb-50" id="processOfSangamDes">
-    <div class="container-fluid">
-        <div class="about-wrapper wow fadeInUp" style="visibility: visible;">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-12 col-lg-12">
-                        <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                            <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt="">Participant Outreach and Engagement</span>
-                            <h2>Process of Sangam</h2>
-                            <p>DoT would begin this journey with a campaign to engage with potential participants, including industry experts, academia, and other relevant stakeholders, to ensure widespread awareness and interest.<br>
-                                DoT plans to conduct three physical (in-person) meetings before the deadline for EoI submission and planned meetings are aimed to engage prospective candidates and generate enthusiasm for participation. The agenda is crafted to offer a diverse and enriching experience, featuring speakers who are leaders and innovators in their respective fields.
-                            </p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                    <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt="">Participant Outreach and Engagement</span>
+                    <h2>Process of Sangam</h2>
+                    <p>DoT would begin this journey with a campaign to engage with potential participants, including industry experts, academia, and other relevant stakeholders, to ensure widespread awareness and interest.<br>
+                        DoT plans to conduct three physical (in-person) meetings before the deadline for EoI submission and planned meetings are aimed to engage prospective candidates and generate enthusiasm for participation. The agenda is crafted to offer a diverse and enriching experience, featuring speakers who are leaders and innovators in their respective fields.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 first_stage">
+                <div class="about-three_content-box wow fadeInRight" style="visibility: visible;">
+                    <div class="section-title mb-25 wow fadeInUp text-center" style="visibility: visible;">
+                        <span class="sub-title">STAGE-I</span>
+                        <h3>Exploratory</h3>
+                    </div>
+                    <div class="fancy-about-item mb-40 wow fadeInUp" style="visibility: visible;">
+                        <div class="text">
+                            <h5><i class="far fa-angle-double-right"></i>Clarity on the Horizon <br> <small>Understanding 'Digital Twin: Sangam'</small> </h5>
+                            <p>Begin your journey with a clear understanding of the 'Digital Twin: Sangam' initiative. This stage is designed to illuminate the project's objectives, scope, and potential impact, setting a solid foundation for all participants.</p>
+                        </div>
+                    </div>
+                    <div class="fancy-about-item mb-40 wow fadeInUp" style="visibility: visible;">
+                        <div class="text">
+                            <h5><i class="far fa-angle-double-right"></i>Creative Exploration <br> <small>Unleashing Potential</small> </h5>
+                            <p>Encouraged to push the boundaries of conventional thinking, participants delve into the realm of possibilities. This phase is all about innovation, allowing for the exploration of creative solutions and novel approaches within the framework of 'Digital Twin: Sangam'.</p>
+                        </div>
+                    </div>
+                    <div class="fancy-about-item mb-40 wow fadeInUp" style="visibility: visible;">
+                        <div class="text">
+                            <h5><i class="far fa-angle-double-right"></i>Confidence in Commitment <br> <small>Shaping Stage-II</small> </h5>
+                            <p>With a firm grasp of the initiative's goals and a creative mind-set in place, participants are poised to confidently select their path for Stage-II. This critical juncture is about making informed decisions on how to contribute most effectively to the collective vision of 'Digital Twin: Sangam'.</p>
                         </div>
                     </div>
                 </div>
-                <div class="row align-items-xl-center">
-                    <div class="col-xl-6 col-lg-12 first_stage">
-                        <div class="about-three_content-box pl-lg-0 wow fadeInRight" style="visibility: visible;">
-                            <div class="section-title mb-25 wow fadeInUp text-center" style="visibility: visible;">
-                                <span class="sub-title">STAGE-I</span>
-                                <h3>Exploratory</h3>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="fancy-about-item mb-40 wow fadeInUp" style="visibility: visible;">
-                                        <div class="text">
-                                            <h5><i class="far fa-angle-double-right"></i>Clarity on the Horizon <br> <small>Understanding 'Digital Twin: Sangam'</small> </h5>
-                                            <p>Begin your journey with a clear understanding of the 'Digital Twin: Sangam' initiative. This stage is designed to illuminate the project's objectives, scope, and potential impact, setting a solid foundation for all participants.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="fancy-about-item mb-40 wow fadeInUp" style="visibility: visible;">
-                                        <div class="text">
-                                            <h5><i class="far fa-angle-double-right"></i>Creative Exploration <br> <small>Unleashing Potential</small> </h5>
-                                            <p>Encouraged to push the boundaries of conventional thinking, participants delve into the realm of possibilities. This phase is all about innovation, allowing for the exploration of creative solutions and novel approaches within the framework of 'Digital Twin: Sangam'.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="fancy-about-item mb-40 wow fadeInUp" style="visibility: visible;">
-                                        <div class="text">
-                                            <h5><i class="far fa-angle-double-right"></i>Confidence in Commitment <br> <small>Shaping Stage-II</small> </h5>
-                                            <p>With a firm grasp of the initiative's goals and a creative mind-set in place, participants are poised to confidently select their path for Stage-II. This critical juncture is about making informed decisions on how to contribute most effectively to the collective vision of 'Digital Twin: Sangam'.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            </div>
+            <div class="col-md-6 second_stage">
+                <div class="about-three_content-box wow fadeInRight" style="visibility: visible;">
+                    <div class="section-title mb-25 wow fadeInUp text-center" style="visibility: visible;">
+                        <span class="sub-title">STAGE-II</span>
+                        <h3>Advancing the Vision</h3>
+                    </div>
+                    <div class="fancy-about-item mb-40 wow fadeInUp" style="visibility: visible;">
+                        <div class="text">
+                            <h5><i class="far fa-angle-double-right"></i>Defining Exact Requirements </h5>
+                            <p>Building upon the clarity achieved in Stage-I, Stage-II focuses on articulating precise requirements for the selected use cases, ensuring a solid foundation for development.</p>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-12 second_stage">
-                        <div class="about-three_content-box pl-lg-0 wow fadeInRight" style="visibility: visible;">
-                            <div class="section-title mb-25 wow fadeInUp text-center" style="visibility: visible;">
-                                <span class="sub-title">STAGE-II</span>
-                                <h3>Advancing the Vision</h3>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="fancy-about-item mb-40 wow fadeInUp" style="visibility: visible;">
-                                        <div class="text">
-                                            <h5><i class="far fa-angle-double-right"></i>Defining Exact Requirements </h5>
-                                            <p>Building upon the clarity achieved in Stage-I, Stage-II focuses on articulating precise requirements for the selected use cases, ensuring a solid foundation for development.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="fancy-about-item mb-40 wow fadeInUp" style="visibility: visible;">
-                                        <div class="text">
-                                            <h5><i class="far fa-angle-double-right"></i>Collaborative Development</h5>
-                                            <p>Encouraging participants to work together in refining and developing their ideas into actionable solutions, leveraging the collective intelligence and resources gathered during the exploratory phase.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="fancy-about-item mb-40 wow fadeInUp" style="visibility: visible;">
-                                        <div class="text">
-                                            <h5><i class="far fa-angle-double-right"></i>Preparation for Implementation </h5>
-                                            <p>Participants finalise their proposals, readying them for the practical demonstration phase. This stage solidifies the confidence and commitment to turn imaginative concepts into reality, setting the stage for impactful innovation. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                                            <small>&nbsp;</small>
-                                            <p class="hideMobile">
-                                                <br><small>&nbsp;</small>
-                                                <br><small>&nbsp;</small>
-
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="fancy-about-item mb-40 wow fadeInUp" style="visibility: visible;">
+                        <div class="text">
+                            <h5><i class="far fa-angle-double-right"></i>Collaborative Development</h5>
+                            <p>Encouraging participants to work together in refining and developing their ideas into actionable solutions, leveraging the collective intelligence and resources gathered during the exploratory phase.</p>
+                        </div>
+                    </div>
+                    <div class="fancy-about-item mb-40 wow fadeInUp" style="visibility: visible;">
+                        <div class="text">
+                            <h5><i class="far fa-angle-double-right"></i>Preparation for Implementation </h5>
+                            <p>Participants finalise their proposals, readying them for the practical demonstration phase. This stage solidifies the confidence and commitment to turn imaginative concepts into reality, setting the stage for impactful innovation.</p>
                         </div>
                     </div>
                 </div>
@@ -627,7 +601,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <div class="fancy-about-item mb-40  content-individuals">
+                                <div class="fancy-about-item fancy_about_item__ mb-40  content-individuals">
                                     <div class="text">
                                         <h5> Registration Eligibility Guidelines for Individuals</h5>
                                         <ul class="check-style-one mb-60">
@@ -641,7 +615,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="fancy-about-item mb-40  hide-content content-organizations">
+                                <div class="fancy-about-item fancy_about_item__ mb-40  hide-content content-organizations">
                                     <div class="text">
                                         <h5>Registration Eligibility Guidelines for Organizations</h5>
                                         <ul class="check-style-one mb-60">

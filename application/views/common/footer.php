@@ -39,7 +39,7 @@
                                   <ul class="footer-nav">
                                       <li><a href="<?php echo base_url('about') ?>">About</a></li>
                                       <li class="processOfSangamBtn"><a href="javascript:void(0)">Process of Sangam</a></li>
-                                      <!-- <li><a href="#">Sequence of Events</a></li> -->
+                                    
                                       <li class="faqsBtn"><a href="javascript:void(0)">FAQs</a></li>
                                   </ul>
                               </div>
@@ -135,7 +135,7 @@
           $(".content-organizations").hide();
           $(".buttonTab ul li button").click(function() {
               var tabKey = $(this).attr("data-rb-event-key");
-              $(".fancy-about-item").hide();
+              $(".fancy_about_item__").hide();
               if (tabKey === "tab1") {
                   $(".content-individuals").show();
               } else if (tabKey === "tab2") {
@@ -298,5 +298,4 @@
       //   });
   </script>
   </body>
-
   </html>

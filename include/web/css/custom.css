@@ -423,7 +423,7 @@ section h2 {
     -ms-transition: all 0.3s ease-out 0s;
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
-    min-height: 400px;
+    min-height: 485px;
 }
 
 #declineBtn:hover {
@@ -751,18 +751,22 @@ section h2 {
 .about-two_image-box img {
     border-radius: 50%;
 }
-.about-features-item .description ul li{color: #fff;}
+
+.about-features-item .description ul li {
+    color: #fff;
+}
 
 @media only screen and (max-width: 969px) {
     .header-navigation .main-menu ul>li>a {
-            position: relative;
-            display: block;
-            font: 600 14px 'Montserrat Alternates', sans-serif;
-            line-height: normal;
-            padding: 38px 0;
-            text-transform: capitalize;
-            line-height: 1;
-        }
+        position: relative;
+        display: block;
+        font: 600 14px 'Montserrat Alternates', sans-serif;
+        line-height: normal;
+        padding: 38px 0;
+        text-transform: capitalize;
+        line-height: 1;
+    }
+
     .tooltip-container {
         position: relative;
         display: inherit;
@@ -1070,5 +1074,13 @@ section h2 {
         z-index: 999;
         -webkit-animation: sticky 1.2s;
         animation: sticky 1.2s;
+    }
+
+    .accordion-card .accordion-header h6.accordion-title {
+        font-size: 14px;
+    }
+
+    .features-list li {
+        font: 600 14px 'Montserrat Alternates', sans-serif;
     }
 }
