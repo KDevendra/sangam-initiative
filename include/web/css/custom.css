@@ -618,7 +618,8 @@ section h2 {
 }
 
 .sticky-button-eoi a span {
-    writing-mode: vertical-rl;
+    /* writing-mode: vertical-rl; */
+    writing-mode: inherit;
     text-orientation: upright;
     font-size: 14px;
     margin-bottom: 10px;

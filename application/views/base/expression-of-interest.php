@@ -213,7 +213,7 @@
 </section>
 <div class="sticky-button-eoi">
     <a href="<?php echo base_url(''); ?>include/web/custom/Download_EoI.pdf" download="" target="_blank">
-        <span>Download EoI</span>
+        <span>Download EoI (PDF)</span>
         <i class="far fa-download" aria-hidden="true"></i>
     </a>
 </div>

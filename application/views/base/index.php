@@ -20,10 +20,10 @@
                         <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration">
                             <i class="far fa-table" aria-hidden="true"></i> Pre-Registration
                         </a>
-                        <a class="main-btn golden-btn mb-10 preRegisBtn btn_green" href="javascript:void(0)" id="whyToJoinBtn">
+                        <a class="main-btn golden-btn mb-10 preRegisBtn btn_green whyToJoinBtn" href="javascript:void(0)">
                             <i class="far fa-question-circle" aria-hidden="true"></i> Why to Join
                         </a>
-                        <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration">
+                        <a class="main-btn golden-btn mb-10 preRegisBtn howToJoin" href="javascript:void(0)">
                             <i class="far fa-user" aria-hidden="true"></i> How to Join
                         </a>
                     </div>
@@ -170,7 +170,7 @@
         </div>
     </div>
 </section>
-<!-- <section class="gallery-section gray-bg  pt-50 pb-50" id="aptChoiceDes">
+<section class="gallery-section gray-bg  pt-50 pb-50" id="aptChoiceDes">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -332,13 +332,16 @@
             </div>
         </div>
     </div>
-</section> -->
+</section>
 <section class="features-section pt-50 pb-0" id="matterNowDes">
     <div class="container">
         <div class="row align-items-end">
             <div class="col-md-12">
                 <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                    <span class="sub-title"> <img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> The Evolution of Digital Twin Technology</span>
+                    <span class="sub-title"> <img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt="">
+                        Why does it matter now?
+                        <!-- The Evolution of Digital Twin Technology -->
+                    </span>
                     <h2>Decade of Change in Data and Processing</h2>
                 </div>
             </div>
@@ -807,14 +810,14 @@
                     <img src="<?php echo base_url(''); ?>include/web/custom/NextGen_Synergy.jpg" alt="Project Image">
                     <div class="hover-content">
                         <div class="text text-white">
-                            <h3 class="title"><a href="">Collaborating Towards a Future of Possibilities</a></h3>
-                            <p>Step into the future with our NextGen Synergy initiative. We're tearing down barriers and fostering collaboration across sectors in real-time. Through dynamic approaches like scenario modeling and evidence-based integration planning, we're reshaping the landscape of innovation. </p>
+                            <h3 class="title"><a href="">Coming Soon</a></h3>
+                            <!-- <p>Step into the future with our NextGen Synergy initiative. We're tearing down barriers and fostering collaboration across sectors in real-time. Through dynamic approaches like scenario modeling and evidence-based integration planning, we're reshaping the landscape of innovation. </p> -->
                             <a href="" class="icon-btn"><i class="fal fa-long-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
                         <div class="text text-white">
-                            <h3 class="title"><a href="">NextGen Synergy: Bridging Boundaries for Innovation</a></h3>
+                            <h3 class="title"><a href="">Coming Soon</a></h3>
                         </div>
                     </div>
                 </div>
@@ -824,14 +827,14 @@
                     <img src="<?php echo base_url(''); ?>include/web/custom/Collaborative_Solutions.jpg" alt="Project Image">
                     <div class="hover-content">
                         <div class="text text-white">
-                            <h3 class="title"><a href="">Collaborative Solutions for Future Challenges</a></h3>
-                            <p>Experience the power of synergy with our innovative program. We're bringing together diverse perspectives and expertise to tackle tomorrow's challenges. Through cutting-edge techniques like scenario modeling and evidence-based integration planning.</p>
+                            <h3 class="title"><a href="">Coming Soon</a></h3>
+                            <!-- <p>Experience the power of synergy with our innovative program. We're bringing together diverse perspectives and expertise to tackle tomorrow's challenges. Through cutting-edge techniques like scenario modeling and evidence-based integration planning.</p> -->
                             <a href="" class="icon-btn"><i class="fal fa-long-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
                         <div class="text text-white">
-                            <h3 class="title"><a href="">Synergize: Shaping Tomorrow, Together</a></h3>
+                            <h3 class="title"><a href="">Coming Soon</a></h3>
                         </div>
                     </div>
                 </div>
@@ -841,14 +844,14 @@
                     <img src="<?php echo base_url(''); ?>include/web/custom/Building_Bridges_Across_Sectors.jpg" alt="Project Image">
                     <div class="hover-content">
                         <div class="text text-white">
-                            <h3 class="title"><a href="">Building Bridges Across Sectors</a></h3>
-                            <p>Our program brings together stakeholders from various sectors to tackle complex challenges. Through forward-thinking approaches like scenario modeling and evidence-based integration planning.</p>
+                            <h3 class="title"><a href="">Coming Soon</a></h3>
+                            <!-- <p>Our program brings together stakeholders from various sectors to tackle complex challenges. Through forward-thinking approaches like scenario modeling and evidence-based integration planning.</p> -->
                             <a href="" class="icon-btn"><i class="fal fa-long-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
                         <div class="text text-white">
-                            <h3 class="title"><a href="">Unified Futures: Collaborating for Change</a></h3>
+                            <h3 class="title"><a href="">Coming Soon</a></h3>
                         </div>
                     </div>
                 </div>
@@ -858,14 +861,14 @@
                     <img src="<?php echo base_url(''); ?>include/web/custom/NextGen_Synergy.jpg" alt="Project Image">
                     <div class="hover-content">
                         <div class="text text-white">
-                            <h3 class="title"><a href="">Collaborating Towards a Future of Possibilities</a></h3>
-                            <p>Step into the future with our NextGen Synergy initiative. We're tearing down barriers and fostering collaboration across sectors in real-time. Through dynamic approaches like scenario modeling and evidence-based integration planning, we're reshaping the landscape of innovation. </p>
+                            <h3 class="title"><a href="">Coming Soon</a></h3>
+                            <!-- <p>Step into the future with our NextGen Synergy initiative. We're tearing down barriers and fostering collaboration across sectors in real-time. Through dynamic approaches like scenario modeling and evidence-based integration planning, we're reshaping the landscape of innovation. </p> -->
                             <a href="" class="icon-btn"><i class="fal fa-long-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
                         <div class="text text-white">
-                            <h3 class="title"><a href="">NextGen Synergy: Bridging Boundaries for Innovation</a></h3>
+                            <h3 class="title"><a href="">Coming Soon</a></h3>
                         </div>
                     </div>
                 </div>
@@ -875,14 +878,14 @@
                     <img src="<?php echo base_url(''); ?>include/web/custom/Collaborative_Solutions.jpg" alt="Project Image">
                     <div class="hover-content">
                         <div class="text text-white">
-                            <h3 class="title"><a href="">Collaborative Solutions for Future Challenges</a></h3>
-                            <p>Experience the power of synergy with our innovative program. We're bringing together diverse perspectives and expertise to tackle tomorrow's challenges. Through cutting-edge techniques like scenario modeling and evidence-based integration planning.</p>
+                            <h3 class="title"><a href="">Coming Soon</a></h3>
+                            <!-- <p>Experience the power of synergy with our innovative program. We're bringing together diverse perspectives and expertise to tackle tomorrow's challenges. Through cutting-edge techniques like scenario modeling and evidence-based integration planning.</p> -->
                             <a href="" class="icon-btn"><i class="fal fa-long-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
                         <div class="text text-white">
-                            <h3 class="title"><a href="">Synergize: Shaping Tomorrow, Together</a></h3>
+                            <h3 class="title"><a href="">Coming Soon</a></h3>
                         </div>
                     </div>
                 </div>
@@ -892,14 +895,14 @@
                     <img src="<?php echo base_url(''); ?>include/web/custom/Building_Bridges_Across_Sectors.jpg" alt="Project Image">
                     <div class="hover-content">
                         <div class="text text-white">
-                            <h3 class="title"><a href="">Building Bridges Across Sectors</a></h3>
-                            <p>Our program brings together stakeholders from various sectors to tackle complex challenges. Through forward-thinking approaches like scenario modeling and evidence-based integration planning.</p>
+                            <h3 class="title"><a href="">Coming Soon</a></h3>
+                            <!-- <p>Our program brings together stakeholders from various sectors to tackle complex challenges. Through forward-thinking approaches like scenario modeling and evidence-based integration planning.</p> -->
                             <a href="" class="icon-btn"><i class="fal fa-long-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
                         <div class="text text-white">
-                            <h3 class="title"><a href="">Unified Futures: Collaborating for Change</a></h3>
+                            <h3 class="title"><a href="">Coming Soon</a></h3>
                         </div>
                     </div>
                 </div>

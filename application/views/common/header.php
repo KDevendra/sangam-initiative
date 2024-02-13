@@ -205,7 +205,7 @@
                                 <li class="menu-item has-children">
                                     <a href="<?php echo base_url('about'); ?>">About</a>
                                     <ul class="sub-menu">
-                                        <li><a href="javascript:void(0)" id="aptChoiceBtn">Why is Sangam an apt choice?
+                                        <li><a href="javascript:void(0)" class="aptChoiceBtn">Why is Sangam an apt choice?
                                             </a>
                                         </li>
                                         <li><a href="javascript:void(0)" id="matterNowBtn">Why does it matter now?</a></li>
