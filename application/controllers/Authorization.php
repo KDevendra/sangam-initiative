@@ -6,25 +6,51 @@ class Authorization extends CI_Controller
     private function mainEmailConfig($to, $subject, $message, $cc = "", $attach = "")
     {
         try {
-            $this->load->library("email");
-            $config = ["protocol" => "smtp", "smtp_host" => "smtp.hostinger.com", "smtp_port" => 465, "smtp_user" => "developers@keywordhike.com", "smtp_pass" => "DevelopersTeam@#2023", "smtp_crypto" => "ssl", "mailtype" => "html", "crlf" => "\r\n", "newline" => "\r\n", "charset" => "utf-8", "wordwrap" => true,];
-            $this->email->initialize($config);
-            $this->email->set_crlf("\r\n");
-            $this->email->set_newline("\r\n");
-            $this->email->from($config["smtp_user"]);
-            $this->email->to($to);
-            if ($cc !== "") {
-                $this->email->cc($cc);
-            }
-            $this->email->subject($subject);
-            $this->email->message($message);
-            if ($attach !== "") {
-                $this->email->attach($attach);
-            }
-            if ($this->email->send()) {
-                return true;
+            $query = $this->BaseModel->getData('email_config', ['is_active' => 1])->row();
+            if ($query) {
+                $this->load->library("email");
+
+                $config = [
+                    "protocol" => $query->protocol,
+                    "smtp_host" => $query->smtp_host,
+                    "smtp_port" => $query->smtp_port,
+                    "smtp_user" => $query->smtp_user,
+                    "smtp_pass" => $query->smtp_pass,
+                    "smtp_crypto" => $query->smtp_crypto,
+                    "mailtype" => $query->mailtype,
+                    "crlf" => $query->crlf,
+                    "newline" => $query->newline,
+                    "charset" => $query->charset,
+                    "wordwrap" => $query->wordwrap
+                ];
+
+                $this->email->initialize($config);
+                $this->email->set_crlf($query->crlf);
+                $this->email->set_newline($query->newline);
+
+                $this->email->from($query->smtp_user);
+
+                $this->email->to($to);
+
+                if ($cc !== "") {
+                    $this->email->cc($cc);
+                }
+
+                $this->email->subject($subject);
+                $this->email->message($message);
+
+                if ($attach !== "") {
+                    $this->email->attach($attach);
+                }
+
+                if ($this->email->send()) {
+                    return true;
+                } else {
+                    echo $this->email->print_debugger();
+                    return false;
+                }
             } else {
-                echo $this->email->print_debugger();
+                echo "No active email configuration found.";
                 return false;
             }
         } catch (Exception $e) {
@@ -32,6 +58,7 @@ class Authorization extends CI_Controller
             return false;
         }
     }
+
     public function __construct()
     {
         parent::__construct();
@@ -232,7 +259,6 @@ class Authorization extends CI_Controller
             $this->load->view("authorization/verify-reset-password", $data);
         } catch (Exception $e) {
             log_message("error", $e->getMessage());
-            // Provide feedback to the user about the error
             $this->session->set_flashdata("error", "An error occurred during password reset verification. Please try again later.");
             return redirect('server-down');
         }
