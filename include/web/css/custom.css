@@ -263,6 +263,13 @@ ul.check-style-one li i {
         sans-serif;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+.features_list_block li span {
+    display: block;
+    margin-left: 35px;
+    margin-top: 3px;
+    font-size: 15px;
+    font-weight: initial;
+}.single-process-item .icon img{padding: 15px;}
 
 .skills-section .buttonTab .nav-link {
     font: 600 22px "Montserrat",
@@ -359,7 +366,7 @@ ul.check-style-one li i {
 .site-branding img {
     height: 85px;
 }
-
+.p__5px{padding-left: 5px;}
 .banner-title-sub {
     font-size: 20px;
     color: #fff;
@@ -369,7 +376,13 @@ ul.check-style-one li i {
     margin-bottom: 25px;
 
 }
-
+.m__25px{margin-left: 25px;}
+.m__25px li{
+    display:block !important
+    /* margin-left: 25px; */
+}
+.color_reed{color: #ff00009c;}
+.___Important_Note li i{color: #ffffff; background-color: #ff00009c !important;margin-top: -22px;display: -webkit-inline-box !important;}
 .single-project-item-four .project-img .hover-content .text h3.title {
     font-size: 18px;
     font-weight: bold;
@@ -476,7 +489,7 @@ section h2 {
     -ms-transition: all 0.3s ease-out 0s;
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
-    min-height: 485px;
+    min-height: 545px;
 }
 
 #declineBtn:hover {
@@ -547,6 +560,11 @@ section h2 {
     font-size: 20px;
 }
 
+.features_list_block li{display: block;}
+.features_list_block li span{
+    /* display: block; */
+    margin-left: 30px;
+}
 .tooltip-content::before {
     content: '';
     position: absolute;
@@ -621,13 +639,14 @@ section h2 {
 
 .hero-wrapper-one {
     position: absolute;
-    top: 240px;
+    top: 280px;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
 }
 
+.about-features-item ul li{color: #fff;}
 .sticky-button {
     position: absolute;
     top: 37%;
@@ -1029,7 +1048,7 @@ section h2 {
     } */
 .hero-wrapper-one {
     position: absolute;
-    top: 225px;
+    top: 130px;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;

@@ -16,6 +16,7 @@ $route['about/process'] = 'BaseController/process';
 $route['about/faqs'] = 'BaseController/faqs';
 $route['about/curated-content'] = 'BaseController/curatedContent';
 $route['about/pre-registration'] = 'BaseController/preRegistration';
+$route['get-involved'] = 'BaseController/getInvolved';
 // Routes for Events section
 $route['events'] = 'BaseController/events';
 $route['events/upcoming-events'] = 'BaseController/upcomingEvents';

@@ -169,7 +169,7 @@
             scrollToElement('EoILearnMoreDes', 200);
             var buttonId = $(this).attr('id');
             localStorage.setItem(buttonId + '_scrollTarget', 'stagesOfEoIDes');
-            window.location.href = '<?php echo base_url('');?>expression-of-interest';
+            window.location.href = '<?php echo base_url(''); ?>expression-of-interest';
         });
         $('#exploreBtn').on('click', function(event) {
             event.preventDefault();
@@ -235,6 +235,13 @@
             localStorage.setItem(buttonId + '_scrollTarget', 'faqsDes');
             window.location.href = "<?php echo base_url(''); ?>";
         });
+        $('.eligibilityGuidelinesBtn').on('click', function(event) {
+            event.preventDefault();
+            scrollToElement('participateDes', 0);
+            var buttonId = $(this).attr('id');
+            localStorage.setItem(buttonId + '_scrollTarget', 'eligibilityGuidelinesDes');
+            window.location.href = "<?php echo base_url(''); ?>";
+        });
         $('#curatedContentBtn').on('click', function(event) {
             event.preventDefault();
             scrollToElement('participateDes', 0);
@@ -243,7 +250,7 @@
             window.location.href = "<?php echo base_url(''); ?>";
         });
 
-        $('#EoILearnMore, .aptChoiceBtn, #matterNowBtn, .participateBtn, .whyToJoinBtn,.contactUsBtn, .processOfSangamBtn, .stagesOfEoIBtn, .faqsBtn, #curatedContentBtn').each(function() {
+        $('#EoILearnMore, .aptChoiceBtn,.eligibilityGuidelinesBtn, #matterNowBtn, .participateBtn, .whyToJoinBtn,.contactUsBtn, .processOfSangamBtn, .stagesOfEoIBtn, .faqsBtn, #curatedContentBtn').each(function() {
             var buttonId = $(this).attr('id');
             var scrollTarget = localStorage.getItem(buttonId + '_scrollTarget');
             if (scrollTarget) {
@@ -312,4 +319,5 @@ if (ENVIRONMENT === 'development') {
 }
 ?>
 </body>
+
 </html>
