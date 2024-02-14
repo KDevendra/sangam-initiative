@@ -242,6 +242,13 @@
             localStorage.setItem(buttonId + '_scrollTarget', 'eligibilityGuidelinesDes');
             window.location.href = "<?php echo base_url(''); ?>";
         });
+        $('.outreachBtn').on('click', function(event) {
+            event.preventDefault();
+            scrollToElement('outreachDes', 0);
+            var buttonId = $(this).attr('id');
+            localStorage.setItem(buttonId + '_scrollTarget', 'outreachDes');
+            window.location.href = "<?php echo base_url(''); ?>";
+        });
         $('#curatedContentBtn').on('click', function(event) {
             event.preventDefault();
             scrollToElement('participateDes', 0);
@@ -250,7 +257,7 @@
             window.location.href = "<?php echo base_url(''); ?>";
         });
 
-        $('#EoILearnMore, .aptChoiceBtn,.eligibilityGuidelinesBtn, #matterNowBtn, .participateBtn, .whyToJoinBtn,.contactUsBtn, .processOfSangamBtn, .stagesOfEoIBtn, .faqsBtn, #curatedContentBtn').each(function() {
+        $('#EoILearnMore,.outreachBtn, .aptChoiceBtn, .eligibilityGuidelinesBtn, #matterNowBtn, .participateBtn, .whyToJoinBtn,.contactUsBtn, .processOfSangamBtn, .stagesOfEoIBtn, .faqsBtn, #curatedContentBtn').each(function() {
             var buttonId = $(this).attr('id');
             var scrollTarget = localStorage.getItem(buttonId + '_scrollTarget');
             if (scrollTarget) {

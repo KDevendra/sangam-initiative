@@ -9,11 +9,19 @@
     height: 60px;
     margin-bottom: 10px;
 }
-
+#getInvolved {
+    padding: 15px 11px !important;
+    /* color: ; */
+    color: #fff !important;
+    font-size: 18px;
+}
+#getInvolved i{margin-right: 5px;}
 .single-service-item .service-info .shape.icon-shape img {
     opacity: 0.1;
 }
-
+.border_bottom{
+    border-bottom: 1px solid #d7ddda;
+}
 .service-info .icon-shape {
     top: 9px;
 }
@@ -315,6 +323,7 @@ ul.check-style-one li i {
     background-color: #29c5f6 !important;
     color: #fff !important;
 }
+
 
 .exploreBtn {
     background-color: #030000 !important;
