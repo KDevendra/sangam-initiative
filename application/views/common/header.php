@@ -225,7 +225,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="<?php echo base_url('registration'); ?>">Pre-registration for Sangam Initiative </a>
+                                            <a href="javascript:void(0)" class="eligibilityGuidelinesBtn">Eligibility Guidelines </a>
                                         </li>
                                     </ul>
                                 </li>
@@ -257,12 +257,14 @@
                             </ul>
                         </nav>
                         <div class="menu-button mt-40 d-xl-none text-center">
+                            <a href="<?php echo base_url('get-involved') ?>" class="main-btn primary-btn">Get involved</a>
                             <a href="<?php echo base_url('living-list') ?>" class="main-btn primary-btn mb-10">Living List</a>
                             <a href="<?php echo base_url('registration') ?>" class="main-btn secondary-btn mb-10">Pre-Registration</a>
                         </div>
                     </div>
                     <div class="nav-right-item">
                         <div class="menu-button d-xl-block d-none">
+                            <a href="<?php echo base_url('get-involved') ?>" class="main-btn primary-btn">Get involved</a>
                             <a href="<?php echo base_url('living-list') ?>" class="main-btn primary-btn">Living List</a>
                             <a href="<?php echo base_url('registration') ?>" class="main-btn primary-btn">Pre-Registration</a>
                         </div>

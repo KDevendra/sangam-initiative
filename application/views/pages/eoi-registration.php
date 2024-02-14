@@ -144,9 +144,9 @@
                                                                     <a href="javascript:void(0)" class="text-muted"><i class="ri-info-i"></i></a>
                                                                 </div>
                                                             </label>
-                                                            <textarea name="previous_experience" class="form-control" id="previous_experience" width="100%" rows="3" required\><?php if (isset($userDetail->previous_experience)) {
-                                                                                                                                                                                    echo  $userDetail->previous_experience;
-                                                                                                                                                                                }; ?></textarea>
+                                                            <textarea name="previous_experience" class="form-control" id="previous_experience" width="100%" rows="3" required placeholder="Write your previous experience "><?php if (isset($userDetail->previous_experience)) {
+                                                                                                                                                                                                                                echo  $userDetail->previous_experience;
+                                                                                                                                                                                                                            }; ?></textarea>
                                                             <div class="invalid-feedback">Please enter a previous experience in related projects</div>
                                                         </div>
                                                         <div class="col-sm-12">
@@ -156,9 +156,9 @@
                                                                     <a href="javascript:void(0)" class="text-muted"><i class="ri-info-i"></i></a>
                                                                 </div>
                                                             </label>
-                                                            <textarea name="achievements_recognitions" class="form-control" id="achievements_recognitions" width="100%" rows="3" required\><?php if (isset($userDetail->achievements_recognitions)) {
-                                                                                                                                                                                                echo  $userDetail->achievements_recognitions;
-                                                                                                                                                                                            }; ?></textarea>
+                                                            <textarea name="achievements_recognitions" class="form-control" id="achievements_recognitions" width="100%" rows="3" required placeholder="Write your achievements or recognitions "><?php if (isset($userDetail->achievements_recognitions)) {
+                                                                                                                                                                                                                                                        echo  $userDetail->achievements_recognitions;
+                                                                                                                                                                                                                                                    }; ?></textarea>
                                                             <div class="invalid-feedback">Please enter a achievements or recognitions</div>
                                                         </div>
                                                     </div>
@@ -189,14 +189,14 @@
                                                             <label for="achievements_recognitions" id="additionalInformation" class="form-label">
                                                                 Strategic Vision
                                                             </label>
-                                                            <textarea name="achievements_recognitions" class="form-control" id="achievements_recognitions" width="100%" rows="2" required\></textarea>
-                                                            <div class="invalid-feedback">Please enter a achievements or recognitions</div>
+                                                            <textarea name="achievements_recognitions" placeholder="Write vision" class="form-control" id="achievements_recognitions" width="100%" rows="2" required\></textarea>
+                                                            <div class="invalid-feedback">Please enter a vision</div>
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <label for="achievements_recognitions" id="additionalInformation" class="form-label">
                                                                 Objectives
                                                             </label>
-                                                            <textarea name="achievements_recognitions" class="form-control" id="achievements_recognitions" width="100%" rows="2" required\></textarea>
+                                                            <textarea name="achievements_recognitions" placeholder="Write objectives" class="form-control" id="achievements_recognitions" width="100%" rows="2" required\></textarea>
                                                             <div class="invalid-feedback">Please enter a objectives</div>
                                                         </div>
                                                         <div class="col-sm-6">
@@ -206,7 +206,7 @@
                                                                     <a href="javascript:void(0)" class="text-muted"><i class="ri-info-i"></i></a>
                                                                 </div>
                                                             </label>
-                                                            <textarea name="achievements_recognitions" class="form-control" id="achievements_recognitions" width="100%" rows="2" required\></textarea>
+                                                            <textarea name="achievements_recognitions" placeholder="Write project goals" class="form-control" id="achievements_recognitions" width="100%" rows="2" required\></textarea>
                                                             <div class="invalid-feedback">Please enter a alignment with project goals</div>
                                                         </div>
                                                         <div class="col-sm-6">
@@ -216,7 +216,7 @@
                                                                     <a href="javascript:void(0)" class="text-muted"><i class="ri-info-i"></i></a>
                                                                 </div>
                                                             </label>
-                                                            <textarea name="achievements_recognitions" class="form-control" id="achievements_recognitions" width="100%" rows="2" required\></textarea>
+                                                            <textarea name="achievements_recognitions" placeholder="Write contribution" class="form-control" id="achievements_recognitions" width="100%" rows="2" required\></textarea>
                                                             <div class="invalid-feedback">Please enter a contribution to project goals</div>
                                                         </div>
                                                     </div>

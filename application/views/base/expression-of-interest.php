@@ -15,14 +15,17 @@
                     <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> Fostering Innovation in Infrastructure</span>
                     <h2>About EoI</h2>
                 </div>
-                <div class="service-info-wrapper pr-lg-40 wow fadeInDown" style="visibility: visible;">
-                    <ul class="check-style-one d-block mb-40">
+                <div class="service-info-wrapper pr-lg-20 wow fadeInDown" style="visibility: visible;">
+                    <ul class="check-style-one d-block mb-20">
                         <li> • The Department of Telecommunications (DoT) extends a special invitation to industry leaders, tech companies, experts, startups, institutions and innovators to participate in an <b>"Expression of Interest" (EoI)</b>. This invitation is anchored around an innovative "Proof of Concept" (PoC), <b>focused on revolutionising the Planning & Design of Infrastructure. At the heart of this PoC is the integration of Digital Twin technology with comprehensive mobility insights, drawing from a wide spectrum of data sources, including key insights from the telecom sector</b>.</li>
                         <li> • DoT is seeking forward-thinking contributors who are keen to explore how this convergence of digital technology and data can bring about a transformative shift in infrastructure planning and design.</li>
                         <li> • This EoI is not just an opportunity to contribute to a cutting-edge project; it is a platform to shape the future of infrastructure planning and design. The Proof of Concept (PoC) initiated under this <b>Expression of Interest (EoI)</b> is officially designated as 'PoC: Digital Twin - Sangam.'</li>
                         <li> • The <b>'Digital Twin - Sangam'</b> is designed to showcase how the integration of Digital Twin technology with state-of-the-art digital communication and computational tools can effectively address the challenge of infrastructure development and effective planning. The PoC will leverage technologies such as <b>Computer Vision and Artificial Intelligence (AI) </b>to play a pivotal role in analysing complex data sets, providing deeper insights into attendee behaviour and infrastructure usage. It is also aimed to leverage <b>Privacy Enhancing Technologies (PETs)</b>: Ensuring that the increased data collection and analysis uphold privacy standards is a key aspect of the PoC, addressing potential privacy concerns. <b><b>Internet of Things (IoT)</b></b> technology would be instrumental in real-time monitoring and management of event infrastructure, enhancing the capacity for responsive planning and design.</li>
                         <li> • In this context, nuanced insights and strategic planning become crucial to not only enrich the attendee experience but also to mitigate the strain on infrastructure and the environment
                     </ul>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <img class="mb-40" src="<?php echo base_url(''); ?>include/web/custom/About_EoI.png" alt="">
                 </div>
             </div>
             <div class="col-xl-12" id="stagesOfEoIDes">

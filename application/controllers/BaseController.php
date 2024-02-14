@@ -147,6 +147,11 @@ class BaseController extends CI_Controller
         $data['title'] = "Registration :: " . $this->projectTitle;
         $this->load->view('base/sign-up', $data);
     }
+    public function getInvolved()
+    {
+        $data['title'] = "Get Involved : " . $this->projectTitle;
+        $this->load->view('base/get-involved', $data);
+    }
     public function getCoreCompetency()
     {
         try {

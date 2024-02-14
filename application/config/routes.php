@@ -16,6 +16,7 @@ $route['about/process'] = 'BaseController/process';
 $route['about/faqs'] = 'BaseController/faqs';
 $route['about/curated-content'] = 'BaseController/curatedContent';
 $route['about/pre-registration'] = 'BaseController/preRegistration';
+$route['get-involved'] = 'BaseController/getInvolved';
 // Routes for Events section
 $route['events'] = 'BaseController/events';
 $route['events/upcoming-events'] = 'BaseController/upcomingEvents';
@@ -46,7 +47,7 @@ $route['post-forgot-password'] = 'Authorization/postForgotPassword';
 $route['resendOTP'] = 'Authorization/resendOTP';
 $route['forgot-password'] = 'Authorization/resetPassword';
 $route['server-down'] = 'Authorization/serverDown';
-// route for admin
+// route for user admin
 $route['admin-dashboard'] = 'AdminController/adminDashboard';
 $route['profile'] = 'AdminController/profile';
 $route['update-profile-image'] = 'AdminController/updateProfileImage';
@@ -54,9 +55,18 @@ $route['edit-profile/(:any)'] = 'AdminController/editProfile/$1';
 $route['logout'] = 'AdminController/logout';
 $route['change-password'] = 'AdminController/changePassword';
 $route['post-change-password'] = 'AdminController/postChangePassword';
-$route['eoi-form'] = 'AdminController/eoiForm';
+$route['eoi-registration'] = 'AdminController/eoiRegistration';
+$route['eoi-status'] = 'AdminController/eoiStatus';
+
+// route for admin
+$route['user-list'] = 'AdminController/userList';
+$route['get-user-list'] = 'AdminController/getUserList';
+$route['verifed-users'] = 'AdminController/verifedUsers';
+$route['unverified-users'] = 'AdminController/unverifiedUsers';
+$route['get-unverified-user-list'] = 'AdminController/getUnverifiedUserList';
+$route['get-verified-user-list'] = 'AdminController/getVerifiedUserList';
 //route for theme-customizer-options
 $route['project-settings'] = 'AdminController/projectSettings';
 $route['theme-customizer-options'] = 'AdminController/themeCustomizerOptions';
-$route['404_override'] = '';
+$route['404_override'] = 'ErrorController/index';
 $route['translate_uri_dashes'] = TRUE;

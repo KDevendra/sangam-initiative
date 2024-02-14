@@ -45,7 +45,7 @@
        <div class="dropdown sidebar-user m-1 rounded">
            <button type="button" class="btn material-shadow-none" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                <span class="d-flex align-items-center gap-2">
-                   <img class="rounded header-profile-user" src="<?php echo base_url(''); ?>include/admin/images/users/avatar-1.jpg" alt="Header Avatar" />
+                   <img class="rounded header-profile-user" src="<?php echo base_url(''); ?>include/admin/images/users/user-dummy-img.jpg" alt="Header Avatar" />
                    <span class="text-start">
                        <span class="d-block fw-medium sidebar-user-name-text">Anna Adame</span>
                        <span class="d-block fs-14 sidebar-user-name-sub-text"><i class="ri ri-circle-fill fs-10 text-success align-baseline"></i> <span class="align-middle">Online</span></span>
@@ -93,7 +93,7 @@
 
 
                         if (isset($menuItem['children'])) {
-                            $html .= ' collapsed" href="#sidebar' . ucfirst($menuItem['label']) . '" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebar' . ucfirst($menuItem['label']) . '"';
+                            $html .= ' collapsed" href="#sidebar' . ucfirst($menuItem['url']) . '" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebar' . ucfirst($menuItem['url']) . '"';
                         } else {
                             $html .= '" href="' . base_url($menuItem['url']) . '"';
                         }
@@ -101,7 +101,7 @@
                         $html .= '<i class="ri-' . $menuItem['icon'] . '"></i> <span data-key="t-' . strtolower($menuItem['label']) . '">' . $menuItem['label'] . '</span>';
                         $html .= '</a>';
                         if (isset($menuItem['children'])) {
-                            $html .= '<div class="collapse menu-dropdown" id="sidebar' . ucfirst($menuItem['label']) . '">';
+                            $html .= '<div class="collapse menu-dropdown" id="sidebar' . ucfirst($menuItem['url']) . '">';
                             $html .= '<ul class="nav nav-sm flex-column">';
                             $html .= generateMenuHtml($menuItem['children'], $userLevel);
                             $html .= '</ul>';

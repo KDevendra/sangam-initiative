@@ -1,58 +1,101 @@
 <?php include_once __DIR__ . '/../common/header.php'; ?>
+<!-- <section class="banner-section mt__150">
+    <video autoplay muted loop id="bgVideo">
+        <source src="<?php echo base_url('') ?>include/web/custom/bg_video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-wrapper-one __mp__100">
+        <div class="container text-center">
+            <h6 class="banner-subtitle">Department of Telecommunications (DoT)<br> <span>Calls For Expression of Interest (EoI) for participating in </span></h6>
+      
+            <div class="box_overlay">
+                <h1 class="banner-title">Sangam: <span>Digital Twin</span></h1>
+                <h4 class="banner-title-sub">AI-driven Insights</h4>
+                <h6>PROOF OF CONCEPT (POC)</h6>
+                <h5>CONFLUENCE OF INNOVATION</h5>
+                <p class="banner-description">Revolutionising Future Infrastructure Planning and Design</p>
+            </div>
+            <div class="hero-button mb-20">
+                <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration">
+                    <i class="far fa-table" aria-hidden="true"></i> Pre-Registration
+                </a>
+                <a class="main-btn golden-btn mb-10 preRegisBtn btn_green whyToJoinBtn" href="javascript:void(0)">
+                    <i class="far fa-question-circle" aria-hidden="true"></i> Why to Join
+                </a>
+                <a class="main-btn golden-btn mb-10 preRegisBtn howToJoin" href="javascript:void(0)">
+                    <i class="far fa-user" aria-hidden="true"></i> How to Join
+                </a>
+            </div>
+            <div class="hero-button mb-20">
+                <a class="main-btn golden-btn mb-10  ___p8_22" href="javascript:void(0)">
+                    Embracing the Future Together
+                </a>
+                <a class="main-btn golden-btn mb-10  ___p8_22" href="javascript:void(0)" ">
+                            Crafting Blueprint
+                        </a>
+                        <a class=" main-btn golden-btn mb-10 ___p8_22" href="javascript:void(0)">
+                    Pioneering Precision
+                </a>
+            </div>
+            <div class="hero-button mb-20">
+                <a class="main-btn mb-10 textExploreMore" id="exploreBtn" href="javascript:void(0)">
+                    Explore More <i class="far fa-angle-double-down" aria-hidden="true"></i>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section> -->
 <section class="banner-section mt__150">
     <video autoplay muted loop id="bgVideo">
         <source src="<?php echo base_url('') ?>include/web/custom/bg_video.mp4" type="video/mp4">
     </video>
     <div class="hero-wrapper-one __mp__100">
         <div class="container text-center">
-            <div class="row align-items-lg-center">
-                <div class="col-md-12">
-                    <h6 class="banner-subtitle">DEPARTMENT OF TELECOM (DoT) <br> <span>Calls For Expression Of Interest (EOI)</span></h6>
-                    <p class="text-white banner-para">For Participating In an Initiative</p>
-                    <div class="box_overlay">
-                        <h1 class="banner-title">Sangam: <span>Digital Twin</span></h1>
-                        <h4 class="banner-title-sub">AI-driven Insights</h4>
-                        <h5>PROOF OF CONCEPT (POC)</h5>
-                        <h6>CONFLUENCE OF INNOVATION</h6>
-                        <p class="banner-description">Revolutionising Future Infrastructure Planning and Design</p>
-                    </div>
-                    <div class="hero-button mb-20">
-                        <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration">
-                            <i class="far fa-table" aria-hidden="true"></i> Pre-Registration
-                        </a>
-                        <a class="main-btn golden-btn mb-10 preRegisBtn btn_green whyToJoinBtn" href="javascript:void(0)">
-                            <i class="far fa-question-circle" aria-hidden="true"></i> Why to Join
-                        </a>
-                        <a class="main-btn golden-btn mb-10 preRegisBtn howToJoin" href="javascript:void(0)">
-                            <i class="far fa-user" aria-hidden="true"></i> How to Join
-                        </a>
-                    </div>
-                    <div class="hero-button mb-20">
-                        <a class="main-btn golden-btn mb-10  ___p8_22" href="javascript:void(0)">
-                            Embracing the Future Together
-                        </a>
-                        <a class="main-btn golden-btn mb-10  ___p8_22" href="javascript:void(0)" ">
-                            Crafting Blueprint
-                        </a>
-                        <a class=" main-btn golden-btn mb-10 ___p8_22" href="javascript:void(0)">
-                            Pioneering Precision
-                        </a>
-                    </div>
-                    <div class="hero-button mb-20">
-                        <a class="main-btn mb-10 textExploreMore" id="exploreBtn" href="javascript:void(0)">
-                            Explore More <i class="far fa-angle-double-down" aria-hidden="true"></i>
-                        </a>
-
-                    </div>
+            <h6 class="banner-subtitle">Department of Telecommunications (DoT)<br> <span>Calls For Expression of Interest (EoI) for participating in </span></h6>
+            <div class="d-flex justify-content-center">
+                <div class="box_overlay">
+                    <h1 class="banner-title">Sangam: <span>Digital Twin</span></h1>
+                    <h4 class="banner-title-sub">AI-driven Insights</h4>
+                    <h6>PROOF OF CONCEPT (POC)</h6>
+                    <h5>CONFLUENCE OF INNOVATION</h5>
+                    <p class="banner-description">Revolutionising Future Infrastructure Planning and Design</p>
                 </div>
+            </div>
+            <div class="hero-button mb-20">
+                <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration">
+                    <i class="far fa-table" aria-hidden="true"></i> Pre-Registration
+                </a>
+                <a class="main-btn golden-btn mb-10 preRegisBtn btn_green whyToJoinBtn" href="<?php echo base_url(''); ?>include/web/custom/Download_EoI.pdf" download="" target="_blank">
+                    <i class="far fa-download" aria-hidden="true"></i> Download EoI
+                </a>
+                <!-- <a class="main-btn golden-btn mb-10 preRegisBtn howToJoin" href="javascript:void(0)">
+                    <i class="far fa-user" aria-hidden="true"></i> How to Join
+                </a> -->
+            </div>
+            <!-- <div class="hero-button mb-20">
+                <a class="golden-btn mb-10 ___p8_22" href="javascript:void(0)">
+                    Embracing the Future Together
+                </a>
+                <a class="golden-btn mb-10 ___p8_22" href="javascript:void(0)">
+                    Crafting Blueprint
+                </a>
+                <a class="golden-btn mb-10 ___p8_22" href="javascript:void(0)">
+                    Pioneering Precision
+                </a>
+            </div> -->
+            <div class="hero-button mb-20">
+                <a class="main-btn mb-10 textExploreMore" id="exploreBtn" href="javascript:void(0)">
+                    Explore More <i class="far fa-angle-double-down" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
     </div>
 </section>
+
 <section class="about-section pb-50" id="exploreBtnDes">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-lg-10">
+            <div class="col-lg-12">
                 <div class="about-wrapper-two gray-bg mt-minus-110 p-r wow fadeInDown" style="visibility: visible;" id="aboutWrapperTwo">
                     <div class="row no-gutters justify-content-center">
                         <div class="col-lg-4 col-md-6 col-sm-12">
@@ -60,8 +103,13 @@
                                 <div class="icon"><i class="flaticon-target"></i></div>
                                 <div class="text">
                                     <h3 class="title">Embracing the Future Together</h3>
-                                    <p>Fostering Collaboration Across Sectors</p>
-                                    <a class="btn-link read-more" href="javascript:void(0)" data-target="#empowering-innovation">Read More<i class="fas fa-arrow-right"></i></a>
+                                    <p>The Sangam Digital Twin Initiative </p>
+                                    <ul>
+                                        <li>• Fostering Collaboration Across Sectors.</li>
+                                        <li>• Harnessing Unified Data and Collective Intelligence.</li>
+                                        <li>• Innovating with Digital Twins and AI.</li>
+                                    </ul>
+                                    <!-- <a class="btn-link read-more" href="javascript:void(0)" data-target="#empowering-innovation">Read More<i class="fas fa-arrow-right"></i></a> -->
                                 </div>
                                 <div class="description" style="display: none;">
                                     <blockquote class="text-white">
@@ -82,17 +130,22 @@
                                 <div class="icon"><i class="flaticon-vision"></i></div>
                                 <div class="text">
                                     <h3 class="title">Crafting the Blueprint</h3>
-                                    <p>Shaping Future Infrastructure with Precision</p>
-                                    <a class="btn-link read-more" href="javascript:void(0)" data-target="#breaking-boundaries">Read More<i class="fas fa-arrow-right"></i></a>
+                                    <p> A Collaborative Journey Towards Innovative</p>
+                                    <ul>
+                                        <li>• Shaping Future Infrastructure with Precision.</li>
+                                        <li>• Empowering Visionary Design with Real-World Data.</li>
+                                        <li>• Cultivating a Culture of Iterative Innovation.</li>
+                                    </ul>
+                                    <!-- <a class="btn-link read-more" href="javascript:void(0)" data-target="#breaking-boundaries">Read More<i class="fas fa-arrow-right"></i></a> -->
                                 </div>
                                 <div class="description" style="display: none;">
                                     <blockquote class="text-white" id="font_white">
                                         A Collaborative Journey Towards Innovative
                                     </blockquote>
                                     <ul>
-                                        <li>Shaping Future Infrastructure with Precision.</li>
-                                        <li>Empowering Visionary Design with Real-World Data.</li>
-                                        <li>Cultivating a Culture of Iterative Innovation.</li>
+                                        <li>• Shaping Future Infrastructure with Precision.</li>
+                                        <li>• Empowering Visionary Design with Real-World Data.</li>
+                                        <li>• Cultivating a Culture of Iterative Innovation.</li>
                                     </ul>
                                 </div>
                                 <a class="btn-link back-button" id="font_white" href="javascript:void(0)" style="display: none;">Back<i class="fas fa-arrow-right"></i></a>
@@ -103,8 +156,13 @@
                                 <div class="icon"><i class="flaticon-management"></i></div>
                                 <div class="text">
                                     <h3 class="title">Pioneering Precision</h3>
-                                    <p>Redefining Infrastructure for a Connected World</p>
-                                    <a class="btn-link read-more" href="javascript:void(0)" data-target="#shaping-the-future">Read More<i class="fas fa-arrow-right"></i></a>
+                                    <p>Building Tomorrow's Infrastructure Today</p>
+                                    <ul>
+                                        <li>• Redefining Infrastructure for a Connected World.</li>
+                                        <li>• Collaborative Foundation for Visionary Infrastructure.</li>
+                                        <li>• Harnessing Unified Data for Sustainable Solutions.</li>
+                                    </ul>
+                                    <!-- <a class="btn-link read-more" href="javascript:void(0)" data-target="#shaping-the-future">Read More<i class="fas fa-arrow-right"></i></a> -->
                                 </div>
                                 <div class="description" style="display: none;">
                                     <blockquote class="text-white">
@@ -126,7 +184,7 @@
         </div>
     </div>
 </section>
-<section class="about-section gray-bg pt-50 pb-50">
+<!-- <section class="about-section gray-bg pt-50 pb-50">
     <div class="container">
         <div class="row align-items-xl-center">
             <div class="col-xl-6">
@@ -141,7 +199,7 @@
                 </div>
             </div>
             <div class="col-xl-6">
-                <div class="about-content-box pl-lg-60 mb-50 wow fadeInRight">
+                <div class="about-content-box pl-lg-60 mb-0 wow fadeInRight">
                     <div class="section-title mb-30">
                         <span class="sub-title"> <img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> A journey to Next Generation Planning</span>
                         <h2>About Sangam Initiative</h2>
@@ -165,6 +223,113 @@
                             </p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<section class="working-process-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-9 col-lg-12">
+                <div class="section-title text-center mb-60 wow fadeInDown" style="visibility: visible;">
+                    <span class="sub-title"> <img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> A journey to Next Generation Planning</span>
+                    <h2>Digital Twin Delivers on....</h2>
+                </div>
+            </div>
+        </div>
+        <div class="working-process-wrapper wow fadeInUp" style="visibility: visible;">
+            <div class="row no-lg-gutters">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-process-item">
+                        <div class="inner-process-item">
+                            <div class="step">NEW KNOWLEDGE</div>
+                            <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Visualise.png" alt=""></div>
+                            <div class="text">
+                                <h4 class="title">Visualise and create new knowledge by integrating and connecting disparate data sets</h4>
+                                <p>Advanced Visualization</p>
+                                <p>System Integration Management</p>
+
+                                <img src="<?php echo base_url(''); ?>include/web/images/line.png" alt="Line">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-process-item">
+                        <div class="inner-process-item">
+                            <div class="step">OPERATIONAL EFFICIENCY</div>
+                            <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Performance.png" alt=""></div>
+                            <div class="text">
+                                <h4 class="title">Analyse and understand the performance of assets/services <br /><br />Make the right decisions in real time </h4>
+                                <p>Dashboard and reporting</p>
+                                <p>Performance Integration</p>
+                                <p>Insights and Analytics</p>
+
+                                <img src="<?php echo base_url(''); ?>include/web/images/line.png" alt="Line">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-process-item">
+                        <div class="inner-process-item">
+                            <div class="step">SIMULATE AND LOOK INTO
+                                FUTURE</div>
+                            <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Artificial_Intelligence_.png" alt=""></div>
+                            <div class="text">
+                                <h4 class="title">Ability to make accurate predictions using Machine Learning (ML), Deep Learning (DL) and Artificial Intelligence (AI)</h4>
+                                <p>Automation (AI/ML/DL)</p>
+                                <p>Simulation/Scenario modelling</p>
+                                <p>Forecasting</p>
+                                <p>Feature Creation and Extraction</p>
+                                <img src="<?php echo base_url(''); ?>include/web/images/line.png" alt="Line">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="features-section pt-50 pb-0" id="matterNowDes">
+    <div class="container-fluid">
+        <div class="row align-items-end">
+            <div class="col-md-12">
+                <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                    <span class="sub-title"> <img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt="">
+                        Why does it matter now?
+                        <!-- The Evolution of Digital Twin Technology -->
+                    </span>
+                    <h2>Decade of Change in Data and Processing</h2>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="features-image-box mb-20 wow fadeInLeft text-center" style="visibility: visible;">
+                    <img src="<?php echo base_url(''); ?>include/web/custom/Matters_Now.png" class="img-fluid" alt="Features Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="features-seciton pt-50 pb-20">
+    <div class="container">
+        <div class="row align-items-xl-end">
+            <div class="col-lg-5">
+                <div class="features-image-box mb-20 wow fadeInLeft" style="visibility: visible;"><img src="<?php echo base_url(''); ?>include/web/custom/3D_Modelling.png" alt="Features Image"></div>
+            </div>
+            <div class="col-lg-7">
+                <div class="features-content-box mb-20 wow fadeInRight" style="visibility: visible;">
+                    <p class="mb-35">From 3D Modelling to full Digital Technology with AI-Driven Insight</p>
+                    <ul class="features-list features_list_block">
+                        <li><i class="fal fa-long-arrow-right"></i>The Origins in 3D Modelling: Setting the Foundation <span>From Concept to High-Fidelity 3D Modelling</span></li>
+                        <li><i class="fal fa-long-arrow-right"></i>The IoT Revolution: Bringing the Real World into Digital <span>IoT: The Gateway to Real-World Data</span></li>
+                        <li><i class="fal fa-long-arrow-right"></i>The Role of Cloud Computing: Scalability and Accessibility <span>Cloud Computing: The Backbone of Digital Twin Scalability</span></li>
+                        <li><i class="fal fa-long-arrow-right"></i>The Rise of AI: Enhancing Perception and Decision-Making <span>AI: Elevating Awareness and Insights in Digital Twins</span></li>
+                        <li><i class="fal fa-long-arrow-right"></i>The Power of Community, Tools, and Standards: Accelerating Innovation <span>"Harnessing Collective Knowledge for Efficient Digital Twin Development</span></li>
+                    </ul>
+                    <a class="main-btn primary-btn" href="<?php echo base_url('why-does-it-matter-now') ?>">Learn More</a>
                 </div>
             </div>
         </div>
@@ -333,194 +498,12 @@
         </div>
     </div>
 </section>
-<section class="features-section pt-50 pb-0" id="matterNowDes">
-    <div class="container">
-        <div class="row align-items-end">
-            <div class="col-md-12">
-                <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                    <span class="sub-title"> <img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt="">
-                        Why does it matter now?
-                        <!-- The Evolution of Digital Twin Technology -->
-                    </span>
-                    <h2>Decade of Change in Data and Processing</h2>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="features-image-box mb-20 wow fadeInLeft text-center" style="visibility: visible;">
-                    <img src="<?php echo base_url(''); ?>include/web/custom/Matters_Now.png" class="img-fluid" alt="Features Image">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="features-seciton pt-50 pb-20">
-    <div class="container">
-        <div class="row align-items-xl-end">
-            <div class="col-lg-6">
-                <div class="features-image-box mb-20 wow fadeInLeft" style="visibility: visible;"><img src="<?php echo base_url(''); ?>include/web/custom/BG_Element.png" alt="Features Image"></div>
-            </div>
-            <div class="col-lg-6">
-                <div class="features-content-box mb-20 wow fadeInRight" style="visibility: visible;">
-                    <p class="mb-35">From 3D Modelling to full Digital Technology with AI-Driven Insight</p>
-                    <ul class="features-list">
-                        <li><i class="fal fa-long-arrow-right"></i>The Origins in 3D Modelling: Setting the Foundation</li>
-                        <li><i class="fal fa-long-arrow-right"></i>The IoT Revolution: Bringing the Real World into Digital</li>
-                        <li><i class="fal fa-long-arrow-right"></i>The Role of Cloud Computing: Scalability and Accessibility </li>
-                        <li><i class="fal fa-long-arrow-right"></i>The Rise of AI: Enhancing Perception and Decision-Making </li>
-                        <li><i class="fal fa-long-arrow-right"></i>The Power of Community, Tools, and Standards: Accelerating Innovation </li>
-                    </ul>
-                    <a class="main-btn primary-btn" href="<?php echo base_url('why-does-it-matter-now') ?>">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="service-bgc-section p-r z-1 main-bg pt-50 pb-50" id="whyToJoinDes">
-    <div class="shape shape-one"><span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png"></span></div>
-    <div class="shape shape-two"><span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png"></span></div>
-    <div class="shape shape-three">
-        <span><img src="<?php echo base_url(''); ?>include/web/images/shape/leaf-3.png" alt="Leaf Png"></span>
-    </div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-9 col-lg-12">
-                <div class="section-title text-white text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                    <span class="sub-title text-white"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt="">Why to Join</span>
-                    <h3>Transforming Infrastructure with Digital Twin: Sangam</h3>
-                    <p class="mt-1">Be part of a collaborative effort to redefine infrastructure planning and design. The "Digital Twin: Sangam" PoC is not just a project; it's a leap into the future of how we conceive, plan, and build our world. Your expertise and innovation can help shape sustainable, efficient, and integrated infrastructure systems for generations to come.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="single-service-item-two mb-60 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
-                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Virtual_World_Creators.png"></div>
-                    <div class="text">
-                        <h4 class="title"><a href="javascript:void(0)">Virtual World Creators</a></h4>
-                        <h6 class="title"><a>Crafting Immersive Realities</a></h6>
-                        <p><b>Contribution:</b> Bring your skills in creating detailed, immersive virtual environments to help visualize infrastructure projects in unprecedented detail.
-                        </p>
-                        <p> <b>Opportunity:</b> Lead in the development of interactive models that enable stakeholders to explore and test infrastructure designs before they are built.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="single-service-item-two mb-60 wow fadeInUp" data-wow-delay=".25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
-                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Computation_Power_Providers.png"></div>
-                    <div class="text">
-                        <h4 class="title"><a href="javascript:void(0)">Computation Power Providers</a></h4>
-                        <h6 class="title"><a>Powering the Future of Planning</a></h6>
-                        <p><b>Contribution:</b> Offer the computational resources necessary for running complex simulations and analytics, supporting the backbone of Digital Twin technology.
-                        </p>
-                        <p> <b>Opportunity:</b> Be at the forefront of facilitating large-scale computational tasks, driving the evolution of smart infrastructure design.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="single-service-item-two mb-60 wow fadeInDown" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
-                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Connectivity_and_Device_Integration_Specialists.png"></div>
-                    <div class="text">
-                        <h4 class="title"><a href="javascript:void(0)">Connectivity and Device Integration Specialists</a></h4>
-                        <h6 class="title"><a>Bridging the Digital and Physical</a></h6>
-                        <p><b>Contribution:</b> Integrate sensors, AR/VR devices, and IoT technology to gather and provide real-time data, enhancing the Digital Twin with live updates and interactions. </p>
-                        <p> <b>Opportunity:</b> Pioneer in connecting the digital and physical realms, offering new dimensions of interaction and data collection.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="single-service-item-two mb-60 wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
-                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Mobility_Data_Providers.png"></div>
-                    <div class="text">
-                        <h4 class="title"><a href="javascript:void(0)">Mobility Data Providers</a></h4>
-                        <h6 class="title"><a>Mapping Movements, Shaping Futures</a></h6>
-                        <p><b>Contribution:</b> Supply mobility data and insights that illuminate human and vehicular movement patterns, critical for planning efficient and responsive infrastructure.
-                            <b>Opportunity:</b> Unlock the potential of mobility data to predict and plan for future infrastructure needs, optimizing flow and reducing congestion.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="single-service-item-two mb-60 wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
-                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Geospatial_Data_Specialists.png"></div>
-                    <div class="text">
-                        <h4 class="title"><a href="javascript:void(0)">Geospatial Data Specialists</a></h4>
-                        <h6 class="title"><a>Laying the Groundwork for Innovation</a></h6>
-                        <p><b>Contribution:</b> Provide essential geospatial data, tools, and utilities that form the foundation of every Digital Twin, ensuring accuracy and relevance.
-                        </p>
-                        <p> <b>Opportunity:</b> Position yourself as a key player in creating data-rich, geographically accurate digital representations of future projects.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="single-service-item-two mb-60 wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
-                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Utility_Network_Innovators.png"></div>
-                    <div class="text">
-                        <h4 class="title"><a href="javascript:void(0)">Utility Network Innovators</a></h4>
-                        <h6 class="title"><a>Energizing the Digital Twin Ecosystem</a></h6>
-                        <p><b>Contribution:</b> Contribute utility network data to enhance the Digital Twin with critical infrastructure information, from power grids to water systems.
-                            <b>Opportunity:</b> Spearhead innovations in integrating essential services into the planning phase, ensuring sustainability and efficiency.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="single-service-item-two mb-60 wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
-                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Startups_and_Solution_Developers.png"></div>
-                    <div class="text">
-                        <h4 class="title"><a href="javascript:void(0)">Startups and Solution Developers</a></h4>
-                        <h6 class="title"><a>Building Tomorrow’s Solutions, Today</a></h6>
-                        <p><b>Contribution:</b> Leverage your agility and innovation to develop new solutions that address the unique challenges of infrastructure design and operation.
-                        </p>
-                        <p> <b>Opportunity:</b> Capture emerging markets by introducing innovative products and services that meet the evolving demands of the infrastructure sector.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="single-service-item-two mb-60 wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
-                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Academics_and_Industry_Experts.png"></div>
-                    <div class="text">
-                        <h4 class="title"><a href="javascript:void(0)">Academics and Industry Experts</a></h4>
-                        <h6 class="title"><a>Shaping the Future through Knowledge</a></h6>
-                        <p><b>Contribution:</b> Apply your expertise in computation, AI, data science, visualization, or engineering to advance the development of the Digital Twin technology.
-                        </p>
-                        <p> <b>Opportunity:</b> Influence the direction of infrastructure planning and design, contributing to the education of the next generation of engineers and planners.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="about-section" id="participateDes">
-    <div class="container-fluid">
-        <div class="about-wrapper gray-bg wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-            <div class="container">
-                <div class="row align-items-xl-center">
-                    <div class="col-xl-12 col-lg-12">
-                        <div class="about-three_content-box pl-lg-0 wow fadeInRight text-center" style="visibility: visible; animation-name: fadeInRight;">
-                            <div class="section-title mb-25 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                                <span class="sub-title">Participate</span>
-                                <h2>Participate in Our Exciting Upcoming Content!</h2>
-                            </div>
-                            <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Join us as we embark on an exhilarating journey of content creation! Your participation is key to shaping the direction of our upcoming material. Dive into interactive discussions, share your ideas, and contribute your unique perspective. Together, let's make our content truly exceptional.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="about-section pt-50 pb-50" id="processOfSangamDes">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                    <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt="">Participant Outreach and Engagement</span>
+                    <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt="">Participant Outreach and Engagement</span>
                     <h2>Process of Sangam</h2>
                     <p>DoT would begin this journey with a campaign to engage with potential participants, including industry experts, academia, and other relevant stakeholders, to ensure widespread awareness and interest.<br>
                         DoT plans to conduct three physical (in-person) meetings before the deadline for EoI submission and planned meetings are aimed to engage prospective candidates and generate enthusiasm for participation. The agenda is crafted to offer a diverse and enriching experience, featuring speakers who are leaders and innovators in their respective fields.
@@ -533,7 +516,7 @@
                 <div class="about-three_content-box wow fadeInRight" style="visibility: visible;">
                     <div class="section-title mb-25 wow fadeInUp text-center" style="visibility: visible;">
                         <span class="sub-title">STAGE-I</span>
-                        <h3>Exploratory</h3>
+                        <h3>Exploratory Phase</h3>
                     </div>
                     <div class="fancy-about-item mb-40 wow fadeInUp" style="visibility: visible;">
                         <div class="text">
@@ -584,7 +567,128 @@
         </div>
     </div>
 </section>
-<section class="about-section pt-50 pb-50">
+<section class="service-bgc-section p-r z-1 main-bg pt-50 pb-50" id="whyToJoinDes">
+    <div class="shape shape-one"><span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png"></span></div>
+    <div class="shape shape-two"><span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png"></span></div>
+    <div class="shape shape-three">
+        <span><img src="<?php echo base_url(''); ?>include/web/images/shape/leaf-3.png" alt="Leaf Png"></span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-xl-9 col-lg-12">
+                <div class="section-title text-white text-center mb-80 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                    <span class="sub-title text-white"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt="">Why to Join</span>
+                    <h3>Transforming Infrastructure with Digital Twin: Sangam</h3>
+                    <p class="mt-1">Be part of a collaborative effort to redefine infrastructure planning and design. The "Digital Twin: Sangam" PoC is not just a project; it's a leap into the future of how we conceive, plan, and build our world. Your expertise and innovation can help shape sustainable, efficient, and integrated infrastructure systems for generations to come.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="single-service-item-two mb-60 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
+                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Virtual_World_Creators.png"></div>
+                    <div class="text">
+                        <h4 class="title"><a href="javascript:void(0)">Virtual World Creators</a></h4>
+                        <h6 class="title"><a>Crafting Immersive Realities</a></h6>
+                        <p><b>Contribution:</b> Bring your skills in creating detailed, immersive virtual environments to help visualize infrastructure projects in unprecedented detail.
+                        </p>
+                        <p> <b>Opportunity:</b> Lead in the development of interactive models that enable stakeholders to explore and test infrastructure designs before they are built.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="single-service-item-two mb-60 wow fadeInUp" data-wow-delay=".25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
+                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Computation_Power_Providers.png"></div>
+                    <div class="text">
+                        <h4 class="title"><a href="javascript:void(0)">Computation Power Providers</a></h4>
+                        <h6 class="title"><a>Powering the Future of Planning</a></h6>
+                        <p><b>Contribution:</b> Offer the computational resources necessary for running complex simulations and analytics, supporting the backbone of Digital Twin technology.
+                        </p>
+                        <p> <b>Opportunity:</b> Be at the forefront of facilitating large-scale computational tasks, driving the evolution of smart infrastructure design.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="single-service-item-two mb-60 wow fadeInDown" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
+                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Connectivity_and_Device_Integration_Specialists.png"></div>
+                    <div class="text">
+                        <h4 class="title"><a href="javascript:void(0)">Connectivity and Device Integration Specialists</a></h4>
+                        <h6 class="title"><a>Bridging the Digital and Physical</a></h6>
+                        <p><b>Contribution:</b> Integrate sensors, AR/VR devices, and IoT technology to gather and provide real-time data, enhancing the Digital Twin with live updates and interactions. </p>
+                        <p> <b>Opportunity:</b> Pioneer in connecting the digital and physical realms, offering new dimensions of interaction and data collection.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="single-service-item-two mb-60 wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
+                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Mobility_Data_Providers.png"></div>
+                    <div class="text">
+                        <h4 class="title"><a href="javascript:void(0)">Mobility Data Providers</a></h4>
+                        <h6 class="title"><a>Mapping Movements, Shaping Futures</a></h6>
+                        <p><b>Contribution:</b> Supply mobility data and insights that illuminate human and vehicular movement patterns, critical for planning efficient and responsive infrastructure.
+                            <b>Opportunity:</b> Unlock the potential of mobility data to predict and plan for future infrastructure needs, optimizing flow and reducing congestion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="single-service-item-two mb-60 wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
+                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Geospatial_Data_Specialists.png"></div>
+                    <div class="text">
+                        <h4 class="title"><a href="javascript:void(0)">Geospatial Data Specialists</a></h4>
+                        <h6 class="title"><a>Laying the Groundwork for Innovation</a></h6>
+                        <p><b>Contribution:</b> Provide essential geospatial data, tools, and utilities that form the foundation of every Digital Twin, ensuring accuracy and relevance.
+                        </p>
+                        <p> <b>Opportunity:</b> Position yourself as a key player in creating data-rich, geographically accurate digital representations of future projects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="single-service-item-two mb-60 wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
+                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Utility_Network_Innovators.png"></div>
+                    <div class="text">
+                        <h4 class="title"><a href="javascript:void(0)">Utility Network Innovators</a></h4>
+                        <h6 class="title"><a>Energizing the Digital Twin Ecosystem</a></h6>
+                        <p><b>Contribution:</b> Contribute utility network data to enhance the Digital Twin with critical infrastructure information, from power grids to water systems.
+                            <b>Opportunity:</b> Spearhead innovations in integrating essential services into the planning phase, ensuring sustainability and efficiency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="single-service-item-two mb-60 wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
+                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Startups_and_Solution_Developers.png"></div>
+                    <div class="text">
+                        <h4 class="title"><a href="javascript:void(0)">Startups and Solution Developers</a></h4>
+                        <h6 class="title"><a>Building Tomorrow’s Solutions, Today</a></h6>
+                        <p><b>Contribution:</b> Leverage your agility and innovation to develop new solutions that address the unique challenges of infrastructure design and operation.
+                        </p>
+                        <p> <b>Opportunity:</b> Capture emerging markets by introducing innovative products and services that meet the evolving demands of the infrastructure sector.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="single-service-item-two mb-60 wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
+                    <div class="icon"><img src="<?php echo base_url(''); ?>include/web/custom/Academics_and_Industry_Experts.png"></div>
+                    <div class="text">
+                        <h4 class="title"><a href="javascript:void(0)">Academics and Industry Experts</a></h4>
+                        <h6 class="title"><a>Shaping the Future through Knowledge</a></h6>
+                        <p><b>Contribution:</b> Apply your expertise in computation, AI, data science, visualization, or engineering to advance the development of the Digital Twin technology.
+                        </p>
+                        <p> <b>Opportunity:</b> Influence the direction of infrastructure planning and design, contributing to the education of the next generation of engineers and planners.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about-section pt-50 pb-50" id="eligibilityGuidelinesDes">
     <div class="container">
         <div class="about-wrapper white-bg wow fadeInUp">
             <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
@@ -595,26 +699,41 @@
                 <div class="col-xl-8 col-lg-8">
                     <div class="about-three_content-box wow fadeInRight">
                         <div class="row">
-                            <div class="col-md-12">
+                            <!-- <div class="col-md-12">
                                 <div class="buttonTab mb-30">
                                     <ul class="nav nav" role="tablist">
                                         <li class="nav-item active"><button data-toggle="tab" role="tab" data-rb-event-key="tab1" aria-selected="true" class="nav-link nav-link active" aria-expanded="true">Individuals</button></li>
                                         <li class="nav-item"><button data-toggle="tab" role="tab" data-rb-event-key="tab2" aria-selected="false" class="nav-link nav-link" aria-expanded="false">Organizations</button></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-md-12">
                                 <div class="fancy-about-item fancy_about_item__ mb-40  content-individuals">
                                     <div class="text">
-                                        <h5> Registration Eligibility Guidelines for Individuals</h5>
-                                        <ul class="check-style-one mb-60">
-                                            <li><i class="far fa-check"></i>Legal Age: Individuals must be of legal age in their jurisdiction.</li>
-                                            <li><i class="far fa-check"></i>Identity Verification: All users must provide valid identification documents.</li>
-                                            <li><i class="far fa-check"></i>Compliance with Policies: Users must agree to our terms of service and privacy policy.</li>
-                                            <li><i class="far fa-check"></i>Respectful Conduct: Harassment or abusive behavior is not tolerated.</li>
-                                            <li><i class="far fa-check"></i>No Duplicate Accounts: Each user is permitted one account only.</li>
-                                            <li><i class="far fa-check"></i>Accurate Information: Users must provide truthful information during registration.</li>
-                                            <li><i class="far fa-check"></i>Security Awareness: Users are responsible for securing their account credentials.</li>
+                                        <h5> Final Selection and Participation Criteria</h5>
+                                        <ul class="check-style-one mb-10">
+                                            <li><i class="far fa-check"></i>Final list of participants will be announced <b class="p__5px"> based on the responses received to the EoI.</b></li>
+                                            <li><i class="far fa-check"></i><b>It is an experimental initiative, broad participation is encouraged</b></li>
+                                            <li><i class="far fa-check"></i>Participants are expected to get engaged </li>
+                                            <li>
+                                                <ul class="m__25px">
+                                                    <li>⦿ to get engaged earnestly, proactively, and with a focus on the success of the PoC.</li>
+                                                    <li>⦿ <b>to get get engaged with the spirit of collaboration</b> and innovation,</li>
+                                                    <li>⦿ to ensure that their <b>contributions are aligned with the goals and requirements of the' PoC.</b></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h5 class="color_reed">Important Note on Continued Participation</h5>
+                                        <ul class="check-style-one mb-60 ___Important_Note m__25px">
+                                            <li><i class="far fa-exclamation-circle color_reed"></i><b>Potential Delisting: </b>Participants may be delisted for lack of relevant competence, inactivity, or if their participation hinders the PoC's
+                                                progress</li>
+                                            <li><i class="far fa-exclamation-circle color_reed"></i><b>No Obligation for Explanation:</b> The DoT reserves the right to delist participants without providing detailed reasons, focusing on the PoC's
+                                                success.</li>
+                                            <li><i class="far fa-exclamation-circle color_reed"></i><b>No Financial Liability: </b>Participants delisted from the project will not receive financial compensation or coverage for any related costs
+                                                from the DoT.
+                                            </li>
+
+
                                         </ul>
                                     </div>
                                 </div>
@@ -639,57 +758,78 @@
                 <div class="col-xl-4">
                     <div class="row justify-content-center width100EligibilityBox">
                         <div class="col-md-12">
-                            <a href="">
-                                <div class="single-info-item style-one mb-20 wow fadeInUp" style="visibility: visible;">
-                                    <div class="shape shape-one"><span><img src="<?php echo base_url(''); ?>include/web/images/shape/info-shape-1.png" alt="shape"></span></div>
-                                    <div class="info">
-                                        <h4 class="title mb-0"><i class="far fa-file" aria-hidden="true"></i>
-                                            Guidelines Download
-                                        </h4>
-                                        <span>Access Registration Details and Participation Eligibility</span>
-                                    </div>
+                            <a href="<?php echo base_url(''); ?>include/web/custom/Download_EoI.pdf" download="" target="_blank">
+                                <div class=" single-info-item style-one mb-20 wow fadeInUp" style="visibility: visible;">
+                                <div class="shape shape-one"><span><img src="<?php echo base_url(''); ?>include/web/images/shape/info-shape-1.png" alt="shape"></span></div>
+                                <div class="info">
+                                    <h4 class="title mb-0"><i class="far fa-download" aria-hidden="true"></i>
+                                        For More Details Refer to
+                                        EoI Document
+                                    </h4>
+                                    <span>Access Registration Details and Participation Eligibility</span>
                                 </div>
-                            </a>
                         </div>
-                        <div class="col-md-12">
-                            <a href="">
-                                <div class="single-info-item style-two mb-20 wow fadeInDown" style="visibility: visible;">
-                                    <div class="shape shape-one"><span><img src="<?php echo base_url(''); ?>include/web/images/shape/info-shape-1.png" alt="shape"></span></div>
-                                    <div class="info">
-                                        <h4 class="title mb-0"><i class="far fa-handshake" aria-hidden="true"></i>
-                                            Participation Criteria
-                                        </h4>
-                                        <span class="text-white">Learn Who Meets the Requirements to Get Involved</span>
-                                    </div>
+                        </a>
+                    </div>
+                    <div class="col-md-12">
+                        <a href="">
+                            <div class="single-info-item style-two mb-20 wow fadeInDown" style="visibility: visible;">
+                                <div class="shape shape-one"><span><img src="<?php echo base_url(''); ?>include/web/images/shape/info-shape-1.png" alt="shape"></span></div>
+                                <div class="info">
+                                    <h4 class="title mb-0"><i class="far fa-handshake" aria-hidden="true"></i>
+                                        Participation Criteria
+                                    </h4>
+                                    <span class="text-white">Learn Who Meets the Requirements to Get Involved</span>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="col-md-12">
-                            <a href="<?php echo base_url('registration'); ?>">
-                                <div class="single-info-item style-one mb-20 wow fadeInUp" style="visibility: visible;">
-                                    <div class="shape shape-one"><span><img src="<?php echo base_url(''); ?>include/web/images/shape/info-shape-2.png" alt="shape"></span></div>
-                                    <div class="info">
-                                        <h4 class="title mb-0"><i class="far fa-pencil" aria-hidden="true"></i>
-                                            Register Now
-                                        </h4>
-                                        <span>Take the First Step Towards Participation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                    </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-12">
+                        <a href="<?php echo base_url('registration'); ?>">
+                            <div class="single-info-item style-one mb-20 wow fadeInUp" style="visibility: visible;">
+                                <div class="shape shape-one"><span><img src="<?php echo base_url(''); ?>include/web/images/shape/info-shape-2.png" alt="shape"></span></div>
+                                <div class="info">
+                                    <h4 class="title mb-0"><i class="far fa-pencil" aria-hidden="true"></i>
+                                        Pre-Registration
+                                    </h4>
+                                    <span>Take the First Step Towards Participation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 </div>
-                            </a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- <section class="about-section" id="participateDes">
+    <div class="container-fluid">
+        <div class="about-wrapper gray-bg wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+            <div class="container">
+                <div class="row align-items-xl-center">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="about-three_content-box pl-lg-0 wow fadeInRight text-center" style="visibility: visible; animation-name: fadeInRight;">
+                            <div class="section-title mb-25 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                <span class="sub-title">Participate</span>
+                                <h2>Participate in Our Exciting Upcoming Content!</h2>
+                            </div>
+                            <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Join us as we embark on an exhilarating journey of content creation! Your participation is key to shaping the direction of our upcoming material. Dive into interactive discussions, share your ideas, and contribute your unique perspective. Together, let's make our content truly exceptional.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<section class="project-section  pt-50 pb-50">
+</section> -->
+<section class="project-section gray-bg  pt-50 pb-50">
     <div class="container">
         <div class="row justify-content-center ">
             <div class="col-lg-10">
                 <div class="section-title text-center mb-30 wow fadeInDown">
                     <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> Weaving the Fabric of Events</span>
                     <h2>Outreach Programs </h2>
+                    <h5 class="mt-10">EoI Submission Deadline</h5>
                 </div>
             </div>
         </div>
@@ -801,6 +941,7 @@
             <div class="col-lg-10">
                 <div class="section-title text-center mb-30 wow fadeInDown">
                     <h2>Networking Events</h2>
+                    <h5 class="mt-10">EoI Submission During 1st Stage</h5>
                 </div>
             </div>
         </div>
