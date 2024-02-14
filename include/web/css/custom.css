@@ -22,6 +22,10 @@
 .border_bottom{
     border-bottom: 1px solid #d7ddda;
 }
+    .Confluence{
+    font-size: 26px;
+  margin-bottom: 15px;
+}
 .service-info .icon-shape {
     top: 9px;
 }

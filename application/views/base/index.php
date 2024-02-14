@@ -98,6 +98,10 @@
             <div class="col-lg-12">
                 <div class="about-wrapper-two gray-bg mt-minus-110 p-r wow fadeInDown" style="visibility: visible;" id="aboutWrapperTwo">
                     <div class="row no-gutters justify-content-center">
+                        <div class="col-md-12 text-center mb-20">
+                            <h2 class="text-white Confluence">Join the Confluence of Innovation: Sangam Digital Twin Eol</h2>
+                            <p class="text-white">Welcome to <b>"Sangam: Digital Twin,"</b> a pioneering invitation to collaborate on the future of infrastructure planning and design. This initiative is a call to action for public entities, infrastructure planners, tech giants, startups, and academia to break free from silos and engage in a Whole-of-Nation approach.</p>
+                        </div>
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="about-features-item text-center">
                                 <div class="icon"><i class="flaticon-target"></i></div>

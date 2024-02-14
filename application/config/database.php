@@ -32,9 +32,9 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     $db['default'] = array(
         'dsn'      => '',
         'hostname' => 'localhost',
-        'username' => 'onehouses_sangam',
-        'password' => '$,#8;P#gSi%R',
-        'database' => 'onehouses_sangam',
+        'username' => 'u411407001_sangam',
+        'password' => 'D~6$lJ@Qc2',
+        'database' => 'u411407001_sangam',
         'dbdriver' => 'mysqli',
         'dbprefix' => '',
         'pconnect' => FALSE,
