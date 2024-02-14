@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Select</title>
+    <!-- Include Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet">
+    <style>
+        /* Style to indent options based on hierarchy */
+        .indent-1 { margin-left: 10px; }
+        .indent-2 { margin-left: 20px; }
+        .indent-3 { margin-left: 30px; }
+        /* Add more indent levels as needed */
+    </style>
+</head>
+<body>
+
+<select id="mySelect" multiple="multiple" style="width: 300px;">
+    <!-- Static options -->
+    <option value="43">Virtual World Creators</option>
+    <option value="44" class="indent-1">- AR/VR/MR</option>
+    <option value="45" class="indent-1">- Gaming Engine</option>
+    <option value="46" class="indent-1">- Devices</option>
+    <option value="47" class="indent-1">- Digital/ 3D Models</option>
+    <option value="48">Data providers</option>
+    <option value="49" class="indent-1">- Mobility</option>
+    <option value="50" class="indent-2">-- Crowdsourced Data</option>
+    <option value="51" class="indent-2">-- Network footprint cab services</option>
+    <!-- Add more options as needed -->
+</select>
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Include Select2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#mySelect').select2({
+            multiple: true
+        });
+    });
+</script>
+
+</body>
+</html>

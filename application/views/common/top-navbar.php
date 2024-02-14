@@ -132,7 +132,7 @@
                     </button>
                 </div>
                 <div class="dropdown topbar-head-dropdown ms-1 header-item" id="notificationDropdown">
-                    <button
+                    <!-- <button
                         type="button"
                         class="btn btn-icon btn-topbar material-shadow-none btn-ghost-secondary rounded-circle"
                         id="page-header-notifications-dropdown"
@@ -143,7 +143,7 @@
                     >
                         <i class="bx bx-bell fs-22"></i>
                         <span class="position-absolute topbar-badge fs-10 translate-middle badge rounded-pill bg-danger">3<span class="visually-hidden">unread messages</span></span>
-                    </button>
+                    </button> -->
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
                         <div class="dropdown-head bg-primary bg-pattern rounded-top">
                             <div class="p-3">
@@ -419,7 +419,7 @@
                         <?php
                               }
                               ?>
-                      
+
                         <a class="dropdown-item" href="<?php echo base_url('logout')?>"><i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span class="align-middle" data-key="t-logout">Logout</span></a>
                     </div>
                 </div>

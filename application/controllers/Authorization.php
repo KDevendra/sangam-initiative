@@ -21,7 +21,7 @@ class Authorization extends CI_Controller
                     "crlf" => $query->crlf,
                     "newline" => $query->newline,
                     "charset" => $query->charset,
-                    "wordwrap" => $query->wordwrap
+                    "wordwrap" => $query->wordwrap,
                 ];
 
                 $this->email->initialize($config);
@@ -90,7 +90,7 @@ class Authorization extends CI_Controller
             $this->form_validation->set_rules("contactNo", "Contact No.", "trim|max_length[10]|min_length[10]|is_unique[login.contact_no]");
             $this->form_validation->set_rules("email", "Email", "trim|required|valid_email|max_length[100]|is_unique[login.email]");
             $this->form_validation->set_rules("password", "password", "trim|required|min_length[8]|max_length[16]");
-            $this->form_validation->set_rules("coreCompetency[]", "core competency", 'trim|required');
+            $this->form_validation->set_rules("coreCompetencies", "core competency", 'trim');
             if ($this->input->post('register_as') === 'Individual') {
                 $this->form_validation->set_rules("experience", "experience", 'trim|required|min_length[3]|regex_match[/^[A-Za-z\s]+$/]');
             }
@@ -115,7 +115,18 @@ class Authorization extends CI_Controller
                 if ($checkEmailDuplicate->num_rows() > 0) {
                     $response = ["status" => "error", "message" => "Email address is already in use."];
                 } else {
-                    $postData = ['register_as' => $this->input->post('register_as'), 'dat_of_birth' => $this->input->post('datOfBirth'), 'user_name' => $this->input->post('fullName'), 'full_name' => $this->input->post('fullName'), 'contact_no' => $this->input->post('contactNo'), 'email' => $this->input->post('email'), 'password' => $password, 'core_competency' => json_encode($this->input->post('coreCompetency')), 'user_level' => 2, 'created_at'=>date('Y-m-d H:i:s')];
+                    $postData = [
+                        'register_as' => $this->input->post('register_as'),
+                        'dat_of_birth' => $this->input->post('datOfBirth'),
+                        'user_name' => $this->input->post('fullName'),
+                        'full_name' => $this->input->post('fullName'),
+                        'contact_no' => $this->input->post('contactNo'),
+                        'email' => $this->input->post('email'),
+                        'password' => $password,
+                        'core_competency' => $this->input->post('coreCompetencies'),
+                        'user_level' => 2,
+                        'created_at' => date('Y-m-d H:i:s'),
+                    ];
                     if ($this->input->post('register_as') === 'Individual') {
                         $postData['experience'] = $this->input->post('experience');
                     } elseif ($this->input->post('register_as') === 'Organization') {
@@ -157,19 +168,17 @@ class Authorization extends CI_Controller
             } else {
                 $user_id = $this->input->post("login_id");
                 $password = hash("SHA512", $this->input->post("password"));
-          
-                if (filter_var($user_id, FILTER_VALIDATE_EMAIL)) {
 
+                if (filter_var($user_id, FILTER_VALIDATE_EMAIL)) {
                     $record = $this->BaseModel->getData("login", ["email" => $user_id]);
                 } else {
-
                     $record = $this->BaseModel->getData("login", ["user_id" => $user_id]);
                 }
                 if ($record->num_rows() == 0) {
                     $response["message"] = "This email is not registered please register yourself";
                 } else {
                     $details = $record->row();
-                    
+
                     if (filter_var($user_id, FILTER_VALIDATE_EMAIL)) {
                         $dbuser_id = $details->email;
                     } else {

@@ -8,10 +8,10 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     // Local Development Configuration
     $db['default'] = array(
         'dsn'      => '',
-        'hostname' => 'localhost:2023',
-        'username' => 'root',
-        'password' => 'root',
-        'database' => 'db_sangam',
+        'hostname' => '154.41.233.204',
+        'username' => 'u411407001_sangam',
+        'password' => 'D~6$lJ@Qc2',
+        'database' => 'u411407001_sangam',
         'dbdriver' => 'mysqli',
         'dbprefix' => '',
         'pconnect' => FALSE,
