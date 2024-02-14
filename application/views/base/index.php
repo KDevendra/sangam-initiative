@@ -6,7 +6,7 @@
     <div class="hero-wrapper-one __mp__100">
         <div class="container text-center">
             <h6 class="banner-subtitle">Department of Telecommunications (DoT)<br> <span>Calls For Expression of Interest (EoI) for participating in </span></h6>
-      
+
             <div class="box_overlay">
                 <h1 class="banner-title">Sangam: <span>Digital Twin</span></h1>
                 <h4 class="banner-title-sub">AI-driven Insights</h4>
@@ -65,7 +65,7 @@
                 <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration">
                     <i class="far fa-table" aria-hidden="true"></i> Pre-Registration
                 </a>
-                <a class="main-btn golden-btn mb-10 preRegisBtn btn_green whyToJoinBtn" href="<?php echo base_url(''); ?>include/web/custom/Download_EoI.pdf" download="" target="_blank">
+                <a class="main-btn golden-btn mb-10 preRegisBtn btn_green" href="<?php echo base_url(''); ?>include/web/custom/Download_EoI.pdf" download="" target="_blank">
                     <i class="far fa-download" aria-hidden="true"></i> Download EoI
                 </a>
                 <!-- <a class="main-btn golden-btn mb-10 preRegisBtn howToJoin" href="javascript:void(0)">
@@ -833,7 +833,7 @@
                 <div class="section-title text-center mb-30 wow fadeInDown">
                     <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> Weaving the Fabric of Events</span>
                     <h2>Outreach Programs </h2>
-                    <h5 class="mt-10">EoI Submission Deadline</h5>
+                    <h5 class="mt-10">Will be held before EoI Submission Deadline</h5>
                 </div>
             </div>
         </div>
@@ -945,7 +945,7 @@
             <div class="col-lg-10">
                 <div class="section-title text-center mb-30 wow fadeInDown">
                     <h2>Networking Events</h2>
-                    <h5 class="mt-10">EoI Submission During 1st Stage</h5>
+                    <h5 class="mt-10">Will be held before EoI Submission During 1st Stage</h5>
                 </div>
             </div>
         </div>
