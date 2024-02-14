@@ -1,54 +1,97 @@
 <?php include_once __DIR__ . '/../common/header.php'; ?>
+<!-- <section class="banner-section mt__150">
+    <video autoplay muted loop id="bgVideo">
+        <source src="<?php echo base_url('') ?>include/web/custom/bg_video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-wrapper-one __mp__100">
+        <div class="container text-center">
+            <h6 class="banner-subtitle">Department of Telecommunications (DoT)<br> <span>Calls For Expression of Interest (EoI) for participating in </span></h6>
+      
+            <div class="box_overlay">
+                <h1 class="banner-title">Sangam: <span>Digital Twin</span></h1>
+                <h4 class="banner-title-sub">AI-driven Insights</h4>
+                <h6>PROOF OF CONCEPT (POC)</h6>
+                <h5>CONFLUENCE OF INNOVATION</h5>
+                <p class="banner-description">Revolutionising Future Infrastructure Planning and Design</p>
+            </div>
+            <div class="hero-button mb-20">
+                <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration">
+                    <i class="far fa-table" aria-hidden="true"></i> Pre-Registration
+                </a>
+                <a class="main-btn golden-btn mb-10 preRegisBtn btn_green whyToJoinBtn" href="javascript:void(0)">
+                    <i class="far fa-question-circle" aria-hidden="true"></i> Why to Join
+                </a>
+                <a class="main-btn golden-btn mb-10 preRegisBtn howToJoin" href="javascript:void(0)">
+                    <i class="far fa-user" aria-hidden="true"></i> How to Join
+                </a>
+            </div>
+            <div class="hero-button mb-20">
+                <a class="main-btn golden-btn mb-10  ___p8_22" href="javascript:void(0)">
+                    Embracing the Future Together
+                </a>
+                <a class="main-btn golden-btn mb-10  ___p8_22" href="javascript:void(0)" ">
+                            Crafting Blueprint
+                        </a>
+                        <a class=" main-btn golden-btn mb-10 ___p8_22" href="javascript:void(0)">
+                    Pioneering Precision
+                </a>
+            </div>
+            <div class="hero-button mb-20">
+                <a class="main-btn mb-10 textExploreMore" id="exploreBtn" href="javascript:void(0)">
+                    Explore More <i class="far fa-angle-double-down" aria-hidden="true"></i>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section> -->
 <section class="banner-section mt__150">
     <video autoplay muted loop id="bgVideo">
         <source src="<?php echo base_url('') ?>include/web/custom/bg_video.mp4" type="video/mp4">
     </video>
     <div class="hero-wrapper-one __mp__100">
         <div class="container text-center">
-            <div class="row align-items-lg-center">
-                <div class="col-md-12">
-                    <h6 class="banner-subtitle">DEPARTMENT OF TELECOM (DoT) <br> <span>Calls For Expression Of Interest (EOI)</span></h6>
-                    <p class="text-white banner-para">For Participating In an Initiative</p>
-                    <div class="box_overlay">
-                        <h1 class="banner-title">Sangam: <span>Digital Twin</span></h1>
-                        <h4 class="banner-title-sub">AI-driven Insights</h4>
-                        <h5>PROOF OF CONCEPT (POC)</h5>
-                        <h6>CONFLUENCE OF INNOVATION</h6>
-                        <p class="banner-description">Revolutionising Future Infrastructure Planning and Design</p>
-                    </div>
-                    <div class="hero-button mb-20">
-                        <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration">
-                            <i class="far fa-table" aria-hidden="true"></i> Pre-Registration
-                        </a>
-                        <a class="main-btn golden-btn mb-10 preRegisBtn btn_green whyToJoinBtn" href="javascript:void(0)">
-                            <i class="far fa-question-circle" aria-hidden="true"></i> Why to Join
-                        </a>
-                        <a class="main-btn golden-btn mb-10 preRegisBtn howToJoin" href="javascript:void(0)">
-                            <i class="far fa-user" aria-hidden="true"></i> How to Join
-                        </a>
-                    </div>
-                    <div class="hero-button mb-20">
-                        <a class="main-btn golden-btn mb-10  ___p8_22" href="javascript:void(0)">
-                            Embracing the Future Together
-                        </a>
-                        <a class="main-btn golden-btn mb-10  ___p8_22" href="javascript:void(0)" ">
-                            Crafting Blueprint
-                        </a>
-                        <a class=" main-btn golden-btn mb-10 ___p8_22" href="javascript:void(0)">
-                            Pioneering Precision
-                        </a>
-                    </div>
-                    <div class="hero-button mb-20">
-                        <a class="main-btn mb-10 textExploreMore" id="exploreBtn" href="javascript:void(0)">
-                            Explore More <i class="far fa-angle-double-down" aria-hidden="true"></i>
-                        </a>
-
-                    </div>
+            <h6 class="banner-subtitle">Department of Telecommunications (DoT)<br> <span>Calls For Expression of Interest (EoI) for participating in </span></h6>
+            <div class="d-flex justify-content-center">
+                <div class="box_overlay">
+                    <h1 class="banner-title">Sangam: <span>Digital Twin</span></h1>
+                    <h4 class="banner-title-sub">AI-driven Insights</h4>
+                    <h6>PROOF OF CONCEPT (POC)</h6>
+                    <h5>CONFLUENCE OF INNOVATION</h5>
+                    <p class="banner-description">Revolutionising Future Infrastructure Planning and Design</p>
                 </div>
+            </div>
+            <div class="hero-button mb-20">
+                <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration">
+                    <i class="far fa-table" aria-hidden="true"></i> Pre-Registration
+                </a>
+                <a class="main-btn golden-btn mb-10 preRegisBtn btn_green whyToJoinBtn" href="javascript:void(0)">
+                    <i class="far fa-question-circle" aria-hidden="true"></i> Why to Join
+                </a>
+                <a class="main-btn golden-btn mb-10 preRegisBtn howToJoin" href="javascript:void(0)">
+                    <i class="far fa-user" aria-hidden="true"></i> How to Join
+                </a>
+            </div>
+            <div class="hero-button mb-20">
+                <a class="golden-btn mb-10 ___p8_22" href="javascript:void(0)">
+                    Embracing the Future Together
+                </a>
+                <a class="golden-btn mb-10 ___p8_22" href="javascript:void(0)">
+                    Crafting Blueprint
+                </a>
+                <a class="golden-btn mb-10 ___p8_22" href="javascript:void(0)">
+                    Pioneering Precision
+                </a>
+            </div>
+            <div class="hero-button mb-20">
+                <a class="main-btn mb-10 textExploreMore" id="exploreBtn" href="javascript:void(0)">
+                    Explore More <i class="far fa-angle-double-down" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
     </div>
 </section>
+
 <section class="about-section pb-50" id="exploreBtnDes">
     <div class="container">
         <div class="row justify-content-center">
@@ -141,7 +184,7 @@
                 </div>
             </div>
             <div class="col-xl-6">
-                <div class="about-content-box pl-lg-60 mb-50 wow fadeInRight">
+                <div class="about-content-box pl-lg-60 mb-0 wow fadeInRight">
                     <div class="section-title mb-30">
                         <span class="sub-title"> <img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt=""> A journey to Next Generation Planning</span>
                         <h2>About Sangam Initiative</h2>

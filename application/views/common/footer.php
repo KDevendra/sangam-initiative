@@ -169,7 +169,7 @@
             scrollToElement('EoILearnMoreDes', 200);
             var buttonId = $(this).attr('id');
             localStorage.setItem(buttonId + '_scrollTarget', 'stagesOfEoIDes');
-            window.location.href = 'https://sangam.onehouses.com/expression-of-interest';
+            window.location.href = '<?php echo base_url('');?>expression-of-interest';
         });
         $('#exploreBtn').on('click', function(event) {
             event.preventDefault();

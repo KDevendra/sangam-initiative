@@ -171,7 +171,7 @@
                                                         </div>
                                                         <div class="mb-4 col-md-12">
                                                             <p class="mb-0 fs-12 text-muted fst-italic">
-                                                                By Registration implies acceptance of the Sangam Initiative <a href="#" class="text-primary text-decoration-underline fst-normal fw-medium">Guidelines</a>
+                                                                By Registration implies acceptance of the Sangam Initiative <a href="javascript:void(0)" id="guidelinesBtn" class="text-primary text-decoration-underline fst-normal fw-medium">Guidelines</a>
                                                             </p>
                                                         </div>
                                                         <div id="password-contain" class="p-3 bg-light mb-2 rounded">
@@ -610,4 +610,5 @@
         });
     </script>
 </body>
+
 </html>

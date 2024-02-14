@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Server Down</title>
-        <link rel="shortcut icon" href="<?php echo base_url('');?>include/admin/images/favicon.ico" />
+        <link rel="shortcut icon" href="<?php echo base_url('');?>include/web/custom/favicon.png" />
         <script src="<?php echo base_url('');?>include/admin/js/layout.js"></script>
         <link href="<?php echo base_url('');?>include/admin/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url('');?>include/admin/css/icons.min.css" rel="stylesheet" type="text/css" />
