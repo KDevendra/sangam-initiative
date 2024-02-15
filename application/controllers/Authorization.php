@@ -436,7 +436,7 @@ class Authorization extends CI_Controller
                             set_cookie("AuthoToken", $this->session->salt, $duration);
                             $this->BaseModel->updateData("login", ["wrong_attempt" => 0, "current_login_time" => date("Y-m-d H:i:s")], $updateCond);
                             $response["user_level"] = $details->user_level;
-                            $response["message"] = "Redirect to dashboard......";
+                            $response["message"] = "";
                         } else {
                             $response["message"] = "User does not have the required privilege.";
                         }
