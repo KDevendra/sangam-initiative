@@ -319,6 +319,10 @@
                                     window.location.href = "<?php echo base_url('verify-account/') ?>" + response.user_id;
                                 }
                             });
+                        } else if (response.status === "validation_errors") {
+
+                            return false;
+
                         } else {
                             Swal.fire({
                                 icon: "error",
