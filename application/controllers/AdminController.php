@@ -124,7 +124,13 @@ class AdminController extends CI_Controller
         $this->checkUserLevel([2]);
         $data['title'] = "EoI Form : " . $this->projectTitle;
         $data["page_name"] = "pages/eoi-registration";
-        $data['userDetail'] = $this->BaseModel->getData('login', ['user_id' => $this->session->login['user_id']])->row();
+        $existingData = $this->BaseModel->getData('eoi_registration', ['user_id' => $this->session->login['user_id']]);
+        if ($existingData->num_rows() > 0) {
+            $data['userDetail'] = $this->BaseModel->getData('eoi_registration', ['user_id' => $this->session->login['user_id']])->row();
+        } else {
+            $data['userDetail'] = $this->BaseModel->getData('login', ['user_id' => $this->session->login['user_id']])->row();
+        }
+
         $this->load->view("component/index", $data);
     }
     public function eoiStatus()
@@ -226,6 +232,90 @@ class AdminController extends CI_Controller
             }
         } else {
             $this->session->set_flashdata("response", "Invalid request data.");
+        }
+    }
+    public function postEoIRegistration()
+    {
+        if ($this->input->method() === "post") {
+            $this->form_validation->set_rules('full_name', 'Full Name', 'trim');
+            $this->form_validation->set_rules('email', 'Email', 'trim|valid_email');
+            $this->form_validation->set_rules('contact_no', 'Contact Number', 'trim');
+            $this->form_validation->set_rules('dat_of_birth', 'Date of Birth', 'trim');
+            $this->form_validation->set_rules('experience[]', 'Experience', 'trim');
+            $this->form_validation->set_rules('previous_experience', 'Previous Experience', 'trim');
+            $this->form_validation->set_rules('achievements_recognitions', 'Achievements and Recognitions', 'trim');
+            $this->form_validation->set_rules('title', 'Title', 'trim');
+            $this->form_validation->set_rules('category', 'Category', 'trim');
+            $this->form_validation->set_rules('strategic_vision', 'Strategic Vision', 'trim');
+            $this->form_validation->set_rules('objectives', 'Objectives', 'trim');
+            $this->form_validation->set_rules('project_goals', 'Project Goals', 'trim');
+            $this->form_validation->set_rules('contribution_to_project_goals', 'Contribution to Project Goals', 'trim');
+            $this->form_validation->set_rules('technological_category', 'Technological Category', 'trim');
+            $this->form_validation->set_rules('technological_type_of_resource', 'Technological Type of Resource', 'trim');
+            $this->form_validation->set_rules('technological_details[]', 'Technological Details', 'trim');
+            $this->form_validation->set_rules('specification[]', 'Specification', 'trim');
+            $this->form_validation->set_rules('purpose[]', 'Purpose', 'trim');
+            $this->form_validation->set_rules('alignment[]', 'Alignment', 'trim');
+            $this->form_validation->set_rules('human_category', 'Human Category', 'trim');
+            $this->form_validation->set_rules('human_type_of_resource', 'Human Type of Resource', 'trim');
+            $this->form_validation->set_rules('human_details[]', 'Human Details', 'trim');
+            $this->form_validation->set_rules('role[]', 'Role', 'trim');
+            $this->form_validation->set_rules('extent_of_involvement[]', 'Extent of Involvement', 'trim');
+            $this->form_validation->set_rules('human_alignment[]', 'Human Alignment', 'trim');
+            $this->form_validation->set_rules('other_pertinent_facts', 'Other Pertinent Facts', 'trim');
+            $this->form_validation->set_rules('certification', 'Certification', 'trim');
+            if ($this->form_validation->run() === false) {
+            } else {
+                $postData = [
+                    'full_name' => $this->input->post('full_name'),
+                    'email' => $this->input->post('email'),
+                    'contact_no' => $this->input->post('contact_no'),
+                    'dat_of_birth' => $this->input->post('dat_of_birth'),
+                    'experience' => json_encode($this->input->post('experience')),
+                    'previous_experience' => $this->input->post('previous_experience'),
+                    'achievements_recognitions' => $this->input->post('achievements_recognitions'),
+                    'title' => $this->input->post('title'),
+                    'category' => $this->input->post('category'),
+                    'strategic_vision' => $this->input->post('strategic_vision'),
+                    'objectives' => $this->input->post('objectives'),
+                    'project_goals' => $this->input->post('project_goals'),
+                    'contribution_to_project_goals' => $this->input->post('contribution_to_project_goals'),
+                    'technological_category' => $this->input->post('technological_category'),
+                    'technological_type_of_resource' => $this->input->post('technological_type_of_resource'),
+                    'technological_details' => json_encode($this->input->post('technological_details')),
+                    'specification' => json_encode($this->input->post('specification')),
+                    'purpose' => json_encode($this->input->post('purpose')),
+                    'alignment' => json_encode($this->input->post('alignment')),
+                    'human_category' => $this->input->post('human_category'),
+                    'human_type_of_resource' => $this->input->post('human_type_of_resource'),
+                    'human_details' => json_encode($this->input->post('human_details')),
+                    'role' => json_encode($this->input->post('role')),
+                    'extent_of_involvement' => json_encode($this->input->post('extent_of_involvement')),
+                    'human_alignment' => json_encode($this->input->post('human_alignment')),
+                    'other_pertinent_facts' => $this->input->post('other_pertinent_facts'),
+                    'certification' => $this->input->post('certification'),
+                ];
+                $existingData = $this->BaseModel->getData('eoi_registration', ['user_id' => $this->session->login['user_id']]);
+                if ($existingData->num_rows() > 0) {
+                    $success = $this->BaseModel->updateData('eoi_registration', $postData, ['user_id' => $this->session->login['user_id']]);
+                    if ($success) {
+                        $this->session->set_flashdata('success', 'Data updated successfully.');
+                    } else {
+                        $this->session->set_flashdata('error', 'Failed to update data.');
+                    }
+                } else {
+                    $postData['user_id'] = $this->session->login['user_id']; // Add user_id to $postData
+                    $success = $this->BaseModel->insertData('eoi_registration', $postData);
+                    if ($success) {
+                        $this->session->set_flashdata('success', 'Data inserted successfully.');
+                    } else {
+                        $this->session->set_flashdata('error', 'Failed to insert data.');
+                    }
+                }
+                return redirect('eoi-registration');
+            }
+        } else {
+            $this->session->set_flashdata('error', 'Post Error.');
         }
     }
 }

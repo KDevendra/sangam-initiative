@@ -9,7 +9,6 @@ class Authorization extends CI_Controller
             $query = $this->BaseModel->getData('email_config', ['is_active' => 1])->row();
             if ($query) {
                 $this->load->library("email");
-
                 $config = [
                     "protocol" => $query->protocol,
                     "smtp_host" => $query->smtp_host,
@@ -23,7 +22,6 @@ class Authorization extends CI_Controller
                     "charset" => $query->charset,
                     "wordwrap" => $query->wordwrap,
                 ];
-                // dd($config);
                 $this->email->initialize($config);
                 $this->email->set_crlf($query->crlf);
                 $this->email->set_newline($query->newline);
@@ -46,15 +44,15 @@ class Authorization extends CI_Controller
                 if ($this->email->send()) {
                     return true;
                 } else {
-                    echo $this->email->print_debugger();
+                    // echo $this->email->print_debugger();
                     return false;
                 }
             } else {
-                echo "No active email configuration found.";
+                // echo "No active email configuration found.";
                 return false;
             }
         } catch (Exception $e) {
-            echo "Email sending error: " . $e->getMessage();
+            // echo "Email sending error: " . $e->getMessage();
             return false;
         }
     }
@@ -84,21 +82,21 @@ class Authorization extends CI_Controller
     public function postSignUp()
     {
         if ($this->input->method() === "post") {
-            $this->form_validation->set_rules("register_as", "register as", 'trim|required|min_length[3]|max_length[50]|regex_match[/^[A-Za-z\s]+$/]');
+            $this->form_validation->set_rules("register_as", "register as", 'trim|required|min_length[3]|max_length[50]');
             $this->form_validation->set_rules("datOfBirth", "date of birth", 'trim|required');
-            $this->form_validation->set_rules("fullName", "Full Name", 'trim|required|min_length[3]|max_length[50]|regex_match[/^[A-Za-z\s]+$/]');
-            $this->form_validation->set_rules("contactNo", "Contact No.", "trim|max_length[10]|min_length[10]|is_unique[login.contact_no]");
-            $this->form_validation->set_rules("email", "Email", "trim|required|valid_email|max_length[100]|is_unique[login.email]");
+            $this->form_validation->set_rules("fullName", "Full Name", 'trim|required|min_length[3]|max_length[50]');
+            // $this->form_validation->set_rules("contactNo", "Contact No.", "trim|max_length[10]|min_length[10]|is_unique[login.contact_no]");
+            // $this->form_validation->set_rules("email", "Email", "trim|required|valid_email|max_length[100]|is_unique[login.email]");
             $this->form_validation->set_rules("password", "password", "trim|required|min_length[8]|max_length[16]");
             $this->form_validation->set_rules("coreCompetencies", "core competency", 'trim');
             if ($this->input->post('register_as') === 'Individual') {
                 $this->form_validation->set_rules("experience", "experience", 'trim|required|min_length[1]');
             }
             if ($this->input->post('register_as') === 'Organization') {
-                $this->form_validation->set_rules("OrganizationName", "Organization Name", 'trim|required|min_length[3]|regex_match[/^[A-Za-z\s]+$/]');
+                $this->form_validation->set_rules("OrganizationName", "Organization Name", 'trim|required|min_length[3]');
                 $this->form_validation->set_rules("potentialInterestAreas[]", "Potential Interest Areas", 'trim|required');
-                $this->form_validation->set_rules("officeAddress", "office address", 'trim|required|min_length[3]|max_length[50]|regex_match[/^[A-Za-z\s]+$/]');
-                $this->form_validation->set_rules("organisationHQAddress", "organisation HQ address", 'trim|min_length[3]|max_length[50]|regex_match[/^[A-Za-z\s]+$/]');
+                $this->form_validation->set_rules("officeAddress", "office address", 'trim|required|min_length[3]|max_length[50]');
+                $this->form_validation->set_rules("organisationHQAddress", "organisation HQ address", 'trim|min_length[3]|max_length[50]');
                 $this->form_validation->set_rules("websiteURL", "Website URL", 'trim|valid_url|min_length[3]|max_length[50]');
             }
             if ($this->form_validation->run() === false) {
@@ -157,6 +155,25 @@ class Authorization extends CI_Controller
             echo json_encode($response);
         }
     }
+    public function checkEmail()
+    {
+        try {
+            $email = $this->input->post('email');
+            $record = $this->BaseModel->getData("login", ["email" => $email]);
+
+            if ($record) {
+                // Email exists
+                echo "exists";
+            } else {
+                // Email doesn't exist
+                echo "not_exists";
+            }
+        } catch (Exception $e) {
+            log_message('error', 'Error while checking email: ' . $e->getMessage());
+            echo "error";
+        }
+    }
+
     public function postSignIn()
     {
         $response = ["status" => "error", "message" => ""];
@@ -223,7 +240,7 @@ class Authorization extends CI_Controller
                                             $this->BaseModel->updateData("login", ["wrong_attempt" => 0, "current_login_time" => date("Y-m-d H:i:s")], ["user_id" => $dbuser_id]);
                                             $response["status"] = "success";
                                             $response["user_level"] = $details->user_level;
-                                            $response["message"] = "Redirect to dashboard......";
+                                            $response["message"] = "";
                                         } else {
                                             $response["message"] = "User does not have the required privilege.";
                                         }
@@ -438,34 +455,42 @@ class Authorization extends CI_Controller
     }
     public function resendOTP()
     {
-        try {
-            $user_id = $this->input->post("user_id");
-            $record = $this->BaseModel->getData("login", ["user_id" => $user_id]);
-            if ($record->num_rows() == 0) {
-                $this->session->set_flashdata("verified", "Your account is already created. Please log in");
-                $this->load->view("authorization/sign-in", ["title" => $this->projectTitle . " : Verify Reset password"]);
-                return;
-            }
-            $details = $record->row();
-            $user_id = $details->user_id;
-            $verification_code = $this->generateVerificationCode();
-            $cond = ["user_id" => $user_id];
-            $sendVerificationCode = $this->sendEmailVerificationCode($details->email, $details->user_name, $verification_code);
-            if ($sendVerificationCode) {
-                $updateVerificationCode = $this->BaseModel->updateData("login", ["activation_code" => $verification_code], $cond);
-                if ($updateVerificationCode) {
-                    $response = ["status" => "success", "message" => "Verification code sent to registered Email ID."];
-                    $this->output->set_content_type("application/json")->set_output(json_encode($response));
-                    return;
-                } else {
-                    throw new Exception("Failed to update activation code in the database");
+        if ($this->input->method() === "post") {
+            try {
+                if (!$this->input->post("user_id")) {
+                    throw new Exception("User ID is required in the POST data");
                 }
-            } else {
-                throw new Exception("Failed to send activation code. Please try again later.");
+
+                $user_id = $this->input->post("user_id");
+                $record = $this->BaseModel->getData("login", ["user_id" => $user_id]);
+
+                // Check if user record exists
+                if ($record->num_rows() == 0) {
+                    $this->session->set_flashdata("verified", "Your account is already created. Please log in");
+                    $this->load->view("authorization/sign-in", ["title" => $this->projectTitle . " : Verify Reset password"]);
+                    return;
+                }
+                $details = $record->row();
+                $user_id = $details->user_id;
+                $verification_code = $this->generateVerificationCode();
+                $cond = ["user_id" => $user_id];
+                $sendVerificationCode = $this->sendEmailVerificationCode($details->email, $details->user_name, $verification_code);
+                if ($sendVerificationCode) {
+                    $updateVerificationCode = $this->BaseModel->updateData("login", ["activation_code" => $verification_code], $cond);
+                    if ($updateVerificationCode) {
+                        $response = ["status" => "success", "message" => "Verification code sent to registered Email ID."];
+                        $this->output->set_content_type("application/json")->set_output(json_encode($response));
+                        return;
+                    } else {
+                        throw new Exception("Failed to update activation code in the database");
+                    }
+                } else {
+                    throw new Exception("Failed to send activation code. Please try again later.");
+                }
+            } catch (Exception $e) {
+                $response = ["status" => "error", "message" => $e->getMessage()];
+                $this->output->set_content_type("application/json")->set_output(json_encode($response));
             }
-        } catch (Exception $e) {
-            $response = ["status" => "error", "message" => $e->getMessage()];
-            $this->output->set_content_type("application/json")->set_output(json_encode($response));
         }
     }
     private function generateVerificationCode()

@@ -44,9 +44,10 @@ $route['verify-reset-password/(:any)'] = 'Authorization/verifyResetPassword/$1';
 $route['post-reset-verify-account'] = 'Authorization/postResetVerifyAccount';
 $route['post-verify-account'] = 'Authorization/postVerifyAccount';
 $route['post-forgot-password'] = 'Authorization/postForgotPassword';
-$route['resendOTP'] = 'Authorization/resendOTP';
+$route['resend-otp'] = 'Authorization/resendOTP';
 $route['forgot-password'] = 'Authorization/resetPassword';
 $route['outgoing-server-down'] = 'Authorization/serverDown';
+$route['check-email'] = 'Authorization/checkEmail';
 // route for user admin
 $route['admin-dashboard'] = 'AdminController/adminDashboard';
 $route['profile'] = 'AdminController/profile';
@@ -57,6 +58,7 @@ $route['change-password'] = 'AdminController/changePassword';
 $route['post-change-password'] = 'AdminController/postChangePassword';
 $route['eoi-registration'] = 'AdminController/eoiRegistration';
 $route['eoi-status'] = 'AdminController/eoiStatus';
+$route['submit-eoi-registration'] = 'AdminController/postEoIRegistration';
 
 // route for admin
 $route['user-list'] = 'AdminController/userList';
