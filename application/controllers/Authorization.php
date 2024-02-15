@@ -92,7 +92,7 @@ class Authorization extends CI_Controller
             $this->form_validation->set_rules("password", "password", "trim|required|min_length[8]|max_length[16]");
             $this->form_validation->set_rules("coreCompetencies", "core competency", 'trim');
             if ($this->input->post('register_as') === 'Individual') {
-                $this->form_validation->set_rules("experience", "experience", 'trim|required|min_length[3]');
+                $this->form_validation->set_rules("experience", "experience", 'trim|required|min_length[1]');
             }
             if ($this->input->post('register_as') === 'Organization') {
                 $this->form_validation->set_rules("OrganizationName", "Organization Name", 'trim|required|min_length[3]|regex_match[/^[A-Za-z\s]+$/]');
