@@ -67,6 +67,9 @@ $route['verifed-users'] = 'AdminController/verifedUsers';
 $route['unverified-users'] = 'AdminController/unverifiedUsers';
 $route['get-unverified-user-list'] = 'AdminController/getUnverifiedUserList';
 $route['get-verified-user-list'] = 'AdminController/getVerifiedUserList';
+$route['users'] = 'AdminController/users';
+$route['users/(:any)'] = 'AdminController/users/$1';
+$route['users/(:any)/(:any)'] = 'AdminController/users/$1/$2';
 //route for theme-customizer-options
 $route['project-settings'] = 'AdminController/projectSettings';
 $route['theme-customizer-options'] = 'AdminController/themeCustomizerOptions';
