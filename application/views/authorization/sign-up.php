@@ -150,9 +150,9 @@
                                                             </div>
                                                         </div>
                                                         <div class="mb-3 col-md-12">
-                                                            <label for="coreCompetencies" class="form-label">Core Competencies</label>
+                                                            <label for="coreCompetencies" class="form-label">Core Competencies <span class="text-danger">*</span></label>
                                                             <input type="text" name="coreCompetencies" id="coreCompetencies" placeholder="Select core competencies" />
-                                                            <div class="invalid-feedback">
+                                                            <div class="invalid-feedback" id="errorCoreCompetencies">
                                                                 Please select core competencies
                                                             </div>
                                                         </div>
@@ -395,11 +395,11 @@
                 var coreCompetencies = $("#coreCompetencies").val();
 
                 if (!coreCompetencies) {
-                    $("#coreCompetencies").addClass("is-invalid");
+                    $("#errorCoreCompetencies").show("is-invalid");
 
                     isValid = false;
                 } else {
-                    $("#coreCompetencies").removeClass("is-invalid");
+                    $("#errorCoreCompetencies").hide("is-invalid");
                 }
 
                 var registerAs = $("input[name='register_as']:checked").val();
