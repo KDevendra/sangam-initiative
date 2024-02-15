@@ -178,14 +178,14 @@
                                                             </div>
                                                         </div>
                                                         <div class="mb-3 col-md-6">
-                                                            <label for="websiteURL" class="form-label">Website URL of the organisation</label>
+                                                            <label for="websiteURL" class="form-label">Website URL of the organisation <span class="text-danger">*</span></label>
                                                             <input type="url" class="form-control" required id="websiteURL" name="websiteURL" placeholder="Enter Website URL of the organisation" />
                                                             <div class="invalid-feedback">
                                                                 Please enter Website URL
                                                             </div>
                                                         </div>
                                                         <div class="mb-3 col-md-6">
-                                                            <label for="organizationEmail" class="form-label"> Organization Email</label>
+                                                            <label for="organizationEmail" class="form-label"> Organization Email <span class="text-danger">*</span></label>
                                                             <input type="text" class="form-control" id="organizationEmail" name="organizationEmail" placeholder="Enter organization  email" required />
                                                             <div class="invalid-feedback">
                                                                 Please enter organization email
