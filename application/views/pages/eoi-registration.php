@@ -134,7 +134,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
-                                                    <!-- <button type="submit" class="btn btn-primary btn-label right ms-auto"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Save Draft</button> -->
+
                                                     <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                                 </div>
                                             </div>
@@ -173,6 +173,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
                                                     <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                    <button type="submit" class="btn btn-info right ms-auto">Save Draft</button>
                                                     <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                                 </div>
                                             </div>
@@ -225,6 +226,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
                                                     <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                    <button type="submit" class="btn btn-info right ms-auto">Save Draft</button>
                                                     <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                                 </div>
                                             </div>
@@ -279,6 +281,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
                                                     <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                    <button type="submit" class="btn btn-info right ms-auto">Save Draft</button>
                                                     <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                                 </div>
                                             </div>
@@ -341,6 +344,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
                                                     <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                    <button type="submit" class="btn btn-info right ms-auto">Save Draft</button>
                                                     <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                                 </div>
                                             </div>
@@ -365,6 +369,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
                                                     <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                    <button type="submit" class="btn btn-info right ms-auto">Save Draft</button>
                                                     <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                                 </div>
                                             </div>
@@ -385,6 +390,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
                                                     <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                    <button type="submit" class="btn btn-info right ms-auto">Save Draft</button>
                                                     <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                                 </div>
                                             </div>

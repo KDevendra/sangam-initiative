@@ -296,7 +296,6 @@ class AdminController extends CI_Controller
                     'other_pertinent_facts' => $this->input->post('other_pertinent_facts'),
                     'certification' => $this->input->post('certification'),
                 ];
-                dd($postData);
                 $existingData = $this->BaseModel->getData('eoi_registration', ['user_id' => $this->session->login['user_id']]);
                 if ($existingData->num_rows() > 0) {
                     $success = $this->BaseModel->updateData('eoi_registration', $postData, ['user_id' => $this->session->login['user_id']]);
