@@ -112,9 +112,9 @@
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <label for="phoneNumber" class="form-label">Date of Birth</label>
-                                                            <input type="text" class="form-control" id="dat_of_birth" name="dat_of_birth" placeholder="Enter phone number" value="<?php if (isset($userDetail->dat_of_birth)) {
-                                                                                                                                                                                        echo  $userDetail->dat_of_birth;
-                                                                                                                                                                                    }; ?>" />
+                                                            <input type="date" class="form-control" id="date_of_birth" name="date_of_birth" placeholder="Select date of birth" value="<?php if (isset($userDetail->date_of_birth)) {
+                                                                                                                                                                                            echo  $userDetail->date_of_birth;
+                                                                                                                                                                                        }; ?>" />
                                                             <div class="invalid-feedback">Please enter a date of birth</div>
                                                         </div>
                                                         <div class="col-sm-6">
@@ -134,7 +134,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
-                                                    <button type="submit" class="btn btn-primary btn-label right ms-auto"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Save Draft</button>
+                                                    <!-- <button type="submit" class="btn btn-primary btn-label right ms-auto"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Save Draft</button> -->
                                                     <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                                 </div>
                                             </div>
@@ -321,7 +321,7 @@
                                                                         <label for="role" class="form-label">Role</label> <input type="text" class="form-control" name="role[]" placeholder="Role" />
                                                                     </div>
                                                                     <div class="col-md-4 mt-2">
-                                                                        <label for="experience" class="form-label">Experience</label> <input type="text" class="form-control" name="experience[]" placeholder="Experience of human resource" />
+                                                                        <label for="experience" class="form-label">Experience</label> <input type="text" class="form-control" name="human_experience[]" placeholder="Experience of human resource" />
                                                                     </div>
                                                                     <div class="col-md-4 mt-2">
                                                                         <label for="extent_of_involvement" class="form-label">Extent of involvement in PoC</label>

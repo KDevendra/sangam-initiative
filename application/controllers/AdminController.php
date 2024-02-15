@@ -240,8 +240,8 @@ class AdminController extends CI_Controller
             $this->form_validation->set_rules('full_name', 'Full Name', 'trim');
             $this->form_validation->set_rules('email', 'Email', 'trim|valid_email');
             $this->form_validation->set_rules('contact_no', 'Contact Number', 'trim');
-            $this->form_validation->set_rules('dat_of_birth', 'Date of Birth', 'trim');
-            $this->form_validation->set_rules('experience[]', 'Experience', 'trim');
+            $this->form_validation->set_rules('date_of_birth', 'Date of Birth', 'trim');
+            $this->form_validation->set_rules('experience', 'Experience', 'trim');
             $this->form_validation->set_rules('previous_experience', 'Previous Experience', 'trim');
             $this->form_validation->set_rules('achievements_recognitions', 'Achievements and Recognitions', 'trim');
             $this->form_validation->set_rules('title', 'Title', 'trim');
@@ -259,6 +259,7 @@ class AdminController extends CI_Controller
             $this->form_validation->set_rules('human_category', 'Human Category', 'trim');
             $this->form_validation->set_rules('human_type_of_resource', 'Human Type of Resource', 'trim');
             $this->form_validation->set_rules('human_details[]', 'Human Details', 'trim');
+            $this->form_validation->set_rules('human_experience[]', 'human experience', 'trim');
             $this->form_validation->set_rules('role[]', 'Role', 'trim');
             $this->form_validation->set_rules('extent_of_involvement[]', 'Extent of Involvement', 'trim');
             $this->form_validation->set_rules('human_alignment[]', 'Human Alignment', 'trim');
@@ -270,8 +271,8 @@ class AdminController extends CI_Controller
                     'full_name' => $this->input->post('full_name'),
                     'email' => $this->input->post('email'),
                     'contact_no' => $this->input->post('contact_no'),
-                    'dat_of_birth' => $this->input->post('dat_of_birth'),
-                    'experience' => json_encode($this->input->post('experience')),
+                    'date_of_birth' => $this->input->post('date_of_birth'),
+                    'experience' => $this->input->post('experience'),
                     'previous_experience' => $this->input->post('previous_experience'),
                     'achievements_recognitions' => $this->input->post('achievements_recognitions'),
                     'title' => $this->input->post('title'),
@@ -295,6 +296,7 @@ class AdminController extends CI_Controller
                     'other_pertinent_facts' => $this->input->post('other_pertinent_facts'),
                     'certification' => $this->input->post('certification'),
                 ];
+                dd($postData);
                 $existingData = $this->BaseModel->getData('eoi_registration', ['user_id' => $this->session->login['user_id']]);
                 if ($existingData->num_rows() > 0) {
                     $success = $this->BaseModel->updateData('eoi_registration', $postData, ['user_id' => $this->session->login['user_id']]);

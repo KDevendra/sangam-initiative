@@ -370,26 +370,7 @@
                     $("#email").addClass("is-invalid");
                     isValid = false;
                 } else {
-                    $.ajax({
-                        url: "<?php echo base_url('check-email'); ?>",
-                        type: "POST",
-                        data: {
-                            email: email
-                        },
-                        success: function(response) {
-                            if (response.trim() === "exists") {
-                                $("#email").addClass("is-invalid");
-                                $("#email").next(".invalid-feedback").text("Email already exists.");
-                                isValid = false;
-                            } else {
-                                $("#email").next(".invalid-feedback").text("");
-                                $("#email").removeClass("is-invalid");
-                            }
-                        },
-                        error: function(xhr, status, error) {
-                            console.error("AJAX Error:", status, error);
-                        }
-                    });
+                    $("#email").removeClass("is-invalid");
                 }
                 var contactNo = $("#contactNo").val();
                 if (!contactNo) {
@@ -519,9 +500,36 @@
                 $("#steparrow-description-info-tab").removeClass("active");
                 $("#submitBtn").text("Next Step").attr("id", "btnNextStapeOrgnation");
             });
-            $(document).on("keyup", "#email", function() {
-
+            $("#email").on("keyup", function() {
+                var email = $("#email").val();
+                $.ajax({
+                    url: "<?php echo base_url('check-email'); ?>",
+                    type: "POST",
+                    data: {
+                        email: email
+                    },
+                    success: function(response) {
+                        if (response.trim() === "exists") {
+                            $("#email").addClass("is-invalid");
+                            $("#email").next(".invalid-feedback").html("Email already exists.");
+                            $("#submitBtn").prop("disabled", true);
+                            $("#btnNextStapeOrgnation").prop("disabled", true); // Disabling submit button
+                            // Perform some action if email exists
+                        } else {
+                            $("#email").next(".invalid-feedback").html("");
+                            $("#email").removeClass("is-invalid");
+                            $("#submitBtn").prop("disabled", false);
+                            $("#btnNextStapeOrgnation").prop("disabled", false);
+                            // Enable submit button if email doesn't exist
+                            // Perform some action if email doesn't exist
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("AJAX Error:", status, error);
+                    }
+                });
             });
+
 
             function populateSampleJSONData(coreCompetenciesData) {
                 const SampleJSONData = [];

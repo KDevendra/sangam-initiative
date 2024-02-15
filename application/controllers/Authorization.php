@@ -115,7 +115,7 @@ class Authorization extends CI_Controller
                 } else {
                     $postData = [
                         'register_as' => $this->input->post('register_as'),
-                        'dat_of_birth' => $this->input->post('datOfBirth'),
+                        'date_of_birth' => $this->input->post('datOfBirth'),
                         'user_name' => $this->input->post('fullName'),
                         'full_name' => $this->input->post('fullName'),
                         'contact_no' => $this->input->post('contactNo'),
@@ -159,13 +159,11 @@ class Authorization extends CI_Controller
     {
         try {
             $email = $this->input->post('email');
-            $record = $this->BaseModel->getData("login", ["email" => $email]);
-
-            if ($record) {
-                // Email exists
+            $record = $this->BaseModel->getData("login", ["email" => $email])->num_rows();
+            if ($record>0) {
                 echo "exists";
             } else {
-                // Email doesn't exist
+  
                 echo "not_exists";
             }
         } catch (Exception $e) {
