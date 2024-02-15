@@ -131,7 +131,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="about-features-item item-active text-center">
-                                <div class="hover-bg bg_cover" style="background-image: url(<?phpechobase_url('')?>include/web/custom/Environmental_Data.jpg);"></div>
+                                <div class="hover-bg bg_cover" style="background-image: url(<?php echo base_url('')?>include/web/custom/Environmental_Data.jpg);"></div>
                                 <div class="icon"><i class="flaticon-vision"></i></div>
                                 <div class="text">
                                     <h3 class="title">Crafting the Blueprint</h3>
