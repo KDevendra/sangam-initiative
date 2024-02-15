@@ -23,7 +23,7 @@ class Authorization extends CI_Controller
                     "charset" => $query->charset,
                     "wordwrap" => $query->wordwrap,
                 ];
-
+                // dd($config);
                 $this->email->initialize($config);
                 $this->email->set_crlf($query->crlf);
                 $this->email->set_newline($query->newline);
@@ -50,11 +50,11 @@ class Authorization extends CI_Controller
                     return false;
                 }
             } else {
-                // echo "No active email configuration found.";
+                echo "No active email configuration found.";
                 return false;
             }
         } catch (Exception $e) {
-            // echo "Email sending error: " . $e->getMessage();
+            echo "Email sending error: " . $e->getMessage();
             return false;
         }
     }
