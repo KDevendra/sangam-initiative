@@ -15,7 +15,7 @@
         </div>
         <div class="project-details-wrapper pb-60">
             <div class="row border_bottom pt-20">
-                <div class="col-lg-10">
+                <div class="col-lg-9">
                     <div class="project-info mb-30 wow fadeInLeft" style="visibility: visible;">
                         <h3 class="title">Pre Registration</h3>
                         <p><b>Stay Ahead: </b>By pre-registering, you'll receive regular updates, access to exclusive content on our blog, and
@@ -23,14 +23,14 @@
                             infrastructure innovation.</p>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <div class="d-flex justify-content-center">
-                        <a href="<?php echo base_url(''); ?>registration" class="main-btn golden-btn" id="getInvolved"> <i class="far fa-chevron-circle-right" aria-hidden="true"></i> Explore More</a>
+                        <a href="<?php echo base_url(''); ?>registration" class="main-btn golden-btn D8D8EB" id="getInvolved"> <i class="far fa-chevron-circle-right" aria-hidden="true"></i> Pre-Register</a>
                     </div>
                 </div>
             </div>
             <div class="row border_bottom pt-20">
-                <div class="col-lg-10">
+                <div class="col-lg-9">
                     <div class="project-info mb-30 wow fadeInLeft" style="visibility: visible;">
                         <h3 class="title">Join Outreach
                             Programmes</h3>
@@ -40,14 +40,14 @@
                             Outreach programmes section of the website.</p>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <div class="d-flex justify-content-center">
-                        <a href="javascript:void(0)" class="main-btn golden-btn outreachBtn" id="getInvolved"> <i class="far fa-chevron-circle-right" aria-hidden="true"></i> Explore More</a>
+                        <a href="javascript:void(0)" class="main-btn golden-btn FEE4D2 outreachBtn" id="getInvolved"> <i class="far fa-chevron-circle-right" aria-hidden="true"></i> Explore More</a>
                     </div>
                 </div>
             </div>
             <div class="row border_bottom pt-20">
-                <div class="col-lg-10">
+                <div class="col-lg-9">
                     <div class="project-info mb-30 wow fadeInLeft" style="visibility: visible;">
                         <h3 class="title">Suggest Use
                             Cases</h3>
@@ -57,14 +57,14 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <div class="d-flex justify-content-center">
-                        <a href="<?php echo base_url(''); ?>registration" class="main-btn golden-btn" id="getInvolved"> <i class="far fa-chevron-circle-right" aria-hidden="true"></i> Explore More</a>
+                        <a href="<?php echo base_url(''); ?>registration" class="main-btn golden-btn D8D8EB" id="getInvolved"> <i class="far fa-chevron-circle-right" aria-hidden="true"></i> Submit Use Case</a>
                     </div>
                 </div>
             </div>
             <div class="row border_bottom pt-20">
-                <div class="col-lg-10">
+                <div class="col-lg-9">
                     <div class="project-info mb-30 wow fadeInLeft" style="visibility: visible;">
                         <h3 class="title">Lead the
                             Conversation</h3>
@@ -73,14 +73,14 @@
                             guide participants towards impactful contributions.</p>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <div class="d-flex justify-content-center">
-                        <a href="<?php echo base_url(''); ?>registration" class="main-btn golden-btn" id="getInvolved"> <i class="far fa-chevron-circle-right" aria-hidden="true"></i> Explore More</a>
+                        <a href="<?php echo base_url(''); ?>registration" class="main-btn golden-btn FEE4D2" id="getInvolved"> <i class="far fa-chevron-circle-right" aria-hidden="true"></i> Volunteer as a Speaker</a>
                     </div>
                 </div>
             </div>
             <div class="row border_bottom pt-20">
-                <div class="col-lg-10">
+                <div class="col-lg-9">
                     <div class="project-info mb-30 wow fadeInLeft" style="visibility: visible;">
                         <h3 class="title">Contribute
                             Content</h3>
@@ -89,14 +89,14 @@
                             collective knowledge and inspire others.</p>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <div class="d-flex justify-content-center">
-                        <a href="<?php echo base_url(''); ?>registration" class="main-btn golden-btn" id="getInvolved"> <i class="far fa-chevron-circle-right" aria-hidden="true"></i> Explore More</a>
+                        <a href="<?php echo base_url(''); ?>registration" class="main-btn golden-btn D8D8EB" id="getInvolved"> <i class="far fa-chevron-circle-right" aria-hidden="true"></i> Share</a>
                     </div>
                 </div>
             </div>
             <div class="row border_bottom pt-20">
-                <div class="col-lg-10">
+                <div class="col-lg-9">
                     <div class="project-info mb-30 wow fadeInLeft" style="visibility: visible;">
                         <h3 class="title">Submit Your
                             Interest</h3>
@@ -105,9 +105,9 @@
                             involvement will drive the initiative forward.</p>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <div class="d-flex justify-content-center">
-                        <a href="<?php echo base_url(''); ?>registration" class="main-btn golden-btn" id="getInvolved"> <i class="far fa-chevron-circle-right" aria-hidden="true"></i> Explore More</a>
+                        <a href="<?php echo base_url(''); ?>registration" class="main-btn golden-btn FEE4D2" id="getInvolved"> <i class="far fa-chevron-circle-right" aria-hidden="true"></i> Submit EoI Response</a>
                     </div>
                 </div>
             </div>

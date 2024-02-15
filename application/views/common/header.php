@@ -212,7 +212,7 @@
                                         <li><a href="javascript:void(0)" class="whyToJoinBtn">Why to join
                                             </a>
                                         </li>
-                                        <li><a href=" javascript:void(0)" class="participateBtn">Participate
+                                        <li><a href="<?php echo base_url('get-involved');?>">Get involved
                                             </a>
                                         </li>
                                         <li><a href="javascript:void(0)" class="processOfSangamBtn">Process of Sangam

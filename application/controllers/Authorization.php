@@ -50,11 +50,11 @@ class Authorization extends CI_Controller
                     return false;
                 }
             } else {
-                echo "No active email configuration found.";
+                // echo "No active email configuration found.";
                 return false;
             }
         } catch (Exception $e) {
-            echo "Email sending error: " . $e->getMessage();
+            // echo "Email sending error: " . $e->getMessage();
             return false;
         }
     }
@@ -92,7 +92,7 @@ class Authorization extends CI_Controller
             $this->form_validation->set_rules("password", "password", "trim|required|min_length[8]|max_length[16]");
             $this->form_validation->set_rules("coreCompetencies", "core competency", 'trim');
             if ($this->input->post('register_as') === 'Individual') {
-                $this->form_validation->set_rules("experience", "experience", 'trim|required|min_length[3]|regex_match[/^[A-Za-z\s]+$/]');
+                $this->form_validation->set_rules("experience", "experience", 'trim|required|min_length[3]');
             }
             if ($this->input->post('register_as') === 'Organization') {
                 $this->form_validation->set_rules("OrganizationName", "Organization Name", 'trim|required|min_length[3]|regex_match[/^[A-Za-z\s]+$/]');
@@ -259,7 +259,7 @@ class Authorization extends CI_Controller
             $cond = ["user_id" => $user_id];
             $sendVerificationCode = $this->sendEmailVerificationCode($details->email, $details->user_name, $verification_code);
             if (!$sendVerificationCode) {
-                return redirect('server-down');
+                return redirect('outgoing-server-down');
             }
             $updateActivationCode = $this->BaseModel->updateData("login", ["activation_code" => $verification_code], $cond);
             if (!$updateActivationCode) {
@@ -269,7 +269,7 @@ class Authorization extends CI_Controller
         } catch (Exception $e) {
             log_message("error", $e->getMessage());
             $this->session->set_flashdata("error", "An error occurred during password reset verification. Please try again later.");
-            return redirect('server-down');
+            return redirect('outgoing-server-down');
         }
     }
     public function verifyAccount($user_id)
@@ -287,7 +287,7 @@ class Authorization extends CI_Controller
             $cond = ["user_id" => $user_id];
             $sendVerificationCode = $this->sendEmailVerificationCode($details->email, $details->user_name, $verification_code);
             if (!$sendVerificationCode) {
-                return redirect('server-down');
+                return redirect('outgoing-server-down');
             }
             $updateActivationCode = $this->BaseModel->updateData("login", ["activation_code" => $verification_code], $cond);
             if (!$updateActivationCode) {
@@ -299,7 +299,7 @@ class Authorization extends CI_Controller
         } catch (Exception $e) {
             log_message("error", $e->getMessage());
             $this->session->set_flashdata("error", "An error occurred during account verification. Please try again later.");
-            return redirect('server-down');
+            return redirect('outgoing-server-down');
         }
     }
     public function postResetVerifyAccount()

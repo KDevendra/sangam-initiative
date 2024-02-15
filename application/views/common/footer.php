@@ -24,10 +24,13 @@
                             <h4 class="widget-title">Get In Touch</h4>
                             <div class="widget-content">
                                 <ul class="info-list">
-                                    <li>C-DOT Campus, Mandi Road, Mehrauli New Delhi - 110030, India
+                                  <li><b>Telecom Centres of Excellence, India</b></li>
+                                    <li>C-DOT Campus, Mandi Road, Mehrauli,
+New Delhi - 110030, India
+
                                     </li>
                                     <li><a href="mailto:sangam-dot@tcoe.in">Email ID: sangam-dot@tcoe.in</a></li>
-                                    <li><a href="tel:+911-26598681-82">+911-26598681-82</a></li>
+                                    <li><a href="tel:011-26598681-82">011-26598681-82</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -49,10 +52,10 @@
                             <h4 class="widget-title">Important Link</h4>
                             <div class="widget-content">
                                 <ul class="footer-nav">
-                                    <li><a href="#">EOI</a></li>
-                                    <li><a href="#"> Why Join</a></li>
-                                    <li><a href="#">Events</a></li>
-                                    <li><a href="#">Registration</a></li>
+                                    <li><a href="<?php echo base_url('expression-of-interest')?>">About EoI</a></li>
+                                    <li><a href="javascript:void(0)" class="whyToJoinBtn"> Why Join</a></li>
+
+                                    <li><a href="<?php echo base_url('registration')?>">Registration</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -63,7 +66,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="copyright-text">
-                            <P>Copy&copy; 2023 Sangam Initiative. All Rights Reserved.</P>
+                            <P>Copy&copy; 2024 Sangam Initiative. All Rights Reserved.</P>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -244,7 +247,7 @@
         });
         $('.outreachBtn').on('click', function(event) {
             event.preventDefault();
-            scrollToElement('outreachDes', 0);
+            scrollToElement('participateDes', 0);
             var buttonId = $(this).attr('id');
             localStorage.setItem(buttonId + '_scrollTarget', 'outreachDes');
             window.location.href = "<?php echo base_url(''); ?>";

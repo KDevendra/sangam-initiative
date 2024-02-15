@@ -65,9 +65,9 @@
                                         <div class="p-lg-4 p-4">
                                             <div>
                                                 <h5 class="text-primary" style="display: flex; justify-content: space-between;">
-                                                    Register for 'Digital Twin: Sangam Initiative' <a href="<?php echo base_url('') ?>"><i class="ri-home-smile-fill"></i></a>
+                                                    Register for 'Digital Twin: Sangam Initiative' <a href="<?php echo base_url('') ?>" style="font-size: 25px;"><i class="ri-home-smile-fill fs_25"></i></a>
                                                 </h5>
-                                                <p class="text-muted">Join the transformation of infrastructure planning.</p>
+                                                <!-- <p class="text-muted">Join the transformation of infrastructure planning.</p> -->
                                             </div>
                                             <div class="mt-4">
                                                 <form id="sign-up" class="needs-validation" novalidate>
@@ -172,12 +172,12 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div class="mb-4 col-md-12">
+                                                            <!-- <div class="mb-4 col-md-12">
                                                                 <p class="mb-0 fs-12 text-muted fst-italic">
                                                                     By Registration implies acceptance of the Sangam Initiative
                                                                     <a href="javascript:void(0)" id="guidelinesBtn" class="text-primary text-decoration-underline fst-normal fw-medium">Guidelines</a>
                                                                 </p>
-                                                            </div>
+                                                            </div> -->
                                                             <div class="mt-0 d-flex justify-content-center">
                                                                 <button class="btn btn-primary" id="submitBtn" type="submit">Register Now</button>
                                                             </div>
@@ -240,6 +240,13 @@
                                                         </div>
                                                     </div>
                                                 </form>
+                                                <div id="password-contain" class="p-3 bg-light mb-2 mt-2 rounded">
+                                                    <h5 class="fs-13">Password must contain:</h5>
+                                                    <p id="pass-length" class="invalid fs-12 mb-2">Minimum <b>8 characters</b></p>
+                                                    <p id="pass-lower" class="invalid fs-12 mb-2">At <b>lowercase</b> letter (a-z)</p>
+                                                    <p id="pass-upper" class="invalid fs-12 mb-2">At least <b>uppercase</b> letter (A-Z)</p>
+                                                    <p id="pass-number" class="invalid fs-12 mb-0">A least <b>number</b> (0-9)</p>
+                                                </div>
                                             </div>
                                             <div class="mt-2 text-center">
                                                 <p class="mb-0">Already have an account ? <a href="<?php echo base_url('login'); ?>" class="fw-semibold text-primary text-decoration-underline">Login</a></p>

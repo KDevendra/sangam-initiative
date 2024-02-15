@@ -3,7 +3,7 @@
     Template Name: Gadden - Garden & Landscaping HTML Template
     Template URI: site.com
     Description: Gadden is a creative & unique HTML template for Landscaping, Gardening, Groundskeeping, Lawn Services, Florists, Flower Shops and companies that offer related services.
-    Author: WebTend 
+    Author: WebTend
     Author URI: https://webtend.net/
     Version: 1.0
 
@@ -11,7 +11,7 @@
     CSS INDEX
 --------------------------
 
-    01. Common css 
+    01. Common css
     02. Header css
     03. Hero css
     04. About css
@@ -28,7 +28,7 @@
     15. Contact css
     16. Footer css
     17. Sections css
-    
+
 -----------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 h1,
@@ -681,7 +681,7 @@ ul.check-style-one li i,
 }
 
 /*---========================
-        01. Default css 
+        01. Default css
 =======================----*/
 /* Base CSS */
 html {
@@ -1058,8 +1058,8 @@ button {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 7px 13px;
-  font: 600 14px  'Montserrat', sans-serif;
+  padding: 7px 9px;
+  font: 600 11px 'Montserrat', sans-serif;
   text-transform: capitalize;
   border-radius: 15px;
   line-height: 20px;
@@ -1476,10 +1476,10 @@ button {
 }
 
 /*====================
-    End COMMON css 
+    End COMMON css
 ======================*/
 /*---==================
-    02. Header css 
+    02. Header css
 =================----*/
 /* Transparent Header  */
 .transparent-header {
@@ -2273,7 +2273,7 @@ button {
 }
 
 /*---=============================
-            03. Header css 
+            03. Header css
 ===========================----*/
 .hero-slider-two .slick-arrow {
   position: absolute;
@@ -2712,7 +2712,7 @@ line-height: 26.4px;
 }
 
 /*---==========================
-        04. About css 
+        04. About css
 =========================----*/
 /*-=== About Content Box ====-*/
 .about-two_content-box {
@@ -2956,8 +2956,8 @@ line-height: 26.4px;
       font-style: italic;
       font-size: 18px;
       font-weight: 400;
- 
-    
+
+
 }
 
 .fancy-about-item .text h5 {
@@ -3080,7 +3080,7 @@ line-height: 26.4px;
 }
 
 /*---=============================
-        05. Features css 
+        05. Features css
 ============================----*/
 .border-top-1 {
   border-top: 1px solid rgba(11, 61, 44, 0.1);
@@ -3745,7 +3745,7 @@ position: absolute;
   padding: 6px 25px;
   letter-spacing: -0.02em;
   border-radius: 5px;
-  font: 600 16px 'Montserrat Alternates', sans-serif;
+  font: 600 16px 'Montserrat', sans-serif;
   line-height: normal;
   text-transform: uppercase;
   line-height: 22px;
@@ -4276,7 +4276,7 @@ position: absolute;
 }
 
 /*---==========================
-        06. Service css 
+        06. Service css
 =========================----*/
 .single-service-item {
   border-radius: 20px;
@@ -4503,7 +4503,7 @@ position: absolute;
 }
 
 /*---==========================
-        07. Project css 
+        07. Project css
 =========================----*/
 .project-filter li {
   position: relative;
@@ -5202,7 +5202,7 @@ position: absolute;
 }
 
 /*---=======================
-        08. Gallery css 
+        08. Gallery css
 =======================----*/
 .single-gallery-item:hover .gallery-img .hover-overlay {
   visibility: visible;
@@ -5256,7 +5256,7 @@ position: absolute;
 }
 
 /*---========================
-        09. Team css 
+        09. Team css
 =======================----*/
 .single-team-item:hover .member-img .icon-btn {
   -webkit-box-shadow: 0px 10px 60px rgba(11, 61, 44, 0.85);
@@ -5759,7 +5759,7 @@ position: absolute;
 }
 
 /*---============================
-        10. Testimonial css 
+        10. Testimonial css
 ============================----*/
 ul.slick-dots li {
   position: relative;
@@ -6247,7 +6247,7 @@ ul.slick-dots li.slick-active {
 }
 
 /*---=====================
-        11. Faqs css 
+        11. Faqs css
 ======================----*/
 .accordion-card {
   padding: 22px 35px 20px;
@@ -6289,7 +6289,7 @@ ul.slick-dots li.slick-active {
 }
 
 /*---==========================
-        12. Pricing css 
+        12. Pricing css
 =========================----*/
 .single-pricing-item {
   background-color: #fff;
@@ -6512,7 +6512,7 @@ ul.slick-dots li.slick-active {
 }
 
 /*---==========================
-        13. Shop css 
+        13. Shop css
 =========================----*/
 @media (max-width: 767px) {
   .product-filter .show-text {
@@ -7075,7 +7075,7 @@ ul.slick-dots li.slick-active {
 }
 
 /*---==========================
-            14. Blog css 
+            14. Blog css
 ==========================----*/
 /*-=== Post Meta ====-*/
 .post-meta span:not(:last-child):after {
@@ -8167,7 +8167,7 @@ font-size: 20px;
 }
 
 /*---=========================
-        15. Contact css 
+        15. Contact css
 =========================----*/
 /*-=== Contact Info Wrapper ====-*/
 .contact-info-wrapper {
@@ -8461,7 +8461,7 @@ font-size: 20px;
 }
 
 /*---=========================
-        16. Footer css 
+        16. Footer css
 =========================----*/
 .footer-area {
   position: relative;
@@ -8765,7 +8765,7 @@ font-size: 20px;
 }
 
 /*---===========================
-        17. Sections css 
+        17. Sections css
 ==========================----*/
 .about-bg-section {
   position: relative;

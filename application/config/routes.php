@@ -46,7 +46,7 @@ $route['post-verify-account'] = 'Authorization/postVerifyAccount';
 $route['post-forgot-password'] = 'Authorization/postForgotPassword';
 $route['resendOTP'] = 'Authorization/resendOTP';
 $route['forgot-password'] = 'Authorization/resetPassword';
-$route['server-down'] = 'Authorization/serverDown';
+$route['outgoing-server-down'] = 'Authorization/serverDown';
 // route for user admin
 $route['admin-dashboard'] = 'AdminController/adminDashboard';
 $route['profile'] = 'AdminController/profile';
