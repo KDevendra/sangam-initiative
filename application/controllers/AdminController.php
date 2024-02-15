@@ -119,6 +119,61 @@ class AdminController extends CI_Controller
         }
         return $response;
     }
+    public function users($action = null, $user_id = null)
+    {
+        $this->checkUserLevel([1]);
+        $data["title"] = $action . "users : " . $this->projectTitle;
+        switch ($action) {
+            case "add":
+                $data["flag"] = "add";
+                $data["page_name"] = "pages/user-detail";
+                break;
+            case "view":
+                if ($user_id !== null) {
+                    $data["flag"] = "view";
+                    $data["userDetail"] = $this->BaseModel->getData("login", ["user_id" => $user_id])->row();
+                    $data["page_name"] = "pages/user-detail";
+                } else {
+                }
+                break;
+            case "edit":
+                if ($user_id !== null) {
+                    $data["flag"] = "edit";
+                    $data["userDetail"] = $this->BaseModel->getData("login", ["user_id" => $user_id])->row();
+                    $data["page_name"] = "pages/user-detail";
+                } else {
+                }
+                break;
+            case "delete":
+                if ($user_id !== null) {
+                    $query = $this->BaseModel->deleteData("login", ["user_id" => $user_id,]);
+                    if ($query) {
+                        $response = ["status" => "success", "message" => "The user has been successfully deleted.",];
+                    } else {
+                        $response = ["status" => "error", "message" => "Unable to delete the user. Please try again later.",];
+                    }
+                    if ($this->input->is_ajax_request()) {
+                        $this->output->set_content_type("application/json");
+                        echo json_encode($response);
+                        exit();
+                    } else {
+                    }
+                } else {
+                    $response = ["status" => "error", "message" => "Invalid user ID. Please provide a valid user ID.",];
+                    if ($this->input->is_ajax_request()) {
+                        $this->output->set_content_type("application/json");
+                        echo json_encode($response);
+                        exit();
+                    } else {
+                    }
+                }
+                break;
+            default:
+                $data["page_name"] = "pages/users";
+                break;
+        }
+        $this->load->view("component/index", $data);
+    }
     public function eoiRegistration()
     {
         $this->checkUserLevel([2]);
