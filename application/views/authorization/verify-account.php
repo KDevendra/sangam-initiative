@@ -132,7 +132,7 @@
                                             </form>
                                         </div>
                                         <div class="mt-5 text-center">
-                                            <p class="mb-0">Didn't receive a code ? <a href="javscript:void(0)" id="resendCode" class="fw-semibold text-primary text-decoration-underline">Resend</a></p>
+                                            <p class="mb-0">Didn't receive a code ? <span id="resendCode" class="fw-semibold text-primary text-decoration-underline">Resend</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -303,7 +303,7 @@
                             }
                         } else if (response.status === "success") {
                             Swal.fire({
-                                html: '<div class="mt-3"><lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" colors="primary:#29c5f6,secondary:#405189" style="width:120px;height:120px"></lord-icon><div class="mt-4 pt-2 fs-15"><h4>Well done !</h4><p class="text-muted mx-4 mb-0">' +
+                                html: '<div class="mt-3"><lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" colors="primary:#29c5f6,secondary:#405189" style="width:120px;height:120px"></lord-icon><div class="mt-4 pt-2 fs-15"><h4>Success!</h4><p class="text-muted mx-4 mb-0">' +
                                     response.message +
                                     "</p></div></div>",
                                 showCancelButton: !0,
