@@ -110,11 +110,11 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="mb-4">
+                                                    <!-- <div class="mb-4">
                                                         <p class="mb-0 fs-12 text-muted fst-italic">
                                                             By Registration implies acceptance of the Sangam Initiative <a href="#" class="text-primary text-decoration-underline fst-normal fw-medium">Guidelines</a>
                                                         </p>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                                 <div id="password-contain" class="p-3 bg-light mb-2 rounded">
                                                     <h5 class="fs-13">Password must contain:</h5>
@@ -336,6 +336,46 @@
             });
         });
     </script>
+    <?php
+    if (ENVIRONMENT === 'development') {
+    } else {
+    ?>
+        <script>
+            $(document).on("contextmenu", function() {
+                return false;
+            });
+            $("body").css({
+                "-webkit-user-select": "none",
+                "-moz-user-select": "none",
+                "-ms-user-select": "none",
+                "user-select": "none",
+            });
+            $("input, textarea").css({
+                "-webkit-user-select": "auto",
+                "-moz-user-select": "auto",
+                "-ms-user-select": "auto",
+                "user-select": "auto",
+            });
+            $(document).on("keydown", function(event) {
+                if ((event.ctrlKey || event.metaKey) && (event.keyCode === 70 || event.keyCode === 85)) {
+                    event.preventDefault();
+                }
+            });
+            document.addEventListener("keydown", function(event) {
+                if ((event.ctrlKey || event.metaKey) && (event.keyCode === 67 || event.keyCode === 77)) {
+                    event.preventDefault();
+                }
+            });
+            document.addEventListener("keydown", function(event) {
+                if ((event.ctrlKey || event.metaKey) && event.shiftKey && (event.code === "KeyC" || event.code === "KeyM")) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+            });
+        </script>
+    <?php
+    }
+    ?>
 </body>
 
 </html>
