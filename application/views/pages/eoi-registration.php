@@ -124,6 +124,75 @@
                                                                                                                                                                                                         }; ?>" />
                                                             <div class="invalid-feedback">Please enter a core competencies</div>
                                                         </div>
+                                                        <?php
+                                                        if (isset($userDetail->register_as) && $userDetail->register_as === 'Organization') {
+                                                        ?>
+                                                            <div class="col-sm-6">
+                                                                <label for="phoneNumber" class="form-label">Organization Name</label>
+                                                                <input type="text" readonly class="form-control" id="organization_name" name="organization_name" placeholder="Enter organization_name" value="<?php echo isset($userDetail->organization_name) ? $userDetail->organization_name : ''; ?>" />
+                                                                <div class="invalid-feedback">Please enter an Organization Name</div>
+                                                            </div>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                        <?php
+                                                        if (isset($userDetail->register_as) && $userDetail->register_as === 'Organization') {
+                                                        ?>
+                                                            <div class="col-sm-6">
+                                                                <label for="phoneNumber" class="form-label">Website URL of the organisation </label>
+                                                                <input type="text" readonly class="form-control" id="website_url" name="website_url" placeholder="Enter website_url" value="<?php echo isset($userDetail->website_url) ? $userDetail->website_url : ''; ?>" />
+                                                                <div class="invalid-feedback">Please enter an Website URL of the organisation </div>
+                                                            </div>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                        <?php
+                                                        if (isset($userDetail->register_as) && $userDetail->register_as === 'Organization') {
+                                                        ?>
+                                                            <div class="col-sm-6">
+                                                                <label for="phoneNumber" class="form-label">Organization Email </label>
+                                                                <input type="text" readonly class="form-control" id="email" name="email" placeholder="Enter email" value="<?php echo isset($userDetail->email) ? $userDetail->email : ''; ?>" />
+                                                                <div class="invalid-feedback">Please enter an Organization Email </div>
+                                                            </div>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                        <?php
+                                                        if (isset($userDetail->register_as) && $userDetail->register_as === 'Organization') {
+                                                        ?>
+                                                            <div class="col-sm-6">
+                                                                <label for="phoneNumber" class="form-label">Potential Interest Areas</label>
+                                                                <input type="text" readonly class="form-control" id="potential_interest_areas" name="potential_interest_areas" placeholder="Enter potential_interest_areas" value="<?php echo isset($userDetail->potential_interest_areas) ? implode(',', json_decode($userDetail->potential_interest_areas)) : ''; ?>" />
+
+                                                                <div class="invalid-feedback">Please enter an Potential Interest Areas</div>
+                                                            </div>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                        <?php
+                                                        if (isset($userDetail->register_as) && $userDetail->register_as === 'Organization') {
+                                                        ?>
+                                                            <div class="col-sm-6">
+                                                                <label for="phoneNumber" class="form-label">Office Address</label>
+                                                                <input type="text" readonly class="form-control" id="office_address" name="office_address" placeholder="Enter office_address" value="<?php echo isset($userDetail->office_address) ? $userDetail->office_address : ''; ?>" />
+                                                                <div class="invalid-feedback">Please enter an Office Address</div>
+                                                            </div>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                        <?php
+                                                        if (isset($userDetail->register_as) && $userDetail->register_as === 'Organization') {
+                                                        ?>
+                                                            <div class="col-sm-6">
+                                                                <label for="phoneNumber" class="form-label">Organisation HQ address</label>
+                                                                <input type="text" readonly class="form-control" id="organisation_hq_address" name="organisation_hq_address" placeholder="Enter organisation_hq_address" value="<?php echo isset($userDetail->organisation_hq_address) ? $userDetail->organisation_hq_address : ''; ?>" />
+                                                                <div class="invalid-feedback">Please enter an Organisation HQ address</div>
+                                                            </div>
+                                                        <?php
+                                                        }
+                                                        ?>
+
+
                                                     </div>
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
@@ -356,7 +425,7 @@
                                                                         <div class="col-md-4 mt-2">
                                                                             <label for="human_category" class="form-label">Category</label>
                                                                             <select class="form-control use-humanResource" name="human_category[]">
-                                                                                <option value="" selected >----Select----</option>
+                                                                                <option value="" selected>----Select----</option>
                                                                                 <option value="Use Resource" <?php echo ($human_resource['human_category'] === 'Use Resource') ? 'selected' : ''; ?>>Use Resource</option>
                                                                                 <option value="Offer Resource" <?php echo ($human_resource['human_category'] === 'Offer Resource') ? 'selected' : ''; ?>>Offer Resource</option>
                                                                                 <option value="Others" <?php echo ($human_resource['human_category'] === 'Others') ? 'selected' : ''; ?>>Others</option>
@@ -365,7 +434,7 @@
                                                                         <div class="col-md-4 mt-2">
                                                                             <label for="offerhumanResource" class="form-label">Type of resource</label>
                                                                             <select class="form-control offer-humanResource" name="human_type_of_resource[]">
-                                                                                <option value="" selected >----Select----</option>
+                                                                                <option value="" selected>----Select----</option>
                                                                                 <option value="Developer" <?php echo ($human_resource['human_type_of_resource'] === 'Developer') ? 'selected' : ''; ?>>Developer</option>
                                                                                 <option value="Planner" <?php echo ($human_resource['human_type_of_resource'] === 'Planner') ? 'selected' : ''; ?>>Planner</option>
                                                                                 <option value="Manager" <?php echo ($human_resource['human_type_of_resource'] === 'Manager') ? 'selected' : ''; ?>>Manager</option>
