@@ -59,7 +59,7 @@ $route['post-change-password'] = 'AdminController/postChangePassword';
 $route['eoi-registration'] = 'AdminController/eoiRegistration';
 $route['eoi-status'] = 'AdminController/eoiStatus';
 $route['submit-eoi-registration'] = 'AdminController/postEoIRegistration';
-
+$route['post-final-submit'] = 'AdminController/postFinalSubmit';
 // route for admin
 $route['user-list'] = 'AdminController/userList';
 $route['get-user-list'] = 'AdminController/getUserList';
