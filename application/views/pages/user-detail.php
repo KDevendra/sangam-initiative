@@ -74,7 +74,7 @@
                                              <?php } ?>
                                              <?php if (isset($userDetail->experience)) { ?>
                                                   <tr>
-                                                       <th class="ps-0" scope="row">experience</th>
+                                                       <th class="ps-0" scope="row">Experience</th>
                                                        <td class="text-muted">
                                                             <?php echo $userDetail->experience; ?>
                                                        </td>
