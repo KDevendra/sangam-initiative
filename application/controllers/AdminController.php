@@ -2,7 +2,7 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 class AdminController extends CI_Controller
 {
-    var $projectTitle = "Project Title";
+    var $projectTitle = "Sangam Initiative";
     public function __construct()
     {
         parent::__construct();
@@ -180,14 +180,74 @@ class AdminController extends CI_Controller
         $data['title'] = "EoI Form : " . $this->projectTitle;
         $data["page_name"] = "pages/eoi-registration";
         $existingData = $this->BaseModel->getData('eoi_registration', ['user_id' => $this->session->login['user_id']]);
+
         if ($existingData->num_rows() > 0) {
-            $data['userDetail'] = $this->BaseModel->getData('eoi_registration', ['user_id' => $this->session->login['user_id']])->row();
+            $data['userDetail'] = $existingData->row();
         } else {
             $data['userDetail'] = $this->BaseModel->getData('login', ['user_id' => $this->session->login['user_id']])->row();
         }
 
+
+        // Ensure each property is properly initialized as an array
+        $data['userDetail']->technological_category = isset($data['userDetail']->technological_category) ? json_decode($data['userDetail']->technological_category, true) : [];
+        $data['userDetail']->technological_type_of_resource = isset($data['userDetail']->technological_type_of_resource) ? json_decode($data['userDetail']->technological_type_of_resource, true) : [];
+        $data['userDetail']->technological_details = isset($data['userDetail']->technological_details) ? json_decode($data['userDetail']->technological_details, true) : [];
+        $data['userDetail']->specification = isset($data['userDetail']->specification) ? json_decode($data['userDetail']->specification, true) : [];
+        $data['userDetail']->purpose = isset($data['userDetail']->purpose) ? json_decode($data['userDetail']->purpose, true) : [];
+        $data['userDetail']->alignment = isset($data['userDetail']->alignment) ? json_decode($data['userDetail']->alignment, true) : [];
+
+        // Grouping technical details
+        $data['technical_details'] = [];
+        if (!empty($data['userDetail']->technological_category)) {
+            foreach ($data['userDetail']->technological_category as $key => $category) {
+                $data['technical_details'][] = [
+                    'category' => $category,
+                    'type_of_resource' => isset($data['userDetail']->technological_type_of_resource[$key]) ? $data['userDetail']->technological_type_of_resource[$key] : '',
+                    'details' => isset($data['userDetail']->technological_details[$key]) ? $data['userDetail']->technological_details[$key] : '',
+                    'specification' => isset($data['userDetail']->specification[$key]) ? $data['userDetail']->specification[$key] : '',
+                    'purpose' => isset($data['userDetail']->purpose[$key]) ? $data['userDetail']->purpose[$key] : '',
+                    'alignment' => isset($data['userDetail']->alignment[$key]) ? $data['userDetail']->alignment[$key] : '',
+                ];
+            }
+        }
+
+        // Ensure each property is properly initialized as an array
+        $data['userDetail']->human_category = isset($data['userDetail']->human_category) ? json_decode($data['userDetail']->human_category, true) : [];
+        $data['userDetail']->human_type_of_resource = isset($data['userDetail']->human_type_of_resource) ? json_decode($data['userDetail']->human_type_of_resource, true) : [];
+        $data['userDetail']->human_details = isset($data['userDetail']->human_details) ? json_decode($data['userDetail']->human_details, true) : [];
+        $data['userDetail']->human_experience = isset($data['userDetail']->human_experience) ? json_decode($data['userDetail']->human_experience, true) : [];
+        $data['userDetail']->role = isset($data['userDetail']->role) ? json_decode($data['userDetail']->role, true) : [];
+        $data['userDetail']->extent_of_involvement = isset($data['userDetail']->extent_of_involvement) ? json_decode($data['userDetail']->extent_of_involvement, true) : [];
+        $data['userDetail']->human_alignment = isset($data['userDetail']->human_alignment) ? json_decode($data['userDetail']->human_alignment, true) : [];
+
+        // Grouping human resources
+        $data['human_resources'] = [];
+        if (!empty($data['userDetail']->human_category)) {
+            foreach ($data['userDetail']->human_category as $key => $category) {
+                $human_type_of_resource = isset($data['userDetail']->human_type_of_resource[$key]) ? $data['userDetail']->human_type_of_resource[$key] : '';
+                $human_details = isset($data['userDetail']->human_details[$key]) ? $data['userDetail']->human_details[$key] : '';
+                $human_experience = isset($data['userDetail']->human_experience[$key]) ? $data['userDetail']->human_experience[$key] : '';
+                $role = isset($data['userDetail']->role[$key]) ? $data['userDetail']->role[$key] : '';
+                $extent_of_involvement = isset($data['userDetail']->extent_of_involvement[$key]) ? $data['userDetail']->extent_of_involvement[$key] : '';
+                $human_alignment = isset($data['userDetail']->human_alignment[$key]) ? $data['userDetail']->human_alignment[$key] : '';
+
+                $data['human_resources'][] = [
+                    'human_category' => $category,
+                    'human_type_of_resource' => $human_type_of_resource,
+                    'human_details' => $human_details,
+                    'human_experience' => $human_experience,
+                    'role' => $role,
+                    'extent_of_involvement' => $extent_of_involvement,
+                    'human_alignment' => $human_alignment,
+                ];
+            }
+        }
+
+        // dd($data['human_resources']);
         $this->load->view("component/index", $data);
     }
+
+
     public function eoiStatus()
     {
         $this->checkUserLevel([2]);
@@ -305,14 +365,14 @@ class AdminController extends CI_Controller
             $this->form_validation->set_rules('objectives', 'Objectives', 'trim');
             $this->form_validation->set_rules('project_goals', 'Project Goals', 'trim');
             $this->form_validation->set_rules('contribution_to_project_goals', 'Contribution to Project Goals', 'trim');
-            $this->form_validation->set_rules('technological_category', 'Technological Category', 'trim');
-            $this->form_validation->set_rules('technological_type_of_resource', 'Technological Type of Resource', 'trim');
+            $this->form_validation->set_rules('technological_category[]', 'Technological Category', 'trim');
+            $this->form_validation->set_rules('technological_type_of_resource[]', 'Technological Type of Resource', 'trim');
             $this->form_validation->set_rules('technological_details[]', 'Technological Details', 'trim');
             $this->form_validation->set_rules('specification[]', 'Specification', 'trim');
             $this->form_validation->set_rules('purpose[]', 'Purpose', 'trim');
             $this->form_validation->set_rules('alignment[]', 'Alignment', 'trim');
-            $this->form_validation->set_rules('human_category', 'Human Category', 'trim');
-            $this->form_validation->set_rules('human_type_of_resource', 'Human Type of Resource', 'trim');
+            $this->form_validation->set_rules('human_category[]', 'Human Category', 'trim');
+            $this->form_validation->set_rules('human_type_of_resource[]', 'Human Type of Resource', 'trim');
             $this->form_validation->set_rules('human_details[]', 'Human Details', 'trim');
             $this->form_validation->set_rules('human_experience[]', 'human experience', 'trim');
             $this->form_validation->set_rules('role[]', 'Role', 'trim');
@@ -336,15 +396,16 @@ class AdminController extends CI_Controller
                     'objectives' => $this->input->post('objectives'),
                     'project_goals' => $this->input->post('project_goals'),
                     'contribution_to_project_goals' => $this->input->post('contribution_to_project_goals'),
-                    'technological_category' => $this->input->post('technological_category'),
-                    'technological_type_of_resource' => $this->input->post('technological_type_of_resource'),
+                    'technological_category' => json_encode($this->input->post('technological_category')),
+                    'technological_type_of_resource' =>json_encode($this->input->post('technological_type_of_resource')),
                     'technological_details' => json_encode($this->input->post('technological_details')),
                     'specification' => json_encode($this->input->post('specification')),
                     'purpose' => json_encode($this->input->post('purpose')),
                     'alignment' => json_encode($this->input->post('alignment')),
-                    'human_category' => $this->input->post('human_category'),
-                    'human_type_of_resource' => $this->input->post('human_type_of_resource'),
+                    'human_category' => json_encode($this->input->post('human_category')),
+                    'human_type_of_resource' => json_encode($this->input->post('human_type_of_resource')),
                     'human_details' => json_encode($this->input->post('human_details')),
+                    'human_experience' => json_encode($this->input->post('human_experience')),
                     'role' => json_encode($this->input->post('role')),
                     'extent_of_involvement' => json_encode($this->input->post('extent_of_involvement')),
                     'human_alignment' => json_encode($this->input->post('human_alignment')),
@@ -352,26 +413,53 @@ class AdminController extends CI_Controller
                     'certification' => $this->input->post('certification'),
                 ];
                 $existingData = $this->BaseModel->getData('eoi_registration', ['user_id' => $this->session->login['user_id']]);
-                if ($existingData->num_rows() > 0) {
-                    $success = $this->BaseModel->updateData('eoi_registration', $postData, ['user_id' => $this->session->login['user_id']]);
-                    if ($success) {
-                        $this->session->set_flashdata('success', 'Data updated successfully.');
+                if($existingData->status === 0) 
+                {
+                    if ($existingData->num_rows() > 0) {
+                        $success = $this->BaseModel->updateData('eoi_registration', $postData, ['user_id' => $this->session->login['user_id']]);
+                        if ($success) {
+                            $this->session->set_flashdata('success', 'Your details have been successfully saved as a draft.');
+                        } else {
+                            $this->session->set_flashdata('error', 'Details could not be saved. Please try again later.');
+                        }
                     } else {
-                        $this->session->set_flashdata('error', 'Failed to update data.');
+                        $postData['user_id'] = $this->session->login['user_id']; 
+                        $success = $this->BaseModel->insertData('eoi_registration', $postData);
+                        if ($success) {
+                            $this->session->set_flashdata('success', 'Your details have been successfully saved as a draft.');
+                        } else {
+                            $this->session->set_flashdata('error', 'Details could not be saved. Please try again later.');
+                        }
                     }
-                } else {
-                    $postData['user_id'] = $this->session->login['user_id']; // Add user_id to $postData
-                    $success = $this->BaseModel->insertData('eoi_registration', $postData);
-                    if ($success) {
-                        $this->session->set_flashdata('success', 'Data inserted successfully.');
-                    } else {
-                        $this->session->set_flashdata('error', 'Failed to insert data.');
-                    }
+                
                 }
-                return redirect('eoi-registration');
+                else
+                {
+                    $this->session->set_flashdata('error', 'Your Expression of Interest (EoI) application has been submitted. No further modifications to the details are possible at this stage.');
+                }
+                return redirect('eoi-registration');  
+
             }
         } else {
             $this->session->set_flashdata('error', 'Post Error.');
+        }
+    }
+    public function postFinalSubmit()
+    {
+        try {
+            $postData = ["status" => 1];
+            $cond = ["user_id" =>$this->session->login['user_id']];
+            $query = $this->BaseModel->updateData("eoi_registration", $postData, $cond);
+            if ($query) {
+                $response = ["message" => "Registration Completed."];
+                $response = ["status" => "success"];
+            } else {
+                $response = ["error" => "Something went wrong"];
+            }
+            $this->output->set_content_type("application/json")->set_output(json_encode($response));
+        } catch (Exception $e) {
+            $response = ["error" => $e->getMessage()];
+            $this->output->set_content_type("application/json")->set_output(json_encode($response));
         }
     }
 }
