@@ -232,6 +232,21 @@
         </div>
     </div>
 </section> -->
+
+
+<style>
+
+.desk{
+    font-size:16px;
+    font-family: arial;
+
+}
+    </style>
+
+
+
+
+
 <section class="working-process-section">
     <div class="container">
         <div class="row justify-content-center">
@@ -494,9 +509,10 @@
                             <b>DoT would begin this journey with a campaign to engage with potential participants, including industry experts, academia, and other relevant stakeholders,</b>
                             <span style="font-style: italic;">aware widespread awareness and interest.</span>
                         </span>
-                        <br />
-                        DoT plans to conduct three physical (in-person) meetings before the deadline for EoI submission and planned meetings are aimed to engage prospective candidates and generate enthusiasm for participation. The agenda is
-                        crafted to offer a diverse and enriching experience, featuring speakers who are leaders and innovators in their respective fields.
+</p>
+                       
+                   <p class="desk">DoT plans to conduct three physical (in-person) meetings before the deadline for EoI submission and planned meetings are aimed to engage prospective candidates and generate enthusiasm for participation.<b> The agenda is crafted to offer a diverse and enriching experience </b>,
+                   <span style="font-style: italic;">featuring speakers who are leaders and innovators in their respective fields.</span>
                     </p>
                 </div>
             </div>
@@ -610,7 +626,7 @@
                         <h4 class="title"><a href="javascript:void(0)">Virtual World Creators</a></h4>
                         <h6 class="title"><a>Crafting Immersive Realities</a></h6>
                         <p><b>Contribution:</b> Bring your skills in creating detailed, immersive virtual environments to help visualize infrastructure projects in unprecedented detail.</p>
-                        <p><b>Opportunity:</b> Lead in the development of interactive models that enable stakeholders to explore and test infrastructure designs before they are built.</p>
+                        <p><b>Opportunity:</b> Lead in the development of interactive models that enable stakeholders like AR/VR, gaming engine platform providers to explore and test infrastructure designs before they are built.</p>
                     </div>
                 </div>
             </div>
@@ -621,7 +637,7 @@
                         <h4 class="title"><a href="javascript:void(0)">Computation Power Providers</a></h4>
                         <h6 class="title"><a>Powering the Future of Planning</a></h6>
                         <p><b>Contribution:</b> Offer the computational resources necessary for running complex simulations and analytics, supporting the backbone of Digital Twin technology.</p>
-                        <p><b>Opportunity:</b> Be at the forefront of facilitating large-scale computational tasks, driving the evolution of smart infrastructure design.</p>
+                        <p><b>Opportunity:</b> Computation Power Providers at the forefront can showcase privacy Enhancing Technologies (PETs), robust API capabilities, essential for intergating Digital Twin, AI, and ML technologies.</p>
                     </div>
                 </div>
             </div>
@@ -631,7 +647,7 @@
                     <div class="text">
                         <h4 class="title"><a href="javascript:void(0)">Connectivity and Device Integration Specialists</a></h4>
                         <h6 class="title"><a>Bridging the Digital and Physical</a></h6>
-                        <p><b>Contribution:</b> Integrate sensors, AR/VR devices, and IoT technology to gather and provide real-time data, enhancing the Digital Twin with live updates and interactions.</p>
+                        <p><b>Contribution:</b> Integrate sensors, AR/VR devices, telecom and IoT technology to gather and provide real-time data, enhancing the Digital Twin with live updates and interactions.</p>
                         <p><b>Opportunity:</b> Pioneer in connecting the digital and physical realms, offering new dimensions of interaction and data collection.</p>
                     </div>
                 </div>
