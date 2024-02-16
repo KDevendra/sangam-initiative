@@ -118,9 +118,9 @@
                                                         ?>
                                                         <div class="col-sm-12">
                                                             <label for="phoneNumber" class="form-label">Core Competencies</label>
-                                                            <input type="text" readonly class="form-control" id="core_competency" placeholder="Enter Core Competencies" value="<?php if (isset($userDetail->core_competency)) {
-                                                                                                                                                                                    echo  $userDetail->core_competency;
-                                                                                                                                                                                }; ?>" />
+                                                            <input type="text" readonly class="form-control" id="core_competency" name="core_competency" placeholder="Enter Core Competencies" value="<?php if (isset($userDetail->core_competency)) {
+                                                                                                                                                                                                            echo  $userDetail->core_competency;
+                                                                                                                                                                                                        }; ?>" />
                                                             <div class="invalid-feedback">Please enter a core competencies</div>
                                                         </div>
                                                     </div>
@@ -282,6 +282,45 @@
                                                                     <button type="button" class="removeresource btn btn-sm btn-danger mt-2"><i class="las la-trash-alt fs-18 align-middle"></i> Remove</button>
                                                                 </div>
                                                             <?php endforeach; ?>
+                                                            <div class="resource-input-group">
+                                                                <div class="row">
+                                                                    <div class="col-md-4 mt-2">
+                                                                        <label for="technological_category" class="form-label">Category</label>
+                                                                        <select class="form-control use-resource" id="technological_category" name="technological_category[]">
+                                                                            <option value="" disabled>----Select----</option>
+                                                                            <option value="Use Resource">Use Resource</option>
+                                                                            <option value="Offer Resource">Offer Resource</option>
+                                                                            <option value="Others">Others</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-md-4 mt-2">
+                                                                        <label for="technological_type_of_resource" class="form-label">Type of resource</label>
+                                                                        <select class="form-control offer-resource" id="technological_type_of_resource" name="technological_type_of_resource[]">
+                                                                            <option value="" disabled>----Select----</option>
+                                                                            <option value="Software">Software</option>
+                                                                            <option value="Hardware">Hardware</option>
+                                                                            <option value="Others">Others</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-md-4 mt-2">
+                                                                        <label for="details" class="form-label">Details of Resource</label>
+                                                                        <input type="text" class="form-control" name="technological_details[]" placeholder="Details of Resource" />
+                                                                    </div>
+                                                                    <div class="col-md-4 mt-2">
+                                                                        <label for="specification" class="form-label">Specification</label>
+                                                                        <input type="text" class="form-control" name="specification[]" placeholder="Specification" />
+                                                                    </div>
+                                                                    <div class="col-md-4 mt-2">
+                                                                        <label for="purpose" class="form-label">Purpose of Resource</label>
+                                                                        <input type="text" class="form-control" name="purpose[]" placeholder="Purpose of Resource" />
+                                                                    </div>
+                                                                    <div class="col-md-4 mt-2">
+                                                                        <label for="alignment" class="form-label">Alignment</label>
+                                                                        <input type="text" class="form-control" name="alignment[]" placeholder="How they align with objective" />
+                                                                    </div>
+                                                                </div>
+                                                                <button type="button" class="removeresource btn btn-sm btn-danger mt-2"><i class="las la-trash-alt fs-18 align-middle"></i> Remove</button>
+                                                            </div>
                                                         </div>
                                                         <div class="d-flex justify-content-center">
                                                             <button type="button" id="addresource" class="btn btn-sm btn-primary"><i class="las la-plus fs-13 align-middle"></i> Add Resource</button>
@@ -350,6 +389,52 @@
                                                                     <button type="button" class="removehumanResource btn btn-sm btn-danger mt-2"><i class="las la-trash-alt fs-18 align-middle"></i> Remove</button>
                                                                 </div>
                                                             <?php endforeach; ?>
+                                                            <div class="humanResource-input-group">
+                                                                <div class="row">
+                                                                    <div class="col-md-4 mt-2">
+                                                                        <label for="human_category" class="form-label">Category</label>
+                                                                        <select class="form-control use-humanResource" name="human_category[]">
+                                                                            <option value="" disabled>----Select----</option>
+                                                                            <option value="Use Resource">Use Resource</option>
+                                                                            <option value="Offer Resource">Offer Resource</option>
+                                                                            <option value="Others">Others</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-md-4 mt-2">
+                                                                        <label for="offerhumanResource" class="form-label">Type of resource</label>
+                                                                        <select class="form-control offer-humanResource" name="human_type_of_resource[]">
+                                                                            <option value="" disabled>----Select----</option>
+                                                                            <option value="Developer">Developer</option>
+                                                                            <option value="Planner">Planner</option>
+                                                                            <option value="Manager">Manager</option>
+                                                                            <option value="Expert">Expert</option>
+                                                                            <option value="Nodal">Nodal</option>
+                                                                            <option value="Others">Others</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-md-4 mt-2">
+                                                                        <label for="details" class="form-label">Name and contact details</label>
+                                                                        <input type="text" class="form-control" name="human_details[]" placeholder="Details of humanResource" />
+                                                                    </div>
+                                                                    <div class="col-md-4 mt-2">
+                                                                        <label for="role" class="form-label">Role</label>
+                                                                        <input type="text" class="form-control" name="role[]" placeholder="Role" />
+                                                                    </div>
+                                                                    <div class="col-md-4 mt-2">
+                                                                        <label for="experience" class="form-label">Experience</label>
+                                                                        <input type="text" class="form-control" name="human_experience[]" placeholder="Experience of human resource" />
+                                                                    </div>
+                                                                    <div class="col-md-4 mt-2">
+                                                                        <label for="extent_of_involvement" class="form-label">Extent of involvement in PoC</label>
+                                                                        <input type="text" class="form-control" name="extent_of_involvement[]" placeholder="PoC of human resource" />
+                                                                    </div>
+                                                                    <div class="col-md-4 mt-2">
+                                                                        <label for="firstName" class="form-label">Alignment</label>
+                                                                        <input type="text" class="form-control" name="human_alignment[]" placeholder="How they align with objective" />
+                                                                    </div>
+                                                                </div>
+                                                                <button type="button" class="removehumanResource btn btn-sm btn-danger mt-2"><i class="las la-trash-alt fs-18 align-middle"></i> Remove</button>
+                                                            </div>
                                                         </div>
                                                         <div class="d-flex justify-content-center">
                                                             <button type="button" id="addhumanResource" class="btn btn-sm btn-primary"><i class="las la-plus fs-13 align-middle"></i> Add Human Resource</button>
@@ -401,7 +486,7 @@
                                                                                                                         if ($userDetail->certification === 'yes') {
                                                                                                                             echo "checked";
                                                                                                                         }
-                                                                                                                    }; ?> required name="certification" id="certification" value="yes" />
+                                                                                                                    }; ?> name="certification" id="certification" value="yes" />
                                                                     <label class="form-check-label" for="certification">I certify that the individual submitting this response is duly authorized by the relevant organization to do so on its behalf. The organization acknowledges and authorizes the submission of this response in response to the Expression of Interest (EoI).</label>
                                                                 </div>
                                                             </div>
@@ -417,7 +502,7 @@
                                             <div class="tab-pane fade" id="lock-application" role="tabpanel" aria-labelledby="lock-application-tab">
                                                 <div>
                                                     <!-- <h5 class="text-primary">Lock Application Submission</h5>
-                                          <p class="text-muted">Certify your organization's authorization to submit the Expression of Interest (EoI) response.</p> -->
+                                                      <p class="text-muted">Certify your organization's authorization to submit the Expression of Interest (EoI) response.</p> -->
                                                     <div>
                                                         <div class="row g-3">
                                                             <div class="col-sm-12">
@@ -616,7 +701,7 @@
                                                                                 <p>Thank you for your attention to these submission guidelines. Your thoroughness ensures the integrity and quality of the EoI response</p>
                                                                                 <div class="text-end">
                                                                                     <?php
-                                                                                    if ($userDetail->status === 0) {
+                                                                                    if ($userDetail->status === '0') {
                                                                                     ?>
                                                                                         <a href="javascript:void(0)"> <button type="button" id="finalSubmit" name="final_submit" value="yes" class="btn btn-danger">Final Submit</button></a>
 
@@ -636,8 +721,37 @@
                                                                     <?php
                                                                     } else {
                                                                     ?>
-                                                                <?php                                                                  }
-                                                                }; ?>
+                                                                        <div class="card">
+                                                                            <div class="bg-warning-subtle position-relative">
+                                                                                <div class="card-body p-5">
+                                                                                    <div class="text-center">
+                                                                                        <h3>Lock Application Submission</h3>
+                                                                                        <p class="mb-0 text-muted">Certify your organization's authorization to submit the Expression of Interest (EoI) response.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <?php
+                                                                        ?>
+
+
+
+                                                                        <?php
+
+                                                                        ?>
+                                                                    <?php
+                                                                    }
+                                                                } else {
+                                                                    ?>
+
+                                                                    <p class="mb-0 text-muted">Please confirm your declaration before proceeding with the final submission of your Expression of Interest (EoI) application.</p>
+                                                                    <div class="d-flex align-items-start gap-3 mt-4">
+                                                                        <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                                       
+                                                                    </div>
+                                                                <?php
+
+                                                                } ?>
                                                             </div>
                                                         </div>
                                                     </div>

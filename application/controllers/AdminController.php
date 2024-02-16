@@ -411,11 +411,11 @@ class AdminController extends CI_Controller
                     'human_alignment' => json_encode($this->input->post('human_alignment')),
                     'other_pertinent_facts' => $this->input->post('other_pertinent_facts'),
                     'certification' => $this->input->post('certification'),
+                    'core_competency'=>$this->input->post('core_competency'),
                 ];
                 $existingData = $this->BaseModel->getData('eoi_registration', ['user_id' => $this->session->login['user_id']]);
-                if($existingData->status === 0) 
-                {
-                    if ($existingData->num_rows() > 0) {
+                if ($existingData->num_rows() > 0) {
+                    if ($existingData->row()->status ==='0') {
                         $success = $this->BaseModel->updateData('eoi_registration', $postData, ['user_id' => $this->session->login['user_id']]);
                         if ($success) {
                             $this->session->set_flashdata('success', 'Your details have been successfully saved as a draft.');
@@ -423,20 +423,19 @@ class AdminController extends CI_Controller
                             $this->session->set_flashdata('error', 'Details could not be saved. Please try again later.');
                         }
                     } else {
-                        $postData['user_id'] = $this->session->login['user_id']; 
-                        $success = $this->BaseModel->insertData('eoi_registration', $postData);
-                        if ($success) {
-                            $this->session->set_flashdata('success', 'Your details have been successfully saved as a draft.');
-                        } else {
-                            $this->session->set_flashdata('error', 'Details could not be saved. Please try again later.');
-                        }
+                        $this->session->set_flashdata('error', 'Your Expression of Interest (EoI) application has been submitted. No further modifications to the details are possible at this stage.');
                     }
+                } else {
+                    $postData['user_id'] = $this->session->login['user_id'];
+                    $success = $this->BaseModel->insertData('eoi_registration', $postData);
+                    if ($success) {
+                        $this->session->set_flashdata('success', 'Your details have been successfully saved as a draft.');
+                    } else {
+                        $this->session->set_flashdata('error', 'Details could not be saved. Please try again later.');
+                    }
+                }
                 
-                }
-                else
-                {
-                    $this->session->set_flashdata('error', 'Your Expression of Interest (EoI) application has been submitted. No further modifications to the details are possible at this stage.');
-                }
+
                 return redirect('eoi-registration');  
 
             }
