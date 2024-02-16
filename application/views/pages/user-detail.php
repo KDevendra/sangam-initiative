@@ -7,12 +7,11 @@
         <h5 class="card-title mb-3">User Details</h5>
         <div class="table-responsive">
             <table class="table table-borderless mb-0">
-                <?php print_r($userDetail);?>
                 <tbody>
                  
                    <?php if(isset($userDetail->user_id)){?>
  <tr>
-                        <th class="ps-0" scope="row">user_id :</th>
+                        <th class="ps-0" scope="row">User Id :</th>
                         <td class="text-muted">
                         <?php echo $userDetail->user_id; ?>
                         </td>
@@ -21,7 +20,7 @@
             
                    <?php if(isset($userDetail->email)){?>
  <tr>
-                        <th class="ps-0" scope="row">email :</th>
+                        <th class="ps-0" scope="row">Email :</th>
                         <td class="text-muted">
                         <?php echo $userDetail->email; ?>
                         </td>
@@ -29,7 +28,7 @@
                     <?php }?>
                    <?php if(isset($userDetail->user_name)){?>
  <tr>
-                        <th class="ps-0" scope="row">user_name</th>
+                        <th class="ps-0" scope="row">User Name</th>
                         <td class="text-muted">
                         <?php echo $userDetail->user_name; ?>
                         </td>
@@ -37,7 +36,7 @@
                     <?php }?>
                    <?php if(isset($userDetail->contact_no)){?>
  <tr>
-                        <th class="ps-0" scope="row">contact_no</th>
+                        <th class="ps-0" scope="row">Contact No</th>
                         <td class="text-muted">
                         <?php echo $userDetail->contact_no; ?>
                         </td>
@@ -45,7 +44,7 @@
                     <?php }?>
                    <?php if(isset($userDetail->register_as)){?>
  <tr>
-                        <th class="ps-0" scope="row">register_as</th>
+                        <th class="ps-0" scope="row">Register As</th>
                         <td class="text-muted">
                         <?php echo $userDetail->register_as; ?>
                         </td>
@@ -53,7 +52,7 @@
                     <?php }?>
                    <?php if(isset($userDetail->date_of_birth)){?>
  <tr>
-                        <th class="ps-0" scope="row">date_of_birth</th>
+                        <th class="ps-0" scope="row">Date of Birth</th>
                         <td class="text-muted">
                         <?php echo $userDetail->date_of_birth; ?>
                         </td>
@@ -61,7 +60,7 @@
                     <?php }?>
                    <?php if(isset($userDetail->full_name)){?>
  <tr>
-                        <th class="ps-0" scope="row">full_name</th>
+                        <th class="ps-0" scope="row">Full Name</th>
                         <td class="text-muted">
                         <?php echo $userDetail->full_name; ?>
                         </td>
@@ -69,7 +68,7 @@
                     <?php }?>
                    <?php if(isset($userDetail->core_competency)){?>
  <tr>
-                        <th class="ps-0" scope="row">core_competency</th>
+                        <th class="ps-0" scope="row">Core Competency</th>
                         <td class="text-muted">
                         <?php echo $userDetail->core_competency; ?>
                         </td>
@@ -85,7 +84,7 @@
                     <?php }?>
                    <?php if(isset($userDetail->organization_name)){?>
  <tr>
-                        <th class="ps-0" scope="row">organization_name</th>
+                        <th class="ps-0" scope="row">Organization Name</th>
                         <td class="text-muted">
                         <?php echo $userDetail->organization_name; ?>
                         </td>
@@ -93,7 +92,7 @@
                     <?php }?>
                    <?php if(isset($userDetail->potential_interest_areas)){?>
  <tr>
-                        <th class="ps-0" scope="row">potential_interest_areas</th>
+                        <th class="ps-0" scope="row">Potential Interest Areas</th>
                         <td class="text-muted">
                         <?php echo $userDetail->potential_interest_areas; ?>
                         </td>
@@ -101,7 +100,7 @@
                     <?php }?>
                    <?php if(isset($userDetail->office_address)){?>
  <tr>
-                        <th class="ps-0" scope="row">office_address</th>
+                        <th class="ps-0" scope="row">Office Address</th>
                         <td class="text-muted">
                         <?php echo $userDetail->office_address; ?>
                         </td>
@@ -109,7 +108,7 @@
                     <?php }?>
                    <?php if(isset($userDetail->organisation_hq_address)){?>
  <tr>
-                        <th class="ps-0" scope="row">organisation_hq_address</th>
+                        <th class="ps-0" scope="row">Organisation HQ Address</th>
                         <td class="text-muted">
                         <?php echo $userDetail->organisation_hq_address; ?>
                         </td>
@@ -117,37 +116,12 @@
                     <?php }?>
                    <?php if(isset($userDetail->website_url)){?>
                      <tr>
-                        <th class="ps-0" scope="row">website_url</th>
+                        <th class="ps-0" scope="row">Website URL</th>
                         <td class="text-muted">
                         <?php echo $userDetail->website_url; ?>
                         </td>
                    </tr>
-                    <?php }?>
-                   <?php if(isset($userDetail->is_active)){?>
-                     <tr>
-                        <th class="ps-0" scope="row">is_active</th>
-                        <td class="text-muted">
-                        <?php echo $userDetail->is_active; ?>
-                        </td>
-                   </tr>
-                    <?php }?>
-                   <?php if(isset($userDetail->is_verified)){?>
-                     <tr>
-                        <th class="ps-0" scope="row">is_verified</th>
-                        <td class="text-muted">
-                        <?php echo $userDetail->is_verified; ?>
-                        </td>
-                   </tr>
-                    <?php }?>
-                   <?php if(isset($userDetail->last_login_time)){?>
-                     <tr>
-                        <th class="ps-0" scope="row">last_login_time</th>
-                        <td class="text-muted">
-                        <?php echo $userDetail->last_login_time; ?>
-                        </td>
-                   </tr>
-                    <?php }?>
-                 
+                    <?php }?>                 
                 </tbody>
             </table>
         </div>
