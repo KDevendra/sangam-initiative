@@ -55,7 +55,7 @@
                             <?php } ?>
                         </ul>
                         <div class="flex-shrink-0">
-                            <a href="<?php echo base_url('edit-profile/') . customEncrypt($profileData->email) ?>" class="btn btn-success"><i class="ri-edit-box-line align-bottom"></i> Edit Profile</a>
+                            <!-- <a href="<?php echo base_url('edit-profile/') . customEncrypt($profileData->email) ?>" class="btn btn-success"><i class="ri-edit-box-line align-bottom"></i> Edit Profile</a> -->
                         </div>
                     </div>
                     <div class="tab-content pt-4 text-muted">

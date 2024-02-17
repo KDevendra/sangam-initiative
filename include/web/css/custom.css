@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .service-info .title {
 	font-size: 16px;
 	height: 20px;
@@ -81,6 +82,9 @@
 
 .fs_18 {
 	font-size: 18px;
+}
+.fs_24 {
+font-size: 24px;
 }
 
 .fs_25 {
@@ -392,24 +396,32 @@ ul.check-style-one li i {
 .preRegisBtn {
 	color: #fff !important;
 	background-color: #3d3d99 !important;
+	padding: 15px 20px!important;
+		font-size: 18px!important;
 }
 
 .preRegisBtn:hover {
 	background-color: #29c5f6 !important;
 	color: #fff !important;
+	padding: 15px 20px !important;
+		font-size: 18px!important;
 }
 
 
-.exploreBtn {
+#exploreBtn {
 	background-color: #030000 !important;
 	color: #ffffff !important;
 	padding: 12px 35px;
+		padding: 15px 20px !important;
+			font-size: 18px !important;
 }
 
-.exploreBtn:hover {
+#exploreBtn:hover {
 	background-color: #fff !important;
 	color: #3d3d99 !important;
 	border: 1px solid #fff;
+		padding: 15px 20px !important;
+			font-size: 18px !important;
 }
 
 /* .__mp__100 {
@@ -953,6 +965,28 @@ section h2 {
 }
 
 @media only screen and (max-width: 969px) {
+	.preRegisBtn {
+			color: #fff !important;
+			background-color: #3d3d99 !important;
+	padding: 5px 10px !important;
+		font-size: 10px !important;
+		}
+	
+		.preRegisBtn:hover {
+			background-color: #29c5f6 !important;
+			color: #fff !important;
+padding: 5px 10px !important;
+	font-size: 10px !important;
+		}
+	
+	
+		#exploreBtn {
+			background-color: #030000 !important;
+			color: #ffffff !important;
+			padding: 12px 35px;
+padding: 5px 10px !important;
+	font-size: 10px !important;
+		}
 	.___p8_22 {
 		display: -webkit-inline-box;
 		display: -ms-inline-flexbox;
@@ -1156,7 +1190,7 @@ section h2 {
     } */
 	.hero-wrapper-one {
 		position: absolute;
-		top: 118px;
+		top: 126px;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
