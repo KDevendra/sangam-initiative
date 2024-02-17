@@ -474,7 +474,7 @@
                                                                         <div class="col-md-4 mt-2">
                                                                             <label for="human_category" class="form-label">Category</label>
                                                                             <select class="form-control use-humanResource" name="human_category[]">
-                                                                                <option value="" disabled>----Select----</option>
+                                                                                <option value="" selected>----Select----</option>
                                                                                 <option value="Use Resource">Use Resource</option>
                                                                                 <option value="Offer Resource">Offer Resource</option>
                                                                                 <option value="Others">Others</option>
@@ -483,7 +483,7 @@
                                                                         <div class="col-md-4 mt-2">
                                                                             <label for="offerhumanResource" class="form-label">Type of resource</label>
                                                                             <select class="form-control offer-humanResource" name="human_type_of_resource[]">
-                                                                                <option value="" disabled>----Select----</option>
+                                                                                <option value="" selected>----Select----</option>
                                                                                 <option value="Developer">Developer</option>
                                                                                 <option value="Planner">Planner</option>
                                                                                 <option value="Manager">Manager</option>
@@ -517,8 +517,6 @@
                                                                 </div>
                                                             <?php
                                                             }
-
-
                                                             ?>
 
                                                         </div>
@@ -782,7 +780,12 @@
                                                                                         <a href="javascript:void(0)"> <button type="button" id="finalSubmit" name="final_submit" value="yes" class="btn btn-danger">Final Submit</button></a>
                                                                                     <?php } else {
                                                                                     ?>
-                                                                                        <a href="javascript:void(0)"> <button type="button" disabled class="btn btn-primary">Application Locked</button></a>
+                                                                                        <div class="d-flex align-items-start gap-3 mt-4">
+                                                                                            <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                                                            <button type="button" disabled class="btn btn-primary btn-label right ms-auto"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Application Locked</button>
+                                                                                        </div>
+
+
                                                                                     <?php
                                                                                     }
 
@@ -834,6 +837,9 @@
     </div>
 </div>
 <script>
+    var maxResourceGroups = 8;
+    var maxhumanResourceGroups = 8;
+
     function validateFields() {
         var isValid = true;
         return isValid;
@@ -891,8 +897,7 @@
     }
 
     $(document).ready(function() {
-        var maxResourceGroups = 8;
-        var maxhumanResourceGroups = 8;
+
         $("#addresource").click(addResourceInput);
         $("#resourceSection").on("click", ".removeresource", function() {
             var resourceGroup = $(this).closest(".resource-input-group");

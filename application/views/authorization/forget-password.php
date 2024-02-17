@@ -16,6 +16,8 @@
     <link href="<?php echo base_url(''); ?>include/admin/css/app.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(''); ?>include/admin/css/custom.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(''); ?>include/admin/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
 </head>
 
 <body>
@@ -65,42 +67,25 @@
                                 <div class="col-lg-8">
                                     <div class="p-lg-5 p-4">
                                         <div>
-                                            <h5 class="text-primary" style="display: flex;justify-content: space-between;">Login Account for 'Digital Twin: Sangam Initiative' <a href="<?php echo base_url('') ?>"><i class="ri-home-smile-fill"></i></a> </h5>
+                                            <h5 class="text-primary" style="display: flex;justify-content: space-between;">Forgot Account Details<a href="<?php echo base_url('') ?>"><i class="ri-home-smile-fill"></i></a> </h5>
                                             <p class="text-muted">Welcome to Sangam: Your gateway to digital transformation.</p>
                                             <div id="serverSideValidation"></div>
                                         </div>
                                         <div class="mt-4">
-                                            <form id="sign-in" class="needs-validation" novalidate>
+                                            <form id="forgot-password">
                                                 <div class="row">
                                                     <div class="mb-3 col-md-6">
-                                                        <label for="useremail" class="form-label">Email or User Id <span class="text-danger">*</span></label>
-                                                        <input type="text" class="form-control" name="login_id" id="useremail" placeholder="Enter email or user id" required />
-                                                        <div class="invalid-feedback">
-                                                            Please enter email or user id
-                                                        </div>
+                                                        <label for="useremail" class="form-label">Email <span class="text-danger">*</span></label>
+                                                        <input class="form-control" placeholder="Enter your email" required name="email" type="text" />
+                                      
                                                     </div>
                                                     <div class="mb-3 col-md-6">
-                                                        <label class="form-label" for="password-input" style="display: flex;justify-content: space-between;"> <span>Password <span class="text-danger">*</span> </span><a href="<?php echo base_url('forgot-password'); ?>" class="fw-semibold text-primary text-decoration-underline">Forgot Password</a></label>
-                                                        <div class="position-relative auth-pass-inputgroup">
-                                                            <input type="password" class="form-control pe-5 password-input" name="password" onpaste="return false" placeholder="Enter password" id="password-input" aria-describedby="passwordInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
-                                                            <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon material-shadow-none" type="button" id="password-addon">
-                                                                <i class="ri-eye-fill align-middle"></i>
-                                                            </button>
-
-                                                            <div class="invalid-feedback">
-                                                                Please enter password
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mb-3">
                                                         <label class="form-label" for="captcha-input">Captcha <span class="text-danger">*</span></label>
                                                         <div class="position-relative auth-pass-inputgroup">
                                                             <div class="catpchaparent">
                                                                 <div class="capchchild">
                                                                     <input type="text" class="form-control" id="valiIpt" placeholder="Enter CAPTCHA" name="captcha_code" maxlength="4" autocomplete="off" pattern="[0-9 .]+" required />
-                                                                    <div class="invalid-feedback" id="captchaValidationMessage">
-                                                                        Please enter a valid Captcha
-                                                                    </div>
+                                            
                                                                 </div>
                                                                 <div class="capchchild">
                                                                     <canvas id="valicode"></canvas>
@@ -111,26 +96,15 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- <div class="mb-4">
-                                                        <p class="mb-0 fs-12 text-muted fst-italic">
-                                                            By Registration implies acceptance of the Sangam Initiative <a href="#" class="text-primary text-decoration-underline fst-normal fw-medium">Guidelines</a>
-                                                        </p>
-                                                    </div> -->
                                                 </div>
-                                                <div id="password-contain" class="p-3 bg-light mb-2 rounded">
-                                                    <h5 class="fs-13">Password must contain:</h5>
-                                                    <p id="pass-length" class="invalid fs-12 mb-2">Minimum <b>8 characters</b></p>
-                                                    <p id="pass-lower" class="invalid fs-12 mb-2">At <b>lowercase</b> letter (a-z)</p>
-                                                    <p id="pass-upper" class="invalid fs-12 mb-2">At least <b>uppercase</b> letter (A-Z)</p>
-                                                    <p id="pass-number" class="invalid fs-12 mb-0">A least <b>number</b> (0-9)</p>
-                                                </div>
+
                                                 <div class="mt-0 d-flex justify-content-center">
-                                                    <button class="btn btn-primary" type="submit">Login</button>
+                                                    <button class="btn btn-primary" type="submit">Next</button>
                                                 </div>
                                             </form>
                                         </div>
                                         <div class="mt-2 text-center">
-                                            <p class="mb-0">Don't have an account ? <a href="<?php echo base_url('registration'); ?>" class="fw-semibold text-primary text-decoration-underline">Register</a></p>
+                                            <p class="mb-0">Already have an account ? <a href="<?php echo base_url('login'); ?>" class="fw-semibold text-primary text-decoration-underline">Login</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -158,7 +132,7 @@
             </div>
         </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
     <script src="<?php echo base_url(''); ?>include/admin/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?php echo base_url(''); ?>include/admin/libs/simplebar/simplebar.min.js"></script>
     <script src="<?php echo base_url(''); ?>include/admin/libs/node-waves/waves.min.js"></script>
@@ -166,12 +140,9 @@
     <script src="<?php echo base_url(''); ?>include/admin/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="<?php echo base_url(''); ?>include/admin/js/plugins.js"></script>
     <script src="<?php echo base_url(''); ?>include/admin/js/pages/form-validation.init.js"></script>
-    <script src="<?php echo base_url(''); ?>include/admin/js/pages/passowrd-create.init.js"></script>
     <script src="<?php echo base_url(''); ?>include/admin/libs/sweetalert2/sweetalert2.min.js"></script>
     <script src="<?php echo base_url(''); ?>include/admin/js/pages/sweetalerts.init.js"></script>
     <script>
-        let rightCode = "";
-
         function randomColor() {
             let r = Math.floor(Math.random() * 256);
             let g = Math.floor(Math.random() * 256);
@@ -239,26 +210,13 @@
             valiIpt.value = "";
         }
         $(document).ready(function() {
-            $("#serverSideValidation").hide();
-            $(".loader").hide();
             createCaptcha();
             const captcha_code = $("input[name='captcha_code']");
             const isZero = (value) => (value === "0" ? false : true);
             const isRequired = (value) => (value === "" ? false : true);
             const isBetween = (length, min, max) => (length < min || length > max ? false : true);
-
-            captcha_code.on("keyup", function() {
-                const validationMessage = $("#captchaValidationMessage");
-                if (checkCaptcha()) {
-                    $("#captchaValidationMessage").hide();
-                    $("#valiIpt").removeClass("border_capch");
-                } else {
-                    $("#captchaValidationMessage").show();
-                    $("#valiIpt").addClass("border_capch");
-                }
-            });
             const isPasswordSecure = (password) => {
-                const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
+                const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
                 return re.test(password);
             };
             const checkCaptcha = () => {
@@ -266,15 +224,41 @@
                 const max = 4;
                 const captcha = captcha_code.val().trim();
                 if (!isRequired(captcha)) {
+
                     return false;
-                } else if (captcha !== rightCode) {
+                } else if (captcha != rightCode) {
                     return false;
                 } else if (!isBetween(captcha.length, min, max)) {
                     return false;
                 }
-
                 return true;
             };
+            $.validator.addMethod(
+                "customPattern",
+                function(value, element, pattern) {
+                    return this.optional(element) || pattern.test(value);
+                },
+                "Invalid format"
+            );
+            $.validator.addMethod(
+                "checkCaptcha",
+                function(value, element) {
+                    return checkCaptcha();
+                },
+                "Captcha code is invalid."
+            );
+            $("#resetBtn").click(function(event) {
+                createCaptcha();
+            });
+            $("#serverSideValidation").hide();
+            $(".loader").hide();
+            $.validator.addMethod(
+                "customPattern",
+                function(value, element, pattern) {
+                    return this.optional(element) || pattern.test(value);
+                },
+                "Invalid format"
+            );
 
             function showLoader() {
                 $(".loader").show();
@@ -283,57 +267,78 @@
 
             function hideLoader() {
                 $(".loader").hide();
-                $('button[type="submit"]').prop("disabled", false).html("Login");
+                $('button[type="submit"]').prop("disabled", false).html("Next");
             }
 
             function submitForm(formData) {
                 $.ajax({
-                    url: "<?php echo base_url('post-sign-in'); ?>",
+                    url: "<?php echo base_url('post-forgot-password'); ?>",
                     type: "post",
                     data: formData,
                     beforeSend: showLoader,
                     success: function(response) {
                         hideLoader();
-                        if (response.status === "verify") {
-                            window.location.href = "<?php echo base_url('verify-account/'); ?>" + response.data;
-                        } else if (response.status === "success") {
-                            if (response.user_level === "0") {
-                                window.location.href = "<?php echo base_url('admin-dashboard'); ?>";
-                            } else if (response.user_level === "1") {
-                                window.location.href = "<?php echo base_url('admin-dashboard'); ?>";
+                        if (response.status === "error") {
+                            if (response.validation_errors) {
+                                $("#serverSideValidation").show().html(response.validation_errors);
+                            } else if (response.message) {
+                                Swal.fire({
+                                    icon: "error",
+                                    // title: "Error",
+                                    text: response.message,
+                                });
                             } else {
-                                window.location.href = "<?php echo base_url('admin-dashboard'); ?>";
+                                Swal.fire({
+                                    icon: "error",
+                                    // title: "Error",
+                                    text: "Something went wrong",
+                                });
                             }
-                        } else {
-                            console.log("Error case");
-                            Swal.fire({
-                                icon: "error",
-                                text: response.message,
-                            });
+                        } else if (response.status === "success") {
+                            $("#forgot-password")[0].reset();
+                            window.location.href = "<?php echo base_url('verify-reset-password/') ?>" + response.data;
                         }
                     },
                     error: function() {
                         hideLoader();
                         Swal.fire({
                             icon: "error",
+                            // title: "Error",
                             text: "Something went wrong",
                         });
                     },
                 });
             }
-            $("#sign-in").on("submit", function(event) {
-                event.preventDefault();
-                var $signIn = $(this);
-                var formData = $signIn.serialize();
-                if (checkCaptcha()) {
+            $("#forgot-password").validate({
+                rules: {
+                    email: {
+                        required: true,
+                        email: true,
+                        maxlength: 100,
+                    },
+                    captcha_code: {
+                        required: true,
+                        checkCaptcha: true,
+                    },
+
+                },
+                messages: {
+                    email: {
+                        required: "Please enter email",
+                        email: "Please enter a valid email",
+                        maxlength: "Email must not exceed 100 characters",
+                    },
+                    captcha_code: {
+                        required: "Captcha cannot be blank.",
+                        checkCaptcha: "Captcha code is invalid.",
+                    },
+
+                },
+                submitHandler: function(form) {
+                    var $signUp = $(form);
+                    var formData = $signUp.serialize();
                     submitForm(formData);
-                } else {
-                    $("#captchaValidationMessage").show();
-                    $("#valiIpt").addClass("border_capch");
-                }
-            });
-            $("#resetBtn").click(function(event) {
-                createCaptcha();
+                },
             });
         });
     </script>

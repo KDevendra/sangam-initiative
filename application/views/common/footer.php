@@ -24,9 +24,9 @@
                             <h4 class="widget-title">Get In Touch</h4>
                             <div class="widget-content">
                                 <ul class="info-list">
-                                  <li><b>Telecom Centres of Excellence, India</b></li>
+                                    <li><b>Telecom Centres of Excellence, India</b></li>
                                     <li>C-DOT Campus, Mandi Road, Mehrauli,
-New Delhi - 110030, India
+                                        New Delhi - 110030, India
 
                                     </li>
                                     <li><a href="mailto:sangam-dot@tcoe.in">Email ID: sangam-dot@tcoe.in</a></li>
@@ -52,10 +52,10 @@ New Delhi - 110030, India
                             <h4 class="widget-title">Important Link</h4>
                             <div class="widget-content">
                                 <ul class="footer-nav">
-                                    <li><a href="<?php echo base_url('expression-of-interest')?>">About EoI</a></li>
+                                    <li><a href="<?php echo base_url('expression-of-interest') ?>">About EoI</a></li>
                                     <li><a href="javascript:void(0)" class="whyToJoinBtn"> Why Join</a></li>
 
-                                    <li><a href="<?php echo base_url('registration')?>">Registration</a></li>
+                                    <li><a href="<?php echo base_url('registration') ?>">Registration</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -126,6 +126,15 @@ New Delhi - 110030, India
         }
     }
 
+    function showLoader() {
+        $(".loader").show();
+        $('button[type="submit"]').prop("disabled", true).html('<span class="loader"></span>');
+    }
+
+    function hideLoader() {
+        $(".loader").hide();
+        $('button[type="submit"]').prop("disabled", false).html("Register Now");
+    }
     $(document).ready(function() {
         $('.nav-link').hover(function() {
             var target = $(this).data('target');
@@ -270,6 +279,132 @@ New Delhi - 110030, India
         });
         $('.icon-btn').click(function() {
             $('.testimonial-section').toggleClass('full-width');
+        });
+        $("#caseSubmissionForm").submit(function(e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Remove any existing error messages
+            $(".error-message").remove();
+
+            // Flag to track if there are any validation errors
+            var hasError = false;
+
+            // Validate full name
+            var fullName = $("#fullName").val();
+            if (!fullName || fullName.trim() === '') {
+                $("#fullName").after('<p class="error-message">Please enter your full name.</p>');
+                hasError = true;
+            }
+
+            // Validate email
+            var email = $("#email").val();
+            if (!email || email.trim() === '') {
+                $("#email").after('<p class="error-message">Please enter your email address.</p>');
+                hasError = true;
+            }
+
+            // Validate use case title
+            var useCaseTitle = $("#useCaseTitle").val();
+            if (!useCaseTitle || useCaseTitle.trim() === '') {
+                $("#useCaseTitle").after('<p class="error-message">Please enter a title for your use case.</p>');
+                hasError = true;
+            }
+
+            // Validate abstract
+            var abstract = $("#abstract").val();
+            if (!abstract || abstract.trim() === '') {
+                $("#abstract").after('<p class="error-message">Please provide a brief summary of the use case.</p>');
+                hasError = true;
+            }
+
+            // Validate objective
+            var objective = $("#objective").val();
+            if (!objective || objective.trim() === '') {
+                $("#objective").after('<p class="error-message">Please clearly define the objective or problem to address.</p>');
+                hasError = true;
+            }
+
+            // Validate target area
+            var targetArea = $("#targetArea").val();
+            if (!targetArea || targetArea.trim() === '') {
+                $("#targetArea").after('<p class="error-message">Please identify specific areas of application.</p>');
+                hasError = true;
+            }
+
+            // Validate technologies utilized
+            var technologies = $("#technologies").val();
+            if (!technologies || technologies.trim() === '') {
+                $("#technologies").after('<p class="error-message">Please list the key technologies used in the use case.</p>');
+                hasError = true;
+            }
+
+            // Validate data sources and requirements
+            var dataSources = $("#dataSources").val();
+            if (!dataSources || dataSources.trim() === '') {
+                $("#dataSources").after('<p class="error-message">Please describe data sources and any requirements.</p>');
+                hasError = true;
+            }
+
+            // Validate expected outcomes and impact
+            var outcomes = $("#outcomes").val();
+            if (!outcomes || outcomes.trim() === '') {
+                $("#outcomes").after('<p class="error-message">Please outline anticipated results and impact.</p>');
+                hasError = true;
+            }
+
+            // Validate innovative aspects
+            var innovativeAspects = $("#innovativeAspects").val();
+            if (!innovativeAspects || innovativeAspects.trim() === '') {
+                $("#innovativeAspects").after('<p class="error-message">Please highlight unique features or approaches.</p>');
+                hasError = true;
+            }
+
+            // Validate feasibility and implementation challenges
+            var feasibility = $("#feasibility").val();
+            if (!feasibility || feasibility.trim() === '') {
+                $("#feasibility").after('<p class="error-message">Please discuss feasibility and potential challenges.</p>');
+                hasError = true;
+            }
+
+            // If there are validation errors, prevent form submission
+            if (hasError) {
+                // Code for handling validation errors, which you've provided
+            } else {
+                // If there are no validation errors, submit the form data via AJAX
+                $.ajax({
+                    url: "<?php echo base_url('post-case-submission-form'); ?>",
+                    type: "post",
+                    data: $(this).serialize(),
+                    beforeSend: showLoader,
+                    success: function(response) {
+                        hideLoader();
+                        if (response.status === "error") {
+                            Swal.fire({
+                                icon: "error",
+                                text: response.message,
+                            });
+                        } else if (response.status === "success") {
+                            // Handle success response if needed
+                        } else if (response.status === "validation_errors") {
+                            // Handle validation errors if needed
+                            return false;
+                        } else {
+                            Swal.fire({
+                                icon: "error",
+                                text: "Something went wrong",
+                            });
+                        }
+                    },
+                    error: function() {
+                        hideLoader();
+                        Swal.fire({
+                            icon: "error",
+                            text: "Something went wrong",
+                        });
+                    },
+                });
+            }
+
         });
     });
     const cookieBox = document.querySelector(".wrapper"),

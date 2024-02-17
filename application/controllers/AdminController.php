@@ -145,11 +145,11 @@ class AdminController extends CI_Controller
                 break;
             case "delete":
                 if ($user_id !== null) {
-                    $query = $this->BaseModel->deleteData("login", ["user_id" => $user_id,]);
+                    $query = $this->BaseModel->deleteData("login", ["user_id" => $user_id]);
                     if ($query) {
-                        $response = ["status" => "success", "message" => "The user has been successfully deleted.",];
+                        $response = ["status" => "success", "message" => "The user has been successfully deleted."];
                     } else {
-                        $response = ["status" => "error", "message" => "Unable to delete the user. Please try again later.",];
+                        $response = ["status" => "error", "message" => "Unable to delete the user. Please try again later."];
                     }
                     if ($this->input->is_ajax_request()) {
                         $this->output->set_content_type("application/json");
@@ -158,7 +158,7 @@ class AdminController extends CI_Controller
                     } else {
                     }
                 } else {
-                    $response = ["status" => "error", "message" => "Invalid user ID. Please provide a valid user ID.",];
+                    $response = ["status" => "error", "message" => "Invalid user ID. Please provide a valid user ID."];
                     if ($this->input->is_ajax_request()) {
                         $this->output->set_content_type("application/json");
                         echo json_encode($response);
@@ -173,6 +173,7 @@ class AdminController extends CI_Controller
         }
         $this->load->view("component/index", $data);
     }
+
     public function eoiRegistration()
     {
         $this->checkUserLevel([2]);
@@ -184,9 +185,9 @@ class AdminController extends CI_Controller
         } else {
             $data['userDetail'] = $this->BaseModel->getData('login', ['user_id' => $this->session->login['user_id']])->row();
         }
-        // Ensure each property is properly initialized as an array
         $data['userDetail']->technological_category = isset($data['userDetail']->technological_category) && !empty($data['userDetail']->technological_category) ? json_decode($data['userDetail']->technological_category, true) : [];
-        $data['userDetail']->technological_type_of_resource = isset($data['userDetail']->technological_type_of_resource) && !empty($data['userDetail']->technological_type_of_resource) ? json_decode($data['userDetail']->technological_type_of_resource, true) : [];
+        $data['userDetail']->technological_type_of_resource =
+            isset($data['userDetail']->technological_type_of_resource) && !empty($data['userDetail']->technological_type_of_resource) ? json_decode($data['userDetail']->technological_type_of_resource, true) : [];
         $data['userDetail']->technological_details = isset($data['userDetail']->technological_details) && !empty($data['userDetail']->technological_details) ? json_decode($data['userDetail']->technological_details, true) : [];
         $data['userDetail']->specification = isset($data['userDetail']->specification) && !empty($data['userDetail']->specification) ? json_decode($data['userDetail']->specification, true) : [];
         $data['userDetail']->purpose = isset($data['userDetail']->purpose) && !empty($data['userDetail']->purpose) ? json_decode($data['userDetail']->purpose, true) : [];
@@ -196,12 +197,22 @@ class AdminController extends CI_Controller
         $data['technical_details'] = [];
         if (!empty($data['userDetail']->technological_category)) {
             foreach ($data['userDetail']->technological_category as $key => $category) {
-                $type_of_resource = isset($data['userDetail']->technological_type_of_resource[$key]) && !empty($data['userDetail']->technological_type_of_resource[$key]) ? $data['userDetail']->technological_type_of_resource[$key] : '';
-                $details = isset($data['userDetail']->technological_details[$key]) && !empty($data['userDetail']->technological_details[$key]) ? $data['userDetail']->technological_details[$key] : '';
-                $specification = isset($data['userDetail']->specification[$key]) && !empty($data['userDetail']->specification[$key]) ? $data['userDetail']->specification[$key] : '';
-                $purpose = isset($data['userDetail']->purpose[$key]) && !empty($data['userDetail']->purpose[$key]) ? $data['userDetail']->purpose[$key] : '';
-                $alignment = isset($data['userDetail']->alignment[$key]) && !empty($data['userDetail']->alignment[$key]) ? $data['userDetail']->alignment[$key] : '';
-                $data['technical_details'][] = ['category' => $category, 'type_of_resource' => $type_of_resource, 'details' => $details, 'specification' => $specification, 'purpose' => $purpose, 'alignment' => $alignment];
+                // Check if category is not empty
+                if (!empty($category)) {
+                    $type_of_resource = isset($data['userDetail']->technological_type_of_resource[$key]) ? $data['userDetail']->technological_type_of_resource[$key] : '';
+                    $details = isset($data['userDetail']->technological_details[$key]) ? $data['userDetail']->technological_details[$key] : '';
+                    $specification = isset($data['userDetail']->specification[$key]) ? $data['userDetail']->specification[$key] : '';
+                    $purpose = isset($data['userDetail']->purpose[$key]) ? $data['userDetail']->purpose[$key] : '';
+                    $alignment = isset($data['userDetail']->alignment[$key]) ? $data['userDetail']->alignment[$key] : '';
+                    $data['technical_details'][] = [
+                        'category' => $category,
+                        'type_of_resource' => $type_of_resource,
+                        'details' => $details,
+                        'specification' => $specification,
+                        'purpose' => $purpose,
+                        'alignment' => $alignment,
+                    ];
+                }
             }
         }
 
@@ -218,25 +229,26 @@ class AdminController extends CI_Controller
         $data['human_resources'] = [];
         if (!empty($data['userDetail']->human_category)) {
             foreach ($data['userDetail']->human_category as $key => $category) {
-                $human_type_of_resource = isset($data['userDetail']->human_type_of_resource[$key]) ? $data['userDetail']->human_type_of_resource[$key] : '';
-                $human_details = isset($data['userDetail']->human_details[$key]) ? $data['userDetail']->human_details[$key] : '';
-                $human_experience = isset($data['userDetail']->human_experience[$key]) ? $data['userDetail']->human_experience[$key] : '';
-                $role = isset($data['userDetail']->role[$key]) ? $data['userDetail']->role[$key] : '';
-                $extent_of_involvement = isset($data['userDetail']->extent_of_involvement[$key]) ? $data['userDetail']->extent_of_involvement[$key] : '';
-                $human_alignment = isset($data['userDetail']->human_alignment[$key]) ? $data['userDetail']->human_alignment[$key] : '';
-                $data['human_resources'][] = [
-                    'human_category' => $category,
-                    'human_type_of_resource' => $human_type_of_resource,
-                    'human_details' => $human_details,
-                    'human_experience' => $human_experience,
-                    'role' => $role,
-                    'extent_of_involvement' => $extent_of_involvement,
-                    'human_alignment' => $human_alignment,
-                ];
+                // Check if human_category has a value
+                if (!empty($category)) {
+                    $human_type_of_resource = isset($data['userDetail']->human_type_of_resource[$key]) ? $data['userDetail']->human_type_of_resource[$key] : '';
+                    $human_details = isset($data['userDetail']->human_details[$key]) ? $data['userDetail']->human_details[$key] : '';
+                    $human_experience = isset($data['userDetail']->human_experience[$key]) ? $data['userDetail']->human_experience[$key] : '';
+                    $role = isset($data['userDetail']->role[$key]) ? $data['userDetail']->role[$key] : '';
+                    $extent_of_involvement = isset($data['userDetail']->extent_of_involvement[$key]) ? $data['userDetail']->extent_of_involvement[$key] : '';
+                    $human_alignment = isset($data['userDetail']->human_alignment[$key]) ? $data['userDetail']->human_alignment[$key] : '';
+                    $data['human_resources'][] = [
+                        'human_category' => $category,
+                        'human_type_of_resource' => $human_type_of_resource,
+                        'human_details' => $human_details,
+                        'human_experience' => $human_experience,
+                        'role' => $role,
+                        'extent_of_involvement' => $extent_of_involvement,
+                        'human_alignment' => $human_alignment,
+                    ];
+                }
             }
         }
-
-        // dd($data['human_resources']);
         $this->load->view("component/index", $data);
     }
     public function eoiStatus()
@@ -252,6 +264,31 @@ class AdminController extends CI_Controller
         $this->checkUserLevel([1]);
         $data['title'] = "User List : " . $this->projectTitle;
         $data["page_name"] = "pages/user-list";
+        $this->load->view("component/index", $data);
+    }
+    public function applicationsList()
+    {
+        $this->checkUserLevel([1]);
+        $data['title'] = "Applications List : " . $this->projectTitle;
+        $allData = $this->BaseModel->getData("eoi_registration")->result_array();
+        $totalCount = count($allData);
+        $pendingCount = 0;
+        $approvedCount = 0;
+        $rejectedCount = 0;
+        $incompletedCount = 0;
+        foreach ($allData as $record) {
+            if ($record["status"] == 0) {
+                $incompletedCount++;
+            } elseif ($record["status"] == 1) {
+                $pendingCount++;
+            } elseif ($record["status"] == 2) {
+                $approvedCount++;
+            } elseif ($record["status"] == 3) {
+                $rejectedCount++;
+            }
+        }
+        $data = ["total" => $totalCount, "pending" => $pendingCount, "approved" => $approvedCount, "rejected" => $rejectedCount, "incompleted" => $incompletedCount];
+        $data["page_name"] = "pages/applications-list";
         $this->load->view("component/index", $data);
     }
     public function verifedUsers()
@@ -284,6 +321,24 @@ class AdminController extends CI_Controller
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
+    public function getEoIApplication()
+    {
+        $this->checkUserLevel([1]);
+        try {
+            $statusArray = [1, 2, 3];
+            $userList = $this->BaseModel->getDataByStatus($statusArray);
+            if (!empty($userList)) {
+                $responseData = ["status" => "success", "data" => $userList];
+            } else {
+                $responseData = ["status" => "error", "message" => "No data found for the specified status."];
+            }
+            echo json_encode($responseData);
+        } catch (Exception $e) {
+            log_message("error", $e->getMessage());
+            echo json_encode(["status" => "error", "message" => "Internal server error."]);
+        }
+    }
+
     public function getUnverifiedUserList()
     {
         $this->checkUserLevel([1]);
@@ -434,7 +489,16 @@ class AdminController extends CI_Controller
                     $postData['user_id'] = $this->session->login['user_id'];
                     $success = $this->BaseModel->insertData('eoi_registration', $postData);
                     if ($success) {
-                        $this->session->set_flashdata('success', 'Your details have been successfully saved as a draft.');
+                        $inserted_Id = $this->db->insert_id();
+                        $application_id = "EoIAPL" . date("Y") . str_pad($inserted_Id, 4, "0", STR_PAD_LEFT);
+                        $updateData = ["application_id" => $application_id];
+                        $updateCondition = ["id " => $inserted_Id];
+                        $updateQuery = $this->BaseModel->updateData("eoi_registration", $updateData, $updateCondition);
+                        if ($updateQuery) {
+                            $this->session->set_flashdata('success', 'Your details have been successfully saved as a draft.');
+                        } else {
+                            $this->session->set_flashdata('error', 'Details could not be saved. Please try again later.');
+                        }
                     } else {
                         $this->session->set_flashdata('error', 'Details could not be saved. Please try again later.');
                     }

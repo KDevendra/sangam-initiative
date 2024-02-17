@@ -30,7 +30,6 @@ class BaseController extends CI_Controller
         $data['title'] = "Living List: " . $this->projectTitle;
         $this->load->view('base/living-list', $data);
     }
-
     public function whySangam()
     {
         $data['title'] = "Why Sangam: " . $this->projectTitle;
@@ -71,7 +70,6 @@ class BaseController extends CI_Controller
         $data['title'] = "Pre Registration: " . $this->projectTitle;
         $this->load->view('base/pre-registration', $data);
     }
-
     public function events()
     {
         $data['title'] = "Upcoming Events: " . $this->projectTitle;
@@ -152,6 +150,11 @@ class BaseController extends CI_Controller
         $data['title'] = "Get Involved : " . $this->projectTitle;
         $this->load->view('base/get-involved', $data);
     }
+    public function suggestUseCases()
+    {
+        $data['title'] = "Suggest Use Cases : " . $this->projectTitle;
+        $this->load->view('base/suggest-use-cases', $data);
+    }
     public function getCoreCompetency()
     {
         try {
@@ -159,12 +162,75 @@ class BaseController extends CI_Controller
             if ($core_competenciesList !== null) {
                 $responseData = ["status" => "success", "data" => $core_competenciesList];
             } else {
-                $responseData = ["status" => "error", "message" => "Error fetching core_competencies data.",];
+                $responseData = ["status" => "error", "message" => "Error fetching core_competencies data."];
             }
             echo json_encode($responseData);
         } catch (Exception $e) {
             log_message("error", $e->getMessage());
-            echo json_encode(["status" => "error", "message" => "Internal server error.",]);
-        }    
+            echo json_encode(["status" => "error", "message" => "Internal server error."]);
+        }
+    }
+    public function postCaseSubmissionForm()
+    {
+        $this->form_validation->set_rules('fullName', 'Full Name', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+        $this->form_validation->set_rules('title', 'Title', 'trim|required');
+        $this->form_validation->set_rules('abstract', 'Abstract', 'trim|required');
+        $this->form_validation->set_rules('objective', 'Objective', 'trim|required');
+        $this->form_validation->set_rules('target_areas', 'Target Area', 'trim|required');
+        $this->form_validation->set_rules('technologies_used', 'Technologies Utilized', 'trim|required');
+        $this->form_validation->set_rules('data_sources', 'Data Sources and Requirements', 'trim|required');
+        $this->form_validation->set_rules('expected_outcomes', 'Expected Outcomes and Impact', 'trim|required');
+        $this->form_validation->set_rules('innovative_aspects', 'Innovative Aspects', 'trim|required');
+        $this->form_validation->set_rules('feasibility_and_challenges', 'Feasibility and Implementation Challenges', 'trim|required');
+
+        if ($this->form_validation->run() === false) {
+            $response = ["status" => "validation_errors", "message" => validation_errors()];
+        } else {
+            $fullName = $this->input->post('fullName');
+            $email = $this->input->post('email');
+            $title = $this->input->post('title');
+            $abstract = $this->input->post('abstract');
+            $objective = $this->input->post('objective');
+            $targetArea = $this->input->post('target_areas');
+            $technologies = $this->input->post('technologies_used');
+            $dataSources = $this->input->post('dataSources');
+            $outcomesImpact = $this->input->post('expected_outcomes');
+            $innovativeAspects = $this->input->post('innovative_aspects');
+            $feasibilityChallenges = $this->input->post('feasibility_and_challenges');
+            $relevance = $this->input->post('relevance');
+            $postData = [
+                'full_name' => $fullName,
+                'email' => $email,
+                'title' => $title,
+                'abstract' => $abstract,
+                'objective' => $objective,
+                'target_areas' => $targetArea,
+                'technologies_used' => $technologies,
+                'data_sources' => $dataSources,
+                'expected_outcomes' => $outcomesImpact,
+                'innovative_aspects' => $innovativeAspects,
+                'feasibility_and_challenges' => $feasibilityChallenges,
+                'relevance'=> $relevance,
+                'created_at' => date('Y-m-d H:i:s'),
+            ];
+            $insertResult = $this->BaseModel->insertData("suggest_use_cases", $postData);
+            if ($insertResult) {
+                $inserted_Id = $this->db->insert_id();
+                $case_id = "CASE" . date("Y") . str_pad($inserted_Id, 4, "0", STR_PAD_LEFT);
+                $updateData = ["case_id" => $case_id];
+                $updateCondition = ["id" => $inserted_Id];
+                $updateQuery = $this->BaseModel->updateData("suggest_use_cases", $updateData, $updateCondition);
+                if ($updateQuery) {
+                    $response = ["status" => "success", "message" => "Form data submitted successfully."];
+                } else {
+                    $response = ["status" => "error", "message" => "Error updating user ID."];
+                }
+            } else {
+                $response = ["status" => "error", "message" => "Error inserting form data."];
+            }
+        }
+        $this->output->set_content_type("application/json");
+        echo json_encode($response);
     }
 }

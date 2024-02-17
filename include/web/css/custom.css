@@ -5,11 +5,36 @@
 	padding-top: 5px;
 }
 
+.error-message {
+	margin-top: -25px;
+	margin-bottom: 10px;
+	color: #ee5a60;
+}
+
 .service-info .icon img {
 	height: 60px;
 	margin-bottom: 10px;
 }
+.loader {
+	width: 28px;
+	height: 28px;
+	border: 3px solid #fff;
+	border-bottom-color: #405189;
+	border-radius: 50%;
+	display: inline-block;
+	box-sizing: border-box;
+	animation: 1s linear infinite rotation
+}
 
+@keyframes rotation {
+	0% {
+		transform: rotate(0)
+	}
+
+	100% {
+		transform: rotate(360deg)
+	}
+}
 .padding_top_16px {
 	padding-top: 16px !important
 }
@@ -53,12 +78,15 @@
 .border_bottom {
 	border-bottom: 1px solid #d7ddda;
 }
-.fs_18{
-  font-size: 18px;
+
+.fs_18 {
+	font-size: 18px;
 }
-.fs_25{
-  font-size: 25px;
+
+.fs_25 {
+	font-size: 25px;
 }
+
 .Confluence {
 	font-size: 26px;
 	margin-bottom: 15px;

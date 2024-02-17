@@ -17,6 +17,8 @@ $route['about/faqs'] = 'BaseController/faqs';
 $route['about/curated-content'] = 'BaseController/curatedContent';
 $route['about/pre-registration'] = 'BaseController/preRegistration';
 $route['get-involved'] = 'BaseController/getInvolved';
+$route['suggest-use-cases'] = 'BaseController/suggestUseCases';
+$route['post-case-submission-form'] = 'BaseController/postCaseSubmissionForm';
 // Routes for Events section
 $route['events'] = 'BaseController/events';
 $route['events/upcoming-events'] = 'BaseController/upcomingEvents';
@@ -41,11 +43,11 @@ $route['post-sign-in'] = 'Authorization/postSignIn';
 $route['reset-password'] = 'Authorization/resetPassword';
 $route['verify-account/(:any)'] = 'Authorization/verifyAccount/$1';
 $route['verify-reset-password/(:any)'] = 'Authorization/verifyResetPassword/$1';
-$route['post-reset-verify-account'] = 'Authorization/postResetVerifyAccount';
+$route['post-forgot-verify-account'] = 'Authorization/postForgotVerifyAccount';
 $route['post-verify-account'] = 'Authorization/postVerifyAccount';
 $route['post-forgot-password'] = 'Authorization/postForgotPassword';
 $route['resendOTP'] = 'Authorization/resendOTP';
-$route['forgot-password'] = 'Authorization/resetPassword';
+$route['forgot-password'] = 'Authorization/forgotPassword';
 $route['outgoing-server-down'] = 'Authorization/serverDown';
 $route['check-email'] = 'Authorization/checkEmail';
 // route for user admin
@@ -63,6 +65,7 @@ $route['post-final-submit'] = 'AdminController/postFinalSubmit';
 // route for admin
 $route['user-list'] = 'AdminController/userList';
 $route['get-user-list'] = 'AdminController/getUserList';
+$route['get-eoi-application'] = 'AdminController/getEoIApplication';
 $route['verifed-users'] = 'AdminController/verifedUsers';
 $route['unverified-users'] = 'AdminController/unverifiedUsers';
 $route['get-unverified-user-list'] = 'AdminController/getUnverifiedUserList';
@@ -70,6 +73,7 @@ $route['get-verified-user-list'] = 'AdminController/getVerifiedUserList';
 $route['users'] = 'AdminController/users';
 $route['users/(:any)'] = 'AdminController/users/$1';
 $route['users/(:any)/(:any)'] = 'AdminController/users/$1/$2';
+$route['applications-list'] = 'AdminController/applicationsList';
 //route for theme-customizer-options
 $route['project-settings'] = 'AdminController/projectSettings';
 $route['theme-customizer-options'] = 'AdminController/themeCustomizerOptions';

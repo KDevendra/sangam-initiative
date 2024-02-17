@@ -1,12 +1,31 @@
 .catpchaparent {
 	display: flex;
 }
-
+.error{color: #f06548;}
 .resource-input-group:nth-child(odd) {
 	padding: 10px;
 	background-color: #FEE4D259;
 }
+/* Define the blinking animation */
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
 
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Apply the animation to the text */
+#blinkText {
+	animation: blink 1.5s infinite;
+	/* Adjust duration as needed */
+}
 .resource-input-group:nth-child(even) {
 	padding: 10px;
 	background-color: #D8D8EB58;

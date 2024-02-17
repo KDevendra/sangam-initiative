@@ -133,4 +133,10 @@ class BaseModel extends CI_Model {
         $query = $this->db->get('visitors');
         return $query->num_rows() == 0;
     }
+    public function getDataByStatus($statusArray)
+    {
+        $this->db->where_in('status', $statusArray);
+        return $this->db->get('eoi_registration')->result_array();
+    }
+
 }

@@ -254,22 +254,24 @@ class Authorization extends CI_Controller
         echo json_encode($response);
     }
 
-    public function resetpassword()
+    public function forgotPassword()
     {
-        $data["title"] = $this->projectTitle . " : Reset password";
-        $this->load->view("authorization/reset-password", $data);
+        $data["title"] = $this->projectTitle . " : Forgot Password";
+        $this->load->view("authorization/forget-password", $data);
     }
     public function verifyResetPassword($id)
     {
         $data["title"] = $this->projectTitle . " : Verify Reset password";
         try {
-            $record = $this->BaseModel->getData("login", ["login_id" => $id]);
+            $record = $this->BaseModel->getData("login", ["user_id" => $id]);
             if ($record->num_rows() == 0) {
                 $this->session->set_flashdata("verified", "Your account is already created. Please log in");
                 return redirect('authorization/sign-in', $data);
             }
             $details = $record->row();
             $user_id = $details->user_id;
+            $data['user_id'] = $details->user_id;
+            $data['email'] = $details->email;
             $verification_code = $this->generateVerificationCode();
             $cond = ["user_id" => $user_id];
             $sendVerificationCode = $this->sendEmailVerificationCode($details->email, $details->user_name, $verification_code);
@@ -317,39 +319,40 @@ class Authorization extends CI_Controller
             return redirect('outgoing-server-down');
         }
     }
-    public function postResetVerifyAccount()
+    public function postForgotVerifyAccount()
     {
         $response = ["status" => "error", "message" => ""];
         if ($this->input->post()) {
-            $this->form_validation->set_rules("Newpassword", "New password", "required");
-            $this->form_validation->set_rules("Confirmpassword", "Confirm password", "required");
+            $this->form_validation->set_rules("NewPassword", "New password", "trim|required");
+            $this->form_validation->set_rules("ConfirmPassword", "Confirm password", "trim|required");
+
             if ($this->form_validation->run() == false) {
                 $response["status"] = "error";
                 $response["message"] = validation_errors();
-            } elseif ($this->input->post("Newpassword") != $this->input->post("Confirmpassword")) {
+            } elseif ($this->input->post("NewPassword") != $this->input->post("ConfirmPassword")) {
                 $response["status"] = "error";
                 $response["message"] = "New password and Confirm password do not match.";
             } else {
-                $cond = ["activation_code" => $this->input->post("activation_code")];
+                $cond = ["activation_code" => $this->input->post("activationCode")];
                 $checkVerificationCode = $this->BaseModel->getData("login", $cond);
                 if ($checkVerificationCode->num_rows() > 0) {
-                    if (!empty($this->input->post("Confirmpassword"))) {
-                        $password = hash("SHA512", $this->input->post("Confirmpassword"));
+                    if (!empty($this->input->post("ConfirmPassword"))) {
+                        $password = hash("SHA512", $this->input->post("ConfirmPassword"));
                     } else {
                         $response["status"] = "error";
                         $response["message"] = "Confirm password is required.";
                     }
-                    if (!empty($this->input->post("Newpassword"))) {
-                        $newpassword = hash("SHA512", $this->input->post("Newpassword"));
+                    if (!empty($this->input->post("NewPassword"))) {
+                        $NewPassword = hash("SHA512", $this->input->post("NewPassword"));
                     } else {
                         $response["status"] = "error";
                         $response["message"] = "New password is required.";
                     }
-                    if (!empty($password) && !empty($newpassword)) {
-                        $cond = ["user_id" => $this->input->post("user_id")];
+                    if (!empty($password) && !empty($NewPassword)) {
+                        $cond = ["user_id" => $this->input->post("userId")];
                         $login_data = $this->BaseModel->getData("login", $cond);
                         if ($login_data->num_rows() > 0) {
-                            $response_update = $this->BaseModel->updateData("login", ["password" => $newpassword], $cond);
+                            $response_update = $this->BaseModel->updateData("login", ["password" => $NewPassword], $cond);
                             if ($response_update) {
                                 $response["status"] = "success";
                                 $response["message"] = "password has been changed.";
@@ -364,7 +367,7 @@ class Authorization extends CI_Controller
                     }
                 } else {
                     $response["status"] = "error";
-                    $response["message"] = "Please enter correct email ID.";
+                    $response["message"] = "Please enter correct verification code.";
                 }
             }
         } else {
@@ -377,21 +380,21 @@ class Authorization extends CI_Controller
     {
         $response = ["status" => "error", "message" => ""];
         if ($this->input->post()) {
-            $this->form_validation->set_rules("Newpassword", "New password", "required");
-            $this->form_validation->set_rules("Confirmpassword", "Confirm password", "required");
+            $this->form_validation->set_rules("NewPassword", "New password", "required");
+            $this->form_validation->set_rules("ConfirmPassword", "Confirm password", "required");
             if ($this->form_validation->run() == false) {
                 $response["status"] = "error";
                 $response["message"] = validation_errors();
             }
-            if ($this->input->post("Newpassword") != $this->input->post("Confirmpassword")) {
+            if ($this->input->post("NewPassword") != $this->input->post("ConfirmPassword")) {
                 $response["status"] = "error";
                 $response["message"] = "New password And Retype New password does not matched.";
             } else {
-                $cond = ["user_id" => $this->input->post("email")];
+                $cond = ["email" => $this->input->post("email")];
                 $checkVerificationCode = $this->BaseModel->getData("login", $cond);
                 if ($checkVerificationCode->num_rows() > 0) {
                     $response["status"] = "success";
-                    $response["data"] = $checkVerificationCode->row()->login_id;
+                    $response["data"] = $checkVerificationCode->row()->user_id;
                     $response["message"] = ".";
                 } else {
                     $response["status"] = "error";
