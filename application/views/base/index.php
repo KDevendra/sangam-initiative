@@ -98,9 +98,8 @@
                     <div class="row no-gutters justify-content-center">
                         <div class="col-md-12 text-center mb-20">
                             <h2 class="text-white Confluence">Join the Confluence of Innovation: Sangam Digital Twin Eol</h2>
-                            <p class="text-white fs_18">
-                                Welcome to <b>"Sangam: Digital Twin,"</b> a pioneering invitation to collaborate on the future of infrastructure planning and design. This initiative is a call to action for public entities, infrastructure
-                                planners, tech giants, startups, and academia to break free from silos and engage in a Whole-of-Nation approach.
+                            <p class="text-white fs_24">
+                                <b> Welcome to "Sangam: Digital Twin,"</b> <span class="fs_18" style="font-family: " Roboto", sans-serif;">a pioneering invitation to collaborate on the future of infrastructure planning and design. <span style="font-style: italic;">This initiative is a call to action <b> for public entities, infrastructure planners, tech giants, startups, and academia</b></span>to break free from silos and engage in a <span style="font-style: italic;"><b>Whole-of-Nation approach.</b></span> </span>
                             </p>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12">
@@ -131,7 +130,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="about-features-item item-active text-center">
-                                <div class="hover-bg bg_cover" style="background-image: url(<?php echo base_url('')?>include/web/custom/Environmental_Data.jpg);"></div>
+                                <div class="hover-bg bg_cover" style="background-image: url(<?php echo base_url('') ?>include/web/custom/Environmental_Data.jpg);"></div>
                                 <div class="icon"><i class="flaticon-vision"></i></div>
                                 <div class="text">
                                     <h3 class="title">Crafting the Blueprint</h3>
@@ -235,13 +234,12 @@
 
 
 <style>
+    .desk {
+        font-size: 16px;
+        font-family: arial;
 
-.desk{
-    font-size:16px;
-    font-family: arial;
-
-}
-    </style>
+    }
+</style>
 
 
 
@@ -505,14 +503,14 @@
                     <span class="sub-title"> <img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt="" />Participant Outreach and Engagement </span>
                     <h2>Process of Sangam</h2>
                     <p class="fs_18">
-                        <span style="font-family: 'Montserrat Alternates', sans-serif;">
-                            <b>DoT would begin this journey with a campaign to engage with potential participants, including industry experts, academia, and other relevant stakeholders,</b>
-                            <span style="font-style: italic;">aware widespread awareness and interest.</span>
+                        <span>
+                            <b>DoT would begin this journey </b> with a campaign to engage with potential participants, <b>including industry experts, academia, and other relevant stakeholders,</b>
+                            <span style="font-style: italic;">to aware widespread awareness and interest.</span>
                         </span>
-</p>
-                       
-                   <p class="desk">DoT plans to conduct three physical (in-person) meetings before the deadline for EoI submission and planned meetings are aimed to engage prospective candidates and generate enthusiasm for participation.<b> The agenda is crafted to offer a diverse and enriching experience </b>,
-                   <span style="font-style: italic;">featuring speakers who are leaders and innovators in their respective fields.</span>
+                    </p>
+
+                    <p class="desk"><b>DoT plans to conduct three physical (in-person) meetings before the deadline for EoI submission. </b>And planned meetings are <span style="font-style:italic">aimed to engage prospective candidates and generate enthusiasm for participation</span>.<b> The agenda is crafted to offer a diverse and enriching experience,</b>
+                        <span style="font-style: italic;">featuring speakers who are leaders and innovators in their respective fields.</span>
                     </p>
                 </div>
             </div>
@@ -612,8 +610,8 @@
                     <span class="sub-title text-white"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt="" />Why to Join</span>
                     <h3>Transforming Infrastructure with Digital Twin: Sangam</h3>
                     <p class="mt-1">
-                        Be part of a collaborative effort to redefine infrastructure planning and design. The "Digital Twin: Sangam" PoC is not just a project; it's a leap into the future of how we conceive, plan, and build our world. Your
-                        expertise and innovation can help shape sustainable, efficient, and integrated infrastructure systems for generations to come.
+                        <b>Be part of a collaborative effort to redefine infrastructure planning and design.</b> The <span style="font-style: italic;">"Digital Twin: Sangam" PoC </span> <b>is not just a project; it's a leap into the future</b> of how we conceive, plan, and build our world.<br> <b>Your
+                            expertise and innovation can help shape sustainable, efficient, and integrated infrastructure systems </b><span style="font-style: italic;"> for generations to come.</span>
                     </p>
                 </div>
             </div>
@@ -683,7 +681,9 @@
                         <h4 class="title"><a href="javascript:void(0)">Utility Network Innovators</a></h4>
                         <h6 class="title"><a>Energizing the Digital Twin Ecosystem</a></h6>
                         <p>
-                            <b>Contribution:</b> Contribute utility network data to enhance the Digital Twin with critical infrastructure information, from power grids to water systems. <b>Opportunity:</b> Spearhead innovations in
+                            <b>Contribution:</b> Contribute utility network data to enhance the Digital Twin with critical infrastructure information, from power grids to water systems.
+                        </p>
+                        <p><b>Opportunity:</b> Spearhead innovations in
                             integrating essential services into the planning phase, ensuring sustainability and efficiency.
                         </p>
                     </div>

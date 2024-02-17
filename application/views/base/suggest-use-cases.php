@@ -31,8 +31,6 @@
             <div class="col-lg-6">
                 <div class="contact-form-wrapper mb-50 wow fadeInRight" style="visibility: visible;">
                     <form class="contact-form" id="caseSubmissionForm">
-                        <div class="form_group"><label for="fullName"><i class="far fa-user"></i></label><input type="text" class="form_control" placeholder="Enter full name" id="fullName" name="fullName"></div>
-                        <div class="form_group"><label for="email"><i class="far fa-envelope"></i></label><input type="email" class="form_control" placeholder="Enter your email address" id="email" name="email"></div>
                         <div class="form_group"><label for="useCaseTitle"><i class="far fa-shield"></i></label><input type="text" class="form_control" placeholder="Enter a concise and descriptive title" id="useCaseTitle" name="title"></div>
                         <div class="form_group"><label for="abstract"><i class="far fa-lightbulb"></i></label><textarea class="form_control" rows="1" placeholder="Summarize the core idea and purpose briefly" id="abstract" name="abstract"></textarea></div>
                         <div class="form_group"><label for="objective"><i class="far fa-exclamation-triangle"></i></label><input type="text" class="form_control" placeholder="Clearly define the objective or problem to address" id="objective" name="objective"></div>
@@ -43,7 +41,7 @@
                         <div class="form_group"><label for="expectedOutcomes"><i class="far fa-cogs"></i></label><textarea class="form_control" rows="1" placeholder="Outline anticipated results and impact" id="expectedOutcomes" name="expected_outcomes"></textarea></div>
                         <div class="form_group"><label for="innovativeAspects"><i class="far fa-star"></i></label><textarea class="form_control" rows="1" placeholder="Highlight unique features or approaches" id="innovativeAspects" name="innovative_aspects"></textarea></div>
                         <div class="form_group"><label for="challenges"><i class="far fa-pen-fancy"></i></label><textarea class="form_control" rows="1" placeholder="Discuss feasibility and potential challenges" id="challenges" name="feasibility_and_challenges"></textarea></div>
-                        <div class="form_group"><button class="main-btn primary-btn" id="submitBtn">Send Message</button></div>
+                        <div class="form_group"><button class="btn btn-primary" id="submitBtn">Send Message</button></div>
                     </form>
                 </div>
             </div>

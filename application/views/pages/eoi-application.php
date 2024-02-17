@@ -118,7 +118,7 @@
 </div>
 <script>
     function viewUser(application_id) {
-        var redirectUrl = "<?php echo base_url('applications/view/'); ?>" + application_id;
+        var redirectUrl = "<?php echo base_url('eoi-application/view/'); ?>" + application_id;
         window.location.href = redirectUrl;
     }
 
@@ -151,8 +151,8 @@
                     data: "email"
                 },
                 {
-                    title: "Core Competencies",
-                    data: "core_competency"
+                    title: "Register As",
+                    data: "register_as"
                 },
                 {
                     title: "Status",

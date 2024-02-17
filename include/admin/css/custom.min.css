@@ -20,7 +20,12 @@
 		opacity: 1;
 	}
 }
-
+.form-control-lg {
+	min-height: calc(1.5em + 1.4rem + calc(var(--vz-border-width) * 2));
+	padding: 0 !important ;
+	font-size: calc(var(--vz-font-base) * 1.25);
+	border-radius: var(--vz-border-radius-lg);
+}
 /* Apply the animation to the text */
 #blinkText {
 	animation: blink 1.5s infinite;

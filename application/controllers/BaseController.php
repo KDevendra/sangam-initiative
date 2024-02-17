@@ -153,7 +153,7 @@ class BaseController extends CI_Controller
     public function suggestUseCases()
     {
         $data['title'] = "Suggest Use Cases : " . $this->projectTitle;
-        $this->load->view('base/suggest-use-cases', $data);
+        $this->load->view('base/submit-use-cases', $data);
     }
     public function getCoreCompetency()
     {
