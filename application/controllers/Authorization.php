@@ -219,12 +219,12 @@ class Authorization extends CI_Controller
                                 $response["message"] = "Please enter correct user name & password.";
                             } else {
                                 $userStatus = $details->is_verified;
-                                if ($userStatus === 0) {
+                                if ($userStatus === '0') {
                                     $response["data"] = $details->user_id;
                                     $response["status"] = "verify";
                                     $response["message"] = "User does not verified.";
                                 } else {
-                                    if ($userStatus != 1) {
+                                    if ($userStatus != '1') {
                                         $response["message"] = "User does not active.";
                                     } else {
                                         $sessData = ["login_id" => $details->login_id, "user_name" => $details->user_name, "user_level" => $details->user_level, "user_id" => $details->user_id, "user_level" => $details->user_level];
@@ -352,10 +352,10 @@ class Authorization extends CI_Controller
                         $cond = ["user_id" => $this->input->post("userId")];
                         $login_data = $this->BaseModel->getData("login", $cond);
                         if ($login_data->num_rows() > 0) {
-                            $response_update = $this->BaseModel->updateData("login", ["password" => $NewPassword], $cond);
+                            $response_update = $this->BaseModel->updateData("login", ["is_active"=>1,"is_verified"=>1,"password" => $NewPassword,''], $cond);
                             if ($response_update) {
                                 $response["status"] = "success";
-                                $response["message"] = "password has been changed.";
+                                $response["message"] = "Password has been changed.";
                             } else {
                                 $response["status"] = "error";
                                 $response["message"] = "Failed to change password.";
