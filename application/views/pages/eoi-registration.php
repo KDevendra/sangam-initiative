@@ -246,29 +246,29 @@
                                                 <div>
                                                     <div class="row g-3">
                                                         <div class="col-sm-6">
-                                                            <label for="title" class="form-label">Title <span class="text-danger">*</span></label> <input type="text" class="form-control" id="title" name="title" placeholder="Enter title" value="<?php if (isset($userDetail->title)) {
-                                                                                                                                                                                                                                                        echo  $userDetail->title;
-                                                                                                                                                                                                                                                    }; ?>" />
+                                                            <label for="title" class="form-label">Title <span class="text-danger">*</span></label> <input type="text" class="form-control" id="title" name="title" placeholder="Enter title" required value="<?php if (isset($userDetail->title)) {
+                                                                                                                                                                                                                                                                    echo  $userDetail->title;
+                                                                                                                                                                                                                                                                }; ?>" />
                                                             <div class="invalid-feedback">Please enter a title</div>
                                                         </div>
                                                         <div class="col-sm-6">
-                                                            <label for="category" class="form-label">Category <span class="text-danger">*</span></label> <input type="text" class="form-control" id="category" name="category" placeholder="Enter category" value="<?php if (isset($userDetail->category)) {
-                                                                                                                                                                                                                                                                        echo  $userDetail->category;
-                                                                                                                                                                                                                                                                    }; ?>" />
-                                                            <?php echo form_error('title', '<div class="invalid-feedback">', '</div>'); ?>
+                                                            <label for="category" class="form-label">Category <span class="text-danger">*</span></label> <input type="text" class="form-control" id="category" name="category" required placeholder="Enter category" value="<?php if (isset($userDetail->category)) {
+                                                                                                                                                                                                                                                                                echo  $userDetail->category;
+                                                                                                                                                                                                                                                                            }; ?>" />
+                                                            <div class="invalid-feedback">Please enter a category</div>
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <label for="strategic_vision" class="form-label"> Strategic Vision <span class="text-danger">*</span></label>
-                                                            <textarea name="strategic_vision" placeholder="Write vision" class="form-control" name="strategic_vision" id="strategic_vision" width="100%" rows="2"><?php if (isset($userDetail->strategic_vision)) {
+                                                            <textarea name="strategic_vision" placeholder="Write vision" class="form-control" name="strategic_vision" id="strategic_vision" required width="100%" rows="2"><?php if (isset($userDetail->strategic_vision)) {
                                                                                                                                                                                                                         echo  $userDetail->strategic_vision;
                                                                                                                                                                                                                     }; ?></textarea>
                                                             <div class="invalid-feedback">Please enter a vision</div>
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <label for="objectives" class="form-label"> Objectives <span class="text-danger">*</span></label>
-                                                            <textarea name="objectives" placeholder="Write objectives" class="form-control" name="objectives" id="objectives" width="100%" rows="2"><?php if (isset($userDetail->objectives)) {
-                                                                                                                                                                                                        echo  $userDetail->objectives;
-                                                                                                                                                                                                    }; ?></textarea>
+                                                            <textarea name="objectives" placeholder="Write objectives" class="form-control" name="objectives" id="objectives" width="100%" required rows="2"><?php if (isset($userDetail->objectives)) {
+                                                                                                                                                                                                                    echo  $userDetail->objectives;
+                                                                                                                                                                                                                }; ?></textarea>
                                                             <div class="invalid-feedback">Please enter a objectives</div>
                                                         </div>
                                                         <div class="col-sm-6">
@@ -278,9 +278,9 @@
                                                                     <a href="javascript:void(0)" class="text-muted"><i class="ri-info-i"></i></a>
                                                                 </div>
                                                             </label>
-                                                            <textarea name="project_goals" placeholder="Write project goals" name="project_goals" class="form-control" id="project_goals" width="100%" rows="2"><?php if (isset($userDetail->project_goals)) {
-                                                                                                                                                                                                                    echo  $userDetail->project_goals;
-                                                                                                                                                                                                                }; ?></textarea>
+                                                            <textarea name="project_goals" placeholder="Write project goals" name="project_goals" class="form-control" required id="project_goals" width="100%" rows="2"><?php if (isset($userDetail->project_goals)) {
+                                                                                                                                                                                                                                echo  $userDetail->project_goals;
+                                                                                                                                                                                                                            }; ?></textarea>
                                                             <div class="invalid-feedback">Please enter a alignment with project goals</div>
                                                         </div>
                                                         <div class="col-sm-6">
@@ -290,9 +290,9 @@
                                                                     <a href="javascript:void(0)" class="text-muted"><i class="ri-info-i"></i></a>
                                                                 </div>
                                                             </label>
-                                                            <textarea name="contribution_to_project_goals" placeholder="Write contribution" name="contribution_to_project_goals" class="form-control" id="contribution_to_project_goals" width="100%" rows="2"><?php if (isset($userDetail->contribution_to_project_goals)) {
-                                                                                                                                                                                                                                                                    echo  $userDetail->contribution_to_project_goals;
-                                                                                                                                                                                                                                                                }; ?></textarea>
+                                                            <textarea name="contribution_to_project_goals" placeholder="Write contribution" name="contribution_to_project_goals" class="form-control" id="contribution_to_project_goals" required width="100%" rows="2"><?php if (isset($userDetail->contribution_to_project_goals)) {
+                                                                                                                                                                                                                                                                            echo  $userDetail->contribution_to_project_goals;
+                                                                                                                                                                                                                                                                        }; ?></textarea>
                                                             <div class="invalid-feedback">Please enter a contribution to project goals</div>
                                                         </div>
                                                     </div>
@@ -836,14 +836,33 @@
         </div>
     </div>
 </div>
+
 <script>
     var maxResourceGroups = 8;
     var maxhumanResourceGroups = 8;
 
     function validateFields() {
         var isValid = true;
+        var registrationStepValue = $("input[name='registration_step']").val();
+        // alert(registrationStepValue);
+        // Check if the registration_step value is "Step_3_Details_of_Submission"
+        // if (registrationStepValue === "Step_3_Details_of_Submission") {
+        //     $(".tab-pane.active")
+        //         .find("input, textarea")
+        //         .each(function() {
+        //             // Check if the value of the field is empty
+        //             if (!$(this).val()) {
+        //                 isValid = false;
+        //                 $(this).addClass("is-invalid");
+        //             } else {
+        //                 $(this).removeClass("is-invalid");
+        //             }
+        //         });
+        // }
+
         return isValid;
     }
+
 
 
     function showLoader() {
