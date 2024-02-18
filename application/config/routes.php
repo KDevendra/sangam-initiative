@@ -51,6 +51,7 @@ $route['outgoing-server-down'] = 'Authorization/serverDown';
 $route['check-email'] = 'Authorization/checkEmail';
 // route for user admin
 $route['admin-dashboard'] = 'AdminController/adminDashboard';
+$route['user-dashboard'] = 'AdminController/adminDashboard';
 $route['profile'] = 'AdminController/profile';
 $route['update-profile-image'] = 'AdminController/updateProfileImage';
 $route['edit-profile/(:any)'] = 'AdminController/editProfile/$1';

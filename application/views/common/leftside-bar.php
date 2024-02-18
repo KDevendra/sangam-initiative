@@ -73,10 +73,20 @@
            <div class="container-fluid">
                <div id="two-column-menu"></div>
                <?php
-                function generateMenuHtml($menuItems, $userLevel)
+                function generateMenuHtml($menuItems, $userLevel, $dashboardAdded = false)
                 {
                     $currentUrl = current_url();
                     $html = '<ul class="navbar-nav" id="navbar-nav">';
+
+                    // Add Dashboard only if it hasn't been added before and the user level matches
+                    if (!$dashboardAdded && $userLevel === 1) {
+                        $html .= '<li class="nav-item"><a class="nav-link menu-link" href="' . base_url('admin-dashboard') . '"><i class="ri-dashboard-3-fill"></i>Dashboard</a></li>';
+                        $dashboardAdded = true;
+                    } elseif (!$dashboardAdded && $userLevel !== 1) {
+                        $html .= '<li class="nav-item"><a class="nav-link menu-link" href="' . base_url('user-dashboard') . '"><i class="ri-dashboard-3-fill"></i>Dashboard</a></li>';
+                        $dashboardAdded = true;
+                    }
+
                     foreach ($menuItems as $menuItem) {
                         $hasAccess = isset($menuItem['has_access']) ? $menuItem['has_access'] : false;
                         if (!$hasAccess) {
@@ -86,11 +96,9 @@
                         $html .= '<li class="nav-item">';
                         $html .= '<a class="nav-link menu-link';
 
-
                         if ($currentUrl == base_url($menuItem['url'])) {
                             $html .= ' active';
                         }
-
 
                         if (isset($menuItem['children'])) {
                             $html .= ' collapsed" href="#sidebar' . ucfirst($menuItem['url']) . '" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebar' . ucfirst($menuItem['url']) . '"';
@@ -103,7 +111,7 @@
                         if (isset($menuItem['children'])) {
                             $html .= '<div class="collapse menu-dropdown" id="sidebar' . ucfirst($menuItem['url']) . '">';
                             $html .= '<ul class="nav nav-sm flex-column">';
-                            $html .= generateMenuHtml($menuItem['children'], $userLevel);
+                            $html .= generateMenuHtml($menuItem['children'], $userLevel, $dashboardAdded);
                             $html .= '</ul>';
                             $html .= '</div>';
                         }
@@ -115,11 +123,13 @@
 
                     return $html;
                 }
+
                 $userLevel = $this->session->login['user_level'];
                 $menuItems = checkMenuAccess($userLevel);
                 $menuHtml = generateMenuHtml($menuItems, $userLevel);
                 echo $menuHtml;
                 ?>
+
            </div>
        </div>
        <div class="sidebar-background"></div>

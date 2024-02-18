@@ -302,7 +302,7 @@
                             } else if (response.user_level === "1") {
                                 window.location.href = "<?php echo base_url('admin-dashboard'); ?>";
                             } else {
-                                window.location.href = "<?php echo base_url('admin-dashboard'); ?>";
+                                window.location.href = "<?php echo base_url('user-dashboard'); ?>";
                             }
                         } else {
                             console.log("Error case");

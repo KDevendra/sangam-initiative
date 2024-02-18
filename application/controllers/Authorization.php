@@ -352,7 +352,12 @@ class Authorization extends CI_Controller
                         $cond = ["user_id" => $this->input->post("userId")];
                         $login_data = $this->BaseModel->getData("login", $cond);
                         if ($login_data->num_rows() > 0) {
-                            $response_update = $this->BaseModel->updateData("login", ["is_active"=>1,"is_verified"=>1,"password" => $NewPassword,''], $cond);
+                            $response_update = $this->BaseModel->updateData("login", [
+                                "is_active" => 1,
+                                "is_verified" => 1,
+                                "wrong_attempt" => 0,
+                                "password" => $NewPassword // Remove the empty string here
+                            ], $cond);
                             if ($response_update) {
                                 $response["status"] = "success";
                                 $response["message"] = "Password has been changed.";
@@ -364,6 +369,7 @@ class Authorization extends CI_Controller
                             $response["status"] = "error";
                             $response["message"] = "Failed to change password, Current password does not match.";
                         }
+
                     }
                 } else {
                     $response["status"] = "error";
