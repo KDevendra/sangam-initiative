@@ -151,6 +151,13 @@
                     data: "email"
                 },
                 {
+                    title: "Application Datetime",
+                    data: "created_at",
+                    render: function(data, type, row) {
+                        return moment(data).format('MMM DD, YYYY hh:mm:ss a');
+                    }
+                },
+                {
                     title: "Status",
                     data: "status",
                     render: function(data, type, row) {

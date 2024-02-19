@@ -30,4 +30,4 @@
    <script src="<?php echo base_url(''); ?>include/admin/libs/moment/moment.js"></script>
 </head>
 
-<body>
+<body class="twocolumn-panel">

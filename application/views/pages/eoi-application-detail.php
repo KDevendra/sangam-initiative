@@ -306,8 +306,8 @@
                                                       <td><?php echo $detail['human_category']; ?></td>
                                                       <td><?php echo $detail['human_type_of_resource']; ?></td>
                                                       <td><?php echo $detail['human_details']; ?></td>
-                                                      <td><?php echo $detail['human_experience']; ?></td>
                                                       <td><?php echo $detail['role']; ?></td>
+                                                      <td><?php echo $detail['human_experience']; ?></td>
                                                       <td><?php echo $detail['extent_of_involvement']; ?></td>
                                                       <td><?php echo $detail['human_alignment']; ?></td>
                                                    </tr>
