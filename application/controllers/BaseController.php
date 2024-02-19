@@ -1,10 +1,8 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-class BaseController extends CI_Controller
-{
+class BaseController extends CI_Controller {
     var $projectTitle = "Sangam Initiative";
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct();
         $this->load->model('BaseModel');
         $this->load->helper('common_helper');
@@ -15,148 +13,123 @@ class BaseController extends CI_Controller
             $this->BaseModel->insertVisitor($ipAddress, $userAgent);
         }
     }
-    public function index()
-    {
+    public function index() {
         $data['title'] = "Home: " . $this->projectTitle;
         $this->load->view('base/index', $data);
     }
-    public function about()
-    {
+    public function about() {
         $data['title'] = "About: " . $this->projectTitle;
         $this->load->view('base/about', $data);
     }
-    public function livingList()
-    {
+    public function livingList() {
         $data['title'] = "Living List: " . $this->projectTitle;
         $this->load->view('base/living-list', $data);
     }
-    public function whySangam()
-    {
+    public function whySangam() {
         $data['title'] = "Why Sangam: " . $this->projectTitle;
         $this->load->view('base/why-does-it-matter-now', $data);
     }
-    public function whyNow()
-    {
+    public function whyNow() {
         $data['title'] = "why-now: " . $this->projectTitle;
         $this->load->view('base/why-now', $data);
     }
-    public function whyJoin()
-    {
+    public function whyJoin() {
         $data['title'] = "Why Join: " . $this->projectTitle;
         $this->load->view('base/why-join', $data);
     }
-    public function participate()
-    {
+    public function participate() {
         $data['title'] = "Participate: " . $this->projectTitle;
         $this->load->view('base/participate', $data);
     }
-    public function process()
-    {
+    public function process() {
         $data['title'] = "Process: " . $this->projectTitle;
         $this->load->view('base/process', $data);
     }
-    public function faqs()
-    {
+    public function faqs() {
         $data['title'] = "FAQ's: " . $this->projectTitle;
         $this->load->view('base/faqs', $data);
     }
-    public function curatedContent()
-    {
+    public function curatedContent() {
         $data['title'] = "Curated Content: " . $this->projectTitle;
         $this->load->view('base/curated-content', $data);
     }
-    public function preRegistration()
-    {
+    public function preRegistration() {
         $data['title'] = "Pre Registration: " . $this->projectTitle;
         $this->load->view('base/pre-registration', $data);
     }
-    public function events()
-    {
+    public function events() {
         $data['title'] = "Upcoming Events: " . $this->projectTitle;
         $this->load->view('base/events', $data);
     }
-    public function upcomingEvents()
-    {
+    public function joinAsSpeaker() {
+        $data['title'] = "Join as Speaker: " . $this->projectTitle;
+        $this->load->view('base/join-as-speaker', $data);
+    }
+    public function upcomingEvents() {
         $data['title'] = "Upcoming Events: " . $this->projectTitle;
         $this->load->view('base/upcoming-events', $data);
     }
-    public function dashboard()
-    {
+    public function dashboard() {
         $data['title'] = "Dashboard: " . $this->projectTitle;
         $this->load->view('base/dashboard', $data);
     }
-    public function whyAttend()
-    {
+    public function whyAttend() {
         $data['title'] = "Why Attend: " . $this->projectTitle;
         $this->load->view('base/why-attend', $data);
     }
-    public function speakers()
-    {
+    public function speakers() {
         $data['title'] = "Speakers: " . $this->projectTitle;
         $this->load->view('base/speakers', $data);
     }
-    public function schedule()
-    {
+    public function schedule() {
         $data['title'] = "Schedule: " . $this->projectTitle;
         $this->load->view('base/schedule', $data);
     }
-    public function registerEvent()
-    {
+    public function registerEvent() {
         $data['title'] = "Register Event: " . $this->projectTitle;
         $this->load->view('base/register-event', $data);
     }
-    public function expressionOfInterest()
-    {
+    public function expressionOfInterest() {
         $data['title'] = "Expression of Interest: " . $this->projectTitle;
         $this->load->view('base/expression-of-interest', $data);
     }
-    public function aboutEoi()
-    {
+    public function aboutEoi() {
         $data['title'] = "About EoI: " . $this->projectTitle;
         $this->load->view('base/about-eoi', $data);
     }
-    public function purposeEoi()
-    {
+    public function purposeEoi() {
         $data['title'] = "Purpose EoI: " . $this->projectTitle;
         $this->load->view('base/purpose-eoi', $data);
     }
-    public function stagesEoi()
-    {
+    public function stagesEoi() {
         $data['title'] = "Stages EoI: " . $this->projectTitle;
         $this->load->view('base/stages-eoi', $data);
     }
-    public function whyParticipate()
-    {
+    public function whyParticipate() {
         $data['title'] = "Why Participate: " . $this->projectTitle;
         $this->load->view('base/why-participate', $data);
     }
-    public function participationDetails()
-    {
+    public function participationDetails() {
         $data['title'] = "Participation Details: " . $this->projectTitle;
         $this->load->view('base/participation-details', $data);
     }
-    public function submitResponse()
-    {
+    public function submitResponse() {
         $data['title'] = "Submit Response: " . $this->projectTitle;
         $this->load->view('base/submit-response', $data);
     }
-    public function registration()
-    {
+    public function registration() {
         $data['title'] = "Registration :: " . $this->projectTitle;
         $this->load->view('base/sign-up', $data);
     }
-    public function getInvolved()
-    {
+    public function getInvolved() {
         $data['title'] = "Get Involved : " . $this->projectTitle;
         $this->load->view('base/get-involved', $data);
     }
-    public function suggestUseCases()
-    {
+    public function suggestUseCases() {
         $data['title'] = "Suggest Use Cases : " . $this->projectTitle;
         $this->load->view('base/submit-use-cases', $data);
     }
-    public function getCoreCompetency()
-    {
+    public function getCoreCompetency() {
         try {
             $core_competenciesList = $this->BaseModel->getData("core_competencies")->result_array();
             if ($core_competenciesList !== null) {
@@ -165,13 +138,13 @@ class BaseController extends CI_Controller
                 $responseData = ["status" => "error", "message" => "Error fetching core_competencies data."];
             }
             echo json_encode($responseData);
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             log_message("error", $e->getMessage());
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
-    public function postCaseSubmissionForm()
-    {
+    public function postCaseSubmissionForm() {
         $this->form_validation->set_rules('fullName', 'Full Name', 'trim|required');
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         $this->form_validation->set_rules('title', 'Title', 'trim|required');
@@ -183,9 +156,8 @@ class BaseController extends CI_Controller
         $this->form_validation->set_rules('expected_outcomes', 'Expected Outcomes and Impact', 'trim|required');
         $this->form_validation->set_rules('innovative_aspects', 'Innovative Aspects', 'trim|required');
         $this->form_validation->set_rules('feasibility_and_challenges', 'Feasibility and Implementation Challenges', 'trim|required');
-
         if ($this->form_validation->run() === false) {
-            $response = ["status" => "validation_errors", "message" => validation_errors()];
+            $response = ["status" => "validation_errors", "message" => validation_errors() ];
         } else {
             $fullName = $this->input->post('fullName');
             $email = $this->input->post('email');
@@ -199,21 +171,7 @@ class BaseController extends CI_Controller
             $innovativeAspects = $this->input->post('innovative_aspects');
             $feasibilityChallenges = $this->input->post('feasibility_and_challenges');
             $relevance = $this->input->post('relevance');
-            $postData = [
-                'full_name' => $fullName,
-                'email' => $email,
-                'title' => $title,
-                'abstract' => $abstract,
-                'objective' => $objective,
-                'target_areas' => $targetArea,
-                'technologies_used' => $technologies,
-                'data_sources' => $dataSources,
-                'expected_outcomes' => $outcomesImpact,
-                'innovative_aspects' => $innovativeAspects,
-                'feasibility_and_challenges' => $feasibilityChallenges,
-                'relevance'=> $relevance,
-                'created_at' => date('Y-m-d H:i:s'),
-            ];
+            $postData = ['full_name' => $fullName, 'email' => $email, 'title' => $title, 'abstract' => $abstract, 'objective' => $objective, 'target_areas' => $targetArea, 'technologies_used' => $technologies, 'data_sources' => $dataSources, 'expected_outcomes' => $outcomesImpact, 'innovative_aspects' => $innovativeAspects, 'feasibility_and_challenges' => $feasibilityChallenges, 'relevance' => $relevance, 'created_at' => date('Y-m-d H:i:s'), ];
             $insertResult = $this->BaseModel->insertData("suggest_use_cases", $postData);
             if ($insertResult) {
                 $inserted_Id = $this->db->insert_id();
@@ -232,5 +190,39 @@ class BaseController extends CI_Controller
         }
         $this->output->set_content_type("application/json");
         echo json_encode($response);
+    }
+    public function submitSpeakerRequest() {
+        $this->form_validation->set_rules('full_name', 'Full Name', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+        $this->form_validation->set_rules('phone_number', 'Phone Number', 'trim|required');
+        if ($this->form_validation->run() === false) {
+            $this->session->set_flashdata("error", validation_errors());
+            return redirect('join-as-speaker');
+        } else {
+            $full_name = $this->input->post('full_name');
+            $email = $this->input->post('email');
+            $phone_number = $this->input->post('phone_number');
+            $previous_speaking_experience = $this->input->post('previous_speaking_experience');
+            $additional_information = $this->input->post('additional_information');
+            $postData = ['full_name' => $full_name, 'email' => $email, 'phone_number' => $phone_number, 'previous_speaking_experience' => $previous_speaking_experience, 'additional_information' => $additional_information, 'created_at' => date('Y-m-d H:i:s'), ];
+            $insertResult = $this->BaseModel->insertData("speaker_applications", $postData);
+            if ($insertResult) {
+                $inserted_Id = $this->db->insert_id();
+                $ap_req = "AP_REQ" . date("Y") . str_pad($inserted_Id, 4, "0", STR_PAD_LEFT);
+                $updateData = ["ap_req" => $ap_req];
+                $updateCondition = ["application_id" => $inserted_Id];
+                $updateQuery = $this->BaseModel->updateData("speaker_applications", $updateData, $updateCondition);
+                if ($updateQuery) {
+                    $this->session->set_flashdata("success", 'Your request submitted successfully.');
+                    return redirect('join-as-speaker');
+                } else {
+                    $this->session->set_flashdata("error", 'Error updating a request ID.');
+                    return redirect('join-as-speaker');
+                }
+            } else {
+                $this->session->set_flashdata("error", 'Error inserting form data.');
+                return redirect('join-as-speaker');
+            }
+        }
     }
 }

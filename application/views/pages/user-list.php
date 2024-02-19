@@ -45,6 +45,8 @@
         </div>
     </div>
 </div>
+
+
 <script>
     function viewUser(user_id) {
         var redirectUrl = "<?php echo base_url('users/view/'); ?>" + user_id;
@@ -141,6 +143,13 @@
                     data: "email"
                 },
                 {
+                    title: "Registration Datetime ",
+                    data: "created_at",
+                    render: function(data, type, row) {
+                        return moment(data).format('MMM DD, YYYY hh:mm:ss a');
+                    }
+                },
+                {
                     title: "Status",
                     data: "is_verified",
                     render: function(data, type, row) {
@@ -171,6 +180,7 @@
         dataTable.order([1, "desc"]).draw();
         return dataTable;
     }
+
 
 
     function animateCounter(element, target) {

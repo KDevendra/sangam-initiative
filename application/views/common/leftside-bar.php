@@ -79,10 +79,11 @@
                     $html = '<ul class="navbar-nav" id="navbar-nav">';
 
                     // Add Dashboard only if it hasn't been added before and the user level matches
-                    if (!$dashboardAdded && $userLevel === 1) {
-                        $html .= '<li class="nav-item"><a class="nav-link menu-link" href="' . base_url('admin-dashboard') . '"><i class="ri-dashboard-3-fill"></i>Dashboard</a></li>';
+                    if (!$dashboardAdded && $userLevel === '1') {
+                        $html .=   '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('admin-dashboard') . '"><i class="ri-dashboard-3-fill"></i> <span data-key="t-Dashboard">Dashboard</span></a></li>';
+
                         $dashboardAdded = true;
-                    } elseif (!$dashboardAdded && $userLevel !== 1) {
+                    } elseif (!$dashboardAdded && $userLevel !== '1') {
                         $html .= '<li class="nav-item"><a class="nav-link menu-link" href="' . base_url('user-dashboard') . '"><i class="ri-dashboard-3-fill"></i>Dashboard</a></li>';
                         $dashboardAdded = true;
                     }

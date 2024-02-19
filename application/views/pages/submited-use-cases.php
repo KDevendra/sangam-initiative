@@ -51,6 +51,7 @@
         var redirectUrl = "<?php echo base_url('submit-use-cases/view/'); ?>" + case_id;
         window.location.href = redirectUrl;
     }
+
     function initializeDataTable() {
         if ($.fn.DataTable.isDataTable('#ajax-datatables')) {
             $('#ajax-datatables').DataTable().destroy();
@@ -87,7 +88,13 @@
                     title: "Target Areas",
                     data: "target_areas"
                 },
-
+                {
+                    title: "Submission Datetime",
+                    data: "created_at",
+                    render: function(data, type, row) {
+                        return moment(data).format('MMM DD, YYYY hh:mm:ss a');
+                    }
+                },
                 {
                     title: "Action",
                     data: null,
@@ -112,6 +119,7 @@
         dataTable.order([1, "desc"]).draw();
         return dataTable;
     }
+
     function animateCounter(element, target) {
         var current = 0;
         var increment = 1;

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html <?php $options = themeCustomizerOptions(); ?> lang="en" data-layout="<?php echo (!empty($options->layout)) ? $options->layout : 'vertical'; ?>" data-topbar="<?php echo (!empty($options->topbar)) ? $options->topbar : 'light'; ?>" data-sidebar="<?php echo (!empty($options->sidebar))
-                                                                                                                                                                                                                                                            ? $options->sidebar : 'dark'; ?>" data-sidebar-size="<?php echo (!empty($options->sidebar_size)) ? $options->sidebar_size : 'lg'; ?>" data-sidebar-image="<?php echo (!empty($options->sidebar_image)) ? $options->sidebar_image : 'none';
-                                                                                                                                                                                                                                                                                                                                                                                                                        ?>" data-preloader="<?php echo (!empty($options->preloader)) ? $options->preloader : 'disable'; ?>" data-theme="<?php echo (!empty($options->theme)) ? $options->theme : 'default'; ?>" data-theme-colors="<?php echo (!empty($options->theme_colors))
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ? $options->theme_colors : 'default'; ?>">
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable" data-theme="default" data-theme-colors="default" data-bs-theme="light" data-layout-width="fluid" data-layout-position="fixed" data-layout-style="default" data-body-image="none" data-sidebar-visibility="show">
+
 <head>
    <meta charset="utf-8" />
    <title><?php if (isset($title) && !empty($title)) {
@@ -29,5 +27,7 @@
    <script src="<?php echo base_url(''); ?>include/admin/libs/sweetalert2/sweetalert2.min.js"></script>
    <script src="<?php echo base_url(''); ?>include/admin/js/pages/sweetalerts.init.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+   <script src="<?php echo base_url(''); ?>include/admin/libs/moment/moment.js"></script>
 </head>
+
 <body>

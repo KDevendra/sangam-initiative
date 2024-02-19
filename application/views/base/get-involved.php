@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="d-flex justify-content-center">
-                        <a href="<?php echo base_url(''); ?>registration" class="main-btn golden-btn FEE4D2" id="getInvolved"> <i class="far fa-chevron-circle-right" aria-hidden="true"></i> Volunteer as a Speaker</a>
+                        <a href="<?php echo base_url(''); ?>join-as-speaker" class="main-btn golden-btn FEE4D2" id="getInvolved"> <i class="far fa-chevron-circle-right" aria-hidden="true"></i> Volunteer as a Speaker</a>
                     </div>
                 </div>
             </div>

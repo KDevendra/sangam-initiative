@@ -151,10 +151,6 @@
                     data: "email"
                 },
                 {
-                    title: "Register As",
-                    data: "register_as"
-                },
-                {
                     title: "Status",
                     data: "status",
                     render: function(data, type, row) {

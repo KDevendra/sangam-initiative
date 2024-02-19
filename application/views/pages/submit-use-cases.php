@@ -152,7 +152,13 @@
                     title: "Target Areas",
                     data: "target_areas"
                 },
-
+                {
+                    title: "Submission Datetime",
+                    data: "created_at",
+                    render: function(data, type, row) {
+                        return moment(data).format('MMM DD, YYYY hh:mm:ss a');
+                    }
+                },
                 {
                     title: "Action",
                     data: null,

@@ -9,6 +9,7 @@ $route['about'] = 'BaseController/about';
 $route['living-list'] = 'BaseController/livingList';
 $route['get-core-competency'] = 'BaseController/getCoreCompetency';
 $route['why-does-it-matter-now'] = 'BaseController/whySangam';
+$route['join-as-speaker'] = 'BaseController/joinAsSpeaker';
 $route['about/why-now'] = 'BaseController/whyNow';
 $route['about/why-join'] = 'BaseController/whyJoin';
 $route['about/participate'] = 'BaseController/participate';
@@ -18,6 +19,7 @@ $route['about/curated-content'] = 'BaseController/curatedContent';
 $route['about/pre-registration'] = 'BaseController/preRegistration';
 $route['get-involved'] = 'BaseController/getInvolved';
 $route['post-case-submission-form'] = 'BaseController/postCaseSubmissionForm';
+$route['submit-speaker-request'] = 'BaseController/submitSpeakerRequest';
 // Routes for Events section
 $route['events'] = 'BaseController/events';
 $route['events/upcoming-events'] = 'BaseController/upcomingEvents';
@@ -73,6 +75,7 @@ $route['user-list'] = 'AdminController/userList';
 $route['get-user-list'] = 'AdminController/getUserList';
 $route['get-submit-use-cases'] = 'AdminController/getSuggestUseCases';
 $route['get-submited-use-cases'] = 'AdminController/getSuggestedUseCases';
+$route['get-submitted-speaker-request'] = 'AdminController/getSubmittedSpeakerRequest';
 $route['get-eoi-application'] = 'AdminController/getEoIApplication';
 $route['verifed-users'] = 'AdminController/verifedUsers';
 $route['unverified-users'] = 'AdminController/unverifiedUsers';
@@ -87,6 +90,12 @@ $route['eoi-application/(:any)/(:any)'] = 'AdminController/application/$1/$2';
 $route['submited-use-cases'] = 'AdminController/submitedUseCases';
 $route['submited-use-cases/(:any)'] = 'AdminController/submitedUseCases/$1';
 $route['submited-use-cases/(:any)/(:any)'] = 'AdminController/submitedUseCases/$1/$2';
+$route['submitted-speaker-request'] = 'AdminController/submittedSpeakerRequest';
+$route['submitted-speaker-request/(:any)'] = 'AdminController/submittedSpeakerRequest/$1';
+$route['submitted-speaker-request/(:any)/(:any)'] = 'AdminController/submittedSpeakerRequest/$1/$2';
+
+
+$route['reports']= 'AdminController/reports';
 //route for theme-customizer-options
 $route['project-settings'] = 'AdminController/projectSettings';
 $route['theme-customizer-options'] = 'AdminController/themeCustomizerOptions';
