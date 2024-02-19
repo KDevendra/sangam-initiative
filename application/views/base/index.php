@@ -99,7 +99,7 @@
                   <div class="col-md-12 text-center mb-20">
                      <h2 class="text-white Confluence">Join the Confluence of Innovation: Sangam Digital Twin Eol</h2>
                      <p class="text-white fs_24">
-                        <b>Welcome to "Sangam: Digital Twin,"</b>
+                        <b>Welcome to "Sangam: Digital Twin"</b><br>
                         <span class="fs_18" style="font-family: 'Roboto', sans-serif;">
                         a pioneering invitation to collaborate on the future of infrastructure planning and design.
                         </span>
