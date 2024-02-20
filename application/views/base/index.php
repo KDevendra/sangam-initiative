@@ -104,7 +104,7 @@
                         a pioneering invitation to collaborate on the future of infrastructure planning and design.
                         </span>
                      </p>
-                     <p class="text-white fs_18" style="font-family: 'Roboto', sans-serif; font-size: 20px;">
+                     <p class="text-white fs_18" style="font-family: 'Roboto', sans-serif; font-size: 20px;font-style:italic">
                         This initiative is a call to action for
                      </p>
                      <p class="text-white fs_18" style="font-family: 'Roboto', sans-serif; font-size: 20px;">
@@ -610,7 +610,7 @@
                <span class="sub-title text-white"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt="" />Why to Join</span>
                <h3>Transforming Infrastructure with Digital Twin: Sangam</h3>
                <p class="mt-1">
-                  <b>Be part of a collaborative effort to redefine infrastructure planning and design.</b> The <span style="font-style: italic;">"Digital Twin: Sangam" PoC </span> <b>is not just a project; it's a leap into the future</b> of how we conceive, plan, and build our world.<br> <b>Your
+                  <b>Be part of a collaborative effort to redefine infrastructure planning and design</b> <br> The <span style="font-style: italic;">"Digital Twin: Sangam"  </span><br>PoC <b> is not just a project; it's a leap into the future</b> of how we conceive, plan, and build our world.<br> <b>Your
                   expertise and innovation can help shape sustainable, efficient, and integrated infrastructure systems </b><span style="font-style: italic;"> for generations to come.</span>
                </p>
             </div>

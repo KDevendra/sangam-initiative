@@ -122,6 +122,7 @@ class Authorization extends CI_Controller
                         'email' => $this->input->post('email'),
                         'password' => $password,
                         'core_competency' => $this->input->post('coreCompetencies'),
+                        'other_core_competencie' => $this->input->post('other_core_competencie'),
                         'user_level' => 2,
                         'created_at' => date('Y-m-d H:i:s'),
                     ];
@@ -163,7 +164,7 @@ class Authorization extends CI_Controller
             if ($record>0) {
                 echo "exists";
             } else {
-  
+
                 echo "not_exists";
             }
         } catch (Exception $e) {

@@ -111,7 +111,7 @@
                                                                     <a href="javascript:void(0)" class="text-muted"><i class="ri-info-i"></i></a>
                                                                 </div>
                                                             </label>
-                                                            <input type="date" class="form-control" id="datOfBirth" name="datOfBirth" required="" placeholder="DD-MM-YYYY" />
+                                                            <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required placeholder="DD-MM-YYYY" max="<?php echo date('Y-m-d'); ?>">
                                                             <div class="invalid-feedback">
                                                                 Please select date of birth
                                                             </div>
@@ -155,6 +155,9 @@
                                                             <div class="invalid-feedback" id="errorCoreCompetencies">
                                                                 Please select core competencies
                                                             </div>
+                                                        </div>
+                                                        <div class="mb-3 col-md-6">
+                                                            <div id="additionalFields"></div>
                                                         </div>
 
                                                         <!-- <div class="mb-4 col-md-12">
@@ -280,17 +283,14 @@
                 placeholder: "Select potential interest Areas...",
                 allowClear: true,
             });
-
             function showLoader() {
                 $(".loader").show();
                 $('button[type="submit"]').prop("disabled", true).html('<span class="loader"></span>');
             }
-
             function hideLoader() {
                 $(".loader").hide();
                 $('button[type="submit"]').prop("disabled", false).html("Register Now");
             }
-
             function submitForm(formData) {
                 $.ajax({
                     url: "<?php echo base_url('post-sign-up'); ?>",
@@ -339,7 +339,6 @@
                     },
                 });
             }
-
             function validateForm() {
                 var isValid = true;
 
@@ -414,7 +413,6 @@
                 }
                 return isValid;
             }
-
             function validateContactNumber() {
                 var contactNo = $("#contactNo").val();
                 if (!contactNo || !/^[789][0-9]{9}$/.test(contactNo)) {
@@ -424,7 +422,6 @@
                     $("#contactNo").removeClass("is-invalid");
                 }
             }
-
             function validateOrganizationEmail() {
                 var websiteURL = $("#websiteURL").val().trim();
                 var organizationEmail = $("#organizationEmail").val().trim();
@@ -449,8 +446,6 @@
                     return false;
                 }
             }
-            // $("#organizationEmail").on("input", validateOrganizationEmail);
-
             $("#sign-up").on("submit", function(event) {
                 if (validateForm()) {
                     var $signUp = $(this);
@@ -533,69 +528,130 @@
                     }
                 });
             });
-
-
+            // function populateSampleJSONData(coreCompetenciesData) {
+            //     const SampleJSONData = [];
+            //     coreCompetenciesData.forEach((item) => {
+            //         if (item.category !== null) {
+            //             const existingCategory = SampleJSONData.find((category) => category.title === item.layer);
+            //             if (existingCategory) {
+            //
+            //                 const existingSubCategory = existingCategory.subs.find((sub) => sub.title === item.category.trim());
+            //
+            //                 if (!existingSubCategory) {
+            //                     const subCategory = {
+            //                         id: item.id,
+            //                         title: item.category.trim(),
+            //                     };
+            //
+            //                     if (item.sub_category) {
+            //                         subCategory.subs = [{
+            //                             id: item.id,
+            //                             title: item.sub_category.trim(),
+            //                         }, ];
+            //                     }
+            //
+            //                     existingCategory.subs.push(subCategory);
+            //                 } else {
+            //                     // If sub category already exists, check if sub category with the same title exists
+            //                     if (item.sub_category) {
+            //                         const existingSubSubCategory = existingSubCategory.subs.find((sub) => sub.title === item.sub_category.trim());
+            //                         if (!existingSubSubCategory) {
+            //                             existingSubCategory.subs.push({
+            //                                 id: item.id,
+            //                                 title: item.sub_category.trim(),
+            //                             });
+            //                         }
+            //                     }
+            //                 }
+            //             } else {
+            //                 const newCategory = {
+            //                     id: item.id,
+            //                     title: item.layer,
+            //                     subs: [{
+            //                         id: item.id,
+            //                         title: item.category.trim(),
+            //                     }, ],
+            //                 };
+            //
+            //                 if (item.sub_category) {
+            //                     newCategory.subs[0].subs = [{
+            //                         id: item.id,
+            //                         title: item.sub_category.trim(),
+            //                     }, ];
+            //                 }
+            //
+            //                 SampleJSONData.push(newCategory);
+            //             }
+            //         }
+            //     });
+            //
+            //     return SampleJSONData;
+            // }
             function populateSampleJSONData(coreCompetenciesData) {
-                const SampleJSONData = [];
+    const SampleJSONData = [];
+    coreCompetenciesData.forEach((item) => {
+        if (item.category !== null) {
+            const existingCategory = SampleJSONData.find((category) => category.title === item.layer);
+            if (existingCategory) {
 
-                coreCompetenciesData.forEach((item) => {
-                    if (item.category !== null) {
-                        const existingCategory = SampleJSONData.find((category) => category.title === item.layer);
+                const existingSubCategory = existingCategory.subs.find((sub) => sub.title === item.category.trim());
 
-                        if (existingCategory) {
-                            // Check if category is already added
-                            const existingSubCategory = existingCategory.subs.find((sub) => sub.title === item.category.trim());
+                if (!existingSubCategory) {
+                    const subCategory = {
+                        id: item.id,
+                        title: item.category.trim(),
+                    };
 
-                            if (!existingSubCategory) {
-                                const subCategory = {
-                                    id: item.id,
-                                    title: item.category.trim(),
-                                };
+                    if (item.sub_category) {
+                        subCategory.subs = [{
+                            id: item.id,
+                            title: item.sub_category.trim(),
+                        }, ];
+                    }
 
-                                if (item.sub_category) {
-                                    subCategory.subs = [{
-                                        id: item.id,
-                                        title: item.sub_category.trim(),
-                                    }, ];
-                                }
-
-                                existingCategory.subs.push(subCategory);
-                            } else {
-                                // If sub category already exists, check if sub category with the same title exists
-                                if (item.sub_category) {
-                                    const existingSubSubCategory = existingSubCategory.subs.find((sub) => sub.title === item.sub_category.trim());
-                                    if (!existingSubSubCategory) {
-                                        existingSubCategory.subs.push({
-                                            id: item.id,
-                                            title: item.sub_category.trim(),
-                                        });
-                                    }
-                                }
-                            }
-                        } else {
-                            const newCategory = {
+                    existingCategory.subs.push(subCategory);
+                } else {
+                    // If sub category already exists, check if sub category with the same title exists
+                    if (item.sub_category) {
+                        const existingSubSubCategory = existingSubCategory.subs.find((sub) => sub.title === item.sub_category.trim());
+                        if (!existingSubSubCategory) {
+                            existingSubCategory.subs.push({
                                 id: item.id,
-                                title: item.layer,
-                                subs: [{
-                                    id: item.id,
-                                    title: item.category.trim(),
-                                }, ],
-                            };
-
-                            if (item.sub_category) {
-                                newCategory.subs[0].subs = [{
-                                    id: item.id,
-                                    title: item.sub_category.trim(),
-                                }, ];
-                            }
-
-                            SampleJSONData.push(newCategory);
+                                title: item.sub_category.trim(),
+                            });
                         }
                     }
-                });
+                }
+            } else {
+                const newCategory = {
+                    id: item.id,
+                    title: item.layer,
+                    subs: [{
+                        id: item.id,
+                        title: item.category.trim(),
+                    }, ],
+                };
 
-                return SampleJSONData;
+                if (item.sub_category) {
+                    newCategory.subs[0].subs = [{
+                        id: item.id,
+                        title: item.sub_category.trim(),
+                    }, ];
+                }
+
+                SampleJSONData.push(newCategory);
             }
+        }
+    });
+
+    // Append static option for "Others"
+    SampleJSONData.push({
+        title: "Others",
+        id: "others",
+    });
+
+    return SampleJSONData;
+}
 
             getcoreCompetencies(function(layers, coreCompetenciesData) {
                 const SampleJSONData = populateSampleJSONData(coreCompetenciesData);
@@ -609,7 +665,6 @@
                 });
                 // comboTree3.toggleDropDown();
             });
-
             function getcoreCompetencies(callback) {
                 try {
                     $.ajax({
@@ -636,6 +691,14 @@
                     console.error("Exception:", error);
                 }
             }
+            $(document).on("change","#coreCompetencies", function() {
+              var selectedOption = $(this).val();
+              if (selectedOption === "Others") {
+                  $("#additionalFields").html('<label for="other" class="form-label">Other Core Competencie</label><input type="text" name="other_core_competencie" class="form-control" id="other_core_competencie" placeholder="Enter details for Others">');
+              } else {
+                  $("#additionalFields").html('');
+              }
+          });
         });
     </script>
     <?php
