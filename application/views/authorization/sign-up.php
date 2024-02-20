@@ -111,7 +111,7 @@
                                                                     <a href="javascript:void(0)" class="text-muted"><i class="ri-info-i"></i></a>
                                                                 </div>
                                                             </label>
-                                                            <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required placeholder="DD-MM-YYYY" max="<?php echo date('Y-m-d'); ?>">
+                                                            <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required placeholder="DD-MM-YYYY">
                                                             <div class="invalid-feedback">
                                                                 Please select date of birth
                                                             </div>
@@ -181,17 +181,17 @@
                                                             </div>
                                                         </div>
                                                         <div class="mb-3 col-md-6">
-                                                            <label for="websiteURL" class="form-label">Website URL of the organisation <span class="text-danger">*</span></label>
-                                                            <input type="url" class="form-control" required id="websiteURL" name="websiteURL" placeholder="Enter Website URL of the organisation" />
+                                                            <label for="websiteURL" class="form-label">Website URL of the organisation </label>
+                                                            <input type="url" class="form-control" id="websiteURL" name="websiteURL" placeholder="Enter Website URL of the organisation" />
                                                             <div class="invalid-feedback">
                                                                 Please enter Website URL
                                                             </div>
                                                         </div>
                                                         <div class="mb-3 col-md-6">
-                                                            <label for="organizationEmail" class="form-label"> Organization Email <span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control" id="organizationEmail" name="organizationEmail" placeholder="Enter organization  email" required />
+                                                            <label for="organizationEmail" class="form-label"> Alternate Email </label>
+                                                            <input type="text" class="form-control" id="alternate_email" name="alternate_email" placeholder="Enter alternate email"  />
                                                             <div class="invalid-feedback">
-                                                                Please enter organization email
+                                                                Please enter alternate email
                                                             </div>
                                                         </div>
                                                         <div class="mb-3 col-md-6">
@@ -350,20 +350,22 @@
                     $("#fullName").removeClass("is-invalid");
                 }
 
-                var dateOfBirth = $("#datOfBirth").val();
+                var dateOfBirth = $("#dateOfBirth").val();
+                var isValid = true;
+
                 if (!dateOfBirth) {
-                    $("#datOfBirth").addClass("is-invalid");
+                    $("#dateOfBirth").addClass("is-invalid");
                     isValid = false;
                 } else {
                     var dob = new Date(dateOfBirth);
                     var today = new Date();
                     var eighteenYearsAgo = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
-                    if (dob > eighteenYearsAgo) {
-                        $("#datOfBirth").addClass("is-invalid");
-                        $("#datOfBirth").next(".invalid-feedback").text("You must be 18 years or older to register.");
+                    if (dob > eighteenYearsAgo || dob > today) {
+                        $("#dateOfBirth").addClass("is-invalid");
+                        $("#dateOfBirth").next(".invalid-feedback").text("You must be at least 18 years old to register.");
                         isValid = false;
                     } else {
-                        $("#datOfBirth").removeClass("is-invalid");
+                        $("#dateOfBirth").removeClass("is-invalid");
                     }
                 }
 
@@ -422,30 +424,7 @@
                     $("#contactNo").removeClass("is-invalid");
                 }
             }
-            function validateOrganizationEmail() {
-                var websiteURL = $("#websiteURL").val().trim();
-                var organizationEmail = $("#organizationEmail").val().trim();
-                var domainRegex = /(?:https?:\/\/)?(?:www\.)?([^\/]+)\//i;
-                var domainMatch = websiteURL.match(domainRegex);
-                if (domainMatch && domainMatch[1]) {
-                    var websiteDomain = domainMatch[1];
-                    var emailRegex = new RegExp("^[a-zA-Z0-9._%+-]+@" + websiteDomain + "$", "i");
 
-                    if (!emailRegex.test(organizationEmail)) {
-                        $("#organizationEmail").addClass("is-invalid");
-                        $("#organizationEmailError").html("Organization email does not match the domain");
-                        return false;
-                    } else {
-                        $("#organizationEmail").removeClass("is-invalid");
-                        $("#organizationEmailError").html("");
-                        return true;
-                    }
-                } else {
-                    $("#organizationEmail").addClass("is-invalid");
-                    $("#organizationEmailError").html("Please enter a valid website URL");
-                    return false;
-                }
-            }
             $("#sign-up").on("submit", function(event) {
                 if (validateForm()) {
                     var $signUp = $(this);
@@ -484,6 +463,7 @@
                 }
             });
             $(document).on("click", "#btnNextStapeOrgnation", function() {
+
                 if (validateForm()) {
                     $("#contanterOrganization").show();
                     $("#contanterIndividual").hide();
@@ -528,65 +508,7 @@
                     }
                 });
             });
-            // function populateSampleJSONData(coreCompetenciesData) {
-            //     const SampleJSONData = [];
-            //     coreCompetenciesData.forEach((item) => {
-            //         if (item.category !== null) {
-            //             const existingCategory = SampleJSONData.find((category) => category.title === item.layer);
-            //             if (existingCategory) {
-            //
-            //                 const existingSubCategory = existingCategory.subs.find((sub) => sub.title === item.category.trim());
-            //
-            //                 if (!existingSubCategory) {
-            //                     const subCategory = {
-            //                         id: item.id,
-            //                         title: item.category.trim(),
-            //                     };
-            //
-            //                     if (item.sub_category) {
-            //                         subCategory.subs = [{
-            //                             id: item.id,
-            //                             title: item.sub_category.trim(),
-            //                         }, ];
-            //                     }
-            //
-            //                     existingCategory.subs.push(subCategory);
-            //                 } else {
-            //                     // If sub category already exists, check if sub category with the same title exists
-            //                     if (item.sub_category) {
-            //                         const existingSubSubCategory = existingSubCategory.subs.find((sub) => sub.title === item.sub_category.trim());
-            //                         if (!existingSubSubCategory) {
-            //                             existingSubCategory.subs.push({
-            //                                 id: item.id,
-            //                                 title: item.sub_category.trim(),
-            //                             });
-            //                         }
-            //                     }
-            //                 }
-            //             } else {
-            //                 const newCategory = {
-            //                     id: item.id,
-            //                     title: item.layer,
-            //                     subs: [{
-            //                         id: item.id,
-            //                         title: item.category.trim(),
-            //                     }, ],
-            //                 };
-            //
-            //                 if (item.sub_category) {
-            //                     newCategory.subs[0].subs = [{
-            //                         id: item.id,
-            //                         title: item.sub_category.trim(),
-            //                     }, ];
-            //                 }
-            //
-            //                 SampleJSONData.push(newCategory);
-            //             }
-            //         }
-            //     });
-            //
-            //     return SampleJSONData;
-            // }
+
             function populateSampleJSONData(coreCompetenciesData) {
     const SampleJSONData = [];
     coreCompetenciesData.forEach((item) => {

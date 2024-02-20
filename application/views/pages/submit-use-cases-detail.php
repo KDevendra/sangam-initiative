@@ -41,20 +41,18 @@
                         <h4 class="card-title mb-0">Suggest Use Case: Digital Twin - Sangam Project</h4>
                     </div>
                     <div class="card-body form-steps">
-
                         <form action="<?= base_url('submit-submit-use-cases/') . $flag . ($flag === 'edit' ? "/" . $clientDetail->case_id : '') ?>" method="post" enctype="multipart/form-data">
                             <div class="row">
-                                <div class="col-md-4 mt-2">
-                                    <label for="useCaseTitle">Title of the Use Case</label>
+                                <div class="col-md-4 mt-3">
+                                    <label for="useCaseTitle">Title of the Use Case <span class="text-danger">*</span></label>
                                     <?php if (isset($flag) && $flag === 'view') { ?>
                                         <p><?php echo $userDetail->title; ?></p>
                                     <?php } else { ?>
                                         <input type="text" class="form-control" placeholder="Enter a concise and descriptive title" id="useCaseTitle" name="title">
                                     <?php } ?>
                                 </div>
-
-                                <div class="col-md-4 mt-2">
-                                    <label for="abstract">Abstract</label>
+                                <div class="col-md-4 mt-3">
+                                    <label for="abstract">Abstract <span class="text-danger">*</span></label>
                                     <?php if (isset($flag) && $flag === 'view') { ?>
                                         <p><?php echo $userDetail->abstract; ?></p>
                                     <?php } else { ?>
@@ -62,8 +60,8 @@
                                     <?php } ?>
                                 </div>
 
-                                <div class="col-md-4 mt-2">
-                                    <label for="objective">Objective</label>
+                                <div class="col-md-4 mt-3">
+                                    <label for="objective">Objective <span class="text-danger">*</span></label>
                                     <?php if (isset($flag) && $flag === 'view') { ?>
                                         <p><?php echo $userDetail->objective; ?></p>
                                     <?php } else { ?>
@@ -71,7 +69,7 @@
                                     <?php } ?>
                                 </div>
 
-                                <div class="col-md-4 mt-2">
+                                <div class="col-md-4 mt-3">
                                     <label for="targetArea">Target Area</label>
                                     <?php if (isset($flag) && $flag === 'view') { ?>
                                         <p><?php echo $userDetail->target_areas; ?></p>
@@ -80,7 +78,7 @@
                                     <?php } ?>
                                 </div>
 
-                                <div class="col-md-4 mt-2">
+                                <div class="col-md-4 mt-3">
                                     <label for="relevance">Relevance to Sangam Initiative</label>
                                     <?php if (isset($flag) && $flag === 'view') { ?>
                                         <p><?php echo $userDetail->relevance; ?></p>
@@ -89,7 +87,7 @@
                                     <?php } ?>
                                 </div>
 
-                                <div class="col-md-4 mt-2">
+                                <div class="col-md-4 mt-3">
                                     <label for="technologies">Technologies Utilized</label>
                                     <?php if (isset($flag) && $flag === 'view') { ?>
                                         <p><?php echo $userDetail->technologies_used; ?></p>
@@ -98,7 +96,7 @@
                                     <?php } ?>
                                 </div>
 
-                                <div class="col-md-4 mt-2">
+                                <div class="col-md-4 mt-3">
                                     <label for="dataSources">Data Sources</label>
                                     <?php if (isset($flag) && $flag === 'view') { ?>
                                         <p><?php echo $userDetail->data_sources; ?></p>
@@ -107,7 +105,7 @@
                                     <?php } ?>
                                 </div>
 
-                                <div class="col-md-4 mt-2">
+                                <div class="col-md-4 mt-3">
                                     <label for="expectedOutcomes">Expected Outcomes</label>
                                     <?php if (isset($flag) && $flag === 'view') { ?>
                                         <p><?php echo $userDetail->expected_outcomes; ?></p>
@@ -116,7 +114,7 @@
                                     <?php } ?>
                                 </div>
 
-                                <div class="col-md-4 mt-2">
+                                <div class="col-md-4 mt-3">
                                     <label for="innovativeAspects">Innovative Aspects</label>
                                     <?php if (isset($flag) && $flag === 'view') { ?>
                                         <p><?php echo $userDetail->innovative_aspects; ?></p>
@@ -125,7 +123,7 @@
                                     <?php } ?>
                                 </div>
 
-                                <div class="col-md-4 mt-2">
+                                <div class="col-md-4 mt-3">
                                     <label for="challenges">Feasibility and Challenges</label>
                                     <?php if (isset($flag) && $flag === 'view') { ?>
                                         <p><?php echo $userDetail->feasibility_and_challenges; ?></p>
@@ -134,10 +132,31 @@
                                     <?php } ?>
                                 </div>
 
-                                <div class="col-md-12">
+                                <div class="col-md-4 mt-3">
+                                    <label for="uploadRelevantDocument">  Upload Relevant Document  <span class="text-danger">(PDF & Max Size:2MB)</span></label>
+                                    <?php if (isset($flag) && $flag === 'view') { ?>
+                                      <?php
+                                      if(!empty($userDetail->upload_relevant_document))
+                                      {
+                                        ?>
+                                        <p>  <a target="_blank" href="<?php echo base_url('uploads/upload_relevant_document/').$userDetail->upload_relevant_document;?>">View File</a></p>
+                                      <?php
+                                    }
+                                      else
+                                      {
+                                        echo "No file uploaded";
+                                      }
+
+                                      ?>
+                                    <?php } else { ?>
+                                      <input type="file" name="upload_relevant_document" class="form-control">
+                                    <?php } ?>
+                                </div>
+
+                                <div class="col-md-12 mt-3">
                                     <div class="d-flex justify-content-center">
                                         <?php if (isset($flag) && $flag === 'view') { ?>
-                                       
+
                                         <?php } else { ?>
                                             <button class="btn btn-primary" id="submitBtn">Submit Case</button>
                                         <?php } ?>

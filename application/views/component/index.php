@@ -13,6 +13,7 @@
       <link href="<?php echo base_url(''); ?>include/admin/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
       <link href="<?php echo base_url(''); ?>include/admin/css/icons.min.css" rel="stylesheet" type="text/css" />
       <link href="<?php echo base_url(''); ?>include/admin/css/app.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(''); ?>include/admin/css/custom.min.css" rel="stylesheet" type="text/css" />
       <link href="<?php echo base_url(''); ?>include/admin/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
@@ -35,18 +36,18 @@
                         <div class="navbar-brand-box horizontal-logo">
                             <a href="<?php echo base_url('admin-dashboard')?>" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="<?php echo base_url('');?>include/admin/images/logo-sm.png" alt="" height="22" />
+                                    <img src="<?php echo base_url('');?>include/web/custom/Department_Of_Telecommunications_White.png" alt="" />
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="<?php echo base_url('');?>include/admin/images/logo-dark.png" alt="" height="17" />
+                                    <img src="<?php echo base_url('');?>include/web/custom/Department_Of_Telecommunications_White.png" alt="" />
                                 </span>
                             </a>
                             <a href="<?php echo base_url('admin-dashboard')?>" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="<?php echo base_url('');?>include/admin/images/logo-sm.png" alt="" height="22" />
+                                    <img src="<?php echo base_url('');?>include/web/custom/Department_Of_Telecommunications_White.png" alt=""  />
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="<?php echo base_url('');?>include/web/custom/Department_Of_Telecommunications_White.png" alt="" height="17" />
+                                    <img src="<?php echo base_url('');?>include/web/custom/Department_Of_Telecommunications_White.png" alt=""  />
                                 </span>
                             </a>
                         </div>
@@ -490,19 +491,19 @@
                <!-- Dark Logo-->
                <a href="<?php echo base_url(''); ?>admin-dashboard" class="logo logo-dark">
                <span class="logo-sm">
-               <img src="<?php echo base_url(''); ?>include/admin/images/logo-sm.png" alt="" height="22" />
+               <img src="<?php echo base_url(''); ?>include/admin/images/logo-sm.png" alt=""  />
                </span>
                <span class="logo-lg">
-               <img src="<?php echo base_url(''); ?>include/admin/images/logo-dark.png" alt="" height="17" />
+               <img src="<?php echo base_url(''); ?>include/admin/images/logo-dark.png" alt=""  />
                </span>
                </a>
                <!-- Light Logo-->
                <a href="<?php echo base_url(''); ?>admin-dashboard" class="logo logo-light">
                <span class="logo-sm">
-               <img src="<?php echo base_url(''); ?>include/admin/images/logo-sm.png" alt="" height="22" />
+               <img src="<?php echo base_url(''); ?>include/admin/images/logo-sm.png" alt=""  />
                </span>
                <span class="logo-lg">
-               <img src="<?php echo base_url(''); ?>include/admin/images/logo-light.png" alt="" height="17" />
+               <img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications_White.png" height="60px" alt="" />
                </span>
                </a>
                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
@@ -552,7 +553,8 @@
 
                              $dashboardAdded = true;
                          } elseif (!$dashboardAdded && $userLevel !== '1') {
-                             $html .= '<li class="nav-item"><a class="nav-link menu-link" href="' . base_url('user-dashboard') . '"><i class="ri-dashboard-3-fill"></i>Dashboard</a></li>';
+                           $html .=   '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('user-dashboard') . '"><i class="ri-dashboard-3-fill"></i> <span data-key="t-Dashboard">Dashboard</span></a></li>';
+
                              $dashboardAdded = true;
                          }
 

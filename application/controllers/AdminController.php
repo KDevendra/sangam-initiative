@@ -115,7 +115,7 @@ class AdminController extends CI_Controller {
     }
     public function users($action = null, $user_id = null) {
         $this->checkUserLevel([1]);
-        $data["title"] = $action . "users : " . $this->projectTitle;
+        $data["title"] = $action . "Users : " . $this->projectTitle;
         switch ($action) {
             case "add":
                 $data["flag"] = "add";
@@ -169,7 +169,7 @@ class AdminController extends CI_Controller {
     }
     public function suggestUseCases($action = null, $case_id = null) {
         $this->checkUserLevel([1, 2]);
-        $data["title"] = $action . "users : " . $this->projectTitle;
+        $data["title"] = $action . "Suggest Use Cases : " . $this->projectTitle;
         switch ($action) {
             case "add":
                 $data["flag"] = "add";
@@ -223,7 +223,7 @@ class AdminController extends CI_Controller {
     }
     public function submitedUseCases($action = null, $case_id = null) {
         $this->checkUserLevel([1]);
-        $data["title"] = $action . "users : " . $this->projectTitle;
+        $data["title"] = $action . "Submited Use Cases : " . $this->projectTitle;
         switch ($action) {
             case "add":
                 $data["flag"] = "add";
@@ -277,7 +277,7 @@ class AdminController extends CI_Controller {
     }
     public function submittedSpeakerRequest($action = null, $case_id = null) {
         $this->checkUserLevel([1]);
-        $data["title"] = $action . "List : " . $this->projectTitle;
+        $data["title"] = $action . "Submitted Speaker Request : " . $this->projectTitle;
         switch ($action) {
             case "add":
                 $data["flag"] = "add";
@@ -336,12 +336,12 @@ class AdminController extends CI_Controller {
                 $this->form_validation->set_rules('title', 'Title', 'trim|required');
                 $this->form_validation->set_rules('abstract', 'Abstract', 'trim|required');
                 $this->form_validation->set_rules('objective', 'Objective', 'trim|required');
-                $this->form_validation->set_rules('target_areas', 'Target Area', 'trim|required');
-                $this->form_validation->set_rules('technologies_used', 'Technologies Utilized', 'trim|required');
-                $this->form_validation->set_rules('data_sources', 'Data Sources and Requirements', 'trim|required');
-                $this->form_validation->set_rules('expected_outcomes', 'Expected Outcomes and Impact', 'trim|required');
-                $this->form_validation->set_rules('innovative_aspects', 'Innovative Aspects', 'trim|required');
-                $this->form_validation->set_rules('feasibility_and_challenges', 'Feasibility and Implementation Challenges', 'trim|required');
+                $this->form_validation->set_rules('target_areas', 'Target Area', 'trim');
+                $this->form_validation->set_rules('technologies_used', 'Technologies Utilized', 'trim');
+                $this->form_validation->set_rules('data_sources', 'Data Sources and Requirements', 'trim');
+                $this->form_validation->set_rules('expected_outcomes', 'Expected Outcomes and Impact', 'trim');
+                $this->form_validation->set_rules('innovative_aspects', 'Innovative Aspects', 'trim');
+                $this->form_validation->set_rules('feasibility_and_challenges', 'Feasibility and Implementation Challenges', 'trim');
                 if ($this->form_validation->run() === false) {
                     $this->session->set_flashdata("error", validation_errors());
                     return redirect("submit-use-cases/" . $action . "/" . $case_id);
@@ -356,7 +356,14 @@ class AdminController extends CI_Controller {
                     $innovativeAspects = $this->input->post('innovative_aspects');
                     $feasibilityChallenges = $this->input->post('feasibility_and_challenges');
                     $relevance = $this->input->post('relevance');
-                    $postData = ['title' => $title, 'abstract' => $abstract, 'objective' => $objective, 'target_areas' => $targetArea, 'technologies_used' => $technologies, 'data_sources' => $dataSources, 'expected_outcomes' => $outcomesImpact, 'innovative_aspects' => $innovativeAspects, 'feasibility_and_challenges' => $feasibilityChallenges, 'relevance' => $relevance, 'user_id' => $this->session->login['user_id'], 'created_at' => date('Y-m-d H:i:s'), ];
+                    $upload_relevant_document = $this->handleFileUpload("upload_relevant_document", "uploads/upload_relevant_document/", "jpg|png|jpeg|pdf|doc|docx", "2000");
+
+                  if (strpos($upload_relevant_document, "Error") !== false) {
+                      $this->session->set_flashdata("error", $upload_relevant_document);
+                      return redirect("submit-use-cases");
+                  }
+
+                    $postData = ['title' => $title, 'abstract' => $abstract, 'objective' => $objective, 'target_areas' => $targetArea, 'technologies_used' => $technologies, 'data_sources' => $dataSources, 'expected_outcomes' => $outcomesImpact, 'innovative_aspects' => $innovativeAspects, 'feasibility_and_challenges' => $feasibilityChallenges, 'relevance' => $relevance, 'user_id' => $this->session->login['user_id'],'upload_relevant_document'=>$upload_relevant_document, 'created_at' => date('Y-m-d H:i:s'), ];
                     switch ($action) {
                         case "add":
                             $checkSubmitCase = $this->BaseModel->getData('suggest_use_cases', ['user_id' => $this->session->login['user_id']])->num_rows();
@@ -409,7 +416,7 @@ class AdminController extends CI_Controller {
                         default:
                         break;
                     }
-                    return redirect("submit-use-cases/" . $action);
+                    return redirect("submit-use-cases");
                 }
             } else {
                 $this->session->set_flashdata("error", "No POST data received");
@@ -423,7 +430,7 @@ class AdminController extends CI_Controller {
     }
     public function application($action = null, $application_id = null) {
         $this->checkUserLevel([1]);
-        $data["title"] = $action . "users : " . $this->projectTitle;
+        $data["title"] = $action . "Application : " . $this->projectTitle;
         switch ($action) {
             case "add":
                 $data["flag"] = "add";

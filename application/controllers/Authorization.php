@@ -7,6 +7,7 @@ class Authorization extends CI_Controller
     {
         try {
             $query = $this->BaseModel->getData('email_config', ['is_active' => 1])->row();
+            // dd($query);
             if ($query) {
                 $this->load->library("email");
                 $config = [
@@ -83,7 +84,7 @@ class Authorization extends CI_Controller
     {
         if ($this->input->method() === "post") {
             $this->form_validation->set_rules("register_as", "register as", 'trim|required|min_length[3]|max_length[50]');
-            $this->form_validation->set_rules("datOfBirth", "date of birth", 'trim|required');
+            $this->form_validation->set_rules("dateOfBirth", "date of birth", 'trim|required');
             $this->form_validation->set_rules("fullName", "Full Name", 'trim|required|min_length[3]|max_length[50]');
             // $this->form_validation->set_rules("contactNo", "Contact No.", "trim|max_length[10]|min_length[10]|is_unique[login.contact_no]");
             // $this->form_validation->set_rules("email", "Email", "trim|required|valid_email|max_length[100]|is_unique[login.email]");
@@ -115,7 +116,7 @@ class Authorization extends CI_Controller
                 } else {
                     $postData = [
                         'register_as' => $this->input->post('register_as'),
-                        'date_of_birth' => $this->input->post('datOfBirth'),
+                        'date_of_birth' => $this->input->post('dateOfBirth'),
                         'user_name' => $this->input->post('fullName'),
                         'full_name' => $this->input->post('fullName'),
                         'contact_no' => $this->input->post('contactNo'),
