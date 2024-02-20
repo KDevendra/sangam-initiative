@@ -57,6 +57,10 @@ class AdminController extends CI_Controller {
         $this->cache->clean();
         return redirect("login");
     }
+    function checkIndex()
+    {
+      $this->load->view("component/check-index");
+    }
     public function profile() {
         $user_id = $this->session->login['login_id'];
         $data['profileData'] = $this->BaseModel->getData('login', ['login_id' => $user_id])->row();
