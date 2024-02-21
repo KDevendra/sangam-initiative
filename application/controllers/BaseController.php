@@ -191,6 +191,32 @@ class BaseController extends CI_Controller {
         $this->output->set_content_type("application/json");
         echo json_encode($response);
     }
+    private function handleFileUpload($inputName, $uploadPath, $allowedTypes, $maxSize) {
+        if (!empty($_FILES[$inputName]["name"])) {
+            $config["upload_path"] = $uploadPath;
+            $config["max_size"] = $maxSize;
+            $config["allowed_types"] = $allowedTypes;
+            $CI = & get_instance();
+            $CI->load->library("upload", $config);
+            $CI->upload->initialize($config);
+            if ($CI->upload->do_upload($inputName)) {
+                $uploadData = $CI->upload->data();
+                $fileExtension = pathinfo($uploadData["file_name"], PATHINFO_EXTENSION);
+                $uniqueFilename = uniqid($inputName . "_") . "." . $fileExtension;
+                $oldFilePath = $config["upload_path"] . $uploadData["file_name"];
+                $newFilePath = $config["upload_path"] . $uniqueFilename;
+                if (rename($oldFilePath, $newFilePath)) {
+                    return $uniqueFilename;
+                } else {
+                    return "Error: Unable to rename the uploaded file.";
+                }
+            } else {
+                return "Error: " . $CI->upload->display_errors();
+            }
+        } else {
+            return "Error: No file selected for upload.";
+        }
+    }
     public function submitSpeakerRequest() {
         $this->form_validation->set_rules('full_name', 'Full Name', 'trim|required');
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
@@ -201,10 +227,17 @@ class BaseController extends CI_Controller {
         } else {
             $full_name = $this->input->post('full_name');
             $email = $this->input->post('email');
+            $topic_title = $this->input->post('topic_title');
+            $topic_details = $this->input->post('topic_details');
             $phone_number = $this->input->post('phone_number');
             $previous_speaking_experience = $this->input->post('previous_speaking_experience');
             $additional_information = $this->input->post('additional_information');
-            $postData = ['full_name' => $full_name, 'email' => $email, 'phone_number' => $phone_number, 'previous_speaking_experience' => $previous_speaking_experience, 'additional_information' => $additional_information, 'created_at' => date('Y-m-d H:i:s'), ];
+            $photo_upload = $this->handleFileUpload("photo_upload", "uploads/photo_upload/", "jpg|png|jpeg|pdf|doc|docx", "2000");
+            if (strpos($photo_upload, "Error") !== false) {
+                $this->session->set_flashdata("error", $photo_upload);
+                return redirect("join-as-speaker");
+            }
+            $postData = ['full_name' => $full_name, 'email' => $email, 'phone_number' => $phone_number, 'previous_speaking_experience' => $previous_speaking_experience, 'additional_information' => $additional_information,'topic_title'=>$topic_title, 'topic_details'=>$topic_details, 'photo_upload'=>$photo_upload, 'created_at' => date('Y-m-d H:i:s')];
             $insertResult = $this->BaseModel->insertData("speaker_applications", $postData);
             if ($insertResult) {
                 $inserted_Id = $this->db->insert_id();

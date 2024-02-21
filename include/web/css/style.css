@@ -4616,8 +4616,11 @@ position: absolute;
 .projects-slider-four .single-project-item-four {
   margin-left: 15px;
   margin-right: 15px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 3px 0px, rgba(0, 0, 0, 0) 0px 1px 2px 0px;
+  border-radius: 5px;
+  margin-bottom: 25px;
 }
-
+.text_for_outreach h4, h5{font-size: 16px;margin-bottom: 5px}
 .project-img {
   position: relative;
 }

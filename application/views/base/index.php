@@ -612,8 +612,8 @@
                   <h6 class="title"><a>Mapping Movements, Shaping Futures</a></h6>
                   <p>
                      <b>Contribution:</b> Supply mobility data and insights that illuminate human and vehicular movement patterns, critical for planning efficient and responsive infrastructure.
-                   </p>
-                     <p>
+                  </p>
+                  <p>
                      <b>Opportunity:</b> Unlock the
                      potential of mobility data to predict and plan for future infrastructure needs, optimizing flow and reducing congestion.
                   </p>
@@ -836,16 +836,17 @@
                      <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3>
                      <h5>Bridging the gap between Innovation and Planning</h5>
                      <p>Come and be a part of the opening event of Sangam. Participating in Sangam outreach program gives you an opportunity to position yourself as a key player for infrastructure planning and design by connecting, collaborating and engaging in insightful discussions with professionals from diverse industries.</p>
-
                   </div>
                </div>
                <div class="project-content">
                   <div class="text text-white">
                      <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3>
-                     <h4 style="font-size: 17px;">Date: 5th March 2024</h4>
-                     <h5 style="font-size: 17px;">Venue: IIT Delhi</h5>
                   </div>
                </div>
+            </div>
+            <div class="text_for_outreach">
+               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 5th March 2024</h4>
+               <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIT Delhi</h5>
             </div>
          </div>
          <div class="single-project-item-four">
@@ -856,15 +857,17 @@
                      <h3 class="title"><a href="">Sangam – Bengaluru: India’s Silicon Valley</a></h3>
                      <h5>Confluence of Minds and Data</h5>
                      <p>Sangam- Bengaluru gives a platform for intersectoral interaction. Come and connect with industry experts, explore possibilities to contribute for better and efficient infrastructure planning and design.</p>
-                </div>
+                  </div>
                </div>
                <div class="project-content">
                   <div class="text text-white">
-                    <h3 class="title"><a href="javascript:void(0)">Sangam – Bengaluru: India’s Silicon Valley</a></h3>
-                    <h4 style="font-size: 17px;">Date: 9th March 2024</h4>
-                    <h5 style="font-size: 17px;">Venue: IIIT Bangalore</h5>
+                     <h3 class="title"><a href="javascript:void(0)">Sangam – Bengaluru: India’s Silicon Valley</a></h3>
                   </div>
                </div>
+            </div>
+            <div class="text_for_outreach">
+               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 9th March 2024</h4>
+               <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIIT Bangalore</h5>
             </div>
          </div>
          <div class="single-project-item-four">
@@ -875,85 +878,46 @@
                      <h3 class="title"><a href="javascript:void(0)">Sangam – Hyderabad: India’s Innovation Hub</a></h3>
                      <h5>Confluence of Innovators and Opportunities</h5>
                      <p>
-                       Experience Sangam- Hyderabad, an opportunity to share your ideas, knowledge and innovative solutions with professionals from diverse sectors.
-
+                        Experience Sangam- Hyderabad, an opportunity to share your ideas, knowledge and innovative solutions with professionals from diverse sectors.
                      </p>
-
                   </div>
                </div>
                <div class="project-content">
-                  <div class="text text-white">
-                    <h3 class="title"><a href="javascript:void(0)">Sangam – Hyderabad: India’s Innovation Hub</a></h3>
-                    <h4 style="font-size: 17px;">Date: 12th March 2024</h4>
-                    <h5 style="font-size: 17px;">Venue: To be decided</h5>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="single-project-item-four">
-            <div class="project-img">
-               <img src="<?php echo base_url(''); ?>include/web/custom/Delhi_Networking_Summit.jpg" alt="Project Image" />
-               <div class="hover-content">
-                  <div class="text text-white">
-                     <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3>
-                     <h5>Bridging the gap between Innovation and Planning</h5>
-                     <p>Come and be a part of the opening event of Sangam. Participating in Sangam outreach program gives you an opportunity to position yourself as a key player for infrastructure planning and design by connecting, collaborating and engaging in insightful discussions with professionals from diverse industries.</p>
-
-                  </div>
-               </div>
-               <div class="project-content">
-                  <div class="text text-white">
-                     <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3>
-                     <h4 style="font-size: 17px;">Date: 5th March 2024</h4>
-                     <h5 style="font-size: 17px;">Venue: IIT Delhi</h5>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="single-project-item-four">
-            <div class="project-img">
-               <img src="<?php echo base_url(''); ?>include/web/custom/Bangalore_Business_Forum.jpg" alt="Project Image" />
-               <div class="hover-content">
-                  <div class="text text-white">
-                     <h3 class="title"><a href="">Sangam – Bengaluru: India’s Silicon Valley</a></h3>
-                     <h5>Confluence of Minds and Data</h5>
-                     <p>Sangam- Bengaluru gives a platform for intersectoral interaction. Come and connect with industry experts, explore possibilities to contribute for better and efficient infrastructure planning and design.</p>
-                </div>
-               </div>
-               <div class="project-content">
-                  <div class="text text-white">
-                    <h3 class="title"><a href="javascript:void(0)">Sangam – Bengaluru: India’s Silicon Valley</a></h3>
-                    <h4 style="font-size: 17px;">Date: 9th March 2024</h4>
-                    <h5 style="font-size: 17px;">Venue: IIIT Bangalore</h5>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="single-project-item-four">
-            <div class="project-img">
-               <img src="<?php echo base_url(''); ?>include/web/custom/Hyderabad_Professional_Networking.jpg" alt="Project Image" />
-               <div class="hover-content">
                   <div class="text text-white">
                      <h3 class="title"><a href="javascript:void(0)">Sangam – Hyderabad: India’s Innovation Hub</a></h3>
-                     <h5>Confluence of Innovators and Opportunities</h5>
-                     <p>
-                       Experience Sangam- Hyderabad, an opportunity to share your ideas, knowledge and innovative solutions with professionals from diverse sectors.
-
-                     </p>
-
                   </div>
                </div>
-               <div class="project-content">
-                  <div class="text text-white">
-                    <h3 class="title"><a href="javascript:void(0)">Sangam – Hyderabad: India’s Innovation Hub</a></h3>
-                    <h4 style="font-size: 17px;">Date: 12th March 2024</h4>
-                    <h5 style="font-size: 17px;">Venue: To be decided</h5>
-                  </div>
-               </div>
+            </div>
+            <div class="text_for_outreach">
+               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 12th March 2024</h4>
+               <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: To be decided</h5>
             </div>
          </div>
       </div>
-      <div class="row justify-content-center mt-50">
+   </div>
+</section>
+<section id="registerForTheEventDes" class="cta-bg-section bg_cover pt-50 pb-50 p-r z-1" style="background-image: url('<?php echo base_url('');?>include/web/custom/');">
+   <div class="container">
+      <div class="row align-items-center">
+         <div class="col-lg-7">
+            <div class="cta-content-box text-white mb-50 wow fadeInLeft" style="visibility: visible;">
+               <div class="section-title mb-20">
+                  <span class="sub-title text-white"><img src="<?php echo base_url('');?>include/web/custom/technology_white.png" alt=""></i>Sangam 2024: Uniting Minds, Inspiring Change</span>
+                  <h2>Register Now for the Ultimate Confluence of Ideas</h2>
+               </div>
+               <p class="mb-35">Join us for Sangam 2024, a premier event where innovation meets inspiration. With locations in Delhi, Bangalore, and Hyderabad, Sangam offers a platform for thought leaders, industry experts, and enthusiasts to come together and exchange ideas that shape the future. Don't miss your chance to be part of this transformative experience. Register now before it's too late.</p>
+               <a class="main-btn golden-btn preRegisBtn btn_green" href="<?php echo base_url('registration');?>">Register for Event</a>
+            </div>
+         </div>
+         <div class="col-lg-5">
+            <div class="wow fadeInRight" style="visibility: visible;"><img style="border-radius: 5px;" src="<?php echo base_url('');?>include/web/custom/bg_image.jpg" alt="Image"></div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="project-section gray-bg pt-50 pb-50">
+   <div class="container">
+      <div class="row justify-content-center">
          <div class="col-lg-10">
             <div class="section-title text-center mb-30 wow fadeInDown">
                <h2>Networking Events</h2>

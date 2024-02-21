@@ -219,6 +219,41 @@
             localStorage.setItem(buttonId + '_scrollTarget', 'whyToJoinDes');
             window.location.href = "<?php echo base_url(''); ?>";
         });
+        $('.ourUpcomingEventsBtn').on('click', function(event) {
+            event.preventDefault();
+            scrollToElement('ourUpcomingEventsDes', 0);
+            var buttonId = $(this).attr('id');
+            localStorage.setItem(buttonId + '_scrollTarget', 'ourUpcomingEventsDes');
+            window.location.href = "<?php echo base_url('events'); ?>";
+        });
+        $('.dashboardBtn').on('click', function(event) {
+            event.preventDefault();
+            scrollToElement('dashboardDes', 0);
+            var buttonId = $(this).attr('id');
+            localStorage.setItem(buttonId + '_scrollTarget', 'dashboardDes');
+            window.location.href = "<?php echo base_url('events'); ?>";
+        });
+        $('.speakersBtn').on('click', function(event) {
+            event.preventDefault();
+            scrollToElement('speakersDes', 0);
+            var buttonId = $(this).attr('id');
+            localStorage.setItem(buttonId + '_scrollTarget', 'speakersDes');
+            window.location.href = "<?php echo base_url('events'); ?>";
+        });
+        $('.scheduleBtn').on('click', function(event) {
+            event.preventDefault();
+            scrollToElement('scheduleDes', 0);
+            var buttonId = $(this).attr('id');
+            localStorage.setItem(buttonId + '_scrollTarget', 'scheduleDes');
+            window.location.href = "<?php echo base_url('events'); ?>";
+        });
+        $('.registerForTheEventBtn').on('click', function(event) {
+            event.preventDefault();
+            scrollToElement('registerForTheEventDes', 0);
+            var buttonId = $(this).attr('id');
+            localStorage.setItem(buttonId + '_scrollTarget', 'registerForTheEventDes');
+            window.location.href = "<?php echo base_url(''); ?>";
+        });
         $('.contactUsBtn').on('click', function(event) {
             event.preventDefault();
             scrollToElement('aptChoiceDes', 0);
@@ -268,7 +303,6 @@
             localStorage.setItem(buttonId + '_scrollTarget', 'curatedContentDes');
             window.location.href = "<?php echo base_url(''); ?>";
         });
-
         $('#EoILearnMore,.outreachBtn, .aptChoiceBtn, .eligibilityGuidelinesBtn, #matterNowBtn, .participateBtn, .whyToJoinBtn,.contactUsBtn, .processOfSangamBtn, .stagesOfEoIBtn, .faqsBtn, #curatedContentBtn').each(function() {
             var buttonId = $(this).attr('id');
             var scrollTarget = localStorage.getItem(buttonId + '_scrollTarget');

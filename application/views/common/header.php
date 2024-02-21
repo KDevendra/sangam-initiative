@@ -232,12 +232,12 @@
                                 <li class="menu-item has-children">
                                     <a href="<?php echo base_url('events'); ?>">Events </a>
                                     <ul class="sub-menu">
-                                        <li><a href="<?php echo base_url('events/upcoming-events'); ?>">Our Upcoming Events</a></li>
-                                        <li><a href="<?php echo base_url('events/dashboard'); ?>">Dashboard</a></li>
-                                        <li><a href="<?php echo base_url('events/why-attend'); ?>">Why Attend?</a></li>
-                                        <li><a href="<?php echo base_url('events/speakers'); ?>">Speakers</a></li>
-                                        <li><a href="<?php echo base_url('events'); ?>">Schedule</a></li>
-                                        <li><a href="<?php echo base_url('events/register'); ?>">Register for the event</a></li>
+                                        <li><a href="javascript:void(0)" class="ourUpcomingEventsBtn">Our Upcoming Events</a></li>
+                                        <li><a href="javascript:void(0)" class="dashboardBtn">Dashboard</a></li>
+                                        <li><a href="javascript:void(0)" class="whyToJoinBtn">Why Attend?</a></li>
+                                        <li><a href="javascript:void(0)" class="speakersBtn">Speakers</a></li>
+                                        <li><a href="javascript:void(0)" class="scheduleBtn">Schedule</a></li>
+                                        <li><a href="javascript:void(0)" class="registerForTheEventBtn">Register for the event</a></li>
 
                                     </ul>
                                 </li>
