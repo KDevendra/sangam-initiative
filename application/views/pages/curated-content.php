@@ -36,7 +36,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header align-items-center d-flex">
-                    <h4 class="card-title mb-0 flex-grow-1">Blogs</h4>
+                    <h4 class="card-title mb-0 flex-grow-1">Curated Content</h4>
                     <div class="flex-shrink-0">
                         <button type="button" id="addNewSuggest" class="btn btn-primary btn-sm material-shadow-none"><i class="ri-user-add-line"></i> Add New Blog</button>
                     </div>
@@ -51,12 +51,12 @@
 </div>
 <script>
     function viewUser(case_id) {
-        var redirectUrl = "<?php echo base_url('submit-use-cases/view/'); ?>" + case_id;
+        var redirectUrl = "<?php echo base_url('curated-content/view/'); ?>" + case_id;
         window.location.href = redirectUrl;
     }
 
     function editUser(case_id) {
-        var redirectUrl = "<?php echo base_url('submit-use-cases/edit/'); ?>" + case_id;
+        var redirectUrl = "<?php echo base_url('curated-content/edit/'); ?>" + case_id;
         window.location.href = redirectUrl;
     }
 
@@ -80,7 +80,7 @@
             if (result.isConfirmed) {
                 $.ajax({
                     type: "POST",
-                    url: "<?php echo base_url('submit-use-cases/delete/'); ?>" + case_id,
+                    url: "<?php echo base_url('curated-content/delete/'); ?>" + case_id,
                     dataType: 'json',
                     success: function(response) {
                         console.log(response);
@@ -123,40 +123,35 @@
 
         var dataTable = $("#ajax-datatables").DataTable({
             ajax: {
-                url: "<?php echo base_url('get-submit-use-cases'); ?>",
+                url: "<?php echo base_url('get-curated-content'); ?>",
                 type: "GET",
                 dataType: "json",
                 dataSrc: "data",
             },
             columns: [{
-                    title: "Case Id",
-                    data: "case_id"
+                    title: "CC Id",
+                    data: "cc_id"
                 },
                 {
                     title: "Title",
                     data: "title"
                 },
                 {
-                    title: "Abstract",
-                    data: "abstract"
-                },
-                {
-                    title: "Objective",
-                    data: "objective"
-                },
-                {
-                    title: "Relevance",
-                    data: "relevance"
-                },
-                {
-                    title: "Target Areas",
-                    data: "target_areas"
+                    title: "Author Name",
+                    data: "author_name"
                 },
                 {
                     title: "Submission Datetime",
                     data: "created_at",
                     render: function(data, type, row) {
                         return moment(data).format('MMM DD, YYYY hh:mm:ss a');
+                    }
+                },
+                {
+                    title: "Status",
+                    data: "status",
+                    render: function(data, type, row) {
+                        return (data == 1) ? '<span class="badge bg-warning">Pending</span>' : '<span class="badge bg-danger">Unverified</span>';
                     }
                 },
                 {
@@ -204,7 +199,7 @@
         var dataTable = initializeDataTable();
         $("#addNewSuggest").click(function(e) {
             e.preventDefault();
-            window.location.href = "<?php echo base_url('submit-use-cases/add'); ?>";
+            window.location.href = "<?php echo base_url('curated-content/add'); ?>";
         });
     });
 </script>

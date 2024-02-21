@@ -71,7 +71,6 @@ $route['submit-use-cases/(:any)/(:any)'] = 'AdminController/suggestUseCases/$1/$
 $route['submit-submit-use-cases'] = 'AdminController/submitSuggestUseCases';
 $route['submit-submit-use-cases/(:any)'] = 'AdminController/submitSuggestUseCases/$1';
 $route['submit-report-issue/(:any)'] = 'AdminController/submitReporIssue/$1';
-
 // route for admin
 $route['user-list'] = 'AdminController/userList';
 $route['get-user-list'] = 'AdminController/getUserList';
@@ -80,6 +79,7 @@ $route['get-submited-use-cases'] = 'AdminController/getSuggestedUseCases';
 $route['get-submitted-speaker-request'] = 'AdminController/getSubmittedSpeakerRequest';
 $route['get-reported-issue'] = 'AdminController/getReportedIssue';
 $route['get-eoi-application'] = 'AdminController/getEoIApplication';
+$route['get-curated-content'] = 'AdminController/getCuratedContent';
 $route['verifed-users'] = 'AdminController/verifedUsers';
 $route['unverified-users'] = 'AdminController/unverifiedUsers';
 $route['get-unverified-user-list'] = 'AdminController/getUnverifiedUserList';
@@ -100,9 +100,9 @@ $route['report-issue'] = 'AdminController/reportIssue';
 $route['report-issue/(:any)'] = 'AdminController/reportIssue/$1';
 $route['reported-issue'] = 'AdminController/reportedIssue';
 $route['reports']= 'AdminController/reports';
-$route['blogs'] = 'AdminController/blogs';
-$route['blogs/(:any)'] = 'AdminController/blogs/$1';
-$route['blogs/(:any)/(:any)'] = 'AdminController/blogs/$1/$2';
+$route['curated-content'] = 'AdminController/curatedContent';
+$route['curated-content/(:any)'] = 'AdminController/curatedContent/$1';
+$route['curated-content/(:any)/(:any)'] = 'AdminController/curatedContent/$1/$2';
 //route for theme-customizer-options
 $route['project-settings'] = 'AdminController/projectSettings';
 $route['theme-customizer-options'] = 'AdminController/themeCustomizerOptions';

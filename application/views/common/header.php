@@ -26,12 +26,12 @@
 </head>
 
 <body>
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="loader">
             <div class="pre-shadow"></div>
             <div class="pre-box"></div>
         </div>
-    </div>
+    </div> -->
     <!-- <div class="modal fade search-modal" id="search-modal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -236,7 +236,7 @@
                                         <li><a href="<?php echo base_url('events/dashboard'); ?>">Dashboard</a></li>
                                         <li><a href="<?php echo base_url('events/why-attend'); ?>">Why Attend?</a></li>
                                         <li><a href="<?php echo base_url('events/speakers'); ?>">Speakers</a></li>
-                                        <li><a href="<?php echo base_url('events/schedule'); ?>">Schedule</a></li>
+                                        <li><a href="<?php echo base_url('events'); ?>">Schedule</a></li>
                                         <li><a href="<?php echo base_url('events/register'); ?>">Register for the event</a></li>
 
                                     </ul>

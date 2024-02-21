@@ -634,18 +634,18 @@ class AdminController extends CI_Controller {
         }
         $this->load->view("component/index", $data);
     }
-    public function blogs($action = null, $blogs_id = null) {
-        $this->checkUserLevel([1]);
-        $data["title"] = $action . "blogs : " . $this->projectTitle;
+    public function curatedContent($action = null, $blogs_id = null) {
+        $this->checkUserLevel([2]);
+        $data["title"] = $action . " Curated Content : " . $this->projectTitle;
         switch ($action) {
             case "add":
                 $data["flag"] = "add";
-                $data["page_name"] = "pages/blogs-detail";
+                $data["page_name"] = "pages/curated-content-detail";
             break;
             case "view":
                 if ($blogs_id !== null) {
                     $data["flag"] = "view";
-                    $data["page_name"] = "pages/blogs-detail";
+                    $data["page_name"] = "pages/curated-content-detail";
                 } else {
                 }
             break;
@@ -653,7 +653,7 @@ class AdminController extends CI_Controller {
                 if ($blogs_id !== null) {
                     $data["flag"] = "edit";
                     $data["userDetail"] = $this->BaseModel->getData("login", ["blogs_id" => $blogs_id])->row();
-                    $data["page_name"] = "pages/blogs-detail";
+                    $data["page_name"] = "pages/curated-content-detail";
                 } else {
                 }
             break;
@@ -682,7 +682,7 @@ class AdminController extends CI_Controller {
                 }
             break;
             default:
-              $data["page_name"] = "pages/blogs";
+                $data["page_name"] = "pages/curated-content";
             break;
         }
         $this->load->view("component/index", $data);
@@ -851,6 +851,22 @@ class AdminController extends CI_Controller {
                 $responseData = ["status" => "success", "data" => $userList];
             } else {
                 $responseData = ["status" => "error", "message" => "Error fetching suggest_use_cases data."];
+            }
+            echo json_encode($responseData);
+        }
+        catch(Exception $e) {
+            log_message("error", $e->getMessage());
+            echo json_encode(["status" => "error", "message" => "Internal server error."]);
+        }
+    }
+    public function getCuratedContent() {
+        $this->checkUserLevel([2]);
+        try {
+            $userList = $this->BaseModel->getData("curated_content", ['user_id' => $this->session->login['user_id']])->result_array();
+            if ($userList !== null) {
+                $responseData = ["status" => "success", "data" => $userList];
+            } else {
+                $responseData = ["status" => "error", "message" => "Error fetching curated content data."];
             }
             echo json_encode($responseData);
         }
