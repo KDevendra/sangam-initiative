@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
       <meta content="Themesbrand" name="author" />
-      <link rel="shortcut icon" href="<?php echo base_url(''); ?>include/admin/images/favicon.ico" />
+      <link rel="shortcut icon" href="<?php echo base_url(''); ?>include/web/custom/favicon.png" />
       <link href="<?php echo base_url(''); ?>include/admin/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
       <link href="<?php echo base_url(''); ?>include/admin/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
       <script src="<?php echo base_url(''); ?>include/admin/js/layout.js"></script>

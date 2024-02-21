@@ -24,7 +24,7 @@
        <div class="navbar-brand-box">
            <a href="<?php echo base_url('admin-dashboard') ?>" class="logo logo-dark">
                <span class="logo-sm">
-                   <img src="<?php echo base_url(''); ?>include/admin/images/logo-sm.png" alt="" height="22" />
+                   <img src="<?php echo base_url(''); ?>include/web/custom/favicon.png" alt="" height="22" />
                </span>
                <span class="logo-lg">
                    <img src="<?php echo base_url(''); ?>include/admin/images/logo-dark.png" alt="" height="17" />
@@ -32,7 +32,7 @@
            </a>
            <a href="<?php echo base_url('admin-dashboard') ?>" class="logo logo-light">
                <span class="logo-sm">
-                   <img src="<?php echo base_url(''); ?>include/admin/images/logo-sm.png" alt="" height="22" />
+                   <img src="<?php echo base_url(''); ?>include/web/custom/favicon.png" alt="" height="22" />
                </span>
                <span class="logo-lg">
                    <img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications_White.png" alt="" height="70" />

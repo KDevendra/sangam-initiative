@@ -57,9 +57,8 @@ class AdminController extends CI_Controller {
         $this->cache->clean();
         return redirect("login");
     }
-    function checkIndex()
-    {
-      $this->load->view("component/check-index");
+    function checkIndex() {
+        $this->load->view("component/check-index");
     }
     public function profile() {
         $user_id = $this->session->login['login_id'];
@@ -275,6 +274,46 @@ class AdminController extends CI_Controller {
         }
         $this->load->view("component/index", $data);
     }
+    public function reportIssue($action = null, $issue_id = null) {
+        $this->checkUserLevel([1, 2]);
+        $data["title"] = $action . "Report Issue : " . $this->projectTitle;
+        switch ($action) {
+            case "add":
+                $data["flag"] = "add";
+                $data["page_name"] = "pages/report-issue";
+            break;
+            case "view":
+                if ($issue_id !== null) {
+                    $data["flag"] = "view";
+                    $data["userDetail"] = $this->BaseModel->getData("issues", ["issue_id" => $issue_id])->row();
+                    $data["page_name"] = "pages/report-issue";
+                } else {
+                }
+            break;
+            default:
+                $data["page_name"] = "pages/report-issue";
+            break;
+        }
+        $this->load->view("component/index", $data);
+    }
+    public function reportedIssue($action = null, $issue_id = null) {
+        $this->checkUserLevel([1]);
+        $data["title"] = $action . "Reported Issue : " . $this->projectTitle;
+        switch ($action) {
+            case "view":
+                if ($issue_id !== null) {
+                    $data["flag"] = "view";
+                    $data["userDetail"] = $this->BaseModel->getData("issues", ["issue_id" => $issue_id])->row();
+                    $data["page_name"] = "pages/reported-issue";
+                } else {
+                }
+            break;
+            default:
+                $data["page_name"] = "pages/reported-issue";
+            break;
+        }
+        $this->load->view("component/index", $data);
+    }
     public function submittedSpeakerRequest($action = null, $case_id = null) {
         $this->checkUserLevel([1]);
         $data["title"] = $action . "Submitted Speaker Request : " . $this->projectTitle;
@@ -357,13 +396,11 @@ class AdminController extends CI_Controller {
                     $feasibilityChallenges = $this->input->post('feasibility_and_challenges');
                     $relevance = $this->input->post('relevance');
                     $upload_relevant_document = $this->handleFileUpload("upload_relevant_document", "uploads/upload_relevant_document/", "jpg|png|jpeg|pdf|doc|docx", "2000");
-
-                  if (strpos($upload_relevant_document, "Error") !== false) {
-                      $this->session->set_flashdata("error", $upload_relevant_document);
-                      return redirect("submit-use-cases");
-                  }
-
-                    $postData = ['title' => $title, 'abstract' => $abstract, 'objective' => $objective, 'target_areas' => $targetArea, 'technologies_used' => $technologies, 'data_sources' => $dataSources, 'expected_outcomes' => $outcomesImpact, 'innovative_aspects' => $innovativeAspects, 'feasibility_and_challenges' => $feasibilityChallenges, 'relevance' => $relevance, 'user_id' => $this->session->login['user_id'],'upload_relevant_document'=>$upload_relevant_document, 'created_at' => date('Y-m-d H:i:s'), ];
+                    if (strpos($upload_relevant_document, "Error") !== false) {
+                        $this->session->set_flashdata("error", $upload_relevant_document);
+                        return redirect("submit-use-cases");
+                    }
+                    $postData = ['title' => $title, 'abstract' => $abstract, 'objective' => $objective, 'target_areas' => $targetArea, 'technologies_used' => $technologies, 'data_sources' => $dataSources, 'expected_outcomes' => $outcomesImpact, 'innovative_aspects' => $innovativeAspects, 'feasibility_and_challenges' => $feasibilityChallenges, 'relevance' => $relevance, 'user_id' => $this->session->login['user_id'], 'upload_relevant_document' => $upload_relevant_document, 'created_at' => date('Y-m-d H:i:s'), ];
                     switch ($action) {
                         case "add":
                             $checkSubmitCase = $this->BaseModel->getData('suggest_use_cases', ['user_id' => $this->session->login['user_id']])->num_rows();
@@ -426,6 +463,52 @@ class AdminController extends CI_Controller {
         catch(Exception $e) {
             $this->session->set_flashdata("error", "" . $e->getMessage() . "");
             return redirect("submit-use-cases/" . $action . "/" . $case_id);
+        }
+    }
+    public function submitReporIssue($action = null, $case_id = null) {
+        $this->checkUserLevel([1, 2]);
+        try {
+            if ($this->input->post()) {
+                $this->form_validation->set_rules('issue_title', 'issue_title', 'trim|required');
+                $this->form_validation->set_rules('issue_description', 'issue_description', 'trim|required');
+                $this->form_validation->set_rules('reported_by', 'reported_by', 'trim|required');
+                if ($this->form_validation->run() === false) {
+                    $this->session->set_flashdata("error", validation_errors());
+                    return redirect("report-issue/add");
+                } else {
+                    $issue_title = $this->input->post('issue_title');
+                    $issue_description = $this->input->post('issue_description');
+                    $reported_by = $this->input->post('reported_by');
+                    $postData = ['issue_title' => $issue_title, 'issue_description' => $issue_description, 'reported_by' => $reported_by, 'status' => 'open', 'created_at' => date('Y-m-d H:i:s'), ];
+                    switch ($action) {
+                        case "add":
+                            $query = $this->BaseModel->insertData("issues", $postData);
+                            if ($query) {
+                                $inserted_Id = $this->db->insert_id();
+                                $case_id = "ISS" . date("Y") . str_pad($inserted_Id, 4, "0", STR_PAD_LEFT);
+                                $updateData = ["issue_id" => $case_id];
+                                $updateCondition = ["id" => $inserted_Id];
+                                $updateQuery = $this->BaseModel->updateData("issues", $updateData, $updateCondition);
+                                if ($updateQuery) {
+                                    $this->session->set_flashdata("success", "Issue Reported Successfully.");
+                                } else {
+                                    $this->session->set_flashdata("error", "Failed to update Issue Reported ID. Please try again.");
+                                }
+                            } else {
+                                $this->session->set_flashdata("error", "Failed to add suggest case details. Please try again.");
+                            }
+                        break;
+                    }
+                    return redirect("report-issue/add");
+                }
+            } else {
+                $this->session->set_flashdata("error", "No POST data received");
+                return redirect("report-issue/add");
+            }
+        }
+        catch(Exception $e) {
+            $this->session->set_flashdata("error", "" . $e->getMessage() . "");
+            return redirect("report-issue/add");
         }
     }
     public function application($action = null, $application_id = null) {
@@ -547,6 +630,59 @@ class AdminController extends CI_Controller {
                 }
                 $data = ["total" => $totalCount, "pending" => $pendingCount, "approved" => $approvedCount, "rejected" => $rejectedCount, "incompleted" => $incompletedCount];
                 $data["page_name"] = "pages/eoi-application";
+            break;
+        }
+        $this->load->view("component/index", $data);
+    }
+    public function blogs($action = null, $blogs_id = null) {
+        $this->checkUserLevel([1]);
+        $data["title"] = $action . "blogs : " . $this->projectTitle;
+        switch ($action) {
+            case "add":
+                $data["flag"] = "add";
+                $data["page_name"] = "pages/blogs-detail";
+            break;
+            case "view":
+                if ($blogs_id !== null) {
+                    $data["flag"] = "view";
+                    $data["page_name"] = "pages/blogs-detail";
+                } else {
+                }
+            break;
+            case "edit":
+                if ($blogs_id !== null) {
+                    $data["flag"] = "edit";
+                    $data["userDetail"] = $this->BaseModel->getData("login", ["blogs_id" => $blogs_id])->row();
+                    $data["page_name"] = "pages/blogs-detail";
+                } else {
+                }
+            break;
+            case "delete":
+                if ($blogs_id !== null) {
+                    $query = $this->BaseModel->deleteData("login", ["blogs_id" => $blogs_id]);
+                    if ($query) {
+                        $response = ["status" => "success", "message" => "The user has been successfully deleted."];
+                    } else {
+                        $response = ["status" => "error", "message" => "Unable to delete the user. Please try again later."];
+                    }
+                    if ($this->input->is_ajax_request()) {
+                        $this->output->set_content_type("blogs/json");
+                        echo json_encode($response);
+                        exit();
+                    } else {
+                    }
+                } else {
+                    $response = ["status" => "error", "message" => "Invalid user ID. Please provide a valid user ID."];
+                    if ($this->input->is_ajax_request()) {
+                        $this->output->set_content_type("blogs/json");
+                        echo json_encode($response);
+                        exit();
+                    } else {
+                    }
+                }
+            break;
+            default:
+              $data["page_name"] = "pages/blogs";
             break;
         }
         $this->load->view("component/index", $data);
@@ -755,7 +891,22 @@ class AdminController extends CI_Controller {
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
-
+    public function getReportedIssue() {
+        $this->checkUserLevel([1]);
+        try {
+            $userList = $this->BaseModel->getData("issues")->result_array();
+            if ($userList !== null) {
+                $responseData = ["status" => "success", "data" => $userList];
+            } else {
+                $responseData = ["status" => "error", "message" => "Error fetching issues data."];
+            }
+            echo json_encode($responseData);
+        }
+        catch(Exception $e) {
+            log_message("error", $e->getMessage());
+            echo json_encode(["status" => "error", "message" => "Internal server error."]);
+        }
+    }
     public function getEoIApplication() {
         $this->checkUserLevel([1]);
         try {

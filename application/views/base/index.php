@@ -657,7 +657,10 @@
                   <h4 class="title"><a href="javascript:void(0)">Mobility Data Providers</a></h4>
                   <h6 class="title"><a>Mapping Movements, Shaping Futures</a></h6>
                   <p>
-                     <b>Contribution:</b> Supply mobility data and insights that illuminate human and vehicular movement patterns, critical for planning efficient and responsive infrastructure. <b>Opportunity:</b> Unlock the
+                     <b>Contribution:</b> Supply mobility data and insights that illuminate human and vehicular movement patterns, critical for planning efficient and responsive infrastructure.
+                   </p>
+                     <p>
+                     <b>Opportunity:</b> Unlock the
                      potential of mobility data to predict and plan for future infrastructure needs, optimizing flow and reducing congestion.
                   </p>
                </div>

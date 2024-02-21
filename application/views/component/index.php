@@ -4,9 +4,7 @@
       <meta charset="utf-8" />
       <title><?php if (isset($title) && !empty($title)) {echo $title; } else {echo "Sangam Initiative";} ?></title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-      <meta content="Themesbrand" name="author" />
-      <link rel="shortcut icon" href="<?php echo base_url(''); ?>include/admin/images/favicon.ico" />
+      <link rel="shortcut icon" href="<?php echo base_url(''); ?>include/web/custom/favicon.png" />
       <link href="<?php echo base_url(''); ?>include/admin/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
       <link href="<?php echo base_url(''); ?>include/admin/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
       <script src="<?php echo base_url(''); ?>include/admin/js/layout.js"></script>
@@ -440,7 +438,7 @@
                                 <?php
                                       }
                                       ?>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Help</span></a>
+                                <a class="dropdown-item" href="<?php echo base_url('report-issue');?>"><i class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Report Issue</span></a>
                                 <div class="dropdown-divider"></div>
                                 <?php
                                       $user_level = $this->session->login['user_level']; if ($user_level === '0') { ?>
@@ -491,7 +489,7 @@
                <!-- Dark Logo-->
                <a href="<?php echo base_url(''); ?>admin-dashboard" class="logo logo-dark">
                <span class="logo-sm">
-               <img src="<?php echo base_url(''); ?>include/admin/images/logo-sm.png" alt=""  />
+               <img src="<?php echo base_url(''); ?>include/web/custom/favicon.png" alt=""  style="height: 60px;" />
                </span>
                <span class="logo-lg">
                <img src="<?php echo base_url(''); ?>include/admin/images/logo-dark.png" alt=""  />
@@ -500,7 +498,7 @@
                <!-- Light Logo-->
                <a href="<?php echo base_url(''); ?>admin-dashboard" class="logo logo-light">
                <span class="logo-sm">
-               <img src="<?php echo base_url(''); ?>include/admin/images/logo-sm.png" alt=""  />
+               <img src="<?php echo base_url(''); ?>include/web/custom/favicon.png" alt="" style="height: 60px;" />
                </span>
                <span class="logo-lg">
                <img src="<?php echo base_url(''); ?>include/web/custom/Department_Of_Telecommunications_White.png" height="60px" alt="" />
@@ -588,6 +586,14 @@
                              }
 
                              $html .= '</li>';
+                         }
+                         if ($userLevel === '1') {
+                             $html .=   '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('blogs') . '"><i class="ri-pages-line"></i> <span data-key="t-blogs">Blogs</span></a></li>';
+
+                         }
+                         if ($userLevel === '1') {
+                             $html .=   '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('reported-issue') . '"><i class="ri-error-warning-fill"></i> <span data-key="t-Dashboard">Reported Issue</span></a></li>';
+
                          }
 
                          $html .= '</ul>';
