@@ -25,7 +25,7 @@
                           <div class="col-lg-12">
                              <div class="timeline-container">
                                 <div class="timeline-end">
-                                   <p>Now</p>
+                                   <p>Start</p>
                                 </div>
                                 <div class="timeline-continue">
                                    <div class="row timeline-right">
