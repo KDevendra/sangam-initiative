@@ -300,7 +300,7 @@
                                                    </tr>
                                                 </thead>
                                                 <tbody>
-                                                   <?php foreach ($human_resources as $detail) :?>
+                                                   <?php $i=1; foreach ($human_resources as $detail) :?>
                                                    <tr>
                                                       <th scope="row"><?php echo $i++;?></th>
                                                       <td><?php echo $detail['human_category']; ?></td>

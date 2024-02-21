@@ -1,50 +1,4 @@
 <?php include_once __DIR__ . '/../common/header.php'; ?>
-<!-- <section class="banner-section mt__150">
-   <video autoplay muted loop id="bgVideo">
-       <source src="<?php echo base_url('') ?>include/web/custom/bg_video.mp4" type="video/mp4">
-   </video>
-   <div class="hero-wrapper-one __mp__100">
-       <div class="container text-center">
-           <h6 class="banner-subtitle">Department of Telecommunications (DoT)<br> <span>Calls For Expression of Interest (EoI) for participating in </span></h6>
-
-           <div class="box_overlay">
-               <h1 class="banner-title">Sangam: <span>Digital Twin</span></h1>
-               <h4 class="banner-title-sub">AI-driven Insights</h4>
-               <h6>PROOF OF CONCEPT (POC)</h6>
-               <h5>CONFLUENCE OF INNOVATION</h5>
-               <p class="banner-description">Revolutionising Future Infrastructure Planning and Design</p>
-           </div>
-           <div class="hero-button mb-20">
-               <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration">
-                   <i class="far fa-table" aria-hidden="true"></i> Pre-Registration
-               </a>
-               <a class="main-btn golden-btn mb-10 preRegisBtn btn_green whyToJoinBtn" href="javascript:void(0)">
-                   <i class="far fa-question-circle" aria-hidden="true"></i> Why to Join
-               </a>
-               <a class="main-btn golden-btn mb-10 preRegisBtn howToJoin" href="javascript:void(0)">
-                   <i class="far fa-user" aria-hidden="true"></i> How to Join
-               </a>
-           </div>
-           <div class="hero-button mb-20">
-               <a class="main-btn golden-btn mb-10  ___p8_22" href="javascript:void(0)">
-                   Embracing the Future Together
-               </a>
-               <a class="main-btn golden-btn mb-10  ___p8_22" href="javascript:void(0)" ">
-                           Crafting Blueprint
-                       </a>
-                       <a class=" main-btn golden-btn mb-10 ___p8_22" href="javascript:void(0)">
-                   Pioneering Precision
-               </a>
-           </div>
-           <div class="hero-button mb-20">
-               <a class="main-btn mb-10 textExploreMore" id="exploreBtn" href="javascript:void(0)">
-                   Explore More <i class="far fa-angle-double-down" aria-hidden="true"></i>
-               </a>
-
-           </div>
-       </div>
-   </div>
-   </section> -->
 <section class="banner-section mt__150">
    <video autoplay muted loop id="bgVideo">
       <source src="<?php echo base_url('') ?>include/web/custom/bg_video.mp4" type="video/mp4" />
@@ -879,14 +833,17 @@
                <img src="<?php echo base_url(''); ?>include/web/custom/Delhi_Networking_Summit.jpg" alt="Project Image" />
                <div class="hover-content">
                   <div class="text text-white">
-                     <h3 class="title"><a href="">Connecting Professionals, Building Bridges</a></h3>
-                     <p>Delhi Networking Summit, where professionals from various industries gather to connect, collaborate, and create opportunities for growth. Engage in insightful discussions, expand your network.</p>
-                     <a href="" class="icon-btn"><i class="fal fa-long-arrow-right"></i></a>
+                     <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3>
+                     <h5>Bridging the gap between Innovation and Planning</h5>
+                     <p>Come and be a part of the opening event of Sangam. Participating in Sangam outreach program gives you an opportunity to position yourself as a key player for infrastructure planning and design by connecting, collaborating and engaging in insightful discussions with professionals from diverse industries.</p>
+
                   </div>
                </div>
                <div class="project-content">
                   <div class="text text-white">
-                     <h3 class="title"><a href="">Delhi Networking Summit</a></h3>
+                     <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3>
+                     <h4 style="font-size: 17px;">Date: 5th March 2024</h4>
+                     <h5 style="font-size: 17px;">Venue: IIT Delhi</h5>
                   </div>
                </div>
             </div>
@@ -896,14 +853,16 @@
                <img src="<?php echo base_url(''); ?>include/web/custom/Bangalore_Business_Forum.jpg" alt="Project Image" />
                <div class="hover-content">
                   <div class="text text-white">
-                     <h3 class="title"><a href="">Navigating Innovation, Driving Success</a></h3>
-                     <p>Bangalore Business Forum, where innovation meets entrepreneurship. Connect with industry experts, explore emerging trends, and unlock new opportunities to propel your business forward.</p>
-                     <a href="" class="icon-btn"><i class="fal fa-long-arrow-right"></i></a>
-                  </div>
+                     <h3 class="title"><a href="">Sangam – Bengaluru: India’s Silicon Valley</a></h3>
+                     <h5>Confluence of Minds and Data</h5>
+                     <p>Sangam- Bengaluru gives a platform for intersectoral interaction. Come and connect with industry experts, explore possibilities to contribute for better and efficient infrastructure planning and design.</p>
+                </div>
                </div>
                <div class="project-content">
                   <div class="text text-white">
-                     <h3 class="title"><a href="">Bangalore Business Forum</a></h3>
+                    <h3 class="title"><a href="javascript:void(0)">Sangam – Bengaluru: India’s Silicon Valley</a></h3>
+                    <h4 style="font-size: 17px;">Date: 9th March 2024</h4>
+                    <h5 style="font-size: 17px;">Venue: IIIT Bangalore</h5>
                   </div>
                </div>
             </div>
@@ -913,71 +872,20 @@
                <img src="<?php echo base_url(''); ?>include/web/custom/Hyderabad_Professional_Networking.jpg" alt="Project Image" />
                <div class="hover-content">
                   <div class="text text-white">
-                     <h3 class="title"><a href="">Networking for Success</a></h3>
+                     <h3 class="title"><a href="javascript:void(0)">Sangam – Hyderabad: India’s Innovation Hub</a></h3>
+                     <h5>Confluence of Innovators and Opportunities</h5>
                      <p>
-                        Experience the Hyderabad Professional Mixer, your gateway to success in the city of pearls! An evening of networking, knowledge sharing, and collaboration awaits you with professionals from diverse
-                        industries.
+                       Experience Sangam- Hyderabad, an opportunity to share your ideas, knowledge and innovative solutions with professionals from diverse sectors.
+
                      </p>
-                     <a href="" class="icon-btn"><i class="fal fa-long-arrow-right"></i></a>
+
                   </div>
                </div>
                <div class="project-content">
                   <div class="text text-white">
-                     <h3 class="title"><a href="">Hyderabad Professional Mixer</a></h3>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="single-project-item-four">
-            <div class="project-img">
-               <img src="<?php echo base_url(''); ?>include/web/custom/Delhi_Networking_Summit.jpg" alt="Project Image" />
-               <div class="hover-content">
-                  <div class="text text-white">
-                     <h3 class="title"><a href="">Connecting Professionals, Building Bridges</a></h3>
-                     <p>Delhi Networking Summit, where professionals from various industries gather to connect, collaborate, and create opportunities for growth. Engage in insightful discussions, expand your network.</p>
-                     <a href="" class="icon-btn"><i class="fal fa-long-arrow-right"></i></a>
-                  </div>
-               </div>
-               <div class="project-content">
-                  <div class="text text-white">
-                     <h3 class="title"><a href="">Delhi Networking Summit</a></h3>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="single-project-item-four">
-            <div class="project-img">
-               <img src="<?php echo base_url(''); ?>include/web/custom/Bangalore_Business_Forum.jpg" alt="Project Image" />
-               <div class="hover-content">
-                  <div class="text text-white">
-                     <h3 class="title"><a href="">Navigating Innovation, Driving Success</a></h3>
-                     <p>Bangalore Business Forum, where innovation meets entrepreneurship. Connect with industry experts, explore emerging trends, and unlock new opportunities to propel your business forward.</p>
-                     <a href="" class="icon-btn"><i class="fal fa-long-arrow-right"></i></a>
-                  </div>
-               </div>
-               <div class="project-content">
-                  <div class="text text-white">
-                     <h3 class="title"><a href="">Bangalore Business Forum</a></h3>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="single-project-item-four">
-            <div class="project-img">
-               <img src="<?php echo base_url(''); ?>include/web/custom/Hyderabad_Professional_Networking.jpg" alt="Project Image" />
-               <div class="hover-content">
-                  <div class="text text-white">
-                     <h3 class="title"><a href="">Networking for Success</a></h3>
-                     <p>
-                        Experience the Hyderabad Professional Mixer, your gateway to success in the city of pearls! An evening of networking, knowledge sharing, and collaboration awaits you with professionals from diverse
-                        industries.
-                     </p>
-                     <a href="" class="icon-btn"><i class="fal fa-long-arrow-right"></i></a>
-                  </div>
-               </div>
-               <div class="project-content">
-                  <div class="text text-white">
-                     <h3 class="title"><a href="">Hyderabad Professional Mixer</a></h3>
+                    <h3 class="title"><a href="javascript:void(0)">Sangam – Hyderabad: India’s Innovation Hub</a></h3>
+                    <h4 style="font-size: 17px;">Date: 12th March 2024</h4>
+                    <h5 style="font-size: 17px;">Venue: To be decided</h5>
                   </div>
                </div>
             </div>
