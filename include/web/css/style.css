@@ -1,35 +1,3 @@
-/*-----------------------------------------------------------------------------------
-
-    Template Name: Gadden - Garden & Landscaping HTML Template
-    Template URI: site.com
-    Description: Gadden is a creative & unique HTML template for Landscaping, Gardening, Groundskeeping, Lawn Services, Florists, Flower Shops and companies that offer related services.
-    Author: WebTend
-    Author URI: https://webtend.net/
-    Version: 1.0
-
---------------------------
-    CSS INDEX
---------------------------
-
-    01. Common css
-    02. Header css
-    03. Hero css
-    04. About css
-    05. Features css
-    06. Service css
-    07. Project css
-    08. Gallery css
-    09. Team css
-    10. Testimonial css
-    11. Faqs css
-    12. Pricing css
-    13. Shop css
-    14. Blog css
-    15. Contact css
-    16. Footer css
-    17. Sections css
-
------------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 h1,
 h2,
@@ -4993,7 +4961,7 @@ position: absolute;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 40px;
+  padding: 10px;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.4s ease-out 0s;
@@ -5123,7 +5091,7 @@ position: absolute;
 }
 
 .project-details-wrapper h3.title {
-  font-size: 45px;
+  font-size: 30px;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -9107,7 +9075,7 @@ font-size: 20px;
 .features-wrapper-two {
   position: relative;
   z-index: 1;
-  max-width: 1160px;
+  max-width: 100%;
   padding: 70px;
   /* margin-top: -80px; */
 }

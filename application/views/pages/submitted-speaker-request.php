@@ -8,7 +8,7 @@
                   echo ucwords($segmentWithSpaces); ?></h4>
                <div class="page-title-right">
                   <ol class="breadcrumb m-0">
-                     <li class="breadcrumb-item"><a href="javascript: void(0);">Registered User</a></li>
+                     <li class="breadcrumb-item"><a href="javascript: void(0);">Registered Speaker</a></li>
                      <li class="breadcrumb-item active"><?php $segment = $this->uri->segment(1);
                         $segmentWithSpaces = str_replace('-', ' ', $segment);
                         echo ucwords($segmentWithSpaces); ?></li>
@@ -47,6 +47,10 @@
 </div>
 </div>
 <script>
+function viewSpeaker(user_id) {
+    var redirectUrl = "<?php echo base_url('submitted-speaker-request/view/'); ?>" + user_id;
+    window.location.href = redirectUrl;
+}
    function initializeDataTable() {
        if ($.fn.DataTable.isDataTable('#ajax-datatables')) {
            $('#ajax-datatables').DataTable().destroy();
@@ -89,6 +93,22 @@
                    render: function(data, type, row) {
                        return moment(data).format('MMM DD, YYYY hh:mm:ss a');
                    }
+               },
+               {
+                   title: "Action",
+                   data: null,
+                   orderable: false,
+                   render: function(data, type, row) {
+                       var buttons =
+                           '<div class="dropdown d-inline-block">' +
+                           '<button class="btn btn-soft-secondary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">' +
+                           '<i class="ri-more-fill align-middle"></i>' +
+                           "</button>" +
+                           '<ul class="dropdown-menu dropdown-menu-end">';
+                       buttons += '<li><a href="javascript:void(0)" class="dropdown-item" onclick="viewSpeaker(\'' + row.ap_req + '\')"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>';
+                       buttons += "</ul></div>";
+                       return buttons;
+                   },
                },
 
            ],

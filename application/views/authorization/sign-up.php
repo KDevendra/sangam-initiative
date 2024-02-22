@@ -125,7 +125,7 @@
                                                         </div>
                                                         <div class="mb-3 col-md-6">
                                                             <label for="contactNo" class="form-label">Contact Number<span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control" minlength="10" maxlength="10" pattern="[789][0-9]{9}" title="Phone number with 7-9 and remaing 9 digit with 0-9" id="contactNo" name="contactNo" placeholder="Enter contact number" required />
+                                                            <input type="text" class="form-control"  id="contactNo" name="contactNo" placeholder="Enter contact number" required />
                                                             <div class="invalid-feedback">
                                                                 Please enter contact number
                                                             </div>
@@ -417,13 +417,18 @@
             }
             function validateContactNumber() {
                 var contactNo = $("#contactNo").val();
-                if (!contactNo || !/^[789][0-9]{9}$/.test(contactNo)) {
+                // Regular expression to validate Indian phone numbers starting with 7, 8, or 9
+                var indianPhoneRegex = /^[789][0-9]{9}$/;
+                // Regular expression to validate international phone numbers
+                var internationalPhoneRegex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+                if (!contactNo || !(indianPhoneRegex.test(contactNo) || internationalPhoneRegex.test(contactNo))) {
                     $("#contactNo").addClass("is-invalid");
                     isValid = false;
                 } else {
                     $("#contactNo").removeClass("is-invalid");
                 }
             }
+
 
             $("#sign-up").on("submit", function(event) {
                 if (validateForm()) {

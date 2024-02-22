@@ -88,7 +88,7 @@
 </section>
 <section class="features-section-two p-r z-1" id="dashboardDes">
    <div class="features-wrapper-two main-bg wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-      <div class="counter-area">
+      <div class="container">
          <div class="row">
             <div class="col-lg-3 col-sm-6">
                <div class="single-counter-item-two wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">

@@ -232,7 +232,7 @@ class BaseController extends CI_Controller {
             $phone_number = $this->input->post('phone_number');
             $previous_speaking_experience = $this->input->post('previous_speaking_experience');
             $additional_information = $this->input->post('additional_information');
-            $photo_upload = $this->handleFileUpload("photo_upload", "uploads/photo_upload/", "jpg|png|jpeg|pdf|doc|docx", "2000");
+            $photo_upload = $this->handleFileUpload("photo_upload", "uploads/photo_upload/", "jpg|png|jpeg", "2000");
             if (strpos($photo_upload, "Error") !== false) {
                 $this->session->set_flashdata("error", $photo_upload);
                 return redirect("join-as-speaker");

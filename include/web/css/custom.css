@@ -1226,7 +1226,26 @@ left: 30px;
 margin-left: 0;
 }
 }
+@media only screen and (max-width:2009px)
+{
+	.single-project-item-four .project-img .hover-content .text h3.title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.single-project-item-four .project-img .hover-content .text p {
+  line-height: 1.5;
+  font-size: 15px;
+}
+}
 @media only screen and (max-width: 969px) {
+	.single-project-item-four .project-img .hover-content .text h3.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.single-project-item-four .project-img .hover-content .text p {
+  line-height: 1.5;
+  font-size: 16px;
+}
 	.preRegisBtn {
 			color: #fff !important;
 			background-color: #3d3d99 !important;

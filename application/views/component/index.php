@@ -24,6 +24,7 @@
       <script src="<?php echo base_url(''); ?>include/admin/libs/sweetalert2/sweetalert2.min.js"></script>
       <script src="<?php echo base_url(''); ?>include/admin/js/pages/sweetalerts.init.js"></script>
       <script src="<?php echo base_url(''); ?>include/admin/libs/moment/moment.js"></script>
+      <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
    </head>
    <body>
       <div id="layout-wrapper">
@@ -140,6 +141,14 @@
                               </div>
                            </form>
                         </div>
+                     </div>
+                     <div class="ms-1 header-item d-none d-sm-flex">
+                       <a href="<?php echo base_url('');?>" target="_blank">
+                         <button type="button" class="btn btn-icon btn-topbar material-shadow-none btn-ghost-secondary rounded-circle">
+                         <i class="bx bx-home fs-22"></i>
+                         </button>
+
+                       </a>
                      </div>
                      <div class="ms-1 header-item d-none d-sm-flex">
                         <button type="button" class="btn btn-icon btn-topbar material-shadow-none btn-ghost-secondary rounded-circle" data-toggle="fullscreen">

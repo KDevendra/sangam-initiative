@@ -4,38 +4,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'BaseController';
 $route['registration'] = 'Authorization/signUp';
 $route['login'] = 'Authorization/signIn';
-// Routes for About section
 $route['about'] = 'BaseController/about';
 $route['living-list'] = 'BaseController/livingList';
 $route['get-core-competency'] = 'BaseController/getCoreCompetency';
 $route['why-does-it-matter-now'] = 'BaseController/whySangam';
 $route['join-as-speaker'] = 'BaseController/joinAsSpeaker';
-$route['about/why-now'] = 'BaseController/whyNow';
-$route['about/why-join'] = 'BaseController/whyJoin';
-$route['about/participate'] = 'BaseController/participate';
-$route['about/process'] = 'BaseController/process';
-$route['about/faqs'] = 'BaseController/faqs';
-$route['about/curated-content'] = 'BaseController/curatedContent';
-$route['about/pre-registration'] = 'BaseController/preRegistration';
 $route['get-involved'] = 'BaseController/getInvolved';
 $route['post-case-submission-form'] = 'BaseController/postCaseSubmissionForm';
 $route['submit-speaker-request'] = 'BaseController/submitSpeakerRequest';
-// Routes for Events section
 $route['events'] = 'BaseController/events';
-$route['events/upcoming-events'] = 'BaseController/upcomingEvents';
-$route['events/dashboard'] = 'BaseController/dashboard';
-$route['events/why-attend'] = 'BaseController/whyAttend';
-$route['events/speakers'] = 'BaseController/speakers';
-$route['events/schedule'] = 'BaseController/schedule';
-$route['events/register'] = 'BaseController/registerEvent';
-// Routes for Expression of Interest section
 $route['expression-of-interest'] = 'BaseController/expressionOfInterest';
-$route['expression-of-interest/about-eoi'] = 'BaseController/aboutEoi';
-$route['expression-of-interest/purpose'] = 'BaseController/purposeEoi';
-$route['expression-of-interest/stages'] = 'BaseController/stagesEoi';
-$route['expression-of-interest/why-participate'] = 'BaseController/whyParticipate';
-$route['expression-of-interest/participation-details'] = 'BaseController/participationDetails';
-$route['expression-of-interest/submit'] = 'BaseController/submitResponse';
 // route for authorization
 $route['sign-up'] = 'Authorization/signUp';
 $route['sign-in'] = 'Authorization/signIn';
@@ -50,7 +28,6 @@ $route['post-forgot-password'] = 'Authorization/postForgotPassword';
 $route['resendOTP'] = 'Authorization/resendOTP';
 $route['forgot-password'] = 'Authorization/forgotPassword';
 $route['outgoing-server-down'] = 'Authorization/serverDown';
-$route['check-email'] = 'Authorization/checkEmail';
 // route for user admin
 $route['admin-dashboard'] = 'AdminController/adminDashboard';
 $route['user-dashboard'] = 'AdminController/adminDashboard';
@@ -71,6 +48,7 @@ $route['submit-use-cases/(:any)/(:any)'] = 'AdminController/suggestUseCases/$1/$
 $route['submit-submit-use-cases'] = 'AdminController/submitSuggestUseCases';
 $route['submit-submit-use-cases/(:any)'] = 'AdminController/submitSuggestUseCases/$1';
 $route['submit-report-issue/(:any)'] = 'AdminController/submitReporIssue/$1';
+$route['submit-curated-content'] = 'AdminController/submitCuratedContent';
 // route for admin
 $route['user-list'] = 'AdminController/userList';
 $route['get-user-list'] = 'AdminController/getUserList';

@@ -38,7 +38,7 @@
                 <div class="card-header align-items-center d-flex">
                     <h4 class="card-title mb-0 flex-grow-1">Curated Content</h4>
                     <div class="flex-shrink-0">
-                        <button type="button" id="addNewSuggest" class="btn btn-primary btn-sm material-shadow-none"><i class="ri-user-add-line"></i> Add New Blog</button>
+                        <button type="button" id="addNewCuratedContent" class="btn btn-primary btn-sm material-shadow-none"><i class="ri-add-line"></i> Add Curated Content</button>
                     </div>
                 </div>
                 <div class="card-body">
@@ -54,12 +54,10 @@
         var redirectUrl = "<?php echo base_url('curated-content/view/'); ?>" + case_id;
         window.location.href = redirectUrl;
     }
-
     function editUser(case_id) {
         var redirectUrl = "<?php echo base_url('curated-content/edit/'); ?>" + case_id;
         window.location.href = redirectUrl;
     }
-
     function deleteUser(case_id) {
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {
@@ -115,7 +113,6 @@
             }
         });
     }
-
     function initializeDataTable() {
         if ($.fn.DataTable.isDataTable('#ajax-datatables')) {
             $('#ajax-datatables').DataTable().destroy();
@@ -151,7 +148,7 @@
                     title: "Status",
                     data: "status",
                     render: function(data, type, row) {
-                        return (data == 1) ? '<span class="badge bg-warning">Pending</span>' : '<span class="badge bg-danger">Unverified</span>';
+                        return (data == 0) ? '<span class="badge bg-warning">Pending</span>' : '<span class="badge bg-danger">Unverified</span>';
                     }
                 },
                 {
@@ -178,8 +175,6 @@
         dataTable.order([1, "desc"]).draw();
         return dataTable;
     }
-
-
     function animateCounter(element, target) {
         var current = 0;
         var increment = 1;
@@ -197,7 +192,7 @@
     var $ = jQuery.noConflict();
     $(document).ready(function() {
         var dataTable = initializeDataTable();
-        $("#addNewSuggest").click(function(e) {
+        $("#addNewCuratedContent").click(function(e) {
             e.preventDefault();
             window.location.href = "<?php echo base_url('curated-content/add'); ?>";
         });

@@ -57,9 +57,6 @@ class AdminController extends CI_Controller {
         $this->cache->clean();
         return redirect("login");
     }
-    function checkIndex() {
-        $this->load->view("component/check-index");
-    }
     public function profile() {
         $user_id = $this->session->login['login_id'];
         $data['profileData'] = $this->BaseModel->getData('login', ['login_id' => $user_id])->row();
@@ -314,52 +311,20 @@ class AdminController extends CI_Controller {
         }
         $this->load->view("component/index", $data);
     }
-    public function submittedSpeakerRequest($action = null, $case_id = null) {
+    public function submittedSpeakerRequest($action = null, $ap_req = null) {
         $this->checkUserLevel([1]);
         $data["title"] = $action . "Submitted Speaker Request : " . $this->projectTitle;
         switch ($action) {
             case "add":
                 $data["flag"] = "add";
-                $data["page_name"] = "pages/submit-use-cases-detail";
+                $data["page_name"] = "pages/submitted-speaker-request-detail";
             break;
             case "view":
-                if ($case_id !== null) {
+                if ($ap_req !== null) {
                     $data["flag"] = "view";
-                    $data["userDetail"] = $this->BaseModel->getData("suggest_use_cases", ["case_id" => $case_id])->row();
-                    $data["page_name"] = "pages/submit-use-cases-detail";
+                    $data["userDetail"] = $this->BaseModel->getData("speaker_applications", ["ap_req" => $ap_req])->row();
+                    $data["page_name"] = "pages/submitted-speaker-request-detail";
                 } else {
-                }
-            break;
-            case "edit":
-                if ($case_id !== null) {
-                    $data["flag"] = "edit";
-                    $data["userDetail"] = $this->BaseModel->getData("login", ["case_id" => $case_id])->row();
-                    $data["page_name"] = "pages/user-detail";
-                } else {
-                }
-            break;
-            case "delete":
-                if ($case_id !== null) {
-                    $query = $this->BaseModel->deleteData("login", ["case_id" => $case_id]);
-                    if ($query) {
-                        $response = ["status" => "success", "message" => "The user has been successfully deleted."];
-                    } else {
-                        $response = ["status" => "error", "message" => "Unable to delete the user. Please try again later."];
-                    }
-                    if ($this->input->is_ajax_request()) {
-                        $this->output->set_content_type("application/json");
-                        echo json_encode($response);
-                        exit();
-                    } else {
-                    }
-                } else {
-                    $response = ["status" => "error", "message" => "Invalid user ID. Please provide a valid user ID."];
-                    if ($this->input->is_ajax_request()) {
-                        $this->output->set_content_type("application/json");
-                        echo json_encode($response);
-                        exit();
-                    } else {
-                    }
                 }
             break;
             default:
@@ -500,6 +465,68 @@ class AdminController extends CI_Controller {
                         break;
                     }
                     return redirect("report-issue/add");
+                }
+            } else {
+                $this->session->set_flashdata("error", "No POST data received");
+                return redirect("report-issue/add");
+            }
+        }
+        catch(Exception $e) {
+            $this->session->set_flashdata("error", "" . $e->getMessage() . "");
+            return redirect("report-issue/add");
+        }
+    }
+    public function submitCuratedContent($action = null, $cc_id = null) {
+        $this->checkUserLevel([2]);
+        try {
+            if ($this->input->post()) {
+                $this->form_validation->set_rules('title', 'title', 'trim|required');
+                $this->form_validation->set_rules('content', 'description', 'trim|required');
+                if ($this->form_validation->run() === false) {
+                    $this->session->set_flashdata("error", validation_errors());
+                    return redirect("curated-content/add");
+                } else {
+                    $title = $this->input->post('title');
+                    $sub_title = $this->input->post('sub_title');
+                    $image = $this->input->post('image');
+                    $content = $this->input->post('content');
+                    $link =  $this->input->post('link');
+
+                    if (!empty($image))
+                    {
+                        $image_file = $this->handleFileUpload("image", "./uploads/cc_image/", "jpg|png|jpeg", 2000);
+                    }
+                    else {
+                        $image_file = "";
+                    }
+
+                    $postData = [
+                      'title' => $title,
+                      'sub_title'=>$sub_title,
+                      'image'=>$image_file,
+                      'content'=>$content,
+                      'page_slug'=> str_replace(' ', '-', strtolower($title)),
+                      'link'=>$link,
+                      'user_id'=>$this->session->login['user_id'],
+                      'author_name'=>$this->session->login['user_name'],
+                      'created_at' => date('Y-m-d H:i:s'),
+                    ];
+                    $query = $this->BaseModel->insertData("curated_content", $postData);
+                    if ($query) {
+                        $inserted_Id = $this->db->insert_id();
+                        $cc_id = "CC" . date("Y") . str_pad($inserted_Id, 4, "0", STR_PAD_LEFT);
+                        $updateData = ["cc_id" => $cc_id];
+                        $updateCondition = ["id" => $inserted_Id];
+                        $updateQuery = $this->BaseModel->updateData("curated_content", $updateData, $updateCondition);
+                        if ($updateQuery) {
+                            $this->session->set_flashdata("success", "Issue Reported Successfully.");
+                        } else {
+                            $this->session->set_flashdata("error", "Failed to update Issue Reported ID. Please try again.");
+                        }
+                    } else {
+                        $this->session->set_flashdata("error", "Failed to add suggest case details. Please try again.");
+                    }
+                    return redirect("curated-content/add");
                 }
             } else {
                 $this->session->set_flashdata("error", "No POST data received");

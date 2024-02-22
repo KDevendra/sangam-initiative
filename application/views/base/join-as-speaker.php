@@ -21,13 +21,13 @@
             </div>
             <div class="contact-form-wrapper mb-50 wow fadeInRight" style="visibility: visible;">
               <?php if (!empty($this->session->flashdata('error'))) { ?>
-                  <div class="alert alert-danger alert-dismissible fade show material-shadow" role="alert">
+                  <div class="alert alert-danger mb-50 alert-dismissible fade show material-shadow" role="alert">
                       <?php echo $this->session->flashdata('error'); ?>
                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
               <?php } ?>
               <?php if (!empty($this->session->flashdata('success'))) { ?>
-                  <div class="alert alert-success alert-dismissible fade show material-shadow" role="alert">
+                  <div class="alert alert-success mb-50 alert-dismissible fade show material-shadow" role="alert">
                       <?php echo $this->session->flashdata('success'); ?>
                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
@@ -41,7 +41,7 @@
                      <div class="col-md-4"><label><i class="far fa-cogs"></i></label><input type="text" class="form_control" placeholder="Additional Information" name="additional_information" ></div>
                      <div class="col-md-4"><label><i class="far fa-sticky-note"></i></label><input type="text" class="form_control" placeholder="Title of the topic" name="topic_title" ></div>
                      <div class="col-md-4"><label><i class="far fa-comments"></i></label><input type="text" class="form_control" placeholder="Topic Details" name="topic_details" ></div>
-                     <div class="col-md-4"><label><i class="far fa-file-code"></i></label><input type="file" class="form_control" placeholder="photo upload" name="photo_upload" ></div>
+                     <div class="col-md-4" style="padding: 0;"><label for="photo_upload" style="margin-top: -10px;">Upload Photo:</label><br><input style="padding: 0 0 5px 0;margin-top: -16px;" type="file" class="form_control" id="photo_upload" name="photo_upload" accept="image/*"></div>
                      <div class="col-md-12">
                        <div class="d-flex justify-content-center">
                           <button style="padding: 15px 30px;font-size: 18px;" class="main-btn primary-btn">Submit Request</button>
@@ -54,4 +54,13 @@
       </div>
    </div>
 </section>
+<script>
+function updatePlaceholder(input) {
+    if (input.files.length > 0) {
+        input.setAttribute('placeholder', input.files[0].name);
+    } else {
+        input.setAttribute('placeholder', 'Upload Photo');
+    }
+}
+</script>
 <?php include_once __DIR__ . '/../common/footer.php'; ?>
