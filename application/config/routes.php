@@ -14,6 +14,7 @@ $route['post-case-submission-form'] = 'BaseController/postCaseSubmissionForm';
 $route['submit-speaker-request'] = 'BaseController/submitSpeakerRequest';
 $route['events'] = 'BaseController/events';
 $route['expression-of-interest'] = 'BaseController/expressionOfInterest';
+$route['sangam-timeline'] = 'BaseController/sangamTimeline';
 // route for authorization
 $route['sign-up'] = 'Authorization/signUp';
 $route['sign-in'] = 'Authorization/signIn';
@@ -49,6 +50,7 @@ $route['submit-submit-use-cases'] = 'AdminController/submitSuggestUseCases';
 $route['submit-submit-use-cases/(:any)'] = 'AdminController/submitSuggestUseCases/$1';
 $route['submit-report-issue/(:any)'] = 'AdminController/submitReporIssue/$1';
 $route['submit-curated-content'] = 'AdminController/submitCuratedContent';
+$route['register-for-event'] = 'AdminController/registerForEvent';
 // route for admin
 $route['user-list'] = 'AdminController/userList';
 $route['get-user-list'] = 'AdminController/getUserList';

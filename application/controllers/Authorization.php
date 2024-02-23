@@ -125,6 +125,7 @@ class Authorization extends CI_Controller
                         'core_competency' => $this->input->post('coreCompetencies'),
                         'other_core_competencie' => $this->input->post('other_core_competencie'),
                         'user_level' => 2,
+                        'country_code'=>$this->input->post('country_code'),
                         'created_at' => date('Y-m-d H:i:s'),
                     ];
                     if ($this->input->post('register_as') === 'Individual') {

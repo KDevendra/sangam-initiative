@@ -271,6 +271,12 @@ class AdminController extends CI_Controller {
         }
         $this->load->view("component/index", $data);
     }
+    public function registerForEvent() {
+  $this->checkUserLevel([2]);
+    $data['title'] = $this->projectTitle . ": Register for Event";
+    $data["page_name"] = "pages/register-for-event";
+    $this->load->view("component/index", $data);
+}
     public function reportIssue($action = null, $issue_id = null) {
         $this->checkUserLevel([1, 2]);
         $data["title"] = $action . "Report Issue : " . $this->projectTitle;

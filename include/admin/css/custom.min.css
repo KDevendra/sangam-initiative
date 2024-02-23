@@ -2,6 +2,25 @@
 	display: flex;
 }
 .error{color: #f06548;}
+.iti--allow-dropdown{width: 100% !important}
+.iti__country-list {
+  position: absolute;
+  z-index: 2;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 0 -1px;
+    margin-top: 0px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border: 1px solid #CCC;
+  white-space: nowrap;
+  max-height: 200px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  width: 335px !important;
+  margin-top: 0px;
+}
 .resource-input-group:nth-child(odd) {
 	padding: 10px;
 	background-color: #FEE4D259;

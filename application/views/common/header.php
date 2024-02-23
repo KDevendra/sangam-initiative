@@ -212,6 +212,8 @@
                                         <li><a href="javascript:void(0)" class="whyToJoinBtn">Why to join
                                             </a>
                                         </li>
+                                        <li><a href="<?php echo base_url('sangam-timeline');?>" >Sangam Timeline</a>
+                                        </li>
                                         <li><a href="<?php echo base_url('get-involved');?>">Get involved
                                             </a>
                                         </li>
@@ -234,7 +236,7 @@
                                     <ul class="sub-menu">
                                         <li><a href="javascript:void(0)" class="ourUpcomingEventsBtn">Our Upcoming Events</a></li>
                                         <li><a href="javascript:void(0)" class="dashboardBtn">Dashboard</a></li>
-                                        <li><a href="javascript:void(0)" class="whyToJoinBtn">Why Attend?</a></li>
+                                        <!-- <li><a href="javascript:void(0)" class="whyToJoinBtn">Why Attend?</a></li> -->
                                         <li><a href="javascript:void(0)" class="speakersBtn">Speakers</a></li>
                                         <li><a href="javascript:void(0)" class="scheduleBtn">Schedule</a></li>
                                         <li><a href="javascript:void(0)" class="registerForTheEventBtn">Register for the event</a></li>

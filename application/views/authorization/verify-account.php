@@ -69,6 +69,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="alert alert-danger text-center"  role="alert"> <i class="ri-info-i" id="blinkText" style="background: red;border-radius: 50%;margin-right: 5px;padding: 0px;color: #fff;"></i>Dear User, If you do not receive the OTP for email ID verification, you can log in using the "Forgot Password" option.</div>
                                         <div class="text-muted text-center mx-lg-3">
                                             <h4 class="">Verify Your Email</h4>
                                             <p>
