@@ -83,6 +83,7 @@ $route['reports']= 'AdminController/reports';
 $route['curated-content'] = 'AdminController/curatedContent';
 $route['curated-content/(:any)'] = 'AdminController/curatedContent/$1';
 $route['curated-content/(:any)/(:any)'] = 'AdminController/curatedContent/$1/$2';
+$route['send-emails-unverified-users'] = 'AdminController/sendEmailsUnverifiedUsers';
 //route for theme-customizer-options
 $route['project-settings'] = 'AdminController/projectSettings';
 $route['theme-customizer-options'] = 'AdminController/themeCustomizerOptions';
