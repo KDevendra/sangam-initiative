@@ -7,7 +7,6 @@ class Authorization extends CI_Controller
     {
         try {
             $query = $this->BaseModel->getData('email_config', ['is_active' => 1])->row();
-            // dd($query);
             if ($query) {
                 $this->load->library("email");
                 $config = [
@@ -23,37 +22,32 @@ class Authorization extends CI_Controller
                     "charset" => $query->charset,
                     "wordwrap" => $query->wordwrap,
                 ];
+                pr($config);
                 $this->email->initialize($config);
                 $this->email->set_crlf($query->crlf);
                 $this->email->set_newline($query->newline);
-
                 $this->email->from($query->smtp_user);
-
                 $this->email->to($to);
-
                 if ($cc !== "") {
                     $this->email->cc($cc);
                 }
-
                 $this->email->subject($subject);
                 $this->email->message($message);
-
                 if ($attach !== "") {
                     $this->email->attach($attach);
                 }
-
                 if ($this->email->send()) {
                     return true;
                 } else {
-                    // echo $this->email->print_debugger();
+                    echo $this->email->print_debugger();
                     return false;
                 }
             } else {
-                // echo "No active email configuration found.";
+                echo "No active email configuration found.";
                 return false;
             }
         } catch (Exception $e) {
-            // echo "Email sending error: " . $e->getMessage();
+            echo "Email sending error: " . $e->getMessage();
             return false;
         }
     }

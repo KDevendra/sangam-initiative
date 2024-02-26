@@ -50,104 +50,134 @@
 </div>
 <script>
 function initializeDataTable() {
-   if ($.fn.DataTable.isDataTable('#example')) {
-      $('#example').DataTable().destroy();
-   }
+    if ($.fn.DataTable.isDataTable('#example')) {
+        $('#example').DataTable().destroy();
+    }
 
-   var dataTable = $("#example").DataTable({
-      ajax: {
-         url: "<?php echo base_url('get-unverified-user-list'); ?>",
-         type: "GET",
-         dataType: "json",
-         dataSrc: "data",
-      },
-      columns: [{
-            title: "",
-            data: null,
-            orderable: false,
-            render: function (data, type, row) {
-               return '<div class="form-check"><input class="form-check-input fs-15" type="checkbox" id="check_' + row.user_id + '" value="' + row.user_id + '"></div>';
-            }
-         },
-         {
-            title: "User Name",
-            data: "user_name"
-         },
-         {
-            title: "User ID",
-            data: "user_id"
-         },
-         {
-            title: "Contact Number",
-            data: "contact_no"
-         },
-         {
-            title: "Email Address",
-            data: "email"
-         },
-         {
-            title: "Registration Datetime ",
-            data: "created_at",
-            render: function (data, type, row) {
-               return moment(data).format('MMM DD, YYYY hh:mm:ss a');
-            }
-         },
-         {
-            title: "Status",
-            data: "is_verified",
-            render: function (data, type, row) {
-               return (data == 1) ? '<span class="badge bg-success">Verified</span>' : '<span class="badge bg-danger">Unverified</span>';
-            }
-         },
-         {
-            title: "Action",
-            data: null,
-            orderable: false,
-            render: function (data, type, row) {
-               var buttons =
-                  '<div class="dropdown d-inline-block">' +
-                  '<button class="btn btn-soft-secondary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">' +
-                  '<i class="ri-more-fill align-middle"></i>' +
-                  "</button>" +
-                  '<ul class="dropdown-menu dropdown-menu-end">';
-               buttons += '<li><a href="javascript:void(0)" class="dropdown-item" onclick="viewUser(\'' + row.user_id + '\')"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>';
-
-
-               buttons += "</ul></div>";
-               return buttons;
+    var dataTable = $("#example").DataTable({
+        ajax: {
+            url: "<?php echo base_url('get-unverified-user-list'); ?>",
+            type: "GET",
+            dataType: "json",
+            dataSrc: "data",
+        },
+        columns: [{
+                title: "",
+                data: null,
+                orderable: false,
+                render: function(data, type, row) {
+                    return '<div class="form-check"><input class="form-check-input fs-15" type="checkbox" id="check_' + row.user_id + '" value="' + row.user_id + '"></div>';
+                }
             },
-         },
-      ],
-      responsive: true,
-   });
-   dataTable.order([1, "desc"]).draw();
-   return dataTable;
+            {
+                title: "User Name",
+                data: "user_name"
+            },
+            {
+                title: "User ID",
+                data: "user_id"
+            },
+            {
+                title: "Contact Number",
+                data: "contact_no"
+            },
+            {
+                title: "Email Address",
+                data: "email"
+            },
+            {
+                title: "Registration Datetime ",
+                data: "created_at",
+                render: function(data, type, row) {
+                    return moment(data).format('MMM DD, YYYY hh:mm:ss a');
+                }
+            },
+            {
+                title: "Status",
+                data: "is_verified",
+                render: function(data, type, row) {
+                    return (data == 1) ? '<span class="badge bg-success">Verified</span>' : '<span class="badge bg-danger">Unverified</span>';
+                }
+            },
+            {
+                title: "Action",
+                data: null,
+                orderable: false,
+                render: function(data, type, row) {
+                    var buttons =
+                        '<div class="dropdown d-inline-block">' +
+                        '<button class="btn btn-soft-secondary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">' +
+                        '<i class="ri-more-fill align-middle"></i>' +
+                        "</button>" +
+                        '<ul class="dropdown-menu dropdown-menu-end">';
+                    buttons += '<li><a href="javascript:void(0)" class="dropdown-item" onclick="viewUser(\'' + row.user_id + '\')"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>';
+
+
+                    buttons += "</ul></div>";
+                    return buttons;
+                },
+            },
+        ],
+        responsive: true,
+    });
+    dataTable.order([1, "desc"]).draw();
+    return dataTable;
+}
+
+function showLoader() {
+    $(".loader").show();
+    $('#sendEmailButton').prop("disabled", true).html('<span class="loader"></span>');
+}
+
+function hideLoader() {
+    $(".loader").hide();
+    $('#sendEmailButton').prop("disabled", false).html("<i class='ri-mail-unread-fill'></i> Send Email");
 }
 var $ = jQuery.noConflict();
-$(document).ready(function () {
-   var dataTable = initializeDataTable();
-   $('#sendEmailButton').click(function () {
-      var checkedEmails = [];
-      dataTable.rows().every(function () {
-         var rowData = this.data();
-         if ($(this.node()).find('input[type="checkbox"]').prop('checked')) {
-            checkedEmails.push(rowData.email);
-         }
-      });
-      $.ajax({
-         url: '<?php echo base_url('send-emails-unverified-users')?>',
-         type: 'POST',
-         data: {
-            emails: checkedEmails
-         },
-         success: function (response) {
-            console.log(response);
-         },
-         error: function (xhr, status, error) {
-            console.error(error);
-         }
-      });
-   });
-});
+$(document).ready(function() {
+    var dataTable = initializeDataTable();
+    $('#sendEmailButton').click(function() {
+        var checkedEmails = [];
+        var atLeastOneChecked = false;
+        dataTable.rows().every(function() {
+            var rowData = this.data();
+            if ($(this.node()).find('input[type="checkbox"]').prop('checked')) {
+                checkedEmails.push(rowData.email);
+                atLeastOneChecked = true;
+            }
+        });
 
+        if (!atLeastOneChecked) {
+            Swal.fire({
+                icon: "error",
+                text: "Please select at least one email to send.",
+            });
+            return;
+        }
+
+        $.ajax({
+            url: "<?php echo base_url('send-email-unverified-users')?>",
+            type: 'POST',
+            data: {
+                emails: checkedEmails
+            },
+            beforeSend: showLoader,
+            success: function(response) {
+                hideLoader();
+                Swal.fire({
+                    icon: "success",
+                    text: "The email has been sent successfully.",
+                });
+            },
+            error: function(xhr, status, error) {
+                hideLoader();
+                Swal.fire({
+                    icon: "error",
+                    text: "Something went wrong",
+                });
+            }
+        });
+    });
+
+});
 </script>

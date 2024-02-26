@@ -11,61 +11,41 @@ class AdminController extends CI_Controller {
         $this->load->model('BaseModel');
         $this->load->helper('common_helper');
     }
-    private function mainEmailConfig($to, $subject, $message, $cc = "", $attach = "")
-    {
+    private function mainEmailConfig($to, $subject, $message, $cc = "", $attach = "") {
         try {
             $query = $this->BaseModel->getData('email_config', ['is_active' => 1])->row();
-            // dd($query);
             if ($query) {
                 $this->load->library("email");
-                $config = [
-                    "protocol" => $query->protocol,
-                    "smtp_host" => $query->smtp_host,
-                    "smtp_port" => $query->smtp_port,
-                    "smtp_user" => $query->smtp_user,
-                    "smtp_pass" => $query->smtp_pass,
-                    "smtp_crypto" => $query->smtp_crypto,
-                    "mailtype" => $query->mailtype,
-                    "crlf" => $query->crlf,
-                    "newline" => $query->newline,
-                    "charset" => $query->charset,
-                    "wordwrap" => $query->wordwrap,
-                ];
+                $config = ["protocol" => $query->protocol, "smtp_host" => $query->smtp_host, "smtp_port" => $query->smtp_port, "smtp_user" => $query->smtp_user, "smtp_pass" => $query->smtp_pass, "smtp_crypto" => $query->smtp_crypto, "mailtype" => $query->mailtype, "crlf" => $query->crlf, "newline" => $query->newline, "charset" => $query->charset, "wordwrap" => $query->wordwrap, ];
                 $this->email->initialize($config);
                 $this->email->set_crlf($query->crlf);
                 $this->email->set_newline($query->newline);
-
                 $this->email->from($query->smtp_user);
-
                 $this->email->to($to);
-
                 if ($cc !== "") {
                     $this->email->cc($cc);
                 }
-
                 $this->email->subject($subject);
                 $this->email->message($message);
-
                 if ($attach !== "") {
                     $this->email->attach($attach);
                 }
-
                 if ($this->email->send()) {
                     return true;
                 } else {
-                    // echo $this->email->print_debugger();
+                    echo $this->email->print_debugger();
                     return false;
                 }
             } else {
-                // echo "No active email configuration found.";
+                echo "No active email configuration found.";
                 return false;
             }
-        } catch (Exception $e) {
-            // echo "Email sending error: " . $e->getMessage();
+        }
+        catch(Exception $e) {
+            echo "Email sending error: " . $e->getMessage();
             return false;
         }
     }
-
     private function handleFileUpload($inputName, $uploadPath, $allowedTypes, $maxSize) {
         if (!empty($_FILES[$inputName]["name"])) {
             $config["upload_path"] = $uploadPath;
@@ -104,8 +84,52 @@ class AdminController extends CI_Controller {
     public function adminDashboard() {
         $data['title'] = "Dashboard : " . $this->projectTitle;
         $data["page_name"] = "pages/dashboard";
+
+
+        $visitors = $this->BaseModel->getData('visitors')->result_array();
+
+  
+        $visitorCountsByDay = array();
+        $visitorCountsByMonth = array();
+        $mobileCount = 0;
+
+        foreach ($visitors as $visitor) {
+            $date = date('Y-m-d', strtotime($visitor['timestamp']));
+            $month = date('Y-m', strtotime($visitor['timestamp']));
+
+            if (!isset($visitorCountsByDay[$date])) {
+                $visitorCountsByDay[$date] = 1;
+            } else {
+                $visitorCountsByDay[$date]++;
+            }
+
+            if (!isset($visitorCountsByMonth[$month])) {
+                $visitorCountsByMonth[$month] = 1;
+            } else {
+                $visitorCountsByMonth[$month]++;
+            }
+
+        if ($visitor['user_agent'] !== null && (strpos($visitor['user_agent'], 'Mobile') !== false || strpos($visitor['user_agent'], 'Android') !== false || strpos($visitor['user_agent'], 'iOS') !== false)) {
+            $mobileCount++;
+        }
+
+        }
+
+        $visitorLabels = array_keys($visitorCountsByDay);
+        $visitorData = array_values($visitorCountsByDay);
+
+        $visitorLabelsMonth = array_keys($visitorCountsByMonth);
+        $visitorDataMonth = array_values($visitorCountsByMonth);
+
+        $data['visitorLabels'] = json_encode($visitorLabels);
+        $data['visitorData'] = json_encode($visitorData);
+        $data['visitorLabelsMonth'] = json_encode($visitorLabelsMonth);
+        $data['visitorDataMonth'] = json_encode($visitorDataMonth);
+        $data['mobileCount'] = $mobileCount;
+
         $this->load->view("component/index", $data);
     }
+
     public function logout() {
         $this->load->driver("cache");
         $this->session->sess_destroy();
@@ -327,7 +351,7 @@ class AdminController extends CI_Controller {
         $this->load->view("component/index", $data);
     }
     public function registerForEvent() {
-      $this->checkUserLevel([2]);
+        $this->checkUserLevel([2]);
         $data['title'] = $this->projectTitle . ": Register for Event";
         $data["page_name"] = "pages/register-for-event";
         $this->load->view("component/index", $data);
@@ -551,27 +575,13 @@ class AdminController extends CI_Controller {
                     $sub_title = $this->input->post('sub_title');
                     $image = $this->input->post('image');
                     $content = $this->input->post('content');
-                    $link =  $this->input->post('link');
-
-                    if (!empty($image))
-                    {
+                    $link = $this->input->post('link');
+                    if (!empty($image)) {
                         $image_file = $this->handleFileUpload("image", "./uploads/cc_image/", "jpg|png|jpeg", 2000);
-                    }
-                    else {
+                    } else {
                         $image_file = "";
                     }
-
-                    $postData = [
-                      'title' => $title,
-                      'sub_title'=>$sub_title,
-                      'image'=>$image_file,
-                      'content'=>$content,
-                      'page_slug'=> str_replace(' ', '-', strtolower($title)),
-                      'link'=>$link,
-                      'user_id'=>$this->session->login['user_id'],
-                      'author_name'=>$this->session->login['user_name'],
-                      'created_at' => date('Y-m-d H:i:s'),
-                    ];
+                    $postData = ['title' => $title, 'sub_title' => $sub_title, 'image' => $image_file, 'content' => $content, 'page_slug' => str_replace(' ', '-', strtolower($title)), 'link' => $link, 'user_id' => $this->session->login['user_id'], 'author_name' => $this->session->login['user_name'], 'created_at' => date('Y-m-d H:i:s'), ];
                     $query = $this->BaseModel->insertData("curated_content", $postData);
                     if ($query) {
                         $inserted_Id = $this->db->insert_id();
@@ -1184,8 +1194,7 @@ class AdminController extends CI_Controller {
             $this->output->set_content_type("application/json")->set_output(json_encode($response));
         }
     }
-    public function sendEmailsUnverifiedUsers()
-    {
+    public function sendEmailsUnverifiedUsers() {
         $checkedEmails = $this->input->post('emails');
         if (!empty($checkedEmails)) {
             foreach ($checkedEmails as $email) {

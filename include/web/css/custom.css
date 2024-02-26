@@ -5,12 +5,18 @@
 	color: #000;
 	padding-top: 5px;
 }
-
+.text_for_outreach .title{font-size: 22px;
+  margin-bottom: 18px;
+  color: #3c3c99;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;}
+.text_for_outreach .title b{text-transform: uppercase; font-weight: bold;}
 .error-message {
 	margin-top: -25px;
 	margin-bottom: 10px;
 	color: #ee5a60;
 }
+.text_for_outreach .title span{font-style: italic;font-weight: 500;}
 /* .text-white h3{font-size: 22px !important}
 .project-content .text{
 	background-color: #0000008a;

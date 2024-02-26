@@ -25,6 +25,7 @@
       <script src="<?php echo base_url(''); ?>include/admin/js/pages/sweetalerts.init.js"></script>
       <script src="<?php echo base_url(''); ?>include/admin/libs/moment/moment.js"></script>
       <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
    </head>
    <body>
       <div id="layout-wrapper">
