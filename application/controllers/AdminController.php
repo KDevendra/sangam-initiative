@@ -84,52 +84,38 @@ class AdminController extends CI_Controller {
     public function adminDashboard() {
         $data['title'] = "Dashboard : " . $this->projectTitle;
         $data["page_name"] = "pages/dashboard";
-
-
         $visitors = $this->BaseModel->getData('visitors')->result_array();
-
-  
         $visitorCountsByDay = array();
         $visitorCountsByMonth = array();
         $mobileCount = 0;
-
         foreach ($visitors as $visitor) {
             $date = date('Y-m-d', strtotime($visitor['timestamp']));
             $month = date('Y-m', strtotime($visitor['timestamp']));
-
             if (!isset($visitorCountsByDay[$date])) {
                 $visitorCountsByDay[$date] = 1;
             } else {
                 $visitorCountsByDay[$date]++;
             }
-
             if (!isset($visitorCountsByMonth[$month])) {
                 $visitorCountsByMonth[$month] = 1;
             } else {
                 $visitorCountsByMonth[$month]++;
             }
-
-        if ($visitor['user_agent'] !== null && (strpos($visitor['user_agent'], 'Mobile') !== false || strpos($visitor['user_agent'], 'Android') !== false || strpos($visitor['user_agent'], 'iOS') !== false)) {
-            $mobileCount++;
+            if ($visitor['user_agent'] !== null && (strpos($visitor['user_agent'], 'Mobile') !== false || strpos($visitor['user_agent'], 'Android') !== false || strpos($visitor['user_agent'], 'iOS') !== false)) {
+                $mobileCount++;
+            }
         }
-
-        }
-
         $visitorLabels = array_keys($visitorCountsByDay);
         $visitorData = array_values($visitorCountsByDay);
-
         $visitorLabelsMonth = array_keys($visitorCountsByMonth);
         $visitorDataMonth = array_values($visitorCountsByMonth);
-
         $data['visitorLabels'] = json_encode($visitorLabels);
         $data['visitorData'] = json_encode($visitorData);
         $data['visitorLabelsMonth'] = json_encode($visitorLabelsMonth);
         $data['visitorDataMonth'] = json_encode($visitorDataMonth);
         $data['mobileCount'] = $mobileCount;
-
         $this->load->view("component/index", $data);
     }
-
     public function logout() {
         $this->load->driver("cache");
         $this->session->sess_destroy();
@@ -354,6 +340,8 @@ class AdminController extends CI_Controller {
         $this->checkUserLevel([2]);
         $data['title'] = $this->projectTitle . ": Register for Event";
         $data["page_name"] = "pages/register-for-event";
+        $data['userDetail'] = $this->BaseModel->getData('login', ['user_id' => $this->session->login['user_id']])->row();
+        $data['isExist'] = $this->BaseModel->getData('event_registration', ['user_id' => $this->session->login['user_id']])->row();
         $this->load->view("component/index", $data);
     }
     public function reportIssue($action = null, $issue_id = null) {
@@ -907,6 +895,12 @@ class AdminController extends CI_Controller {
         $data["page_name"] = "pages/user-list";
         $this->load->view("component/index", $data);
     }
+    public function eventRegistration() {
+        $this->checkUserLevel([1]);
+        $data['title'] = "Event Registration : " . $this->projectTitle;
+        $data["page_name"] = "pages/event-registration";
+        $this->load->view("component/index", $data);
+    }
     public function verifedUsers() {
         $this->checkUserLevel([1]);
         $data['title'] = "Verifed Users : " . $this->projectTitle;
@@ -933,6 +927,22 @@ class AdminController extends CI_Controller {
                 $responseData = ["status" => "success", "data" => $userList];
             } else {
                 $responseData = ["status" => "error", "message" => "Error fetching user data."];
+            }
+            echo json_encode($responseData);
+        }
+        catch(Exception $e) {
+            log_message("error", $e->getMessage());
+            echo json_encode(["status" => "error", "message" => "Internal server error."]);
+        }
+    }
+    public function getEventRegistration() {
+        $this->checkUserLevel([1]);
+        try {
+            $userList = $this->BaseModel->getData("event_registration")->result_array();
+            if ($userList !== null) {
+                $responseData = ["status" => "success", "data" => $userList];
+            } else {
+                $responseData = ["status" => "error", "message" => "Error event registration data."];
             }
             echo json_encode($responseData);
         }
@@ -1196,20 +1206,87 @@ class AdminController extends CI_Controller {
     }
     public function sendEmailsUnverifiedUsers() {
         $checkedEmails = $this->input->post('emails');
+        $results = [];
         if (!empty($checkedEmails)) {
             foreach ($checkedEmails as $email) {
                 $to = $email;
-                $subject = "Verification Email";
-                $message = "Dear User, Please verify your email.";
-                $result = $this->mainEmailConfig($to, $subject, $message);
-                if ($result) {
-                    echo "Email sent to " . $to . " successfully.<br>";
-                } else {
-                    echo "Failed to send email to " . $to . ".<br>";
-                }
+                $templateFile = FCPATH . 'include/email/admin/temp_email_verification_required_format.html';
+                $subject = "Verification Required for Your Account";
+                $messageBody = file_get_contents($templateFile);
+                $result = $this->mainEmailConfig($email, $subject, $messageBody, "", "");
+                // Store result for each email
+                $results[$email] = $result;
             }
         } else {
-            echo "No emails selected to send.<br>";
+            return ["error" => "No emails selected to send."];
+        }
+        return $results;
+    }
+    public function submitEventRegistration() {
+        $this->checkUserLevel([2]);
+        $this->form_validation->set_rules('full_name', 'Full Name', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+        $this->form_validation->set_rules('phone_number', 'Phone Number', 'trim|required');
+        $this->form_validation->set_rules('event_name', 'event name', 'trim|required');
+        $this->form_validation->set_rules('location', 'location', 'trim|required');
+        $this->form_validation->set_rules('event_date', 'event date', 'trim|required');
+        if ($this->form_validation->run() === false) {
+            $this->session->set_flashdata("error", validation_errors());
+            return redirect('register-for-event');
+        } else {
+            $postData = ['user_id' => $this->session->login['user_id'], 'full_name' => $this->input->post('full_name'), 'email' => $this->input->post('email'), 'phone_number' => $this->input->post('phone_number'), 'event_name' => $this->input->post('event_name'), 'location' => $this->input->post('location'), 'event_date' => $this->input->post('event_date'), 'registration_date' => date('Y-m-d'), 'created_at' => date('Y-m-d H:i:s') ];
+            $insertResult = $this->BaseModel->insertData("event_registration", $postData);
+            if ($insertResult) {
+                $inserted_Id = $this->db->insert_id();
+                $registration_id = "EV_REG" . date("Y") . str_pad($inserted_Id, 4, "0", STR_PAD_LEFT);
+                $updateData = ["registration_id" => $registration_id];
+                $updateCondition = ["id" => $inserted_Id];
+                $updateQuery = $this->BaseModel->updateData("event_registration", $updateData, $updateCondition);
+                if ($updateQuery) {
+                    $this->session->set_flashdata("success", 'Your request submitted successfully.');
+                    return redirect('register-for-event');
+                } else {
+                    $this->session->set_flashdata("error", 'Error updating a request ID.');
+                    return redirect('register-for-event');
+                }
+            } else {
+                $this->session->set_flashdata("error", 'Error inserting form data.');
+                return redirect('register-for-event');
+            }
+        }
+    }
+    public function eventRegistrationAction($action = null, $registration_id = null) {
+        $this->checkUserLevel([1]);
+        $data["title"] = $action . "Event Registration Action : " . $this->projectTitle;
+        switch ($action) {
+            case "approved":
+                $query = $this->BaseModel->updateData("event_registration", ['status' => 2], ['registration_id' => $registration_id]);
+                if ($query) {
+                    $response = ["status" => "success", "message" => "The application has been successfully approved."];
+                } else {
+                    $response = ["status" => "error", "message" => "Unable to approve the application. Please try again later."];
+                }
+                if ($this->input->is_ajax_request()) {
+                    $this->output->set_content_type("application/json");
+                    echo json_encode($response);
+                    exit();
+                }
+            break;
+            case "rejected":
+                $query = $this->BaseModel->updateData("event_registration", ['status' => 3], ['registration_id' => $registration_id]);
+                if ($query) {
+                    $response = ["status" => "success", "message" => "The application has been successfully rejected."];
+                } else {
+                    $response = ["status" => "error", "message" => "Unable to reject the application. Please try again later."];
+                }
+                if ($this->input->is_ajax_request()) {
+                    $this->output->set_content_type("application/json");
+                    echo json_encode($response);
+                    exit();
+                }
+            break;
+            default:
+            break;
         }
     }
 }

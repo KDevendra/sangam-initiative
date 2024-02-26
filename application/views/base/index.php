@@ -830,7 +830,7 @@
       <div class="projects-slider-four wow fadeInUp" data-wow-delay=".2s">
          <div class="single-project-item-four">
             <div class="project-img">
-               <img src="<?php echo base_url(''); ?>include/web/custom/Delhi_Networking_Summit.jpg" alt="Project Image" />
+               <img src="<?php echo base_url(''); ?>include/web/custom/Picture1.jpg" alt="Project Image" />
                <div class="hover-content">
                   <div class="text text-white">
                      <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
@@ -840,20 +840,23 @@
                </div>
                <div class="project-content">
                   <div class="text text-white">
-                     <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3>
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
                   </div>
                </div>
             </div>
             <div class="text_for_outreach">
-               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 5th March 2024</h4>
+               <p class="title"><a href="javascript:void(0)">Sangam – <b>Delhi</b> <br> <span>India’s Enterprise Hub</span> </a></p>
                <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIT Delhi</h5>
-               <p style="color: #ff0000b0;">Deadline: Delhi: 2nd March 2024</p>
-               <a class="btn-link" href="<?php echo base_url('registration')?>">Register Now<i class="fas fa-arrow-right"></i></a>
+               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 5th March 2024</h4>
+               <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 2nd March 2024</p>
+               <div class="d-flex justify-content-center">
+                  <a class="btn btn-danger text-white mt-20" href="<?php echo base_url('registration')?>">Register Now</a>
+               </div>
             </div>
          </div>
          <div class="single-project-item-four">
             <div class="project-img">
-               <img src="<?php echo base_url(''); ?>include/web/custom/Bangalore_Business_Forum.jpg" alt="Project Image" />
+               <img src="<?php echo base_url(''); ?>include/web/custom/Picture2.jpg" alt="Project Image" />
                <div class="hover-content">
                   <div class="text text-white">
                      <!-- <h3 class="title"><a href="">Sangam – Bengaluru: India’s Silicon Valley</a></h3> -->
@@ -863,20 +866,23 @@
                </div>
                <div class="project-content">
                   <div class="text text-white">
-                     <h3 class="title"><a href="javascript:void(0)">Sangam – Bengaluru: India’s Silicon Valley</a></h3>
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Bengaluru: India’s Silicon Valley</a></h3> -->
                   </div>
                </div>
             </div>
             <div class="text_for_outreach">
-               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 9th March 2024</h4>
+               <p class="title"><a href="javascript:void(0)">Sangam – <b>Bangalore</b> <br> <span>India’s Silicon Valley</span> </a></p>
                <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIIT Bangalore</h5>
-               <p style="color: #ff0000b0;">Deadline: Bangalore: 6th March 2024</p>
-               <a class="btn-link" href="<?php echo base_url('registration')?>">Register Now<i class="fas fa-arrow-right"></i></a>
+               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 9th March 2024</h4>
+               <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 6th March 2024</p>
+               <div class="d-flex justify-content-center">
+                  <a class="btn btn-danger text-white mt-20" href="<?php echo base_url('registration')?>">Register Now</a>
+               </div>
             </div>
          </div>
          <div class="single-project-item-four">
             <div class="project-img">
-               <img src="<?php echo base_url(''); ?>include/web/custom/Hyderabad_Professional_Networking.jpg" alt="Project Image" />
+               <img src="<?php echo base_url(''); ?>include/web/custom/Picture3.jpg" alt="Project Image" />
                <div class="hover-content">
                   <div class="text text-white">
                      <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Hyderabad: India’s Innovation Hub</a></h3> -->
@@ -888,86 +894,18 @@
                </div>
                <div class="project-content">
                   <div class="text text-white">
-                     <h3 class="title"><a href="javascript:void(0)">Sangam – Hyderabad: India’s Innovation Hub</a></h3>
-                  </div>
-               </div>
-            </div>
-            <div class="text_for_outreach">
-               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 12th March 2024</h4>
-               <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: To be decided</h5>
-               <p style="color: #ff0000b0;">Deadline: Hyderabad: 9th March 2024</p>
-               <a class="btn-link" href="<?php echo base_url('registration')?>">Register Now<i class="fas fa-arrow-right"></i></a>
-            </div>
-         </div>
-         <div class="single-project-item-four">
-            <div class="project-img">
-               <img src="<?php echo base_url(''); ?>include/web/custom/Delhi_Networking_Summit.jpg" alt="Project Image" />
-               <div class="hover-content">
-                  <div class="text text-white">
-                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                     <h5>Bridging the gap between Innovation and Planning</h5>
-                     <p>Come and be a part of the opening event of Sangam. Participating in Sangam outreach program gives you an opportunity to position yourself as a key player for infrastructure planning and design by connecting, collaborating and engaging in insightful discussions with professionals from diverse industries.</p>
-                  </div>
-               </div>
-               <div class="project-content">
-                  <div class="text text-white">
-                     <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3>
-                  </div>
-               </div>
-            </div>
-            <div class="text_for_outreach">
-               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 5th March 2024</h4>
-               <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIT Delhi</h5>
-               <p style="color: #ff0000b0;">Deadline: Delhi: 2nd March 2024</p>
-               <a class="btn-link" href="<?php echo base_url('registration')?>">Register Now<i class="fas fa-arrow-right"></i></a>
-            </div>
-         </div>
-         <div class="single-project-item-four">
-            <div class="project-img">
-               <img src="<?php echo base_url(''); ?>include/web/custom/Bangalore_Business_Forum.jpg" alt="Project Image" />
-               <div class="hover-content">
-                  <div class="text text-white">
-                     <!-- <h3 class="title"><a href="">Sangam – Bengaluru: India’s Silicon Valley</a></h3> -->
-                     <h5>Confluence of Minds and Data</h5>
-                     <p>Sangam- Bengaluru gives a platform for intersectoral interaction. Come and connect with industry experts, explore possibilities to contribute for better and efficient infrastructure planning and design.</p>
-                  </div>
-               </div>
-               <div class="project-content">
-                  <div class="text text-white">
-                     <h3 class="title"><a href="javascript:void(0)">Sangam – Bengaluru: India’s Silicon Valley</a></h3>
-                  </div>
-               </div>
-            </div>
-            <div class="text_for_outreach">
-               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 9th March 2024</h4>
-               <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIIT Bangalore</h5>
-               <p style="color: #ff0000b0;">Deadline: Bangalore: 6th March 2024</p>
-               <a class="btn-link" href="<?php echo base_url('registration')?>">Register Now<i class="fas fa-arrow-right"></i></a>
-            </div>
-         </div>
-         <div class="single-project-item-four">
-            <div class="project-img">
-               <img src="<?php echo base_url(''); ?>include/web/custom/Hyderabad_Professional_Networking.jpg" alt="Project Image" />
-               <div class="hover-content">
-                  <div class="text text-white">
                      <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Hyderabad: India’s Innovation Hub</a></h3> -->
-                     <h5>Confluence of Innovators and Opportunities</h5>
-                     <p>
-                        Experience Sangam- Hyderabad, an opportunity to share your ideas, knowledge and innovative solutions with professionals from diverse sectors.
-                     </p>
-                  </div>
-               </div>
-               <div class="project-content">
-                  <div class="text text-white">
-                     <h3 class="title"><a href="javascript:void(0)">Sangam – Hyderabad: India’s Innovation Hub</a></h3>
                   </div>
                </div>
             </div>
             <div class="text_for_outreach">
-               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 12th March 2024</h4>
+               <p class="title"><a href="javascript:void(0)">Sangam – <b>Hyderabad</b> <br> <span>India’s Innovation Hub</span> </a></p>
                <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: To be decided</h5>
-               <p style="color: #ff0000b0;">Deadline: Hyderabad: 9th March 2024</p>
-               <a class="btn-link" href="<?php echo base_url('registration')?>">Register Now<i class="fas fa-arrow-right"></i></a>
+               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 12th March 2024</h4>
+               <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 9th March 2024</p>
+               <div class="d-flex justify-content-center">
+                  <a class="btn btn-danger text-white mt-20" href="<?php echo base_url('registration')?>">Register Now</a>
+               </div>
             </div>
          </div>
       </div>

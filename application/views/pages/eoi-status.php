@@ -43,7 +43,7 @@
                      $form_status = isset($userDetail->status);
                      if ($form_status === '1') {
                      ?>
-                      <div class="row gy-5">
+                  <div class="row gy-5">
                      <div class="col-md-12">
                         <div class="px-lg-4">
                            <div class="card overflow-hidden">

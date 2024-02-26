@@ -51,9 +51,12 @@ $route['submit-submit-use-cases/(:any)'] = 'AdminController/submitSuggestUseCase
 $route['submit-report-issue/(:any)'] = 'AdminController/submitReporIssue/$1';
 $route['submit-curated-content'] = 'AdminController/submitCuratedContent';
 $route['register-for-event'] = 'AdminController/registerForEvent';
+$route['submit-event-registration'] = 'AdminController/submitEventRegistration';
+
 // route for admin
 $route['user-list'] = 'AdminController/userList';
 $route['get-user-list'] = 'AdminController/getUserList';
+$route['get-event-registration'] = 'AdminController/getEventRegistration';
 $route['get-submit-use-cases'] = 'AdminController/getSuggestUseCases';
 $route['get-submited-use-cases'] = 'AdminController/getSuggestedUseCases';
 $route['get-submitted-speaker-request'] = 'AdminController/getSubmittedSpeakerRequest';
@@ -83,7 +86,10 @@ $route['reports']= 'AdminController/reports';
 $route['curated-content'] = 'AdminController/curatedContent';
 $route['curated-content/(:any)'] = 'AdminController/curatedContent/$1';
 $route['curated-content/(:any)/(:any)'] = 'AdminController/curatedContent/$1/$2';
-$route['send-emails-unverified-users'] = 'AdminController/sendEmailsUnverifiedUsers';
+$route['send-email-unverified-users'] = 'AdminController/sendEmailsUnverifiedUsers';
+$route['event-registration'] = 'AdminController/eventRegistration';
+$route['event-registration-ation/(:any)'] = 'AdminController/eventRegistrationAction/$1';
+$route['event-registration-ation/(:any)/(:any)'] = 'AdminController/eventRegistrationAction/$1/$2';
 //route for theme-customizer-options
 $route['project-settings'] = 'AdminController/projectSettings';
 $route['theme-customizer-options'] = 'AdminController/themeCustomizerOptions';

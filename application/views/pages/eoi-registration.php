@@ -162,7 +162,7 @@
                                                         ?>
                                                             <div class="col-sm-6">
                                                                 <label for="phoneNumber" class="form-label">Potential Interest Areas</label>
-                                                                <input type="text" readonly class="form-control" id="potential_interest_areas" name="potential_interest_areas" placeholder="Enter potential_interest_areas" value="<?php echo isset($userDetail->potential_interest_areas) ? implode(',', json_decode($userDetail->potential_interest_areas)) : ''; ?>" />
+                                                                <input type="text" readonly class="form-control" id="potential_interest_areas" name="potential_interest_areas" placeholder="Enter potential_interest_areas" value="<?php if (isset($userDetail->potential_interest_areas)) {                                                                                                                                                                                                               echo $userDetail->potential_interest_areas;}; ?>" />
 
                                                                 <div class="invalid-feedback">Please enter an Potential Interest Areas</div>
                                                             </div>

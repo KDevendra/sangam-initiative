@@ -7,6 +7,7 @@ class Authorization extends CI_Controller
     {
         try {
             $query = $this->BaseModel->getData('email_config', ['is_active' => 1])->row();
+            // dd($query);
             if ($query) {
                 $this->load->library("email");
                 $config = [
@@ -22,7 +23,6 @@ class Authorization extends CI_Controller
                     "charset" => $query->charset,
                     "wordwrap" => $query->wordwrap,
                 ];
-                pr($config);
                 $this->email->initialize($config);
                 $this->email->set_crlf($query->crlf);
                 $this->email->set_newline($query->newline);
@@ -126,7 +126,7 @@ class Authorization extends CI_Controller
                         $postData['experience'] = $this->input->post('experience');
                     } elseif ($this->input->post('register_as') === 'Organization') {
                         $postData['organization_name'] = $this->input->post('OrganizationName');
-                        $postData['potential_interest_areas'] = json_encode($this->input->post('potentialInterestAreas'));
+                        $postData['potential_interest_areas'] = $this->input->post('potentialInterestAreas');
                         $postData['office_address'] = $this->input->post('officeAddress');
                         $postData['organisation_hq_address'] = $this->input->post('organisationHQAddress');
                         $postData['website_url'] = $this->input->post('websiteURL');
