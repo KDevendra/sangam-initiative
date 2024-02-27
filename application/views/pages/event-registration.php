@@ -230,7 +230,7 @@ function initializeDataTable() {
             data: null,
             orderable: false,
             render: function (data, type, row) {
-               if (row.status === 1) {
+               if (row.status === '1') {
                   var buttons =
                      '<div class="btn-group" role="group" aria-label="Action buttons">' +
                      '<button type="button" class="btn btn-success btn-sm" onclick="approveUser(\'' + row.registration_id + '\')">' +
