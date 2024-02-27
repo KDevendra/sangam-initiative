@@ -8,7 +8,8 @@
 .text_for_outreach p{
 	color: #3d3d99;
 }
-.text_for_outreach .title{font-size: 22px;
+/* .text_for_outreach p a{font-size: 22px !important} */
+.text_for_outreach .title{font-size: 20px;
   margin-bottom: 18px;
   color: #3c3c99;
   font-weight: 600;

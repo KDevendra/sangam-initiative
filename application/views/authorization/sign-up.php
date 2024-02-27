@@ -214,7 +214,7 @@
                                                    <option value="Built Environment Layer">Built Environment Layer</option>
                                                    <option value="GIS (Landscape) Layer">GIS (Landscape) Layer</option>
                                                 </select> -->
-                                                <div class="invalid-feedback" id="errorPotentialInterestAreas">
+                                                <div class="invalid-feedback">
                                                    Please select Potential Interest Areas
                                                 </div>
                                              </div>
@@ -281,7 +281,7 @@
       <script src="<?php echo base_url(''); ?>include/admin/libs/node-waves/waves.min.js"></script>
       <script src="<?php echo base_url(''); ?>include/admin/libs/feather-icons/feather.min.js"></script>
       <script src="<?php echo base_url(''); ?>include/admin/js/pages/plugins/lord-icon-2.1.0.js"></script>
-      <script src="<?php echo base_url(''); ?>include/admin/js/plugins.js"></script>
+      <!-- <script src="<?php echo base_url(''); ?>include/admin/js/plugins.js"></script> -->
       <script src="<?php echo base_url(''); ?>include/admin/js/pages/form-validation.init.js"></script>
       <script src="<?php echo base_url(''); ?>include/admin/js/pages/passowrd-create.init.js"></script>
       <script src="<?php echo base_url(''); ?>include/admin/libs/sweetalert2/sweetalert2.min.js"></script>
@@ -422,15 +422,6 @@
             isValid = false;
          } else {
             $("#errorCoreCompetencies").hide("is-invalid");
-         }
-
-         var potentialInterestAreas = $("#potentialInterestAreas").val();
-         if (!potentialInterestAreas) {
-            $("#errorPotentialInterestAreas").show("is-invalid");
-
-            isValid = false;
-         } else {
-            $("#errorPotentialInterestAreas").hide("is-invalid");
          }
 
          var registerAs = $("input[name='register_as']:checked").val();
