@@ -29,6 +29,7 @@ $route['post-forgot-password'] = 'Authorization/postForgotPassword';
 $route['resendOTP'] = 'Authorization/resendOTP';
 $route['forgot-password'] = 'Authorization/forgotPassword';
 $route['outgoing-server-down'] = 'Authorization/serverDown';
+$route['check-email'] = 'Authorization/checkEmail';
 // route for user admin
 $route['admin-dashboard'] = 'AdminController/adminDashboard';
 $route['user-dashboard'] = 'AdminController/adminDashboard';
@@ -52,7 +53,6 @@ $route['submit-report-issue/(:any)'] = 'AdminController/submitReporIssue/$1';
 $route['submit-curated-content'] = 'AdminController/submitCuratedContent';
 $route['register-for-event'] = 'AdminController/registerForEvent';
 $route['submit-event-registration'] = 'AdminController/submitEventRegistration';
-
 // route for admin
 $route['user-list'] = 'AdminController/userList';
 $route['get-user-list'] = 'AdminController/getUserList';
