@@ -214,7 +214,7 @@
                                                    <option value="Built Environment Layer">Built Environment Layer</option>
                                                    <option value="GIS (Landscape) Layer">GIS (Landscape) Layer</option>
                                                 </select> -->
-                                                <div class="invalid-feedback">
+                                                <div class="errorPotentialInterestAreas">
                                                    Please select Potential Interest Areas
                                                 </div>
                                              </div>
@@ -244,7 +244,7 @@
                                        <p id="pass-length" class="invalid fs-12 mb-2">Minimum <b>8 characters</b></p>
                                        <p id="pass-lower" class="invalid fs-12 mb-2">At <b>lowercase</b> letter (a-z)</p>
                                        <p id="pass-upper" class="invalid fs-12 mb-2">At least <b>uppercase</b> letter (A-Z)</p>
-                                       <p id="pass-number" class="invalid fs-12 mb-0">A least <b>number</b> (0-9)</p>
+                                       <p id="pass-numberd" class="invalid fs-12 mb-0">A least <b>number</b> (0-9)</p>
                                     </div>
                                  </div>
                                  <div class="mt-2 text-center">
@@ -422,6 +422,15 @@
             isValid = false;
          } else {
             $("#errorCoreCompetencies").hide("is-invalid");
+         }
+
+         var potentialInterestAreas = $("#potentialInterestAreas").val();
+         if (!potentialInterestAreas) {
+            $("#errorPotentialInterestAreas").show("is-invalid");
+
+            isValid = false;
+         } else {
+            $("#errorPotentialInterestAreas").hide("is-invalid");
          }
 
          var registerAs = $("input[name='register_as']:checked").val();
