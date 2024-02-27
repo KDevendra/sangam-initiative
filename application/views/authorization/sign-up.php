@@ -214,7 +214,7 @@
                                                    <option value="Built Environment Layer">Built Environment Layer</option>
                                                    <option value="GIS (Landscape) Layer">GIS (Landscape) Layer</option>
                                                 </select> -->
-                                                <div class="errorPotentialInterestAreas">
+                                                <div class="invalid-feedback" id="errorPotentialInterestAreas">
                                                    Please select Potential Interest Areas
                                                 </div>
                                              </div>
