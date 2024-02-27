@@ -1214,7 +1214,6 @@ class AdminController extends CI_Controller {
                 $subject = "Verification Required for Your Account";
                 $messageBody = file_get_contents($templateFile);
                 $result = $this->mainEmailConfig($email, $subject, $messageBody, "", "");
-                // Store result for each email
                 $results[$email] = $result;
             }
         } else {
@@ -1234,7 +1233,7 @@ class AdminController extends CI_Controller {
             $this->session->set_flashdata("error", validation_errors());
             return redirect('register-for-event');
         } else {
-            $postData = ['user_id' => $this->session->login['user_id'], 'full_name' => $this->input->post('full_name'), 'email' => $this->input->post('email'), 'phone_number' => $this->input->post('phone_number'), 'event_name' => $this->input->post('event_name'), 'location' => $this->input->post('location'), 'event_date' => $this->input->post('event_date'), 'registration_date' => date('Y-m-d'), 'created_at' => date('Y-m-d H:i:s') ];
+            $postData = ['user_id' => $this->session->login['user_id'], 'full_name' => $this->input->post('full_name'), 'email' => $this->input->post('email'), 'phone_number' => $this->input->post('phone_number'), 'event_name' => $this->input->post('event_name'), 'location' => $this->input->post('location'), 'event_date' => $this->input->post('event_date'), 'plan_to_submit_response' => $this->input->post('plan_to_submit_response'), 'reason_to_attend' => $this->input->post('reason_to_attend'), 'ask_questions' => $this->input->post('ask_questions'), 'questions_to_speaker' => $this->input->post('questions_to_speaker'), 'registration_date' => date('Y-m-d'), 'created_at' => date('Y-m-d H:i:s') ];
             $insertResult = $this->BaseModel->insertData("event_registration", $postData);
             if ($insertResult) {
                 $inserted_Id = $this->db->insert_id();

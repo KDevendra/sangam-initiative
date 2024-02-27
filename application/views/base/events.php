@@ -103,10 +103,43 @@
             </div>
          </div>
       </div>
-      <div class="row">
-        <img src="<?php echo base_url('');?>include/web/custom/banner_04.png" alt="">
+   </div>
+</section>
+
+<section id="registerForTheEventDes" class="cta-bg-section bg_cover pt-50 pb-50 p-r z-1" style="background-image: url('<?php echo base_url('');?>include/web/custom/Banner_3.jpg');">
+   <div class="container">
+      <div class="row align-items-center">
+         <div class="col-lg-7">
+            <div class="cta-content-box text-white mb-50 wow fadeInLeft" style="visibility: visible;">
+               <div class="section-title mb-20">
+                  <span class="sub-title text-white"><img src="<?php echo base_url('');?>include/web/custom/technology_white.png" alt=""></i>Sangam 2024: Uniting Minds, Inspiring Change</span>
+                  <h2>Register Now for the Ultimate Confluence of Ideas</h2>
+               </div>
+               <p class="mb-35">Join us for Sangam 2024, a premier event where innovation meets inspiration. With locations in Delhi, Bangalore, and Hyderabad, Sangam offers a platform for thought leaders, industry experts, and enthusiasts to come together and exchange ideas that shape the future. Don't miss your chance to be part of this transformative experience. Register now before it's too late.</p>
+               <a class="main-btn golden-btn preRegisBtn btn_green" href="<?php echo base_url('registration');?>">Register for Event</a>
+            </div>
+         </div>
+         <div class="col-lg-5">
+            <div class="wow fadeInRight" style="visibility: visible;"><img style="border-radius: 5px;" src="<?php echo base_url('');?>include/web/custom/bg_image.jpg" alt="Image"></div>
+         </div>
       </div>
    </div>
+</section>
+<section class="pb-50 pt-20">
+  <div class="container">
+    <div class="row mt-30  justify-content-center">
+       <div class="col-lg-10">
+          <div class="section-title text-center mb-30 wow fadeInDown">
+
+             <h2>Tentative Schedule</h2>
+
+          </div>
+       </div>
+    </div>
+    <div class="row">
+      <img src="<?php echo base_url('');?>include/web/custom/banner_04.png" alt="">
+    </div>
+  </div>
 </section>
 <section class="features-section-two p-r z-1" id="dashboardDes">
    <div class="features-wrapper-two main-bg wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
@@ -163,10 +196,18 @@
                     <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
                         <span class="sub-title"><img src="<?php echo base_url('');?>include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span>
                         <h2>Meet Our Speaker's</h2>
+                        <h3 class="mt-20">Coming Soon!</h3>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="text-center">
+
+              <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                 Join us as we embark on an exhilarating journey of content creation! Your participation is key to shaping the direction of our upcoming material. Dive into interactive discussions, share your ideas, and
+                 contribute your unique perspective. Together, let's make our content truly exceptional.
+              </p>
+            </div>
+            <!-- <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-team-item-two mb-40 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
                         <div class="member-img">
@@ -224,7 +265,7 @@
                         <a href="javascrip:void(0)" class="btn-link">View All Member <i class="far fa-arrow-right"></i></a>
                     </div>
                 </div> -->
-            </div>
+            </div> -->
         </div>
     </section>
 

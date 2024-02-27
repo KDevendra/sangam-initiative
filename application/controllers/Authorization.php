@@ -7,21 +7,23 @@ class Authorization extends CI_Controller
     {
         try {
             $query = $this->BaseModel->getData('email_config', ['is_active' => 1])->row();
-            // dd($query);
             if ($query) {
                 $this->load->library("email");
                 $config = [
-                    "protocol" => $query->protocol,
-                    "smtp_host" => $query->smtp_host,
-                    "smtp_port" => $query->smtp_port,
-                    "smtp_user" => $query->smtp_user,
-                    "smtp_pass" => $query->smtp_pass,
-                    "smtp_crypto" => $query->smtp_crypto,
-                    "mailtype" => $query->mailtype,
-                    "crlf" => $query->crlf,
-                    "newline" => $query->newline,
-                    "charset" => $query->charset,
-                    "wordwrap" => $query->wordwrap,
+                  "protocol" => $query->protocol,
+                  "smtp_host" => $query->smtp_host,
+                  "smtp_port" => $query->smtp_port,
+                  //"smtp_user" => $query->smtp_user,
+                  //"smtp_pass" => $query->smtp_pass,
+                  //"smtp crypto" => $query->smtp_crypto,
+                  "smtp_user" => '',
+                  "smtp_pass" => '',
+                  "smtp_auth" => false,
+                  "mailtype" => $query->mailtype,
+                  "crlf" => $query->crlf,
+                  "newline" => $query->newline,
+                  "charset" => $query->charset,
+                  "wordwrap" => $query->wordwrap,
                 ];
                 $this->email->initialize($config);
                 $this->email->set_crlf($query->crlf);
@@ -120,12 +122,14 @@ class Authorization extends CI_Controller
                         'other_core_competencie' => $this->input->post('other_core_competencie'),
                         'user_level' => 2,
                         'country_code'=>$this->input->post('country_code'),
+
                         'created_at' => date('Y-m-d H:i:s'),
                     ];
                     if ($this->input->post('register_as') === 'Individual') {
                         $postData['experience'] = $this->input->post('experience');
                     } elseif ($this->input->post('register_as') === 'Organization') {
                         $postData['organization_name'] = $this->input->post('OrganizationName');
+                        $postData['alternate_email'] = $this->input->post('alternate_email');
                         $postData['potential_interest_areas'] = $this->input->post('potentialInterestAreas');
                         $postData['office_address'] = $this->input->post('officeAddress');
                         $postData['organisation_hq_address'] = $this->input->post('organisationHQAddress');
