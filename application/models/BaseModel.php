@@ -141,6 +141,15 @@ class BaseModel extends CI_Model
         $query = $this->db->get();
         return $query;
     }
+    public function getEventApplicationData($user_id)
+    {
+        $this->db->select('*');
+        $this->db->from('login');
+        $this->db->join('event_registration', 'login.user_id = event_registration.user_id');
+        $this->db->where('login.user_id', $user_id);
+        $query = $this->db->get();
+        return $query->row();
+    }
 
 
 }

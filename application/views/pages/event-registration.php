@@ -8,7 +8,7 @@
                   echo ucwords($segmentWithSpaces); ?></h4>
                <div class="page-title-right">
                   <ol class="breadcrumb m-0">
-                     <li class="breadcrumb-item"><a href="javascript: void(0);">Registered Application</a></li>
+                     <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
                      <li class="breadcrumb-item active"><?php $segment = $this->uri->segment(1);
                         $segmentWithSpaces = str_replace('-', ' ', $segment);
                         echo ucwords($segmentWithSpaces); ?></li>
@@ -50,7 +50,6 @@ function viewApplication(registration_id) {
     var redirectUrl = "<?php echo base_url('event-registration/view/'); ?>" + registration_id;
     window.location.href = redirectUrl;
 }
-
 function approveApplication(registration_id) {
    const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
@@ -81,16 +80,14 @@ function approveApplication(registration_id) {
                      text: "Your application has been approved.",
                      icon: "success"
                   }).then(function () {
-                     var userLevel = "0";
-                     var userId = "2";
-                     var dataTable = initializeDataTable(userLevel, userId);
+                     var dataTable = initializeDataTable();
                   });
                }
             },
             error: function (xhr, status, error) {
                swalWithBootstrapButtons.fire({
                   title: "Error",
-                  text: "An error occurred while deleting the file.",
+                  text: "An error occurred while approve the application.",
                   icon: "error"
                });
             }
@@ -105,7 +102,6 @@ function approveApplication(registration_id) {
       }
    });
 }
-
 function rejectApplication(registration_id) {
    const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
@@ -136,16 +132,14 @@ function rejectApplication(registration_id) {
                      text: "Your application has been approved.",
                      icon: "success"
                   }).then(function () {
-                     var userLevel = "0";
-                     var userId = "2";
-                     var dataTable = initializeDataTable(userLevel, userId);
+                     var dataTable = initializeDataTable();
                   });
                }
             },
             error: function (xhr, status, error) {
                swalWithBootstrapButtons.fire({
                   title: "Error",
-                  text: "An error occurred while deleting the file.",
+                  text: "An error occurred while reject the application.",
                   icon: "error"
                });
             }
@@ -160,7 +154,6 @@ function rejectApplication(registration_id) {
       }
    });
 }
-
 function initializeDataTable() {
    if ($.fn.DataTable.isDataTable('#ajax-datatables')) {
       $('#ajax-datatables').DataTable().destroy();
@@ -179,22 +172,10 @@ function initializeDataTable() {
            data: "registration_id"
         },
         {
-            title: "Application Name",
+            title: "Applicant Name",
             data: "full_name"
          },
 
-         // {
-         //    title: "Contact Number",
-         //    data: "phone_number"
-         // },
-         // {
-         //    title: "Email Address",
-         //    data: "email"
-         // },
-         // {
-         //    title: "Event",
-         //    data: "event_name"
-         // },
          {
             title: "Vanue",
             data: "location"
@@ -202,6 +183,13 @@ function initializeDataTable() {
          {
             title: "Event Date",
             data: "event_date"
+         },
+         {
+             title: "Registration Datetime ",
+             data: "created_at",
+             render: function(data, type, row) {
+                 return moment(data).format('MMM DD, YYYY hh:mm:ss a');
+             }
          },
          {
             title: "Status",
@@ -251,7 +239,10 @@ function initializeDataTable() {
                      '</button>' +
                      '</div>';
                } else {
-                  var buttons = '';
+                  var buttons = '<div class="btn-group" role="group" aria-label="Action buttons">' +
+                  '<button type="button" class="btn btn-primary btn-sm" onclick="viewApplication(\'' + row.registration_id + '\')">' +
+                  '<i class="ri-eye-line align-middle"></i> View' +
+                  '</button></div>';
                }
                return buttons;
             },

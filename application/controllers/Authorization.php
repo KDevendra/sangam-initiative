@@ -41,15 +41,15 @@ class Authorization extends CI_Controller
                 if ($this->email->send()) {
                     return true;
                 } else {
-                    echo $this->email->print_debugger();
+                    // echo $this->email->print_debugger();
                     return false;
                 }
             } else {
-                echo "No active email configuration found.";
+                // echo "No active email configuration found.";
                 return false;
             }
         } catch (Exception $e) {
-            echo "Email sending error: " . $e->getMessage();
+            // echo "Email sending error: " . $e->getMessage();
             return false;
         }
     }

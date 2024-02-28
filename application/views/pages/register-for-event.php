@@ -268,7 +268,7 @@
                    eventDateInput.val("9th March 2024");
                    break;
                case "Hyderabad - India’s Innovation Hub":
-                   venueInput.val("To be decided");
+                   venueInput.val("IIIT Hyderabad");
                    eventDateInput.val("12th March 2024");
                    break;
                default:

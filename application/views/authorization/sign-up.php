@@ -657,7 +657,7 @@
       $(document).on("change", "#coreCompetencies", function () {
          var selectedOption = $(this).val();
          if (selectedOption === "Others") {
-            $("#additionalFields").html('<label for="other" class="form-label">Other Core Competencie</label><input type="text" name="other_core_competencie" class="form-control" id="other_core_competencie" placeholder="Enter details for Others">');
+            $("#additionalFields").html('<label for="other" class="form-label">Other Core Competencies</label><input type="text" name="other_core_competencie" class="form-control" id="other_core_competencie" placeholder="Enter details for Others">');
          } else {
             $("#additionalFields").html('');
          }
