@@ -38,7 +38,6 @@
             <div class="text_for_outreach">
                <p class="title"><a href="javascript:void(0)">Sangam – <b>Delhi</b> <br> <span>India’s Enterprise Hub</span> </a></p>
                <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIT Delhi</h5>
-
                <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 5th March 2024</h4>
                <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 2nd March 2024</p>
                <div class="d-flex justify-content-center">
@@ -65,7 +64,6 @@
             <div class="text_for_outreach">
                <p class="title"><a href="javascript:void(0)">Sangam – <b>Bangalore</b> <br> <span>India’s Silicon Valley</span> </a></p>
                <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIIT Bangalore</h5>
-
                <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 9th March 2024</h4>
                <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 6th March 2024</p>
                <div class="d-flex justify-content-center">
@@ -94,7 +92,6 @@
             <div class="text_for_outreach">
                <p class="title"><a href="javascript:void(0)">Sangam – <b>Hyderabad</b> <br> <span>India’s Innovation Hub</span> </a></p>
                <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: To be decided</h5>
-
                <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 12th March 2024</h4>
                <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 9th March 2024</p>
                <div class="d-flex justify-content-center">
@@ -105,7 +102,6 @@
       </div>
    </div>
 </section>
-
 <section id="registerForTheEventDes" class="cta-bg-section bg_cover pt-50 pb-50 p-r z-1" style="background-image: url('<?php echo base_url('');?>include/web/custom/Banner_3.jpg');">
    <div class="container">
       <div class="row align-items-center">
@@ -125,22 +121,116 @@
       </div>
    </div>
 </section>
-<section class="pb-50 pt-20">
-  <div class="container">
-    <div class="row mt-30  justify-content-center">
-       <div class="col-lg-10">
-          <div class="section-title text-center mb-30 wow fadeInDown">
+<section class="faq-section pt-50 pb-50">
+   <div class="container">
+      <div class="event_accordion" id="event_accordionOne">
+         <div class="row justify-content-center">
+            <div class="col-lg-10">
+               <div class="section-title text-center mb-30 wow fadeInDown">
+                  <!-- <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt="" /> Weaving the Fabric of Events</span> -->
+                  <h2>Tentative Schedule for Delhi Outreach Program </h2>
+                  <h5 class="mt-10 blink-text" style="color: #ff0000b8;">5th March 2024 (9:30 am to 5:30 pm)</h5>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="event_accordion">
+               <div class="event_accordion-item">
+                  <button id="event_accordion-button-1" aria-expanded="false">
+                  <span style="color: #27a844;">Morning 09:30AM to 10:30AM</span>
+                  <span class="event_accordion-title">Inauguration</span>
+                  <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="event_accordion-content">
+                     <h5>Session Name</h5>
+                     <p>Inauguration Session</p>
+                     <h5>Dignitary/ Organization </h5>
+                     <p>Secretary (Telecom)</p>
+                  </div>
+               </div>
+               <div class="event_accordion-item">
+                  <button id="event_accordion-button-2" aria-expanded="false">
+                  <span style="color: #27a844;">Forenoon 10:30AM to 01:30PM</span>
+                  <span class="event_accordion-title">Sessions from prominent industry leaders and startups</span>
+                  <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="event_accordion-content">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <h5>Session Name</h5>
+                           <p>About Sangam Initiative</p>
+                           <p>Planning in Virtual World</p>
+                           <p>Sangam from Transport perspective</p>
+                           <p>Sangam from Analytics perspective</p>
+                           <p>Sangam from Geospatial perspective</p>
+                           <p>Sangam from Telecom perspective</p>
+                        </div>
+                        <div class="col-md-6">
+                           <h5>Dignitary/ Organization </h5>
+                           <p>DoT
+                           </p>
+                           <p>Prominent Industry leader
+                           </p>
+                           <p>Transport related startups
+                           </p>
+                           <p>Data Analytics/ AI/ML experts</p>
+                           <p>Geospatial industry experts
+                           </p>
+                           <p>Telecom Service Provider (TSP)
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="event_accordion-item" style="border-bottom: 2px solid #3d3d99;">
+                  <button id="event_accordion-button-3" aria-expanded="false">
+                  <span style="color: #27a844;">Afternoon 02:30PM to 05:30PM</span>
+                  <span class="event_accordion-title">Interactive Session</span>
+                  <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="event_accordion-content">
+                    <div class="row">
+                       <div class="col-md-6">
+                          <h5>Session Name</h5>
+                          <p>Way Forward</p>
+                          <p>Questionnaire Session</p>
+                          <p>Concluding Session</p>
 
-             <h2>Tentative Schedule</h2>
-
-          </div>
-       </div>
-    </div>
-    <div class="row">
-      <img src="<?php echo base_url('');?>include/web/custom/banner_04.png" alt="">
-    </div>
-  </div>
+                       </div>
+                       <div class="col-md-6">
+                          <h5>Dignitary/ Organization </h5>
+                          <p>DoT
+                          </p>
+                          <p>Interactive session with participants
+                          </p>
+                          <p>DoT
+                          </p>
+              
+                       </div>
+                    </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 </section>
+<!-- <section class="pb-50 pt-20">
+   <div class="container">
+     <div class="row mt-30  justify-content-center">
+        <div class="col-lg-10">
+           <div class="section-title text-center mb-30 wow fadeInDown">
+
+              <h2>Tentative Schedule</h2>
+
+           </div>
+        </div>
+     </div>
+     <div class="row">
+       <img src="<?php echo base_url('');?>include/web/custom/banner_04.png" alt="">
+     </div>
+   </div>
+   </section> -->
 <section class="features-section-two p-r z-1" id="dashboardDes">
    <div class="features-wrapper-two main-bg wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
       <div class="container">
@@ -190,83 +280,87 @@
    </div>
 </section>
 <section class="team-section pt-50" id="speakersDes">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                        <span class="sub-title"><img src="<?php echo base_url('');?>include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span>
-                        <h2>Meet Our Speaker's</h2>
-                        <h3 class="mt-20">Coming Soon!</h3>
-                    </div>
-                </div>
+   <div class="container">
+      <div class="row justify-content-center">
+         <div class="col-lg-8">
+            <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+               <span class="sub-title"><img src="<?php echo base_url('');?>include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span>
+               <h2>Meet Our Speaker's</h2>
+               <h3 class="mt-20">Coming Soon!</h3>
             </div>
-            <div class="text-center">
+         </div>
+      </div>
+      <div class="text-center">
+         <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+            Join us as we embark on an exhilarating journey of content creation! Your participation is key to shaping the direction of our upcoming material. Dive into interactive discussions, share your ideas, and
+            contribute your unique perspective. Together, let's make our content truly exceptional.
+         </p>
+      </div>
+      <!-- <div class="row">
+         <div class="col-lg-3 col-sm-6">
+             <div class="single-team-item-two mb-40 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
+                 <div class="member-img">
+                     <img src="<?php echo base_url('');?>include/web/custom/Benjamin_Hughes.jpg" alt="Team Image">
 
-              <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                 Join us as we embark on an exhilarating journey of content creation! Your participation is key to shaping the direction of our upcoming material. Dive into interactive discussions, share your ideas, and
-                 contribute your unique perspective. Together, let's make our content truly exceptional.
-              </p>
-            </div>
-            <!-- <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-team-item-two mb-40 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
-                        <div class="member-img">
-                            <img src="<?php echo base_url('');?>include/web/custom/Benjamin_Hughes.jpg" alt="Team Image">
+                 </div>
+                 <div class="member-info text-center">
+                     <h4 class="title"><a href="javascrip:void(0)">Benjamin Hughes</a></h4>
+                     <p>Senior Speaker</p>
+                 </div>
+             </div>
+         </div>
+         <div class="col-lg-3 col-sm-6">
+             <div class="single-team-item-two mb-40 wow fadeInUp" data-wow-delay=".25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
+                 <div class="member-img">
+                     <img src="<?php echo base_url('');?>include/web/custom/Chester_J_Thurman.jpg" alt="Team Image">
 
-                        </div>
-                        <div class="member-info text-center">
-                            <h4 class="title"><a href="javascrip:void(0)">Benjamin Hughes</a></h4>
-                            <p>Senior Speaker</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-team-item-two mb-40 wow fadeInUp" data-wow-delay=".25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
-                        <div class="member-img">
-                            <img src="<?php echo base_url('');?>include/web/custom/Chester_J_Thurman.jpg" alt="Team Image">
+                 </div>
+                 <div class="member-info text-center">
+                     <h4 class="title"><a href="javascrip:void(0)">Chester J. Thurman</a></h4>
+                     <p>Junior Speaker</p>
+                 </div>
+             </div>
+         </div>
+         <div class="col-lg-3 col-sm-6">
+             <div class="single-team-item-two mb-40 wow fadeInDown" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
+                 <div class="member-img">
+                     <img src="<?php echo base_url('');?>include/web/custom/Benjamin_Hughes_.jpg" alt="Team Image">
 
-                        </div>
-                        <div class="member-info text-center">
-                            <h4 class="title"><a href="javascrip:void(0)">Chester J. Thurman</a></h4>
-                            <p>Junior Speaker</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-team-item-two mb-40 wow fadeInDown" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
-                        <div class="member-img">
-                            <img src="<?php echo base_url('');?>include/web/custom/Benjamin_Hughes_.jpg" alt="Team Image">
+                 </div>
+                 <div class="member-info text-center">
+                     <h4 class="title"><a href="javascrip:void(0)">Benjamin Hughes</a></h4>
+                     <p>Senior Speaker</p>
+                 </div>
+             </div>
+         </div>
+         <div class="col-lg-3 col-sm-6">
+             <div class="single-team-item-two mb-40 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
+                 <div class="member-img">
+                     <img src="<?php echo base_url('');?>include/web/custom/Benjamin_Hughes.jpg" alt="Team Image">
 
-                        </div>
-                        <div class="member-info text-center">
-                            <h4 class="title"><a href="javascrip:void(0)">Benjamin Hughes</a></h4>
-                            <p>Senior Speaker</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-team-item-two mb-40 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
-                        <div class="member-img">
-                            <img src="<?php echo base_url('');?>include/web/custom/Benjamin_Hughes.jpg" alt="Team Image">
-
-                        </div>
-                        <div class="member-info text-center">
-                            <h4 class="title"><a href="javascrip:void(0)">Benjamin Hughes</a></h4>
-                            <p>Senior Speaker</p>
-                        </div>
-                    </div>
-                </div>
+                 </div>
+                 <div class="member-info text-center">
+                     <h4 class="title"><a href="javascrip:void(0)">Benjamin Hughes</a></h4>
+                     <p>Senior Speaker</p>
+                 </div>
+             </div>
+         </div>
 
 
-                <!-- <div class="col-lg-3 col-sm-6">
-                    <div class="experience-box mt-25 mb-40 text-center wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
-                        <h2 class="fill-text">25+</h2>
-                        <h4>Experience Speaker's</h4>
-                        <a href="javascrip:void(0)" class="btn-link">View All Member <i class="far fa-arrow-right"></i></a>
-                    </div>
-                </div> -->
-            </div> -->
-        </div>
-    </section>
-
+         </div> -->
+   </div>
+</section>
+<script>
+   const items = document.querySelectorAll(".event_accordion button");
+   function toggleevent_accordion() {
+       const itemToggle = this.getAttribute('aria-expanded');
+       for (i = 0; i < items.length; i++) {
+           items[i].setAttribute('aria-expanded', 'false');
+       }
+       if (itemToggle == 'false') {
+           this.setAttribute('aria-expanded', 'true');
+       }
+   }
+   items.forEach(item => item.addEventListener('click', toggleevent_accordion));
+</script>
 <?php include_once __DIR__ . '/../common/footer.php'; ?>

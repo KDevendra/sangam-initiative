@@ -92,8 +92,34 @@
                          ?>
                   <form action="<?= base_url('submit-event-registration');?>" method="post" enctype="multipart/form-data">
                      <div class="row">
+                        <?php
+                           $register_as = $userDetail->register_as;
+                           if ($register_as === 'Organization')
+                             {
+
+                               ?>
                         <div class="col-md-4 mt-3">
-                           <label for="full_name">Full Name <span class="text-danger">*</span></label>
+                           <label for="email">Organization Name  <span class="text-danger">*</span></label>
+                           <?php if (isset($flag) && $flag === 'view') { ?>
+                           <p><?php echo $userDetail->alternate_email; ?></p>
+                           <?php } else { ?>
+                           <input type="text" readonly class="form-control"  value="<?php echo $userDetail->organization_name;?>" placeholder="Enter a organization name" id="organization_name" name="organization_name">
+                           <?php } ?>
+                        </div>
+                        <!-- <div class="col-md-4 mt-3">
+                           <label for="email">Organization Email </label>
+                           <?php if (isset($flag) && $flag === 'view') { ?>
+                           <p><?php echo $userDetail->alternate_email; ?></p>
+                           <?php } else { ?>
+                           <input type="email" class="form-control"  value="<?php echo $userDetail->alternate_email;?>" placeholder="Enter a email" id="alternate_email" name="alternate_email">
+                           <?php } ?>
+                           </div> -->
+                        <?php
+                           }
+
+                           ?>
+                        <div class="col-md-4 mt-3">
+                           <label for="full_name">Contact Person Name  <span class="text-danger">*</span></label>
                            <?php if (isset($flag) && $flag === 'view') { ?>
                            <p><?php if (isset($isExist->full_name)) {
                               echo $isExist->full_name;
@@ -103,33 +129,15 @@
                            <?php } ?>
                         </div>
                         <div class="col-md-4 mt-3">
-                           <label for="email">Email <span class="text-danger">*</span></label>
+                           <label for="email">Email I'd  <span class="text-danger">*</span></label>
                            <?php if (isset($flag) && $flag === 'view') { ?>
                            <p><?php echo $userDetail->email; ?></p>
                            <?php } else { ?>
                            <input type="email" readonly class="form-control"  value="<?php echo $userDetail->email;?>" placeholder="Enter a email" id="email" name="email">
                            <?php } ?>
                         </div>
-                        <?php
-                          $register_as = $userDetail->register_as;
-                          if ($register_as === 'Organization')
-                            {
-                              ?>
-                              <div class="col-md-4 mt-3">
-                                 <label for="email">Organization Email </label>
-                                 <?php if (isset($flag) && $flag === 'view') { ?>
-                                 <p><?php echo $userDetail->alternate_email; ?></p>
-                                 <?php } else { ?>
-                                 <input type="email" class="form-control"  value="<?php echo $userDetail->alternate_email;?>" placeholder="Enter a email" id="alternate_email" name="alternate_email">
-                                 <?php } ?>
-                              </div>
-                            <?php
-
-                          }
-
-                        ?>
                         <div class="col-md-4 mt-3">
-                           <label for="phone_number">Phone Number <span class="text-danger">*</span></label>
+                           <label for="phone_number">Contact Number <span class="text-danger">*</span></label>
                            <?php if (isset($flag) && $flag === 'view') { ?>
                            <p><?php echo $userDetail->phone_number; ?></p>
                            <?php } else { ?>
@@ -186,36 +194,47 @@
                         </div>
                         <div class="col-md-4 mt-3">
                            <label for="reason_to_attend">Why do you wish to attend:</label><br>
-                           <div class="form-check form-check-inline">
+                           <input type="text" class="form-control" id="other_reason_text" name="other_reason_text" placeholder="Please specify">
+                           <!-- <div class="form-check form-check-inline">
                               <input class="form-check-input" type="radio" name="reason_to_attend" id="reason_networking" value="Networking">
                               <label class="form-check-label" for="reason_networking">Networking</label>
-                           </div>
-                           <div class="form-check form-check-inline">
+                              </div>
+                              <div class="form-check form-check-inline">
                               <input class="form-check-input" type="radio" name="reason_to_attend" id="reason_learning" value="Learning">
                               <label class="form-check-label" for="reason_learning">Learning</label>
-                           </div>
-                           <div class="form-check form-check-inline">
+                              </div>
+                              <div class="form-check form-check-inline">
                               <input class="form-check-input" type="radio" name="reason_to_attend" id="reason_socializing" value="Socializing">
                               <label class="form-check-label" for="reason_socializing">Socializing</label>
-                           </div>
-                           <div class="form-check form-check-inline">
+                              </div>
+                              <div class="form-check form-check-inline">
                               <input class="form-check-input" type="radio" name="reason_to_attend" id="reason_other" value="Other">
                               <label class="form-check-label" for="reason_other">Other</label>
-                           </div>
+                              </div>
+                              <div class="mt-3" id="other_reason_input" style="display: none;">
+                              <input type="text" class="form-control" id="other_reason_text" name="other_reason_text" placeholder="Please specify">
+                              </div> -->
                         </div>
-                        <div class="col-md-12 mt-3">
-                           <label for="questions_to_speaker">Would you like to ask questions to the speaker(s)?</label><br>
-                           <div class="form-check">
+                        <div class="col-md-5 mt-3">
+                           <label for="questions_to_speaker" style="display: flex;" class="form-label">
+                              <span>Would you like to ask questions to the speaker's?</span>
+                              <div data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Your relevant questions may be discussed in a session of the outreach program" data-bs-original-title="Your relevant questions may be discussed in a session of the outreach program">
+                                 <a href="javascript:void(0)" class="text-muted"><i style="background-color: #344372;border-radius: 50%;margin-left: 5px;border-color: #344372;color: #fff;padding: 0px;" class="ri-info-i"></i></a>
+                              </div>
+                           </label>
+                           <div class="form-check form-check-inline">
                               <input class="form-check-input" type="radio" name="ask_questions" id="ask_questions_yes" value="Yes">
                               <label class="form-check-label" for="ask_questions_yes">Yes</label>
                            </div>
-                           <div class="form-check">
+                           <div class="form-check form-check-inline">
                               <input class="form-check-input" type="radio" name="ask_questions" id="ask_questions_no" value="No">
                               <label class="form-check-label" for="ask_questions_no">No</label>
                            </div>
+                        </div>
+                        <div class="col-md-12">
                            <textarea class="form-control mt-3 d-none" id="questions_to_speaker" name="questions_to_speaker" rows="4" placeholder="Enter your questions"></textarea>
                         </div>
-                        <div class="col-md-12 mt-3">
+                        <div class="col-md-12 mt-5">
                            <div class="d-flex justify-content-center">
                               <button class="btn btn-primary" id="submitBtn">Register</button>
                            </div>
@@ -266,5 +285,12 @@
                textarea.addClass('d-none');
            }
        });
+       $('input[name="reason_to_attend"]').change(function() {
+        if ($(this).val() === 'Other') {
+            $('#other_reason_input').show();
+        } else {
+            $('#other_reason_input').hide();
+        }
+    });
    });
 </script>

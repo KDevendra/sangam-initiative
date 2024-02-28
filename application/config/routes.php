@@ -15,6 +15,7 @@ $route['submit-speaker-request'] = 'BaseController/submitSpeakerRequest';
 $route['events'] = 'BaseController/events';
 $route['expression-of-interest'] = 'BaseController/expressionOfInterest';
 $route['sangam-timeline'] = 'BaseController/sangamTimeline';
+
 // route for authorization
 $route['sign-up'] = 'Authorization/signUp';
 $route['sign-in'] = 'Authorization/signIn';
@@ -88,6 +89,7 @@ $route['curated-content/(:any)'] = 'AdminController/curatedContent/$1';
 $route['curated-content/(:any)/(:any)'] = 'AdminController/curatedContent/$1/$2';
 $route['send-email-unverified-users'] = 'AdminController/sendEmailsUnverifiedUsers';
 $route['event-registration'] = 'AdminController/eventRegistration';
+$route['event-registration/view/(:any)'] = 'AdminController/eventRegistrationView/$1';
 $route['event-registration-ation/(:any)'] = 'AdminController/eventRegistrationAction/$1';
 $route['event-registration-ation/(:any)/(:any)'] = 'AdminController/eventRegistrationAction/$1/$2';
 //route for theme-customizer-options

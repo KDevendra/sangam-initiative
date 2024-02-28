@@ -8,7 +8,7 @@
                   echo ucwords($segmentWithSpaces); ?></h4>
                <div class="page-title-right">
                   <ol class="breadcrumb m-0">
-                     <li class="breadcrumb-item"><a href="javascript: void(0);">Registered User</a></li>
+                     <li class="breadcrumb-item"><a href="javascript: void(0);">Registered Application</a></li>
                      <li class="breadcrumb-item active"><?php $segment = $this->uri->segment(1);
                         $segmentWithSpaces = str_replace('-', ' ', $segment);
                         echo ucwords($segmentWithSpaces); ?></li>
@@ -35,7 +35,7 @@
          <div class="col-lg-12">
             <div class="card">
                <div class="card-header">
-                  <h5 class="card-title mb-0">Registered User's List</h5>
+                  <h5 class="card-title mb-0">Registered Application's List</h5>
                </div>
                <div class="card-body">
                   <table id="ajax-datatables" class="display table table-bordered dt-responsive" style="width: 100%;"></table>
@@ -46,6 +46,11 @@
    </div>
 </div>
 <script>
+function viewApplication(registration_id) {
+    var redirectUrl = "<?php echo base_url('event-registration/view/'); ?>" + registration_id;
+    window.location.href = redirectUrl;
+}
+
 function approveApplication(registration_id) {
    const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
@@ -101,7 +106,7 @@ function approveApplication(registration_id) {
    });
 }
 
-function rejectedApplication(registration_id) {
+function rejectApplication(registration_id) {
    const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
          confirmButton: "btn btn-success",
@@ -168,26 +173,28 @@ function initializeDataTable() {
          dataType: "json",
          dataSrc: "data",
       },
-      columns: [{
-            title: "User Name",
+      columns: [
+        {
+           title: "Reg ID",
+           data: "registration_id"
+        },
+        {
+            title: "Application Name",
             data: "full_name"
          },
-         {
-            title: "Reg ID",
-            data: "registration_id"
-         },
-         {
-            title: "Contact Number",
-            data: "phone_number"
-         },
-         {
-            title: "Email Address",
-            data: "email"
-         },
-         {
-            title: "Event",
-            data: "event_name"
-         },
+
+         // {
+         //    title: "Contact Number",
+         //    data: "phone_number"
+         // },
+         // {
+         //    title: "Email Address",
+         //    data: "email"
+         // },
+         // {
+         //    title: "Event",
+         //    data: "event_name"
+         // },
          {
             title: "Vanue",
             data: "location"
@@ -233,10 +240,13 @@ function initializeDataTable() {
                if (row.status === '1') {
                   var buttons =
                      '<div class="btn-group" role="group" aria-label="Action buttons">' +
-                     '<button type="button" class="btn btn-success btn-sm" onclick="approveUser(\'' + row.registration_id + '\')">' +
+                     '<button type="button" class="btn btn-primary btn-sm" onclick="viewApplication(\'' + row.registration_id + '\')">' +
+                     '<i class="ri-eye-line align-middle"></i> View' +
+                     '</button>' +
+                     '<button type="button" class="btn btn-success btn-sm" onclick="approveApplication(\'' + row.registration_id + '\')">' +
                      '<i class="ri-check-fill align-middle"></i> Approve' +
                      '</button>' +
-                     '<button type="button" class="btn btn-danger btn-sm" onclick="rejectUser(\'' + row.registration_id + '\')">' +
+                     '<button type="button" class="btn btn-danger btn-sm" onclick="rejectApplication(\'' + row.registration_id + '\')">' +
                      '<i class="ri-close-fill align-middle"></i> Reject' +
                      '</button>' +
                      '</div>';

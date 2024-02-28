@@ -16,7 +16,11 @@ class AdminController extends CI_Controller {
             $query = $this->BaseModel->getData('email_config', ['is_active' => 1])->row();
             if ($query) {
                 $this->load->library("email");
-                $config = ["protocol" => $query->protocol, "smtp_host" => $query->smtp_host, "smtp_port" => $query->smtp_port, "smtp_user" => $query->smtp_user, "smtp_pass" => $query->smtp_pass, "smtp_crypto" => $query->smtp_crypto, "mailtype" => $query->mailtype, "crlf" => $query->crlf, "newline" => $query->newline, "charset" => $query->charset, "wordwrap" => $query->wordwrap, ];
+                $config = ["protocol" => $query->protocol, "smtp_host" => $query->smtp_host, "smtp_port" => $query->smtp_port,
+                //"smtp_user" => $query->smtp_user,
+                //"smtp_pass" => $query->smtp_pass,
+                //"smtp crypto" => $query->smtp_crypto,
+                "smtp_user" => '', "smtp_pass" => '', "smtp_auth" => false, "mailtype" => $query->mailtype, "crlf" => $query->crlf, "newline" => $query->newline, "charset" => $query->charset, "wordwrap" => $query->wordwrap, ];
                 $this->email->initialize($config);
                 $this->email->set_crlf($query->crlf);
                 $this->email->set_newline($query->newline);
@@ -901,6 +905,17 @@ class AdminController extends CI_Controller {
         $data["page_name"] = "pages/event-registration";
         $this->load->view("component/index", $data);
     }
+    public function eventRegistrationView($registration_id) {
+        $this->checkUserLevel([1]);
+        if (!empty($registration_id))
+        {
+          $data['applicationDetail'] = $this->BaseModel->getData('event_registration',['registration_id'=>$registration_id])->row();
+        }
+        $data['title'] = "Event Registration : " . $this->projectTitle;
+        $data["page_name"] = "pages/event-registration-detail";
+        $this->load->view("component/index", $data);
+    }
+
     public function verifedUsers() {
         $this->checkUserLevel([1]);
         $data['title'] = "Verifed Users : " . $this->projectTitle;
@@ -1233,7 +1248,7 @@ class AdminController extends CI_Controller {
             $this->session->set_flashdata("error", validation_errors());
             return redirect('register-for-event');
         } else {
-            $postData = ['user_id' => $this->session->login['user_id'], 'full_name' => $this->input->post('full_name'), 'email' => $this->input->post('email'), 'phone_number' => $this->input->post('phone_number'), 'event_name' => $this->input->post('event_name'), 'location' => $this->input->post('location'), 'event_date' => $this->input->post('event_date'), 'plan_to_submit_response' => $this->input->post('plan_to_submit_response'), 'reason_to_attend' => $this->input->post('reason_to_attend'), 'ask_questions' => $this->input->post('ask_questions'), 'questions_to_speaker' => $this->input->post('questions_to_speaker'), 'registration_date' => date('Y-m-d'), 'created_at' => date('Y-m-d H:i:s') ];
+            $postData = ['user_id' => $this->session->login['user_id'], 'full_name' => $this->input->post('full_name'), 'email' => $this->input->post('email'), 'other_reason_text' => $this->input->post('other_reason_text'), 'phone_number' => $this->input->post('phone_number'), 'event_name' => $this->input->post('event_name'), 'location' => $this->input->post('location'), 'event_date' => $this->input->post('event_date'), 'plan_to_submit_response' => $this->input->post('plan_to_submit_response'), 'reason_to_attend' => $this->input->post('reason_to_attend'), 'ask_questions' => $this->input->post('ask_questions'), 'questions_to_speaker' => $this->input->post('questions_to_speaker'), 'registration_date' => date('Y-m-d'), 'created_at' => date('Y-m-d H:i:s') ];
             $insertResult = $this->BaseModel->insertData("event_registration", $postData);
             if ($insertResult) {
                 $inserted_Id = $this->db->insert_id();

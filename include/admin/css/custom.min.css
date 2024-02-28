@@ -25,6 +25,7 @@
 	padding: 10px;
 	background-color: #FEE4D259;
 }
+.swal2-actions{gap:10px !important;}
 /* Define the blinking animation */
 @keyframes blink {
 	0% {
