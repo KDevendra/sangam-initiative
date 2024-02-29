@@ -92,6 +92,11 @@ $route['event-registration'] = 'AdminController/eventRegistration';
 $route['event-registration/view/(:any)'] = 'AdminController/eventRegistrationView/$1';
 $route['event-registration-ation/(:any)'] = 'AdminController/eventRegistrationAction/$1';
 $route['event-registration-ation/(:any)/(:any)'] = 'AdminController/eventRegistrationAction/$1/$2';
+//route for report excel
+$route['download-event-registration/(:any)'] = 'ReportExcelController/downloadEventRegistration/$1';
+$route['download-event-registration/(:any)/(:any)'] = 'ReportExcelController/downloadEventRegistration/$1/$2';
+$route['download-submitted-speaker-request/(:any)'] = 'ReportExcelController/downloadSubmittedSpeakerRequest/$1';
+$route['download-submitted-speaker-request/(:any)/(:any)'] = 'ReportExcelController/downloadSubmittedSpeakerRequest/$1/$2';
 //route for theme-customizer-options
 $route['project-settings'] = 'AdminController/projectSettings';
 $route['theme-customizer-options'] = 'AdminController/themeCustomizerOptions';

@@ -185,7 +185,7 @@ if (!defined('PDF_FONT_NAME_MAIN')) {
 }
 
 if (!defined('PDF_FONT_SIZE_MAIN')) {
-	define ('PDF_FONT_SIZE_MAIN', 10);
+	define ('PDF_FONT_SIZE_MAIN', 30);
 }
 
 if (!defined('PDF_FONT_NAME_DATA')) {
@@ -193,7 +193,7 @@ if (!defined('PDF_FONT_NAME_DATA')) {
 }
 
 if (!defined('PDF_FONT_SIZE_DATA')) {
-	define ('PDF_FONT_SIZE_DATA', 8);
+	define ('PDF_FONT_SIZE_DATA', 18);
 }
 
 if (!defined('PDF_FONT_MONOSPACED')) {
