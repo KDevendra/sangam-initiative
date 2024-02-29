@@ -142,10 +142,16 @@
                   <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
-                     <h5>Session Name</h5>
-                     <p>Inauguration Session</p>
-                     <h5>Dignitary/ Organization </h5>
-                     <p>Secretary (Telecom)</p>
+                     <div class="row">
+                        <div class="col-md-6">
+                           <h5>Session Name</h5>
+                           <p>Inauguration Session</p>
+                        </div>
+                        <div class="col-md-6">
+                           <h5>Dignitary/ Organization </h5>
+                           <p>Secretary (Telecom)</p>
+                        </div>
+                     </div>
                   </div>
                </div>
                <div class="event_accordion-item">
@@ -189,25 +195,23 @@
                   <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
-                    <div class="row">
-                       <div class="col-md-6">
-                          <h5>Session Name</h5>
-                          <p>Way Forward</p>
-                          <p>Questionnaire Session</p>
-                          <p>Concluding Session</p>
-
-                       </div>
-                       <div class="col-md-6">
-                          <h5>Dignitary/ Organization </h5>
-                          <p>DoT
-                          </p>
-                          <p>Interactive session with participants
-                          </p>
-                          <p>DoT
-                          </p>
-
-                       </div>
-                    </div>
+                     <div class="row">
+                        <div class="col-md-6">
+                           <h5>Session Name</h5>
+                           <p>Way Forward</p>
+                           <p>Questionnaire Session</p>
+                           <p>Concluding Session</p>
+                        </div>
+                        <div class="col-md-6">
+                           <h5>Dignitary/ Organization </h5>
+                           <p>DoT
+                           </p>
+                           <p>Interactive session with participants
+                           </p>
+                           <p>DoT
+                           </p>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
@@ -220,9 +224,7 @@
      <div class="row mt-30  justify-content-center">
         <div class="col-lg-10">
            <div class="section-title text-center mb-30 wow fadeInDown">
-
               <h2>Tentative Schedule</h2>
-
            </div>
         </div>
      </div>
@@ -345,9 +347,7 @@
                  </div>
              </div>
          </div>
-
-
-         </div> -->
+       </div> -->
    </div>
 </section>
 <script>

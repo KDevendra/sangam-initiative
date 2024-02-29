@@ -438,7 +438,7 @@
                            <?php
                               }
                               ?>
-                           <a class="dropdown-item" href="<?php echo base_url('report-issue');?>"><i class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Report Issue</span></a>
+                           <!-- <a class="dropdown-item" href="<?php echo base_url('report-issue');?>"><i class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Report Issue</span></a> -->
                            <div class="dropdown-divider"></div>
                            <?php
                               $user_level = $this->session->login['user_level']; if ($user_level === '0') { ?>
@@ -587,7 +587,7 @@
                      if ($userLevel === '1') {
                          echo '<ul class="navbar-nav" id="navbar-nav">';
                          // echo '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('blogs') . '"><i class="ri-pages-line"></i> <span data-key="t-blogs">Blogs</span></a></li>';
-                         echo '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('reported-issue') . '"><i class="ri-error-warning-fill"></i> <span data-key="t-Reported Issue">Reported Issue</span></a></li>';
+                         // echo '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('reported-issue') . '"><i class="ri-error-warning-fill"></i> <span data-key="t-Reported Issue">Reported Issue</span></a></li>';
                          echo '</ul>';
                      }
                      ?>

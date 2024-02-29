@@ -760,7 +760,7 @@
                      </a>
                   </div>
                   <div class="col-md-12">
-                     <a href="">
+                     <a href="<?php echo base_url('registration'); ?>">
                         <div class="single-info-item style-two mb-20 wow fadeInDown" style="visibility: visible;">
                            <div class="shape shape-one">
                               <span><img src="<?php echo base_url(''); ?>include/web/images/shape/info-shape-1.png" alt="shape" /></span>
@@ -768,9 +768,9 @@
                            <div class="info">
                               <h4 class="title mb-0">
                                  <i class="far fa-handshake" aria-hidden="true"></i>
-                                 Participation Criteria
+                                 Register for Event
                               </h4>
-                              <span class="text-white">Learn Who Meets the Requirements to Get Involved</span>
+                              <span class="text-white">&nbsp;</span>
                            </div>
                         </div>
                      </a>
