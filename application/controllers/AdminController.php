@@ -902,6 +902,25 @@ class AdminController extends CI_Controller {
     public function eventRegistration() {
         $this->checkUserLevel([1]);
         $data["title"] = "Event Registration : " . $this->projectTitle;
+        $allData = $this->BaseModel->getData("event_registration")->result_array();
+        $totalCount = count($allData);
+        $pendingCount = 0;
+        $approvedCount = 0;
+        $rejectedCount = 0;
+        $incompletedCount = 0;
+        foreach ($allData as $record) {
+            if ($record["status"] == 0) {
+                $incompletedCount++;
+            } elseif ($record["status"] == 1) {
+                $pendingCount++;
+            } elseif ($record["status"] == 2) {
+                $approvedCount++;
+            } elseif ($record["status"] == 3) {
+                $rejectedCount++;
+            }
+        }
+        $data = ["total" => $totalCount, "pending" => $pendingCount, "approved" => $approvedCount, "rejected" => $rejectedCount, "incompleted" => $incompletedCount, ];
+
         $data["page_name"] = "pages/event-registration";
         $this->load->view("component/index", $data);
     }
@@ -1301,7 +1320,7 @@ class AdminController extends CI_Controller {
                 $user_id = $this->BaseModel->getData("event_registration", ["registration_id" => $registration_id])->row()->user_id;
                 $applicationDetail = $this->BaseModel->getEventApplicationData($user_id);
                 $templateFile = FCPATH . "include/email/admin/temp_email_event_application_reject_format.html";
-                $subject = "Approval of Your Event Application";
+                $subject = "Rejection of Your Event Application";
                 $messageBody = file_get_contents($templateFile);
                 $placeholders = ["{registration_id}", "{event_name}", "{location}", "{full_name}", "{email}", "{phone_number}", "{event_date}"];
                 $values = [$applicationDetail->registration_id, $applicationDetail->event_name, $applicationDetail->location, $applicationDetail->full_name, $applicationDetail->email, $applicationDetail->phone_number, $applicationDetail->event_date, ];

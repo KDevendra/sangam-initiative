@@ -72,6 +72,15 @@
                                                        </td>
                                                   </tr>
                                              <?php } ?>
+                                             <?php if (isset($userDetail->core_competency) && $userDetail->core_competency === 'Others') { ?>
+                                                  <tr>
+                                                       <th class="ps-0" scope="row">Other Core Competency</th>
+                                                       <td class="text-muted">
+                                                            <?php echo $userDetail->other_core_competencie; ?>
+                                                       </td>
+                                                  </tr>
+                                             <?php } ?>
+
                                              <?php if (isset($userDetail->experience)) { ?>
                                                   <tr>
                                                        <th class="ps-0" scope="row">Experience</th>

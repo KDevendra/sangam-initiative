@@ -103,7 +103,7 @@
                                     }
                                       else
                                       {
-                                        echo "No file uploaded";
+                                        echo "<p>No file uploaded</p>";
                                       }
 
                                       ?>
