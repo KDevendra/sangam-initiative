@@ -261,7 +261,7 @@
                         <div class="menu-button mt-40 d-xl-none text-center">
                             <a href="<?php echo base_url('get-involved') ?>" class="main-btn primary-btn">Get involved</a>
                             <a href="<?php echo base_url('living-list') ?>" class="main-btn primary-btn mb-10">Living List</a>
-                            <a href="<?php echo base_url('registration') ?>" class="main-btn secondary-btn mb-10">Pre-Registration</a>
+                            <a href="<?php echo base_url('registration') ?>" class="main-btn secondary-btn mb-10">Register for Event</a>
                         </div>
                     </div>
                     <div class="nav-right-item">
