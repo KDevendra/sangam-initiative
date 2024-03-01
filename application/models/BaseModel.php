@@ -144,16 +144,28 @@ class BaseModel extends CI_Model {
         return $query->row();
     }
     public function getEventApplicationList($status = null) {
-      $this->db->select('*');
-      $this->db->from('login');
-      $this->db->join('event_registration', 'login.user_id = event_registration.user_id');
-      if ($status !== null) {
-          $this->db->where('event_registration.status', $status);
-      }
-      $query = $this->db->get();
-      return $query->result();
-  }
-  public function getEoIApplicationData($user_id) {
+        $this->db->select('*');
+        $this->db->from('login');
+        $this->db->join('event_registration', 'login.user_id = event_registration.user_id');
+        if ($status !== null) {
+            $this->db->where('event_registration.status', $status);
+        }
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function getUserList($is_verified = null) {
+        $this->db->select('*');
+        $this->db->from('login');
+        $this->db->where('user_level', 2);
+
+        if ($is_verified !== null) {
+            $this->db->where('login.is_verified', $is_verified);
+        }
+
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function getEoIApplicationData($user_id) {
         $this->db->select('*');
         $this->db->from('login');
         $this->db->join('eoi_registration', 'login.user_id = eoi_registration.user_id');
@@ -161,5 +173,4 @@ class BaseModel extends CI_Model {
         $query = $this->db->get();
         return $query->row();
     }
-
 }

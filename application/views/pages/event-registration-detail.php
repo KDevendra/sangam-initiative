@@ -106,42 +106,41 @@
                          <textarea name="name" rows="3" class="form-control" cols="80"><?php echo (!is_null($applicationDetail) && is_object($applicationDetail) && property_exists($applicationDetail, 'questions_to_speaker')) ? $applicationDetail->questions_to_speaker: 'Error: Application details not found or invalid.'; ?></textarea>
                       </div>
                       <div class="col-md-12 mt-4">
-                        <div class="d-flex justify-content-center" style="gap: 10px;">
-                            <?php
+                          <div class="d-flex justify-content-center" style="gap: 10px;">
+                              <?php
+                              if (!is_null($applicationDetail) && property_exists($applicationDetail, 'status')) {
+                                  $status = $applicationDetail->status;
+                                  if ($status === '1') {
+                                      echo '<button type="button" id="approveBtn" class="btn btn-sm btn-primary" onclick="approveApplication(\'' . $applicationDetail->registration_id . '\')"><i class="ri-check-fill align-middle"></i> Approve</button>';
+                                      echo '<button type="button" id="rejectBtn" class="btn btn-sm btn-danger" onclick="rejectApplication(\'' . $applicationDetail->registration_id . '\')"><i class="ri-close-line align-middle"></i> Reject</button>';
+                                    } else {
+                                      switch ($status) {
+                                          case '1':
+                                              $status_text = 'Pending';
+                                              $status_class = 'warning';
+                                              break;
+                                          case '2':
+                                              $status_text = 'Event application approved.';
+                                              $status_class = 'success';
+                                              break;
+                                          case '3':
+                                              $status_text = 'Event application Rejected.';
+                                              $status_class = 'danger';
+                                              break;
+                                          case '4':
+                                              $status_text = 'Winner';
+                                              $status_class = 'info';
+                                              break;
+                                          default:
+                                              $status_text = 'Unknown';
+                                              $status_class = 'secondary';
+                                      }
+                                      echo '<div class="alert ' . 'alert-'.$status_class . '">' . $status_text . '</div>';
+                                  }
+                              }
+                              ?>
 
-                            if (!is_null($applicationDetail) && property_exists($applicationDetail, 'status')) {
-                                $status = $applicationDetail->status;
-                                if ($status === '1') {
-                                    echo '<button type="button" class="btn btn-success" onclick="approveApplication(' . $applicationDetail->registration_id . ')"><i class="ri-check-fill align-middle"></i> Approve</button>';
-                                    echo '<button type="button" class="btn btn-danger" onclick="rejectApplication(\'' . $applicationDetail->registration_id . '\')"><i class="ri-check-fill align-middle"></i> Reject</button>';
-                                } else {
-                                    switch ($status) {
-                                        case '1':
-                                            $status_text = 'Pending';
-                                            $status_class = 'warning';
-                                            break;
-                                        case '2':
-                                            $status_text = 'Event application approved.';
-                                            $status_class = 'success';
-                                            break;
-                                        case '3':
-                                            $status_text = 'Event application Rejected.';
-                                            $status_class = 'danger';
-                                            break;
-                                        case '4':
-                                            $status_text = 'Winner';
-                                            $status_class = 'info';
-                                            break;
-                                        default:
-                                            $status_text = 'Unknown';
-                                            $status_class = 'secondary';
-                                    }
-                                    echo '<div class="alert ' . 'alert-'.$status_class . '">' . $status_text . '</div>';
-                                }
-                            }
-                            ?>
-
-                        </div>
+                          </div>
                     </div>
 
                     </div>
@@ -153,6 +152,25 @@
    </div>
 </div>
 <script>
+function showLoaderApprove() {
+   $(".loader").show();
+   $('#approveBtn]').prop("disabled", true).html('<span class="loader"></span>');
+}
+
+function hideLoaderApprove() {
+   $(".loader").hide();
+   $('#approveBtn]').prop("disabled", false).html("<i class='ri-check-fill align-middle'></i> Approve");
+}
+function showLoaderReject() {
+   $(".loader").show();
+   $('#rejectBtn]').prop("disabled", true).html('<span class="loader"></span>');
+}
+
+function hideLoaderReject() {
+   $(".loader").hide();
+   $('#rejectBtn]').prop("disabled", false).html("<i class='ri-check-fill align-middle'></i> Reject");
+}
+
 function approveApplication(registration_id) {
    const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
@@ -174,6 +192,7 @@ function approveApplication(registration_id) {
          $.ajax({
             type: "POST",
             url: "<?php echo base_url('event-registration-ation/approved/'); ?>" + registration_id,
+            beforeSend: showLoader,
             dataType: 'json',
             success: function (response) {
                console.log(response);
@@ -227,8 +246,9 @@ function rejectApplication(registration_id) {
             type: "POST",
             url: "<?php echo base_url('event-registration-ation/rejected/'); ?>" + registration_id,
             dataType: 'json',
+            beforeSend: showLoader,
             success: function (response) {
-               console.log(response);
+                  hideLoader();
                if (response.status === 'success') {
                   swalWithBootstrapButtons.fire({
                      title: "Rejected!",
@@ -240,6 +260,7 @@ function rejectApplication(registration_id) {
                }
             },
             error: function (xhr, status, error) {
+                 hideLoader();
                swalWithBootstrapButtons.fire({
                   title: "Error",
                   text: "An error occurred while deleting the file.",

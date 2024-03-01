@@ -18,20 +18,88 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xl-12 col-md-12">
-                <?php if (!empty($this->session->flashdata('error'))) { ?>
-                    <div class="alert alert-danger alert-dismissible fade show material-shadow" role="alert">
-                        <?php echo $this->session->flashdata('error'); ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+           <div class="col-xl-12 col-md-12">
+              <?php if (!empty($this->session->flashdata('error'))) { ?>
+              <div class="alert alert-danger alert-dismissible fade show material-shadow" role="alert">
+                 <?php echo $this->session->flashdata('error'); ?>
+                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              <?php } ?>
+              <?php if (!empty($this->session->flashdata('success'))) { ?>
+              <div class="alert alert-success alert-dismissible fade show material-shadow" role="alert">
+                 <?php echo $this->session->flashdata('success'); ?>
+                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              <?php } ?>
+           </div>
+           <div class="col-xl-4 col-md-6">
+              <div class="card card-animate">
+                 <div class="card-body">
+                    <div class="d-flex align-items-center">
+                       <div class="flex-grow-1 overflow-hidden">
+                          <p class="text-uppercase fw-medium text-muted text-truncate mb-0"> Total Users</p>
+                       </div>
                     </div>
-                <?php } ?>
-                <?php if (!empty($this->session->flashdata('success'))) { ?>
-                    <div class="alert alert-success alert-dismissible fade show material-shadow" role="alert">
-                        <?php echo $this->session->flashdata('success'); ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <div class="d-flex align-items-end justify-content-between mt-4">
+                       <div>
+                          <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="<?php echo $total; ?>"><?php echo $total; ?></span></h4>
+                          <a href="<?php echo base_url('download-user-list/all')?>" class="text-decoration-underline">Download Excel</a>
+                       </div>
+                       <div class="avatar-sm flex-shrink-0">
+                          <span class="avatar-title bg-primary-subtle rounded fs-3">
+                          <i class="bx bx-list-ul text-primary"></i>
+                          </span>
+                       </div>
                     </div>
-                <?php } ?>
-            </div>
+                 </div>
+              </div>
+           </div>
+           <div class="col-xl-4 col-md-6">
+              <div class="card card-animate">
+                 <div class="card-body">
+                    <div class="d-flex align-items-center">
+                       <div class="flex-grow-1 overflow-hidden">
+                          <p class="text-uppercase fw-medium text-muted text-truncate mb-0"> Verified Users</p>
+                       </div>
+                    </div>
+                    <div class="d-flex align-items-end justify-content-between mt-4">
+                       <div>
+                          <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="<?php echo $verified; ?>"><?php echo $verified; ?></span></h4>
+                          <a href="<?php echo base_url('download-user-list/verified/1')?>" class="text-decoration-underline">Download Excel</a>
+                       </div>
+                       <div class="avatar-sm flex-shrink-0">
+                          <span class="avatar-title bg-success-subtle rounded fs-3">
+                          <i class="bx bx-list-check text-success"></i>
+                          </span>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <div class="col-xl-4 col-md-6">
+              <div class="card card-animate">
+                 <div class="card-body">
+                    <div class="d-flex align-items-center">
+                       <div class="flex-grow-1 overflow-hidden">
+                          <p class="text-uppercase fw-medium text-muted text-truncate mb-0"> Unverified User</p>
+                       </div>
+                    </div>
+                    <div class="d-flex align-items-end justify-content-between mt-4">
+                       <div>
+                          <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="<?php echo $unverified; ?>"><?php echo $unverified; ?></span></h4>
+                          <a href="<?php echo base_url('download-user-list/unverified/0')?>" class="text-decoration-underline">Download Excel</a>
+                       </div>
+                       <div class="avatar-sm flex-shrink-0">
+                          <span class="avatar-title bg-danger-subtle rounded fs-3">
+                          <i class="bx bx-list-minus text-danger"></i>
+                          </span>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="row">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
