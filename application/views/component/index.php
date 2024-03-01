@@ -59,11 +59,11 @@
                      </span>
                      </button>
                      <form class="app-search d-none d-md-block">
-                        <div class="position-relative">
+                        <!-- <div class="position-relative">
                            <input type="text" class="form-control" placeholder="Search..." autocomplete="off" id="search-options" value="" />
                            <span class="mdi mdi-magnify search-widget-icon"></span>
                            <span class="mdi mdi-close-circle search-widget-icon search-widget-icon-close d-none" id="search-close-options"></span>
-                        </div>
+                        </div> -->
                         <div class="dropdown-menu dropdown-menu-lg" id="search-dropdown">
                            <div data-simplebar style="max-height: 320px;">
                               <div class="dropdown-header">
@@ -128,7 +128,7 @@
                      </form>
                   </div>
                   <div class="d-flex align-items-center">
-                     <div class="dropdown d-md-none topbar-head-dropdown header-item">
+                     <!-- <div class="dropdown d-md-none topbar-head-dropdown header-item">
                         <button type="button" class="btn btn-icon btn-topbar material-shadow-none btn-ghost-secondary rounded-circle" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="bx bx-search fs-22"></i>
                         </button>
@@ -142,7 +142,7 @@
                               </div>
                            </form>
                         </div>
-                     </div>
+                     </div> -->
                      <div class="ms-1 header-item d-none d-sm-flex">
                        <a href="<?php echo base_url('');?>" target="_blank">
                          <button type="button" class="btn btn-icon btn-topbar material-shadow-none btn-ghost-secondary rounded-circle">

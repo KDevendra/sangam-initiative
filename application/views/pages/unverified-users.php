@@ -49,6 +49,10 @@
    </div>
 </div>
 <script>
+function viewUser(user_id) {
+    var redirectUrl = "<?php echo base_url('users/view/'); ?>" + user_id;
+    window.location.href = redirectUrl;
+}
 function initializeDataTable() {
     if ($.fn.DataTable.isDataTable('#example')) {
         $('#example').DataTable().destroy();
