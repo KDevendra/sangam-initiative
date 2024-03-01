@@ -268,7 +268,7 @@
                         <div class="menu-button d-xl-block d-none">
                             <a href="<?php echo base_url('get-involved') ?>" class="main-btn primary-btn">Get involved</a>
                             <a href="<?php echo base_url('living-list') ?>" class="main-btn primary-btn">Living List</a>
-                            <a href="<?php echo base_url('registration') ?>" class="main-btn primary-btn">Pre-Registration</a>
+                            <a href="<?php echo base_url('registration') ?>" class="main-btn primary-btn">Register for Event</a>
                         </div>
                         <!-- <div class="bar-button" data-toggle="modal" data-target="#sidebar-modal">
                             <img src="<?php echo base_url(''); ?>include/web/images/bar.png" alt="Image">

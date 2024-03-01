@@ -92,9 +92,9 @@ class Authorization extends CI_Controller
             if ($this->input->post('register_as') === 'Organization') {
                 $this->form_validation->set_rules("OrganizationName", "Organization Name", 'trim|required|min_length[3]');
                 $this->form_validation->set_rules("potentialInterestAreas", "Potential Interest Areas", 'trim');
-                $this->form_validation->set_rules("officeAddress", "office address", 'trim|required|min_length[3]|max_length[50]');
-                $this->form_validation->set_rules("organisationHQAddress", "organisation HQ address", 'trim|min_length[3]|max_length[50]');
-                $this->form_validation->set_rules("websiteURL", "Website URL", 'trim|valid_url|min_length[3]|max_length[50]');
+                $this->form_validation->set_rules("officeAddress", "office address", 'trim|required|min_length[3]');
+                $this->form_validation->set_rules("organisationHQAddress", "organisation HQ address", 'trim|min_length[3]');
+                $this->form_validation->set_rules("websiteURL", "Website URL", 'trim|valid_url|min_length[3]');
             }
             if ($this->form_validation->run() === false) {
                 $response = ["status" => "validation_errors", "message" => validation_errors()];
