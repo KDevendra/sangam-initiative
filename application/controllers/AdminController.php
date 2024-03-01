@@ -1023,6 +1023,20 @@ class AdminController extends CI_Controller
         $data["page_name"] = "pages/event-registration";
         $this->load->view("component/index", $data);
     }
+    public function approvedEventApplications()
+    {
+        $this->checkUserLevel([1]);
+        $data["title"] = "Approved Applications : " . $this->projectTitle;
+        $data["page_name"] = "pages/approved-event-applications";
+        $this->load->view("component/index", $data);
+    }
+    public function rejectedEventApplications()
+    {
+        $this->checkUserLevel([1]);
+        $data["title"] = "Rejected Applications : " . $this->projectTitle;
+        $data["page_name"] = "pages/rejected-event-applications";
+        $this->load->view("component/index", $data);
+    }
     public function eventRegistrationView($registration_id)
     {
         $this->checkUserLevel([1]);
@@ -1076,6 +1090,38 @@ class AdminController extends CI_Controller
         $this->checkUserLevel([1]);
         try {
             $userList = $this->BaseModel->getData("event_registration")->result_array();
+            if ($userList !== null) {
+                $responseData = ["status" => "success", "data" => $userList];
+            } else {
+                $responseData = ["status" => "error", "message" => "Error event registration data."];
+            }
+            echo json_encode($responseData);
+        } catch (Exception $e) {
+            log_message("error", $e->getMessage());
+            echo json_encode(["status" => "error", "message" => "Internal server error."]);
+        }
+    }
+    public function getApprovedEventRegistration()
+    {
+        $this->checkUserLevel([1]);
+        try {
+            $userList = $this->BaseModel->getData("event_registration", ['status'=>2])->result_array();
+            if ($userList !== null) {
+                $responseData = ["status" => "success", "data" => $userList];
+            } else {
+                $responseData = ["status" => "error", "message" => "Error event registration data."];
+            }
+            echo json_encode($responseData);
+        } catch (Exception $e) {
+            log_message("error", $e->getMessage());
+            echo json_encode(["status" => "error", "message" => "Internal server error."]);
+        }
+    }
+    public function getRejectedEventRegistration()
+    {
+        $this->checkUserLevel([1]);
+        try {
+            $userList = $this->BaseModel->getData("event_registration", ['status'=>3])->result_array();
             if ($userList !== null) {
                 $responseData = ["status" => "success", "data" => $userList];
             } else {
