@@ -183,85 +183,85 @@
    </div>
 </div>
 <script>
-    var editor;
-    ClassicEditor
-        .create(document.querySelector('#message'))
-        .then(newEditor => {
-            editor = newEditor;
-        })
-        .catch(error => {
-            console.error(error);
-        });
-        function showLoader() {
-           $(".loader").show();
-           $('#savechanges').prop("disabled", true).html('<span class="loader"></span>');
-        }
+   var editor;
+   ClassicEditor
+       .create(document.querySelector('#message'))
+       .then(newEditor => {
+           editor = newEditor;
+       })
+       .catch(error => {
+           console.error(error);
+       });
+       function showLoader() {
+          $(".loader").show();
+          $('#savechanges').prop("disabled", true).html('<span class="loader"></span>');
+       }
 
-        function hideLoader() {
-           $(".loader").hide();
-           $('#savechanges').prop("disabled", false).html("Send");
-        }
-    $(document).on("click", "#savechanges", function() {
-        var isValid = true;
-        var message = editor.getData();
-        var to = $("#to").val();
-        var cc = $("#cc").val();
-        var subject = $("#subject").val();
-        var user_id = $("#user_id").val();
-        if (!message) {
-            $("#error_message").text("Message is required.");
-            isValid = false;
-        } else {
-            $("#error_message").text("");
-        }
-        if (isValid) {
-            var postData = {
-                to: to || null,
-                message: message || null,
-                user_id: user_id || null,
-                cc: cc || null,
-                subject: subject || null,
-            };
-            $.ajax({
-                url: "<?php echo base_url('post-send-message')?>",
-                type: 'post',
-                data: postData,
-                  beforeSend: showLoader,
-                success: function(response) {
-                  hideLoader();
-                    if (response.status === 'success') {
-                        $("#remark").val("");
-                        $("#user_id").val("");
-                        $("#cc").val("");
-                        $("#subject").val("");
-                        $("#user_id").val("");
-                        $("#modelCreateMenu").modal('hide');
-                        Swal.fire({
-                            icon: "success",
-                            title: "Success",
-                            text: response.message,
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                location.reload();
-                            }
-                        });
-                    } else {
-                        Swal.fire({
-                            icon: "error",
-                            title: "Error",
-                            text: response.message,
-                        });
-                    }
-                },
-                error: function(xhr, textStatus, errorThrown) {
-                  hideLoader();
-                    Swal.fire({
-                        icon: "error",
-                        title: "Error",
-                        text: response.message,
-                    });
-                }
-            });
-        }
-    });
+       function hideLoader() {
+          $(".loader").hide();
+          $('#savechanges').prop("disabled", false).html("Send");
+       }
+   $(document).on("click", "#savechanges", function() {
+       var isValid = true;
+       var message = editor.getData();
+       var to = $("#to").val();
+       var cc = $("#cc").val();
+       var subject = $("#subject").val();
+       var user_id = $("#user_id").val();
+       if (!message) {
+           $("#error_message").text("Message is required.");
+           isValid = false;
+       } else {
+           $("#error_message").text("");
+       }
+       if (isValid) {
+           var postData = {
+               to: to || null,
+               message: message || null,
+               user_id: user_id || null,
+               cc: cc || null,
+               subject: subject || null,
+           };
+           $.ajax({
+               url: "<?php echo base_url('post-send-message')?>",
+               type: 'post',
+               data: postData,
+                 beforeSend: showLoader,
+               success: function(response) {
+                 hideLoader();
+                   if (response.status === 'success') {
+                       $("#remark").val("");
+                       $("#user_id").val("");
+                       $("#cc").val("");
+                       $("#subject").val("");
+                       $("#user_id").val("");
+                       $("#modelCreateMenu").modal('hide');
+                       Swal.fire({
+                           icon: "success",
+                           title: "Success",
+                           text: response.message,
+                       }).then((result) => {
+                           if (result.isConfirmed) {
+                               location.reload();
+                           }
+                       });
+                   } else {
+                       Swal.fire({
+                           icon: "error",
+                           title: "Error",
+                           text: response.message,
+                       });
+                   }
+               },
+               error: function(xhr, textStatus, errorThrown) {
+                 hideLoader();
+                   Swal.fire({
+                       icon: "error",
+                       title: "Error",
+                       text: response.message,
+                   });
+               }
+           });
+       }
+   });
 </script>

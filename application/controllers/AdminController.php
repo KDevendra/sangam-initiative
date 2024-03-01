@@ -1450,7 +1450,17 @@ class AdminController extends CI_Controller
                 $templateFile = FCPATH . "include/email/admin/temp_email_event_application_approve_format.html";
                 $subject = "Approval of Your Event Application";
                 $messageBody = file_get_contents($templateFile);
-                $placeholders = ["{registration_id}", "{event_name}", "{location}", "{full_name}", "{email}", "{phone_number}", "{event_date}"];
+                $placeholders = ["{registration_id}", "{event_name}", "{location}", "{full_name}", "{email}", "{phone_number}", "{event_date}", "{event_location_qr_code}"];
+                if ($applicationDetail->location === 'IIT Delhi') {
+                  $event_location_qr_code = 'Location_of_Sangam_IIT_Delhi_Event';
+                } else if ($applicationDetail->location === 'IIIT Bangalore') {
+                $event_location_qr_code = 'Location_of_Sangam_IIIT_Bangalore_Event';
+                }
+                elseif ($applicationDetail->location === 'IIIT Hyderabad') {
+                  $event_location_qr_code = 'Location_of_Sangam_IIIT_Hyderabad_Event';
+                } {
+                  $event_location_qr_code = '';
+                }
                 $values = [
                     $applicationDetail->registration_id,
                     $applicationDetail->event_name,
@@ -1459,6 +1469,7 @@ class AdminController extends CI_Controller
                     $applicationDetail->email,
                     $applicationDetail->phone_number,
                     $applicationDetail->event_date,
+                    $event_location_qr_code
                 ];
                 $messageBody = str_replace($placeholders, $values, $messageBody);
                 $emailSent = $this->mainEmailConfig($applicationDetail->email, $subject, $messageBody, "", "");
@@ -1546,18 +1557,22 @@ class AdminController extends CI_Controller
                 }
                 $sendEmail = $this->mainEmailConfig($to, $subject, $message, $cc);
                 if ($sendEmail) {
-                    $query = $this->BaseModel->insertData("email_messages", $postData);
-                    if ($query) {
-                        $response = [
-                            "status" => "success",
-                            "message" => "Email send.",
-                        ];
-                    } else {
-                        $response = [
-                            "status" => "error",
-                            "message" => "Something went wrong",
-                        ];
-                    }
+                    // $query = $this->BaseModel->insertData("email_messages", $postData);
+                    // if ($query) {
+                    //     $response = [
+                    //         "status" => "success",
+                    //         "message" => "Email send.",
+                    //     ];
+                    // } else {
+                    //     $response = [
+                    //         "status" => "error",
+                    //         "message" => "Something went wrong",
+                    //     ];
+                    // }
+                    $response = [
+                        "status" => "success",
+                        "message" => "Email send.",
+                    ];
                 } else {
                     $response = [
                         "status" => "error",
