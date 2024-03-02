@@ -20,9 +20,12 @@
       <div class="row">
          <div class="col-lg-12">
             <div class="card">
-               <div class="card-header">
-                  <h5 class="card-title mb-0">Approved Applications</h5>
-               </div>
+              <div class="card-header align-items-center d-flex">
+                 <h4 class="card-title mb-0 flex-grow-1">Approved Applications</h4>
+                 <div class="flex-shrink-0">
+                    <button type="button" id="downloadApprovedApplication" class="btn btn-primary btn-sm material-shadow-none"><i class="ri-download-fill"></i> Download Excel</button>
+                 </div>
+              </div>
                <div class="card-body">
                   <table id="ajax-datatables" class="display table table-bordered dt-responsive" style="width: 100%;"></table>
                </div>
@@ -243,5 +246,10 @@
    var $ = jQuery.noConflict();
    $(document).ready(function () {
       var dataTable = initializeDataTable();
+      $("#downloadApprovedApplication").click(function ()
+      {
+        var redirectUrl = "<?php echo base_url('download-event-registration/approved/2'); ?>";
+        window.location.href = redirectUrl;
+      })
    });
 </script>

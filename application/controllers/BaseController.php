@@ -15,6 +15,7 @@ class BaseController extends CI_Controller {
     }
     public function index() {
         $data['title'] = "Home: " . $this->projectTitle;
+        $data['curatedContentList'] = $this->BaseModel->getData('curated_content', ['status'=>2])->result_array();
         $this->load->view('base/index', $data);
     }
     public function about() {
@@ -132,6 +133,11 @@ class BaseController extends CI_Controller {
     public function suggestUseCases() {
         $data['title'] = "Suggest Use Cases : " . $this->projectTitle;
         $this->load->view('base/submit-use-cases', $data);
+    }
+    public function curatedContentDetail($page_slug) {
+        $data["title"] = "Curated Content : " . $this->projectTitle;
+        $data["curatedContentDetail"] = $this->BaseModel->getData("curated_content", ["page_slug" => $page_slug])->row();
+        $this->load->view("base/curated-content", $data);
     }
     public function getCoreCompetency() {
         try {

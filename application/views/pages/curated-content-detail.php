@@ -25,7 +25,7 @@
                   <h4 class="card-title mb-0">Curated Content</h4>
                </div>
                <div class="card-body form-steps">
-                  <form class="vertical-navs-step" action="<?php echo base_url('submit-curated-content'); ?>" method="post" enctype="multipart/form-data">
+                  <form class="vertical-navs-step" action="<?php echo base_url('submit-curated-content');?>" method="post" enctype="multipart/form-data" >
                      <div class="row gy-5">
                         <div class="col-lg-12">
                            <div class="px-lg-4">
@@ -45,40 +45,78 @@
                                  <div class="tab-pane fade active show" id="personal-information" role="tabpanel" aria-labelledby="personal-information-tab">
                                     <div>
                                        <div class="row g-3">
+                                          <?php if (isset($flag) && $flag === 'view') { ?>
+                                          <div class="col-sm-3">
+                                             <label for="firstName" class="form-label">Status</label>
+                                             <?php if ($curatedContentDetail->status === '1') { ?>
+                                             <p><span class="badge bg-info">Pending</span></p>
+                                           <?php } else if ($curatedContentDetail->status === '2') { ?>
+                                             <p><span class="badge bg-success">Approved</span></p>
+                                             <?php } else { ?>
+                                             <p><span class="badge bg-danger">Rejected</span></p>
+                                             <?php } ?>
+                                          </div>
+                                          <?php } ?>
                                           <div class="col-sm-3">
                                              <label for="firstName" class="form-label">Title <span class="text-danger">*</span></label>
-                                             <input type="text"  class="form-control" id="title" name="title" placeholder="Enter title" value="<?php if (isset($userDetail->title)) {
-                                                echo  $userDetail->title;
+                                             <?php if (isset($flag) && $flag === 'view') { ?>
+                                             <p><?php echo $curatedContentDetail->title; ?></p>
+                                             <?php } else { ?>
+                                             <input type="text"  class="form-control" id="title" name="title" placeholder="Enter title" value="<?php if (isset($curatedContentDetail->title)) {
+                                                echo  $curatedContentDetail->title;
                                                 }; ?>" />
+                                             <?php } ?>
                                           </div>
                                           <div class="col-sm-3">
                                              <label for="sub_title" class="form-label">Sub Title</label>
-                                             <input type="text"  class="form-control" id="sub_title" name="sub_title" placeholder="Enter sub title" value="<?php if (isset($userDetail->sub_title)) {
-                                                echo  $userDetail->sub_title;
+                                             <?php if (isset($flag) && $flag === 'view') { ?>
+                                             <p><?php echo $curatedContentDetail->sub_title; ?></p>
+                                             <?php } else { ?>
+                                             <input type="text"  class="form-control" id="sub_title" name="sub_title" placeholder="Enter sub title" value="<?php if (isset($curatedContentDetail->sub_title)) {
+                                                echo  $curatedContentDetail->sub_title;
                                                 }; ?>" />
+                                             <?php } ?>
                                           </div>
                                           <div class="col-sm-3">
                                              <label for="image" class="form-label">Image</label>
-                                             <input type="file"  class="form-control" id="image" name="image"  />
+                                             <?php if (isset($flag) && $flag === 'view') { ?>
+                                             <p>  <a target="_blank" href="<?php echo base_url('uploads/cc_image/').$curatedContentDetail->image;?>">View File</a></p>
+                                             <?php } else { ?>
+                                             <input type="file"  class="form-control" id="attachment" name="attachment"  />
+                                             <?php } ?>
                                           </div>
                                           <div class="col-sm-3">
                                              <label for="link" class="form-label">Link</label>
-                                             <input type="url"  class="form-control" id="link" name="link" placeholder="Enter Link URL"  value="<?php if (isset($userDetail->link)) {
-                                                echo  $userDetail->link;
+                                             <?php if (isset($flag) && $flag === 'view') { ?>
+                                             <p><a target="_blank" href="<?php echo $curatedContentDetail->link; ?>">View Link</a> </p>
+                                             <?php } else { ?>
+                                             <input type="url"  class="form-control" id="link" name="link" placeholder="Enter Link URL"  value="<?php if (isset($curatedContentDetail->link)) {
+                                                echo  $curatedContentDetail->link;
                                                 }; ?>" />
+                                             <?php } ?>
                                           </div>
-                                          <div class="col-sm-12">
-                                              <label for="description" class="form-label">Description <span class="text-danger">*</span></label>
-                                              <textarea name="content" id="content"><?php if (isset($userDetail->content)) {echo $userDetail->content;}; ?></textarea>
+                                          <div class="<?php if (isset($flag) && $flag === 'view') {
+                                             echo "col-sm-9";
+                                             } else {
+                                             echo "col-sm-12";
+                                             } ?>">
+                                             <label for="description" class="form-label">Description <span class="text-danger">*</span></label>
+                                             <?php if (isset($flag) && $flag === 'view') { ?>
+                                             <p><?php echo $curatedContentDetail->content; ?></p>
+                                             <?php } else { ?>
+                                             <textarea name="content" id="content"><?php if (isset($curatedContentDetail->content)) {echo $curatedContentDetail->content;} ?></textarea>
+                                             <?php } ?>
                                           </div>
-
                                        </div>
                                     </div>
+                                    <?php if (isset($flag) && $flag === 'view') {
+                                       } else { ?>
                                     <div class="d-flex align-items-start gap-3 mt-4">
                                        <button type="submit" class="btn btn-primary">Save Details</button>
                                     </div>
+                                    <?php } ?>
                                  </div>
-                                </div>
+                              </div>
                            </div>
                         </div>
                      </div>
@@ -90,12 +128,12 @@
    </div>
 </div>
 <script>
-  ClassicEditor
-    .create( document.querySelector( '#content' ) )
-    .then( content => {
-      console.log( content );
-    } )
-    .catch( error => {
-      console.error( error );
-    } );
+   ClassicEditor
+     .create( document.querySelector( '#content' ) )
+     .then( content => {
+       console.log( content );
+     } )
+     .catch( error => {
+       console.error( error );
+     } );
 </script>

@@ -207,8 +207,15 @@
                 <div class="cta-content-box text-white mb-50 wow fadeInLeft" style="visibility: visible;">
                     <div class="section-title mb-20"><span class="sub-title text-white"><img src="http://localhost/sangam-initiative/include/web/custom/technology_white.png" alt=""> Join the Innovation Journey Towards Transformative Solutions</span>
                         <h2>Register Now for Expression of Interest (EoI)</h2>
+
                     </div>
-                    <p class="mb-35">Be part of shaping the future of infrastructure planning and design. Register now for the Expression of Interest and contribute to groundbreaking solutions</p><a class="main-btn golden-btn preRegisBtn" style="gap: 10px;" href="<?php echo base_url('registration'); ?>"><i class="far  fa-table" aria-hidden="true"></i> Register Now</a>
+                    <p class="mb-10">Be part of shaping the future of infrastructure planning and design. Register now for the Expression of Interest and contribute to groundbreaking solutions</p>
+                    <h3 class="mb-10">Submission of response to EoI Online</h3>
+                    <div class="d-flex justify-content-center">
+                            <h4 style="color: #ff4848;background-color: #ffffffe5;width: fit-content;border-radius: 5px;padding: 10px 50px;margin-top: 18px;font-weight: bold;font-size: 20px;font-family: 'Montserrat', sans-serif;" class="mb-35">15th Feb to 15 March 2024</h4>
+                    </div>
+                    <a class="main-btn golden-btn preRegisBtn" style="gap: 10px;" href="<?php echo base_url('registration'); ?>"><i class="far  fa-table" aria-hidden="true"></i> Register Now</a>
+
                 </div>
             </div>
         </div>

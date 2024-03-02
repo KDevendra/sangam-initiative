@@ -2,7 +2,7 @@
     Template Name: Gadden - Garden & Landscaping HTML Template
     Template URI: site.com
     Description: Gadden is a creative & unique HTML template for Landscaping, Gardening, Groundskeeping, Lawn Services, Florists, Flower Shops and companies that offer related services.
-    Author: WebTend 
+    Author: WebTend
     Author URI: https://webtend.net/
     Version: 1.0
 
@@ -32,7 +32,7 @@
 
     //===== Main Menu
     function mainMenu() {
-        
+
         // Variables
         var var_window = $(window),
         navContainer = $('.header-navigation'),
@@ -104,11 +104,11 @@
 
 
     //===== Preloader
-    
+
     $(window).on('load', function(event) {
         $('.preloader').delay(500).fadeOut('500');
     })
-    
+
     //===== Sticky
 
     $(window).on('scroll', function(event) {
@@ -135,9 +135,9 @@
             scrollTop: 0,
         }, 1500);
     });
-    
+
     //===== Counter js
-    
+
     if ($('.count').length){
         $('.count').counterUp({
             delay: 100,
@@ -146,7 +146,7 @@
     }
 
     //===== Magnific-popup js
-    
+
     if ($('.video-popup').length){
         $('.video-popup').magnificPopup({
             type: 'iframe',
@@ -158,27 +158,27 @@
     if ($('.img-popup').length){
         $(".img-popup").magnificPopup({
             type: "image",
-             gallery: { 
-              enabled: true 
+             gallery: {
+              enabled: true
             }
         });
     }
-    
+
     //===== Nice select js
-    
+
     if ($('select').length){
         $('select').niceSelect();
     }
-    
+
     //===== Slick slider js
 
     $('.hero-slider-one, .hero-slider-two').on('init', function(e, slick) {
         var $firstAnimatingElements = $('div.single-slider:first-child').find('[data-animation]');
-        doAnimations($firstAnimatingElements);    
+        doAnimations($firstAnimatingElements);
     });
     $('.hero-slider-one, .hero-slider-two').on('beforeChange', function(e, slick, currentSlide, nextSlide) {
         var $animatingElements = $('div.single-slider[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
-        doAnimations($animatingElements);    
+        doAnimations($animatingElements);
     });
     function doAnimations(elements) {
         var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -186,7 +186,7 @@
             var $this = $(this);
             var $animationDelay = $this.data('delay');
             var $animationType = 'animated ' + $this.data('animation');
-            $this.css({ 
+            $this.css({
                 'animation-delay': $animationDelay,
                 '-webkit-animation-delay': $animationDelay
             });
@@ -384,7 +384,7 @@
                 {
                     breakpoint: 1400,
                     settings: {
-                        slidesToShow: 3
+                        slidesToShow: 4
                     }
                 },
                 {
@@ -564,7 +564,7 @@
     }
 
     //====== Isotope js
-    
+
     if ($('.gallery-active').length) {
         $('.gallery-active').imagesLoaded( function() {
             // items on button click
@@ -595,12 +595,12 @@
 
 
     //===== Wow js
-    
+
     new WOW().init();
 
 
     //======= Quantity Number js
-    
+
     $('.quantity-down').on('click', function(){
         var numProduct = Number($(this).next().val());
         if(numProduct > 1) $(this).next().val(numProduct - 1);
@@ -611,7 +611,7 @@
     });
 
     //======= Price ranger
-    
+
     if ($('#slider-range').length) {
         $( "#slider-range" ).slider({
             range: true,

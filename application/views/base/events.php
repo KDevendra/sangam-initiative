@@ -284,11 +284,10 @@
 <section class="team-section pt-50" id="speakersDes">
    <div class="container">
       <div class="row justify-content-center">
-         <div class="col-lg-8">
-            <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+         <div class="col-lg-12">
+            <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
                <span class="sub-title"><img src="<?php echo base_url('');?>include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span>
                <h2>Meet Our Speaker's</h2>
-               <h3 class="mt-20">Coming Soon!</h3>
             </div>
          </div>
       </div>
@@ -298,56 +297,101 @@
             contribute your unique perspective. Together, let's make our content truly exceptional.
          </p>
       </div>
-      <!-- <div class="row">
-         <div class="col-lg-3 col-sm-6">
-             <div class="single-team-item-two mb-40 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
-                 <div class="member-img">
-                     <img src="<?php echo base_url('');?>include/web/custom/Benjamin_Hughes.jpg" alt="Team Image">
+      <div class="projects-slider-four speakerSection wow fadeInUp" data-wow-delay=".2s">
 
-                 </div>
-                 <div class="member-info text-center">
-                     <h4 class="title"><a href="javascrip:void(0)">Benjamin Hughes</a></h4>
-                     <p>Senior Speaker</p>
-                 </div>
-             </div>
+         <div class="single-project-item-four">
+            <div class="project-img">
+               <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Abhilasha_Purwar.jpg" alt="Speaker_Abhilasha_Purwar" />
+               <div class="hover-content">
+                  <div class="text text-white">
+                     <h3 class="title"><a href="javascript:void(0)">Abhilasha Purwar</a></h3>
+                     <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     <p style="font-size:13px">Abhilasha Purwar is Fulbright | Yale | IIT alum with 15+ years of global experience across Private Equity, Product Development, Business Development and Policy. Abhilasha founded Blue Sky Analytics in 2019 with a mission to solve climate change and advance environmental protection by leveraging technology, data, and AI.</p>
+                  </div>
+               </div>
+               <div class="project-content">
+                  <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                  </div>
+               </div>
+            </div>
+            <div class="text_for_outreach height_150">
+               <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Abhilasha Purwar</a></p>
+               <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder & CEO</h5>
+               <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Blue Sky Analytics</h4>
+            </div>
          </div>
-         <div class="col-lg-3 col-sm-6">
-             <div class="single-team-item-two mb-40 wow fadeInUp" data-wow-delay=".25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
-                 <div class="member-img">
-                     <img src="<?php echo base_url('');?>include/web/custom/Chester_J_Thurman.jpg" alt="Team Image">
-
-                 </div>
-                 <div class="member-info text-center">
-                     <h4 class="title"><a href="javascrip:void(0)">Chester J. Thurman</a></h4>
-                     <p>Junior Speaker</p>
-                 </div>
-             </div>
+         <div class="single-project-item-four">
+            <div class="project-img">
+               <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Jayant_Ratti.jpg" alt="Speaker_Jayant_Ratti" />
+               <div class="hover-content">
+                  <div class="text text-white">
+                     <h3 class="title"><a href="javascript:void(0)">Jayant Ratti</a></h3>
+                     <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     <p style="font-size:13px">Jayant Ratti holds a PhD in Robotics & Intelligent Machines from Georgia Tech, Masters in Electrical & Computer Engineering from Georgia Tech, Bachelors in Electronics & Communication from University of Delhi, Delhi College of Engineering. Has over 100 Patents to his name and Leads councils for various cities to help in the smartness as a service to support the India Ecosystem. Dr Jayant has had two successful companies in the US and worked with US Governments, DARPA, Google X, Boeing among other organizations.</p>
+                  </div>
+               </div>
+               <div class="project-content">
+                  <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                  </div>
+               </div>
+            </div>
+            <div class="text_for_outreach height_150">
+               <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Jayant Ratti</a></p>
+               <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO of NAYAN</h5>
+               <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Nayan Technologies</h4>
+            </div>
          </div>
-         <div class="col-lg-3 col-sm-6">
-             <div class="single-team-item-two mb-40 wow fadeInDown" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
-                 <div class="member-img">
-                     <img src="<?php echo base_url('');?>include/web/custom/Benjamin_Hughes_.jpg" alt="Team Image">
-
-                 </div>
-                 <div class="member-info text-center">
-                     <h4 class="title"><a href="javascrip:void(0)">Benjamin Hughes</a></h4>
-                     <p>Senior Speaker</p>
-                 </div>
-             </div>
+         <div class="single-project-item-four">
+            <div class="project-img">
+               <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Ojasvi_Bhatia.jpg" alt="Speaker_Ojasvi_Bhatia" />
+               <div class="hover-content">
+                  <div class="text text-white">
+                     <h3 class="title"><a href="javascript:void(0)">Ojasvi Bhatia
+                        </a>
+                     </h3>
+                     <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     <p style="font-size:13px">Ojasvi a.k.a OJ, leads AR & MR partnerships for Meta in India. In his ~6 years at Meta, he has worked on bringing the innovative, interactive & experiential technologies like Meta Spark to India and building sustainable flywheel around the same. He is a strong believer that Augmented / Mixed / Virtual Reality enables better connections amongst the consumers of these technologies. Prior to Meta, OJ led Ground Transportation vertical at Goibibo from a Product POV and prior to that co-founded an Ed-Tech Startup.</p>
+                  </div>
+               </div>
+               <div class="project-content">
+                  <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                  </div>
+               </div>
+            </div>
+            <div class="text_for_outreach height_150">
+               <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Ojasvi Bhatia
+                  </a>
+               </p>
+               <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Lead, AR & MR Partnerships</h5>
+               <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Meta, India</h4>
+            </div>
          </div>
-         <div class="col-lg-3 col-sm-6">
-             <div class="single-team-item-two mb-40 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
-                 <div class="member-img">
-                     <img src="<?php echo base_url('');?>include/web/custom/Benjamin_Hughes.jpg" alt="Team Image">
-
-                 </div>
-                 <div class="member-info text-center">
-                     <h4 class="title"><a href="javascrip:void(0)">Benjamin Hughes</a></h4>
-                     <p>Senior Speaker</p>
-                 </div>
-             </div>
+         <div class="single-project-item-four">
+            <div class="project-img">
+               <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Vibhu_Sinha.jpg" alt="Speaker_Vibhu_Sinha" />
+               <div class="hover-content">
+                  <div class="text text-white">
+                     <h3 class="title"><a href="javascript:void(0)">Vibhu Sinha</a></h3>
+                     <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     <p style="font-size:13px">Vibhu Sinha is leading the Presales function for North and Eastern regions of Esri India technologies Pvt Ltd, with an impressive 15-year track record in the field of GIS and Remote Sensing. He comes with a strong background in customer advising and executing enterprise-level digital transformation programs through Geographic Information Systems (GIS) and Location Intelligence.</p>
+                  </div>
+               </div>
+               <div class="project-content">
+                  <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                  </div>
+               </div>
+            </div>
+            <div class="text_for_outreach height_150">
+               <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Vibhu Sinha</a></p>
+               <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Senior Manager, Presales Consulting</h5>
+               <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Esri India Technologies Private Limited</h4>
+            </div>
          </div>
-       </div> -->
+      </div>
    </div>
 </section>
 <script>

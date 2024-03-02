@@ -1245,14 +1245,40 @@
                   <div class="about-three_content-box pl-lg-0 wow fadeInRight text-center" style="visibility: visible; animation-name: fadeInRight;">
                      <div class="section-title mb-25 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                         <span class="sub-title">Curated Content </span>
-                        <h2>Coming Soon!</h2>
                      </div>
-                     <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                        Join us as we embark on an exhilarating journey of content creation! Your participation is key to shaping the direction of our upcoming material. Dive into interactive discussions, share your ideas, and
-                        contribute your unique perspective. Together, let's make our content truly exceptional.
-                     </p>
                   </div>
                </div>
+            </div>
+            <div class="testimonial-slider-one wow fadeInUp">
+              <?php
+                function limit_words($text, $limit) {
+                   $words = explode(" ", $text);
+
+                   if (count($words) > $limit) {
+                       $limited_text = implode(" ", array_slice($words, 0, $limit));
+                       $limited_text .= '...';
+                       return $limited_text;
+                   } else {
+                       return $text;
+                   }
+                }
+                ?>
+                <?php foreach ($curatedContentList as $testimonial): ?>
+                   <a href="<?php echo base_url('curated/' . $testimonial['page_slug']); ?>">
+                       <div class="single-testimonial-item">
+                           <div class="testimonial-inner-content">
+                               <img src="<?php echo base_url('uploads/cc_image/' . $testimonial['image']); ?>" alt="">
+                               <div class="quote-rating-box">
+                                   <div class="ratings-box">
+                                       <h6><?php echo $testimonial['title']; ?></h6>
+                                   </div>
+                               </div>
+                               <p><?php echo limit_words($testimonial['content'], 20); ?></p>
+                           </div>
+                       </div>
+                   </a>
+                <?php endforeach; ?>
+
             </div>
          </div>
       </div>

@@ -1,10 +1,8 @@
 <?php
 defined("BASEPATH") or exit("No direct script access allowed");
-class AdminController extends CI_Controller
-{
+class AdminController extends CI_Controller {
     var $projectTitle = "Sangam Initiative";
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct();
         if (!isset($this->session->login["user_level"]) || empty($this->session->login["login_id"])) {
             redirect("login");
@@ -13,28 +11,16 @@ class AdminController extends CI_Controller
         $this->load->model("BaseModel");
         $this->load->helper("common_helper");
     }
-    private function mainEmailConfig($to, $subject, $message, $cc = "", $attach = "")
-    {
+    private function mainEmailConfig($to, $subject, $message, $cc = "", $attach = "") {
         try {
             $query = $this->BaseModel->getData('email_config', ['is_active' => 1])->row();
             if ($query) {
                 $this->load->library("email");
-                $config = [
-                    "protocol" => $query->protocol,
-                    "smtp_host" => $query->smtp_host,
-                    "smtp_port" => $query->smtp_port,
-                    //"smtp_user" => $query->smtp_user,
-                    //"smtp_pass" => $query->smtp_pass,
-                    //"smtp crypto" => $query->smtp_crypto,
-                    "smtp_user" => '',
-                    "smtp_pass" => '',
-                    "smtp_auth" => false,
-                    "mailtype" => $query->mailtype,
-                    "crlf" => $query->crlf,
-                    "newline" => $query->newline,
-                    "charset" => $query->charset,
-                    "wordwrap" => $query->wordwrap,
-                ];
+                $config = ["protocol" => $query->protocol, "smtp_host" => $query->smtp_host, "smtp_port" => $query->smtp_port,
+                //"smtp_user" => $query->smtp_user,
+                //"smtp_pass" => $query->smtp_pass,
+                //"smtp crypto" => $query->smtp_crypto,
+                "smtp_user" => '', "smtp_pass" => '', "smtp_auth" => false, "mailtype" => $query->mailtype, "crlf" => $query->crlf, "newline" => $query->newline, "charset" => $query->charset, "wordwrap" => $query->wordwrap, ];
                 $this->email->initialize($config);
                 $this->email->set_crlf($query->crlf);
                 $this->email->set_newline($query->newline);
@@ -58,18 +44,18 @@ class AdminController extends CI_Controller
                 // echo "No active email configuration found.";
                 return false;
             }
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             // echo "Email sending error: " . $e->getMessage();
             return false;
         }
     }
-    private function handleFileUpload($inputName, $uploadPath, $allowedTypes, $maxSize)
-    {
+    private function handleFileUpload($inputName, $uploadPath, $allowedTypes, $maxSize) {
         if (!empty($_FILES[$inputName]["name"])) {
             $config["upload_path"] = $uploadPath;
             $config["max_size"] = $maxSize;
             $config["allowed_types"] = $allowedTypes;
-            $CI = &get_instance();
+            $CI = & get_instance();
             $CI->load->library("upload", $config);
             $CI->upload->initialize($config);
             if ($CI->upload->do_upload($inputName)) {
@@ -90,8 +76,7 @@ class AdminController extends CI_Controller
             return "Error: No file selected for upload.";
         }
     }
-    private function checkUserLevel($allowedLevels)
-    {
+    private function checkUserLevel($allowedLevels) {
         $userLevel = $this->session->login["user_level"];
         if (!in_array($userLevel, $allowedLevels)) {
             $this->load->driver("cache");
@@ -100,8 +85,7 @@ class AdminController extends CI_Controller
             return redirect("sign-in");
         }
     }
-    public function adminDashboard()
-    {
+    public function adminDashboard() {
         $data["title"] = "Dashboard : " . $this->projectTitle;
         $data["page_name"] = "pages/dashboard";
         $visitors = $this->BaseModel->getData("visitors")->result_array();
@@ -136,15 +120,13 @@ class AdminController extends CI_Controller
         $data["mobileCount"] = $mobileCount;
         $this->load->view("component/index", $data);
     }
-    public function logout()
-    {
+    public function logout() {
         $this->load->driver("cache");
         $this->session->sess_destroy();
         $this->cache->clean();
         return redirect("login");
     }
-    public function profile()
-    {
+    public function profile() {
         $user_id = $this->session->login["login_id"];
         $data["profileData"] = $this->BaseModel->getData("login", ["login_id" => $user_id])->row();
         if ($data["profileData"]) {
@@ -155,8 +137,7 @@ class AdminController extends CI_Controller
             echo "No data found for user with ID: $user_id";
         }
     }
-    public function editProfile($user_id)
-    {
+    public function editProfile($user_id) {
         $user_id = customDecrypt($user_id);
         $data["profileData"] = $this->BaseModel->getData("login", ["user_id" => $user_id])->row();
         if ($data["profileData"]) {
@@ -168,18 +149,16 @@ class AdminController extends CI_Controller
             echo "No data found for user with ID: $user_id";
         }
     }
-    public function projectSettings()
-    {
+    public function projectSettings() {
         $data["title"] = $this->projectTitle . ": Dashboard";
         $data["page_name"] = "theme/project-settings";
         $this->load->view("component/index", $data);
     }
-    public function themeCustomizerOptions()
-    {
+    public function themeCustomizerOptions() {
         $response = [];
         try {
             if ($this->input->post()) {
-                $postData = ["layout" => $this->input->post("layout"), "sidebar_user_profile_avatar" => $this->input->post("avatar")];
+                $postData = ["layout" => $this->input->post("layout"), "sidebar_user_profile_avatar" => $this->input->post("avatar") ];
                 $query = $this->BaseModel->updateData("theme_customizer_options", $postData, ["id" => 1]);
                 if ($query) {
                     $response["status"] = true;
@@ -192,21 +171,21 @@ class AdminController extends CI_Controller
                 $response["status"] = false;
                 $response["message"] = "Invalid request data.";
             }
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             $response["status"] = false;
             $response["message"] = "An error occurred: " . $e->getMessage();
         }
         return $response;
     }
-    public function users($action = null, $user_id = null)
-    {
+    public function users($action = null, $user_id = null) {
         $this->checkUserLevel([1]);
         $data["title"] = $action . "Users : " . $this->projectTitle;
         switch ($action) {
             case "add":
                 $data["flag"] = "add";
                 $data["page_name"] = "pages/user-detail";
-                break;
+            break;
             case "view":
                 if ($user_id !== null) {
                     $data["flag"] = "view";
@@ -214,7 +193,7 @@ class AdminController extends CI_Controller
                     $data["page_name"] = "pages/user-detail";
                 } else {
                 }
-                break;
+            break;
             case "edit":
                 if ($user_id !== null) {
                     $data["flag"] = "edit";
@@ -222,7 +201,7 @@ class AdminController extends CI_Controller
                     $data["page_name"] = "pages/user-detail";
                 } else {
                 }
-                break;
+            break;
             case "delete":
                 if ($user_id !== null) {
                     $query = $this->BaseModel->deleteData("login", ["user_id" => $user_id]);
@@ -246,22 +225,21 @@ class AdminController extends CI_Controller
                     } else {
                     }
                 }
-                break;
+            break;
             default:
                 $data["page_name"] = "pages/users";
-                break;
+            break;
         }
         $this->load->view("component/index", $data);
     }
-    public function suggestUseCases($action = null, $case_id = null)
-    {
+    public function suggestUseCases($action = null, $case_id = null) {
         $this->checkUserLevel([1, 2]);
         $data["title"] = $action . "Suggest Use Cases : " . $this->projectTitle;
         switch ($action) {
             case "add":
                 $data["flag"] = "add";
                 $data["page_name"] = "pages/submit-use-cases-detail";
-                break;
+            break;
             case "view":
                 if ($case_id !== null) {
                     $data["flag"] = "view";
@@ -269,7 +247,7 @@ class AdminController extends CI_Controller
                     $data["page_name"] = "pages/submit-use-cases-detail";
                 } else {
                 }
-                break;
+            break;
             case "edit":
                 if ($case_id !== null) {
                     $data["flag"] = "edit";
@@ -277,7 +255,7 @@ class AdminController extends CI_Controller
                     $data["page_name"] = "pages/user-detail";
                 } else {
                 }
-                break;
+            break;
             case "delete":
                 if ($case_id !== null) {
                     $query = $this->BaseModel->deleteData("login", ["case_id" => $case_id]);
@@ -301,22 +279,21 @@ class AdminController extends CI_Controller
                     } else {
                     }
                 }
-                break;
+            break;
             default:
                 $data["page_name"] = "pages/submit-use-cases";
-                break;
+            break;
         }
         $this->load->view("component/index", $data);
     }
-    public function submitedUseCases($action = null, $case_id = null)
-    {
+    public function submitedUseCases($action = null, $case_id = null) {
         $this->checkUserLevel([1]);
         $data["title"] = $action . "Submited Use Cases : " . $this->projectTitle;
         switch ($action) {
             case "add":
                 $data["flag"] = "add";
                 $data["page_name"] = "pages/submit-use-cases-detail";
-                break;
+            break;
             case "view":
                 if ($case_id !== null) {
                     $data["flag"] = "view";
@@ -324,7 +301,7 @@ class AdminController extends CI_Controller
                     $data["page_name"] = "pages/submit-use-cases-detail";
                 } else {
                 }
-                break;
+            break;
             case "edit":
                 if ($case_id !== null) {
                     $data["flag"] = "edit";
@@ -332,7 +309,7 @@ class AdminController extends CI_Controller
                     $data["page_name"] = "pages/user-detail";
                 } else {
                 }
-                break;
+            break;
             case "delete":
                 if ($case_id !== null) {
                     $query = $this->BaseModel->deleteData("login", ["case_id" => $case_id]);
@@ -356,15 +333,14 @@ class AdminController extends CI_Controller
                     } else {
                     }
                 }
-                break;
+            break;
             default:
                 $data["page_name"] = "pages/submited-use-cases";
-                break;
+            break;
         }
         $this->load->view("component/index", $data);
     }
-    public function registerForEvent()
-    {
+    public function registerForEvent() {
         $this->checkUserLevel([2]);
         $data["title"] = $this->projectTitle . ": Register for Event";
         $data["page_name"] = "pages/register-for-event";
@@ -372,15 +348,14 @@ class AdminController extends CI_Controller
         $data["isExist"] = $this->BaseModel->getData("event_registration", ["user_id" => $this->session->login["user_id"]])->row();
         $this->load->view("component/index", $data);
     }
-    public function reportIssue($action = null, $issue_id = null)
-    {
+    public function reportIssue($action = null, $issue_id = null) {
         $this->checkUserLevel([1, 2]);
         $data["title"] = $action . "Report Issue : " . $this->projectTitle;
         switch ($action) {
             case "add":
                 $data["flag"] = "add";
                 $data["page_name"] = "pages/report-issue";
-                break;
+            break;
             case "view":
                 if ($issue_id !== null) {
                     $data["flag"] = "view";
@@ -388,15 +363,14 @@ class AdminController extends CI_Controller
                     $data["page_name"] = "pages/report-issue";
                 } else {
                 }
-                break;
+            break;
             default:
                 $data["page_name"] = "pages/report-issue";
-                break;
+            break;
         }
         $this->load->view("component/index", $data);
     }
-    public function reportedIssue($action = null, $issue_id = null)
-    {
+    public function reportedIssue($action = null, $issue_id = null) {
         $this->checkUserLevel([1]);
         $data["title"] = $action . "Reported Issue : " . $this->projectTitle;
         switch ($action) {
@@ -407,22 +381,21 @@ class AdminController extends CI_Controller
                     $data["page_name"] = "pages/reported-issue";
                 } else {
                 }
-                break;
+            break;
             default:
                 $data["page_name"] = "pages/reported-issue";
-                break;
+            break;
         }
         $this->load->view("component/index", $data);
     }
-    public function submittedSpeakerRequest($action = null, $ap_req = null)
-    {
+    public function submittedSpeakerRequest($action = null, $ap_req = null) {
         $this->checkUserLevel([1]);
         $data["title"] = $action . "Submitted Speaker Request : " . $this->projectTitle;
         switch ($action) {
             case "add":
                 $data["flag"] = "add";
                 $data["page_name"] = "pages/submitted-speaker-request-detail";
-                break;
+            break;
             case "view":
                 if ($ap_req !== null) {
                     $data["flag"] = "view";
@@ -430,15 +403,14 @@ class AdminController extends CI_Controller
                     $data["page_name"] = "pages/submitted-speaker-request-detail";
                 } else {
                 }
-                break;
+            break;
             default:
                 $data["page_name"] = "pages/submitted-speaker-request";
-                break;
+            break;
         }
         $this->load->view("component/index", $data);
     }
-    public function submitSuggestUseCases($action = null, $case_id = null)
-    {
+    public function submitSuggestUseCases($action = null, $case_id = null) {
         $this->checkUserLevel([2]);
         try {
             if ($this->input->post()) {
@@ -470,21 +442,7 @@ class AdminController extends CI_Controller
                         $this->session->set_flashdata("error", $upload_relevant_document);
                         return redirect("submit-use-cases");
                     }
-                    $postData = [
-                        "title" => $title,
-                        "abstract" => $abstract,
-                        "objective" => $objective,
-                        "target_areas" => $targetArea,
-                        "technologies_used" => $technologies,
-                        "data_sources" => $dataSources,
-                        "expected_outcomes" => $outcomesImpact,
-                        "innovative_aspects" => $innovativeAspects,
-                        "feasibility_and_challenges" => $feasibilityChallenges,
-                        "relevance" => $relevance,
-                        "user_id" => $this->session->login["user_id"],
-                        "upload_relevant_document" => $upload_relevant_document,
-                        "created_at" => date("Y-m-d H:i:s"),
-                    ];
+                    $postData = ["title" => $title, "abstract" => $abstract, "objective" => $objective, "target_areas" => $targetArea, "technologies_used" => $technologies, "data_sources" => $dataSources, "expected_outcomes" => $outcomesImpact, "innovative_aspects" => $innovativeAspects, "feasibility_and_challenges" => $feasibilityChallenges, "relevance" => $relevance, "user_id" => $this->session->login["user_id"], "upload_relevant_document" => $upload_relevant_document, "created_at" => date("Y-m-d H:i:s"), ];
                     switch ($action) {
                         case "add":
                             $checkSubmitCase = $this->BaseModel->getData("suggest_use_cases", ["user_id" => $this->session->login["user_id"]])->num_rows();
@@ -507,7 +465,7 @@ class AdminController extends CI_Controller
                                     $this->session->set_flashdata("error", "Failed to add suggest case details. Please try again.");
                                 }
                             }
-                            break;
+                        break;
                         case "edit":
                             if ($case_id !== null) {
                                 $query = $this->BaseModel->updateData("suggest_use_cases", $postData, ["case_id" => $case_id]);
@@ -518,7 +476,7 @@ class AdminController extends CI_Controller
                                 }
                             } else {
                             }
-                            break;
+                        break;
                         case "delete":
                             if ($case_id !== null) {
                                 $query = $this->BaseModel->deleteData("suggest_use_cases", ["case_id" => $case_id]);
@@ -533,9 +491,9 @@ class AdminController extends CI_Controller
                                 }
                             } else {
                             }
-                            break;
+                        break;
                         default:
-                            break;
+                        break;
                     }
                     return redirect("submit-use-cases");
                 }
@@ -543,13 +501,13 @@ class AdminController extends CI_Controller
                 $this->session->set_flashdata("error", "No POST data received");
                 return redirect("submit-use-cases/" . $action . "/" . $case_id);
             }
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             $this->session->set_flashdata("error", "" . $e->getMessage() . "");
             return redirect("submit-use-cases/" . $action . "/" . $case_id);
         }
     }
-    public function submitReporIssue($action = null, $case_id = null)
-    {
+    public function submitReporIssue($action = null, $case_id = null) {
         $this->checkUserLevel([1, 2]);
         try {
             if ($this->input->post()) {
@@ -563,7 +521,7 @@ class AdminController extends CI_Controller
                     $issue_title = $this->input->post("issue_title");
                     $issue_description = $this->input->post("issue_description");
                     $reported_by = $this->input->post("reported_by");
-                    $postData = ["issue_title" => $issue_title, "issue_description" => $issue_description, "reported_by" => $reported_by, "status" => "open", "created_at" => date("Y-m-d H:i:s")];
+                    $postData = ["issue_title" => $issue_title, "issue_description" => $issue_description, "reported_by" => $reported_by, "status" => "open", "created_at" => date("Y-m-d H:i:s") ];
                     switch ($action) {
                         case "add":
                             $query = $this->BaseModel->insertData("issues", $postData);
@@ -581,7 +539,7 @@ class AdminController extends CI_Controller
                             } else {
                                 $this->session->set_flashdata("error", "Failed to add suggest case details. Please try again.");
                             }
-                            break;
+                        break;
                     }
                     return redirect("report-issue/add");
                 }
@@ -589,14 +547,14 @@ class AdminController extends CI_Controller
                 $this->session->set_flashdata("error", "No POST data received");
                 return redirect("report-issue/add");
             }
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             $this->session->set_flashdata("error", "" . $e->getMessage() . "");
             return redirect("report-issue/add");
         }
     }
-    public function submitCuratedContent($action = null, $cc_id = null)
-    {
-        $this->checkUserLevel([2]);
+    public function submitCuratedContent($action = null, $cc_id = null) {
+        $this->checkUserLevel([1,2]);
         try {
             if ($this->input->post()) {
                 $this->form_validation->set_rules("title", "title", "trim|required");
@@ -607,25 +565,15 @@ class AdminController extends CI_Controller
                 } else {
                     $title = $this->input->post("title");
                     $sub_title = $this->input->post("sub_title");
-                    $image = $this->input->post("image");
+                    $image = $_FILES['attachment']['name'];
                     $content = $this->input->post("content");
                     $link = $this->input->post("link");
                     if (!empty($image)) {
-                        $image_file = $this->handleFileUpload("image", "./uploads/cc_image/", "jpg|png|jpeg", 2000);
+                        $image_file = $this->handleFileUpload("attachment", "uploads/cc_image/", "jpg|png|jpeg", 2000);
                     } else {
                         $image_file = "";
                     }
-                    $postData = [
-                        "title" => $title,
-                        "sub_title" => $sub_title,
-                        "image" => $image_file,
-                        "content" => $content,
-                        "page_slug" => str_replace(" ", "-", strtolower($title)),
-                        "link" => $link,
-                        "user_id" => $this->session->login["user_id"],
-                        "author_name" => $this->session->login["user_name"],
-                        "created_at" => date("Y-m-d H:i:s"),
-                    ];
+                    $postData = ["title" => $title, "sub_title" => $sub_title, "image" => $image_file, "content" => $content, "page_slug" => str_replace(" ", "-", strtolower($title)), "link" => $link, "user_id" => $this->session->login["user_id"], "author_name" => $this->session->login["user_name"], "created_at" => date("Y-m-d H:i:s"), ];
                     $query = $this->BaseModel->insertData("curated_content", $postData);
                     if ($query) {
                         $inserted_Id = $this->db->insert_id();
@@ -634,33 +582,51 @@ class AdminController extends CI_Controller
                         $updateCondition = ["id" => $inserted_Id];
                         $updateQuery = $this->BaseModel->updateData("curated_content", $updateData, $updateCondition);
                         if ($updateQuery) {
-                            $this->session->set_flashdata("success", "Issue Reported Successfully.");
+                            $this->session->set_flashdata("success", "Curated content submited successfully.");
                         } else {
-                            $this->session->set_flashdata("error", "Failed to update Issue Reported ID. Please try again.");
+                            $this->session->set_flashdata("error", "Failed to update curated content ID. Please try again.");
                         }
                     } else {
-                        $this->session->set_flashdata("error", "Failed to add suggest case details. Please try again.");
+                        $this->session->set_flashdata("error", "Failed to add curated content details. Please try again.");
                     }
-                    return redirect("curated-content/add");
+                    return redirect("curated-content");
                 }
             } else {
                 $this->session->set_flashdata("error", "No POST data received");
                 return redirect("report-issue/add");
             }
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             $this->session->set_flashdata("error", "" . $e->getMessage() . "");
             return redirect("report-issue/add");
         }
     }
-    public function application($action = null, $application_id = null)
-    {
+    public function application($action = null, $application_id = null) {
         $this->checkUserLevel([1]);
         $data["title"] = $action . "Application : " . $this->projectTitle;
+        $allData = $this->BaseModel->getData("eoi_registration")->result_array();
+        $totalCount = count($allData);
+        $pendingCount = 0;
+        $approvedCount = 0;
+        $rejectedCount = 0;
+        $incompletedCount = 0;
+        foreach ($allData as $record) {
+            if ($record["status"] == 0) {
+                $incompletedCount++;
+            } elseif ($record["status"] == 1) {
+                $pendingCount++;
+            } elseif ($record["status"] == 2) {
+                $approvedCount++;
+            } elseif ($record["status"] == 3) {
+                $rejectedCount++;
+            }
+        }
+        $data = ["total" => $totalCount, "pending" => $pendingCount, "approved" => $approvedCount, "rejected" => $rejectedCount, "incompleted" => $incompletedCount];
         switch ($action) {
             case "add":
                 $data["flag"] = "add";
                 $data["page_name"] = "pages/user-detail";
-                break;
+            break;
             case "view":
                 if ($application_id !== null) {
                     $data["flag"] = "view";
@@ -671,10 +637,8 @@ class AdminController extends CI_Controller
                     } else {
                         $data["userDetail"] = $this->BaseModel->getData("login", ["user_id" => $user_id])->row();
                     }
-                    $data["userDetail"]->technological_category =
-                        isset($data["userDetail"]->technological_category) && !empty($data["userDetail"]->technological_category) ? json_decode($data["userDetail"]->technological_category, true) : [];
-                    $data["userDetail"]->technological_type_of_resource =
-                        isset($data["userDetail"]->technological_type_of_resource) && !empty($data["userDetail"]->technological_type_of_resource) ? json_decode($data["userDetail"]->technological_type_of_resource, true) : [];
+                    $data["userDetail"]->technological_category = isset($data["userDetail"]->technological_category) && !empty($data["userDetail"]->technological_category) ? json_decode($data["userDetail"]->technological_category, true) : [];
+                    $data["userDetail"]->technological_type_of_resource = isset($data["userDetail"]->technological_type_of_resource) && !empty($data["userDetail"]->technological_type_of_resource) ? json_decode($data["userDetail"]->technological_type_of_resource, true) : [];
                     $data["userDetail"]->technological_details = isset($data["userDetail"]->technological_details) && !empty($data["userDetail"]->technological_details) ? json_decode($data["userDetail"]->technological_details, true) : [];
                     $data["userDetail"]->specification = isset($data["userDetail"]->specification) && !empty($data["userDetail"]->specification) ? json_decode($data["userDetail"]->specification, true) : [];
                     $data["userDetail"]->purpose = isset($data["userDetail"]->purpose) && !empty($data["userDetail"]->purpose) ? json_decode($data["userDetail"]->purpose, true) : [];
@@ -696,8 +660,7 @@ class AdminController extends CI_Controller
                     }
                     // Ensure each property is properly initialized as an array
                     $data["userDetail"]->human_category = isset($data["userDetail"]->human_category) && !empty($data["userDetail"]->human_category) ? json_decode($data["userDetail"]->human_category, true) : [];
-                    $data["userDetail"]->human_type_of_resource =
-                        isset($data["userDetail"]->human_type_of_resource) && !empty($data["userDetail"]->human_type_of_resource) ? json_decode($data["userDetail"]->human_type_of_resource, true) : [];
+                    $data["userDetail"]->human_type_of_resource = isset($data["userDetail"]->human_type_of_resource) && !empty($data["userDetail"]->human_type_of_resource) ? json_decode($data["userDetail"]->human_type_of_resource, true) : [];
                     $data["userDetail"]->human_details = isset($data["userDetail"]->human_details) && !empty($data["userDetail"]->human_details) ? json_decode($data["userDetail"]->human_details, true) : [];
                     $data["userDetail"]->human_experience = isset($data["userDetail"]->human_experience) && !empty($data["userDetail"]->human_experience) ? json_decode($data["userDetail"]->human_experience, true) : [];
                     $data["userDetail"]->role = isset($data["userDetail"]->role) && !empty($data["userDetail"]->role) ? json_decode($data["userDetail"]->role, true) : [];
@@ -715,22 +678,14 @@ class AdminController extends CI_Controller
                                 $role = isset($data["userDetail"]->role[$key]) ? $data["userDetail"]->role[$key] : "";
                                 $extent_of_involvement = isset($data["userDetail"]->extent_of_involvement[$key]) ? $data["userDetail"]->extent_of_involvement[$key] : "";
                                 $human_alignment = isset($data["userDetail"]->human_alignment[$key]) ? $data["userDetail"]->human_alignment[$key] : "";
-                                $data["human_resources"][] = [
-                                    "human_category" => $category,
-                                    "human_type_of_resource" => $human_type_of_resource,
-                                    "human_details" => $human_details,
-                                    "human_experience" => $human_experience,
-                                    "role" => $role,
-                                    "extent_of_involvement" => $extent_of_involvement,
-                                    "human_alignment" => $human_alignment,
-                                ];
+                                $data["human_resources"][] = ["human_category" => $category, "human_type_of_resource" => $human_type_of_resource, "human_details" => $human_details, "human_experience" => $human_experience, "role" => $role, "extent_of_involvement" => $extent_of_involvement, "human_alignment" => $human_alignment, ];
                             }
                         }
                     }
                     $data["page_name"] = "pages/eoi-application-detail";
                 } else {
                 }
-                break;
+            break;
             case "edit":
                 if ($application_id !== null) {
                     $data["flag"] = "edit";
@@ -738,7 +693,7 @@ class AdminController extends CI_Controller
                     $data["page_name"] = "pages/user-detail";
                 } else {
                 }
-                break;
+            break;
             case "delete":
                 if ($application_id !== null) {
                     $query = $this->BaseModel->deleteData("login", ["application_id" => $application_id]);
@@ -762,58 +717,57 @@ class AdminController extends CI_Controller
                     } else {
                     }
                 }
-                break;
-            default:
-                $allData = $this->BaseModel->getData("eoi_registration")->result_array();
-                $totalCount = count($allData);
-                $pendingCount = 0;
-                $approvedCount = 0;
-                $rejectedCount = 0;
-                $incompletedCount = 0;
-                foreach ($allData as $record) {
-                    if ($record["status"] == 0) {
-                        $incompletedCount++;
-                    } elseif ($record["status"] == 1) {
-                        $pendingCount++;
-                    } elseif ($record["status"] == 2) {
-                        $approvedCount++;
-                    } elseif ($record["status"] == 3) {
-                        $rejectedCount++;
-                    }
-                }
-                $data = ["total" => $totalCount, "pending" => $pendingCount, "approved" => $approvedCount, "rejected" => $rejectedCount, "incompleted" => $incompletedCount];
+            break;
+            case "approved":
+                $data["flag"] = "approved";
                 $data["page_name"] = "pages/eoi-application";
-                break;
+            break;
+            case "pending":
+                $data["flag"] = "pending";
+                $data["page_name"] = "pages/eoi-application";
+            break;
+            case "rejected":
+                $data["flag"] = "rejected";
+                $data["page_name"] = "pages/eoi-application";
+            break;
+            case "incomplete":
+                $data["flag"] = "incomplete";
+                $data["page_name"] = "pages/eoi-application";
+            break;
+            default:
+                $data["flag"] = "all";
+                $data["page_name"] = "pages/eoi-application";
+            break;
         }
         $this->load->view("component/index", $data);
     }
-    public function curatedContent($action = null, $blogs_id = null)
-    {
-        $this->checkUserLevel([2]);
+    public function curatedContent($action = null, $cc_id = null) {
+        $this->checkUserLevel([1, 2]);
         $data["title"] = $action . " Curated Content : " . $this->projectTitle;
         switch ($action) {
             case "add":
                 $data["flag"] = "add";
                 $data["page_name"] = "pages/curated-content-detail";
-                break;
+            break;
             case "view":
-                if ($blogs_id !== null) {
+                if ($cc_id !== null) {
                     $data["flag"] = "view";
                     $data["page_name"] = "pages/curated-content-detail";
+                    $data['curatedContentDetail'] = $this->BaseModel->getData("curated_content", ["cc_id" => $cc_id])->row();
                 } else {
                 }
-                break;
+            break;
             case "edit":
-                if ($blogs_id !== null) {
+                if ($cc_id !== null) {
                     $data["flag"] = "edit";
-                    $data["userDetail"] = $this->BaseModel->getData("login", ["blogs_id" => $blogs_id])->row();
+                    $data["userDetail"] = $this->BaseModel->getData("login", ["cc_id" => $cc_id])->row();
                     $data["page_name"] = "pages/curated-content-detail";
                 } else {
                 }
-                break;
+            break;
             case "delete":
-                if ($blogs_id !== null) {
-                    $query = $this->BaseModel->deleteData("login", ["blogs_id" => $blogs_id]);
+                if ($cc_id !== null) {
+                    $query = $this->BaseModel->deleteData("login", ["cc_id" => $cc_id]);
                     if ($query) {
                         $response = ["status" => "success", "message" => "The user has been successfully deleted."];
                     } else {
@@ -834,15 +788,14 @@ class AdminController extends CI_Controller
                     } else {
                     }
                 }
-                break;
+            break;
             default:
                 $data["page_name"] = "pages/curated-content";
-                break;
+            break;
         }
         $this->load->view("component/index", $data);
     }
-    public function eoiRegistration()
-    {
+    public function eoiRegistration() {
         $this->checkUserLevel([2]);
         $data["title"] = "EoI Form : " . $this->projectTitle;
         $data["page_name"] = "pages/eoi-registration";
@@ -854,8 +807,7 @@ class AdminController extends CI_Controller
         }
         // dd($data['userDetail']);
         $data["userDetail"]->technological_category = isset($data["userDetail"]->technological_category) && !empty($data["userDetail"]->technological_category) ? json_decode($data["userDetail"]->technological_category, true) : [];
-        $data["userDetail"]->technological_type_of_resource =
-            isset($data["userDetail"]->technological_type_of_resource) && !empty($data["userDetail"]->technological_type_of_resource) ? json_decode($data["userDetail"]->technological_type_of_resource, true) : [];
+        $data["userDetail"]->technological_type_of_resource = isset($data["userDetail"]->technological_type_of_resource) && !empty($data["userDetail"]->technological_type_of_resource) ? json_decode($data["userDetail"]->technological_type_of_resource, true) : [];
         $data["userDetail"]->technological_details = isset($data["userDetail"]->technological_details) && !empty($data["userDetail"]->technological_details) ? json_decode($data["userDetail"]->technological_details, true) : [];
         $data["userDetail"]->specification = isset($data["userDetail"]->specification) && !empty($data["userDetail"]->specification) ? json_decode($data["userDetail"]->specification, true) : [];
         $data["userDetail"]->purpose = isset($data["userDetail"]->purpose) && !empty($data["userDetail"]->purpose) ? json_decode($data["userDetail"]->purpose, true) : [];
@@ -895,22 +847,13 @@ class AdminController extends CI_Controller
                     $role = isset($data["userDetail"]->role[$key]) ? $data["userDetail"]->role[$key] : "";
                     $extent_of_involvement = isset($data["userDetail"]->extent_of_involvement[$key]) ? $data["userDetail"]->extent_of_involvement[$key] : "";
                     $human_alignment = isset($data["userDetail"]->human_alignment[$key]) ? $data["userDetail"]->human_alignment[$key] : "";
-                    $data["human_resources"][] = [
-                        "human_category" => $category,
-                        "human_type_of_resource" => $human_type_of_resource,
-                        "human_details" => $human_details,
-                        "human_experience" => $human_experience,
-                        "role" => $role,
-                        "extent_of_involvement" => $extent_of_involvement,
-                        "human_alignment" => $human_alignment,
-                    ];
+                    $data["human_resources"][] = ["human_category" => $category, "human_type_of_resource" => $human_type_of_resource, "human_details" => $human_details, "human_experience" => $human_experience, "role" => $role, "extent_of_involvement" => $extent_of_involvement, "human_alignment" => $human_alignment, ];
                 }
             }
         }
         $this->load->view("component/index", $data);
     }
-    public function eoiStatus()
-    {
+    public function eoiStatus() {
         $this->checkUserLevel([2]);
         $data["title"] = "EoI Form : " . $this->projectTitle;
         $data["page_name"] = "pages/eoi-status";
@@ -922,8 +865,7 @@ class AdminController extends CI_Controller
         }
         // dd($data['userDetail']);
         $data["userDetail"]->technological_category = isset($data["userDetail"]->technological_category) && !empty($data["userDetail"]->technological_category) ? json_decode($data["userDetail"]->technological_category, true) : [];
-        $data["userDetail"]->technological_type_of_resource =
-            isset($data["userDetail"]->technological_type_of_resource) && !empty($data["userDetail"]->technological_type_of_resource) ? json_decode($data["userDetail"]->technological_type_of_resource, true) : [];
+        $data["userDetail"]->technological_type_of_resource = isset($data["userDetail"]->technological_type_of_resource) && !empty($data["userDetail"]->technological_type_of_resource) ? json_decode($data["userDetail"]->technological_type_of_resource, true) : [];
         $data["userDetail"]->technological_details = isset($data["userDetail"]->technological_details) && !empty($data["userDetail"]->technological_details) ? json_decode($data["userDetail"]->technological_details, true) : [];
         $data["userDetail"]->specification = isset($data["userDetail"]->specification) && !empty($data["userDetail"]->specification) ? json_decode($data["userDetail"]->specification, true) : [];
         $data["userDetail"]->purpose = isset($data["userDetail"]->purpose) && !empty($data["userDetail"]->purpose) ? json_decode($data["userDetail"]->purpose, true) : [];
@@ -963,22 +905,13 @@ class AdminController extends CI_Controller
                     $role = isset($data["userDetail"]->role[$key]) ? $data["userDetail"]->role[$key] : "";
                     $extent_of_involvement = isset($data["userDetail"]->extent_of_involvement[$key]) ? $data["userDetail"]->extent_of_involvement[$key] : "";
                     $human_alignment = isset($data["userDetail"]->human_alignment[$key]) ? $data["userDetail"]->human_alignment[$key] : "";
-                    $data["human_resources"][] = [
-                        "human_category" => $category,
-                        "human_type_of_resource" => $human_type_of_resource,
-                        "human_details" => $human_details,
-                        "human_experience" => $human_experience,
-                        "role" => $role,
-                        "extent_of_involvement" => $extent_of_involvement,
-                        "human_alignment" => $human_alignment,
-                    ];
+                    $data["human_resources"][] = ["human_category" => $category, "human_type_of_resource" => $human_type_of_resource, "human_details" => $human_details, "human_experience" => $human_experience, "role" => $role, "extent_of_involvement" => $extent_of_involvement, "human_alignment" => $human_alignment, ];
                 }
             }
         }
         $this->load->view("component/index", $data);
     }
-    public function userList()
-    {
+    public function userList() {
         $this->checkUserLevel([1]);
         $data["title"] = "User List : " . $this->projectTitle;
         $allData = $this->BaseModel->getData("login", ['user_level' => 2])->result_array();
@@ -993,12 +926,10 @@ class AdminController extends CI_Controller
             }
         }
         $data = ["total" => $totalCount, "unverified" => $unverifiedCount, "verified" => $verifiedCount];
-
         $data["page_name"] = "pages/user-list";
         $this->load->view("component/index", $data);
     }
-    public function eventRegistration()
-    {
+    public function eventRegistration() {
         $this->checkUserLevel([1]);
         $data["title"] = "Event Registration : " . $this->projectTitle;
         $allData = $this->BaseModel->getData("event_registration")->result_array();
@@ -1019,26 +950,22 @@ class AdminController extends CI_Controller
             }
         }
         $data = ["total" => $totalCount, "pending" => $pendingCount, "approved" => $approvedCount, "rejected" => $rejectedCount, "incompleted" => $incompletedCount];
-
         $data["page_name"] = "pages/event-registration";
         $this->load->view("component/index", $data);
     }
-    public function approvedEventApplications()
-    {
+    public function approvedEventApplications() {
         $this->checkUserLevel([1]);
         $data["title"] = "Approved Applications : " . $this->projectTitle;
         $data["page_name"] = "pages/approved-event-applications";
         $this->load->view("component/index", $data);
     }
-    public function rejectedEventApplications()
-    {
+    public function rejectedEventApplications() {
         $this->checkUserLevel([1]);
         $data["title"] = "Rejected Applications : " . $this->projectTitle;
         $data["page_name"] = "pages/rejected-event-applications";
         $this->load->view("component/index", $data);
     }
-    public function eventRegistrationView($registration_id)
-    {
+    public function eventRegistrationView($registration_id) {
         $this->checkUserLevel([1]);
         if (!empty($registration_id)) {
             $user_id = $this->BaseModel->getData("event_registration", ["registration_id" => $registration_id])->row()->user_id;
@@ -1048,29 +975,25 @@ class AdminController extends CI_Controller
         $data["page_name"] = "pages/event-registration-detail";
         $this->load->view("component/index", $data);
     }
-    public function verifedUsers()
-    {
+    public function verifedUsers() {
         $this->checkUserLevel([1]);
         $data["title"] = "Verifed Users : " . $this->projectTitle;
         $data["page_name"] = "pages/verifed-users";
         $this->load->view("component/index", $data);
     }
-    public function reports()
-    {
+    public function reports() {
         $this->checkUserLevel([1]);
         $data["title"] = "Reports : " . $this->projectTitle;
         $data["page_name"] = "pages/reports";
         $this->load->view("component/index", $data);
     }
-    public function unverifiedUsers()
-    {
+    public function unverifiedUsers() {
         $this->checkUserLevel([1]);
         $data["title"] = "Unverified Users : " . $this->projectTitle;
         $data["page_name"] = "pages/unverified-users";
         $this->load->view("component/index", $data);
     }
-    public function getUserList()
-    {
+    public function getUserList() {
         $this->checkUserLevel([1]);
         try {
             $userList = $this->BaseModel->getData("login", ["user_level" => 2], ["user_id"], "DESC")->result_array();
@@ -1080,13 +1003,13 @@ class AdminController extends CI_Controller
                 $responseData = ["status" => "error", "message" => "Error fetching user data."];
             }
             echo json_encode($responseData);
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             log_message("error", $e->getMessage());
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
-    public function getEventRegistration()
-    {
+    public function getEventRegistration() {
         $this->checkUserLevel([1]);
         try {
             $userList = $this->BaseModel->getData("event_registration")->result_array();
@@ -1096,45 +1019,45 @@ class AdminController extends CI_Controller
                 $responseData = ["status" => "error", "message" => "Error event registration data."];
             }
             echo json_encode($responseData);
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             log_message("error", $e->getMessage());
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
-    public function getApprovedEventRegistration()
-    {
+    public function getApprovedEventRegistration() {
         $this->checkUserLevel([1]);
         try {
-            $userList = $this->BaseModel->getData("event_registration", ['status'=>2])->result_array();
+            $userList = $this->BaseModel->getData("event_registration", ['status' => 2])->result_array();
             if ($userList !== null) {
                 $responseData = ["status" => "success", "data" => $userList];
             } else {
                 $responseData = ["status" => "error", "message" => "Error event registration data."];
             }
             echo json_encode($responseData);
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             log_message("error", $e->getMessage());
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
-    public function getRejectedEventRegistration()
-    {
+    public function getRejectedEventRegistration() {
         $this->checkUserLevel([1]);
         try {
-            $userList = $this->BaseModel->getData("event_registration", ['status'=>3])->result_array();
+            $userList = $this->BaseModel->getData("event_registration", ['status' => 3])->result_array();
             if ($userList !== null) {
                 $responseData = ["status" => "success", "data" => $userList];
             } else {
                 $responseData = ["status" => "error", "message" => "Error event registration data."];
             }
             echo json_encode($responseData);
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             log_message("error", $e->getMessage());
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
-    public function getSuggestUseCases()
-    {
+    public function getSuggestUseCases() {
         $this->checkUserLevel([2]);
         try {
             $userList = $this->BaseModel->getData("suggest_use_cases", ["user_id" => $this->session->login["user_id"]])->result_array();
@@ -1144,29 +1067,34 @@ class AdminController extends CI_Controller
                 $responseData = ["status" => "error", "message" => "Error fetching suggest_use_cases data."];
             }
             echo json_encode($responseData);
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             log_message("error", $e->getMessage());
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
-    public function getCuratedContent()
-    {
-        $this->checkUserLevel([2]);
+    public function getCuratedContent() {
+        $this->checkUserLevel([1, 2]);
         try {
-            $userList = $this->BaseModel->getData("curated_content", ["user_id" => $this->session->login["user_id"]])->result_array();
-            if ($userList !== null) {
-                $responseData = ["status" => "success", "data" => $userList];
+            $user_level = $this->session->login['user_level'];
+            if ($user_level === '1') {
+                $curated_content_list = $this->BaseModel->getData("curated_content")->result_array();
+            } else {
+                $curated_content_list = $this->BaseModel->getData("curated_content", ["user_id" => $this->session->login["user_id"]])->result_array();
+            }
+            if ($curated_content_list !== null) {
+                $responseData = ["status" => "success", "data" => $curated_content_list];
             } else {
                 $responseData = ["status" => "error", "message" => "Error fetching curated content data."];
             }
             echo json_encode($responseData);
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             log_message("error", $e->getMessage());
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
-    public function getSuggestedUseCases()
-    {
+    public function getSuggestedUseCases() {
         $this->checkUserLevel([1]);
         try {
             $userList = $this->BaseModel->getData("suggest_use_cases")->result_array();
@@ -1176,13 +1104,13 @@ class AdminController extends CI_Controller
                 $responseData = ["status" => "error", "message" => "Error fetching suggest_use_cases data."];
             }
             echo json_encode($responseData);
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             log_message("error", $e->getMessage());
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
-    public function getSubmittedSpeakerRequest()
-    {
+    public function getSubmittedSpeakerRequest() {
         $this->checkUserLevel([1]);
         try {
             $userList = $this->BaseModel->getData("speaker_applications")->result_array();
@@ -1192,13 +1120,13 @@ class AdminController extends CI_Controller
                 $responseData = ["status" => "error", "message" => "Error fetching speaker_applications data."];
             }
             echo json_encode($responseData);
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             log_message("error", $e->getMessage());
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
-    public function getReportedIssue()
-    {
+    public function getReportedIssue() {
         $this->checkUserLevel([1]);
         try {
             $userList = $this->BaseModel->getData("issues")->result_array();
@@ -1208,16 +1136,20 @@ class AdminController extends CI_Controller
                 $responseData = ["status" => "error", "message" => "Error fetching issues data."];
             }
             echo json_encode($responseData);
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             log_message("error", $e->getMessage());
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
-    public function getEoIApplication()
-    {
+    public function getEoIApplication($status = null) {
         $this->checkUserLevel([1]);
         try {
-            $statusArray = [1, 2, 3];
+            if (!empty($status) && $status === '4') {
+                $statusArray = [0, 1, 2, 3];
+            } else {
+                $statusArray = [$status];
+            }
             $userList = $this->BaseModel->getDataByStatus($statusArray);
             if (!empty($userList)) {
                 $responseData = ["status" => "success", "data" => $userList];
@@ -1225,13 +1157,13 @@ class AdminController extends CI_Controller
                 $responseData = ["status" => "error", "message" => "No data found for the specified status."];
             }
             echo json_encode($responseData);
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             log_message("error", $e->getMessage());
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
-    public function getUnverifiedUserList()
-    {
+    public function getUnverifiedUserList() {
         $this->checkUserLevel([1]);
         try {
             $userList = $this->BaseModel->getData("login", ["user_level" => 2, "is_verified" => 0], ["user_id"], "DESC")->result_array();
@@ -1241,13 +1173,13 @@ class AdminController extends CI_Controller
                 $responseData = ["status" => "error", "message" => "Error fetching user data."];
             }
             echo json_encode($responseData);
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             log_message("error", $e->getMessage());
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
-    public function getVerifiedUserList()
-    {
+    public function getVerifiedUserList() {
         $this->checkUserLevel([1]);
         try {
             $userList = $this->BaseModel->getData("login", ["user_level" => 2, "is_verified" => 1], ["user_id"], "DESC")->result_array();
@@ -1257,13 +1189,13 @@ class AdminController extends CI_Controller
                 $responseData = ["status" => "error", "message" => "Error fetching user data."];
             }
             echo json_encode($responseData);
-        } catch (Exception $e) {
+        }
+        catch(Exception $e) {
             log_message("error", $e->getMessage());
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
-    public function updateProfileImage()
-    {
+    public function updateProfileImage() {
         if ($this->input->post()) {
             $user_id = $this->input->post("user_id");
             if (!empty($_FILES["profile_document"]["name"])) {
@@ -1286,8 +1218,7 @@ class AdminController extends CI_Controller
             $this->session->set_flashdata("response", "Invalid request data.");
         }
     }
-    public function postEoIRegistration()
-    {
+    public function postEoIRegistration() {
         if ($this->input->method() === "post") {
             $this->form_validation->set_rules("full_name", "Full Name", "trim");
             $this->form_validation->set_rules("email", "Email", "trim|valid_email");
@@ -1333,37 +1264,7 @@ class AdminController extends CI_Controller
                 $this->session->set_flashdata("error", validation_errors());
                 return redirect("eoi-registration");
             } else {
-                $postData = [
-                    "full_name" => $this->input->post("full_name"),
-                    "email" => $this->input->post("email"),
-                    "contact_no" => $this->input->post("contact_no"),
-                    "date_of_birth" => $this->input->post("date_of_birth"),
-                    "experience" => $this->input->post("experience"),
-                    "previous_experience" => $this->input->post("previous_experience"),
-                    "achievements_recognitions" => $this->input->post("achievements_recognitions"),
-                    "title" => $this->input->post("title"),
-                    "category" => $this->input->post("category"),
-                    "strategic_vision" => $this->input->post("strategic_vision"),
-                    "objectives" => $this->input->post("objectives"),
-                    "project_goals" => $this->input->post("project_goals"),
-                    "contribution_to_project_goals" => $this->input->post("contribution_to_project_goals"),
-                    "technological_category" => $this->input->post("technological_category") !== null ? json_encode($this->input->post("technological_category")) : null,
-                    "technological_type_of_resource" => $this->input->post("technological_type_of_resource") !== null ? json_encode($this->input->post("technological_type_of_resource")) : null,
-                    "technological_details" => $this->input->post("technological_details") !== null ? json_encode($this->input->post("technological_details")) : null,
-                    "specification" => $this->input->post("specification") !== null ? json_encode($this->input->post("specification")) : null,
-                    "purpose" => $this->input->post("purpose") !== null ? json_encode($this->input->post("purpose")) : null,
-                    "alignment" => $this->input->post("alignment") !== null ? json_encode($this->input->post("alignment")) : null,
-                    "human_category" => $this->input->post("human_category") !== null ? json_encode($this->input->post("human_category")) : null,
-                    "human_type_of_resource" => $this->input->post("human_type_of_resource") !== null ? json_encode($this->input->post("human_type_of_resource")) : null,
-                    "human_details" => $this->input->post("human_details") !== null ? json_encode($this->input->post("human_details")) : null,
-                    "human_experience" => $this->input->post("human_experience") !== null ? json_encode($this->input->post("human_experience")) : null,
-                    "role" => $this->input->post("role") !== null ? json_encode($this->input->post("role")) : null,
-                    "extent_of_involvement" => $this->input->post("extent_of_involvement") !== null ? json_encode($this->input->post("extent_of_involvement")) : null,
-                    "human_alignment" => $this->input->post("human_alignment") !== null ? json_encode($this->input->post("human_alignment")) : null,
-                    "other_pertinent_facts" => $this->input->post("other_pertinent_facts"),
-                    "certification" => $this->input->post("certification"),
-                    "core_competency" => $this->input->post("core_competency"),
-                ];
+                $postData = ["full_name" => $this->input->post("full_name"), "email" => $this->input->post("email"), "contact_no" => $this->input->post("contact_no"), "date_of_birth" => $this->input->post("date_of_birth"), "experience" => $this->input->post("experience"), "previous_experience" => $this->input->post("previous_experience"), "achievements_recognitions" => $this->input->post("achievements_recognitions"), "title" => $this->input->post("title"), "category" => $this->input->post("category"), "strategic_vision" => $this->input->post("strategic_vision"), "objectives" => $this->input->post("objectives"), "project_goals" => $this->input->post("project_goals"), "contribution_to_project_goals" => $this->input->post("contribution_to_project_goals"), "technological_category" => $this->input->post("technological_category") !== null ? json_encode($this->input->post("technological_category")) : null, "technological_type_of_resource" => $this->input->post("technological_type_of_resource") !== null ? json_encode($this->input->post("technological_type_of_resource")) : null, "technological_details" => $this->input->post("technological_details") !== null ? json_encode($this->input->post("technological_details")) : null, "specification" => $this->input->post("specification") !== null ? json_encode($this->input->post("specification")) : null, "purpose" => $this->input->post("purpose") !== null ? json_encode($this->input->post("purpose")) : null, "alignment" => $this->input->post("alignment") !== null ? json_encode($this->input->post("alignment")) : null, "human_category" => $this->input->post("human_category") !== null ? json_encode($this->input->post("human_category")) : null, "human_type_of_resource" => $this->input->post("human_type_of_resource") !== null ? json_encode($this->input->post("human_type_of_resource")) : null, "human_details" => $this->input->post("human_details") !== null ? json_encode($this->input->post("human_details")) : null, "human_experience" => $this->input->post("human_experience") !== null ? json_encode($this->input->post("human_experience")) : null, "role" => $this->input->post("role") !== null ? json_encode($this->input->post("role")) : null, "extent_of_involvement" => $this->input->post("extent_of_involvement") !== null ? json_encode($this->input->post("extent_of_involvement")) : null, "human_alignment" => $this->input->post("human_alignment") !== null ? json_encode($this->input->post("human_alignment")) : null, "other_pertinent_facts" => $this->input->post("other_pertinent_facts"), "certification" => $this->input->post("certification"), "core_competency" => $this->input->post("core_competency"), ];
                 $existingData = $this->BaseModel->getData("eoi_registration", ["user_id" => $this->session->login["user_id"]]);
                 if ($existingData->num_rows() > 0) {
                     if ($existingData->row()->status === "0") {
@@ -1400,8 +1301,7 @@ class AdminController extends CI_Controller
             $this->session->set_flashdata("error", "Post Error.");
         }
     }
-    public function postFinalSubmit()
-    {
+    public function postFinalSubmit() {
         try {
             $postData = ["status" => 1];
             $cond = ["user_id" => $this->session->login["user_id"]];
@@ -1413,13 +1313,13 @@ class AdminController extends CI_Controller
                 $response = ["error" => "Something went wrong"];
             }
             $this->output->set_content_type("application/json")->set_output(json_encode($response));
-        } catch (Exception $e) {
-            $response = ["error" => $e->getMessage()];
+        }
+        catch(Exception $e) {
+            $response = ["error" => $e->getMessage() ];
             $this->output->set_content_type("application/json")->set_output(json_encode($response));
         }
     }
-    public function sendEmailsUnverifiedUsers()
-    {
+    public function sendEmailsUnverifiedUsers() {
         $checkedEmails = $this->input->post("emails");
         $results = [];
         if (!empty($checkedEmails)) {
@@ -1436,8 +1336,7 @@ class AdminController extends CI_Controller
         }
         return $results;
     }
-    public function submitEventRegistration()
-    {
+    public function submitEventRegistration() {
         $this->checkUserLevel([2]);
         $this->form_validation->set_rules("full_name", "Full Name", "trim|required");
         $this->form_validation->set_rules("email", "Email", "trim|required|valid_email");
@@ -1449,22 +1348,7 @@ class AdminController extends CI_Controller
             $this->session->set_flashdata("error", validation_errors());
             return redirect("register-for-event");
         } else {
-            $postData = [
-                "user_id" => $this->session->login["user_id"],
-                "full_name" => $this->input->post("full_name"),
-                "email" => $this->input->post("email"),
-                "other_reason_text" => $this->input->post("other_reason_text"),
-                "phone_number" => $this->input->post("phone_number"),
-                "event_name" => $this->input->post("event_name"),
-                "location" => $this->input->post("location"),
-                "event_date" => $this->input->post("event_date"),
-                "plan_to_submit_response" => $this->input->post("plan_to_submit_response"),
-                "reason_to_attend" => $this->input->post("reason_to_attend"),
-                "ask_questions" => $this->input->post("ask_questions"),
-                "questions_to_speaker" => $this->input->post("questions_to_speaker"),
-                "registration_date" => date("Y-m-d"),
-                "created_at" => date("Y-m-d H:i:s"),
-            ];
+            $postData = ["user_id" => $this->session->login["user_id"], "full_name" => $this->input->post("full_name"), "email" => $this->input->post("email"), "other_reason_text" => $this->input->post("other_reason_text"), "phone_number" => $this->input->post("phone_number"), "event_name" => $this->input->post("event_name"), "location" => $this->input->post("location"), "event_date" => $this->input->post("event_date"), "plan_to_submit_response" => $this->input->post("plan_to_submit_response"), "reason_to_attend" => $this->input->post("reason_to_attend"), "ask_questions" => $this->input->post("ask_questions"), "questions_to_speaker" => $this->input->post("questions_to_speaker"), "registration_date" => date("Y-m-d"), "created_at" => date("Y-m-d H:i:s"), ];
             $insertResult = $this->BaseModel->insertData("event_registration", $postData);
             if ($insertResult) {
                 $inserted_Id = $this->db->insert_id();
@@ -1485,8 +1369,7 @@ class AdminController extends CI_Controller
             }
         }
     }
-    public function eventRegistrationAction($action = null, $registration_id = null)
-    {
+    public function eventRegistrationAction($action = null, $registration_id = null) {
         $this->checkUserLevel([1]);
         $data["title"] = $action . "Event Registration Action : " . $this->projectTitle;
         switch ($action) {
@@ -1498,25 +1381,15 @@ class AdminController extends CI_Controller
                 $messageBody = file_get_contents($templateFile);
                 $placeholders = ["{registration_id}", "{event_name}", "{location}", "{full_name}", "{email}", "{phone_number}", "{event_date}", "{event_location_qr_code}"];
                 if ($applicationDetail->location === 'IIT Delhi') {
-                  $event_location_qr_code = 'Location_of_Sangam_IIT_Delhi_Event';
+                    $event_location_qr_code = 'Location_of_Sangam_IIT_Delhi_Event';
                 } else if ($applicationDetail->location === 'IIIT Bangalore') {
-                $event_location_qr_code = 'Location_of_Sangam_IIIT_Bangalore_Event';
-                }
-                elseif ($applicationDetail->location === 'IIIT Hyderabad') {
-                  $event_location_qr_code = 'Location_of_Sangam_IIIT_Hyderabad_Event';
+                    $event_location_qr_code = 'Location_of_Sangam_IIIT_Bangalore_Event';
+                } elseif ($applicationDetail->location === 'IIIT Hyderabad') {
+                    $event_location_qr_code = 'Location_of_Sangam_IIIT_Hyderabad_Event';
                 } {
-                  $event_location_qr_code = '';
+                    $event_location_qr_code = '';
                 }
-                $values = [
-                    $applicationDetail->registration_id,
-                    $applicationDetail->event_name,
-                    $applicationDetail->location,
-                    $applicationDetail->full_name,
-                    $applicationDetail->email,
-                    $applicationDetail->phone_number,
-                    $applicationDetail->event_date,
-                    $event_location_qr_code
-                ];
+                $values = [$applicationDetail->registration_id, $applicationDetail->event_name, $applicationDetail->location, $applicationDetail->full_name, $applicationDetail->email, $applicationDetail->phone_number, $applicationDetail->event_date, $event_location_qr_code];
                 $messageBody = str_replace($placeholders, $values, $messageBody);
                 $emailSent = $this->mainEmailConfig($applicationDetail->email, $subject, $messageBody, "", "");
                 if ($emailSent) {
@@ -1533,7 +1406,7 @@ class AdminController extends CI_Controller
                     $this->output->set_content_type("application/json");
                     echo json_encode($response);
                 }
-                break;
+            break;
             case "rejected":
                 $user_id = $this->BaseModel->getData("event_registration", ["registration_id" => $registration_id])->row()->user_id;
                 $applicationDetail = $this->BaseModel->getEventApplicationData($user_id);
@@ -1541,15 +1414,7 @@ class AdminController extends CI_Controller
                 $subject = "Rejection of Your Event Application";
                 $messageBody = file_get_contents($templateFile);
                 $placeholders = ["{registration_id}", "{event_name}", "{location}", "{full_name}", "{email}", "{phone_number}", "{event_date}"];
-                $values = [
-                    $applicationDetail->registration_id,
-                    $applicationDetail->event_name,
-                    $applicationDetail->location,
-                    $applicationDetail->full_name,
-                    $applicationDetail->email,
-                    $applicationDetail->phone_number,
-                    $applicationDetail->event_date,
-                ];
+                $values = [$applicationDetail->registration_id, $applicationDetail->event_name, $applicationDetail->location, $applicationDetail->full_name, $applicationDetail->email, $applicationDetail->phone_number, $applicationDetail->event_date, ];
                 $messageBody = str_replace($placeholders, $values, $messageBody);
                 $emailSent = $this->mainEmailConfig($applicationDetail->email, $subject, $messageBody, "", "");
                 if ($emailSent) {
@@ -1567,13 +1432,44 @@ class AdminController extends CI_Controller
                     echo json_encode($response);
                     exit();
                 }
-                break;
+            break;
             default:
-                break;
+            break;
         }
     }
-    public function postSendMessage()
-    {
+    public function userCuratedContentAction($action = null, $cc_id = null) {
+        $this->checkUserLevel([1]);
+        $data["title"] = $action . "Curated Content Action : " . $this->projectTitle;
+        switch ($action) {
+            case "approved":
+                $query = $this->BaseModel->updateData("curated_content", ["status" => 2], ["cc_id" => $cc_id]);
+                if ($query) {
+                    $response = ["status" => "success", "message" => "The curated content has been successfully approved."];
+                } else {
+                    $response = ["status" => "error", "message" => "Unable to update the curated content status. Please try again later."];
+                }
+                if ($this->input->is_ajax_request()) {
+                    $this->output->set_content_type("application/json");
+                    echo json_encode($response);
+                }
+            break;
+            case "rejected":
+                $query = $this->BaseModel->updateData("curated_content", ["status" => 3], ["cc_id" => $cc_id]);
+                if ($query) {
+                    $response = ["status" => "success", "message" => "The curated content has been successfully rejected."];
+                } else {
+                    $response = ["status" => "error", "message" => "Unable to update the curated content status. Please try again later."];
+                }
+                if ($this->input->is_ajax_request()) {
+                    $this->output->set_content_type("application/json");
+                    echo json_encode($response);
+                }
+            break;
+            default:
+            break;
+        }
+    }
+    public function postSendMessage() {
         try {
             $response = [];
             $message = $this->input->post("message");
@@ -1582,19 +1478,9 @@ class AdminController extends CI_Controller
             $to = $this->input->post("to");
             $subject = $this->input->post("subject");
             if (empty($message)) {
-                $response = [
-                    "status" => "error",
-                    "message" => "Message is required.",
-                ];
+                $response = ["status" => "error", "message" => "Message is required.", ];
             } else {
-                $postData = [
-                    "to" => $to,
-                    "cc" => $cc,
-                    "login_id" => $login_id,
-                    "subject" => $subject,
-                    "message" => $message,
-                    "create_datetime" => date("Y-m-d H:i:s"),
-                ];
+                $postData = ["to" => $to, "cc" => $cc, "login_id" => $login_id, "subject" => $subject, "message" => $message, "create_datetime" => date("Y-m-d H:i:s"), ];
                 if (empty($cc) || is_null($cc)) {
                     $cc = null;
                 }
@@ -1615,20 +1501,15 @@ class AdminController extends CI_Controller
                     //         "message" => "Something went wrong",
                     //     ];
                     // }
-                    $response = [
-                        "status" => "success",
-                        "message" => "Email send.",
-                    ];
+                    $response = ["status" => "success", "message" => "Email send.", ];
                 } else {
-                    $response = [
-                        "status" => "error",
-                        "message" => "Faild to sending a mail",
-                    ];
+                    $response = ["status" => "error", "message" => "Faild to sending a mail", ];
                 }
             }
             $this->output->set_content_type("application/json")->set_output(json_encode($response));
-        } catch (Exception $e) {
-            $response = ["status" => "error", "message" => $e->getMessage()];
+        }
+        catch(Exception $e) {
+            $response = ["status" => "error", "message" => $e->getMessage() ];
             $this->output->set_content_type("application/json")->set_output(json_encode($response));
         }
     }

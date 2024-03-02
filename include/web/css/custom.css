@@ -20,14 +20,18 @@
 	margin-bottom: 10px;
 	color: #ee5a60;
 }
+.speakerSection .project-img img{filter: grayscale(100%);}
+.speakerSection .project-img:hover{filter: grayscale(0%);}
+.speakerSection .project-img .title{text-align: center;}
+.height_150{height: 150px}
 @keyframes blink {
 	0% { opacity: 1; }
 	50% { opacity: 0; }
 	100% { opacity: 1; }
 }
-/* .blink-text {
-	animation: blink 1s infinite;
-} */
+.blink-text {
+	animation: blink 1.5s infinite !important;
+}
 .text_for_outreach .title span{font-style: italic;font-weight: 500;}
 /* .text-white h3{font-size: 22px !important}
 .project-content .text{

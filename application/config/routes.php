@@ -15,7 +15,7 @@ $route['submit-speaker-request'] = 'BaseController/submitSpeakerRequest';
 $route['events'] = 'BaseController/events';
 $route['expression-of-interest'] = 'BaseController/expressionOfInterest';
 $route['sangam-timeline'] = 'BaseController/sangamTimeline';
-
+$route['curated/(:any)'] = 'BaseController/curatedContentDetail/$1';
 // route for authorization
 $route['sign-up'] = 'Authorization/signUp';
 $route['sign-in'] = 'Authorization/signIn';
@@ -64,7 +64,7 @@ $route['get-submit-use-cases'] = 'AdminController/getSuggestUseCases';
 $route['get-submited-use-cases'] = 'AdminController/getSuggestedUseCases';
 $route['get-submitted-speaker-request'] = 'AdminController/getSubmittedSpeakerRequest';
 $route['get-reported-issue'] = 'AdminController/getReportedIssue';
-$route['get-eoi-application'] = 'AdminController/getEoIApplication';
+$route['get-eoi-application/(:any)'] = 'AdminController/getEoIApplication/$1';
 $route['get-curated-content'] = 'AdminController/getCuratedContent';
 $route['verifed-users'] = 'AdminController/verifedUsers';
 $route['unverified-users'] = 'AdminController/unverifiedUsers';
@@ -90,12 +90,15 @@ $route['curated-content'] = 'AdminController/curatedContent';
 $route['curated-content/(:any)'] = 'AdminController/curatedContent/$1';
 $route['curated-content/(:any)/(:any)'] = 'AdminController/curatedContent/$1/$2';
 $route['send-email-unverified-users'] = 'AdminController/sendEmailsUnverifiedUsers';
-$route['event-registration'] = 'AdminController/eventRegistration';
 $route['approved-event-applications'] = 'AdminController/approvedEventApplications';
 $route['rejected-event-applications'] = 'AdminController/rejectedEventApplications';
+$route['event-registration'] = 'AdminController/eventRegistration';
 $route['event-registration/view/(:any)'] = 'AdminController/eventRegistrationView/$1';
 $route['event-registration-ation/(:any)'] = 'AdminController/eventRegistrationAction/$1';
 $route['event-registration-ation/(:any)/(:any)'] = 'AdminController/eventRegistrationAction/$1/$2';
+$route['user-curated-content'] = 'AdminController/userCuratedContent';
+$route['user-curated-content/view/(:any)'] = 'AdminController/eventRegistrationView/$1';
+$route['user-curated-content-ation/(:any)/(:any)'] = 'AdminController/userCuratedContentAction/$1/$2';
 $route['post-send-message'] = 'AdminController/postSendMessage';
 //route for report excel
 $route['download-event-registration/(:any)'] = 'ReportExcelController/downloadEventRegistration/$1';
