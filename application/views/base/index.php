@@ -1271,7 +1271,7 @@
                     </p> -->
                 <?php else: ?>
                     <?php foreach ($curatedContentList as $testimonial): ?>
-                        <a href="<?php echo base_url('curated/' . $testimonial['page_slug']); ?>">
+                        <a href="javascrip:void(0)">
                             <div class="single-testimonial-item">
                                 <div class="testimonial-inner-content">
                                     <img src="<?php echo base_url('uploads/cc_image/' . $testimonial['image']); ?>" alt="">
@@ -1280,9 +1280,9 @@
                                             <h6><?php echo $testimonial['title']; ?></h6>
                                         </div>
                                     </div>
-                                    <!-- <p><?php echo limit_words($testimonial['content'], 20); ?></p> -->
+                                    <p><?php echo $testimonial['content']; ?></p>
                                     <div class="text-center">
-                                      <a class="btn-link text-center" href="<?php echo base_url('curated/' . $testimonial['page_slug']); ?>">Read More<i class="fas fa-arrow-right"></i></a>
+                                      <!-- <a class="btn-link text-center" href="<?php echo base_url('curated/' . $testimonial['page_slug']); ?>">Read More<i class="fas fa-arrow-right"></i></a> -->
                                     </div>
                                 </div>
                             </div>

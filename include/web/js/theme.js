@@ -372,7 +372,7 @@
     if ($('.projects-slider-four').length) {
         $('.projects-slider-four').slick({
             dots: false,
-            arrows: false,
+            arrows: true,
             infinite: true,
             speed: 800,
             autoplay: true,

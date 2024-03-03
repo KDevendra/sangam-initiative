@@ -20,10 +20,10 @@
                              <img src="<?php echo base_url('uploads/cc_image/' . $curatedContentDetail->image); ?>" alt="<?php echo $curatedContentDetail->title;?>">
                           <?php endif; ?>
 
-                           <h3 class="mt-2"><?php echo $curatedContentDetail->title;?></h3>
+                           <h3 class="mt-2"> <a href="<?php echo $curatedContentDetail->link?>" target="_blank"><?php echo $curatedContentDetail->title;?></a> </h3>
                            <h5 class="mt-2"><?php echo $curatedContentDetail->sub_title;?></h5>
                            <?php if (!empty($curatedContentDetail->link)): ?>
-                           <a class="pb-2 btn-link" target="_blank" href="<?php echo $curatedContentDetail->link?>">View Link</a>
+                           <!-- <a class="pb-2 btn-link" target="_blank" href="<?php echo $curatedContentDetail->link?>">View Link</a> -->
                            <?php endif; ?>
                            <?php echo $curatedContentDetail->content;?>
                            <!-- <div class="d-flex justify-content-center">
