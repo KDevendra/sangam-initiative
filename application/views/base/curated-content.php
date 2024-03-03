@@ -23,7 +23,7 @@
                            <a href="<?php echo $curatedContentDetail->link?>"></a>
                            <?php endif; ?>
                            <?php echo $curatedContentDetail->content;?>
-                           <div class="d-flex justify-content-center">
+                           <!-- <div class="d-flex justify-content-center">
                               <div class="post-meta">
                                  <span class="author"><span>Author:</span> <?php echo $curatedContentDetail->author_name;?></span>
                                  <span class="date"><span>Post Date:</span> <?php
@@ -33,7 +33,7 @@
                                     ?>
                                  </span>
                               </div>
-                           </div>
+                           </div> -->
                         </div>
                      </div>
                   </div>
