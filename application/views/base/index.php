@@ -848,7 +848,7 @@
                <p class="title"><a href="javascript:void(0)">Sangam – <b>Delhi</b> <br> <span>India’s Enterprise Hub</span> </a></p>
                <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIT Delhi</h5>
                <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 5th March 2024</h4>
-               <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 2nd March 2024</p>
+               <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 3rd March 2024</p>
                <div class="d-flex justify-content-center">
                   <a class="btn btn-danger text-white mt-20" href="<?php echo base_url('registration')?>">Register Now</a>
                </div>
@@ -1263,22 +1263,29 @@
                    }
                 }
                 ?>
-                <?php foreach ($curatedContentList as $testimonial): ?>
-                   <a href="<?php echo base_url('curated/' . $testimonial['page_slug']); ?>">
-                       <div class="single-testimonial-item">
-                           <div class="testimonial-inner-content">
-                               <img src="<?php echo base_url('uploads/cc_image/' . $testimonial['image']); ?>" alt="">
-                               <div class="quote-rating-box">
-                                   <div class="ratings-box">
-                                       <h6><?php echo $testimonial['title']; ?></h6>
-                                   </div>
-                               </div>
-                               <p><?php echo limit_words($testimonial['content'], 20); ?></p>
-                           </div>
-                       </div>
-                   </a>
-                <?php endforeach; ?>
-
+                <?php if (empty($curatedContentList)): ?>
+                  <h2>Coming Soon!</h2>
+                  <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                       Join us as we embark on an exhilarating journey of content creation! Your participation is key to shaping the direction of our upcoming material. Dive into interactive discussions, share your ideas, and
+                       contribute your unique perspective. Together, let's make our content truly exceptional.
+                    </p>
+                <?php else: ?>
+                    <?php foreach ($curatedContentList as $testimonial): ?>
+                        <a href="<?php echo base_url('curated/' . $testimonial['page_slug']); ?>">
+                            <div class="single-testimonial-item">
+                                <div class="testimonial-inner-content">
+                                    <img src="<?php echo base_url('uploads/cc_image/' . $testimonial['image']); ?>" alt="">
+                                    <div class="quote-rating-box">
+                                        <div class="ratings-box">
+                                            <h6><?php echo $testimonial['title']; ?></h6>
+                                        </div>
+                                    </div>
+                                    <p><?php echo limit_words($testimonial['content'], 20); ?></p>
+                                </div>
+                            </div>
+                        </a>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
          </div>
       </div>

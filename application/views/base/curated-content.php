@@ -13,21 +13,29 @@
          <div class="col-xl-12 col-lg-12">
             <div class="blog-details-wrapper">
                <div class="blog-post wow fadeInUp">
-                  <!-- <div class="post-meta">
-                     <span class="author"><img src="assets/images/blog/author-thumb-4.jpg" alt="author"><a href="blog-details.html"><span>By</span> Michael</a></span>
-                     <span class="date"><a href="blog-details.html">25 December 2022</a></span>
-                     <span class="comment"><a href="blog-details.html">5 Comments</a></span>
-                  </div> -->
                   <div class="row">
-                      <div class="col-md-8">
-                        <div class="entry-content">
-                           <h3 class="title"><?php echo $curatedContentDetail->title;?></h3>
+                     <div class="col-md-12">
+                        <div class="entry-content text-center">
+                           <img src="<?php echo base_url('uploads/cc_image/' . $curatedContentDetail->image); ?>" alt="<?php echo $curatedContentDetail->title;?>">
+                           <h3 class="mt-2"><?php echo $curatedContentDetail->title;?></h3>
+                           <h5 class="mt-2"><?php echo $curatedContentDetail->sub_title;?></h5>
+                           <?php if (!empty($curatedContentDetail->link)): ?>
+                           <a href="<?php echo $curatedContentDetail->link?>"></a>
+                           <?php endif; ?>
                            <?php echo $curatedContentDetail->content;?>
+                           <div class="d-flex justify-content-center">
+                              <div class="post-meta">
+                                 <span class="author"><span>Author:</span> <?php echo $curatedContentDetail->author_name;?></span>
+                                 <span class="date"><span>Post Date:</span> <?php
+                                    $dateString = $curatedContentDetail->created_at;
+                                    $date = new DateTime($dateString);
+                                    echo $date->format('d F Y');
+                                    ?>
+                                 </span>
+                              </div>
+                           </div>
                         </div>
-                      </div>
-                      <div class="col-md-4">
-                           <img src="<?php echo base_url('uploads/cc_image/' . $curatedContentDetail->image); ?>" alt="">
-                      </div>
+                     </div>
                   </div>
                </div>
             </div>
