@@ -16,7 +16,9 @@
                   <div class="row">
                      <div class="col-md-12">
                         <div class="entry-content text-center">
-                           <img src="<?php echo base_url('uploads/cc_image/' . $curatedContentDetail->image); ?>" alt="<?php echo $curatedContentDetail->title;?>">
+                           <?php if (!empty($curatedContentDetail->image)): ?>
+                             <img src="<?php echo base_url('uploads/cc_image/' . $curatedContentDetail->image); ?>" alt="<?php echo $curatedContentDetail->title;?>">
+                           <?php endif; ?>
                            <h3 class="mt-2"><?php echo $curatedContentDetail->title;?></h3>
                            <h5 class="mt-2"><?php echo $curatedContentDetail->sub_title;?></h5>
                            <?php if (!empty($curatedContentDetail->link)): ?>
