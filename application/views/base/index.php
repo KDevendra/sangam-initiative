@@ -1273,10 +1273,12 @@
                     <?php foreach ($curatedContentList as $testimonial): ?>
                       <div class="single-testimonial-item">
                           <div class="testimonial-inner-content text-center">
-                              <img src="<?php echo base_url('uploads/cc_image/' . $testimonial['image']); ?>" alt="">
+                              <div class="d-flex justify-content-center">
+                                  <img src="<?php echo base_url('uploads/cc_image/' . $testimonial['image']); ?>" alt="<?php echo $testimonial['title']; ?>">
+                              </div>
                               <div class="quote-rating-box text-center">
                                   <div class="ratings-box">
-                                      <h6><?php echo $testimonial['title']; ?></h6>
+                                      <h6> <a href="<?php echo $testimonial['link']; ?>"><?php echo $testimonial['title']; ?></a> </h6>
                                   </div>
                               </div>
                               <?php echo $testimonial['content']; ?>

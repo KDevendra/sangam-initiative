@@ -64,6 +64,21 @@ class BaseController extends CI_Controller {
     }
     public function events() {
         $data['title'] = "Upcoming Events: " . $this->projectTitle;
+        $preRegistrations = $this->BaseModel->getData("login", ['user_level' => 2])->result_array();
+        $participantsPerEvent  = $this->BaseModel->getData("event_registration")->result_array();
+        $verifiedCount = 0;
+        $approvedCount = 0;
+        foreach ($preRegistrations as $record) {
+            if ($record["is_verified"] == 1) {
+                $verifiedCount++;
+            }
+        }
+        foreach ($participantsPerEvent as $record) {
+            if ($record["status"] == 2) {
+                $approvedCount++;
+            }
+        }
+        $data = ["verified" => $verifiedCount,  "approved" => $approvedCount];
         $this->load->view('base/events', $data);
     }
     public function joinAsSpeaker() {

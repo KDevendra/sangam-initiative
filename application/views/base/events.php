@@ -121,7 +121,7 @@
       </div>
    </div>
 </section>
-<section class="faq-section pt-50 pb-50">
+<section class="faq-section pt-50 pb-50" id="scheduleDes">
    <div class="container">
       <div class="event_accordion" id="event_accordionOne">
          <div class="row justify-content-center">
@@ -265,7 +265,9 @@
                   <div class="inner-counter">
                      <div class="icon">
                      </div>
-                     <h2 class="number"><span class="count">145</span>+</h2>
+                     <h2 class="number"><span class="count"><?php if (isset($approved)) {
+                      echo $approved;
+                     }?></span>+</h2>
                      <p>Participants Per Event </p>
                   </div>
                </div>
@@ -275,7 +277,9 @@
                   <div class="inner-counter">
                      <div class="icon">
                      </div>
-                     <h2 class="number"><span class="count">310</span>+</h2>
+                     <h2 class="number"><span class="count"><?php if (isset($verified)) {
+                      echo $verified;
+                     }?></span>+</h2>
                      <p>Pre Registrations </p>
                   </div>
                </div>

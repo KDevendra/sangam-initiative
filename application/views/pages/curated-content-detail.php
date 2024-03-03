@@ -26,6 +26,9 @@
                </div>
                <div class="card-body form-steps">
                   <form class="vertical-navs-step" action="<?php echo base_url('submit-curated-content');?>" method="post" enctype="multipart/form-data" >
+                    <input type="hidden" name="cc_id" value="<?php if (!empty($curatedContentDetail->cc_id)) {
+                      echo  $curatedContentDetail->cc_id;
+                    }?>">
                      <div class="row gy-5">
                         <div class="col-lg-12">
                            <div class="px-lg-4">
@@ -83,6 +86,12 @@
                                              <p>  <a target="_blank" href="<?php echo base_url('uploads/cc_image/').$curatedContentDetail->image;?>">View File</a></p>
                                              <?php } else { ?>
                                              <input type="file"  class="form-control" id="attachment" name="attachment"  />
+                                             <?php if (isset($flag) && $flag === 'edit' && !empty($curatedContentDetail->image))
+                                             {
+                                            ?>
+                                            <a target="_blank" href="<?php echo base_url('uploads/cc_image/').$curatedContentDetail->image;?>">View File</a>
+                                              <?php
+                                           }?>
                                              <?php } ?>
                                           </div>
                                           <div class="col-sm-3">
@@ -111,7 +120,7 @@
                                     </div>
                                     <?php if (isset($flag) && $flag === 'view') {
                                        } else { ?>
-                                    <div class="d-flex align-items-start gap-3 mt-4">
+                                    <div class="d-flex justify-content-center gap-3 mt-4">
                                        <button type="submit" class="btn btn-primary">Save Details</button>
                                     </div>
                                     <?php } ?>

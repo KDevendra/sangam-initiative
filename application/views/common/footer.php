@@ -136,6 +136,7 @@
         $('button[type="submit"]').prop("disabled", false).html("Register Now");
     }
     $(document).ready(function() {
+      $('.testimonial-inner-content a').attr('target', '_blank');
         $('.nav-link').hover(function() {
             var target = $(this).data('target');
             $('.tab-pane').removeClass('active');
