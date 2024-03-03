@@ -1265,22 +1265,25 @@
                 ?>
                 <?php if (empty($curatedContentList)): ?>
                   <h2>Coming Soon!</h2>
-                  <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                  <!-- <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
                        Join us as we embark on an exhilarating journey of content creation! Your participation is key to shaping the direction of our upcoming material. Dive into interactive discussions, share your ideas, and
                        contribute your unique perspective. Together, let's make our content truly exceptional.
-                    </p>
+                    </p> -->
                 <?php else: ?>
                     <?php foreach ($curatedContentList as $testimonial): ?>
                         <a href="<?php echo base_url('curated/' . $testimonial['page_slug']); ?>">
                             <div class="single-testimonial-item">
                                 <div class="testimonial-inner-content">
                                     <img src="<?php echo base_url('uploads/cc_image/' . $testimonial['image']); ?>" alt="">
-                                    <div class="quote-rating-box">
+                                    <div class="quote-rating-box text-center">
                                         <div class="ratings-box">
                                             <h6><?php echo $testimonial['title']; ?></h6>
                                         </div>
                                     </div>
-                                    <p><?php echo limit_words($testimonial['content'], 20); ?></p>
+                                    <!-- <p><?php echo limit_words($testimonial['content'], 20); ?></p> -->
+                                    <div class="text-center">
+                                      <a class="btn-link text-center" href="<?php echo base_url('curated/' . $testimonial['page_slug']); ?>">Read More<i class="fas fa-arrow-right"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </a>

@@ -7,7 +7,7 @@
       </div>
    </div>
 </section>
-<section class="blog-details-section pt-100">
+<section class="blog-details-section pt-50 pb-50">
    <div class="container">
       <div class="row">
          <div class="col-xl-12 col-lg-12">
@@ -16,13 +16,14 @@
                   <div class="row">
                      <div class="col-md-12">
                         <div class="entry-content text-center">
-                           <?php if (!empty($curatedContentDetail->image)): ?>
+                          <?php if (!empty($curatedContentDetail->image)): ?>
                              <img src="<?php echo base_url('uploads/cc_image/' . $curatedContentDetail->image); ?>" alt="<?php echo $curatedContentDetail->title;?>">
-                           <?php endif; ?>
+                          <?php endif; ?>
+
                            <h3 class="mt-2"><?php echo $curatedContentDetail->title;?></h3>
                            <h5 class="mt-2"><?php echo $curatedContentDetail->sub_title;?></h5>
                            <?php if (!empty($curatedContentDetail->link)): ?>
-                           <a href="<?php echo $curatedContentDetail->link?>"></a>
+                           <a class="pb-2 btn-link" target="_blank" href="<?php echo $curatedContentDetail->link?>">View Link</a>
                            <?php endif; ?>
                            <?php echo $curatedContentDetail->content;?>
                            <!-- <div class="d-flex justify-content-center">

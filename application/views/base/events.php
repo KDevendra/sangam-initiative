@@ -391,6 +391,100 @@
                <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Esri India Technologies Private Limited</h4>
             </div>
          </div>
+
+         <div class="single-project-item-four">
+            <div class="project-img">
+               <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Dr_Aniruddha_Roy.jpg" alt="Speaker_Dr_Aniruddha_Roy" />
+               <div class="hover-content">
+                  <div class="text text-white">
+                     <h3 class="title"><a href="javascript:void(0)">Dr. Aniruddha Roy</a></h3>
+                     <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     <p style="font-size:13px">Dr. Aniruddha Roy is responsible for enabling business through conceptualizing applications as relevant to the vertical segments using emerging technologies. Prior to this, he was Vice President at Navayuga Engineering Company Ltd., wherein he spearheaded Delhi State Spatial Data Infrastructure ( DSSDI) and National Spatial Data Infrastructure ( NSDI)  projects. He also served as Technical head of ESRI India and  Project Scientist  at CSRE, IIT Bombay. Dr Roy has done his PhD in Environmental Science and Engg.  from IIT ISM Dhanbad,  M.Tech from IIT Roorkee and MBA in Disaster Management from IP University Delhi. He is currently volunteering as a member in FICCI National Space and Geospatial committee and as a technical member of ‘Geospatial Committee - LITD22 ' of  Bureau of Indian Standards ( BIS), Government of India. He has to his credit several technical papers published in International  and national journals and magazines.</p>
+                  </div>
+               </div>
+               <div class="project-content">
+                  <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                  </div>
+               </div>
+            </div>
+            <div class="text_for_outreach height_150">
+               <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Dr. Aniruddha Roy</a></p>
+               <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Chief Technology Officer</h5>
+               <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Genesys International Corporation Ltd</h4>
+            </div>
+         </div>
+
+
+         <div class="single-project-item-four">
+            <div class="project-img">
+               <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Amit_Shrivastava.jpg" alt="Speaker_Amit_Shrivastava" />
+               <div class="hover-content">
+                  <div class="text text-white">
+                     <h3 class="title"><a href="javascript:void(0)">Amit Shrivastava</a></h3>
+                     <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     <p style="font-size:13px">Amit Shrivastava leads presales consulting by offering business strategy and technical expertise to sales in the selection, implementation, and development of competitive product and service applications and solutions. His proactive approach involves monitoring competitors, analysing business practices, and providing recommendations while staying informed about industry trends, market dynamics, and emerging technologies.</p>
+                  </div>
+               </div>
+               <div class="project-content">
+                  <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                  </div>
+               </div>
+            </div>
+            <div class="text_for_outreach height_150">
+               <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Amit Shrivastava</a></p>
+               <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Sr. Director -S.E</h5>
+               <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Bentley Systems</h4>
+            </div>
+         </div>
+
+
+         <div class="single-project-item-four">
+            <div class="project-img">
+               <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Deepak_Ail.jpg" alt="Speaker_Deepak_Ail" />
+               <div class="hover-content">
+                  <div class="text text-white">
+                     <h3 class="title"><a href="javascript:void(0)">Deepak Ail</a></h3>
+                     <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     <p style="font-size:13px">Deepak spearheaded Indiagames with a team of 200 in 2012, he carefully navigated his way through various responsibilities of Designer, Associate Vice President (Sales), Business Developer, and Director-mobile post acquisition of Indiagames by Disney. He co-founded ‘Roosh Interactive’, an independent studio in Dec 2013 which created a berth for itself by publishing different games viz. Sniper Death Match, Sachin Saga, Sultan, Zombie Bloxx, Zipsacks Adventure, Ludo Champ, Racing Champ, Teen Patti, and Cricket T20 Fever across different platforms.</p>
+                  </div>
+               </div>
+               <div class="project-content">
+                  <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                  </div>
+               </div>
+            </div>
+            <div class="text_for_outreach height_150">
+               <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Deepak Ail</a></p>
+               <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO & Co-Founder</h5>
+               <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">DoT9 Games</h4>
+            </div>
+         </div>
+
+
+         <div class="single-project-item-four">
+            <div class="project-img">
+               <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Abhishek_Singh.jpg" alt="Speaker_Abhishek_Singh" />
+               <div class="hover-content">
+                  <div class="text text-white">
+                     <h3 class="title"><a href="javascript:void(0)">Abhishek Singh</a></h3>
+                     <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                  </div>
+               </div>
+               <div class="project-content">
+                  <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                  </div>
+               </div>
+            </div>
+            <div class="text_for_outreach height_150">
+               <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Abhishek Singh</a></p>
+               <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Head of Customer Intelligence</h5>
+               <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Airtel</h4>
+            </div>
+         </div>
       </div>
    </div>
 </section>

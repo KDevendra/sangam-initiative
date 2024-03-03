@@ -7486,7 +7486,7 @@ font-size: 20px;
 }
 
 .blog-details-wrapper .blog-post .entry-content>p {
-  margin-bottom: 38px;
+  margin-bottom: 0px;
 }
 
 .blog-details-wrapper .blog-post .entry-content .block-image {
