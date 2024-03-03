@@ -1271,22 +1271,20 @@
                     </p> -->
                 <?php else: ?>
                     <?php foreach ($curatedContentList as $testimonial): ?>
-                        <a href="javascrip:void(0)">
-                            <div class="single-testimonial-item">
-                                <div class="testimonial-inner-content">
-                                    <img src="<?php echo base_url('uploads/cc_image/' . $testimonial['image']); ?>" alt="">
-                                    <div class="quote-rating-box text-center">
-                                        <div class="ratings-box">
-                                            <h6><?php echo $testimonial['title']; ?></h6>
-                                        </div>
-                                    </div>
-                                    <p><?php echo $testimonial['content']; ?></p>
-                                    <div class="text-center">
-                                      <!-- <a class="btn-link text-center" href="<?php echo base_url('curated/' . $testimonial['page_slug']); ?>">Read More<i class="fas fa-arrow-right"></i></a> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                      <div class="single-testimonial-item">
+                          <div class="testimonial-inner-content text-center">
+                              <img src="<?php echo base_url('uploads/cc_image/' . $testimonial['image']); ?>" alt="">
+                              <div class="quote-rating-box text-center">
+                                  <div class="ratings-box">
+                                      <h6><?php echo $testimonial['title']; ?></h6>
+                                  </div>
+                              </div>
+                              <?php echo $testimonial['content']; ?>
+                              <div class="text-center">
+                                <!-- <a class="btn-link text-center" href="<?php echo base_url('curated/' . $testimonial['page_slug']); ?>">Read More<i class="fas fa-arrow-right"></i></a> -->
+                              </div>
+                          </div>
+                      </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>

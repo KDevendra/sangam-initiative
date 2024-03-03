@@ -5973,7 +5973,7 @@ ul.slick-dots li.slick-active {
 }
 
 .single-testimonial-item .testimonial-inner-content>p {
-  margin-bottom: 25px;
+  margin-bottom:0px;
 }
 
 .single-testimonial-item .testimonial-inner-content .author-thumb-title {

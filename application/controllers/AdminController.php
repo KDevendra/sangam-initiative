@@ -31,7 +31,7 @@ class AdminController extends CI_Controller {
                 }
                 $this->email->subject($subject);
                 $this->email->message($message);
-                if ($attach !== "") {
+                if (!empty($attach)) {
                     $this->email->attach($attach);
                 }
                 if ($this->email->send()) {
@@ -1391,7 +1391,8 @@ class AdminController extends CI_Controller {
                 }
                 $values = [$applicationDetail->registration_id, $applicationDetail->event_name, $applicationDetail->location, $applicationDetail->full_name, $applicationDetail->email, $applicationDetail->phone_number, $applicationDetail->event_date, $event_location_qr_code];
                 $messageBody = str_replace($placeholders, $values, $messageBody);
-                $emailSent = $this->mainEmailConfig($applicationDetail->email, $subject, $messageBody, "", "");
+                $aatchment = base_url('include/web/custom/Tentative_Schedule_Atchment.pdf');
+                $emailSent = $this->mainEmailConfig($applicationDetail->email, $subject, $messageBody, "", $aatchment);
                 if ($emailSent) {
                     $query = $this->BaseModel->updateData("event_registration", ["status" => 2], ["registration_id" => $registration_id]);
                     if ($query) {

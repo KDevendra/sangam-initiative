@@ -215,6 +215,9 @@
                   </div>
                </div>
             </div>
+            <div class="d-flex justify-content-center">
+              <a class="main-btn primary-btn mt-3" download="<?php echo base_url('include/web/custom/Tentative_Schedule_Atchment.pdf');?>" href="<?php echo base_url('include/web/custom/Tentative_Schedule_Atchment.pdf');?>">Download Schedule</a>
+            </div>
          </div>
       </div>
    </div>
@@ -262,7 +265,7 @@
                   <div class="inner-counter">
                      <div class="icon">
                      </div>
-                     <h2 class="number"><span class="count">200</span>+</h2>
+                     <h2 class="number"><span class="count">145</span>+</h2>
                      <p>Participants Per Event </p>
                   </div>
                </div>
@@ -272,7 +275,7 @@
                   <div class="inner-counter">
                      <div class="icon">
                      </div>
-                     <h2 class="number"><span class="count">100</span>+</h2>
+                     <h2 class="number"><span class="count">310</span>+</h2>
                      <p>Pre Registrations </p>
                   </div>
                </div>
@@ -399,6 +402,7 @@
                <div class="hover-content">
                   <div class="text text-white">
                      <h3 class="title"><a href="javascript:void(0)">Abhishek Singh</a></h3>
+                      <p style="font-size:13px">Abhishek owns the data platforms and the intelligent data products which help the telco cater to its large customer base of almost a third of Indians. Over the last couple of years, he has led a data platform transformation at Airtel re-defining data quality, governance and ways of working with data at Airtel. In his previous stints at other companies, he has worked on various data driven solutions such as fraud prevention, location analytics and has several publications to his credit. He has more than 17 years of experience in varied domains of technology and data driven intelligence and engineering.</p>
                      <!-- <h5>Senior Manager, Presales Consulting</h5> -->
                   </div>
                </div>
@@ -458,19 +462,19 @@
                <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Genesys International Corporation Ltd</h4>
             </div>
          </div>
-         <div class="single-project-item-four col-md-3">
+         <!-- <div class="single-project-item-four col-md-3">
             <div class="project-img">
                <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Deepak_Ail.jpg" alt="Speaker_Deepak_Ail" />
                <div class="hover-content">
                   <div class="text text-white">
                      <h3 class="title"><a href="javascript:void(0)">Deepak Ail</a></h3>
-                     <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+
                      <p style="font-size:13px">Deepak spearheaded Indiagames with a team of 200 in 2012, he carefully navigated his way through various responsibilities of Designer, Associate Vice President (Sales), Business Developer, and Director-mobile post acquisition of Indiagames by Disney. He co-founded ‘Roosh Interactive’, an independent studio in Dec 2013 which created a berth for itself by publishing different games viz. Sniper Death Match, Sachin Saga, Sultan, Zombie Bloxx, Zipsacks Adventure, Ludo Champ, Racing Champ, Teen Patti, and Cricket T20 Fever across different platforms.</p>
                   </div>
                </div>
                <div class="project-content">
                   <div class="text text-white">
-                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+
                   </div>
                </div>
             </div>
@@ -479,7 +483,7 @@
                <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO & Co-Founder</h5>
                <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">DoT9 Games</h4>
             </div>
-         </div>
+         </div> -->
          <div class="single-project-item-four col-md-3">
             <div class="project-img">
                <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Jayant_Ratti.jpg" alt="Speaker_Jayant_Ratti" />
