@@ -19,6 +19,8 @@
     border-top-style: solid;
     border-top-color: rgba(49, 92, 135, 0.43) !important;
 }
+.single-testimonial-item .testimonial-inner-content{height: 335px;}
+.testimonial-inner-content  img{height: 180px}
 .speakerSection  .slick-arrow {
     position: absolute;
     top: 42%;

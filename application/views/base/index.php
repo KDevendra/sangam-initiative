@@ -1250,50 +1250,133 @@
                </div>
             </div>
             <div class="testimonial-slider-one wow fadeInUp">
-              <?php
-                function limit_words($text, $limit) {
-                   $words = explode(" ", $text);
-
-                   if (count($words) > $limit) {
-                       $limited_text = implode(" ", array_slice($words, 0, $limit));
-                       $limited_text .= '...';
-                       return $limited_text;
-                   } else {
-                       return $text;
-                   }
-                }
-                ?>
-                <?php if (empty($curatedContentList)): ?>
-                  <h2>Coming Soon!</h2>
-                  <!-- <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                       Join us as we embark on an exhilarating journey of content creation! Your participation is key to shaping the direction of our upcoming material. Dive into interactive discussions, share your ideas, and
-                       contribute your unique perspective. Together, let's make our content truly exceptional.
-                    </p> -->
-                <?php else: ?>
-                    <?php foreach ($curatedContentList as $testimonial): ?>
-                      <div class="single-testimonial-item">
-                          <div class="testimonial-inner-content text-center">
-                              <div class="d-flex justify-content-center">
-                                  <img src="<?php echo base_url('uploads/cc_image/' . $testimonial['image']); ?>" alt="<?php echo $testimonial['title']; ?>">
-                              </div>
-                              <div class="quote-rating-box text-center">
-                                  <div class="ratings-box">
-                                      <h6><a href="<?php echo $testimonial['link']; ?>"><?php echo $testimonial['title']; ?></a> </h6>
-                                      <?php if (!empty($testimonial['sub_title'])) {
-                                        ?>
-                                        <p><?php echo $testimonial['sub_title']; ?></p>
-                                      <?php
-                                    }?>
-                                  </div>
-                              </div>
-                              <?php echo $testimonial['content']; ?>
-                              <div class="text-center">
-                                <!-- <a class="btn-link text-center" href="<?php echo base_url('curated/' . $testimonial['page_slug']); ?>">Read More<i class="fas fa-arrow-right"></i></a> -->
-                              </div>
+              <div class="single-testimonial-item">
+                  <div class="testimonial-inner-content text-center">
+                      <div class="d-flex justify-content-center">
+                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_ESRI.png" alt="">
+                      </div>
+                      <div class="quote-rating-box d-flex justify-content-center">
+                          <div class="ratings-box">
+                              <h5><a href="https://www.youtube.com/watch?v=s8SB0QvuRxI"  target="_blank">ArcGIS</a></h6>
+                              <p> <b>A Foundation for Digital Twins</b> </p>
                           </div>
                       </div>
-                    <?php endforeach; ?>
-                <?php endif; ?>
+                      <div class="text-center">
+                          <h6> <a href="https://www.esri.in/" target="_blank">ESRI</a> </h6>
+                      </div>
+                  </div>
+              </div>
+              <div class="single-testimonial-item">
+                  <div class="testimonial-inner-content text-center">
+                      <div class="d-flex justify-content-center">
+                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_Blue_Sky.webp" alt="">
+                      </div>
+                      <div class="quote-rating-box d-flex justify-content-center">
+                          <div class="ratings-box">
+                              <h5><a href="https://blueskyhq.io/blog/spacetime-building-a-digital-twin-of-our-planet"  target="_blank">SpaceTime™</a></h6>
+                              <p> <b>Building a Digital Twin of our Planet</b> </p>
+                          </div>
+                      </div>
+                      <div class="text-center">
+                          <h6> <a href="https://blueskyhq.io/" target="_blank">Blue Sky Analytics</a> </h6>
+                      </div>
+                  </div>
+              </div>
+              <div class="single-testimonial-item">
+                  <div class="testimonial-inner-content text-center">
+                      <div class="d-flex justify-content-center">
+                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_Genesys.jpg" alt="">
+                      </div>
+                      <div class="quote-rating-box d-flex justify-content-center">
+                          <div class="ratings-box">
+                              <h5><a href="https://www.igenesys.com/3d-digital-twin"  target="_blank">Genesys’s </a></h6>
+                              <p> <b>3D- Digital Twin</b> </p>
+                          </div>
+                      </div>
+                      <div class="text-center">
+                          <h6> <a href="https://www.igenesys.com/" target="_blank">Genesys</a> </h6>
+                      </div>
+                  </div>
+              </div>
+              <div class="single-testimonial-item">
+                  <div class="testimonial-inner-content text-center">
+                      <div class="d-flex justify-content-center">
+                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_Bentley.png" alt="">
+                      </div>
+                      <div class="quote-rating-box d-flex justify-content-center">
+                          <div class="ratings-box">
+                              <h5><a href="https://www.bentley.com/software/digital-twins/"  target="_blank">Digital Twins and iTwin Platform</a></h6>
+                              <p> <b>Connect The Physical And Virtual World</b> </p>
+                          </div>
+                      </div>
+                      <div class="text-center">
+                          <h6> <a href="https://www.bentley.com/" target="_blank">Bentley</a> </h6>
+                      </div>
+                  </div>
+              </div>
+              <div class="single-testimonial-item">
+                  <div class="testimonial-inner-content text-center">
+                      <div class="d-flex justify-content-center">
+                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_NAYAN.png" alt="">
+                      </div>
+                      <div class="quote-rating-box d-flex justify-content-center">
+                          <div class="ratings-box">
+                              <h5><a href="https://traffic.nayan.co/"  target="_blank">High Precision Video Analytics and AI Data</a></h6>
+                          </div>
+                      </div>
+                      <div class="text-center">
+                          <h6> <a href="https://nayan.co/" target="_blank">NAYAN</a> </h6>
+                      </div>
+                  </div>
+              </div>
+              <div class="single-testimonial-item">
+                  <div class="testimonial-inner-content text-center">
+                      <div class="d-flex justify-content-center">
+                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_JIO.png" alt="">
+                      </div>
+                      <div class="quote-rating-box d-flex justify-content-center">
+                          <div class="ratings-box">
+                              <h5><a href="https://www.jio.com/business/jio-mixed-reality"  target="_blank">Mixed Reality </a></h6>
+                              <p> <b>Deliver the perfect blend of physical and digital worlds</b> </p>
+                          </div>
+                      </div>
+                      <div class="text-center">
+                          <h6> <a href="https://www.jio.com/" target="_blank">Jio</a> </h6>
+                      </div>
+                  </div>
+              </div>
+              <div class="single-testimonial-item">
+                  <div class="testimonial-inner-content text-center">
+                      <div class="d-flex justify-content-center">
+                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_Microsoft.png" alt="">
+                      </div>
+                      <div class="quote-rating-box d-flex justify-content-center">
+                          <div class="ratings-box">
+                              <h5><a href="https://azure.microsoft.com/en-in/products/digital-twins"  target="_blank">Azure Digital Twins</a></h6>
+                              <p> <b>Create live, digital models of the physical world</b> </p>
+                          </div>
+                      </div>
+                      <div class="text-center">
+                          <h6> <a href="https://azure.microsoft.com/en-in/" target="_blank">Microsoft</a> </h6>
+                      </div>
+                  </div>
+              </div>
+              <div class="single-testimonial-item">
+                  <div class="testimonial-inner-content text-center">
+                      <div class="d-flex justify-content-center">
+                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_Meta.jpg" alt="">
+                      </div>
+                      <div class="quote-rating-box d-flex justify-content-center">
+                          <div class="ratings-box">
+                              <h5><a href="https://about.meta.com/metaverse/#virtual-reality"  target="_blank">Virtual reality</a></h6>
+                              <p> <b>Explore new worlds and shared experiences</b> </p>
+                          </div>
+                      </div>
+                      <div class="text-center">
+                          <h6> <a href="https://about.meta.com/" target="_blank">Meta</a> </h6>
+                      </div>
+                  </div>
+              </div>
             </div>
          </div>
       </div>

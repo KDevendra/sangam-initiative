@@ -161,11 +161,6 @@
                                  <td>TCOE</td>
                                  <td>Registration Desk</td>
                               </tr>
-                              <tr class="bg-blush-pink">
-                                 <td>09:30-10:15</td>
-                                 <td>45 mins</td>
-                                 <td colspan="3">Inaugural Session</td>
-                              </tr>
                               <tr class="bg-wzureish-white">
                                  <td>09:30-09:33</td>
                                  <td>3 mins</td>
@@ -235,7 +230,8 @@
                            <tbody class="text-center">
                               <tr class="bg-wzureish-white">
                                  <td>10:35-10:55</td>
-                                 <td colspan="2"><b>Overview of Sangam:</b> Digital Twin Initiative </td>
+                                 <td>20 mins</td>
+                                 <td colspan="1"><b>Overview of Sangam:</b> Digital Twin Initiative </td>
                                  <td>DoT</td>
                                  <td>Sh. Asit Kadayan & Ms. Kumud Jindal</td>
                               </tr>
