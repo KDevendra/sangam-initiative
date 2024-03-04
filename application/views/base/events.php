@@ -129,7 +129,7 @@
                <div class="section-title text-center mb-30 wow fadeInDown">
                   <!-- <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt="" /> Weaving the Fabric of Events</span> -->
                   <h2>Schedule for Delhi Outreach Program </h2>
-                  <h5 class="mt-10 blink-text" style="color: #ff0000b8;">5th March 2024 (9:30 am to 5:30 pm)</h5>
+                  <h5 class="mt-10 blink-text" style="color: #ff0000b8;">5th March 2024 (09:00 to 17:30)</h5>
                </div>
             </div>
          </div>
@@ -137,7 +137,7 @@
             <div class="event_accordion">
                <div class="event_accordion-item">
                   <button id="event_accordion-button-1" aria-expanded="false">
-                  <span style="color: #27a844;">Morning 09:00 to 10:55</span>
+                  <span style="color: #27a844;">Morning 09:00 to 10:35</span>
                   <span class="event_accordion-title">Inauguration</span>
                   <span class="icon" aria-hidden="true"></span>
                   </button>
@@ -209,9 +209,30 @@
                                  <td>25 mins</td>
                                  <td colspan="3">High Tea</td>
                               </tr>
-                              <tr class="bg-goldenrod">
-                                 <td colspan="5"><b>Sangam Digital Twin:</b> Journey from Physical World to Real Time Intelligent Virtual World</td>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="event_accordion-item">
+                  <button id="event_accordion-button-1" aria-expanded="false">
+                  <span style="color: #27a844;">Morning 10:35 to 10:55</span>
+                  <span class="event_accordion-title">Sangam Digital Twin: <span style="font-weight: normal">Journey from Physical World to Real Time Intelligent Virtual World</span> </span>
+                  <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="event_accordion-content">
+                     <div class="table-responsive">
+                        <table class="table table-bordered">
+                           <thead>
+                              <tr class="text-center bg-creamy-yellow">
+                                 <th>Time</th>
+                                 <th>Duration</th>
+                                 <th>Session Name</th>
+                                 <th>Organization</th>
+                                 <th>Speaker</th>
                               </tr>
+                           </thead>
+                           <tbody class="text-center">
                               <tr class="bg-wzureish-white">
                                  <td>10:35-10:55</td>
                                  <td colspan="2"><b>Overview of Sangam:</b> Digital Twin Initiative </td>
