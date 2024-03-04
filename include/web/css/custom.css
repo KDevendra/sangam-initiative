@@ -8,6 +8,17 @@
 .text_for_outreach p{
 	color: #3d3d99;
 }
+.table td, .table th {
+  padding: 2px !important;
+  vertical-align: top;
+  border-top: 1px solid #315c876e;
+}
+.table-bordered td, .table-bordered th {
+  border: 1px solid #315c876e;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgba(49, 92, 135, 0.43) !important;
+}
 .speakerSection  .slick-arrow {
     position: absolute;
     top: 42%;
@@ -22,6 +33,33 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     -webkit-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
+}
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 1px solid #c8c8c8 !important;
+    border-bottom-width: 1px;
+}
+.bg-misty-gray {
+    background-color: #d0cece;
+}
+
+.bg-creamy-yellow {
+    background-color: #fff2cc;
+}
+
+.bg-blush-pink {
+    background-color: #fce4d6;
+}
+
+.bg-goldenrod {
+    background-color: #ffd966;
+}
+
+.bg-fresh-mint {
+    background-color: #e2efda;
+}
+.bg-wzureish-white{
+		background-color: #d9e1f2
 }
 .speakerSection  .slick-arrow.next {
     right: -70px;
@@ -170,7 +208,7 @@
     width: 100%;
     padding: 1em 0;
     color: var(--text);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     border: none;
     background: none;

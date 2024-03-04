@@ -122,101 +122,331 @@
    </div>
 </section>
 <section class="faq-section pt-50 pb-50" id="scheduleDes">
-   <div class="container">
+   <div class="container-fluid">
       <div class="event_accordion" id="event_accordionOne">
          <div class="row justify-content-center">
             <div class="col-lg-10">
                <div class="section-title text-center mb-30 wow fadeInDown">
                   <!-- <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt="" /> Weaving the Fabric of Events</span> -->
-                  <h2>Tentative Schedule for Delhi Outreach Program </h2>
+                  <h2>Schedule for Delhi Outreach Program </h2>
                   <h5 class="mt-10 blink-text" style="color: #ff0000b8;">5th March 2024 (9:30 am to 5:30 pm)</h5>
                </div>
             </div>
          </div>
-         <div class="container">
+         <div class="container-fluid">
             <div class="event_accordion">
                <div class="event_accordion-item">
                   <button id="event_accordion-button-1" aria-expanded="false">
-                  <span style="color: #27a844;">Morning 09:30AM to 10:30AM</span>
+                  <span style="color: #27a844;">Morning 09:00 to 10:55</span>
                   <span class="event_accordion-title">Inauguration</span>
                   <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
-                     <div class="row">
-                        <div class="col-md-6">
-                           <h5>Session Name</h5>
-                           <p>Inauguration Session</p>
-                        </div>
-                        <div class="col-md-6">
-                           <h5>Dignitary/ Organization </h5>
-                           <p>Secretary (Telecom)</p>
-                        </div>
+                     <div class="table-responsive">
+                        <table class="table table-bordered">
+                           <thead>
+                              <tr class="text-center bg-creamy-yellow">
+                                 <th>Time</th>
+                                 <th>Duration</th>
+                                 <th>Session Name</th>
+                                 <th>Organization</th>
+                                 <th>Speaker</th>
+                              </tr>
+                           </thead>
+                           <tbody class="text-center">
+                              <tr class="bg-wzureish-white">
+                                 <td>09:00-09:30</td>
+                                 <td>30 mins</td>
+                                 <td>Registration</td>
+                                 <td>TCOE</td>
+                                 <td>Registration Desk</td>
+                              </tr>
+                              <tr class="bg-blush-pink">
+                                 <td>09:30-10:15</td>
+                                 <td>45 mins</td>
+                                 <td colspan="3">Inaugural Session</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>09:30-09:33</td>
+                                 <td>3 mins</td>
+                                 <td colspan="3"> Felicitation Ceremony</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>09:33-09:38</td>
+                                 <td>5 mins</td>
+                                 <td colspan="3">Lamp Lighting</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>09:38-09:43</td>
+                                 <td>5 mins </td>
+                                 <td>Welcome Address</td>
+                                 <td>DDG, DoT</td>
+                                 <td>Sh. Asit Kadayan</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>09:43-09:50</td>
+                                 <td>7 mins</td>
+                                 <td>Special address </td>
+                                 <td>Director, IIT Delhi</td>
+                                 <td>Prof. Rangan Banerjee</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>09:50-10:05</td>
+                                 <td>15 mins</td>
+                                 <td>Keynote address</td>
+                                 <td>Secretary, Telecom</td>
+                                 <td>Dr. Neeraj Mittal</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>10:05-10:10</td>
+                                 <td>5 mins</td>
+                                 <td>Vote of Thanks</td>
+                                 <td>DDG, DoT</td>
+                                 <td>Sh. Mukesh Mangal</td>
+                              </tr>
+                              <tr class="bg-fresh-mint">
+                                 <td>10:10-10:35</td>
+                                 <td>25 mins</td>
+                                 <td colspan="3">High Tea</td>
+                              </tr>
+                              <tr class="bg-goldenrod">
+                                 <td colspan="5"><b>Sangam Digital Twin:</b> Journey from Physical World to Real Time Intelligent Virtual World</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>10:35-10:55</td>
+                                 <td colspan="2"><b>Overview of Sangam:</b> Digital Twin Initiative </td>
+                                 <td>DoT</td>
+                                 <td>Sh. Asit Kadayan & Ms. Kumud Jindal</td>
+                              </tr>
+                           </tbody>
+                        </table>
                      </div>
                   </div>
                </div>
                <div class="event_accordion-item">
                   <button id="event_accordion-button-2" aria-expanded="false">
-                  <span style="color: #27a844;">Forenoon 10:30AM to 01:30PM</span>
-                  <span class="event_accordion-title">Sessions from prominent industry leaders and startups</span>
+                  <span style="color: #27a844;">Forenoon 10:55 to 12:20</span>
+                  <span class="event_accordion-title">Constructing the Future: <span style="font-weight: normal">Digital Twins and the Blueprint of Tomorrow</span> </span>
                   <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
-                     <div class="row">
-                        <div class="col-md-6">
-                           <h5>Session Name</h5>
-                           <p>About Sangam Initiative</p>
-                           <p>Planning in Virtual World</p>
-                           <p>Sangam from Transport perspective</p>
-                           <p>Sangam from Analytics perspective</p>
-                           <p>Sangam from Geospatial perspective</p>
-                           <p>Sangam from Telecom perspective</p>
-                        </div>
-                        <div class="col-md-6">
-                           <h5>Dignitary/ Organization </h5>
-                           <p>DoT
-                           </p>
-                           <p>Prominent Industry leader
-                           </p>
-                           <p>Transport related startups
-                           </p>
-                           <p>Data Analytics/ AI/ML experts</p>
-                           <p>Geospatial industry experts
-                           </p>
-                           <p>Telecom Service Provider (TSP)
-                           </p>
-                        </div>
+                     <div class="table-responsive">
+                        <table class="table table-bordered">
+                           <thead>
+                              <tr class="text-center bg-creamy-yellow">
+                                 <th>Time</th>
+                                 <th>Duration</th>
+                                 <th>Session Name</th>
+                                 <th>Organization</th>
+                                 <th>Speaker</th>
+                              </tr>
+                           </thead>
+                           <tbody class="text-center">
+                              <tr class="bg-wzureish-white">
+                                 <td>10:55-11:15</td>
+                                 <td>20 mins</td>
+                                 <td><b>Digital Twins:</b> Pioneering Smart Infrastructure</td>
+                                 <td>Eros</td>
+                                 <td>Ali Hussain, CEO, Eros Investment </td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>11:15-11:35</td>
+                                 <td> 20 mins</td>
+                                 <td><b>Geospatial Mastery:</b> The Bedrock of Future Planning</td>
+                                 <td>Genesys</td>
+                                 <td> Sh. Aniruddha Roy, CTO</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>11:35-11:50</td>
+                                 <td>15 mins</td>
+                                 <td rowspan="2" style="vertical-align: inherit;"><b>BIM Brilliance:</b> Refining Digital Detail for Superior Utility</td>
+                                 <td> Bentley</td>
+                                 <td>Amit Shrivastava, Sr. Director, S.E.</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>11:50-12:05</td>
+                                 <td> 15 mins</td>
+                                 <td>ESRI</td>
+                                 <td> Sh. Vibhu Sinha, Sr. Manager</td>
+                              </tr>
+                              <tr class="bg-misty-gray">
+                                 <td>12:05-12:15</td>
+                                 <td>10 mins</td>
+                                 <td colspan="3">Questions And Answers</td>
+                              </tr>
+                              <tr class="bg-fresh-mint">
+                                 <td>12:15-12:20</td>
+                                 <td>5 mins</td>
+                                 <td colspan="3">Short Break</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="event_accordion-item">
+                  <button id="event_accordion-button-2" aria-expanded="false">
+                  <span style="color: #27a844;">Afternoon 12:20 to 14:35</span>
+                  <span class="event_accordion-title">Breathing Life into Digital Twins: <span style="font-weight: normal">Dynamic Data Integration</span> </span>
+                  <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="event_accordion-content">
+                     <div class="table-responsive">
+                        <table class="table table-bordered">
+                           <thead>
+                              <tr class="text-center bg-creamy-yellow">
+                                 <th>Time</th>
+                                 <th>Duration</th>
+                                 <th>Session Name</th>
+                                 <th>Organization</th>
+                                 <th>Speaker</th>
+                              </tr>
+                           </thead>
+                           <tbody class="text-center">
+                              <tr class="bg-wzureish-white">
+                                 <td>12:20-12:40</td>
+                                 <td>20 mins</td>
+                                 <td><b>Environmental Insights:</b>  Harnessing Environmental Data into Digital Twins</td>
+                                 <td>Blue Sky Analytics</td>
+                                 <td>Ms. Abhilasha Purwar, Founder & CEO </td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>12:40-13:00</td>
+                                 <td>20 mins</td>
+                                 <td><b>Road Traffic Insights:</b>  Integrating Road Traffic Data into Digital Twins</td>
+                                 <td>Nayan</td>
+                                 <td>Sh. Jayant Ratti, CEO</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>13:00-13:15</td>
+                                 <td>15 mins</td>
+                                 <td rowspan="2" style="vertical-align: inherit;"><b>Mobility Insights:</b> The Role of Telecom Data in Digital Twin Dynamics</td>
+                                 <td>Airtel</td>
+                                 <td>Sh. Abhishek Singh, Head of Customer Intelligence</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>13:15-13:30 </td>
+                                 <td>15 mins</td>
+                                 <td>Reliance Jio</td>
+                                 <td>Sh. Rahul Joshi, AVP & Lead Analytics & Automation</td>
+                              </tr>
+                              <tr class="bg-misty-gray">
+                                 <td>13:30-13:40</td>
+                                 <td>10 mins</td>
+                                 <td colspan="3">Questions And Answers</td>
+                              </tr>
+                              <tr class="bg-fresh-mint">
+                                 <td>13:40-14:35</td>
+                                 <td>55 mins</td>
+                                 <td colspan="3">Lunch Break</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="event_accordion-item">
+                  <button id="event_accordion-button-3" aria-expanded="false">
+                  <span style="color: #27a844;">Afternoon 14:35 to 16:15</span>
+                  <span class="event_accordion-title">Innovative Frontiers: <span style="font-weight: normal">Shaping the Future with Digital Twins and Advanced Technologies</span> </span>
+                  <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="event_accordion-content">
+                     <div class="table-responsive">
+                        <table class="table table-bordered">
+                           <thead>
+                              <tr class="text-center bg-creamy-yellow">
+                                 <th>Time</th>
+                                 <th>Duration</th>
+                                 <th>Session Name</th>
+                                 <th>Organization</th>
+                                 <th>Speaker</th>
+                              </tr>
+                           </thead>
+                           <tbody class="text-center">
+                              <tr class="bg-wzureish-white">
+                                 <td>14:35-14:50</td>
+                                 <td>15 mins </td>
+                                 <td><b>Overcoming the Traditional Barriers in Data Sharing:</b> The Revolution with Privacy Enhancing Technologies (PETs)</td>
+                                 <td>Microsoft</td>
+                                 <td> Sh. Rajesh Ranjan, Director, Government Relations</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>14:50-15:05</td>
+                                 <td>15 mins</td>
+                                 <td rowspan="2" style="vertical-align: inherit;"><b>Imagining the Boundless:</b> Experimental Iterations through VR, AR, and AI</td>
+                                 <td>Microsoft</td>
+                                 <td>Sh. Keshri Asthana, CTO - Govt Business</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>15:05-15:20</td>
+                                 <td>15 mins</td>
+                                 <td>Meta + Parallax</td>
+                                 <td>Sh. Ojasvi Bhatia</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>15:20-15:35</td>
+                                 <td>15 mins</td>
+                                 <td  rowspan="2" style="vertical-align: inherit;">From Insight to Impact: Design Thinking Realized with Generative AI and Digital Twins</td>
+                                 <td>Microsoft</td>
+                                 <td>Sh. Vikram Malhotra, Senior Specialist - Gen AI & DT</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>15:35-15:50</td>
+                                 <td>15 mins</td>
+                                 <td>WhatsApp</td>
+                                 <td>Sh. Animesh Baidya Biswas</td>
+                              </tr>
+                              <tr class="bg-fresh-mint">
+                                 <td>15:50-16:15</td>
+                                 <td>25 mins</td>
+                                 <td colspan="3">High Tea</td>
+                              </tr>
+                           </tbody>
+                        </table>
                      </div>
                   </div>
                </div>
                <div class="event_accordion-item" style="border-bottom: 2px solid #3d3d99;">
                   <button id="event_accordion-button-3" aria-expanded="false">
-                  <span style="color: #27a844;">Afternoon 02:30PM to 05:30PM</span>
-                  <span class="event_accordion-title">Interactive Session</span>
+                  <span style="color: #27a844;">Afternoon 16:15 to 17:30</span>
+                  <span class="event_accordion-title">Building the Future Together: <span style="font-weight: normal"> Navigating Challenges with Global Digital Twin Innovations</span> </span>
                   <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
-                     <div class="row">
-                        <div class="col-md-6">
-                           <h5>Session Name</h5>
-                           <p>Way Forward</p>
-                           <p>Questionnaire Session</p>
-                           <p>Concluding Session</p>
-                        </div>
-                        <div class="col-md-6">
-                           <h5>Dignitary/ Organization </h5>
-                           <p>DoT
-                           </p>
-                           <p>Interactive session with participants
-                           </p>
-                           <p>DoT
-                           </p>
-                        </div>
+                     <div class="table-responsive">
+                        <table class="table table-bordered">
+                           <thead>
+                              <tr class="text-center bg-creamy-yellow">
+                                 <th>Time</th>
+                                 <th>Duration</th>
+                                 <th>Session Name</th>
+                                 <th>Organization</th>
+                                 <th>Speaker</th>
+                              </tr>
+                           </thead>
+                           <tbody class="text-center">
+                              <tr class="bg-wzureish-white">
+                                 <td>16:15-16:35</td>
+                                 <td>20 mins</td>
+                                 <td><b>Global Synergy:</b> Unveiling Interconnected Digital Twins and International Best Practices </td>
+                                 <td>Digital Twin Consortium</td>
+                                 <td>Dr. Javier</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>16:35-17:30</td>
+                                 <td>55 mins</td>
+                                 <td  colspan="2" style="vertical-align: inherit;"><b>Interactive Dialogue:</b> Exploring Solutions for Infrastructure Challenges</td>
+                                 <td>Eminent Panelists</td>
+                              </tr>
+                           </tbody>
+                        </table>
                      </div>
                   </div>
                </div>
             </div>
             <div class="d-flex justify-content-center">
-              <a class="main-btn primary-btn mt-3" download="<?php echo base_url('include/web/custom/Tentative_Schedule_Atchment.pdf');?>" href="<?php echo base_url('include/web/custom/Tentative_Schedule_Atchment.pdf');?>">Download Schedule</a>
+               <a class="main-btn primary-btn mt-3" download="<?php echo base_url('include/web/custom/Tentative_Schedule_Atchment.pdf');?>" href="<?php echo base_url('include/web/custom/Tentative_Schedule_Atchment.pdf');?>">Download Schedule</a>
             </div>
          </div>
       </div>
@@ -266,8 +496,8 @@
                      <div class="icon">
                      </div>
                      <h2 class="number"><span class="count"><?php if (isset($approved)) {
-                      echo $approved;
-                     }?></span>+</h2>
+                        echo $approved;
+                        }?></span>+</h2>
                      <p>Participants Per Event </p>
                   </div>
                </div>
@@ -278,8 +508,8 @@
                      <div class="icon">
                      </div>
                      <h2 class="number"><span class="count"><?php if (isset($verified)) {
-                      echo $verified;
-                     }?></span>+</h2>
+                        echo $verified;
+                        }?></span>+</h2>
                      <p>Pre Registrations </p>
                   </div>
                </div>
@@ -315,26 +545,25 @@
                <p>Dr. Neeraj Mittal, a distinguished member of the 1992-batch Indian Administrative Service (IAS) cadre in Tamil Nadu, is recognized for his notable service and contributions. He held the esteemed position of Principal Secretary of the Information Technology Department in the Government of Tamil Nadu. Prior to this role, Dr. Mittal served as the Managing Director & CEO of Guidance Tamil Nadu, provided his expertise as a Senior Advisor at the World Bank Group, and held the position of Joint Secretary in the Ministry of Petroleum and Natural Gas.</p>
             </div>
          </div>
-
       </div>
       <div class="row mb-3" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;">
-        <div class="col-lg-3 col-sm-6" bis_skin_checked="1" style="display: flex;justify-content: center;align-items: center;">
-           <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s;">
-              <div class="member-img" bis_skin_checked="1">
-                 <img src="<?php echo base_url(''); ?>include/web/custom/Chief_Guests_Prof_Rangan_Banerjee.png" alt="Chief_Guests_Prof_Rangan_Banerjee">
-              </div>
-           </div>
-        </div>
-        <div class="col-lg-9 col-sm-6" >
-           <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.35s;">
-              <div class="text_for_outreach" style="padding-bottom:0">
-                 <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Prof. Rangan Banerjee</a></p>
-                 <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director</h5>
-                 <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">IIT Delhi</h4>
-              </div>
-              <p>Prof. Rangan Banerjee served as the Forbes Marshall Chair Professor in the Department of Energy Science and Engineering - a Department that he helped start in 2007. He currently serves on the editorial board of the International Journal of Sustainable Energy, International Journal of Sustainable Engineering, International Journal of Thermodynamics, Solar Energy Advances, and Global Transitions (Energy Transitions). He has been involved in setting up a megawatt-scale Solar Thermal Power Testing, Simulation, and Research Facility sponsored by the Ministry of New and Renewable Energy (MNRE) and is the faculty advisor of Team Shunya- India’s first student team in the Solar Decathlon Europe finals.</p>
-           </div>
-        </div>
+         <div class="col-lg-3 col-sm-6" bis_skin_checked="1" style="display: flex;justify-content: center;align-items: center;">
+            <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s;">
+               <div class="member-img" bis_skin_checked="1">
+                  <img src="<?php echo base_url(''); ?>include/web/custom/Chief_Guests_Prof_Rangan_Banerjee.png" alt="Chief_Guests_Prof_Rangan_Banerjee">
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-9 col-sm-6" >
+            <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.35s;">
+               <div class="text_for_outreach" style="padding-bottom:0">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Prof. Rangan Banerjee</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">IIT Delhi</h4>
+               </div>
+               <p>Prof. Rangan Banerjee served as the Forbes Marshall Chair Professor in the Department of Energy Science and Engineering - a Department that he helped start in 2007. He currently serves on the editorial board of the International Journal of Sustainable Energy, International Journal of Sustainable Engineering, International Journal of Thermodynamics, Solar Energy Advances, and Global Transitions (Energy Transitions). He has been involved in setting up a megawatt-scale Solar Thermal Power Testing, Simulation, and Research Facility sponsored by the Ministry of New and Renewable Energy (MNRE) and is the faculty advisor of Team Shunya- India’s first student team in the Solar Decathlon Europe finals.</p>
+            </div>
+         </div>
       </div>
    </div>
    </div>
@@ -406,7 +635,7 @@
                <div class="hover-content">
                   <div class="text text-white">
                      <h3 class="title"><a href="javascript:void(0)">Abhishek Singh</a></h3>
-                      <p style="font-size:13px">Abhishek owns the data platforms and the intelligent data products which help the telco cater to its large customer base of almost a third of Indians. Over the last couple of years, he has led a data platform transformation at Airtel re-defining data quality, governance and ways of working with data at Airtel. In his previous stints at other companies, he has worked on various data driven solutions such as fraud prevention, location analytics and has several publications to his credit. He has more than 17 years of experience in varied domains of technology and data driven intelligence and engineering.</p>
+                     <p style="font-size:13px">Abhishek owns the data platforms and the intelligent data products which help the telco cater to its large customer base of almost a third of Indians. Over the last couple of years, he has led a data platform transformation at Airtel re-defining data quality, governance and ways of working with data at Airtel. In his previous stints at other companies, he has worked on various data driven solutions such as fraud prevention, location analytics and has several publications to his credit. He has more than 17 years of experience in varied domains of technology and data driven intelligence and engineering.</p>
                      <!-- <h5>Senior Manager, Presales Consulting</h5> -->
                   </div>
                </div>
@@ -487,7 +716,7 @@
                <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO & Co-Founder</h5>
                <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">DoT9 Games</h4>
             </div>
-         </div> -->
+            </div> -->
          <div class="single-project-item-four col-md-3">
             <div class="project-img">
                <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Jayant_Ratti.jpg" alt="Speaker_Jayant_Ratti" />

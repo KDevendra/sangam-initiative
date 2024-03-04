@@ -1278,7 +1278,12 @@
                               </div>
                               <div class="quote-rating-box text-center">
                                   <div class="ratings-box">
-                                      <h6> <a href="<?php echo $testimonial['link']; ?>"><?php echo $testimonial['title']; ?></a> </h6>
+                                      <h6><a href="<?php echo $testimonial['link']; ?>"><?php echo $testimonial['title']; ?></a> </h6>
+                                      <?php if (!empty($testimonial['sub_title'])) {
+                                        ?>
+                                        <p><?php echo $testimonial['sub_title']; ?></p>
+                                      <?php
+                                    }?>
                                   </div>
                               </div>
                               <?php echo $testimonial['content']; ?>
