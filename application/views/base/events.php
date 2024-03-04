@@ -741,6 +741,28 @@
          </div>
          <div class="single-project-item-four col-md-3">
             <div class="project-img">
+               <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Keshri_Asthana.jpg" alt="Speaker_Keshri_Asthana" />
+               <div class="hover-content">
+                  <div class="text text-white">
+                     <h3 class="title"><a href="javascript:void(0)">Keshri Asthana</a></h3>
+                     <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     <p style="font-size:13px">Experienced Solutions Architect with a demonstrated history of working in the computer software industry. Skilled in IT Strategy, Enterprise Architecture, Digital Transformation, Cloud Adoption, Pre-sales, and Business Relationship Management. Strong software architecture professional with an MBA and certified in TOGAF, Zachman and various Microsoft Certifications.</p>
+                  </div>
+               </div>
+               <div class="project-content">
+                  <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                  </div>
+               </div>
+            </div>
+            <div class="text_for_outreach height_150">
+               <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Keshri Asthana</a></p>
+               <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CTO – Government Business</h5>
+               <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Microsoft India</h4>
+            </div>
+         </div>
+         <div class="single-project-item-four col-md-3">
+            <div class="project-img">
                <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Ojasvi_Bhatia.jpg" alt="Speaker_Ojasvi_Bhatia" />
                <div class="hover-content">
                   <div class="text text-white">
@@ -789,6 +811,28 @@
          </div>
          <div class="single-project-item-four col-md-3">
             <div class="project-img">
+               <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rahul_Ranjan.jpg" alt="Speaker_Rahul_Ranjan" />
+               <div class="hover-content">
+                  <div class="text text-white">
+                     <h3 class="title"><a href="javascript:void(0)">Rajesh Ranjan</a></h3>
+                     <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     <p style="font-size:13px">With over 18 years of experience in working with government and public sector clients, he is a Director of Government Affairs and Public Policy for India and South Asia at Microsoft, one of the world's leading technology companies. His mission is to advance Microsoft's policy objectives and foster strategic partnerships with key stakeholders in the region, including ministers, bureaucrats, regulators, industry associations, and civil society organizations.</p>
+                  </div>
+               </div>
+               <div class="project-content">
+                  <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                  </div>
+               </div>
+            </div>
+            <div class="text_for_outreach height_150">
+               <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Rajesh Ranjan</a></p>
+               <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director, Government Relations </h5>
+               <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Microsoft India</h4>
+            </div>
+         </div>
+         <div class="single-project-item-four col-md-3">
+            <div class="project-img">
                <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Vibhu_Sinha.jpg" alt="Speaker_Vibhu_Sinha" />
                <div class="hover-content">
                   <div class="text text-white">
@@ -809,6 +853,40 @@
                <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Esri India Technologies Private Limited</h4>
             </div>
          </div>
+
+
+
+
+
+
+
+
+
+         <div class="single-project-item-four col-md-3">
+            <div class="project-img">
+               <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Vikram_Malhotra.jpg" alt="Speaker_Vikram_Malhotra" />
+               <div class="hover-content">
+                  <div class="text text-white">
+                     <h3 class="title"><a href="javascript:void(0)">Vikram Malhotra </a></h3>
+                     <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     <p style="font-size:13px">Experienced Business Manager with Technology Solution Sales background across Business Intelligence, ISV Solutions, IOT, Digital Marketing , Customer Life Cycle Management and generating value from Data.
+<br> Specialties: Data warehousing - Relational & Big Data , Digital Marketing, Business Intelligence, Analytical CRM, Database Marketing, Product Development & Management, Customer Lifecycle Management, Business Consulting. </p>
+                  </div>
+               </div>
+               <div class="project-content">
+                  <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                  </div>
+               </div>
+            </div>
+            <div class="text_for_outreach height_150">
+               <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Vikram Malhotra </a></p>
+               <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Senior Specialist - Gen AI and Digital Twin </h5>
+               <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Microsoft India</h4>
+            </div>
+         </div>
+
+
       </div>
    </div>
 </section>
