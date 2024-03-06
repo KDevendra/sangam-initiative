@@ -584,9 +584,9 @@
                      $menuItems = checkMenuAccess($userLevel);
                      $menuHtml = generateMenuHtml($menuItems, $userLevel);
                      echo $menuHtml;
-                     if ($userLevel === '1') {
+                     if ($userLevel === '2') {
                          echo '<ul class="navbar-nav" id="navbar-nav">';
-                         // echo '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('blogs') . '"><i class="ri-pages-line"></i> <span data-key="t-blogs">Blogs</span></a></li>';
+                         echo '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('team') . '"><i class="ri-user-2-fill"></i> <span data-key="t-team">Team Management</span></a></li>';
                          // echo '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('reported-issue') . '"><i class="ri-error-warning-fill"></i> <span data-key="t-Reported Issue">Reported Issue</span></a></li>';
                          echo '</ul>';
                      }

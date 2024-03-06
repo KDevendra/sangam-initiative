@@ -60,6 +60,7 @@ $route['get-user-list'] = 'AdminController/getUserList';
 $route['get-event-registration'] = 'AdminController/getEventRegistration';
 $route['get-approved-event-registration'] = 'AdminController/getApprovedEventRegistration';
 $route['get-rejected-event-registration'] = 'AdminController/getRejectedEventRegistration';
+$route['get-pending-event-registration'] = 'AdminController/getPendingEventRegistration';
 $route['get-submit-use-cases'] = 'AdminController/getSuggestUseCases';
 $route['get-submited-use-cases'] = 'AdminController/getSuggestedUseCases';
 $route['get-submitted-speaker-request'] = 'AdminController/getSubmittedSpeakerRequest';
@@ -76,6 +77,7 @@ $route['users/(:any)/(:any)'] = 'AdminController/users/$1/$2';
 $route['eoi-application'] = 'AdminController/application';
 $route['eoi-application/(:any)'] = 'AdminController/application/$1';
 $route['eoi-application/(:any)/(:any)'] = 'AdminController/application/$1/$2';
+$route['eoi-application-action/(:any)/(:any)'] = 'AdminController/eoiApplicationAction/$1/$2';
 $route['submited-use-cases'] = 'AdminController/submitedUseCases';
 $route['submited-use-cases/(:any)'] = 'AdminController/submitedUseCases/$1';
 $route['submited-use-cases/(:any)/(:any)'] = 'AdminController/submitedUseCases/$1/$2';
@@ -92,6 +94,7 @@ $route['curated-content/(:any)/(:any)'] = 'AdminController/curatedContent/$1/$2'
 $route['send-email-unverified-users'] = 'AdminController/sendEmailsUnverifiedUsers';
 $route['approved-event-applications'] = 'AdminController/approvedEventApplications';
 $route['rejected-event-applications'] = 'AdminController/rejectedEventApplications';
+$route['pending-event-applications'] = 'AdminController/pendingEventApplications';
 $route['event-registration'] = 'AdminController/eventRegistration';
 $route['event-registration/view/(:any)'] = 'AdminController/eventRegistrationView/$1';
 $route['event-registration-ation/(:any)'] = 'AdminController/eventRegistrationAction/$1';
@@ -100,6 +103,12 @@ $route['user-curated-content'] = 'AdminController/userCuratedContent';
 $route['user-curated-content/view/(:any)'] = 'AdminController/eventRegistrationView/$1';
 $route['user-curated-content-ation/(:any)/(:any)'] = 'AdminController/userCuratedContentAction/$1/$2';
 $route['post-send-message'] = 'AdminController/postSendMessage';
+$route['send-busk-message'] = 'AdminController/sendBuskMessage';
+//route for team
+$route['team'] = 'TeamManagementController/team';
+$route['get-team-list'] = 'AdminController/getTeamList';
+$route['post-create-team'] = 'TeamManagementController/postCreateTeam';
+$route['post-update-team'] = 'TeamManagementController/postUpdateTeam';
 //route for report excel
 $route['download-event-registration/(:any)'] = 'ReportExcelController/downloadEventRegistration/$1';
 $route['download-event-registration/(:any)/(:any)'] = 'ReportExcelController/downloadEventRegistration/$1/$2';
@@ -107,6 +116,8 @@ $route['download-submitted-speaker-request/(:any)'] = 'ReportExcelController/dow
 $route['download-submitted-speaker-request/(:any)/(:any)'] = 'ReportExcelController/downloadSubmittedSpeakerRequest/$1/$2';
 $route['download-user-list/(:any)'] = 'ReportExcelController/downloadUserList/$1';
 $route['download-user-list/(:any)/(:any)'] = 'ReportExcelController/downloadUserList/$1/$2';
+//route for PDFController
+$route['download-eoi-application/(:any)'] = 'PDFController/index/$1';
 //route for theme-customizer-options
 $route['project-settings'] = 'AdminController/projectSettings';
 $route['theme-customizer-options'] = 'AdminController/themeCustomizerOptions';

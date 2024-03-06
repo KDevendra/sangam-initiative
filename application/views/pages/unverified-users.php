@@ -48,14 +48,56 @@
       </div>
    </div>
 </div>
+<div id="sendUserEmailModel" class="modal fade" tabindex="-1" aria-labelledby="sendUserEmailLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-lg">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h5 class="modal-title" id="sendUserEmailLabel">Add Your Email Content</h5>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> </button>
+        </div>
+        <div class="modal-body">
+           <div class="row row-sm">
+              <div class="col-lg-4">
+                 <label class="form-label mb-3">To: </label>
+              </div>
+              <div class="col-lg-8">
+                 <input type="text" readonly class="form-control mb-3" name="to" value="" id="to">
+              </div>
+              <div class="col-lg-4">
+                 <label class="form-label mb-3">CC: </label>
+              </div>
+              <div class="col-lg-8">
+                 <input type="text"  class="form-control mb-3" name="cc" id="cc">
+              </div>
+              <div class="col-lg-4">
+                 <label class="form-label mb-3">Subject:</label>
+              </div>
+              <div class="col-lg-8">
+                 <input type="text" name="subject" class="form-control mb-3"  id="subject">
+              </div>
+              <div class="col-lg-12">
+                 <label class="form-label">Message:</label>
+                 <textarea id="message" class="form-control mb-3" name="Message"></textarea>
+                 <span id="error_message" class="text-danger"></span>
+              </div>
+           </div>
+        </div>
+        <div class="modal-footer">
+           <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+           <button type="button" class="btn btn-primary" id="savechanges">Send</button>
+        </div>
+     </div>
+  </div>
+</div>
+
 <script>
 function viewUser(user_id) {
     var redirectUrl = "<?php echo base_url('users/view/'); ?>" + user_id;
     window.location.href = redirectUrl;
 }
 function initializeDataTable() {
-    if ($.fn.DataTable.isDataTable('#example')) {
-        $('#example').DataTable().destroy();
+    if ($.fn.DataTable.isDataTable("#example")) {
+        $("#example").DataTable().destroy();
     }
 
     var dataTable = $("#example").DataTable({
@@ -65,49 +107,50 @@ function initializeDataTable() {
             dataType: "json",
             dataSrc: "data",
         },
-        columns: [{
+        columns: [
+            {
                 title: "",
                 data: null,
                 orderable: false,
-                render: function(data, type, row) {
+                render: function (data, type, row) {
                     return '<div class="form-check"><input class="form-check-input fs-15" type="checkbox" id="check_' + row.user_id + '" value="' + row.user_id + '"></div>';
-                }
+                },
             },
             {
                 title: "User Name",
-                data: "user_name"
+                data: "user_name",
             },
             {
                 title: "User ID",
-                data: "user_id"
+                data: "user_id",
             },
             {
                 title: "Contact Number",
-                data: "contact_no"
+                data: "contact_no",
             },
             {
                 title: "Email Address",
-                data: "email"
+                data: "email",
             },
             {
                 title: "Registration Datetime ",
                 data: "created_at",
-                render: function(data, type, row) {
-                    return moment(data).format('MMM DD, YYYY hh:mm:ss a');
-                }
+                render: function (data, type, row) {
+                    return moment(data).format("MMM DD, YYYY hh:mm:ss a");
+                },
             },
             {
                 title: "Status",
                 data: "is_verified",
-                render: function(data, type, row) {
-                    return (data == 1) ? '<span class="badge bg-success">Verified</span>' : '<span class="badge bg-danger">Unverified</span>';
-                }
+                render: function (data, type, row) {
+                    return data == 1 ? '<span class="badge bg-success">Verified</span>' : '<span class="badge bg-danger">Unverified</span>';
+                },
             },
             {
                 title: "Action",
                 data: null,
                 orderable: false,
-                render: function(data, type, row) {
+                render: function (data, type, row) {
                     var buttons =
                         '<div class="dropdown d-inline-block">' +
                         '<button class="btn btn-soft-secondary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">' +
@@ -115,7 +158,6 @@ function initializeDataTable() {
                         "</button>" +
                         '<ul class="dropdown-menu dropdown-menu-end">';
                     buttons += '<li><a href="javascript:void(0)" class="dropdown-item" onclick="viewUser(\'' + row.user_id + '\')"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>';
-
 
                     buttons += "</ul></div>";
                     return buttons;
@@ -127,30 +169,35 @@ function initializeDataTable() {
     dataTable.order([1, "desc"]).draw();
     return dataTable;
 }
-
-function showLoader() {
-    $(".loader").show();
-    $('#sendEmailButton').prop("disabled", true).html('<span class="loader"></span>');
-}
-
-function hideLoader() {
-    $(".loader").hide();
-    $('#sendEmailButton').prop("disabled", false).html("<i class='ri-mail-unread-fill'></i> Send Email");
-}
 var $ = jQuery.noConflict();
-$(document).ready(function() {
+$(document).ready(function () {
     var dataTable = initializeDataTable();
-    $('#sendEmailButton').click(function() {
+    var editor;
+    ClassicEditor.create(document.querySelector("#message"))
+        .then((newEditor) => {
+            editor = newEditor;
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+    function showLoader() {
+        $(".loader").show();
+        $("#savechanges").prop("disabled", true).html('<span class="loader"></span>');
+    }
+    function hideLoader() {
+        $(".loader").hide();
+        $("#savechanges").prop("disabled", false).html("Send");
+    }
+    $("#sendEmailButton").click(function () {
         var checkedEmails = [];
         var atLeastOneChecked = false;
-        dataTable.rows().every(function() {
+        dataTable.rows().every(function () {
             var rowData = this.data();
-            if ($(this.node()).find('input[type="checkbox"]').prop('checked')) {
+            if ($(this.node()).find('input[type="checkbox"]').prop("checked")) {
                 checkedEmails.push(rowData.email);
                 atLeastOneChecked = true;
             }
         });
-
         if (!atLeastOneChecked) {
             Swal.fire({
                 icon: "error",
@@ -158,30 +205,67 @@ $(document).ready(function() {
             });
             return;
         }
-
+        $("#to").val(checkedEmails.join(", "));
+        $("#sendUserEmailModel").modal("show");
+    });
+    $(document).on("click", "#savechanges", function () {
+    var isValid = true;
+    var message = editor.getData();
+    var to = $("#to").val();
+    var cc = $("#cc").val();
+    var subject = $("#subject").val();
+    if (!message) {
+        $("#error_message").text("Message is required.");
+        isValid = false;
+    } else {
+        $("#error_message").text("");
+    }
+    if (isValid) {
+        var postData = {
+            to: to || null,
+            message: message || null,
+            cc: cc || null,
+            subject: subject || null,
+        };
         $.ajax({
-            url: "<?php echo base_url('send-email-unverified-users')?>",
-            type: 'POST',
-            data: {
-                emails: checkedEmails
-            },
+            url: "<?php echo base_url('send-busk-message')?>",
+            type: "post",
+            data: postData,
             beforeSend: showLoader,
-            success: function(response) {
+            success: function (response) {
                 hideLoader();
-                Swal.fire({
-                    icon: "success",
-                    text: "The email has been sent successfully.",
-                });
+                if (response.status === "success") {
+                    $("#remark").val("");
+                    $("#cc").val("");
+                    $("#subject").val("");
+                    $("#sendUserEmailModel").modal("hide");
+                    Swal.fire({
+                        icon: "success",
+                        title: "Success",
+                        text: response.message,
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            location.reload();
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Error",
+                        text: response.message,
+                    });
+                }
             },
-            error: function(xhr, status, error) {
+            error: function (xhr, textStatus, errorThrown) {
                 hideLoader();
                 Swal.fire({
                     icon: "error",
-                    text: "Something went wrong",
+                    title: "Error",
+                    text: textStatus,
                 });
-            }
+            },
         });
-    });
-
+    }
+});
 });
 </script>
