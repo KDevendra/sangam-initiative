@@ -19,9 +19,9 @@ class PDFController extends CI_Controller {
             return redirect("sign-in");
         }
     }
-    public function index() {
+    public function index($application_id) {
         require "vendor/autoload.php";
-        $user_id = $this->BaseModel->getData('eoi_registration', ['application_id' => 'APL20240001'])->row()->user_id;
+        $user_id = $this->BaseModel->getData('eoi_registration', ['application_id' =>$application_id])->row()->user_id;
         $getApplicationDetail = $this->BaseModel->getEoIApplicationData($user_id);
         $logoImageUrl = base_url("include/web/custom/Department_Of_Telecommunications.png");
         $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, "UTF-8", false);
@@ -30,7 +30,12 @@ class PDFController extends CI_Controller {
         $pdf->SetTitle("Sangam Initiative");
         $pdf->SetSubject("Expression of Interest (EoI) Registration Preview");
         $pdf->SetKeywords("Sangam Initiative");
-        $pdf->SetHeaderData($logoImageUrl,0, 'Department of Telecommunication', 'Expression of Interest (EoI) Registration');
+        // Get the width of the page
+        $pageWidth = $pdf->getPageWidth();
+        // Calculate the position to center the header text
+        $headerTextX = $pageWidth / 2;
+        // Set the header data with the calculated position
+        $pdf->SetHeaderData($logoImageUrl, 55, 'Department of Telecommunication', 'Expression of Interest (EoI) Registration', array(0, 0, 0), array(0, 0, 0), array(0, 0, 0), 'C', false, false, 0, 'C', $headerTextX, 0, false, false);
         $pdf->setHeaderFont([PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN]);
         $pdf->setFooterFont([PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA]);
         $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
@@ -95,22 +100,40 @@ class PDFController extends CI_Controller {
         $getApplicationDetail->specification = isset($getApplicationDetail->specification) && !empty($getApplicationDetail->specification) ? json_decode($getApplicationDetail->specification, true) : [];
         $getApplicationDetail->purpose = isset($getApplicationDetail->purpose) && !empty($getApplicationDetail->purpose) ? json_decode($getApplicationDetail->purpose, true) : [];
         $getApplicationDetail->alignment = isset($getApplicationDetail->alignment) && !empty($getApplicationDetail->alignment) ? json_decode($getApplicationDetail->alignment, true) : [];
-        // Grouping technical details
         $data["technical_details"] = [];
         if (!empty($getApplicationDetail->technological_category)) {
             foreach ($getApplicationDetail->technological_category as $key => $category) {
-                // Check if category is not empty
                 if (!empty($category)) {
                     $type_of_resource = isset($getApplicationDetail->technological_type_of_resource[$key]) ? $getApplicationDetail->technological_type_of_resource[$key] : "";
                     $details = isset($getApplicationDetail->technological_details[$key]) ? $getApplicationDetail->technological_details[$key] : "";
                     $specification = isset($getApplicationDetail->specification[$key]) ? $getApplicationDetail->specification[$key] : "";
                     $purpose = isset($getApplicationDetail->purpose[$key]) ? $getApplicationDetail->purpose[$key] : "";
                     $alignment = isset($getApplicationDetail->alignment[$key]) ? $getApplicationDetail->alignment[$key] : "";
-                    $data["technical_details"][] = ["category" => $category, "type_of_resource" => $type_of_resource, "details" => $details, "specification" => $specification, "purpose" => $purpose, "alignment" => $alignment, ];
+                    $data["technical_details"][] = ["category" => $category, "type_of_resource" => $type_of_resource, "details" => $details, "specification" => $specification, "purpose" => $purpose, "alignment" => $alignment];
                 }
             }
         }
-
+        $getApplicationDetail->human_category = isset($getApplicationDetail->human_category) && is_string($getApplicationDetail->human_category) ? json_decode($getApplicationDetail->human_category, true) : [];
+        $getApplicationDetail->human_type_of_resource = isset($getApplicationDetail->human_type_of_resource) && is_string($getApplicationDetail->human_type_of_resource) ? json_decode($getApplicationDetail->human_type_of_resource, true) : [];
+        $getApplicationDetail->human_details = isset($getApplicationDetail->human_details) && is_string($getApplicationDetail->human_details) ? json_decode($getApplicationDetail->human_details, true) : [];
+        $getApplicationDetail->human_experience = isset($getApplicationDetail->human_experience) && is_string($getApplicationDetail->human_experience) ? json_decode($getApplicationDetail->human_experience, true) : [];
+        $getApplicationDetail->role = isset($getApplicationDetail->role) && is_string($getApplicationDetail->role) ? json_decode($getApplicationDetail->role, true) : [];
+        $getApplicationDetail->extent_of_involvement = isset($getApplicationDetail->extent_of_involvement) && is_string($getApplicationDetail->extent_of_involvement) ? json_decode($getApplicationDetail->extent_of_involvement, true) : [];
+        $getApplicationDetail->human_alignment = isset($getApplicationDetail->human_alignment) && is_string($getApplicationDetail->human_alignment) ? json_decode($getApplicationDetail->human_alignment, true) : [];
+        $data["human_resources"] = [];
+        if (!empty($getApplicationDetail->human_category)) {
+            foreach ($getApplicationDetail->human_category as $key => $category) {
+                if (!empty($category)) {
+                    $human_type_of_resource = isset($getApplicationDetail->human_type_of_resource[$key]) ? $getApplicationDetail->human_type_of_resource[$key] : "";
+                    $human_details = isset($getApplicationDetail->human_details[$key]) ? $getApplicationDetail->human_details[$key] : "";
+                    $human_experience = isset($getApplicationDetail->human_experience[$key]) ? $getApplicationDetail->human_experience[$key] : "";
+                    $role = isset($getApplicationDetail->role[$key]) ? $getApplicationDetail->role[$key] : "";
+                    $extent_of_involvement = isset($getApplicationDetail->extent_of_involvement[$key]) ? $getApplicationDetail->extent_of_involvement[$key] : "";
+                    $human_alignment = isset($getApplicationDetail->human_alignment[$key]) ? $getApplicationDetail->human_alignment[$key] : "";
+                    $data["human_resources"][] = ["human_category" => $category, "human_type_of_resource" => $human_type_of_resource, "human_details" => $human_details, "human_experience" => $human_experience, "role" => $role, "extent_of_involvement" => $extent_of_involvement, "human_alignment" => $human_alignment, ];
+                }
+            }
+        }
         $tbl = <<<EOD
  <table cellspacing="0" cellpadding="8" style="border: 1px solid #0000002b;">
      <tr style="background-color: #405189; font-size: 18px; color: #fff;">
@@ -132,18 +155,16 @@ class PDFController extends CI_Controller {
          <td style="border: 1px solid #0000002b;"><b>Experience</b><br>$experience</td>
          <td style="border: 1px solid #0000002b;"><b>Core Competencies</b><br>$core_competency</td>
      </tr>
-
-
 EOD;
         if ($core_competency === 'Others') {
             $tbl.= <<<EOD
-            <tr>
-                <td colspan="2" style="border: 1px solid #0000002b;"><b>Other Core Competencies</b><br>$other_core_competencie</td>
-            </tr>
-            EOD;
-        }
-        if ($register_as === "Organization") {
-            $tbl.= <<<EOD
+        <tr>
+            <td colspan="2" style="border: 1px solid #0000002b;"><b>Other Core Competencies</b><br>$other_core_competencie</td>
+        </tr>
+        EOD;
+    }
+    if ($register_as === "Organization") {
+        $tbl .= <<<EOD
  <tr>
      <td style="border: 1px solid #0000002b;"><b>Organization Name</b><br>$organization_name</td>
      <td style="border: 1px solid #0000002b;"><b>Website URL of the Organization</b><br><a href="$website_url" target="_blank">$website_url</a></td>
@@ -175,13 +196,10 @@ $tbl .= <<<EOD
      <td style="border: 1px solid #0000002b;"><b>Title</b><br>$title</td>
      <td style="border: 1px solid #0000002b;"><b>Category</b><br>$category</td>
  </tr>
-
  <tr>
      <td colspan="2" style="border: 1px solid #0000002b;"><b>Strategic Vision</b><br>$strategic_vision</td>
-
  </tr>
  <tr>
-
      <td colspan="2" style="border: 1px solid #0000002b;"><b>Objectives</b><br>$objectives</td>
  </tr>
  <tr>
@@ -190,22 +208,64 @@ $tbl .= <<<EOD
  <tr>
      <td  colspan="2" style="border: 1px solid #0000002b;"><b>Contribution to Project Goals</b><br>$contribution_to_project_goals</td>
  </tr>
+ EOD;
+ $tbl .= <<<EOD
  <tr style="background-color: #405189; font-size: 18px; color: #fff;">
      <th colspan="2" align="center">Technological Resources</th>
  </tr>
+ EOD;
 
+ foreach ($data["technical_details"] as $technical_detail) {
+     $tbl .= <<<EOD
+ <tr>
+     <td colspan="2">
+         <ul style="list-style-type: none; padding-left: 0;">
+             <li><b>Category:</b> {$technical_detail['category']}</li>
+             <li><b>Type of Resource:</b> {$technical_detail['type_of_resource']}</li>
+             <li><b>Details:</b> {$technical_detail['details']}</li>
+             <li><b>Specification:</b> {$technical_detail['specification']}</li>
+             <li><b>Purpose:</b> {$technical_detail['purpose']}</li>
+             <li><b>Alignment:</b> {$technical_detail['alignment']}</li>
+         </ul>
+     </td>
+ </tr>
+ EOD;
+ }
+
+ $tbl .= <<<EOD
  <tr style="background-color: #405189; font-size: 18px; color: #fff;">
      <th colspan="2" align="center">Human Resources Commitment</th>
  </tr>
- <tr style="background-color: #405189; font-size: 18px; color: #fff;">
-     <th colspan="2" align="center">Other Information</th>
- </tr>
+ EOD;
+
+ foreach ($data["human_resources"] as $human_resource) {
+     $tbl .= <<<EOD
  <tr>
-     <td colspan="2" style="border: 1px solid #0000002b;"><b>Objectives</b><br>$objectives</td>
+     <td colspan="2">
+         <ul style="list-style-type: none; padding-left: 0;">
+             <li><b>Human Category:</b> {$human_resource['human_category']}</li>
+             <li><b>Human Type of Resource:</b> {$human_resource['human_type_of_resource']}</li>
+             <li><b>Human Details:</b> {$human_resource['human_details']}</li>
+             <li><b>Human Experience:</b> {$human_resource['human_experience']}</li>
+             <li><b>Role:</b> {$human_resource['role']}</li>
+             <li><b>Extent of Involvement:</b> {$human_resource['extent_of_involvement']}</li>
+             <li><b>Human Alignment:</b> {$human_resource['human_alignment']}</li>
+         </ul>
+     </td>
  </tr>
- <tr style="background-color: #405189; font-size: 18px; color: #fff;">
-     <th colspan="2" align="center">Certification</th>
- </tr>
+ EOD;
+ }
+
+$tbl .= <<<EOD
+<tr style="background-color: #405189; font-size: 18px; color: #fff;">
+    <th colspan="2" align="center">Other Information</th>
+</tr>
+<tr>
+    <td colspan="2" style="border: 1px solid #0000002b;"><b>Objectives</b><br>$objectives</td>
+</tr>
+<tr style="background-color: #405189; font-size: 18px; color: #fff;">
+    <th colspan="2" align="center">Certification</th>
+</tr>
 </table>
 <p>I declare that all the information given by me in this application and documents attached hereto are true
 to the best of my knowledge and that I have not willfully suppressed any material fact. I accept that if
@@ -216,10 +276,18 @@ EOD;
             $pdf->writeHTML($tbl, true, false, false, false, "");
             $timestamp = date("His");
             $filename = (!empty($getApplicationDetail->application_id) ? $getApplicationDetail->application_id : "default_application") . "_{$timestamp}.pdf";
+            // $pdfFilePath = FCPATH . "uploads/temporary/" . $filename;
+            // $pdf->Output($pdfFilePath, "F");
+            // header('Content-Type: application/pdf');
+            // header('Content-Disposition: inline; filename="' . $filename . '"');
+            // header('Content-Length: ' . filesize($pdfFilePath));
+            // @readfile($pdfFilePath);
+            // Save the PDF file to the server
             $pdfFilePath = FCPATH . "uploads/temporary/" . $filename;
             $pdf->Output($pdfFilePath, "F");
+            // Provide download link to the user
             header('Content-Type: application/pdf');
-            header('Content-Disposition: inline; filename="' . $filename . '"');
+            header('Content-Disposition: attachment; filename="' . $filename . '"');
             header('Content-Length: ' . filesize($pdfFilePath));
             @readfile($pdfFilePath);
         }

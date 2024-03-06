@@ -595,76 +595,76 @@ class AdminController extends CI_Controller
         }
     }
     public function submitCuratedContent($action = null, $cc_id = null)
-{
-    $this->checkUserLevel([1, 2]);
-    try {
-        if ($this->input->post()) {
-            $this->form_validation->set_rules("title", "title", "trim|required");
-            $this->form_validation->set_rules("content", "description", "trim|required");
-            if ($this->form_validation->run() === false) {
-                $this->session->set_flashdata("error", validation_errors());
-                return redirect("curated-content/add");
-            } else {
-                $title = $this->input->post("title");
-                $sub_title = $this->input->post("sub_title");
-                $image = $_FILES['attachment']['name'];
-                $content = $this->input->post("content");
-                $link = $this->input->post("link");
-                $cc_id = $this->input->post("cc_id");
+    {
+        $this->checkUserLevel([1, 2]);
+        try {
+            if ($this->input->post()) {
+                $this->form_validation->set_rules("title", "title", "trim|required");
+                $this->form_validation->set_rules("content", "description", "trim|required");
+                if ($this->form_validation->run() === false) {
+                    $this->session->set_flashdata("error", validation_errors());
+                    return redirect("curated-content/add");
+                } else {
+                    $title = $this->input->post("title");
+                    $sub_title = $this->input->post("sub_title");
+                    $image = $_FILES['attachment']['name'];
+                    $content = $this->input->post("content");
+                    $link = $this->input->post("link");
+                    $cc_id = $this->input->post("cc_id");
 
-                // Check if an image is uploaded
-                $image_file = null;
-                if (!empty($image)) {
-                    $image_file = $this->handleFileUpload("attachment", "uploads/cc_image/", "jpg|png|jpeg", 2000);
-                }
+                    // Check if an image is uploaded
+                    $image_file = null;
+                    if (!empty($image)) {
+                        $image_file = $this->handleFileUpload("attachment", "uploads/cc_image/", "jpg|png|jpeg", 2000);
+                    }
 
-                $postData = [
-                    "title" => $title,
-                    "sub_title" => $sub_title,
-                    "image" => $image_file, // Ensure to handle the case where $image_file is null
-                    "content" => $content,
-                    "page_slug" => str_replace(" ", "-", strtolower($title)),
-                    "link" => $link,
-                    "user_id" => $this->session->login["user_id"],
-                    "author_name" => $this->session->login["user_name"],
-                    "created_at" => date("Y-m-d H:i:s"),
-                ];
-                if (empty($cc_id)) {
-                    $query = $this->BaseModel->insertData("curated_content", $postData);
-                    if ($query) {
-                        $inserted_Id = $this->db->insert_id();
-                        $cc_id = "CC" . date("Y") . str_pad($inserted_Id, 4, "0", STR_PAD_LEFT);
-                        $updateData = ["cc_id" => $cc_id];
-                        $updateCondition = ["id" => $inserted_Id];
-                        $updateQuery = $this->BaseModel->updateData("curated_content", $updateData, $updateCondition);
-                        if ($updateQuery) {
-                            $this->session->set_flashdata("success", "Curated content submitted successfully.");
+                    $postData = [
+                        "title" => $title,
+                        "sub_title" => $sub_title,
+                        "image" => $image_file, // Ensure to handle the case where $image_file is null
+                        "content" => $content,
+                        "page_slug" => str_replace(" ", "-", strtolower($title)),
+                        "link" => $link,
+                        "user_id" => $this->session->login["user_id"],
+                        "author_name" => $this->session->login["user_name"],
+                        "created_at" => date("Y-m-d H:i:s"),
+                    ];
+                    if (empty($cc_id)) {
+                        $query = $this->BaseModel->insertData("curated_content", $postData);
+                        if ($query) {
+                            $inserted_Id = $this->db->insert_id();
+                            $cc_id = "CC" . date("Y") . str_pad($inserted_Id, 4, "0", STR_PAD_LEFT);
+                            $updateData = ["cc_id" => $cc_id];
+                            $updateCondition = ["id" => $inserted_Id];
+                            $updateQuery = $this->BaseModel->updateData("curated_content", $updateData, $updateCondition);
+                            if ($updateQuery) {
+                                $this->session->set_flashdata("success", "Curated content submitted successfully.");
+                            } else {
+                                $this->session->set_flashdata("error", "Failed to update curated content ID. Please try again.");
+                            }
                         } else {
-                            $this->session->set_flashdata("error", "Failed to update curated content ID. Please try again.");
+                            $this->session->set_flashdata("error", "Failed to add curated content details. Please try again.");
                         }
                     } else {
-                        $this->session->set_flashdata("error", "Failed to add curated content details. Please try again.");
+                        $updateCondition = ['cc_id' => $cc_id];
+                        $updateQuery = $this->BaseModel->updateData("curated_content", $postData, $updateCondition);
+                        if ($updateQuery) {
+                            $this->session->set_flashdata("success", "Curated content updated successfully.");
+                        } else {
+                            $this->session->set_flashdata("error", "Failed to update curated content. Please try again.");
+                        }
                     }
-                } else {
-                    $updateCondition = ['cc_id' => $cc_id];
-                    $updateQuery = $this->BaseModel->updateData("curated_content", $postData, $updateCondition);
-                    if ($updateQuery) {
-                        $this->session->set_flashdata("success", "Curated content updated successfully.");
-                    } else {
-                        $this->session->set_flashdata("error", "Failed to update curated content. Please try again.");
-                    }
+                    return redirect("curated-content");
                 }
-                return redirect("curated-content");
+            } else {
+                $this->session->set_flashdata("error", "No POST data received");
+                return redirect("report-issue/add");
             }
-        } else {
-            $this->session->set_flashdata("error", "No POST data received");
+        } catch (Exception $e) {
+            $this->session->set_flashdata("error", "" . $e->getMessage() . "");
             return redirect("report-issue/add");
         }
-    } catch (Exception $e) {
-        $this->session->set_flashdata("error", "" . $e->getMessage() . "");
-        return redirect("report-issue/add");
     }
-}
 
     public function application($action = null, $application_id = null)
     {
@@ -817,6 +817,76 @@ class AdminController extends CI_Controller
                 break;
         }
         $this->load->view("component/index", $data);
+    }
+    public function eoiApplicationAction($action = null, $registration_id = null)
+    {
+        $this->checkUserLevel([1]);
+        $data["title"] = $action . "EoI Application Action : " . $this->projectTitle;
+        switch ($action) {
+            case "approved":
+                $user_id = $this->BaseModel->getData("event_registration", ["application_id" => $application_id])->row()->user_id;
+                $applicationDetail = $this->BaseModel->getEventApplicationData($user_id);
+                $templateFile = FCPATH . "include/email/admin/temp_email_eoi_application_approve_format.html";
+                $subject = "Approval of Expression of Interest (EoI) Application";
+                $messageBody = file_get_contents($templateFile);
+                $placeholders = ["{application_id}","{full_name}", "{email}", "{phone_number}"];
+                $values = [
+                    $applicationDetail->application_id,
+                    $applicationDetail->full_name,
+                    $applicationDetail->email,
+                    $applicationDetail->contact_no,
+                ];
+                $messageBody = str_replace($placeholders, $values, $messageBody);
+                $emailSent = $this->mainEmailConfig($applicationDetail->email, $subject, $messageBody, "","");
+                if ($emailSent) {
+                    $query = $this->BaseModel->updateData("event_registration", ["status" => 2], ["application_id" => $application_id]);
+                    if ($query) {
+                        $response = ["status" => "success", "message" => "The application has been successfully approved."];
+                    } else {
+                        $response = ["status" => "error", "message" => "Unable to update the application status. Please try again later."];
+                    }
+                } else {
+                    $response = ["status" => "error", "message" => "Failed to send email. Please try again later."];
+                }
+                if ($this->input->is_ajax_request()) {
+                    $this->output->set_content_type("application/json");
+                    echo json_encode($response);
+                }
+                break;
+            case "rejected":
+                $user_id = $this->BaseModel->getData("eoi_registration", ["application_id" => $application_id])->row()->user_id;
+                $applicationDetail = $this->BaseModel->getEventApplicationData($user_id);
+                $templateFile = FCPATH . "include/email/admin/temp_email_eoi_application_reject_format.html";
+                $subject = "Rejection of Your EoI Application";
+                $messageBody = file_get_contents($templateFile);
+                $placeholders = ["{application_id}", "{full_name}", "{email}", "{phone_number}"];
+                $values = [
+                    $applicationDetail->application_id,
+                    $applicationDetail->full_name,
+                    $applicationDetail->email,
+                    $applicationDetail->phone_number,
+                ];
+                $messageBody = str_replace($placeholders, $values, $messageBody);
+                $emailSent = $this->mainEmailConfig($applicationDetail->email, $subject, $messageBody, "", "");
+                if ($emailSent) {
+                    $query = $this->BaseModel->updateData("event_registration", ["status" => 3], ["registration_id" => $registration_id]);
+                    if ($query) {
+                        $response = ["status" => "success", "message" => "The application has been successfully rejected."];
+                    } else {
+                        $response = ["status" => "error", "message" => "Unable to update the application status. Please try again later."];
+                    }
+                } else {
+                    $response = ["status" => "error", "message" => "Failed to send email. Please try again later."];
+                }
+                if ($this->input->is_ajax_request()) {
+                    $this->output->set_content_type("application/json");
+                    echo json_encode($response);
+                    exit();
+                }
+                break;
+            default:
+                break;
+        }
     }
     public function curatedContent($action = null, $cc_id = null)
     {
@@ -1278,6 +1348,22 @@ class AdminController extends CI_Controller
                 $responseData = ["status" => "success", "data" => $userList];
             } else {
                 $responseData = ["status" => "error", "message" => "Error fetching user data."];
+            }
+            echo json_encode($responseData);
+        } catch (Exception $e) {
+            log_message("error", $e->getMessage());
+            echo json_encode(["status" => "error", "message" => "Internal server error."]);
+        }
+    }
+    public function getTeamList()
+    {
+        $this->checkUserLevel([2]);
+        try {
+            $teamList = $this->BaseModel->getData("team", ["team_owner_id" => $this->session->login['user_id']], ["team_id"], "DESC")->result_array();
+            if ($teamList !== null) {
+                $responseData = ["status" => "success", "data" => $teamList];
+            } else {
+                $responseData = ["status" => "error", "message" => "Error fetching team data."];
             }
             echo json_encode($responseData);
         } catch (Exception $e) {

@@ -64,7 +64,7 @@
             <div class="text_for_outreach">
                <p class="title"><a href="javascript:void(0)">Sangam – <b>Bangalore</b> <br> <span>India’s Silicon Valley</span> </a></p>
                <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIIT Bangalore</h5>
-               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 9th March 2024</h4>
+               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 8th March 2024</h4>
                <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 6th March 2024</p>
                <div class="d-flex justify-content-center">
                   <a class="btn btn-danger text-white mt-20" href="<?php echo base_url('registration')?>">Register Now</a>
@@ -92,7 +92,7 @@
             <div class="text_for_outreach">
                <p class="title"><a href="javascript:void(0)">Sangam – <b>Hyderabad</b> <br> <span>India’s Innovation Hub</span> </a></p>
                <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIIT Hyderabad</h5>
-               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 12th March 2024</h4>
+               <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 11th March 2024</h4>
                <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 9th March 2024</p>
                <div class="d-flex justify-content-center">
                   <a class="btn btn-danger text-white mt-20" href="<?php echo base_url('registration')?>">Register Now</a>

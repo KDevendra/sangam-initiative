@@ -39,12 +39,7 @@
                   <h4 class="card-title mb-0">Expression of Interest (EoI)  Detail</h4>
                </div>
                <div class="card-body form-steps">
-                  <?php
-                     $form_status = $userDetail->status;
-                     if ($form_status === '1') {
-                     ?>
                   <div class="row gy-5">
-
                      <div class="col-lg-12">
                         <div class="px-lg-4">
                            <div class="tab-content">
@@ -357,8 +352,62 @@
                               <div class="tab-pane fade active show mt-2" id="lock-application" role="tabpanel" aria-labelledby="lock-application-tab">
                                  <div>
                                     <div>
-                                       <div class="row g-3">
+                                       <div class="row g-3 mt-3">
                                           <div class="col-sm-12">
+                                             <div class="d-flex justify-content-center">
+                                                <div class="btn-group" role="group" aria-label="Action buttons">
+                                                   <?php
+                                                      $status = $userDetail->status;
+                                                      if ($status === '1') {
+                                                      ?>
+                                                   <button type="button" class="btn btn-primary" onclick="downloadApplication('<?php echo $userDetail->application_id;?>')">
+                                                   <i class="ri-download-2-line"></i> Download PDF
+                                                   </button>
+                                                   <button type="button" class="btn btn-info" onclick="approveApplication('<?php echo $userDetail->application_id;?>')">
+                                                   <i class="ri-check-fill"></i> Approve
+                                                   </button>
+                                                   <button type="button" class="btn btn-danger" onclick="rejectApplication('<?php echo $userDetail->application_id;?>')">
+                                                   <i class="ri-close-fill"></i> Reject
+                                                   </button>
+                                                   <?php
+                                                      } else {
+                                                          switch ($status) {
+                                                              case '1':
+                                                                  $status_text = 'Pending';
+                                                                  $status_class = 'warning';
+                                                                  break;
+                                                              case '2':
+                                                                  $status_text = 'EoI application approved.';
+                                                                  $status_class = 'success';
+                                                                  break;
+                                                              case '3':
+                                                                  $status_text = 'EoI application Rejected.';
+                                                                  $status_class = 'danger';
+                                                                  break;
+                                                              case '4':
+                                                                  $status_text = 'Winner';
+                                                                  $status_class = 'info';
+                                                                  break;
+                                                              default:
+                                                                  $status_text = 'Unknown';
+                                                                  $status_class = 'secondary';
+                                                          }
+                                                          echo '<div class="alert alert-' . $status_class . '">' . $status_text . '</div>';
+                                                      }
+                                                      ?>
+                                                </div>
+                                             </div>
+                                             <?php
+                                                if ($status !== '1') {
+                                                ?>
+                                             <div class="d-flex justify-content-center">
+                                                <button type="button" class="btn btn-primary" onclick="downloadApplication('<?php echo $userDetail->application_id;?>')">
+                                                <i class="ri-download-2-line"></i> Download PDF
+                                                </button>
+                                             </div>
+                                             <?php
+                                                }
+                                                ?>
                                           </div>
                                        </div>
                                     </div>
@@ -368,22 +417,119 @@
                         </div>
                      </div>
                   </div>
-                  <?php
-                     } else {
-                       ?>
-                  <h5 class="text-primary">Take the Next Step Towards Collaboration</h5>
-                  <p>Please note that your Expression of Interest (EoI) application has not been successfully submitted.</p>
-                  <p>To ensure that your application is properly processed, please review all required fields and ensure that they are completed accurately. Once all necessary information is provided, kindly resubmit your EoI application.
-                  </p>
-                  <div class="d-flex justify-content-center">
-                     <button type="button" class="btn btn-primary "><a class="text-white" href="<?php echo base_url('eoi-registration')?>">Application Form</a></button>
-                  </div>
-                  <?php
-                     }
-                       ?>
                </div>
             </div>
          </div>
       </div>
    </div>
 </div>
+<script type="text/javascript">
+    function downloadApplication(application_id) {
+        var redirectUrl = "<?php echo base_url('download-eoi-application/'); ?>" + application_id;
+        window.location.href = redirectUrl;
+    }
+   function approveApplication(application_id) {
+      const swalWithBootstrapButtons = Swal.mixin({
+         customClass: {
+            confirmButton: "btn btn-success",
+            cancelButton: "btn btn-danger"
+         },
+         buttonsStyling: false
+      });
+      swalWithBootstrapButtons.fire({
+         title: "Are you sure?",
+         text: "You won't be able to revert this!",
+         icon: "warning",
+         showCancelButton: true,
+         confirmButtonText: "Yes, approve it!",
+         cancelButtonText: "No, cancel!",
+         reverseButtons: true
+      }).then((result) => {
+         if (result.isConfirmed) {
+            $.ajax({
+               type: "POST",
+               url: "<?php echo base_url('eoi-application-action/approved/'); ?>" + application_id,
+               dataType: 'json',
+               success: function (response) {
+                  console.log(response);
+                  if (response.status === 'success') {
+                     swalWithBootstrapButtons.fire({
+                        title: "Approved!",
+                        text: "Application has been approved.",
+                        icon: "success"
+                     }).then(function () {
+                        location.reload();
+                     });
+                  }
+               },
+               error: function (xhr, status, error) {
+                  swalWithBootstrapButtons.fire({
+                     title: "Error",
+                     text: "An error occurred while approve the application.",
+                     icon: "error"
+                  });
+               }
+            });
+
+         } else if (result.dismiss === Swal.DismissReason.cancel) {
+            swalWithBootstrapButtons.fire({
+               title: "Cancelled",
+               text: "Your imaginary application is safe :)",
+               icon: "error"
+            });
+         }
+      });
+   }
+   function rejectApplication(application_id) {
+      const swalWithBootstrapButtons = Swal.mixin({
+         customClass: {
+            confirmButton: "btn btn-success",
+            cancelButton: "btn btn-danger"
+         },
+         buttonsStyling: false
+      });
+      swalWithBootstrapButtons.fire({
+         title: "Are you sure?",
+         text: "You won't be able to revert this!",
+         icon: "warning",
+         showCancelButton: true,
+         confirmButtonText: "Yes, reject it!",
+         cancelButtonText: "No, cancel!",
+         reverseButtons: true
+      }).then((result) => {
+         if (result.isConfirmed) {
+            $.ajax({
+               type: "POST",
+               url: "<?php echo base_url('eoi-application-action/rejected/'); ?>" + application_id,
+               dataType: 'json',
+               success: function (response) {
+                  console.log(response);
+                  if (response.status === 'success') {
+                     swalWithBootstrapButtons.fire({
+                        title: "Rejected!",
+                        text: "Application has been approved.",
+                        icon: "success"
+                     }).then(function () {
+                        location.reload();
+                     });
+                  }
+               },
+               error: function (xhr, status, error) {
+                  swalWithBootstrapButtons.fire({
+                     title: "Error",
+                     text: "An error occurred while reject the application.",
+                     icon: "error"
+                  });
+               }
+            });
+
+         } else if (result.dismiss === Swal.DismissReason.cancel) {
+            swalWithBootstrapButtons.fire({
+               title: "Cancelled",
+               text: "Your imaginary application is safe :)",
+               icon: "error"
+            });
+         }
+      });
+   }
+</script>

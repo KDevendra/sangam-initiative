@@ -48,7 +48,70 @@
       </div>
    </div>
 </div>
+
+<div id="sendUserEmailModel" class="modal fade" tabindex="-1" aria-labelledby="sendUserEmailLabel" aria-hidden="true" style="display: none;">
+   <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="sendUserEmailLabel">Add Your Email Content</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> </button>
+         </div>
+         <div class="modal-body">
+            <div class="row row-sm">
+               <div class="col-lg-4">
+                  <label class="form-label mb-3">To: </label>
+               </div>
+               <div class="col-lg-8">
+                  <input type="text" readonly class="form-control mb-3" name="to" value="<?php echo $userDetail->email;?>" id="to">
+               </div>
+               <div class="col-lg-4">
+                  <label class="form-label mb-3">CC: </label>
+               </div>
+               <div class="col-lg-8">
+                  <input type="text"  class="form-control mb-3" name="cc" id="cc">
+               </div>
+               <div class="col-lg-4">
+                  <label class="form-label mb-3">Subject:</label>
+               </div>
+               <div class="col-lg-8">
+                  <input type="text" name="subject" class="form-control mb-3"  id="subject">
+               </div>
+               <div class="col-lg-12">
+                  <label class="form-label">Message:</label>
+                  <input type="hidden" name="user_id" value="<?php echo $userDetail->user_id;?>" id="user_id">
+                  <textarea id="message" class="form-control mb-3" name="Message"></textarea>
+                  <span id="error_message" class="text-danger"></span>
+               </div>
+            </div>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="savechanges">Send</button>
+         </div>
+      </div>
+   </div>
+</div>
+
+
 <script>
+var editor;
+ClassicEditor
+    .create(document.querySelector('#message'))
+    .then(newEditor => {
+        editor = newEditor;
+    })
+    .catch(error => {
+        console.error(error);
+    });
+    function showLoader() {
+       $(".loader").show();
+       $('#savechanges').prop("disabled", true).html('<span class="loader"></span>');
+    }
+
+    function hideLoader() {
+       $(".loader").hide();
+       $('#savechanges').prop("disabled", false).html("Send");
+    }
 function viewUser(user_id) {
     var redirectUrl = "<?php echo base_url('users/view/'); ?>" + user_id;
     window.location.href = redirectUrl;
@@ -127,61 +190,64 @@ function initializeDataTable() {
     dataTable.order([1, "desc"]).draw();
     return dataTable;
 }
-
 function showLoader() {
     $(".loader").show();
     $('#sendEmailButton').prop("disabled", true).html('<span class="loader"></span>');
 }
-
 function hideLoader() {
     $(".loader").hide();
     $('#sendEmailButton').prop("disabled", false).html("<i class='ri-mail-unread-fill'></i> Send Email");
+}
+function getCheckedEmails() {
+    var checkedEmails = [];
+    dataTable.rows().every(function() {
+        var rowData = this.data();
+        if ($(this.node()).find('input[type="checkbox"]').prop('checked')) {
+            checkedEmails.push(rowData.email);
+        }
+    });
+    return checkedEmails;
+}
+function sendEmails(emails) {
+    $.ajax({
+        url: "<?php echo base_url('send-email-unverified-users')?>",
+        type: 'POST',
+        data: { emails: emails },
+        beforeSend: showLoader,
+        success: function(response) {
+            hideLoader();
+            showSuccess("The email has been sent successfully.");
+        },
+        error: function(xhr, status, error) {
+            hideLoader();
+            showError("Something went wrong");
+        }
+    });
+}
+function showError(message) {
+    Swal.fire({
+        icon: "error",
+        text: message,
+    });
+}
+function showSuccess(message) {
+    Swal.fire({
+        icon: "success",
+        text: message,
+    });
 }
 var $ = jQuery.noConflict();
 $(document).ready(function() {
     var dataTable = initializeDataTable();
     $('#sendEmailButton').click(function() {
-        var checkedEmails = [];
-        var atLeastOneChecked = false;
-        dataTable.rows().every(function() {
-            var rowData = this.data();
-            if ($(this.node()).find('input[type="checkbox"]').prop('checked')) {
-                checkedEmails.push(rowData.email);
-                atLeastOneChecked = true;
-            }
-        });
+    var checkedEmails = getCheckedEmails();
 
-        if (!atLeastOneChecked) {
-            Swal.fire({
-                icon: "error",
-                text: "Please select at least one email to send.",
-            });
-            return;
-        }
+    if (checkedEmails.length === 0) {
+        showError("Please select at least one email to send.");
+        return;
+    }
 
-        $.ajax({
-            url: "<?php echo base_url('send-email-unverified-users')?>",
-            type: 'POST',
-            data: {
-                emails: checkedEmails
-            },
-            beforeSend: showLoader,
-            success: function(response) {
-                hideLoader();
-                Swal.fire({
-                    icon: "success",
-                    text: "The email has been sent successfully.",
-                });
-            },
-            error: function(xhr, status, error) {
-                hideLoader();
-                Swal.fire({
-                    icon: "error",
-                    text: "Something went wrong",
-                });
-            }
-        });
-    });
-
+    sendEmails(checkedEmails);
+});
 });
 </script>

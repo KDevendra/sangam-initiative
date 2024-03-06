@@ -120,6 +120,11 @@
                         $html .= '</li>';
                     }
 
+                    if ($userLevel === '1') {
+                        $html .=   '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('admin-dashboard') . '"><i class="ri-dashboard-3-fill"></i> <span data-key="t-Dashboard">Dashboard</span></a></li>';
+                    } elseif ($userLevel !== '1') {
+                        $html .= '<li class="nav-item"><a class="nav-link menu-link" href="' . base_url('user-dashboard') . '"><i class="ri-dashboard-3-fill"></i>Dashboard</a></li>';
+                    }
                     $html .= '</ul>';
 
                     return $html;

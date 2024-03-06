@@ -1,6 +1,7 @@
 .catpchaparent {
 	display: flex;
 }
+#updatedTeamDetail{padding-bottom: 20px}
 .error{color: #f06548;}
 .iti--allow-dropdown{width: 100% !important}
 .iti__country-list {
