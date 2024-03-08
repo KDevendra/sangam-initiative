@@ -987,36 +987,15 @@
          </div>
       </div> -->
       <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s">
-         <div class="single-project-item-four col-md-3">
-            <div class="project-img">
-               <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Dr_Rajeev_Saraf.jpg" alt="Speaker_Dr_Rajeev_Saraf" />
-               <div class="hover-content">
-                  <div class="text text-white">
-                     <h3 class="title"><a href="javascript:void(0)">Dr. Rajeev Saraf</a></h3>
-                     <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                     <p style="font-size:13px">Dr. Rajeev Saraf is a visionary business leader and a renowned entrepreneur, currently serving as the Founder and CEO of Lepton Software, a leading geospatial intelligence solutions provider. Under his leadership, Lepton Software, a pioneer in bringing digital maps to India, has grown rapidly and has now established itself as a trusted partner for several Fortune 500 companies. An IIT Kharagpur and Vanderbilt University alumni, he is also an advisor and angel investor for many upcoming startups and businesses. Currently, he also serves as a board of governor member at the National Institute of Technology Delhi.</p>
-                  </div>
-               </div>
-               <div class="project-content">
-                  <div class="text text-white">
-                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                  </div>
-               </div>
-            </div>
-            <div class="text_for_outreach height_150">
-               <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Dr. Rajeev Saraf</a></p>
-               <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder & CEO</h5>
-               <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Lepton Software</h4>
-            </div>
-         </div>
+
          <div class="single-project-item-four col-md-3">
             <div class="project-img">
                <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Dr_Dhirendra_Singh.jpg" alt="Speaker_Dr_Dhirendra_Singh" />
                <div class="hover-content">
                   <div class="text text-white">
-                     <h3 class="title"><a href="javascript:void(0)">Dr. Dhirendra Singh</a></h3>
+                     <h3 class="title"><a href="javascript:void(0)">Dhirendra Singh</a></h3>
                      <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                     <p style="font-size:13px">Dr. Dhirendra Singh graduated with (B.E) in electronics and telecommunication in the year 2003. Worked with Sony and Sapient Technologies (for Massachusetts Institute of Technology, Cambridge). Completed national endeavour projects like National Air Quality Index (launched by PM Narendra Modi), Niti-aayog cleaner air better life initiative, Qatar Petroleum PM Speciation Study, and Air Pollution Study for Delhi, Kanpur, Agra, Jaipur, and Taj-Mahal. He has also developed the GHG IPPU framework for the entire India to estimate greenhouse gas emissions vis tier 3 methodology. He became an entrepreneur in the year 2017 and started a company Airshed Planning Professionals Pvt. Ltd, which mainly works in the field of air quality.</p>
+                     <p style="font-size:13px">Dhirendra Singh graduated with (B.E) in electronics and telecommunication in the year 2003. Worked with Sony and Sapient Technologies (for Massachusetts Institute of Technology, Cambridge). Completed national endeavour projects like National Air Quality Index (launched by PM Narendra Modi), Niti-aayog cleaner air better life initiative, Qatar Petroleum PM Speciation Study, and Air Pollution Study for Delhi, Kanpur, Agra, Jaipur, and Taj-Mahal. He has also developed the GHG IPPU framework for the entire India to estimate greenhouse gas emissions vis tier 3 methodology.</p>
                   </div>
                </div>
                <div class="project-content">
@@ -1026,7 +1005,7 @@
                </div>
             </div>
             <div class="text_for_outreach height_150">
-               <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Dr. Dhirendra Singh</a></p>
+               <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Dhirendra Singh</a></p>
                <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO, Founder & Air Quality Specialist  </h5>
                <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Airshed Planning Professionals Private Limited</h4>
             </div>
@@ -1038,7 +1017,7 @@
                   <div class="text text-white">
                      <h3 class="title"><a href="javascript:void(0)">Karthikeyan Kumaraguru</a></h3>
                      <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                     <p style="font-size:13px">Karthikeyan is a visionary leader with a proven track record in building 10+ cutting-edge platforms and engines, leveraging Big-Data and micro-services stack. With expertise in Big-Data Analytics, he has spearheaded the development of innovative solutions such as Customer Data Platforms, ML Platforms, and Automated Personalization Engines. His contributions include Retargeting Platforms, CRM Online Models, Recommendation Systems, and Anomaly Detection Solutions, enhancing user experience across various channels. Additionally, Karthikeyan has played a pivotal role in Cloud Platform development, overseeing projects like the Samsung Search System, Firmware Over the Air Platform, and Global Diagnostic Monitoring for Samsung phones.</p>
+                     <p style="font-size:13px">Karthikeyan is a visionary leader with a proven track record in building 10+ cutting-edge platforms and engines, leveraging Big-Data and micro-services stack. With expertise in Big-Data Analytics, he has spearheaded the development of innovative solutions such as Customer Data Platforms, ML Platforms, and Automated Personalization Engines. His contributions include Retargeting Platforms, CRM Online Models, Recommendation Systems, and Anomaly Detection Solutions, enhancing user experience across various channels.</p>
                   </div>
                </div>
                <div class="project-content">
@@ -1078,12 +1057,34 @@
          </div>
          <div class="single-project-item-four col-md-3">
             <div class="project-img">
+               <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Dr_Rajeev_Saraf.jpg" alt="Speaker_Dr_Rajeev_Saraf" />
+               <div class="hover-content">
+                  <div class="text text-white">
+                     <h3 class="title"><a href="javascript:void(0)">Rajeev Saraf</a></h3>
+                     <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     <p style="font-size:13px">Rajeev Saraf is a visionary business leader and a renowned entrepreneur, currently serving as the Founder and CEO of Lepton Software, a leading geospatial intelligence solutions provider. Under his leadership, Lepton Software, a pioneer in bringing digital maps to India, has grown rapidly and has now established itself as a trusted partner for several Fortune 500 companies. An IIT Kharagpur and Vanderbilt University alumni, he is also an advisor and angel investor for many upcoming startups and businesses.</p>
+                  </div>
+               </div>
+               <div class="project-content">
+                  <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                  </div>
+               </div>
+            </div>
+            <div class="text_for_outreach height_150">
+               <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Rajeev Saraf</a></p>
+               <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder & CEO</h5>
+               <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Lepton Software</h4>
+            </div>
+         </div>
+         <div class="single-project-item-four col-md-3">
+            <div class="project-img">
                <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Raghuram_Krishnapuram.jpg" alt="Speaker_Raghuram_Krishnapuram" />
                <div class="hover-content">
                   <div class="text text-white">
                      <h3 class="title"><a href="javascript:void(0)">Raghuram Krishnapuram</a></h3>
                      <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                     <p style="font-size:13px">Raghu works experience spans both academia and industry across continents over almost four decades. Raghu is an alumnus of IIT-Bombay and received his PhD  from Carnegie Mellon University in 1987. He worked in the academia in the US until the year 2000. Between 2000 and 2015, he held various technical leadership positions at IBM Research India and IBM T J Watson Centre, NY, USA, where he led projects in the area of ‘Knowledge, Information, and Smarter Planet Solutions’ and ‘Cognitive Computing,’ with a particular focus on emerging markets. Raghu was with Xerox Research Centre – India, during 2015-16. Most recently, he was with the Robert Bosch Centre for Cyber-Physical Systems, Indian Institute of Science, Bangalore, and ARTPRAK, IISc, Bangalore.</p>
+                     <p style="font-size:13px">Raghu works experience spans both academia and industry across continents over almost four decades. Raghu is an alumnus of IIT-Bombay and received his PhD  from Carnegie Mellon University in 1987. He worked in the academia in the US until the year 2000. Between 2000 and 2015, he held various technical leadership positions at IBM Research India and IBM T J Watson Centre, NY, USA, where he led projects in the area of ‘Knowledge, Information, and Smarter Planet Solutions’ and ‘Cognitive Computing,’ with a particular focus on emerging markets.</p>
                   </div>
                </div>
                <div class="project-content">
