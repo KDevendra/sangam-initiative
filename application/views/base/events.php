@@ -1524,6 +1524,7 @@
          </div>
       </div>
       <div class="custom-tab-content text-center" id="tab6" style="display: none;">
+        <h4 class="text-center">Coming Soon!/h4>
       </div>
    </div>
    </div>
