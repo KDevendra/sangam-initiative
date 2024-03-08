@@ -1511,6 +1511,7 @@
                    <p style="font-size:13px">A visionary leader in digital twin technology and enterprise metaverse, Yuvraj stands at the forefront of pioneering solutions for the future. With a rich background in IoT, 3D, and AI; Yuvraj has led numerous initiatives for his company, Cloudworx, that showcase the potential of digital twins in enhancing operational efficiency, sustainability, and strategic planning. Joining the Sangam Initiative, Yuvraj is excited to contribute expertise and insights towards shaping resilient, efficient, and interconnected infrastructure systems for tomorrow.</p>
                 </div>
              </div>
+             
              <div class="project-content" bis_skin_checked="1">
                 <div class="text text-white" bis_skin_checked="1">
                    <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
