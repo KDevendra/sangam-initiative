@@ -1248,7 +1248,7 @@
          <div class="col-lg-3 col-sm-6" bis_skin_checked="1">
             <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
                <div class="member-img" bis_skin_checked="1">
-                  <img src="/include/web/custom/Chester_Shri_BVR_Subrahmanyam.jpg" alt="Chester_Shri_BVR_Subrahmanyam">
+                  <img src="<?php echo base_url('');?>include/web/custom/Chester_Shri_BVR_Subrahmanyam.jpg" alt="Chester_Shri_BVR_Subrahmanyam">
                </div>
             </div>
          </div>
@@ -1267,7 +1267,7 @@
          <div class="col-lg-3 col-sm-6" bis_skin_checked="1">
             <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
                <div class="member-img" bis_skin_checked="1">
-                  <img src="/include/web/custom/Chief_Guests_Dr_Neeraj_Mittal.jpg" alt=" Chief_Guests_Dr_Neeraj_Mittal">
+                  <img src="<?php echo base_url('');?>include/web/custom/Chief_Guests_Dr_Neeraj_Mittal.jpg" alt=" Chief_Guests_Dr_Neeraj_Mittal">
                </div>
             </div>
          </div>
@@ -1287,7 +1287,7 @@
          <div class="col-lg-3 col-sm-6" bis_skin_checked="1" style="display: flex;justify-content: center;align-items: center;">
             <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
                <div class="member-img" bis_skin_checked="1">
-                  <img src="/include/web/custom/Chester_Dr_Debabrata_Das.png" alt="Chester_Dr_Debabrata_Das">
+                  <img src="<?php echo base_url('');?>include/web/custom/Chester_Dr_Debabrata_Das.png" alt="Chester_Dr_Debabrata_Das">
                </div>
             </div>
          </div>
@@ -1321,7 +1321,7 @@
         <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
           <div class="single-project-item-four col-md-3" bis_skin_checked="1">
           <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="/include/web/custom/Speaker_Dr_Rajeev_Saraf.jpg" alt="Speaker_Dr_Rajeev_Saraf">
+             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Dr_Rajeev_Saraf.jpg" alt="Speaker_Dr_Rajeev_Saraf">
              <div class="hover-content" bis_skin_checked="1">
                 <div class="text text-white" bis_skin_checked="1">
                    <h3 class="title"><a href="javascript:void(0)">Dr. Rajeev Saraf</a></h3>
@@ -1343,7 +1343,7 @@
        </div>
        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
           <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="/include/web/custom/Speaker_Dr_Dhirendra_Singh.jpg" alt="Speaker_Dr_Dhirendra_Singh">
+             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Dr_Dhirendra_Singh.jpg" alt="Speaker_Dr_Dhirendra_Singh">
              <div class="hover-content" bis_skin_checked="1">
                 <div class="text text-white" bis_skin_checked="1">
                    <h3 class="title"><a href="javascript:void(0)">Dr. Dhirendra Singh</a></h3>
@@ -1365,7 +1365,7 @@
        </div>
        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
           <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="/include/web/custom/Speaker_Karthikeyan_Kumaraguru.jpg" alt="Speaker_Karthikeyan_Kumaraguru">
+             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Karthikeyan_Kumaraguru.jpg" alt="Speaker_Karthikeyan_Kumaraguru">
              <div class="hover-content" bis_skin_checked="1">
                 <div class="text text-white" bis_skin_checked="1">
                    <h3 class="title"><a href="javascript:void(0)">Karthikeyan Kumaraguru</a></h3>
@@ -1388,7 +1388,7 @@
 
        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
           <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="/include/web/custom/Speaker_Puneet_Badrinath.jpg" alt="Speaker_Puneet_Badrinath">
+             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Puneet_Badrinath.jpg" alt="Speaker_Puneet_Badrinath">
              <div class="hover-content" bis_skin_checked="1">
                 <div class="text text-white" bis_skin_checked="1">
                    <h3 class="title"><a href="javascript:void(0)">Puneet Badrinath</a></h3>
@@ -1410,7 +1410,7 @@
        </div>
        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
           <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="/include/web/custom/Speaker_Raghuram_Krishnapuram.jpg" alt="Speaker_Raghuram_Krishnapuram">
+             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Raghuram_Krishnapuram.jpg" alt="Speaker_Raghuram_Krishnapuram">
              <div class="hover-content" bis_skin_checked="1">
                 <div class="text text-white" bis_skin_checked="1">
                    <h3 class="title"><a href="javascript:void(0)">Raghuram Krishnapuram</a></h3>
@@ -1432,7 +1432,7 @@
        </div>
        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
           <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="/include/web/custom/Speaker_Rahul_Joshi.jpg" alt="Speaker_Rahul_Joshi">
+             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Rahul_Joshi.jpg" alt="Speaker_Rahul_Joshi">
              <div class="hover-content" bis_skin_checked="1">
                 <div class="text text-white" bis_skin_checked="1">
                    <h3 class="title"><a href="javascript:void(0)">Rahul Joshi</a></h3>
@@ -1454,7 +1454,7 @@
        </div>
        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
           <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="/include/web/custom/Speaker_Sasikumar_Ramachandran_Nair.jpg" alt="Speaker_Sasikumar_Ramachandran_Nair">
+             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Sasikumar_Ramachandran_Nair.jpg" alt="Speaker_Sasikumar_Ramachandran_Nair">
              <div class="hover-content" bis_skin_checked="1">
                 <div class="text text-white" bis_skin_checked="1">
                    <h3 class="title"><a href="javascript:void(0)">Sasikumar Ramachandran Nair
@@ -1480,7 +1480,7 @@
        </div>
        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
           <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="/include/web/custom/Speaker_Sunil_Ramachandran.jpg" alt="Speaker_Sunil_Ramachandran">
+             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Sunil_Ramachandran.jpg" alt="Speaker_Sunil_Ramachandran">
              <div class="hover-content" bis_skin_checked="1">
                 <div class="text text-white" bis_skin_checked="1">
                    <h3 class="title"><a href="javascript:void(0)">Sunil Ramachandran </a></h3>
@@ -1502,7 +1502,7 @@
        </div>
        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
           <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="/include/web/custom/Speaker_Yuvraj_Tomar.jpg" alt="Speaker_Yuvraj_Tomar">
+             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Yuvraj_Tomar.jpg" alt="Speaker_Yuvraj_Tomar">
              <div class="hover-content" bis_skin_checked="1">
                 <div class="text text-white" bis_skin_checked="1">
                    <h3 class="title"><a href="javascript:void(0)">Yuvraj Tomar</a></h3>
