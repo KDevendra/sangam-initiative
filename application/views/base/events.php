@@ -41,7 +41,7 @@
                <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 5th March 2024</h4>
                <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 3rd March 2024</p>
                <div class="d-flex justify-content-center">
-                  <a class="btn btn-danger text-white mt-20" href="<?php echo base_url('registration')?>">Register Now</a>
+                  <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a>
                </div>
             </div>
          </div>
@@ -122,6 +122,32 @@
    </div>
 </section>
 <style media="screen">
+   .custom-tabs {
+   text-align: center;
+   margin-bottom: 20px;
+   text-align: center;
+   margin-bottom: 20px;
+   display: flex;
+   justify-content: center;
+   background-color: #f0f8ff;
+   }
+   .custom-tab-btn {
+   border: none;
+   background: none;
+   cursor: pointer;
+   padding: 10px 20px;
+   margin: 0 10px;
+   font-size: 16px;
+   }
+   .custom-tab-btn.active {
+   border-bottom: 2px solid #0086fc;
+   background-color: #a1e6fb;
+   }
+   .custom-tab-content {
+   display: none;
+   /* padding: 20px; */
+   }
+   .event_accordion  .custom-tab-btn{text-align: center;display: block;margin: 0}
    .custom-tabs {
    text-align: center;
    margin-bottom: 20px;
@@ -815,20 +841,6 @@
       </div>
    </div>
 </section>
-<!-- <section class="pb-50 pt-20">
-   <div class="container">
-     <div class="row mt-30  justify-content-center">
-        <div class="col-lg-10">
-           <div class="section-title text-center mb-30 wow fadeInDown">
-              <h2>Tentative Schedule</h2>
-           </div>
-        </div>
-     </div>
-     <div class="row">
-       <img src="<?php echo base_url('');?>include/web/custom/banner_04.png" alt="">
-     </div>
-   </div>
-   </section> -->
 <section class="features-section-two p-r z-1" id="dashboardDes">
    <div class="features-wrapper-two main-bg wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
       <div class="container">
@@ -888,7 +900,7 @@
             <div class="col-lg-10">
                <div class="section-title text-center mb-30 wow fadeInDown">
                   <!-- <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt="" /> Weaving the Fabric of Events</span> -->
-                  <h2>Schedule Outreach Program </h2>
+                  <h2>Outreach Program Dignitaries & Speakers</h2>
                </div>
             </div>
          </div>
@@ -897,340 +909,340 @@
             <button class="custom-tab-btn active" data-tab="tab5">Sangam Bangalore</button>
             <button class="custom-tab-btn" data-tab="tab6">Sangam Hyderabad</button>
          </div>
-         <div class="custom-tab-content" id="tab4" style="display: none;">
-            <div class="container" bis_skin_checked="1">
-               <div class="row justify-content-center" bis_skin_checked="1">
-                  <div class="col-lg-12" bis_skin_checked="1">
-                     <div class="section-title text-center mb-50 wow fadeInDown" bis_skin_checked="1" style="visibility: visible;">
-                        <span class="sub-title"><img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span>
-                        <h2>Dignitaries</h2>
-                     </div>
-                  </div>
-               </div>
-               <div class="row mb-3" bis_skin_checked="1" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;">
-                  <div class="col-lg-3 col-sm-6" bis_skin_checked="1" >
-                     <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s;">
-                        <div class="member-img" bis_skin_checked="1">
-                           <img src="<?php echo base_url(''); ?>include/web/custom/Chief_Guests_Dr_Neeraj_Mittal.jpg" alt=" Chief_Guests_Dr_Neeraj_Mittal">
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-9 col-sm-6">
-                     <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.35s;">
-                        <div class="text_for_outreach" style="padding-bottom:0">
-                           <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Dr. Neeraj Mittal</a></p>
-                           <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Secretary, Department of Telecommunications</h5>
-                           <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Government of India</h4>
-                        </div>
-                        <p>Dr. Neeraj Mittal, a distinguished member of the 1992-batch Indian Administrative Service (IAS) cadre in Tamil Nadu, is recognized for his notable service and contributions. He held the esteemed position of Principal Secretary of the Information Technology Department in the Government of Tamil Nadu. Prior to this role, Dr. Mittal served as the Managing Director & CEO of Guidance Tamil Nadu, provided his expertise as a Senior Advisor at the World Bank Group, and held the position of Joint Secretary in the Ministry of Petroleum and Natural Gas.</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="row mb-3" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;">
-                  <div class="col-lg-3 col-sm-6" bis_skin_checked="1" style="display: flex;justify-content: center;align-items: center;">
-                     <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s;">
-                        <div class="member-img" bis_skin_checked="1">
-                           <img src="<?php echo base_url(''); ?>include/web/custom/Chief_Guests_Prof_Rangan_Banerjee.png" alt="Chief_Guests_Prof_Rangan_Banerjee">
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-9 col-sm-6" >
-                     <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.35s;">
-                        <div class="text_for_outreach" style="padding-bottom:0">
-                           <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Prof. Rangan Banerjee</a></p>
-                           <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director</h5>
-                           <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">IIT Delhi</h4>
-                        </div>
-                        <p>Prof. Rangan Banerjee served as the Forbes Marshall Chair Professor in the Department of Energy Science and Engineering - a Department that he helped start in 2007. He currently serves on the editorial board of the International Journal of Sustainable Energy, International Journal of Sustainable Engineering, International Journal of Thermodynamics, Solar Energy Advances, and Global Transitions (Energy Transitions). He has been involved in setting up a megawatt-scale Solar Thermal Power Testing, Simulation, and Research Facility sponsored by the Ministry of New and Renewable Energy (MNRE) and is the faculty advisor of Team Shunya- India’s first student team in the Solar Decathlon Europe finals.</p>
-                     </div>
+      </div>
+      <div class="custom-tab-content" id="tab4" style="display: none;">
+         <div class="container" bis_skin_checked="1">
+            <div class="row justify-content-center" bis_skin_checked="1">
+               <div class="col-lg-12" bis_skin_checked="1">
+                  <div class="section-title text-center mb-50 wow fadeInDown" bis_skin_checked="1" style="visibility: visible;">
+                     <!-- <span class="sub-title"><img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span> -->
+                     <h2>Dignitaries</h2>
                   </div>
                </div>
             </div>
-            <div class="container" bis_skin_checked="1">
-               <div class="row justify-content-center" bis_skin_checked="1">
-                  <div class="col-lg-12" bis_skin_checked="1">
-                     <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;" bis_skin_checked="1">
-                        <h2>Meet Our Speakers</h2>
+            <div class="row mb-3" bis_skin_checked="1" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;">
+               <div class="col-lg-3 col-sm-6" bis_skin_checked="1" >
+                  <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s;">
+                     <div class="member-img" bis_skin_checked="1">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/Chief_Guests_Dr_Neeraj_Mittal.jpg" alt=" Chief_Guests_Dr_Neeraj_Mittal">
                      </div>
                   </div>
                </div>
-               <div class="text-center" bis_skin_checked="1">
-                  <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                     Join us as we embark on an exhilarating journey of content creation! Your participation is key to shaping the direction of our upcoming material. Dive into interactive discussions, share your ideas, and
-                     contribute your unique perspective. Together, let's make our content truly exceptional.
+               <div class="col-lg-9 col-sm-6">
+                  <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.35s;">
+                     <div class="text_for_outreach" style="padding-bottom:0">
+                        <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Dr. Neeraj Mittal</a></p>
+                        <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Secretary, Department of Telecommunications</h5>
+                        <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Government of India</h4>
+                     </div>
+                     <p>Dr. Neeraj Mittal, a distinguished member of the 1992-batch Indian Administrative Service (IAS) cadre in Tamil Nadu, is recognized for his notable service and contributions. He held the esteemed position of Principal Secretary of the Information Technology Department in the Government of Tamil Nadu. Prior to this role, Dr. Mittal served as the Managing Director & CEO of Guidance Tamil Nadu, provided his expertise as a Senior Advisor at the World Bank Group, and held the position of Joint Secretary in the Ministry of Petroleum and Natural Gas.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row mb-3" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;">
+               <div class="col-lg-3 col-sm-6" bis_skin_checked="1" style="display: flex;justify-content: center;align-items: center;">
+                  <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s;">
+                     <div class="member-img" bis_skin_checked="1">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/Chief_Guests_Prof_Rangan_Banerjee.png" alt="Chief_Guests_Prof_Rangan_Banerjee">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-9 col-sm-6" >
+                  <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.35s;">
+                     <div class="text_for_outreach" style="padding-bottom:0">
+                        <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Prof. Rangan Banerjee</a></p>
+                        <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director</h5>
+                        <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">IIT Delhi</h4>
+                     </div>
+                     <p>Prof. Rangan Banerjee served as the Forbes Marshall Chair Professor in the Department of Energy Science and Engineering - a Department that he helped start in 2007. He currently serves on the editorial board of the International Journal of Sustainable Energy, International Journal of Sustainable Engineering, International Journal of Thermodynamics, Solar Energy Advances, and Global Transitions (Energy Transitions). He has been involved in setting up a megawatt-scale Solar Thermal Power Testing, Simulation, and Research Facility sponsored by the Ministry of New and Renewable Energy (MNRE) and is the faculty advisor of Team Shunya- India’s first student team in the Solar Decathlon Europe finals.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container" bis_skin_checked="1">
+            <div class="row justify-content-center" bis_skin_checked="1">
+               <div class="col-lg-12" bis_skin_checked="1">
+                  <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;" bis_skin_checked="1">
+                     <h2>Meet Our Speakers</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="text-center" bis_skin_checked="1">
+               <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                  Join us as we embark on an exhilarating journey of content creation! Your participation is key to shaping the direction of our upcoming material. Dive into interactive discussions, share your ideas, and
+                  contribute your unique perspective. Together, let's make our content truly exceptional.
+               </p>
+            </div>
+         </div>
+         <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s">
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Abhilasha_Purwar.jpg" alt="Speaker_Abhilasha_Purwar" />
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Abhilasha Purwar</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Abhilasha Purwar is Fulbright | Yale | IIT alum with 15+ years of global experience across Private Equity, Product Development, Business Development and Policy. Abhilasha founded Blue Sky Analytics in 2019 with a mission to solve climate change and advance environmental protection by leveraging technology, data, and AI.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Abhilasha Purwar</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder & CEO</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Blue Sky Analytics</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Amit_Shrivastava.jpg" alt="Speaker_Amit_Shrivastava" />
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Amit Shrivastava</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Amit Shrivastava leads presales consulting by offering business strategy and technical expertise to sales in the selection, implementation, and development of competitive product and service applications and solutions. His proactive approach involves monitoring competitors, analysing business practices, and providing recommendations while staying informed about industry trends, market dynamics, and emerging technologies.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Amit Shrivastava</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Sr. Director -S.E</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Bentley Systems</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Abhishek_Singh.jpg" alt="Speaker_Abhishek_Singh" />
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Abhishek Singh</a></h3>
+                        <p style="font-size:13px">Abhishek owns the data platforms and the intelligent data products which help the telco cater to its large customer base of almost a third of Indians. Over the last couple of years, he has led a data platform transformation at Airtel re-defining data quality, governance and ways of working with data at Airtel. In his previous stints at other companies, he has worked on various data driven solutions such as fraud prevention, location analytics and has several publications to his credit. He has more than 17 years of experience in varied domains of technology and data driven intelligence and engineering.</p>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Abhishek Singh</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Head of Customer Intelligence</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Airtel</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Ali_Hussein.jpg" alt="Speaker_Ali_Hussein" />
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Ali Hussein</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">18+ years of work experience in media technology across organizations like Google, Viacom, Discovery, Start-ups, and others.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Ali Hussein</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Chief Executive Officer </h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Eros Now at Eros International PLC</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Dr_Aniruddha_Roy.jpg" alt="Speaker_Dr_Aniruddha_Roy" />
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Dr. Aniruddha Roy</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Dr. Aniruddha Roy is responsible for enabling business through conceptualizing applications as relevant to the vertical segments using emerging technologies. Prior to this, he was Vice President at Navayuga Engineering Company Ltd., wherein he spearheaded Delhi State Spatial Data Infrastructure and National Spatial Data Infrastructure projects. He is currently volunteering as a member in FICCI National Space and Geospatial committee and ‘Geospatial Committee - LITD22' of  Bureau of Indian Standards.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Dr. Aniruddha Roy</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Chief Technology Officer</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Genesys International Corporation Ltd</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Jayant_Ratti.jpg" alt="Speaker_Jayant_Ratti" />
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Jayant Ratti</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Jayant Ratti holds a PhD in Robotics & Intelligent Machines from Georgia Tech, Masters in Electrical & Computer Engineering from Georgia Tech, Bachelors in Electronics & Communication from University of Delhi, Delhi College of Engineering. Has over 100 Patents to his name and Leads councils for various cities to help in the smartness as a service to support the India Ecosystem. Dr Jayant has had two successful companies in the US and worked with US Governments, DARPA, Google X, Boeing among other organizations.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Jayant Ratti</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO of NAYAN</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Nayan Technologies</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Keshri_Asthana.jpg" alt="Speaker_Keshri_Asthana" />
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Keshri Asthana</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Experienced Solutions Architect with a demonstrated history of working in the computer software industry. Skilled in IT Strategy, Enterprise Architecture, Digital Transformation, Cloud Adoption, Pre-sales, and Business Relationship Management. Strong software architecture professional with an MBA and certified in TOGAF, Zachman and various Microsoft Certifications.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Keshri Asthana</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CTO – Government Business</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Microsoft India</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Ojasvi_Bhatia.jpg" alt="Speaker_Ojasvi_Bhatia" />
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Ojasvi Bhatia
+                           </a>
+                        </h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Ojasvi, leads AR & MR partnerships for Meta in India. In his 6 years at Meta, he has worked on bringing the innovative, interactive & experiential technologies like Meta Spark to India and building sustainable flywheel around the same. He is a strong believer that Augmented / Mixed / Virtual Reality enables better connections amongst the consumers of these technologies. Prior to Meta, OJ led Ground Transportation vertical at Goibibo from a Product POV and prior to that co-founded an Ed-Tech Startup.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Ojasvi Bhatia
+                     </a>
                   </p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Lead, AR & MR Partnerships</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Meta, India</h4>
                </div>
             </div>
-            <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s">
-               <div class="single-project-item-four col-md-3">
-                  <div class="project-img">
-                     <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Abhilasha_Purwar.jpg" alt="Speaker_Abhilasha_Purwar" />
-                     <div class="hover-content">
-                        <div class="text text-white">
-                           <h3 class="title"><a href="javascript:void(0)">Abhilasha Purwar</a></h3>
-                           <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                           <p style="font-size:13px">Abhilasha Purwar is Fulbright | Yale | IIT alum with 15+ years of global experience across Private Equity, Product Development, Business Development and Policy. Abhilasha founded Blue Sky Analytics in 2019 with a mission to solve climate change and advance environmental protection by leveraging technology, data, and AI.</p>
-                        </div>
-                     </div>
-                     <div class="project-content">
-                        <div class="text text-white">
-                           <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                        </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rahul_Joshi.jpg" alt="Speaker_Rahul_Joshi" />
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Rahul Joshi</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Rahul Joshi leads transformative initiatives within Jio’s network functions, aligning closely with the digital twin concept. His role spans from curating diverse data from various network, device and infrastructure sources to crafting actionable insights that drive the development of innovative products. He spearheads automation initiatives ensuring seamless integration of data to enhance the efficiency and customer experience of India’s telecom landscape.</p>
                      </div>
                   </div>
-                  <div class="text_for_outreach height_150">
-                     <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Abhilasha Purwar</a></p>
-                     <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder & CEO</h5>
-                     <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Blue Sky Analytics</h4>
+                  <div class="project-content">
+                     <div class="text text-white">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
                   </div>
                </div>
-               <div class="single-project-item-four col-md-3">
-                  <div class="project-img">
-                     <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Amit_Shrivastava.jpg" alt="Speaker_Amit_Shrivastava" />
-                     <div class="hover-content">
-                        <div class="text text-white">
-                           <h3 class="title"><a href="javascript:void(0)">Amit Shrivastava</a></h3>
-                           <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                           <p style="font-size:13px">Amit Shrivastava leads presales consulting by offering business strategy and technical expertise to sales in the selection, implementation, and development of competitive product and service applications and solutions. His proactive approach involves monitoring competitors, analysing business practices, and providing recommendations while staying informed about industry trends, market dynamics, and emerging technologies.</p>
-                        </div>
-                     </div>
-                     <div class="project-content">
-                        <div class="text text-white">
-                           <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                        </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Rahul Joshi</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">AVP & Lead- Analytics & Automation</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Reliance Jio</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rahul_Ranjan.jpg" alt="Speaker_Rahul_Ranjan" />
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Rajesh Ranjan</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">With over 18 years of experience in working with government and public sector clients, he is a Director of Government Affairs and Public Policy for India and South Asia at Microsoft, one of the world's leading technology companies. His mission is to advance Microsoft's policy objectives and foster strategic partnerships with key stakeholders in the region, including ministers, bureaucrats, regulators, industry associations, and civil society organizations.</p>
                      </div>
                   </div>
-                  <div class="text_for_outreach height_150">
-                     <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Amit Shrivastava</a></p>
-                     <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Sr. Director -S.E</h5>
-                     <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Bentley Systems</h4>
+                  <div class="project-content">
+                     <div class="text text-white">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
                   </div>
                </div>
-               <div class="single-project-item-four col-md-3">
-                  <div class="project-img">
-                     <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Abhishek_Singh.jpg" alt="Speaker_Abhishek_Singh" />
-                     <div class="hover-content">
-                        <div class="text text-white">
-                           <h3 class="title"><a href="javascript:void(0)">Abhishek Singh</a></h3>
-                           <p style="font-size:13px">Abhishek owns the data platforms and the intelligent data products which help the telco cater to its large customer base of almost a third of Indians. Over the last couple of years, he has led a data platform transformation at Airtel re-defining data quality, governance and ways of working with data at Airtel. In his previous stints at other companies, he has worked on various data driven solutions such as fraud prevention, location analytics and has several publications to his credit. He has more than 17 years of experience in varied domains of technology and data driven intelligence and engineering.</p>
-                           <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                        </div>
-                     </div>
-                     <div class="project-content">
-                        <div class="text text-white">
-                           <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                        </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Rajesh Ranjan</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director, Government Relations </h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Microsoft India</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Vibhu_Sinha.jpg" alt="Speaker_Vibhu_Sinha" />
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Vibhu Sinha</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Vibhu Sinha is leading the Presales function for North and Eastern regions of Esri India technologies Pvt Ltd, with an impressive 15-year track record in the field of GIS and Remote Sensing. He comes with a strong background in customer advising and executing enterprise-level digital transformation programs through Geographic Information Systems (GIS) and Location Intelligence.</p>
                      </div>
                   </div>
-                  <div class="text_for_outreach height_150">
-                     <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Abhishek Singh</a></p>
-                     <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Head of Customer Intelligence</h5>
-                     <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Airtel</h4>
+                  <div class="project-content">
+                     <div class="text text-white">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
                   </div>
                </div>
-               <div class="single-project-item-four col-md-3">
-                  <div class="project-img">
-                     <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Ali_Hussein.jpg" alt="Speaker_Ali_Hussein" />
-                     <div class="hover-content">
-                        <div class="text text-white">
-                           <h3 class="title"><a href="javascript:void(0)">Ali Hussein</a></h3>
-                           <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                           <p style="font-size:13px">18+ years of work experience in media technology across organizations like Google, Viacom, Discovery, Start-ups, and others.</p>
-                        </div>
-                     </div>
-                     <div class="project-content">
-                        <div class="text text-white">
-                           <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                        </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Vibhu Sinha</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Senior Manager, Presales Consulting</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Esri India Technologies Private Limited</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Vikram_Malhotra.jpg" alt="Speaker_Vikram_Malhotra" />
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Vikram Malhotra </a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Experienced Business Manager with Technology Solution Sales background across Business Intelligence, ISV Solutions, IOT, Digital Marketing , Customer Life Cycle Management and generating value from Data.
+                           <br> Specialties: Data warehousing - Relational & Big Data , Digital Marketing, Business Intelligence, Analytical CRM, Database Marketing, Product Development & Management, Customer Lifecycle Management, Business Consulting.
+                        </p>
                      </div>
                   </div>
-                  <div class="text_for_outreach height_150">
-                     <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Ali Hussein</a></p>
-                     <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Chief Executive Officer </h5>
-                     <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Eros Now at Eros International PLC</h4>
+                  <div class="project-content">
+                     <div class="text text-white">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
                   </div>
                </div>
-               <div class="single-project-item-four col-md-3">
-                  <div class="project-img">
-                     <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Dr_Aniruddha_Roy.jpg" alt="Speaker_Dr_Aniruddha_Roy" />
-                     <div class="hover-content">
-                        <div class="text text-white">
-                           <h3 class="title"><a href="javascript:void(0)">Dr. Aniruddha Roy</a></h3>
-                           <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                           <p style="font-size:13px">Dr. Aniruddha Roy is responsible for enabling business through conceptualizing applications as relevant to the vertical segments using emerging technologies. Prior to this, he was Vice President at Navayuga Engineering Company Ltd., wherein he spearheaded Delhi State Spatial Data Infrastructure and National Spatial Data Infrastructure projects. He is currently volunteering as a member in FICCI National Space and Geospatial committee and ‘Geospatial Committee - LITD22' of  Bureau of Indian Standards.</p>
-                        </div>
-                     </div>
-                     <div class="project-content">
-                        <div class="text text-white">
-                           <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="text_for_outreach height_150">
-                     <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Dr. Aniruddha Roy</a></p>
-                     <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Chief Technology Officer</h5>
-                     <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Genesys International Corporation Ltd</h4>
-                  </div>
-               </div>
-               <div class="single-project-item-four col-md-3">
-                  <div class="project-img">
-                     <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Jayant_Ratti.jpg" alt="Speaker_Jayant_Ratti" />
-                     <div class="hover-content">
-                        <div class="text text-white">
-                           <h3 class="title"><a href="javascript:void(0)">Jayant Ratti</a></h3>
-                           <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                           <p style="font-size:13px">Jayant Ratti holds a PhD in Robotics & Intelligent Machines from Georgia Tech, Masters in Electrical & Computer Engineering from Georgia Tech, Bachelors in Electronics & Communication from University of Delhi, Delhi College of Engineering. Has over 100 Patents to his name and Leads councils for various cities to help in the smartness as a service to support the India Ecosystem. Dr Jayant has had two successful companies in the US and worked with US Governments, DARPA, Google X, Boeing among other organizations.</p>
-                        </div>
-                     </div>
-                     <div class="project-content">
-                        <div class="text text-white">
-                           <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="text_for_outreach height_150">
-                     <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Jayant Ratti</a></p>
-                     <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO of NAYAN</h5>
-                     <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Nayan Technologies</h4>
-                  </div>
-               </div>
-               <div class="single-project-item-four col-md-3">
-                  <div class="project-img">
-                     <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Keshri_Asthana.jpg" alt="Speaker_Keshri_Asthana" />
-                     <div class="hover-content">
-                        <div class="text text-white">
-                           <h3 class="title"><a href="javascript:void(0)">Keshri Asthana</a></h3>
-                           <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                           <p style="font-size:13px">Experienced Solutions Architect with a demonstrated history of working in the computer software industry. Skilled in IT Strategy, Enterprise Architecture, Digital Transformation, Cloud Adoption, Pre-sales, and Business Relationship Management. Strong software architecture professional with an MBA and certified in TOGAF, Zachman and various Microsoft Certifications.</p>
-                        </div>
-                     </div>
-                     <div class="project-content">
-                        <div class="text text-white">
-                           <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="text_for_outreach height_150">
-                     <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Keshri Asthana</a></p>
-                     <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CTO – Government Business</h5>
-                     <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Microsoft India</h4>
-                  </div>
-               </div>
-               <div class="single-project-item-four col-md-3">
-                  <div class="project-img">
-                     <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Ojasvi_Bhatia.jpg" alt="Speaker_Ojasvi_Bhatia" />
-                     <div class="hover-content">
-                        <div class="text text-white">
-                           <h3 class="title"><a href="javascript:void(0)">Ojasvi Bhatia
-                              </a>
-                           </h3>
-                           <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                           <p style="font-size:13px">Ojasvi, leads AR & MR partnerships for Meta in India. In his 6 years at Meta, he has worked on bringing the innovative, interactive & experiential technologies like Meta Spark to India and building sustainable flywheel around the same. He is a strong believer that Augmented / Mixed / Virtual Reality enables better connections amongst the consumers of these technologies. Prior to Meta, OJ led Ground Transportation vertical at Goibibo from a Product POV and prior to that co-founded an Ed-Tech Startup.</p>
-                        </div>
-                     </div>
-                     <div class="project-content">
-                        <div class="text text-white">
-                           <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="text_for_outreach height_150">
-                     <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Ojasvi Bhatia
-                        </a>
-                     </p>
-                     <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Lead, AR & MR Partnerships</h5>
-                     <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Meta, India</h4>
-                  </div>
-               </div>
-               <div class="single-project-item-four col-md-3">
-                  <div class="project-img">
-                     <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rahul_Joshi.jpg" alt="Speaker_Rahul_Joshi" />
-                     <div class="hover-content">
-                        <div class="text text-white">
-                           <h3 class="title"><a href="javascript:void(0)">Rahul Joshi</a></h3>
-                           <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                           <p style="font-size:13px">Rahul Joshi leads transformative initiatives within Jio’s network functions, aligning closely with the digital twin concept. His role spans from curating diverse data from various network, device and infrastructure sources to crafting actionable insights that drive the development of innovative products. He spearheads automation initiatives ensuring seamless integration of data to enhance the efficiency and customer experience of India’s telecom landscape.</p>
-                        </div>
-                     </div>
-                     <div class="project-content">
-                        <div class="text text-white">
-                           <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="text_for_outreach height_150">
-                     <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Rahul Joshi</a></p>
-                     <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">AVP & Lead- Analytics & Automation</h5>
-                     <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Reliance Jio</h4>
-                  </div>
-               </div>
-               <div class="single-project-item-four col-md-3">
-                  <div class="project-img">
-                     <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rahul_Ranjan.jpg" alt="Speaker_Rahul_Ranjan" />
-                     <div class="hover-content">
-                        <div class="text text-white">
-                           <h3 class="title"><a href="javascript:void(0)">Rajesh Ranjan</a></h3>
-                           <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                           <p style="font-size:13px">With over 18 years of experience in working with government and public sector clients, he is a Director of Government Affairs and Public Policy for India and South Asia at Microsoft, one of the world's leading technology companies. His mission is to advance Microsoft's policy objectives and foster strategic partnerships with key stakeholders in the region, including ministers, bureaucrats, regulators, industry associations, and civil society organizations.</p>
-                        </div>
-                     </div>
-                     <div class="project-content">
-                        <div class="text text-white">
-                           <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="text_for_outreach height_150">
-                     <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Rajesh Ranjan</a></p>
-                     <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director, Government Relations </h5>
-                     <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Microsoft India</h4>
-                  </div>
-               </div>
-               <div class="single-project-item-four col-md-3">
-                  <div class="project-img">
-                     <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Vibhu_Sinha.jpg" alt="Speaker_Vibhu_Sinha" />
-                     <div class="hover-content">
-                        <div class="text text-white">
-                           <h3 class="title"><a href="javascript:void(0)">Vibhu Sinha</a></h3>
-                           <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                           <p style="font-size:13px">Vibhu Sinha is leading the Presales function for North and Eastern regions of Esri India technologies Pvt Ltd, with an impressive 15-year track record in the field of GIS and Remote Sensing. He comes with a strong background in customer advising and executing enterprise-level digital transformation programs through Geographic Information Systems (GIS) and Location Intelligence.</p>
-                        </div>
-                     </div>
-                     <div class="project-content">
-                        <div class="text text-white">
-                           <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="text_for_outreach height_150">
-                     <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Vibhu Sinha</a></p>
-                     <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Senior Manager, Presales Consulting</h5>
-                     <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Esri India Technologies Private Limited</h4>
-                  </div>
-               </div>
-               <div class="single-project-item-four col-md-3">
-                  <div class="project-img">
-                     <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Vikram_Malhotra.jpg" alt="Speaker_Vikram_Malhotra" />
-                     <div class="hover-content">
-                        <div class="text text-white">
-                           <h3 class="title"><a href="javascript:void(0)">Vikram Malhotra </a></h3>
-                           <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                           <p style="font-size:13px">Experienced Business Manager with Technology Solution Sales background across Business Intelligence, ISV Solutions, IOT, Digital Marketing , Customer Life Cycle Management and generating value from Data.
-                              <br> Specialties: Data warehousing - Relational & Big Data , Digital Marketing, Business Intelligence, Analytical CRM, Database Marketing, Product Development & Management, Customer Lifecycle Management, Business Consulting.
-                           </p>
-                        </div>
-                     </div>
-                     <div class="project-content">
-                        <div class="text text-white">
-                           <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="text_for_outreach height_150">
-                     <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Vikram Malhotra </a></p>
-                     <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Senior Specialist - Gen AI and Digital Twin </h5>
-                     <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Microsoft India</h4>
-                  </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Vikram Malhotra </a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Senior Specialist - Gen AI and Digital Twin </h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Microsoft India</h4>
                </div>
             </div>
          </div>
@@ -1240,7 +1252,7 @@
             <div class="row justify-content-center" bis_skin_checked="1">
                <div class="col-lg-12" bis_skin_checked="1">
                   <div class="section-title text-center mb-50 wow fadeInDown" bis_skin_checked="1" style="visibility: visible; animation-name: fadeInDown;">
-                     <span class="sub-title"><img src="<?php echo base_url('');?>include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span>
+                     <!-- <span class="sub-title"><img src="<?php echo base_url('');?>include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span> -->
                      <h2>Dignitaries</h2>
                   </div>
                </div>
@@ -1321,34 +1333,12 @@
          <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
             <div class="single-project-item-four col-md-3" bis_skin_checked="1">
                <div class="project-img" bis_skin_checked="1">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Dr_Rajeev_Saraf.jpg" alt="Speaker_Dr_Rajeev_Saraf">
-                  <div class="hover-content" bis_skin_checked="1">
-                     <div class="text text-white" bis_skin_checked="1">
-                        <h3 class="title"><a href="javascript:void(0)">Dr. Rajeev Saraf</a></h3>
-                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                        <p style="font-size:13px">Dr. Rajeev Saraf is a visionary business leader and a renowned entrepreneur, currently serving as the Founder and CEO of Lepton Software, a leading geospatial intelligence solutions provider. Under his leadership, Lepton Software, a pioneer in bringing digital maps to India, has grown rapidly and has now established itself as a trusted partner for several Fortune 500 companies. An IIT Kharagpur and Vanderbilt University alumni, he is also an advisor and angel investor for many upcoming startups and businesses. Currently, he also serves as a board of governor member at the National Institute of Technology Delhi.</p>
-                     </div>
-                  </div>
-                  <div class="project-content" bis_skin_checked="1">
-                     <div class="text text-white" bis_skin_checked="1">
-                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                     </div>
-                  </div>
-               </div>
-               <div class="text_for_outreach height_150" bis_skin_checked="1">
-                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Dr. Rajeev Saraf</a></p>
-                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder &amp; CEO</h5>
-                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Lepton Software</h4>
-               </div>
-            </div>
-            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
-               <div class="project-img" bis_skin_checked="1">
                   <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Dr_Dhirendra_Singh.jpg" alt="Speaker_Dr_Dhirendra_Singh">
                   <div class="hover-content" bis_skin_checked="1">
                      <div class="text text-white" bis_skin_checked="1">
-                        <h3 class="title"><a href="javascript:void(0)">Dr. Dhirendra Singh</a></h3>
+                        <h3 class="title"><a href="javascript:void(0)">Dhirendra Singh</a></h3>
                         <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                        <p style="font-size:13px">Dr. Dhirendra Singh graduated with (B.E) in electronics and telecommunication in the year 2003. Worked with Sony and Sapient Technologies (for Massachusetts Institute of Technology, Cambridge). Completed national endeavour projects like National Air Quality Index (launched by PM Narendra Modi), Niti-aayog cleaner air better life initiative, Qatar Petroleum PM Speciation Study, and Air Pollution Study for Delhi, Kanpur, Agra, Jaipur, and Taj-Mahal. He has also developed the GHG IPPU framework for the entire India to estimate greenhouse gas emissions vis tier 3 methodology. He became an entrepreneur in the year 2017 and started a company Airshed Planning Professionals Pvt. Ltd, which mainly works in the field of air quality.</p>
+                        <p style="font-size:13px">Dhirendra Singh graduated with (B.E) in electronics and telecommunication in the year 2003. Worked with Sony and Sapient Technologies (for Massachusetts Institute of Technology, Cambridge). Completed national endeavour projects like National Air Quality Index (launched by PM Narendra Modi), Niti-aayog cleaner air better life initiative, Qatar Petroleum PM Speciation Study, and Air Pollution Study for Delhi, Kanpur, Agra, Jaipur, and Taj-Mahal. He has also developed the GHG IPPU framework for the entire India to estimate greenhouse gas emissions vis tier 3 methodology.</p>
                      </div>
                   </div>
                   <div class="project-content" bis_skin_checked="1">
@@ -1358,7 +1348,7 @@
                   </div>
                </div>
                <div class="text_for_outreach height_150" bis_skin_checked="1">
-                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Dr. Dhirendra Singh</a></p>
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Dhirendra Singh</a></p>
                   <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO, Founder &amp; Air Quality Specialist  </h5>
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Airshed Planning Professionals Private Limited</h4>
                </div>
@@ -1409,12 +1399,34 @@
             </div>
             <div class="single-project-item-four col-md-3" bis_skin_checked="1">
                <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Dr_Rajeev_Saraf.jpg" alt="Speaker_Dr_Rajeev_Saraf">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Rajeev Saraf</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Rajeev Saraf is a visionary business leader and a renowned entrepreneur, currently serving as the Founder and CEO of Lepton Software, a leading geospatial intelligence solutions provider. Under his leadership, Lepton Software, a pioneer in bringing digital maps to India, has grown rapidly and has now established itself as a trusted partner for several Fortune 500 companies. An IIT Kharagpur and Vanderbilt University alumni, he is also an advisor and angel investor for many upcoming startups and businesses.</p>
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Rajeev Saraf</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder &amp; CEO</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Lepton Software</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
                   <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Raghuram_Krishnapuram.jpg" alt="Speaker_Raghuram_Krishnapuram">
                   <div class="hover-content" bis_skin_checked="1">
                      <div class="text text-white" bis_skin_checked="1">
                         <h3 class="title"><a href="javascript:void(0)">Raghuram Krishnapuram</a></h3>
                         <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                        <p style="font-size:13px">Raghu works experience spans both academia and industry across continents over almost four decades. Raghu is an alumnus of IIT-Bombay and received his PhD  from Carnegie Mellon University in 1987. He worked in the academia in the US until the year 2000. Between 2000 and 2015, he held various technical leadership positions at IBM Research India and IBM T J Watson Centre, NY, USA, where he led projects in the area of ‘Knowledge, Information, and Smarter Planet Solutions’ and ‘Cognitive Computing,’ with a particular focus on emerging markets. Raghu was with Xerox Research Centre – India, during 2015-16. Most recently, he was with the Robert Bosch Centre for Cyber-Physical Systems, Indian Institute of Science, Bangalore, and ARTPRAK, IISc, Bangalore.</p>
+                        <p style="font-size:13px">Raghu works experience spans both academia and industry across continents over almost four decades. Raghu is an alumnus of IIT-Bombay and received his PhD  from Carnegie Mellon University in 1987. He worked in the academia in the US until the year 2000. Between 2000 and 2015, he held various technical leadership positions at IBM Research India and IBM T J Watson Centre, NY, USA, where he led projects in the area of ‘Knowledge, Information, and Smarter Planet Solutions’ and ‘Cognitive Computing,’ with a particular focus on emerging markets.</p>
                      </div>
                   </div>
                   <div class="project-content" bis_skin_checked="1">
@@ -1523,10 +1535,11 @@
             </div>
          </div>
       </div>
-      <div class="custom-tab-content text-center" id="tab6" style="display: none;">
-        <h4 class="text-center">Coming Soon!/h4>
+      <div class="custom-tab1-content text-center" id="tab6" style="display: none;">
+         <h4 class="text-center">
+            Coming Soon!
+         </h4>
       </div>
-   </div>
    </div>
 </section>
 <script>

@@ -236,11 +236,16 @@
         });
         $('.speakersBtn').on('click', function(event) {
             event.preventDefault();
-            scrollToElement('speakersDes', 0);
+            var targetOffset = $('#speakersDes__').offset().top - 5000; // Adjusted with -200 offset
+            $('html, body').animate({
+                scrollTop: targetOffset
+            }, 500); // Adjust the animation speed as needed
+
             var buttonId = $(this).attr('id');
-            localStorage.setItem(buttonId + '_scrollTarget', 'speakersDes');
+            localStorage.setItem(buttonId + '_scrollTarget', 'speakersDes__');
             window.location.href = "<?php echo base_url('events'); ?>";
         });
+
         $('.scheduleBtn').on('click', function(event) {
             event.preventDefault();
             scrollToElement('scheduleDes', 0);
@@ -316,96 +321,96 @@
             $('.testimonial-section').toggleClass('full-width');
         });
         $("#caseSubmissionForm").submit(function(e) {
-            e.preventDefault(); // Prevent the default form submission
+            e.preventDefault();
 
-            // Remove any existing error messages
+
             $(".error-message").remove();
 
-            // Flag to track if there are any validation errors
+
             var hasError = false;
 
-            // Validate full name
+
             var fullName = $("#fullName").val();
             if (!fullName || fullName.trim() === '') {
                 $("#fullName").after('<p class="error-message">Please enter your full name.</p>');
                 hasError = true;
             }
 
-            // Validate email
+
             var email = $("#email").val();
             if (!email || email.trim() === '') {
                 $("#email").after('<p class="error-message">Please enter your email address.</p>');
                 hasError = true;
             }
 
-            // Validate use case title
+
             var useCaseTitle = $("#useCaseTitle").val();
             if (!useCaseTitle || useCaseTitle.trim() === '') {
                 $("#useCaseTitle").after('<p class="error-message">Please enter a title for your use case.</p>');
                 hasError = true;
             }
 
-            // Validate abstract
+
             var abstract = $("#abstract").val();
             if (!abstract || abstract.trim() === '') {
                 $("#abstract").after('<p class="error-message">Please provide a brief summary of the use case.</p>');
                 hasError = true;
             }
 
-            // Validate objective
+
             var objective = $("#objective").val();
             if (!objective || objective.trim() === '') {
                 $("#objective").after('<p class="error-message">Please clearly define the objective or problem to address.</p>');
                 hasError = true;
             }
 
-            // Validate target area
+
             var targetArea = $("#targetArea").val();
             if (!targetArea || targetArea.trim() === '') {
                 $("#targetArea").after('<p class="error-message">Please identify specific areas of application.</p>');
                 hasError = true;
             }
 
-            // Validate technologies utilized
+
             var technologies = $("#technologies").val();
             if (!technologies || technologies.trim() === '') {
                 $("#technologies").after('<p class="error-message">Please list the key technologies used in the use case.</p>');
                 hasError = true;
             }
 
-            // Validate data sources and requirements
+
             var dataSources = $("#dataSources").val();
             if (!dataSources || dataSources.trim() === '') {
                 $("#dataSources").after('<p class="error-message">Please describe data sources and any requirements.</p>');
                 hasError = true;
             }
 
-            // Validate expected outcomes and impact
+
             var outcomes = $("#outcomes").val();
             if (!outcomes || outcomes.trim() === '') {
                 $("#outcomes").after('<p class="error-message">Please outline anticipated results and impact.</p>');
                 hasError = true;
             }
 
-            // Validate innovative aspects
+
             var innovativeAspects = $("#innovativeAspects").val();
             if (!innovativeAspects || innovativeAspects.trim() === '') {
                 $("#innovativeAspects").after('<p class="error-message">Please highlight unique features or approaches.</p>');
                 hasError = true;
             }
 
-            // Validate feasibility and implementation challenges
+
             var feasibility = $("#feasibility").val();
             if (!feasibility || feasibility.trim() === '') {
                 $("#feasibility").after('<p class="error-message">Please discuss feasibility and potential challenges.</p>');
                 hasError = true;
             }
 
-            // If there are validation errors, prevent form submission
+
             if (hasError) {
-                // Code for handling validation errors, which you've provided
+
             } else {
-                // If there are no validation errors, submit the form data via AJAX
+
                 $.ajax({
                     url: "<?php echo base_url('post-case-submission-form'); ?>",
                     type: "post",
@@ -419,9 +424,9 @@
                                 text: response.message,
                             });
                         } else if (response.status === "success") {
-                            // Handle success response if needed
+
                         } else if (response.status === "validation_errors") {
-                            // Handle validation errors if needed
+
                             return false;
                         } else {
                             Swal.fire({
@@ -441,23 +446,38 @@
             }
 
         });
-        $('#tab2').show();
-        $('#tab5').show();
+        $('#tab2, #tab5').show();
 
-    // Click event for tab buttons
-    $('.custom-tab-btn').click(function() {
-        // Remove active class from all buttons
-        $('.custom-tab-btn').removeClass('active');
 
-        // Hide all tab contents
-        $('.custom-tab-content').hide();
+    $('#scheduleDes .custom-tab-btn').click(function() {
 
-        // Add active class to clicked button
+        $('#scheduleDes .custom-tab-btn').removeClass('active');
+
+
+        $('#scheduleDes .custom-tab-content').hide();
+
+
         $(this).addClass('active');
 
-        // Show corresponding tab content
+
         var tabId = $(this).data('tab');
-        $('#' + tabId).show();
+        $('#scheduleDes #' + tabId).show();
+    });
+
+
+    $('#speakersDes .custom-tab-btn').click(function() {
+
+        $('#speakersDes .custom-tab-btn').removeClass('active');
+
+
+        $('#speakersDes .custom-tab-content').hide();
+
+
+        $(this).addClass('active');
+
+
+        var tabId = $(this).data('tab');
+        $('#speakersDes #' + tabId).show();
     });
     });
     const cookieBox = document.querySelector(".wrapper"),
