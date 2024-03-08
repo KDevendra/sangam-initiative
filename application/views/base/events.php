@@ -129,6 +129,7 @@
    margin-bottom: 20px;
    display: flex;
    justify-content: center;
+       background-color: #a1e6fb;
    }
    .custom-tab-btn {
    border: none;
@@ -139,7 +140,7 @@
    font-size: 16px;
    }
    .custom-tab-btn.active {
-   border-bottom: 2px solid blue;
+   border-bottom: 2px solid #0086fc;
    }
    .custom-tab-content {
    display: none;
