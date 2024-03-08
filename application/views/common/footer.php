@@ -441,6 +441,23 @@
             }
 
         });
+        $('#tab1').show();
+
+    // Click event for tab buttons
+    $('.custom-tab-btn').click(function() {
+        // Remove active class from all buttons
+        $('.custom-tab-btn').removeClass('active');
+
+        // Hide all tab contents
+        $('.custom-tab-content').hide();
+
+        // Add active class to clicked button
+        $(this).addClass('active');
+
+        // Show corresponding tab content
+        var tabId = $(this).data('tab');
+        $('#' + tabId).show();
+    });
     });
     const cookieBox = document.querySelector(".wrapper"),
         buttons = document.querySelectorAll(".button");
