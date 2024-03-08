@@ -902,7 +902,7 @@
                <div class="row justify-content-center" bis_skin_checked="1">
                   <div class="col-lg-12" bis_skin_checked="1">
                      <div class="section-title text-center mb-50 wow fadeInDown" bis_skin_checked="1" style="visibility: visible;">
-                                               <span class="sub-title"><img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span>
+                        <span class="sub-title"><img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span>
                         <h2>Dignitaries</h2>
                      </div>
                   </div>
@@ -1236,294 +1236,292 @@
          </div>
       </div>
       <div class="custom-tab-content" id="tab5" >
-        <div class="container" bis_skin_checked="1">
-      <div class="row justify-content-center" bis_skin_checked="1">
-         <div class="col-lg-12" bis_skin_checked="1">
-            <div class="section-title text-center mb-50 wow fadeInDown" bis_skin_checked="1" style="visibility: visible; animation-name: fadeInDown;">
-              <span class="sub-title"><img src="<?php echo base_url('');?>include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span>
-               <h2>Dignitaries</h2>
+         <div class="container" bis_skin_checked="1">
+            <div class="row justify-content-center" bis_skin_checked="1">
+               <div class="col-lg-12" bis_skin_checked="1">
+                  <div class="section-title text-center mb-50 wow fadeInDown" bis_skin_checked="1" style="visibility: visible; animation-name: fadeInDown;">
+                     <span class="sub-title"><img src="<?php echo base_url('');?>include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span>
+                     <h2>Dignitaries</h2>
+                  </div>
+               </div>
             </div>
-         </div>
-      </div>
-      <div class="row mb-3" bis_skin_checked="1" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;">
-         <div class="col-lg-3 col-sm-6" bis_skin_checked="1">
-            <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
-               <div class="member-img" bis_skin_checked="1">
-                  <img src="<?php echo base_url('');?>include/web/custom/Chester_Shri_BVR_Subrahmanyam.jpg" alt="Chester_Shri_BVR_Subrahmanyam">
+            <div class="row mb-3" bis_skin_checked="1" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;">
+               <div class="col-lg-3 col-sm-6" bis_skin_checked="1">
+                  <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
+                     <div class="member-img" bis_skin_checked="1">
+                        <img src="<?php echo base_url('');?>include/web/custom/Chester_Shri_BVR_Subrahmanyam.jpg" alt="Chester_Shri_BVR_Subrahmanyam">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-9 col-sm-6" bis_skin_checked="1">
+                  <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
+                     <div class="text_for_outreach" style="padding-bottom:0" bis_skin_checked="1">
+                        <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Shri B.V.R. Subrahmanyam </a></p>
+                        <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;"> Chief Executive Officer </h5>
+                        <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">NITI Aayog</h4>
+                     </div>
+                     <p>Shri B.V.R. Subrahmanyam  Indian Administrative Service Officer of 1987 batch (Chhattisgarh cadre), he has held important assignments over the last three decades in Madhya Pradesh, Chhattisgarh, and Jammu &amp; Kashmir, along with a stint at The World Bank. He has been Secretary in the Ministry of Commerce &amp; Industry, Chief Secretary, Jammu &amp; Kashmir, Principal Secretary, Government of Chhattisgarh, and has held positions in the Prime Minister’s Office.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row mb-3" bis_skin_checked="1" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;">
+               <div class="col-lg-3 col-sm-6" bis_skin_checked="1">
+                  <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
+                     <div class="member-img" bis_skin_checked="1">
+                        <img src="<?php echo base_url('');?>include/web/custom/Chief_Guests_Dr_Neeraj_Mittal.jpg" alt=" Chief_Guests_Dr_Neeraj_Mittal">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-9 col-sm-6" bis_skin_checked="1">
+                  <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
+                     <div class="text_for_outreach" style="padding-bottom:0" bis_skin_checked="1">
+                        <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Dr. Neeraj Mittal</a></p>
+                        <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Secretary, Department of Telecommunications</h5>
+                        <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Government of India</h4>
+                     </div>
+                     <p>Dr. Neeraj Mittal, a distinguished member of the 1992-batch Indian Administrative Service (IAS) cadre in Tamil Nadu, is recognized for his notable service and contributions. He held the esteemed position of Principal Secretary of the Information Technology Department in the Government of Tamil Nadu. Prior to this role, Dr. Mittal served as the Managing Director &amp; CEO of Guidance Tamil Nadu, provided his expertise as a Senior Advisor at the World Bank Group, and held the position of Joint Secretary in the Ministry of Petroleum and Natural Gas.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row mb-3" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;" bis_skin_checked="1">
+               <div class="col-lg-3 col-sm-6" bis_skin_checked="1" style="display: flex;justify-content: center;align-items: center;">
+                  <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
+                     <div class="member-img" bis_skin_checked="1">
+                        <img src="<?php echo base_url('');?>include/web/custom/Chester_Dr_Debabrata_Das.png" alt="Chester_Dr_Debabrata_Das">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-9 col-sm-6" bis_skin_checked="1">
+                  <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
+                     <div class="text_for_outreach" style="padding-bottom:0" bis_skin_checked="1">
+                        <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Dr. Debabrata Das </a></p>
+                        <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director</h5>
+                        <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">IIIT Bangalore</h4>
+                     </div>
+                     <p>Before joining IIITB in 2002, he had served at G S Sanyal School of Telecommunication at IIT Kharagpur and later at Kirana Networks in New Jersey, USA. He is Project Officer of National Mission for Interdisciplinary Cyber Physical Systems in the areas of Advanced Communication System, from DST, Govt of India. He was PI of multiple sponsored projects from Intel, Hewlett Packard, Microsoft, Motorola Research, Tejas Networks, Nokia, Govt. of India, in the areas of Broadband Wireless MAC/QoS/Energy-saving, and IMS. His main areas of research interest are IoT and Wireless Access Network's MAC, QoS, Power saving.&nbsp;Dr. Das received his Ph.D. degree from the Indian Institute of Technology Kharagpur.</p>
+                  </div>
                </div>
             </div>
          </div>
-         <div class="col-lg-9 col-sm-6" bis_skin_checked="1">
-            <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
-               <div class="text_for_outreach" style="padding-bottom:0" bis_skin_checked="1">
-                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Shri B.V.R. Subrahmanyam </a></p>
-                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;"> Chief Executive Officer </h5>
-                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">NITI Aayog</h4>
-               </div>
-               <p>Shri B.V.R. Subrahmanyam  Indian Administrative Service Officer of 1987 batch (Chhattisgarh cadre), he has held important assignments over the last three decades in Madhya Pradesh, Chhattisgarh, and Jammu &amp; Kashmir, along with a stint at The World Bank. He has been Secretary in the Ministry of Commerce &amp; Industry, Chief Secretary, Jammu &amp; Kashmir, Principal Secretary, Government of Chhattisgarh, and has held positions in the Prime Minister’s Office.</p>
-            </div>
-         </div>
-      </div>
-      <div class="row mb-3" bis_skin_checked="1" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;">
-         <div class="col-lg-3 col-sm-6" bis_skin_checked="1">
-            <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
-               <div class="member-img" bis_skin_checked="1">
-                  <img src="<?php echo base_url('');?>include/web/custom/Chief_Guests_Dr_Neeraj_Mittal.jpg" alt=" Chief_Guests_Dr_Neeraj_Mittal">
+         <div class="container" bis_skin_checked="1">
+            <div class="row justify-content-center" bis_skin_checked="1">
+               <div class="col-lg-12" bis_skin_checked="1">
+                  <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;" bis_skin_checked="1">
+                     <h2>Meet Our Speakers</h2>
+                  </div>
                </div>
             </div>
-         </div>
-         <div class="col-lg-9 col-sm-6" bis_skin_checked="1">
-            <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
-               <div class="text_for_outreach" style="padding-bottom:0" bis_skin_checked="1">
-                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Dr. Neeraj Mittal</a></p>
-                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Secretary, Department of Telecommunications</h5>
-                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Government of India</h4>
-               </div>
-               <p>Dr. Neeraj Mittal, a distinguished member of the 1992-batch Indian Administrative Service (IAS) cadre in Tamil Nadu, is recognized for his notable service and contributions. He held the esteemed position of Principal Secretary of the Information Technology Department in the Government of Tamil Nadu. Prior to this role, Dr. Mittal served as the Managing Director &amp; CEO of Guidance Tamil Nadu, provided his expertise as a Senior Advisor at the World Bank Group, and held the position of Joint Secretary in the Ministry of Petroleum and Natural Gas.</p>
+            <div class="text-center" bis_skin_checked="1">
+               <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                  Join us as we embark on an exhilarating journey of content creation! Your participation is key to shaping the direction of our upcoming material. Dive into interactive discussions, share your ideas, and
+                  contribute your unique perspective. Together, let's make our content truly exceptional.
+               </p>
             </div>
          </div>
-      </div>
-
-      <div class="row mb-3" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;" bis_skin_checked="1">
-         <div class="col-lg-3 col-sm-6" bis_skin_checked="1" style="display: flex;justify-content: center;align-items: center;">
-            <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
-               <div class="member-img" bis_skin_checked="1">
-                  <img src="<?php echo base_url('');?>include/web/custom/Chester_Dr_Debabrata_Das.png" alt="Chester_Dr_Debabrata_Das">
+         <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Dr_Rajeev_Saraf.jpg" alt="Speaker_Dr_Rajeev_Saraf">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Dr. Rajeev Saraf</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Dr. Rajeev Saraf is a visionary business leader and a renowned entrepreneur, currently serving as the Founder and CEO of Lepton Software, a leading geospatial intelligence solutions provider. Under his leadership, Lepton Software, a pioneer in bringing digital maps to India, has grown rapidly and has now established itself as a trusted partner for several Fortune 500 companies. An IIT Kharagpur and Vanderbilt University alumni, he is also an advisor and angel investor for many upcoming startups and businesses. Currently, he also serves as a board of governor member at the National Institute of Technology Delhi.</p>
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Dr. Rajeev Saraf</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder &amp; CEO</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Lepton Software</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Dr_Dhirendra_Singh.jpg" alt="Speaker_Dr_Dhirendra_Singh">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Dr. Dhirendra Singh</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Dr. Dhirendra Singh graduated with (B.E) in electronics and telecommunication in the year 2003. Worked with Sony and Sapient Technologies (for Massachusetts Institute of Technology, Cambridge). Completed national endeavour projects like National Air Quality Index (launched by PM Narendra Modi), Niti-aayog cleaner air better life initiative, Qatar Petroleum PM Speciation Study, and Air Pollution Study for Delhi, Kanpur, Agra, Jaipur, and Taj-Mahal. He has also developed the GHG IPPU framework for the entire India to estimate greenhouse gas emissions vis tier 3 methodology. He became an entrepreneur in the year 2017 and started a company Airshed Planning Professionals Pvt. Ltd, which mainly works in the field of air quality.</p>
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Dr. Dhirendra Singh</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO, Founder &amp; Air Quality Specialist  </h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Airshed Planning Professionals Private Limited</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Karthikeyan_Kumaraguru.jpg" alt="Speaker_Karthikeyan_Kumaraguru">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Karthikeyan Kumaraguru</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Karthikeyan is a visionary leader with a proven track record in building 10+ cutting-edge platforms and engines, leveraging Big-Data and micro-services stack. With expertise in Big-Data Analytics, he has spearheaded the development of innovative solutions such as Customer Data Platforms, ML Platforms, and Automated Personalization Engines. His contributions include Retargeting Platforms, CRM Online Models, Recommendation Systems, and Anomaly Detection Solutions, enhancing user experience across various channels. Additionally, Karthikeyan has played a pivotal role in Cloud Platform development, overseeing projects like the Samsung Search System, Firmware Over the Air Platform, and Global Diagnostic Monitoring for Samsung phones.</p>
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Karthikeyan Kumaraguru</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Sr. Director - Big Data and Analytics </h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Samsung Electronics</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Puneet_Badrinath.jpg" alt="Speaker_Puneet_Badrinath">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Puneet Badrinath</a></h3>
+                        <p style="font-size:13px">Puneet has strong entrepreneurial background, worked with startups and big companies in both B2B and B2C segments. He works on tech-driven products that scale quickly and directly translate to the bottom line of businesses in B2B or creates repeat customers for B2C.As metaverse becomes mainstream, His background has given him a unique insight into solutions that can create long-term value for individuals, businesses, and enterprises.</p>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Puneet Badrinath</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder &amp; CEO</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Fabrik Space</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Raghuram_Krishnapuram.jpg" alt="Speaker_Raghuram_Krishnapuram">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Raghuram Krishnapuram</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Raghu works experience spans both academia and industry across continents over almost four decades. Raghu is an alumnus of IIT-Bombay and received his PhD  from Carnegie Mellon University in 1987. He worked in the academia in the US until the year 2000. Between 2000 and 2015, he held various technical leadership positions at IBM Research India and IBM T J Watson Centre, NY, USA, where he led projects in the area of ‘Knowledge, Information, and Smarter Planet Solutions’ and ‘Cognitive Computing,’ with a particular focus on emerging markets. Raghu was with Xerox Research Centre – India, during 2015-16. Most recently, he was with the Robert Bosch Centre for Cyber-Physical Systems, Indian Institute of Science, Bangalore, and ARTPRAK, IISc, Bangalore.</p>
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Raghuram Krishnapuram</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Senior Scientist</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">IUDX Programme Unit, FSID IISC</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Rahul_Joshi.jpg" alt="Speaker_Rahul_Joshi">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Rahul Joshi</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Rahul Joshi leads transformative initiatives within Jio’s network functions, aligning closely with the digital twin concept. His role spans from curating diverse data from various network, device and infrastructure sources to crafting actionable insights that drive the development of innovative products. He spearheads automation initiatives ensuring seamless integration of data to enhance the efficiency and customer experience of India’s telecom landscape.</p>
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Rahul Joshi</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">AVP &amp; Lead- Analytics &amp; Automation</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Reliance Jio</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Sasikumar_Ramachandran_Nair.jpg" alt="Speaker_Sasikumar_Ramachandran_Nair">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Sasikumar Ramachandran Nair
+                           </a>
+                        </h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Sasikumar has over 25 years of experience in the field of visual computing. He is currently working as a Senior Solutions Architect for Nvidia Graphics in Bangalore. His focus areas include Accelerated Compute Infrastructure, High Performance Computing, Professional Visualization and Graphics Virtualization. He is passionate about emerging technologies and is a proud evangelist of AI and Accelerated computing.</p>
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Sasikumar Ramachandran Nair
+                     </a>
+                  </p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Senior Solution Architect</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Nvidia</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Sunil_Ramachandran.jpg" alt="Speaker_Sunil_Ramachandran">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Sunil Ramachandran </a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px"></p>
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Sunil Ramachandran </a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Technical Director </h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Oracle India Pvt. Ltd</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Yuvraj_Tomar.jpg" alt="Speaker_Yuvraj_Tomar">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Yuvraj Tomar</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">A visionary leader in digital twin technology and enterprise metaverse, Yuvraj stands at the forefront of pioneering solutions for the future. With a rich background in IoT, 3D, and AI; Yuvraj has led numerous initiatives for his company, Cloudworx, that showcase the potential of digital twins in enhancing operational efficiency, sustainability, and strategic planning. Joining the Sangam Initiative, Yuvraj is excited to contribute expertise and insights towards shaping resilient, efficient, and interconnected infrastructure systems for tomorrow.</p>
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Yuvraj Tomar</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">CloudWorx</h4>
                </div>
             </div>
          </div>
-         <div class="col-lg-9 col-sm-6" bis_skin_checked="1">
-            <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
-               <div class="text_for_outreach" style="padding-bottom:0" bis_skin_checked="1">
-                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Dr. Debabrata Das </a></p>
-                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director</h5>
-                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">IIIT Bangalore</h4>
-               </div>
-               <p>Before joining IIITB in 2002, he had served at G S Sanyal School of Telecommunication at IIT Kharagpur and later at Kirana Networks in New Jersey, USA. He is Project Officer of National Mission for Interdisciplinary Cyber Physical Systems in the areas of Advanced Communication System, from DST, Govt of India. He was PI of multiple sponsored projects from Intel, Hewlett Packard, Microsoft, Motorola Research, Tejas Networks, Nokia, Govt. of India, in the areas of Broadband Wireless MAC/QoS/Energy-saving, and IMS. His main areas of research interest are IoT and Wireless Access Network's MAC, QoS, Power saving.&nbsp;Dr. Das received his Ph.D. degree from the Indian Institute of Technology Kharagpur.</p>
-            </div>
-         </div>
-      </div>
-   </div>
-        <div class="container" bis_skin_checked="1">
-           <div class="row justify-content-center" bis_skin_checked="1">
-              <div class="col-lg-12" bis_skin_checked="1">
-                 <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;" bis_skin_checked="1">
-                    <h2>Meet Our Speakers</h2>
-                 </div>
-              </div>
-           </div>
-           <div class="text-center" bis_skin_checked="1">
-              <p class="mb-40 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                 Join us as we embark on an exhilarating journey of content creation! Your participation is key to shaping the direction of our upcoming material. Dive into interactive discussions, share your ideas, and
-                 contribute your unique perspective. Together, let's make our content truly exceptional.
-              </p>
-           </div>
-        </div>
-        <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-          <div class="single-project-item-four col-md-3" bis_skin_checked="1">
-          <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Dr_Rajeev_Saraf.jpg" alt="Speaker_Dr_Rajeev_Saraf">
-             <div class="hover-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <h3 class="title"><a href="javascript:void(0)">Dr. Rajeev Saraf</a></h3>
-                   <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                   <p style="font-size:13px">Dr. Rajeev Saraf is a visionary business leader and a renowned entrepreneur, currently serving as the Founder and CEO of Lepton Software, a leading geospatial intelligence solutions provider. Under his leadership, Lepton Software, a pioneer in bringing digital maps to India, has grown rapidly and has now established itself as a trusted partner for several Fortune 500 companies. An IIT Kharagpur and Vanderbilt University alumni, he is also an advisor and angel investor for many upcoming startups and businesses. Currently, he also serves as a board of governor member at the National Institute of Technology Delhi.</p>
-                </div>
-             </div>
-             <div class="project-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                </div>
-             </div>
-          </div>
-          <div class="text_for_outreach height_150" bis_skin_checked="1">
-             <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Dr. Rajeev Saraf</a></p>
-             <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder &amp; CEO</h5>
-             <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Lepton Software</h4>
-          </div>
-       </div>
-       <div class="single-project-item-four col-md-3" bis_skin_checked="1">
-          <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Dr_Dhirendra_Singh.jpg" alt="Speaker_Dr_Dhirendra_Singh">
-             <div class="hover-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <h3 class="title"><a href="javascript:void(0)">Dr. Dhirendra Singh</a></h3>
-                   <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                   <p style="font-size:13px">Dr. Dhirendra Singh graduated with (B.E) in electronics and telecommunication in the year 2003. Worked with Sony and Sapient Technologies (for Massachusetts Institute of Technology, Cambridge). Completed national endeavour projects like National Air Quality Index (launched by PM Narendra Modi), Niti-aayog cleaner air better life initiative, Qatar Petroleum PM Speciation Study, and Air Pollution Study for Delhi, Kanpur, Agra, Jaipur, and Taj-Mahal. He has also developed the GHG IPPU framework for the entire India to estimate greenhouse gas emissions vis tier 3 methodology. He became an entrepreneur in the year 2017 and started a company Airshed Planning Professionals Pvt. Ltd, which mainly works in the field of air quality.</p>
-                </div>
-             </div>
-             <div class="project-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                </div>
-             </div>
-          </div>
-          <div class="text_for_outreach height_150" bis_skin_checked="1">
-             <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Dr. Dhirendra Singh</a></p>
-             <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO, Founder &amp; Air Quality Specialist  </h5>
-             <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Airshed Planning Professionals Private Limited</h4>
-          </div>
-       </div>
-       <div class="single-project-item-four col-md-3" bis_skin_checked="1">
-          <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Karthikeyan_Kumaraguru.jpg" alt="Speaker_Karthikeyan_Kumaraguru">
-             <div class="hover-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <h3 class="title"><a href="javascript:void(0)">Karthikeyan Kumaraguru</a></h3>
-                   <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                   <p style="font-size:13px">Karthikeyan is a visionary leader with a proven track record in building 10+ cutting-edge platforms and engines, leveraging Big-Data and micro-services stack. With expertise in Big-Data Analytics, he has spearheaded the development of innovative solutions such as Customer Data Platforms, ML Platforms, and Automated Personalization Engines. His contributions include Retargeting Platforms, CRM Online Models, Recommendation Systems, and Anomaly Detection Solutions, enhancing user experience across various channels. Additionally, Karthikeyan has played a pivotal role in Cloud Platform development, overseeing projects like the Samsung Search System, Firmware Over the Air Platform, and Global Diagnostic Monitoring for Samsung phones.</p>
-                </div>
-             </div>
-             <div class="project-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                </div>
-             </div>
-          </div>
-          <div class="text_for_outreach height_150" bis_skin_checked="1">
-             <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Karthikeyan Kumaraguru</a></p>
-             <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Sr. Director - Big Data and Analytics </h5>
-             <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Samsung Electronics</h4>
-          </div>
-       </div>
-
-       <div class="single-project-item-four col-md-3" bis_skin_checked="1">
-          <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Puneet_Badrinath.jpg" alt="Speaker_Puneet_Badrinath">
-             <div class="hover-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <h3 class="title"><a href="javascript:void(0)">Puneet Badrinath</a></h3>
-                   <p style="font-size:13px">Puneet has strong entrepreneurial background, worked with startups and big companies in both B2B and B2C segments. He works on tech-driven products that scale quickly and directly translate to the bottom line of businesses in B2B or creates repeat customers for B2C.As metaverse becomes mainstream, His background has given him a unique insight into solutions that can create long-term value for individuals, businesses, and enterprises.</p>
-                   <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                </div>
-             </div>
-             <div class="project-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                </div>
-             </div>
-          </div>
-          <div class="text_for_outreach height_150" bis_skin_checked="1">
-             <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Puneet Badrinath</a></p>
-             <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder &amp; CEO</h5>
-             <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Fabrik Space</h4>
-          </div>
-       </div>
-       <div class="single-project-item-four col-md-3" bis_skin_checked="1">
-          <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Raghuram_Krishnapuram.jpg" alt="Speaker_Raghuram_Krishnapuram">
-             <div class="hover-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <h3 class="title"><a href="javascript:void(0)">Raghuram Krishnapuram</a></h3>
-                   <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                   <p style="font-size:13px">Raghu works experience spans both academia and industry across continents over almost four decades. Raghu is an alumnus of IIT-Bombay and received his PhD  from Carnegie Mellon University in 1987. He worked in the academia in the US until the year 2000. Between 2000 and 2015, he held various technical leadership positions at IBM Research India and IBM T J Watson Centre, NY, USA, where he led projects in the area of ‘Knowledge, Information, and Smarter Planet Solutions’ and ‘Cognitive Computing,’ with a particular focus on emerging markets. Raghu was with Xerox Research Centre – India, during 2015-16. Most recently, he was with the Robert Bosch Centre for Cyber-Physical Systems, Indian Institute of Science, Bangalore, and ARTPRAK, IISc, Bangalore.</p>
-                </div>
-             </div>
-             <div class="project-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                </div>
-             </div>
-          </div>
-          <div class="text_for_outreach height_150" bis_skin_checked="1">
-             <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Raghuram Krishnapuram</a></p>
-             <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Senior Scientist</h5>
-             <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">IUDX Programme Unit, FSID IISC</h4>
-          </div>
-       </div>
-       <div class="single-project-item-four col-md-3" bis_skin_checked="1">
-          <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Rahul_Joshi.jpg" alt="Speaker_Rahul_Joshi">
-             <div class="hover-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <h3 class="title"><a href="javascript:void(0)">Rahul Joshi</a></h3>
-                   <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                   <p style="font-size:13px">Rahul Joshi leads transformative initiatives within Jio’s network functions, aligning closely with the digital twin concept. His role spans from curating diverse data from various network, device and infrastructure sources to crafting actionable insights that drive the development of innovative products. He spearheads automation initiatives ensuring seamless integration of data to enhance the efficiency and customer experience of India’s telecom landscape.</p>
-                </div>
-             </div>
-             <div class="project-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                </div>
-             </div>
-          </div>
-          <div class="text_for_outreach height_150" bis_skin_checked="1">
-             <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Rahul Joshi</a></p>
-             <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">AVP &amp; Lead- Analytics &amp; Automation</h5>
-             <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Reliance Jio</h4>
-          </div>
-       </div>
-       <div class="single-project-item-four col-md-3" bis_skin_checked="1">
-          <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Sasikumar_Ramachandran_Nair.jpg" alt="Speaker_Sasikumar_Ramachandran_Nair">
-             <div class="hover-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <h3 class="title"><a href="javascript:void(0)">Sasikumar Ramachandran Nair
-                      </a>
-                   </h3>
-                   <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                   <p style="font-size:13px">Sasikumar has over 25 years of experience in the field of visual computing. He is currently working as a Senior Solutions Architect for Nvidia Graphics in Bangalore. His focus areas include Accelerated Compute Infrastructure, High Performance Computing, Professional Visualization and Graphics Virtualization. He is passionate about emerging technologies and is a proud evangelist of AI and Accelerated computing.</p>
-                </div>
-             </div>
-             <div class="project-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                </div>
-             </div>
-          </div>
-          <div class="text_for_outreach height_150" bis_skin_checked="1">
-             <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Sasikumar Ramachandran Nair
-                </a>
-             </p>
-             <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Senior Solution Architect</h5>
-             <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Nvidia</h4>
-          </div>
-       </div>
-       <div class="single-project-item-four col-md-3" bis_skin_checked="1">
-          <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Sunil_Ramachandran.jpg" alt="Speaker_Sunil_Ramachandran">
-             <div class="hover-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <h3 class="title"><a href="javascript:void(0)">Sunil Ramachandran </a></h3>
-                   <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                   <p style="font-size:13px"></p>
-                </div>
-             </div>
-             <div class="project-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                </div>
-             </div>
-          </div>
-          <div class="text_for_outreach height_150" bis_skin_checked="1">
-             <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Sunil Ramachandran </a></p>
-             <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Technical Director </h5>
-             <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Oracle India Pvt. Ltd</h4>
-          </div>
-       </div>
-       <div class="single-project-item-four col-md-3" bis_skin_checked="1">
-          <div class="project-img" bis_skin_checked="1">
-             <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Yuvraj_Tomar.jpg" alt="Speaker_Yuvraj_Tomar">
-             <div class="hover-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <h3 class="title"><a href="javascript:void(0)">Yuvraj Tomar</a></h3>
-                   <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                   <p style="font-size:13px">A visionary leader in digital twin technology and enterprise metaverse, Yuvraj stands at the forefront of pioneering solutions for the future. With a rich background in IoT, 3D, and AI; Yuvraj has led numerous initiatives for his company, Cloudworx, that showcase the potential of digital twins in enhancing operational efficiency, sustainability, and strategic planning. Joining the Sangam Initiative, Yuvraj is excited to contribute expertise and insights towards shaping resilient, efficient, and interconnected infrastructure systems for tomorrow.</p>
-                </div>
-             </div>
-             <div class="project-content" bis_skin_checked="1">
-                <div class="text text-white" bis_skin_checked="1">
-                   <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                </div>
-             </div>
-          </div>
-          <div class="text_for_outreach height_150" bis_skin_checked="1">
-             <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Yuvraj Tomar</a></p>
-             <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder</h5>
-             <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">CloudWorx</h4>
-          </div>
-       </div>
-    </div>
       </div>
       <div class="custom-tab-content text-center" id="tab6" style="display: none;">
       </div>
