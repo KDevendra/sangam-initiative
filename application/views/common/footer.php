@@ -441,7 +441,7 @@
             }
 
         });
-        $('#tab1').show();
+        $('#tab2').show();
 
     // Click event for tab buttons
     $('.custom-tab-btn').click(function() {
