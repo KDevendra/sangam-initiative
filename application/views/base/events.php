@@ -1240,7 +1240,8 @@
       <div class="row justify-content-center" bis_skin_checked="1">
          <div class="col-lg-12" bis_skin_checked="1">
             <div class="section-title text-center mb-50 wow fadeInDown" bis_skin_checked="1" style="visibility: visible; animation-name: fadeInDown;">
-               <h2>Dignitaries Bangalore Outreach Program</h2>
+              <span class="sub-title"><img src="<?php echo base_url('');?>include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span>
+               <h2>Dignitaries</h2>
             </div>
          </div>
       </div>

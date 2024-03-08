@@ -442,6 +442,7 @@
 
         });
         $('#tab2').show();
+        $('#tab4').show();
 
     // Click event for tab buttons
     $('.custom-tab-btn').click(function() {
