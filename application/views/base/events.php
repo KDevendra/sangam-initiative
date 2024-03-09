@@ -1237,19 +1237,19 @@
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Meta, India</h4>
                </div>
             </div>
-            <!-- <div class="single-project-item-four col-md-3">
+            <div class="single-project-item-four col-md-3">
                <div class="project-img">
                   <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rahul_Joshi.jpg" alt="Speaker_Rahul_Joshi" />
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Rahul Joshi</a></h3>
-
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
                         <p style="font-size:13px">Rahul Joshi leads transformative initiatives within Jio’s network functions, aligning closely with the digital twin concept. His role spans from curating diverse data from various network, device and infrastructure sources to crafting actionable insights that drive the development of innovative products. He spearheads automation initiatives ensuring seamless integration of data to enhance the efficiency and customer experience of India’s telecom landscape.</p>
                      </div>
                   </div>
                   <div class="project-content">
                      <div class="text text-white">
-                      
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
                      </div>
                   </div>
                </div>
@@ -1258,7 +1258,7 @@
                   <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">AVP & Lead- Analytics & Automation</h5>
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Reliance Jio</h4>
                </div>
-            </div> -->
+            </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
                   <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rahul_Ranjan.jpg" alt="Speaker_Rahul_Ranjan" />
@@ -1588,19 +1588,19 @@
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">IUDX Programme Unit, FSID IISC</h4>
                </div>
             </div>
-            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+            <!-- <div class="single-project-item-four col-md-3" bis_skin_checked="1">
                <div class="project-img" bis_skin_checked="1">
                   <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Rahul_Joshi.jpg" alt="Speaker_Rahul_Joshi">
                   <div class="hover-content" bis_skin_checked="1">
                      <div class="text text-white" bis_skin_checked="1">
                         <h3 class="title"><a href="javascript:void(0)">Rahul Joshi</a></h3>
-                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+
                         <p style="font-size:13px">Rahul Joshi leads transformative initiatives within Jio’s network functions, aligning closely with the digital twin concept. His role spans from curating diverse data from various network, device and infrastructure sources to crafting actionable insights that drive the development of innovative products. He spearheads automation initiatives ensuring seamless integration of data to enhance the efficiency and customer experience of India’s telecom landscape.</p>
                      </div>
                   </div>
                   <div class="project-content" bis_skin_checked="1">
                      <div class="text text-white" bis_skin_checked="1">
-                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+
                      </div>
                   </div>
                </div>
@@ -1609,7 +1609,7 @@
                   <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">AVP &amp; Lead- Analytics &amp; Automation</h5>
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Reliance Jio</h4>
                </div>
-            </div>
+            </div> -->
             <div class="single-project-item-four col-md-3" bis_skin_checked="1">
                <div class="project-img" bis_skin_checked="1">
                   <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Sasikumar_Ramachandran_Nair.jpg" alt="Speaker_Sasikumar_Ramachandran_Nair">
