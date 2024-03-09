@@ -561,6 +561,44 @@
                </div>
                <div class="event_accordion-item">
                   <button id="event_accordion-button-1" aria-expanded="false">
+                  <span style="color: #27a844;">Morning 09:50 to 10:00</span>
+                  <span class="event_accordion-title">Inauguration</span>
+                  <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="event_accordion-content" bis_skin_checked="1">
+                     <div class="table-responsive" bis_skin_checked="1">
+                        <table class="table table-bordered">
+                           <thead>
+                              <tr class="text-center bg-creamy-yellow">
+                                 <th>Time</th>
+                                 <th>Duration</th>
+                                 <th>Session Name</th>
+                                 <th>Organization</th>
+                                 <th>Speaker</th>
+                              </tr>
+                           </thead>
+                           <tbody class="text-center">
+                              <tr class="bg-wzureish-white">
+                                 <td>09:50-09:55</td>
+                                 <td>5 mins</td>
+                                 <td>Welcome Address</td>
+                                 <td>Director, IIIT Bangalore</td>
+                                 <td>Dr. Debabrata Das</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>09:55-10:00</td>
+                                 <td>5 mins</td>
+                                 <td>Keynote Address</td>
+                                 <td>Director General Telecom</td>
+                                 <td>Sh. R.R. Mittar</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="event_accordion-item">
+                  <button id="event_accordion-button-1" aria-expanded="false">
                   <span style="color: #27a844;">Morning 10:00 to 10:20</span>
                   <span class="event_accordion-title">Sangam Digital Twin: <span style="font-weight: normal">Journey from Physical World to Real Time Intelligent Virtual World</span> </span>
                   <span class="icon" aria-hidden="true"></span>
@@ -570,7 +608,7 @@
                         <table class="table table-bordered">
                            <thead>
                               <tr class="text-center bg-creamy-yellow">
-                                 <!-- <th>Time</th> -->
+                                 <th>Time</th>
                                  <th>Duration</th>
                                  <th>Session Name</th>
                                  <th>Organization</th>
@@ -579,7 +617,7 @@
                            </thead>
                            <tbody class="text-center">
                               <tr class="bg-wzureish-white">
-                                 <!-- <td>10:00-10:20 </td> -->
+                                 <td>10:00-10:20 </td>
                                  <td>20 mins</td>
                                  <td colspan="1"><b>Overview of Sangam:</b> Digital Twin Initiative </td>
                                  <td>DoT</td>
@@ -592,7 +630,7 @@
                </div>
                <div class="event_accordion-item">
                   <button id="event_accordion-button-2" aria-expanded="false">
-                  <span style="color: #27a844;">Forenoon 10:20 to 11:35</span>
+                  <span style="color: #27a844;">Forenoon 10:20 to 11:20</span>
                   <span class="event_accordion-title">Group 1</span>
                   <span class="icon" aria-hidden="true"></span>
                   </button>
@@ -601,7 +639,7 @@
                         <table class="table table-bordered">
                            <thead>
                               <tr class="text-center bg-creamy-yellow">
-                                 <!-- <th>Time</th> -->
+                                 <th>Time</th>
                                  <th>Duration</th>
                                  <th>Session Name</th>
                                  <th>Organization</th>
@@ -610,32 +648,30 @@
                            </thead>
                            <tbody class="text-center">
                               <tr class="bg-wzureish-white">
-                                 <!-- <td></td> -->
+                                 <td>10:20-10:35</td>
                                  <td>15 mins</td>
-                                 <td><b>Geospatial Mastery:</b> Refining Digital Detail for Superior Utility</td>
-                                 <td>Lepton</td>
-                                 <td>Sh. Rajeev Saraf</td>
+                                 <td><b>From Insight-Impact:</b> Design Thinking Realized with Generative AI and Digital Twins</td>
+                                 <td>Meta Autovrse</td>
+                                 <td>Mr. Sunil P. Abraham <br>Sh. Ashwin Jaishanker </td>
                               </tr>
                               <tr class="bg-wzureish-white">
-                                 <!-- <td></td> -->
+                                 <td>10:35-10:50</td>
                                  <td> 15 mins</td>
-                                 <td><b>Geospatial Mastery:</b> Design Thinking Realized with Generative AI and Digital Twins</td>
+                                 <td><b>From Insight-Impact:</b> Design Thinking Realized with Generative AI and Digital Twins</td>
                                  <td>Fabrik</td>
-                                 <td>Sh. Puneet Badrinath</td>
+                                 <td> Mr. Puneet Badrinath</td>
                               </tr>
                               <tr class="bg-wzureish-white">
-                                 <!-- <td></td> -->
+                                 <td>10:50-11:05</td>
                                  <td>15 mins</td>
-                                 <td><b>Environmental Insights:</b> Harnessing Environmental Data into Digital Twins</td>
-                                 <td>Airshed</td>
-                                 <td>Sh. Dhirendra Singh</td>
+                                 <td>Optimised Policy Enforcement with Digital Twin using telecom KPIs</td>
+                                 <td>Samsung</td>
+                                 <td>Mr. Kartikeyan</td>
                               </tr>
-                              <tr class="bg-wzureish-white">
-                                 <!-- <td></td> -->
+                              <tr class="bg-misty-gray">
+                                 <td>11:05-11:20</td>
                                  <td>15 mins</td>
-                                 <td>Providing Platform and Solutions for Virtual World</td>
-                                 <td>Samsung Research Institue</td>
-                                 <td>Sh. Kartikeyan</td>
+                                 <td colspan="4">Questions And Answers</td>
                               </tr>
                            </tbody>
                         </table>
@@ -644,7 +680,7 @@
                </div>
                <div class="event_accordion-item">
                   <button id="event_accordion-button-2" aria-expanded="false">
-                  <span style="color: #27a844;">Forenoon 11:35 to 12:50</span>
+                  <span style="color: #27a844;">Forenoon 11:20 to 12:35</span>
                   <span class="event_accordion-title">Group 2</span>
                   <span class="icon" aria-hidden="true"></span>
                   </button>
@@ -653,7 +689,7 @@
                         <table class="table table-bordered">
                            <thead>
                               <tr class="text-center bg-creamy-yellow">
-                                 <!-- <th>Time</th> -->
+                                 <th>Time</th>
                                  <th>Duration</th>
                                  <th>Session Name</th>
                                  <th>Organization</th>
@@ -662,42 +698,42 @@
                            </thead>
                            <tbody class="text-center">
                               <tr class="bg-wzureish-white">
-                                 <!-- <td></td> -->
+                                 <td>11:20-11:35</td>
                                  <td>15 mins</td>
                                  <td><b>Digital Twins:</b> Pioneering Smart Infrastructure</td>
                                  <td>Nokia Bell Labs</td>
                                  <td>Mr. Elangovan Manickam </td>
                               </tr>
                               <tr class="bg-wzureish-white">
-                                 <!-- <td></td> -->
+                                 <td>11:35-11:50</td>
                                  <td>15 mins</td>
-                                 <td><b>From Insight-Impact:</b> Design Thinking Realized with Generative AI and Digital Twins</td>
-                                 <td>Meta + Autovrse</td>
-                                 <td>Sh. Ankit Dhadda</td>
+                                 <td><b>Environmental Insights:</b> Harnessing Environmental Data into Digital Twins </td>
+                                 <td>Airshed</td>
+                                 <td>Mr. Dhirendra Singh</td>
                               </tr>
                               <tr class="bg-wzureish-white">
-                                 <!-- <td></td> -->
+                                 <td>11:50-12:05</td>
                                  <td>15 mins</td>
                                  <td ><b>Mobility Insights:</b> The Role of Telecom Data in Digital Twin Dynamics</td>
-                                 <td>Reliance Jio</td>
-                                 <td>Sh. Rahul Joshi</td>
+                                 <td>Airtel</td>
+                                 <td>Mr. Pulin Pathneja</td>
                               </tr>
                               <tr class="bg-wzureish-white">
-                                 <!-- <td></td> -->
+                                 <td>12:05-12:20</td>
                                  <td>15 mins</td>
-                                 <td> <b>Providing Platform for Virtual World
+                                 <td> <b>Privacy Enhacing Technologies
                                     </b>
                                  </td>
                                  <td>Oracle</td>
-                                 <td>Ms. Manju Pande</td>
+                                 <td>Mr. Prasad Kulkarni</td>
                               </tr>
                               <tr class="bg-misty-gray">
-                                 <!-- <td></td> -->
+                                 <td>12:20-12:35</td>
                                  <td>15 mins</td>
                                  <td colspan="3">Questions And Answers</td>
                               </tr>
                               <tr class="bg-fresh-mint">
-                                 <!-- <td>12:50-13:35</td> -->
+                                 <td>12:35-13:20</td>
                                  <td>45 mins</td>
                                  <td colspan="3">Lunch Break</td>
                               </tr>
@@ -708,7 +744,7 @@
                </div>
                <div class="event_accordion-item">
                   <button id="event_accordion-button-3" aria-expanded="false">
-                  <span style="color: #27a844;">Afternoon 13:35 to 14:35</span>
+                  <span style="color: #27a844;">Afternoon 13:20 to 14:35</span>
                   <span class="event_accordion-title">Group 3</span>
                   <span class="icon" aria-hidden="true"></span>
                   </button>
@@ -717,7 +753,7 @@
                         <table class="table table-bordered">
                            <thead>
                               <tr class="text-center bg-creamy-yellow">
-                                 <!-- <th>Time</th> -->
+                                 <th>Time</th>
                                  <th>Duration</th>
                                  <th>Session Name</th>
                                  <th>Organization</th>
@@ -725,29 +761,36 @@
                               </tr>
                            </thead>
                            <tbody class="text-center">
+                             <tr class="bg-wzureish-white">
+                                <td>13:20-13:35 </td>
+                                <td>15 mins </td>
+                                <td><b>Geospatial Journey:</b> Coming age of Digital Twin</td>
+                                <td>Lepton</td>
+                                <td>Mr. Rajeev Saraf</td>
+                             </tr>
                               <tr class="bg-wzureish-white">
-                                 <!-- <td></td> -->
+                                 <td>13:35-13:50</td>
                                  <td>15 mins </td>
                                  <td><b>Road Traffic Insights:</b> Integrating Road Traffic Data into Digital Twins</td>
                                  <td>Cloudworx</td>
                                  <td>Sh. Yuvraj Tomar</td>
                               </tr>
                               <tr class="bg-wzureish-white">
-                                 <!-- <td></td> -->
+                                 <td>13:50-14:05</td>
                                  <td>15 mins</td>
                                  <td>IUDX (India Urban Data Exchange)</td>
                                  <td>IISc Bangalore</td>
                                  <td>Mr. Raghu Krishnapuram</td>
                               </tr>
                               <tr class="bg-wzureish-white">
-                                 <!-- <td></td> -->
+                                 <td>14:05-14:20</td>
                                  <td>15 mins </td>
                                  <td><b>Platform for creating Digital Twin:</b> Bridging distances, avatars facilitate collaborative planning and design, fostering collective creativity.</td>
                                  <td>Nvidia</td>
                                  <td>Mr. S. Sasikumar Ramchandran Nair</td>
                               </tr>
                               <tr class="bg-misty-gray">
-                                 <!-- <td></td> -->
+                                 <td>14:20-14:35</td>
                                  <td>15 mins</td>
                                  <td colspan="3">Questions And Answers</td>
                               </tr>
@@ -756,9 +799,9 @@
                      </div>
                   </div>
                </div>
-               <div class="event_accordion-item" >
+               <div class="event_accordion-item">
                   <button id="event_accordion-button-3" aria-expanded="false">
-                  <span style="color: #27a844;">Afternoon 14:35 to 16:00</span>
+                  <span style="color: #27a844;">Afternoon 14:35 to 15:15</span>
                   <span class="event_accordion-title">Industry Panel Discussion </span>
                   <span class="icon" aria-hidden="true"></span>
                   </button>
@@ -767,7 +810,7 @@
                         <table class="table table-bordered">
                            <thead>
                               <tr class="text-center bg-creamy-yellow">
-                                 <!-- <th>Time</th> -->
+                                 <th>Time</th>
                                  <th>Duration</th>
                                  <th>Session Name</th>
                                  <th>Organization</th>
@@ -776,13 +819,13 @@
                            </thead>
                            <tbody class="text-center">
                               <tr class="bg-wzureish-white">
-                                 <!-- <td>14:35-15:15</td> -->
+                                 <td>14:35-15:15</td>
                                  <td>40 mins</td>
-                                 <td colspan="2"><b>Infrastructure planning:</b> Pioneering solutions for tomorrow </td>
+                                 <td colspan="2"><b>Industry Panel Discussion </td>
                                  <td>Senior level management from industry</td>
                               </tr>
                               <tr class="bg-fresh-mint">
-                                 <!-- <td>15:15-16:00 </td> -->
+                                 <td>15:15-16:00 </td>
                                  <td>45 mins</td>
                                  <td colspan="3">High Tea + Netwroking		</td>
                               </tr>
@@ -793,8 +836,8 @@
                </div>
                <div class="event_accordion-item" style="border-bottom: 2px solid #3d3d99;">
                   <button id="event_accordion-button-3" aria-expanded="false">
-                  <span style="color: #27a844;">Evening 16:00 to 17:00</span>
-                  <span class="event_accordion-title">Sangam Dialogue</span>
+                  <span style="color: #27a844;">Afternoon 16:00 to 17:00</span>
+                  <span class="event_accordion-title">Leadership Perspectives : <span style="font-weight: normal">Steering Sangam Towards Transformative Success</span> </span>
                   <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
@@ -802,7 +845,7 @@
                         <table class="table table-bordered">
                            <thead>
                               <tr class="text-center bg-creamy-yellow">
-                                 <!-- <th>Time</th> -->
+                                 <th>Time</th>
                                  <th>Duration</th>
                                  <th>Session Name</th>
                                  <th>Organization</th>
@@ -811,20 +854,59 @@
                            </thead>
                            <tbody class="text-center">
                               <tr class="bg-wzureish-white">
-                                 <!-- <td>16:00-17:00</td> -->
-                                 <td>1 hr</td>
-                                 <td><b>Sangam Dialogue:</b> Role of technology to achieve the Vision 2047</td>
-                                 <td>CEO Niti Aayog, <br>
-                                    Secretary Telecom DoT, <br>
-                                    Director IIIT Bangalore, <br>
-                                    Leaders from industry
-                                 </td>
-                                 <td>
-                                    Sh. BVR Subhramanya, <br>
-                                    Dr. Neeraj Mittal, <br>
-                                    Dr. Debabrata Das
-                                 </td>
+                                 <td>16:00-16:05</td>
+                                 <td>5 mins</td>
+                                 <td>Welcome of dignitaries to the dias </td>
+                                 <td colspan="2">DoT</td>
                               </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>16:05-16:10</td>
+                                 <td>5 mins</td>
+                                 <td>Perspective from industry leaders </td>
+                                 <td>Oracle</td>
+                                 <td>Srinivasulu Narayanaswamy, Head of CoE</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>16:10-16:15</td>
+                                 <td>5 mins</td>
+                                 <td>Perspective from industry leaders</td>
+                                 <td>Eros Investment</td>
+                                 <td>Ali Hussein, CEO </td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>16:15-16:20</td>
+                                 <td>5 mins</td>
+                                 <td>Perspective from industry leaders</td>
+                                 <td>Microsoft</td>
+                                 <td>Rohini Srivasta, CTO</td>
+                              </tr>
+                              <tr class="bg-creamy-yellow">
+                                 <td>16:20-16:30</td>
+                                 <td>10 mins</td>
+                                 <td>Special Address</td>
+                                 <td>Secretary (Telecom)</td>
+                                 <td>Dr. Neeraj Mittal</td>
+                              </tr>
+                              <tr class="bg-creamy-yellow">
+                                 <td>16:30-16:40</td>
+                                 <td>10 mins</td>
+                                 <td>Keynote Address</td>
+                                 <td>CEO NITI Aayog</td>
+                                 <td>Sh. BVR Subrahmanyam</td>
+                              </tr>
+                              <tr class="bg-misty-gray">
+                                 <td>16:40-16:55</td>
+                                 <td>15 mins</td>
+                                 <td colspan="3">Questions And Answers</td>
+                              </tr>
+                              <tr class="bg-creamy-yellow">
+                                 <td>16:55-17:00</td>
+                                 <td>5 mins</td>
+                                 <td>Vote of Thanks</td>
+                                 <td>ADG, DoT</td>
+                                 <td>Sh. Naveen Jakhar</td>
+                              </tr>
+
                            </tbody>
                         </table>
                      </div>
@@ -1155,19 +1237,19 @@
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Meta, India</h4>
                </div>
             </div>
-            <div class="single-project-item-four col-md-3">
+            <!-- <div class="single-project-item-four col-md-3">
                <div class="project-img">
                   <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rahul_Joshi.jpg" alt="Speaker_Rahul_Joshi" />
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Rahul Joshi</a></h3>
-                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+
                         <p style="font-size:13px">Rahul Joshi leads transformative initiatives within Jio’s network functions, aligning closely with the digital twin concept. His role spans from curating diverse data from various network, device and infrastructure sources to crafting actionable insights that drive the development of innovative products. He spearheads automation initiatives ensuring seamless integration of data to enhance the efficiency and customer experience of India’s telecom landscape.</p>
                      </div>
                   </div>
                   <div class="project-content">
                      <div class="text text-white">
-                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                      
                      </div>
                   </div>
                </div>
@@ -1176,7 +1258,7 @@
                   <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">AVP & Lead- Analytics & Automation</h5>
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Reliance Jio</h4>
                </div>
-            </div>
+            </div> -->
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
                   <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rahul_Ranjan.jpg" alt="Speaker_Rahul_Ranjan" />
@@ -1355,12 +1437,12 @@
             </div>
             <div class="single-project-item-four col-md-3" bis_skin_checked="1">
                <div class="project-img" bis_skin_checked="1">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Karthikeyan_Kumaraguru.jpg" alt="Speaker_Karthikeyan_Kumaraguru">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Elangovan_Manickam.jpg" alt="Speaker_Elangovan_Manickam">
                   <div class="hover-content" bis_skin_checked="1">
                      <div class="text text-white" bis_skin_checked="1">
-                        <h3 class="title"><a href="javascript:void(0)">Karthikeyan Kumaraguru</a></h3>
+                        <h3 class="title"><a href="javascript:void(0)">Elangovan Manickam </a></h3>
                         <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                        <p style="font-size:13px">Karthikeyan is a visionary leader with a proven track record in building 10+ cutting-edge platforms and engines, leveraging Big-Data and micro-services stack. With expertise in Big-Data Analytics, he has spearheaded the development of innovative solutions such as Customer Data Platforms, ML Platforms, and Automated Personalization Engines. His contributions include Retargeting Platforms, CRM Online Models, Recommendation Systems, and Anomaly Detection Solutions, enhancing user experience across various channels. Additionally, Karthikeyan has played a pivotal role in Cloud Platform development, overseeing projects like the Samsung Search System, Firmware Over the Air Platform, and Global Diagnostic Monitoring for Samsung phones.</p>
+                        <p style="font-size:13px">Mr Elangovan has around 28 years of IT experience in which 24 years of experience is in telecom. He is with Nokia since last 17 years. He is currently handling research activity in Nokia Bell Labs, metaverse team, Robot mobile orchestration and Digital twin project. He has strong background in telecom core, telecom application and databases technologies. He authored multiple IPR Initiating the new feature and products.</p>
                      </div>
                   </div>
                   <div class="project-content" bis_skin_checked="1">
@@ -1370,11 +1452,32 @@
                   </div>
                </div>
                <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Elangovan Manickam </a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Nokia Bell Labs Space  </h5>
+               </div>
+            </div>
+            <!-- <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Karthikeyan_Kumaraguru.jpg" alt="Speaker_Karthikeyan_Kumaraguru">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Karthikeyan Kumaraguru</a></h3>
+
+                        <p style="font-size:13px">Karthikeyan is a visionary leader with a proven track record in building 10+ cutting-edge platforms and engines, leveraging Big-Data and micro-services stack. With expertise in Big-Data Analytics, he has spearheaded the development of innovative solutions such as Customer Data Platforms, ML Platforms, and Automated Personalization Engines. His contributions include Retargeting Platforms, CRM Online Models, Recommendation Systems, and Anomaly Detection Solutions, enhancing user experience across various channels. Additionally, Karthikeyan has played a pivotal role in Cloud Platform development, overseeing projects like the Samsung Search System, Firmware Over the Air Platform, and Global Diagnostic Monitoring for Samsung phones.</p>
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
                   <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Karthikeyan Kumaraguru</a></p>
                   <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Sr. Director - Big Data and Analytics </h5>
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Samsung Electronics</h4>
                </div>
-            </div>
+            </div> -->
             <div class="single-project-item-four col-md-3" bis_skin_checked="1">
                <div class="project-img" bis_skin_checked="1">
                   <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Puneet_Badrinath.jpg" alt="Speaker_Puneet_Badrinath">
@@ -1395,6 +1498,50 @@
                   <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Puneet Badrinath</a></p>
                   <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder &amp; CEO</h5>
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Fabrik Space</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Pulin_Pathneja.png" alt="Speaker_Pulin_Pathneja">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Pulin Pathneja </a></h3>
+                        <p style="font-size:13px">Mr Pulin is leading Airtel's Network Data Lake and CLM projects. He has 18 years of industry experience, and his team, consisting of Data Engineers and Data Scientists, is dedicated to devising effective solutions for enhancing network performance and customer experience and helping Airtel to make data-driven decisions.</p>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Pulin Pathneja </a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">AVP</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Airtel</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Prasad_Kulkarni.jpg" alt="Speaker_Prasad_Kulkarni">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Prasad Kulkarni </a></h3>
+                        <p style="font-size:13px">He is Principal Technology Cloud Specialist. He has rich background in software product development and IT consulting and bring a wealth of expertise to Oracle. His career is marked by a proven track record of successfully spearheading the creation and implementation of innovative Software as a Service (SAAS) products. These initiatives have not only demonstrated technical excellence but have also translated into substantial revenue generation for Oracle, amounting to millions of dollars.</p>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Prasad Kulkarni </a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Vice President </h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Oracle</h4>
                </div>
             </div>
             <div class="single-project-item-four col-md-3" bis_skin_checked="1">
@@ -1513,6 +1660,28 @@
             </div>
             <div class="single-project-item-four col-md-3" bis_skin_checked="1">
                <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Sunil_Abraham.jpg" alt="Speaker_Sunil_Abraham">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Sunil Abraham </a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">An executive, entrepreneur and researcher with 24 years of experience working in the ICT4D and policy research sectors. Serial institution builder who has cofounded two organisations - Mahiti Infotech in 1998 and Centre for Internet and Society in 2008.</p>
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Sunil Abraham </a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Public Policy Director </h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Meta</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
                   <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Yuvraj_Tomar.jpg" alt="Speaker_Yuvraj_Tomar">
                   <div class="hover-content" bis_skin_checked="1">
                      <div class="text text-white" bis_skin_checked="1">
@@ -1542,6 +1711,107 @@
       </div>
    </div>
 </section>
+<section>
+  <div class="container" bis_skin_checked="1">
+     <div class="row justify-content-center" bis_skin_checked="1">
+        <div class="col-lg-12" bis_skin_checked="1">
+           <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;" bis_skin_checked="1">
+              <h2>Panel</h2>
+           </div>
+        </div>
+     </div>
+     <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+           <div class="project-img" bis_skin_checked="1">
+              <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Dr_Aniruddha_Roy.jpg" alt="Speaker_Dr_Aniruddha_Roy">
+              <div class="hover-content" bis_skin_checked="1">
+                 <div class="text text-white" bis_skin_checked="1">
+                    <h3 class="title"><a href="javascript:void(0)">Anirudha Roy</a></h3>
+                    <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                    <p style="font-size:13px">Dr. Roy spearheaded Delhi State Spatial Data Infrastructure ( DSSDI) and National Spatial Data Infrastructure ( NSDI)  projects. He also served as Technical head of ESRI India and  Project Scientist  at CSRE, IIT Bombay. He has done his PhD in Environmental Science and Engg. He is currently volunteering as a member in FICCI National Space and Geospatial committee and as a technical member of ‘Geospatial Committee - LITD22 ' of  BIS.</p>
+                 </div>
+              </div>
+              <div class="project-content" bis_skin_checked="1">
+                 <div class="text text-white" bis_skin_checked="1">
+                    <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                 </div>
+              </div>
+           </div>
+           <div class="text_for_outreach height_150" bis_skin_checked="1">
+              <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Anirudha Roy</a></p>
+              <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CTO</h5>
+              <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Genesys</h4>
+           </div>
+        </div>
+        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+           <div class="project-img" bis_skin_checked="1">
+              <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Ananth_Sampath.jpg" alt="Speaker_Ananth_Sampath">
+              <div class="hover-content" bis_skin_checked="1">
+                 <div class="text text-white" bis_skin_checked="1">
+                    <h3 class="title"><a href="javascript:void(0)">Ananth Sampath</a></h3>
+                    <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                    <p style="font-size:13px">Mr Ananth has spent 27 years in the Information technology industry. In this tenure, he has been working with customers in different industry segments like Consumer Products, Manufacturing, IT & ES, Telecom and Public Sector. This involves solving some of the customer's problems with Solution selling, Application Software, Platform software and IT infrastructure products with a good understanding of IT Services.</p>
+                 </div>
+              </div>
+              <div class="project-content" bis_skin_checked="1">
+                 <div class="text text-white" bis_skin_checked="1">
+                    <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                 </div>
+              </div>
+           </div>
+           <div class="text_for_outreach height_150" bis_skin_checked="1">
+              <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Ananth Sampath</a></p>
+              <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director </h5>
+                <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Siemens</h4>
+           </div>
+        </div>
+        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+           <div class="project-img" bis_skin_checked="1">
+              <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Karthikeyan_Subramaniam.jpg" alt="Speaker_Karthikeyan_Subramaniam">
+              <div class="hover-content" bis_skin_checked="1">
+                 <div class="text text-white" bis_skin_checked="1">
+                    <h3 class="title"><a href="javascript:void(0)">Karthikeyan Subramaniam</a></h3>
+                    <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                    <p style="font-size:13px">Mr Karthikeyan Subramaniam has been working in Telecommunication Systems for two decades. His primary interest has been Research and Development of managing 4G and 5G system. He is currently managing 10+ global operators as Business Head of Management SW Group, Samsung Research Institute, Bengaluru, India. He is also involved in driving operational efficiency for solutiondeployments that is also published in 3GPP SA5 standards.</p>
+                 </div>
+              </div>
+              <div class="project-content" bis_skin_checked="1">
+                 <div class="text text-white" bis_skin_checked="1">
+                    <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                 </div>
+              </div>
+           </div>
+           <div class="text_for_outreach height_150" bis_skin_checked="1">
+              <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Karthikeyan Subramaniam</a></p>
+              <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Business Head </h5>
+              <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Samsung</h4>
+           </div>
+        </div>
+        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+           <div class="project-img" bis_skin_checked="1">
+              <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Kartik_Raja.jpg" alt="Speaker_Kartik_Raja">
+              <div class="hover-content" bis_skin_checked="1">
+                 <div class="text text-white" bis_skin_checked="1">
+                    <h3 class="title"><a href="javascript:void(0)">Kartik Raja</a></h3>
+                    <p style="font-size:13px">Mr Kartik Raja is helping Companies achieve error-free Digital Experience Synthetic Testing & Diagnostic Platform As A Service. He has over 2 decades of experience. He has also founded PhiMetrics and RedPill solutions. He has worked as consultant with HP and Arthur D. Little. </p>
+                    <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                 </div>
+              </div>
+              <div class="project-content" bis_skin_checked="1">
+                 <div class="text text-white" bis_skin_checked="1">
+                    <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                 </div>
+              </div>
+           </div>
+           <div class="text_for_outreach height_150" bis_skin_checked="1">
+              <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Kartik Raja</a></p>
+              <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder</h5>
+              <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Mozark</h4>
+           </div>
+        </div>
+     </div>
+  </div>
+  </section>
 <script>
    const items = document.querySelectorAll(".event_accordion button");
    function toggleevent_accordion() {
