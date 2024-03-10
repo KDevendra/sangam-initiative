@@ -177,6 +177,7 @@
                            <!-- <img src="<?php echo base_url('') ?>include/web/custom/Department_Of_Telecommunications.png" alt="<?php echo base_url(''); ?>"> -->
                            <img src="<?php echo base_url('') ?>include/web/custom/g20-logo.png" alt="<?php echo base_url(''); ?>">
                            <img src="<?php echo base_url('') ?>include/web/custom/azadi-mahotsav.png" alt="<?php echo base_url(''); ?>">
+                            <img src="<?php echo base_url('') ?>include/web/custom/tcoe.png" alt="<?php echo base_url(''); ?>">
                         </div>
                      </div>
                   </div>
@@ -255,17 +256,17 @@
                         </ul>
                      </nav>
                      <div class="menu-button mt-40 d-xl-none text-center">
-                        <a href="https://www.youtube.com/live/xDDH7UzCgoo?si=C3a7BQqI-LFi3qxp" class="youtube-live-button blink-text" target="_blank"><img src="<?php echo base_url('');?>include/web/custom/youtube_live.png"></a>
+                        <!-- <a href="" class="youtube-live-button blink-text" target="_blank"><img src="<?php echo base_url('');?>include/web/custom/youtube_live.png"></a> -->
                         <a href="<?php echo base_url('get-involved') ?>" class="main-btn primary-btn">Get involved</a>
-                        <!-- <a href="<?php echo base_url('living-list') ?>" class="main-btn primary-btn mb-10">Living List</a> -->
+                        <a href="<?php echo base_url('living-list') ?>" class="main-btn primary-btn mb-10">Living List</a>
                         <a href="<?php echo base_url('registration') ?>" class="main-btn secondary-btn mb-10 "><span class="">Register for Event</span></a>
                      </div>
                   </div>
                   <div class="nav-right-item">
                      <div class="menu-button d-xl-block d-none">
-                        <a href="https://www.youtube.com/live/xDDH7UzCgoo?si=C3a7BQqI-LFi3qxp" class="youtube-live-button blink-text" target="_blank"><img src="<?php echo base_url('');?>include/web/custom/youtube_live.png"></a>
+                        <!-- <a href="" class="youtube-live-button blink-text" target="_blank"><img src="<?php echo base_url('');?>include/web/custom/youtube_live.png"></a> -->
                         <a href="<?php echo base_url('get-involved') ?>" class="main-btn primary-btn">Get involved</a>
-                        <!-- <a href="<?php echo base_url('living-list') ?>" class="main-btn primary-btn">Living List</a> -->
+                        <a href="<?php echo base_url('living-list') ?>" class="main-btn primary-btn">Living List</a>
                         <a href="<?php echo base_url('registration') ?>" class="main-btn primary-btn "><span class="">Register for Event</span></a>
                      </div>
                      <!-- <div class="bar-button" data-toggle="modal" data-target="#sidebar-modal">

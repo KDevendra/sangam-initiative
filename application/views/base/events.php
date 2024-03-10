@@ -67,7 +67,7 @@
                <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 9th March 2024</h4>
                <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 8th March 2024</p>
                <div class="d-flex justify-content-center">
-                  <a class="btn btn-danger text-white mt-20" href="<?php echo base_url('registration')?>">Register Now</a>
+                  <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a>
                </div>
             </div>
          </div>
@@ -1703,6 +1703,101 @@
                </div>
             </div>
          </div>
+         <div class="col-lg-12" bis_skin_checked="1">
+            <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;" bis_skin_checked="1">
+               <h2>Panel</h2>
+            </div>
+         </div>
+         <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Dr_Aniruddha_Roy.jpg" alt="Speaker_Dr_Aniruddha_Roy">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Anirudha Roy</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Dr. Roy spearheaded Delhi State Spatial Data Infrastructure ( DSSDI) and National Spatial Data Infrastructure ( NSDI)  projects. He also served as Technical head of ESRI India and  Project Scientist  at CSRE, IIT Bombay. He has done his PhD in Environmental Science and Engg. He is currently volunteering as a member in FICCI National Space and Geospatial committee and as a technical member of ‘Geospatial Committee - LITD22 ' of  BIS.</p>
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Anirudha Roy</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CTO</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Genesys</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Ananth_Sampath.jpg" alt="Speaker_Ananth_Sampath">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Ananth Sampath</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Mr Ananth has spent 27 years in the Information technology industry. In this tenure, he has been working with customers in different industry segments like Consumer Products, Manufacturing, IT & ES, Telecom and Public Sector. This involves solving some of the customer's problems with Solution selling, Application Software, Platform software and IT infrastructure products with a good understanding of IT Services.</p>
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Ananth Sampath</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director </h5>
+                    <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Siemens</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Karthikeyan_Subramaniam.jpg" alt="Speaker_Karthikeyan_Subramaniam">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Karthikeyan Subramaniam</a></h3>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                        <p style="font-size:13px">Mr Karthikeyan Subramaniam has been working in Telecommunication Systems for two decades. His primary interest has been Research and Development of managing 4G and 5G system. He is currently managing 10+ global operators as Business Head of Management SW Group, Samsung Research Institute, Bengaluru, India. He is also involved in driving operational efficiency for solutiondeployments that is also published in 3GPP SA5 standards.</p>
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Karthikeyan Subramaniam</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Business Head </h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Samsung</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3" bis_skin_checked="1">
+               <div class="project-img" bis_skin_checked="1">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Kartik_Raja.jpg" alt="Speaker_Kartik_Raja">
+                  <div class="hover-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <h3 class="title"><a href="javascript:void(0)">Kartik Raja</a></h3>
+                        <p style="font-size:13px">Mr Kartik Raja is helping Companies achieve error-free Digital Experience Synthetic Testing & Diagnostic Platform As A Service. He has over 2 decades of experience. He has also founded PhiMetrics and RedPill solutions. He has worked as consultant with HP and Arthur D. Little. </p>
+                        <!-- <h5>Senior Manager, Presales Consulting</h5> -->
+                     </div>
+                  </div>
+                  <div class="project-content" bis_skin_checked="1">
+                     <div class="text text-white" bis_skin_checked="1">
+                        <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150" bis_skin_checked="1">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Kartik Raja</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Mozark</h4>
+               </div>
+            </div>
+         </div>
       </div>
       <div class="custom-tab1-content text-center" id="tab6" style="display: none;">
          <h4 class="text-center">
@@ -1711,107 +1806,6 @@
       </div>
    </div>
 </section>
-<section>
-  <div class="container" bis_skin_checked="1">
-     <div class="row justify-content-center" bis_skin_checked="1">
-        <div class="col-lg-12" bis_skin_checked="1">
-           <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;" bis_skin_checked="1">
-              <h2>Panel</h2>
-           </div>
-        </div>
-     </div>
-     <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s" bis_skin_checked="1" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
-           <div class="project-img" bis_skin_checked="1">
-              <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Dr_Aniruddha_Roy.jpg" alt="Speaker_Dr_Aniruddha_Roy">
-              <div class="hover-content" bis_skin_checked="1">
-                 <div class="text text-white" bis_skin_checked="1">
-                    <h3 class="title"><a href="javascript:void(0)">Anirudha Roy</a></h3>
-                    <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                    <p style="font-size:13px">Dr. Roy spearheaded Delhi State Spatial Data Infrastructure ( DSSDI) and National Spatial Data Infrastructure ( NSDI)  projects. He also served as Technical head of ESRI India and  Project Scientist  at CSRE, IIT Bombay. He has done his PhD in Environmental Science and Engg. He is currently volunteering as a member in FICCI National Space and Geospatial committee and as a technical member of ‘Geospatial Committee - LITD22 ' of  BIS.</p>
-                 </div>
-              </div>
-              <div class="project-content" bis_skin_checked="1">
-                 <div class="text text-white" bis_skin_checked="1">
-                    <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                 </div>
-              </div>
-           </div>
-           <div class="text_for_outreach height_150" bis_skin_checked="1">
-              <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Anirudha Roy</a></p>
-              <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CTO</h5>
-              <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Genesys</h4>
-           </div>
-        </div>
-        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
-           <div class="project-img" bis_skin_checked="1">
-              <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Ananth_Sampath.jpg" alt="Speaker_Ananth_Sampath">
-              <div class="hover-content" bis_skin_checked="1">
-                 <div class="text text-white" bis_skin_checked="1">
-                    <h3 class="title"><a href="javascript:void(0)">Ananth Sampath</a></h3>
-                    <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                    <p style="font-size:13px">Mr Ananth has spent 27 years in the Information technology industry. In this tenure, he has been working with customers in different industry segments like Consumer Products, Manufacturing, IT & ES, Telecom and Public Sector. This involves solving some of the customer's problems with Solution selling, Application Software, Platform software and IT infrastructure products with a good understanding of IT Services.</p>
-                 </div>
-              </div>
-              <div class="project-content" bis_skin_checked="1">
-                 <div class="text text-white" bis_skin_checked="1">
-                    <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                 </div>
-              </div>
-           </div>
-           <div class="text_for_outreach height_150" bis_skin_checked="1">
-              <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Ananth Sampath</a></p>
-              <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director </h5>
-                <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Siemens</h4>
-           </div>
-        </div>
-        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
-           <div class="project-img" bis_skin_checked="1">
-              <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Karthikeyan_Subramaniam.jpg" alt="Speaker_Karthikeyan_Subramaniam">
-              <div class="hover-content" bis_skin_checked="1">
-                 <div class="text text-white" bis_skin_checked="1">
-                    <h3 class="title"><a href="javascript:void(0)">Karthikeyan Subramaniam</a></h3>
-                    <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                    <p style="font-size:13px">Mr Karthikeyan Subramaniam has been working in Telecommunication Systems for two decades. His primary interest has been Research and Development of managing 4G and 5G system. He is currently managing 10+ global operators as Business Head of Management SW Group, Samsung Research Institute, Bengaluru, India. He is also involved in driving operational efficiency for solutiondeployments that is also published in 3GPP SA5 standards.</p>
-                 </div>
-              </div>
-              <div class="project-content" bis_skin_checked="1">
-                 <div class="text text-white" bis_skin_checked="1">
-                    <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                 </div>
-              </div>
-           </div>
-           <div class="text_for_outreach height_150" bis_skin_checked="1">
-              <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Karthikeyan Subramaniam</a></p>
-              <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Business Head </h5>
-              <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Samsung</h4>
-           </div>
-        </div>
-        <div class="single-project-item-four col-md-3" bis_skin_checked="1">
-           <div class="project-img" bis_skin_checked="1">
-              <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Kartik_Raja.jpg" alt="Speaker_Kartik_Raja">
-              <div class="hover-content" bis_skin_checked="1">
-                 <div class="text text-white" bis_skin_checked="1">
-                    <h3 class="title"><a href="javascript:void(0)">Kartik Raja</a></h3>
-                    <p style="font-size:13px">Mr Kartik Raja is helping Companies achieve error-free Digital Experience Synthetic Testing & Diagnostic Platform As A Service. He has over 2 decades of experience. He has also founded PhiMetrics and RedPill solutions. He has worked as consultant with HP and Arthur D. Little. </p>
-                    <!-- <h5>Senior Manager, Presales Consulting</h5> -->
-                 </div>
-              </div>
-              <div class="project-content" bis_skin_checked="1">
-                 <div class="text text-white" bis_skin_checked="1">
-                    <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
-                 </div>
-              </div>
-           </div>
-           <div class="text_for_outreach height_150" bis_skin_checked="1">
-              <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Kartik Raja</a></p>
-              <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder</h5>
-              <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Mozark</h4>
-           </div>
-        </div>
-     </div>
-  </div>
-  </section>
 <script>
    const items = document.querySelectorAll(".event_accordion button");
    function toggleevent_accordion() {
