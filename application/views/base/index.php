@@ -1,4 +1,5 @@
 <?php include_once __DIR__ . '/../common/header.php'; ?>
+
 <section class="banner-section mt__150">
    <video autoplay muted loop id="bgVideo">
       <source src="<?php echo base_url('') ?>include/web/custom/bg_video.mp4" type="video/mp4" />

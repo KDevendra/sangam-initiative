@@ -446,7 +446,7 @@
             }
 
         });
-        $('#tab2, #tab5').show();
+        $('#tab3, #tab6').show();
 
 
     $('#scheduleDes .custom-tab-btn').click(function() {
