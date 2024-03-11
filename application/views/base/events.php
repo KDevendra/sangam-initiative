@@ -924,7 +924,7 @@
                        <table class="table table-bordered">
                           <thead>
                              <tr class="text-center bg-creamy-yellow">
-                                <!-- <th>Time</th> -->
+                                <th>Time</th>
                                 <th>Duration</th>
                                 <th>Session Name</th>
                                 <th>Organization</th>
@@ -933,7 +933,7 @@
                           </thead>
                           <tbody class="text-center">
                              <tr class="bg-wzureish-white">
-                                <!-- <td>09:30-10:00 </td> -->
+                                <td>09:30-10:00</td>
                                 <td>30 mins</td>
                                 <td>Registration and Tea</td>
                                 <td>TCOE</td>
@@ -951,53 +951,7 @@
                  <span class="icon" aria-hidden="true"></span>
                  </button>
                  <div class="event_accordion-content">
-                    <div class="table-responsive">
-                       <table class="table table-bordered">
-                          <thead>
-                             <tr class="text-center bg-creamy-yellow">
-                                <th>Time</th>
-                                <th>Duration</th>
-                                <th>Session Name</th>
-                                <th>Organization</th>
-                                <th>Speaker</th>
-                             </tr>
-                          </thead>
-                          <tbody class="text-center">
-                            <tr class="bg-wzureish-white">
-                               <td>10:00-10:05</td>
-                               <td>5 mins</td>
-                               <td colspan="3">Felicitation</td>
 
-                            </tr>
-                             <tr class="bg-wzureish-white">
-                                <td>10:05-10:10</td>
-                                <td>5 mins</td>
-                                <td>Welcome Address</td>
-                                <td>DDG, DoT</td>
-                                <td>Sh. Asit Kadayan</td>
-                             </tr>
-                             <tr class="bg-wzureish-white">
-                                <td>10:10-10:15</td>
-                                <td>5 mins</td>
-                                <td>Special address</td>
-                                <td></td>
-                                <td></td>
-                             </tr>
-                             <tr class="bg-wzureish-white">
-                                <td>10:15-10:20</td>
-                                <td>5 mins</td>
-                                <td>Keynote address</td>
-                                <td>Director, IIIT Hyderabad</td>
-                                <td>Prof. Narayanan P.J.</td>
-                             </tr>
-                             <tr class="bg-fresh-mint">
-                                <td>10:20-11:00</td>
-                                <td>40 mins</td>
-                                <td colspan="3">High Tea + Netwroking		</td>
-                             </tr>
-                          </tbody>
-                       </table>
-                    </div>
                  </div>
               </div>
               <div class="event_accordion-item">
@@ -1020,7 +974,7 @@
                           </thead>
                           <tbody class="text-center">
                              <tr class="bg-wzureish-white">
-                                <td>10:00-10:20 </td>
+                                <td>11:00-11:20 </td>
                                 <td>20 mins</td>
                                 <td colspan="1"><b>Overview of Sangam:</b> Digital Twin Initiative </td>
                                 <td>DoT</td>
@@ -1055,36 +1009,43 @@
                                 <td>15 mins</td>
                                 <td><b>Transforming WASH Infrastructure:</b>  Leveraging Digital Twins for Strategic Planning and Responsible Utilization</td>
                                 <td>WASH Innovation Hub</td>
-                                <td>Sh. Venkata Chary </td>
+                                <td>Sh. Srinivas Chary Vedala</td>
                              </tr>
                              <tr class="bg-wzureish-white">
-                                <td>11:35-11:55</td>
-                                <td>20 mins</td>
+                                <td>11:35-11:50</td>
+                                <td>15 mins</td>
                                 <td><b>Imagining the Boundless:</b>  Experimental Iterations through VR, AR, and AI</td>
                                 <td>Meta Autovrse</td>
                                 <td>Mr. Ankit Dhadda</td>
                              </tr>
                              <tr class="bg-wzureish-white">
-                                <td>11:55-12:10</td>
+                                <td>11:50-12:05</td>
                                 <td>15 mins</td>
                                 <td>Risk Free Experimentation for Planning and Adaptation leveraging Digital Twins</td>
-                                <td>TCS Research</td>
+                                <td>TCS TwinX</td>
                                 <td>Mr. Kaustav Bhattacharya</td>
                              </tr>
                              <tr class="bg-wzureish-white">
-                                <td>12:10-12:25</td>
+                                <td>12:05-12:20</td>
+                                <td>15 mins</td>
+                                <td>Privacy Enhancing Technologies </td>
+                                <td>Google</td>
+                                <td>Mr. Rajeev Verma</td>
+                             </tr>
+                             <tr class="bg-wzureish-white">
+                                <td>12:20-12:35</td>
                                 <td>15 mins</td>
                                 <td><b>Blueprint to Reality:</b> Engineering a Sustainable Water Ecosystem with Digital Twin Technology</td>
                                 <td>IIIT Hyderabad</td>
-                                <td> Ms. Anuradha Vattem</td>
+                                <td>Ms. Anuradha Vattem</td>
                              </tr>
                              <tr class="bg-misty-gray">
-                                <td>12:25-12:40</td>
+                                <td>12:35-12:50</td>
                                 <td>15 mins</td>
                                 <td colspan="4">Questions And Answers</td>
                              </tr>
                              <tr class="bg-fresh-mint">
-                                 <td>12:40-13:40</td>
+                                 <td>12:50-13:50</td>
                                  <td>1 hr</td>
                                  <td colspan="3">Lunch Break</td>
                               </tr>
@@ -1120,62 +1081,68 @@
                                 <td>Mr. Nitin Sharma</td>
                              </tr>
                              <tr class="bg-wzureish-white">
-                                <td>13:55-14:10</td>
+                                <td>13:50-14:05</td>
                                 <td>15 mins</td>
-                                <td><b>Geospatial Mastery:</b> : The Bedrock of Future Planning </td>
+                                <td>Digital reality for Smart cities</td>
                                 <td>Hexagon R&D India</td>
                                 <td>Mr Rajesh Dhyani, Executive Director & Head of Geosystems</td>
                              </tr>
                              <tr class="bg-wzureish-white">
-                                <td>14:10-14:25</td>
+                                <td>14:20-14:35</td>
                                 <td>15 mins</td>
                                 <td><b>Bridging Gaps, Building Futures:</b> T-Hub’s Role in Advancing Digital Twin Innovations for Public Good</td>
-                                <td>T-Hub, Telangana</td>
-                                <td></td>
+                                <td>T-Hub, Telangana </td>
+                                <td>Wg Cdr Anish Anthony (Retd), COO</td>
                              </tr>
                              <tr class="bg-wzureish-white">
-                                <td>14:25-14:40</td>
+                                <td>14:35-14:50</td>
                                 <td>15 mins</td>
-                                <td><b>From Vision to Value:</b>  Empowering Infrastructure Planning with Global Insights through Digital Twins and AI</td>
+                                <td><b>From Vision to Value:</b> : Empowering Infrastructure Planning with Global Insights through Digital Twins and AI</td>
                                 <td>Deloitte</td>
                                 <td>Sh. Aditya Khaitan</td>
                              </tr>
                              <tr class="bg-wzureish-white">
-                                <td>14:40-14:55</td>
+                                <td>14:50-15:05</td>
                                 <td>15 mins</td>
                                 <td>Perspective of Telangana State Government for Infrastructure Planning & Design</td>
-                                <td>Director, EC&IT, Telangana State Govt</td>
-                                <td>Ms. Rama Devi</td>
+                                <td>EC&IT, Telangana State Govt</td>
+                                <td>Ms. Rama Devi, Director</td>
                              </tr>
                              <tr class="bg-wzureish-white">
-                                <td>14:55-15:10</td>
+                                <td>15:05-15:20</td>
                                 <td>15 mins</td>
                                 <td><b>Digital Twins:</b> Pioneering Smart Infrastructure</td>
-                                <td>Neurom</td>
+                                <td>Neurom Innovations</td>
                                 <td>Mr. Sumedh Sonkamble</td>
                              </tr>
                              <tr class="bg-wzureish-white">
-                                <td>14:55-15:10</td>
+                                <td>15:20-15:35</td>
                                 <td>15 mins</td>
                                 <td><b>Learning through Digital Twins:</b> A New Era of Training and Evaluation</td>
                                 <td>PES University, Bengaluru</td>
                                 <td>Mr. Adithya</td>
                              </tr>
+                             <tr class="bg-wzureish-white">
+                                <td>15:35-15:50</td>
+                                <td>15 mins</td>
+                                <td>Sustainable energy solutions for Data Centers</td>
+                                <td>Readypods Technologies </td>
+                                <td>Mr. Chandra Vadrevu</td>
+                             </tr>
                              <tr class="bg-misty-gray">
-                                <td>15:10-15:40</td>
+                                <td>15:50-16:05</td>
                                 <td>15 mins</td>
                                 <td colspan="3">Questions And Answers</td>
                              </tr>
                              <tr class="bg-fresh-mint">
-                                 <td>15:40-16:10</td>
+                                 <td>16:05-16:20</td>
                                  <td>45 mins</td>
                                  <td colspan="3">High Tea + Netwroking		</td>
                               </tr>
                              <tr class="bg-creamy-yellow">
-                                <td>16:10-17:00</td>
+                                <td>16:20-17:00</td>
                                 <td>50 mins</td>
                                 <td colspan="3">Digital Twins Unveiled: Your Questions Answered by the Experts</td>
-
                              </tr>
                           </tbody>
                        </table>
@@ -2013,6 +1980,33 @@
          </div>
       </div>
       <div class="custom-tab-content text-center" id="tab6" >
+        <div class="row justify-content-center" bis_skin_checked="1">
+               <div class="col-lg-12" bis_skin_checked="1">
+                  <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;" bis_skin_checked="1">
+                     <!-- <span class="sub-title"><img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span> -->
+                     <h2>Dignitaries</h2>
+                  </div>
+               </div>
+            </div>
+        <div class="row mb-3" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;" >
+               <div class="col-lg-3 col-sm-6" >
+                  <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;" >
+                     <div class="member-img" >
+                        <img src="<?php echo base_url('');?>include/web/custom/Chief_Narayanan_P_J.jpg" alt=" Chief_Narayanan_P_J">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-9 col-sm-6" >
+                  <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;" >
+                     <div class="text_for_outreach" style="padding-bottom:0" >
+                        <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Narayanan P. J.</a></p>
+                        <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director</h5>
+                        <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">International Institute of Information Technology</h4>
+                     </div>
+                     <p>P. J. Narayanan has done his Ph.D from University of Maryland, USA. He is known for his work in computer vision (3D reconstruction, structure-from-motion, computational displays), computer graphics (ray-tracing of implicit surfaces, dynamic scenes), and parallel computing on the GPU (graph algorithms, string sorting, ML techniques like graph cuts, ANN and clustering, as well as several computer vision tasks).</p>
+                  </div>
+               </div>
+            </div>
          <div class="container">
             <div class="row justify-content-center">
                <div class="col-lg-12">
@@ -2035,7 +2029,7 @@
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Aditya khaitan</a></h3>
-                        <p style="font-size:13px"> Aditya started his professional career with KPMG in 2005 post completion of his academic endeavor in Bachelor of Engineering from Maharashtra Institute of Technology and Masters in Business Administration from ICFAI Business School, Bangalore.During the 12 years in KPMG India, He had the opportunity to provide consulting services in more than 20 countries across Middle East, Africa, Australia, Western Europe including multiple engagements in India. Recently he joined Deloitte Management Consulting team as a Partner in TMT service line.</p>
+                        <p style="font-size:13px">Aditya started his professional career with KPMG in 2005 post completion of his academic endeavor in Bachelor of Engineering from Maharashtra Institute of Technology and Masters in Business Administration from ICFAI Business School, Bangalore.During the 12 years in KPMG India, He had the opportunity to provide consulting services in more than 20. Recently he joined Deloitte Management Consulting team as a Partner in TMT service line.</p>
                      </div>
                   </div>
                   <div class="project-content">
@@ -2051,11 +2045,11 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Anuradha_Vattem.jpg" alt="Speaker_Anuradha_Vattem">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Anuradha_Vattem.png" alt="Speaker_Anuradha_Vattem">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Anuradha Vattem</a></h3>
-                        <p style="font-size:13px">Professor Srinivas is the Centre Director at the Administrative Staff College of India. He leads the Centre for Environment, Urban Governance and Infrastructure Development. He is an urban planner and public health engineer with over two decades of experience in urban infrastructure and service delivery. He specializes in water and environmental sanitation (WASH) services, and his portfolio spans policy, programme, capacity development and knowledge management. He serves on various Inter-Ministerial Committees on Citywide Inclusive Sanitation, WASH in schools, urban water management, and urban development. He supported the Ministry of Housing and Urban Affairs, Government of India, by independently appraising city development plans, reforms implementation and smart city proposals. He has received the Water for Life UN-Water Best Practices Award (4th edition) for his successful advocacy.</p>
+                        <p style="font-size:13px">Anuradha Vattem has developed the campus into a smart city living lab that act as a real-world testbed for deploying, evaluating, and creating smart city solutions. It is powered by the OneM2M Interoperability layer and Indian Urban Data Exchange [IUDX] platform in collaboration with the IISc, Bangalore with standard data and information models. She collaborated closely with Silicon Labs to establish India's first Wi-SUN (RF-Mesh) deployment on the IIIT campus.</p>
                      </div>
                   </div>
                   <div class="project-content">
@@ -2065,8 +2059,8 @@
                </div>
                <div class="text_for_outreach height_150">
                   <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Anuradha Vattem</a></p>
-                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;"> Lead Architect</h5>
-                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Smart City Living Lab @IIITH</h4>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Lead Architect </h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">IIIT Hyderabad</h4>
                </div>
             </div>
             <div class="single-project-item-four col-md-3">
@@ -2087,6 +2081,86 @@
                   <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Adithya Balasubramanyam</a></p>
                   <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Educator & Researcher</h5>
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">CAVE Augmented and Virtual Environments Lab</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Chandra_Vadrevu.jpg" alt="Speaker_Chandra_Vadrevu">
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Chandra Vadrevu</a></h3>
+                        <p style="font-size:13px">He worked on enterprise architecture designs, hyper converged technologies, cloud, automation, cloud migration, high speed data science platforms, setting up of Private data centers, hands on with various telecom core networks.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Chandra Vadrevu</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">ReadyPods Sustainable containment Data Centers</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Kaustav_Bhattacharya.jpg" alt="Speaker_Kaustav_Bhattacharya">
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Kaustav Bhattacharya </a></h3>
+                        <p style="font-size:13px">Kaustav's expertise is marked by his co-authorship of numerous patents and scholarly articles in the realm of Enterprise and Process Digital Twins. His research endeavors are particularly focused on digital twin-enabled risk mitigation experiments, ecosystem modeling, and public policy formation. He is adept in formulating go-to-market strategies, ensuring sustainable business growth, and shaping the societies of the future.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Kaustav Bhattacharya </a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Global Product Head</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">TCS TwinX</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Rajesh_Dhyani.jpg" alt="Speaker_Rajesh_Dhyani">
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Rajesh Dhyani </a></h3>
+                        <p style="font-size:13px">Rajesh is a Technology veteran of 27 years with an experience spanning disciplines such as Software Development, User experience, Digital reality & much more. He's worked in domains such as BFSI, ITES, AEC and Geospatial to name a few. In his current role, he leads Hexagon R&D India's Geosystems and Mining divisions. He is actively pushing the boundaries of innovation, specific to creation of digital reality and its use in Smart Cities, Enterprise engineering Solutions and other fungible use cases.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Rajesh Dhyani </a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Executive Director & Head of Geosystems</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Hexagon</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Rama_Devi_Lanka.jpg" alt="Speaker_Rama_Devi_Lanka">
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Rama Devi Lanka </a></h3>
+                        <p style="font-size:13px">Rama Devi Lanka role is to formulate and execute policy frameworks in frontier technologies such as AI, Blockchain, Cloud, Drones, Cyber Security, and others that would create a conducive ecosystem for the growth of emerging technologies in the State. She was instrumental in setting up institutions of Excellences or CoEs in Artificial Intelligence, Cyber Security, eWaste, and Additive Manufacturing.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Rama Devi Lanka </a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director, EC & IT</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Telangana State Govt.</h4>
                </div>
             </div>
             <div class="single-project-item-four col-md-3">
@@ -2127,6 +2201,26 @@
                   <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Sumedh Sonkamble</a></p>
                   <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Engineering  </h5>
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Neurom</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Anthony_Anish.jpg" alt="Speaker_Anthony_Anish">
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Wg Cdr Anthony Anish (Retd)</a></h3>
+                        <p style="font-size:13px">A Kargil Veteran, Indian Air Force helicopter pilot, instructor and DRDO project director who pivoted to being an entrepreneur and helped start and build 2 multi million $ companies. Currently heading Operations at the world's largest innovation campus and startup incubator.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Wg Cdr Anthony Anish (Retd)</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Chief operating officer</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Chief operating officer</h4>
                </div>
             </div>
          </div>
