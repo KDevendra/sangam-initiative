@@ -89,85 +89,102 @@
                <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 12th March 2024</h4>
                <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 11th March 2024</p>
                <div class="d-flex justify-content-center">
-                  <a class="btn btn-danger text-white mt-20" href="<?php echo base_url('registration')?>">Register Now</a>
+                  <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a>
                </div>
             </div>
          </div>
       </div>
    </div>
 </section>
-<section id="registerForTheEventDes" class="cta-bg-section bg_cover pt-50 pb-50 p-r z-1" style="background-image: url('<?php echo base_url('');?>include/web/custom/Banner_3.jpg');">
+<section id="registerForTheEventDes" class="cta-bg-section bg_cover pt-50 pb-50 p-r z-1" style="background-image: url('<?php echo base_url(''); ?>include/web/custom/Banner_3.jpg');">
    <div class="container">
       <div class="row align-items-center">
          <div class="col-lg-7">
             <div class="cta-content-box text-white mb-50 wow fadeInLeft" style="visibility: visible;">
                <div class="section-title mb-20">
-                  <span class="sub-title text-white"><img src="<?php echo base_url('');?>include/web/custom/technology_white.png" alt=""></i>Sangam 2024: Uniting Minds, Inspiring Change</span>
+                  <span class="sub-title text-white"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt=""></i>Sangam 2024: Uniting Minds, Inspiring Change</span>
                   <h2>Register Now for the Ultimate Confluence of Ideas</h2>
                </div>
                <p class="mb-35">Join us for Sangam 2024, a premier event where innovation meets inspiration. With locations in Delhi, Bangalore, and Hyderabad, Sangam offers a platform for thought leaders, industry experts, and enthusiasts to come together and exchange ideas that shape the future. Don't miss your chance to be part of this transformative experience. Register now before it's too late.</p>
-               <a class="main-btn golden-btn preRegisBtn btn_green" href="<?php echo base_url('registration');?>">Register for Event</a>
+               <a class="main-btn golden-btn preRegisBtn btn_green" href="<?php echo base_url('registration'); ?>">Register for Event</a>
             </div>
          </div>
          <div class="col-lg-5">
-            <div class="wow fadeInRight" style="visibility: visible;"><img style="border-radius: 5px;" src="<?php echo base_url('');?>include/web/custom/bg_image.jpg" alt="Image"></div>
+            <div class="wow fadeInRight" style="visibility: visible;"><img style="border-radius: 5px;" src="<?php echo base_url(''); ?>include/web/custom/bg_image.jpg" alt="Image"></div>
          </div>
       </div>
    </div>
 </section>
 <style media="screen">
    .custom-tabs {
-   text-align: center;
-   margin-bottom: 20px;
-   text-align: center;
-   margin-bottom: 20px;
-   display: flex;
-   justify-content: center;
-   background-color: #f0f8ff;
+      text-align: center;
+      margin-bottom: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      background-color: #f0f8ff;
    }
+
    .custom-tab-btn {
-   border: none;
-   background: none;
-   cursor: pointer;
-   padding: 10px 20px;
-   margin: 0 10px;
-   font-size: 16px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
    }
+
    .custom-tab-btn.active {
-   border-bottom: 2px solid #0086fc;
-   background-color: #a1e6fb;
+      border-bottom: 2px solid #0086fc;
+      background-color: #a1e6fb;
    }
+
    .custom-tab-content {
-   display: none;
-   /* padding: 20px; */
+      display: none;
+      /* padding: 20px; */
    }
-   .event_accordion  .custom-tab-btn{text-align: center;display: block;margin: 0}
+
+   .event_accordion .custom-tab-btn {
+      text-align: center;
+      display: block;
+      margin: 0
+   }
+
    .custom-tabs {
-   text-align: center;
-   margin-bottom: 20px;
-   text-align: center;
-   margin-bottom: 20px;
-   display: flex;
-   justify-content: center;
-   background-color: #f0f8ff;
+      text-align: center;
+      margin-bottom: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      background-color: #f0f8ff;
    }
+
    .custom-tab-btn {
-   border: none;
-   background: none;
-   cursor: pointer;
-   padding: 10px 20px;
-   margin: 0 10px;
-   font-size: 16px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
    }
+
    .custom-tab-btn.active {
-   border-bottom: 2px solid #0086fc;
-   background-color: #a1e6fb;
+      border-bottom: 2px solid #0086fc;
+      background-color: #a1e6fb;
    }
+
    .custom-tab-content {
-   display: none;
-   /* padding: 20px; */
+      display: none;
+      /* padding: 20px; */
    }
-   .event_accordion  .custom-tab-btn{text-align: center;display: block;margin: 0}
+
+   .event_accordion .custom-tab-btn {
+      text-align: center;
+      display: block;
+      margin: 0
+   }
 </style>
 <section class="faq-section pt-50 pb-50" id="scheduleDes">
    <div class="container">
@@ -190,9 +207,9 @@
             <div class="event_accordion">
                <div class="event_accordion-item">
                   <button id="event_accordion-button-1" aria-expanded="false">
-                  <span style="color: #27a844;">Morning 09:00 to 10:35</span>
-                  <span class="event_accordion-title">Inauguration</span>
-                  <span class="icon" aria-hidden="true"></span>
+                     <span style="color: #27a844;">Morning 09:00 to 10:35</span>
+                     <span class="event_accordion-title">Inauguration</span>
+                     <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
                      <div class="table-responsive">
@@ -264,9 +281,9 @@
                </div>
                <div class="event_accordion-item">
                   <button id="event_accordion-button-1" aria-expanded="false">
-                  <span style="color: #27a844;">Morning 10:35 to 10:55</span>
-                  <span class="event_accordion-title">Sangam Digital Twin: <span style="font-weight: normal">Journey from Physical World to Real Time Intelligent Virtual World</span> </span>
-                  <span class="icon" aria-hidden="true"></span>
+                     <span style="color: #27a844;">Morning 10:35 to 10:55</span>
+                     <span class="event_accordion-title">Sangam Digital Twin: <span style="font-weight: normal">Journey from Physical World to Real Time Intelligent Virtual World</span> </span>
+                     <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
                      <div class="table-responsive">
@@ -295,9 +312,9 @@
                </div>
                <div class="event_accordion-item">
                   <button id="event_accordion-button-2" aria-expanded="false">
-                  <span style="color: #27a844;">Forenoon 10:55 to 12:20</span>
-                  <span class="event_accordion-title">Constructing the Future: <span style="font-weight: normal">Digital Twins and the Blueprint of Tomorrow</span> </span>
-                  <span class="icon" aria-hidden="true"></span>
+                     <span style="color: #27a844;">Forenoon 10:55 to 12:20</span>
+                     <span class="event_accordion-title">Constructing the Future: <span style="font-weight: normal">Digital Twins and the Blueprint of Tomorrow</span> </span>
+                     <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
                      <div class="table-responsive">
@@ -356,9 +373,9 @@
                </div>
                <div class="event_accordion-item">
                   <button id="event_accordion-button-2" aria-expanded="false">
-                  <span style="color: #27a844;">Afternoon 12:20 to 14:35</span>
-                  <span class="event_accordion-title">Breathing Life into Digital Twins: <span style="font-weight: normal">Dynamic Data Integration</span> </span>
-                  <span class="icon" aria-hidden="true"></span>
+                     <span style="color: #27a844;">Afternoon 12:20 to 14:35</span>
+                     <span class="event_accordion-title">Breathing Life into Digital Twins: <span style="font-weight: normal">Dynamic Data Integration</span> </span>
+                     <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
                      <div class="table-responsive">
@@ -376,14 +393,14 @@
                               <tr class="bg-wzureish-white">
                                  <td>12:20-12:40</td>
                                  <td>20 mins</td>
-                                 <td><b>Environmental Insights:</b>  Harnessing Environmental Data into Digital Twins</td>
+                                 <td><b>Environmental Insights:</b> Harnessing Environmental Data into Digital Twins</td>
                                  <td>Blue Sky Analytics</td>
                                  <td>Ms. Abhilasha Purwar, Founder & CEO </td>
                               </tr>
                               <tr class="bg-wzureish-white">
                                  <td>12:40-13:00</td>
                                  <td>20 mins</td>
-                                 <td><b>Road Traffic Insights:</b>  Integrating Road Traffic Data into Digital Twins</td>
+                                 <td><b>Road Traffic Insights:</b> Integrating Road Traffic Data into Digital Twins</td>
                                  <td>Nayan</td>
                                  <td>Sh. Jayant Ratti, CEO</td>
                               </tr>
@@ -417,9 +434,9 @@
                </div>
                <div class="event_accordion-item">
                   <button id="event_accordion-button-3" aria-expanded="false">
-                  <span style="color: #27a844;">Afternoon 14:35 to 16:15</span>
-                  <span class="event_accordion-title">Innovative Frontiers: <span style="font-weight: normal">Shaping the Future with Digital Twins and Advanced Technologies</span> </span>
-                  <span class="icon" aria-hidden="true"></span>
+                     <span style="color: #27a844;">Afternoon 14:35 to 16:15</span>
+                     <span class="event_accordion-title">Innovative Frontiers: <span style="font-weight: normal">Shaping the Future with Digital Twins and Advanced Technologies</span> </span>
+                     <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
                      <div class="table-responsive">
@@ -457,7 +474,7 @@
                               <tr class="bg-wzureish-white">
                                  <td>15:20-15:35</td>
                                  <td>15 mins</td>
-                                 <td  rowspan="2" style="vertical-align: inherit;">From Insight to Impact: Design Thinking Realized with Generative AI and Digital Twins</td>
+                                 <td rowspan="2" style="vertical-align: inherit;">From Insight to Impact: Design Thinking Realized with Generative AI and Digital Twins</td>
                                  <td>Microsoft</td>
                                  <td>Sh. Vikram Malhotra, Senior Specialist - Gen AI & DT</td>
                               </tr>
@@ -479,9 +496,9 @@
                </div>
                <div class="event_accordion-item" style="border-bottom: 2px solid #3d3d99;">
                   <button id="event_accordion-button-3" aria-expanded="false">
-                  <span style="color: #27a844;">Afternoon 16:15 to 17:30</span>
-                  <span class="event_accordion-title">Building the Future Together: <span style="font-weight: normal"> Navigating Challenges with Global Digital Twin Innovations</span> </span>
-                  <span class="icon" aria-hidden="true"></span>
+                     <span style="color: #27a844;">Afternoon 16:15 to 17:30</span>
+                     <span class="event_accordion-title">Building the Future Together: <span style="font-weight: normal"> Navigating Challenges with Global Digital Twin Innovations</span> </span>
+                     <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
                      <div class="table-responsive">
@@ -506,7 +523,7 @@
                               <tr class="bg-wzureish-white">
                                  <td>16:35-17:30</td>
                                  <td>55 mins</td>
-                                 <td  colspan="2" style="vertical-align: inherit;"><b>Interactive Dialogue:</b> Exploring Solutions for Infrastructure Challenges</td>
+                                 <td colspan="2" style="vertical-align: inherit;"><b>Interactive Dialogue:</b> Exploring Solutions for Infrastructure Challenges</td>
                                  <td>Eminent Panelists</td>
                               </tr>
                            </tbody>
@@ -516,7 +533,7 @@
                </div>
             </div>
             <div class="d-flex justify-content-center">
-               <a class="main-btn primary-btn mt-3" download="<?php echo base_url('include/web/custom/Tentative_Schedule_Atchment.pdf');?>" href="<?php echo base_url('include/web/custom/Tentative_Schedule_Atchment.pdf');?>">Download Schedule</a>
+               <a class="main-btn primary-btn mt-3" download="<?php echo base_url('include/web/custom/Tentative_Schedule_Atchment.pdf'); ?>" href="<?php echo base_url('include/web/custom/Tentative_Schedule_Atchment.pdf'); ?>">Download Schedule</a>
             </div>
          </div>
          <div class="custom-tab-content" id="tab2" style="display: none;">
@@ -524,9 +541,9 @@
             <div class="event_accordion">
                <div class="event_accordion-item">
                   <button id="event_accordion-button-1" aria-expanded="false">
-                  <span style="color: #27a844;">Morning 09:30 to 10:00</span>
-                  <span class="event_accordion-title">Registration</span>
-                  <span class="icon" aria-hidden="true"></span>
+                     <span style="color: #27a844;">Morning 09:30 to 10:00</span>
+                     <span class="event_accordion-title">Registration</span>
+                     <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
                      <div class="table-responsive">
@@ -555,9 +572,9 @@
                </div>
                <div class="event_accordion-item">
                   <button id="event_accordion-button-1" aria-expanded="false">
-                  <span style="color: #27a844;">Morning 09:50 to 10:00</span>
-                  <span class="event_accordion-title">Inauguration</span>
-                  <span class="icon" aria-hidden="true"></span>
+                     <span style="color: #27a844;">Morning 09:50 to 10:00</span>
+                     <span class="event_accordion-title">Inauguration</span>
+                     <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
                      <div class="table-responsive">
@@ -593,9 +610,9 @@
                </div>
                <div class="event_accordion-item">
                   <button id="event_accordion-button-1" aria-expanded="false">
-                  <span style="color: #27a844;">Morning 10:00 to 10:20</span>
-                  <span class="event_accordion-title">Sangam Digital Twin: <span style="font-weight: normal">Journey from Physical World to Real Time Intelligent Virtual World</span> </span>
-                  <span class="icon" aria-hidden="true"></span>
+                     <span style="color: #27a844;">Morning 10:00 to 10:20</span>
+                     <span class="event_accordion-title">Sangam Digital Twin: <span style="font-weight: normal">Journey from Physical World to Real Time Intelligent Virtual World</span> </span>
+                     <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
                      <div class="table-responsive">
@@ -624,9 +641,9 @@
                </div>
                <div class="event_accordion-item">
                   <button id="event_accordion-button-2" aria-expanded="false">
-                  <span style="color: #27a844;">Forenoon 10:20 to 11:20</span>
-                  <span class="event_accordion-title">Group 1</span>
-                  <span class="icon" aria-hidden="true"></span>
+                     <span style="color: #27a844;">Forenoon 10:20 to 11:20</span>
+                     <span class="event_accordion-title">Group 1</span>
+                     <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
                      <div class="table-responsive">
@@ -674,9 +691,9 @@
                </div>
                <div class="event_accordion-item">
                   <button id="event_accordion-button-2" aria-expanded="false">
-                  <span style="color: #27a844;">Forenoon 11:20 to 12:35</span>
-                  <span class="event_accordion-title">Group 2</span>
-                  <span class="icon" aria-hidden="true"></span>
+                     <span style="color: #27a844;">Forenoon 11:20 to 12:35</span>
+                     <span class="event_accordion-title">Group 2</span>
+                     <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
                      <div class="table-responsive">
@@ -708,7 +725,7 @@
                               <tr class="bg-wzureish-white">
                                  <td>11:50-12:05</td>
                                  <td>15 mins</td>
-                                 <td ><b>Mobility Insights:</b> The Role of Telecom Data in Digital Twin Dynamics</td>
+                                 <td><b>Mobility Insights:</b> The Role of Telecom Data in Digital Twin Dynamics</td>
                                  <td>Airtel</td>
                                  <td>Mr. Pulin Pathneja</td>
                               </tr>
@@ -738,9 +755,9 @@
                </div>
                <div class="event_accordion-item">
                   <button id="event_accordion-button-3" aria-expanded="false">
-                  <span style="color: #27a844;">Afternoon 13:20 to 14:35</span>
-                  <span class="event_accordion-title">Group 3</span>
-                  <span class="icon" aria-hidden="true"></span>
+                     <span style="color: #27a844;">Afternoon 13:20 to 14:35</span>
+                     <span class="event_accordion-title">Group 3</span>
+                     <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
                      <div class="table-responsive">
@@ -795,9 +812,9 @@
                </div>
                <div class="event_accordion-item">
                   <button id="event_accordion-button-3" aria-expanded="false">
-                  <span style="color: #27a844;">Afternoon 14:35 to 15:15</span>
-                  <span class="event_accordion-title">Industry Panel Discussion </span>
-                  <span class="icon" aria-hidden="true"></span>
+                     <span style="color: #27a844;">Afternoon 14:35 to 15:15</span>
+                     <span class="event_accordion-title">Industry Panel Discussion </span>
+                     <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
                      <div class="table-responsive">
@@ -821,7 +838,7 @@
                               <tr class="bg-fresh-mint">
                                  <td>15:15-16:00 </td>
                                  <td>45 mins</td>
-                                 <td colspan="3">High Tea + Netwroking		</td>
+                                 <td colspan="3">High Tea + Netwroking </td>
                               </tr>
                            </tbody>
                         </table>
@@ -830,9 +847,9 @@
                </div>
                <div class="event_accordion-item" style="border-bottom: 2px solid #3d3d99;">
                   <button id="event_accordion-button-3" aria-expanded="false">
-                  <span style="color: #27a844;">Afternoon 16:00 to 17:00</span>
-                  <span class="event_accordion-title">Leadership Perspectives : <span style="font-weight: normal">Steering Sangam Towards Transformative Success</span> </span>
-                  <span class="icon" aria-hidden="true"></span>
+                     <span style="color: #27a844;">Afternoon 16:00 to 17:00</span>
+                     <span class="event_accordion-title">Leadership Perspectives : <span style="font-weight: normal">Steering Sangam Towards Transformative Success</span> </span>
+                     <span class="icon" aria-hidden="true"></span>
                   </button>
                   <div class="event_accordion-content">
                      <div class="table-responsive">
@@ -907,252 +924,252 @@
                </div>
             </div>
             <div class="d-flex justify-content-center">
-               <a class="main-btn primary-btn mt-3" download="<?php echo base_url('include/web/custom/Tentative_Schedule_SangamBangalore.pdf');?>" href="<?php echo base_url('include/web/custom/Tentative_Schedule_SangamBangalore.pdf');?>">Download Schedule</a>
+               <a class="main-btn primary-btn mt-3" download="<?php echo base_url('include/web/custom/Tentative_Schedule_SangamBangalore.pdf'); ?>" href="<?php echo base_url('include/web/custom/Tentative_Schedule_SangamBangalore.pdf'); ?>">Download Schedule</a>
             </div>
          </div>
          <div class="custom-tab-content text-center" id="tab3">
-           <h5 class="mt-10 blink-text text-center mb-4" style="color: #ff0000b8;">12th March 2024 (09:30 to 17:00)</h5>
-           <div class="event_accordion">
-              <div class="event_accordion-item">
-                 <button id="event_accordion-button-1" aria-expanded="false">
-                 <span style="color: #27a844;">Morning 09:30 to 10:00</span>
-                 <span class="event_accordion-title">Registration</span>
-                 <span class="icon" aria-hidden="true"></span>
-                 </button>
-                 <div class="event_accordion-content">
-                    <div class="table-responsive">
-                       <table class="table table-bordered">
-                          <thead>
-                             <tr class="text-center bg-creamy-yellow">
-                                <th>Time</th>
-                                <th>Duration</th>
-                                <th>Session Name</th>
-                                <th>Organization</th>
-                                <th>Speaker</th>
-                             </tr>
-                          </thead>
-                          <tbody class="text-center">
-                             <tr class="bg-wzureish-white">
-                                <td>09:30-10:00</td>
-                                <td>30 mins</td>
-                                <td>Registration and Tea</td>
-                                <td>TCOE</td>
-                                <td>Registration Desk</td>
-                             </tr>
-                          </tbody>
-                       </table>
-                    </div>
-                 </div>
-              </div>
-              <div class="event_accordion-item">
-                 <button id="event_accordion-button-1" aria-expanded="false">
-                 <span style="color: #27a844;">Morning 10:00 to 11:00</span>
-                 <span class="event_accordion-title">Inauguration</span>
-                 <span class="icon" aria-hidden="true"></span>
-                 </button>
-                 <div class="event_accordion-content">
+            <h5 class="mt-10 blink-text text-center mb-4" style="color: #ff0000b8;">12th March 2024 (09:30 to 17:00)</h5>
+            <div class="event_accordion">
+               <div class="event_accordion-item">
+                  <button id="event_accordion-button-1" aria-expanded="false">
+                     <span style="color: #27a844;">Morning 09:30 to 10:00</span>
+                     <span class="event_accordion-title">Registration</span>
+                     <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="event_accordion-content">
+                     <div class="table-responsive">
+                        <table class="table table-bordered">
+                           <thead>
+                              <tr class="text-center bg-creamy-yellow">
+                                 <th>Time</th>
+                                 <th>Duration</th>
+                                 <th>Session Name</th>
+                                 <th>Organization</th>
+                                 <th>Speaker</th>
+                              </tr>
+                           </thead>
+                           <tbody class="text-center">
+                              <tr class="bg-wzureish-white">
+                                 <td>09:30-10:00</td>
+                                 <td>30 mins</td>
+                                 <td>Registration and Tea</td>
+                                 <td>TCOE</td>
+                                 <td>Registration Desk</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="event_accordion-item">
+                  <button id="event_accordion-button-1" aria-expanded="false">
+                     <span style="color: #27a844;">Morning 10:00 to 11:00</span>
+                     <span class="event_accordion-title">Inauguration</span>
+                     <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="event_accordion-content">
 
-                 </div>
-              </div>
-              <div class="event_accordion-item">
-                 <button id="event_accordion-button-1" aria-expanded="false">
-                 <span style="color: #27a844;">Morning 11:00 to 11:20</span>
-                 <span class="event_accordion-title">Sangam Digital Twin: <span style="font-weight: normal">Journey from Physical World to Real Time Intelligent Virtual World</span> </span>
-                 <span class="icon" aria-hidden="true"></span>
-                 </button>
-                 <div class="event_accordion-content">
-                    <div class="table-responsive">
-                       <table class="table table-bordered">
-                          <thead>
-                             <tr class="text-center bg-creamy-yellow">
-                                <th>Time</th>
-                                <th>Duration</th>
-                                <th>Session Name</th>
-                                <th>Organization</th>
-                                <th>Speaker</th>
-                             </tr>
-                          </thead>
-                          <tbody class="text-center">
-                             <tr class="bg-wzureish-white">
-                                <td>11:00-11:20 </td>
-                                <td>20 mins</td>
-                                <td colspan="1"><b>Overview of Sangam:</b> Digital Twin Initiative </td>
-                                <td>DoT</td>
-                                <td>Sh. Asit Kadayan </td>
-                             </tr>
-                          </tbody>
-                       </table>
-                    </div>
-                 </div>
-              </div>
-              <div class="event_accordion-item">
-                 <button id="event_accordion-button-2" aria-expanded="false">
-                 <span style="color: #27a844;">Forenoon 11:20 to 13:40</span>
-                 <span class="event_accordion-title">Forenoon sessions</span>
-                 <span class="icon" aria-hidden="true"></span>
-                 </button>
-                 <div class="event_accordion-content">
-                    <div class="table-responsive">
-                       <table class="table table-bordered">
-                          <thead>
-                             <tr class="text-center bg-creamy-yellow">
-                                <th>Time</th>
-                                <th>Duration</th>
-                                <th>Session Name</th>
-                                <th>Organization</th>
-                                <th>Speaker</th>
-                             </tr>
-                          </thead>
-                          <tbody class="text-center">
-                             <tr class="bg-wzureish-white">
-                                <td>11:20-11:35</td>
-                                <td>15 mins</td>
-                                <td><b>Transforming WASH Infrastructure:</b>  Leveraging Digital Twins for Strategic Planning and Responsible Utilization</td>
-                                <td>WASH Innovation Hub</td>
-                                <td>Sh. Srinivas Chary Vedala</td>
-                             </tr>
-                             <tr class="bg-wzureish-white">
-                                <td>11:35-11:50</td>
-                                <td>15 mins</td>
-                                <td><b>Imagining the Boundless:</b>  Experimental Iterations through VR, AR, and AI</td>
-                                <td>Meta Autovrse</td>
-                                <td>Mr. Ankit Dhadda</td>
-                             </tr>
-                             <tr class="bg-wzureish-white">
-                                <td>11:50-12:05</td>
-                                <td>15 mins</td>
-                                <td>Risk Free Experimentation for Planning and Adaptation leveraging Digital Twins</td>
-                                <td>TCS TwinX</td>
-                                <td>Mr. Kaustav Bhattacharya</td>
-                             </tr>
-                             <tr class="bg-wzureish-white">
-                                <td>12:05-12:20</td>
-                                <td>15 mins</td>
-                                <td>Privacy Enhancing Technologies </td>
-                                <td>Google</td>
-                                <td>Mr. Rajeev Verma</td>
-                             </tr>
-                             <tr class="bg-wzureish-white">
-                                <td>12:20-12:35</td>
-                                <td>15 mins</td>
-                                <td><b>Blueprint to Reality:</b> Engineering a Sustainable Water Ecosystem with Digital Twin Technology</td>
-                                <td>IIIT Hyderabad</td>
-                                <td>Ms. Anuradha Vattem</td>
-                             </tr>
-                             <tr class="bg-misty-gray">
-                                <td>12:35-12:50</td>
-                                <td>15 mins</td>
-                                <td colspan="4">Questions And Answers</td>
-                             </tr>
-                             <tr class="bg-fresh-mint">
+                  </div>
+               </div>
+               <div class="event_accordion-item">
+                  <button id="event_accordion-button-1" aria-expanded="false">
+                     <span style="color: #27a844;">Morning 11:00 to 11:20</span>
+                     <span class="event_accordion-title">Sangam Digital Twin: <span style="font-weight: normal">Journey from Physical World to Real Time Intelligent Virtual World</span> </span>
+                     <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="event_accordion-content">
+                     <div class="table-responsive">
+                        <table class="table table-bordered">
+                           <thead>
+                              <tr class="text-center bg-creamy-yellow">
+                                 <th>Time</th>
+                                 <th>Duration</th>
+                                 <th>Session Name</th>
+                                 <th>Organization</th>
+                                 <th>Speaker</th>
+                              </tr>
+                           </thead>
+                           <tbody class="text-center">
+                              <tr class="bg-wzureish-white">
+                                 <td>11:00-11:20 </td>
+                                 <td>20 mins</td>
+                                 <td colspan="1"><b>Overview of Sangam:</b> Digital Twin Initiative </td>
+                                 <td>DoT</td>
+                                 <td>Sh. Asit Kadayan </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="event_accordion-item">
+                  <button id="event_accordion-button-2" aria-expanded="false">
+                     <span style="color: #27a844;">Forenoon 11:20 to 13:40</span>
+                     <span class="event_accordion-title">Forenoon sessions</span>
+                     <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="event_accordion-content">
+                     <div class="table-responsive">
+                        <table class="table table-bordered">
+                           <thead>
+                              <tr class="text-center bg-creamy-yellow">
+                                 <th>Time</th>
+                                 <th>Duration</th>
+                                 <th>Session Name</th>
+                                 <th>Organization</th>
+                                 <th>Speaker</th>
+                              </tr>
+                           </thead>
+                           <tbody class="text-center">
+                              <tr class="bg-wzureish-white">
+                                 <td>11:20-11:35</td>
+                                 <td>15 mins</td>
+                                 <td><b>Transforming WASH Infrastructure:</b> Leveraging Digital Twins for Strategic Planning and Responsible Utilization</td>
+                                 <td>WASH Innovation Hub</td>
+                                 <td>Sh. Srinivas Chary Vedala</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>11:35-11:50</td>
+                                 <td>15 mins</td>
+                                 <td><b>Imagining the Boundless:</b> Experimental Iterations through VR, AR, and AI</td>
+                                 <td>Meta Autovrse</td>
+                                 <td>Mr. Ankit Dhadda</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>11:50-12:05</td>
+                                 <td>15 mins</td>
+                                 <td>Risk Free Experimentation for Planning and Adaptation leveraging Digital Twins</td>
+                                 <td>TCS TwinX</td>
+                                 <td>Mr. Kaustav Bhattacharya</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>12:05-12:20</td>
+                                 <td>15 mins</td>
+                                 <td>Privacy Enhancing Technologies </td>
+                                 <td>Google</td>
+                                 <td>Mr. Rajeev Verma</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>12:20-12:35</td>
+                                 <td>15 mins</td>
+                                 <td><b>Blueprint to Reality:</b> Engineering a Sustainable Water Ecosystem with Digital Twin Technology</td>
+                                 <td>IIIT Hyderabad</td>
+                                 <td>Ms. Anuradha Vattem</td>
+                              </tr>
+                              <tr class="bg-misty-gray">
+                                 <td>12:35-12:50</td>
+                                 <td>15 mins</td>
+                                 <td colspan="4">Questions And Answers</td>
+                              </tr>
+                              <tr class="bg-fresh-mint">
                                  <td>12:50-13:50</td>
                                  <td>1 hr</td>
                                  <td colspan="3">Lunch Break</td>
                               </tr>
-                          </tbody>
-                       </table>
-                    </div>
-                 </div>
-              </div>
-              <div class="event_accordion-item" style="border-bottom: 2px solid #3d3d99;">
-                 <button id="event_accordion-button-3" aria-expanded="false">
-                 <span style="color: #27a844;">Afternoon 13:40 to 17:00</span>
-                 <span class="event_accordion-title">Afternoon Session</span>
-                 <span class="icon" aria-hidden="true"></span>
-                 </button>
-                 <div class="event_accordion-content">
-                    <div class="table-responsive">
-                       <table class="table table-bordered">
-                          <thead>
-                             <tr class="text-center bg-creamy-yellow">
-                                <th>Time</th>
-                                <th>Duration</th>
-                                <th>Session Name</th>
-                                <th>Organization</th>
-                                <th>Speaker</th>
-                             </tr>
-                          </thead>
-                          <tbody class="text-center">
-                             <tr class="bg-wzureish-white">
-                                <td>13:40-13:55</td>
-                                <td>15 mins</td>
-                                <td><b>Reimagining Infrastructure</b> by leveraging 5G & AI</td>
-                                <td>Qualcomm</td>
-                                <td>Mr. Nitin Sharma</td>
-                             </tr>
-                             <tr class="bg-wzureish-white">
-                                <td>13:50-14:05</td>
-                                <td>15 mins</td>
-                                <td>Digital reality for Smart cities</td>
-                                <td>Hexagon R&D India</td>
-                                <td>Mr Rajesh Dhyani, Executive Director & Head of Geosystems</td>
-                             </tr>
-                             <tr class="bg-wzureish-white">
-                                <td>14:20-14:35</td>
-                                <td>15 mins</td>
-                                <td><b>Bridging Gaps, Building Futures:</b> T-Hub’s Role in Advancing Digital Twin Innovations for Public Good</td>
-                                <td>T-Hub, Telangana </td>
-                                <td>Wg Cdr Anish Anthony (Retd), COO</td>
-                             </tr>
-                             <tr class="bg-wzureish-white">
-                                <td>14:35-14:50</td>
-                                <td>15 mins</td>
-                                <td><b>From Vision to Value:</b> : Empowering Infrastructure Planning with Global Insights through Digital Twins and AI</td>
-                                <td>Deloitte</td>
-                                <td>Sh. Aditya Khaitan</td>
-                             </tr>
-                             <tr class="bg-wzureish-white">
-                                <td>14:50-15:05</td>
-                                <td>15 mins</td>
-                                <td>Perspective of Telangana State Government for Infrastructure Planning & Design</td>
-                                <td>EC&IT, Telangana State Govt</td>
-                                <td>Ms. Rama Devi, Director</td>
-                             </tr>
-                             <tr class="bg-wzureish-white">
-                                <td>15:05-15:20</td>
-                                <td>15 mins</td>
-                                <td><b>Digital Twins:</b> Pioneering Smart Infrastructure</td>
-                                <td>Neurom Innovations</td>
-                                <td>Mr. Sumedh Sonkamble</td>
-                             </tr>
-                             <tr class="bg-wzureish-white">
-                                <td>15:20-15:35</td>
-                                <td>15 mins</td>
-                                <td><b>Learning through Digital Twins:</b> A New Era of Training and Evaluation</td>
-                                <td>PES University, Bengaluru</td>
-                                <td>Mr. Adithya</td>
-                             </tr>
-                             <tr class="bg-wzureish-white">
-                                <td>15:35-15:50</td>
-                                <td>15 mins</td>
-                                <td>Sustainable energy solutions for Data Centers</td>
-                                <td>Readypods Technologies </td>
-                                <td>Mr. Chandra Vadrevu</td>
-                             </tr>
-                             <tr class="bg-misty-gray">
-                                <td>15:50-16:05</td>
-                                <td>15 mins</td>
-                                <td colspan="3">Questions And Answers</td>
-                             </tr>
-                             <tr class="bg-fresh-mint">
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="event_accordion-item" style="border-bottom: 2px solid #3d3d99;">
+                  <button id="event_accordion-button-3" aria-expanded="false">
+                     <span style="color: #27a844;">Afternoon 13:40 to 17:00</span>
+                     <span class="event_accordion-title">Afternoon Session</span>
+                     <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="event_accordion-content">
+                     <div class="table-responsive">
+                        <table class="table table-bordered">
+                           <thead>
+                              <tr class="text-center bg-creamy-yellow">
+                                 <th>Time</th>
+                                 <th>Duration</th>
+                                 <th>Session Name</th>
+                                 <th>Organization</th>
+                                 <th>Speaker</th>
+                              </tr>
+                           </thead>
+                           <tbody class="text-center">
+                              <tr class="bg-wzureish-white">
+                                 <td>13:40-13:55</td>
+                                 <td>15 mins</td>
+                                 <td><b>Reimagining Infrastructure</b> by leveraging 5G & AI</td>
+                                 <td>Qualcomm</td>
+                                 <td>Mr. Nitin Sharma</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>13:50-14:05</td>
+                                 <td>15 mins</td>
+                                 <td>Digital reality for Smart cities</td>
+                                 <td>Hexagon R&D India</td>
+                                 <td>Mr Rajesh Dhyani, Executive Director & Head of Geosystems</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>14:20-14:35</td>
+                                 <td>15 mins</td>
+                                 <td><b>Bridging Gaps, Building Futures:</b> T-Hub’s Role in Advancing Digital Twin Innovations for Public Good</td>
+                                 <td>T-Hub, Telangana </td>
+                                 <td>Wg Cdr Anish Anthony (Retd), COO</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>14:35-14:50</td>
+                                 <td>15 mins</td>
+                                 <td><b>From Vision to Value:</b> : Empowering Infrastructure Planning with Global Insights through Digital Twins and AI</td>
+                                 <td>Deloitte</td>
+                                 <td>Sh. Aditya Khaitan</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>14:50-15:05</td>
+                                 <td>15 mins</td>
+                                 <td>Perspective of Telangana State Government for Infrastructure Planning & Design</td>
+                                 <td>EC&IT, Telangana State Govt</td>
+                                 <td>Ms. Rama Devi, Director</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>15:05-15:20</td>
+                                 <td>15 mins</td>
+                                 <td><b>Digital Twins:</b> Pioneering Smart Infrastructure</td>
+                                 <td>Neurom Innovations</td>
+                                 <td>Mr. Sumedh Sonkamble</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>15:20-15:35</td>
+                                 <td>15 mins</td>
+                                 <td><b>Learning through Digital Twins:</b> A New Era of Training and Evaluation</td>
+                                 <td>PES University, Bengaluru</td>
+                                 <td>Mr. Adithya</td>
+                              </tr>
+                              <tr class="bg-wzureish-white">
+                                 <td>15:35-15:50</td>
+                                 <td>15 mins</td>
+                                 <td>Sustainable energy solutions for Data Centers</td>
+                                 <td>Readypods Technologies </td>
+                                 <td>Mr. Chandra Vadrevu</td>
+                              </tr>
+                              <tr class="bg-misty-gray">
+                                 <td>15:50-16:05</td>
+                                 <td>15 mins</td>
+                                 <td colspan="3">Questions And Answers</td>
+                              </tr>
+                              <tr class="bg-fresh-mint">
                                  <td>16:05-16:20</td>
                                  <td>45 mins</td>
-                                 <td colspan="3">High Tea + Netwroking		</td>
+                                 <td colspan="3">High Tea + Netwroking </td>
                               </tr>
-                             <tr class="bg-creamy-yellow">
-                                <td>16:20-17:00</td>
-                                <td>50 mins</td>
-                                <td colspan="3">Digital Twins Unveiled: Your Questions Answered by the Experts</td>
-                             </tr>
-                          </tbody>
-                       </table>
-                    </div>
-                 </div>
-              </div>
-           </div>
-           <div class="d-flex justify-content-center">
-              <a class="main-btn primary-btn mt-3" download="<?php echo base_url('include/web/custom/Tentative_Schedule_Sangam_Hyderabad.pdf');?>" href="<?php echo base_url('include/web/custom/Tentative_Schedule_Sangam_Hyderabad.pdf');?>">Download Schedule</a>
-           </div>
+                              <tr class="bg-creamy-yellow">
+                                 <td>16:20-17:00</td>
+                                 <td>50 mins</td>
+                                 <td colspan="3">Digital Twins Unveiled: Your Questions Answered by the Experts</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="d-flex justify-content-center">
+               <a class="main-btn primary-btn mt-3" download="<?php echo base_url('include/web/custom/Tentative_Schedule_Sangam_Hyderabad.pdf'); ?>" href="<?php echo base_url('include/web/custom/Tentative_Schedule_Sangam_Hyderabad.pdf'); ?>">Download Schedule</a>
+            </div>
          </div>
       </div>
    </div>
@@ -1187,8 +1204,8 @@
                      <div class="icon">
                      </div>
                      <h2 class="number"><span class="count"><?php if (isset($approved)) {
-                        echo $approved;
-                        }?></span>+</h2>
+                                                               echo $approved;
+                                                            } ?></span>+</h2>
                      <p>Participants Per Event </p>
                   </div>
                </div>
@@ -1199,8 +1216,8 @@
                      <div class="icon">
                      </div>
                      <h2 class="number"><span class="count"><?php if (isset($verified)) {
-                        echo $verified;
-                        }?></span>+</h2>
+                                                               echo $verified;
+                                                            } ?></span>+</h2>
                      <p>Pre Registrations </p>
                   </div>
                </div>
@@ -1231,13 +1248,13 @@
             <div class="row justify-content-center">
                <div class="col-lg-12">
                   <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible;">
-                     <!-- <span class="sub-title"><img src="<?php echo base_url('');?>include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span> -->
+                     <!-- <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span> -->
                      <h2>Dignitaries</h2>
                   </div>
                </div>
             </div>
             <div class="row mb-3" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;">
-               <div class="col-lg-3 col-sm-6" >
+               <div class="col-lg-3 col-sm-6">
                   <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s;">
                      <div class="member-img">
                         <img src="<?php echo base_url(''); ?>include/web/custom/Chief_Guests_Dr_Neeraj_Mittal.jpg" alt=" Chief_Guests_Dr_Neeraj_Mittal">
@@ -1263,7 +1280,7 @@
                      </div>
                   </div>
                </div>
-               <div class="col-lg-9 col-sm-6" >
+               <div class="col-lg-9 col-sm-6">
                   <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s;">
                      <div class="text_for_outreach" style="padding-bottom:0">
                         <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Prof. Rangan Banerjee</a></p>
@@ -1377,7 +1394,7 @@
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Dr. Aniruddha Roy</a></h3>
-                        <p style="font-size:13px">Dr. Aniruddha Roy is responsible for enabling business through conceptualizing applications as relevant to the vertical segments using emerging technologies. Prior to this, he was Vice President at Navayuga Engineering Company Ltd., wherein he spearheaded Delhi State Spatial Data Infrastructure and National Spatial Data Infrastructure projects. He is currently volunteering as a member in FICCI National Space and Geospatial committee and ‘Geospatial Committee - LITD22' of  Bureau of Indian Standards.</p>
+                        <p style="font-size:13px">Dr. Aniruddha Roy is responsible for enabling business through conceptualizing applications as relevant to the vertical segments using emerging technologies. Prior to this, he was Vice President at Navayuga Engineering Company Ltd., wherein he spearheaded Delhi State Spatial Data Infrastructure and National Spatial Data Infrastructure projects. He is currently volunteering as a member in FICCI National Space and Geospatial committee and ‘Geospatial Committee - LITD22' of Bureau of Indian Standards.</p>
                      </div>
                   </div>
                   <div class="project-content">
@@ -1544,7 +1561,7 @@
             <div class="row justify-content-center">
                <div class="col-lg-12">
                   <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-                     <!-- <span class="sub-title"><img src="<?php echo base_url('');?>include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span> -->
+                     <!-- <span class="sub-title"><img src="<?php echo base_url(''); ?>include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span> -->
                      <h2>Dignitaries</h2>
                   </div>
                </div>
@@ -1553,7 +1570,7 @@
                <div class="col-lg-3 col-sm-6">
                   <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
                      <div class="member-img">
-                        <img src="<?php echo base_url('');?>include/web/custom/Chester_Shri_BVR_Subrahmanyam.jpg" alt="Chester_Shri_BVR_Subrahmanyam">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/Chester_Shri_BVR_Subrahmanyam.jpg" alt="Chester_Shri_BVR_Subrahmanyam">
                      </div>
                   </div>
                </div>
@@ -1564,7 +1581,7 @@
                         <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;"> Chief Executive Officer </h5>
                         <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">NITI Aayog</h4>
                      </div>
-                     <p>Shri B.V.R. Subrahmanyam  Indian Administrative Service Officer of 1987 batch (Chhattisgarh cadre), he has held important assignments over the last three decades in Madhya Pradesh, Chhattisgarh, and Jammu &amp; Kashmir, along with a stint at The World Bank. He has been Secretary in the Ministry of Commerce &amp; Industry, Chief Secretary, Jammu &amp; Kashmir, Principal Secretary, Government of Chhattisgarh, and has held positions in the Prime Minister’s Office.</p>
+                     <p>Shri B.V.R. Subrahmanyam Indian Administrative Service Officer of 1987 batch (Chhattisgarh cadre), he has held important assignments over the last three decades in Madhya Pradesh, Chhattisgarh, and Jammu &amp; Kashmir, along with a stint at The World Bank. He has been Secretary in the Ministry of Commerce &amp; Industry, Chief Secretary, Jammu &amp; Kashmir, Principal Secretary, Government of Chhattisgarh, and has held positions in the Prime Minister’s Office.</p>
                   </div>
                </div>
             </div>
@@ -1572,7 +1589,7 @@
                <div class="col-lg-3 col-sm-6">
                   <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
                      <div class="member-img">
-                        <img src="<?php echo base_url('');?>include/web/custom/Chief_Guests_Dr_Neeraj_Mittal.jpg" alt=" Chief_Guests_Dr_Neeraj_Mittal">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/Chief_Guests_Dr_Neeraj_Mittal.jpg" alt=" Chief_Guests_Dr_Neeraj_Mittal">
                      </div>
                   </div>
                </div>
@@ -1591,7 +1608,7 @@
                <div class="col-lg-3 col-sm-6" style="display: flex;justify-content: center;align-items: center;">
                   <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
                      <div class="member-img">
-                        <img src="<?php echo base_url('');?>include/web/custom/Chester_Dr_Debabrata_Das.png" alt="Chester_Dr_Debabrata_Das">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/Chester_Dr_Debabrata_Das.png" alt="Chester_Dr_Debabrata_Das">
                      </div>
                   </div>
                </div>
@@ -1625,7 +1642,7 @@
          <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Dr_Dhirendra_Singh.jpg" alt="Speaker_Dr_Dhirendra_Singh">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Dr_Dhirendra_Singh.jpg" alt="Speaker_Dr_Dhirendra_Singh">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Dhirendra Singh</a></h3>
@@ -1639,13 +1656,13 @@
                </div>
                <div class="text_for_outreach height_150">
                   <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Dhirendra Singh</a></p>
-                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO, Founder &amp; Air Quality Specialist  </h5>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO, Founder &amp; Air Quality Specialist </h5>
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Airshed Planning Professionals Private Limited</h4>
                </div>
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Elangovan_Manickam.jpg" alt="Speaker_Elangovan_Manickam">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Elangovan_Manickam.jpg" alt="Speaker_Elangovan_Manickam">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Elangovan Manickam </a></h3>
@@ -1659,12 +1676,12 @@
                </div>
                <div class="text_for_outreach height_150">
                   <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Elangovan Manickam </a></p>
-                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Nokia Bell Labs Space  </h5>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Nokia Bell Labs Space </h5>
                </div>
             </div>
             <!-- <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Karthikeyan_Kumaraguru.jpg" alt="Speaker_Karthikeyan_Kumaraguru">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Karthikeyan_Kumaraguru.jpg" alt="Speaker_Karthikeyan_Kumaraguru">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Karthikeyan Kumaraguru</a></h3>
@@ -1686,7 +1703,7 @@
                </div> -->
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Puneet_Badrinath.jpg" alt="Speaker_Puneet_Badrinath">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Puneet_Badrinath.jpg" alt="Speaker_Puneet_Badrinath">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Puneet Badrinath</a></h3>
@@ -1706,7 +1723,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Pulin_Pathneja.png" alt="Speaker_Pulin_Pathneja">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Pulin_Pathneja.png" alt="Speaker_Pulin_Pathneja">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Pulin Pathneja </a></h3>
@@ -1726,7 +1743,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Prasad_Kulkarni.jpg" alt="Speaker_Prasad_Kulkarni">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Prasad_Kulkarni.jpg" alt="Speaker_Prasad_Kulkarni">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Prasad Kulkarni </a></h3>
@@ -1746,7 +1763,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Dr_Rajeev_Saraf.jpg" alt="Speaker_Dr_Rajeev_Saraf">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Dr_Rajeev_Saraf.jpg" alt="Speaker_Dr_Rajeev_Saraf">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Rajeev Saraf</a></h3>
@@ -1766,11 +1783,11 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Raghuram_Krishnapuram.jpg" alt="Speaker_Raghuram_Krishnapuram">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Raghuram_Krishnapuram.jpg" alt="Speaker_Raghuram_Krishnapuram">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Raghuram Krishnapuram</a></h3>
-                        <p style="font-size:13px">Raghu works experience spans both academia and industry across continents over almost four decades. Raghu is an alumnus of IIT-Bombay and received his PhD  from Carnegie Mellon University in 1987. He worked in the academia in the US until the year 2000. Between 2000 and 2015, he held various technical leadership positions at IBM Research India and IBM T J Watson Centre, NY, USA, where he led projects in the area of ‘Knowledge, Information, and Smarter Planet Solutions’ and ‘Cognitive Computing,’ with a particular focus on emerging markets.</p>
+                        <p style="font-size:13px">Raghu works experience spans both academia and industry across continents over almost four decades. Raghu is an alumnus of IIT-Bombay and received his PhD from Carnegie Mellon University in 1987. He worked in the academia in the US until the year 2000. Between 2000 and 2015, he held various technical leadership positions at IBM Research India and IBM T J Watson Centre, NY, USA, where he led projects in the area of ‘Knowledge, Information, and Smarter Planet Solutions’ and ‘Cognitive Computing,’ with a particular focus on emerging markets.</p>
                      </div>
                   </div>
                   <div class="project-content">
@@ -1786,7 +1803,7 @@
             </div>
             <!-- <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Rahul_Joshi.jpg" alt="Speaker_Rahul_Joshi">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rahul_Joshi.jpg" alt="Speaker_Rahul_Joshi">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Rahul Joshi</a></h3>
@@ -1808,7 +1825,7 @@
                </div> -->
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Sasikumar_Ramachandran_Nair.jpg" alt="Speaker_Sasikumar_Ramachandran_Nair">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Sasikumar_Ramachandran_Nair.jpg" alt="Speaker_Sasikumar_Ramachandran_Nair">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Sasikumar Ramachandran Nair
@@ -1832,7 +1849,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Sunil_Ramachandran.jpg" alt="Speaker_Sunil_Ramachandran">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Sunil_Ramachandran.jpg" alt="Speaker_Sunil_Ramachandran">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Sunil Ramachandran </a></h3>
@@ -1852,7 +1869,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Sunil_Abraham.jpg" alt="Speaker_Sunil_Abraham">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Sunil_Abraham.jpg" alt="Speaker_Sunil_Abraham">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Sunil Abraham </a></h3>
@@ -1872,7 +1889,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Yuvraj_Tomar.jpg" alt="Speaker_Yuvraj_Tomar">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Yuvraj_Tomar.jpg" alt="Speaker_Yuvraj_Tomar">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Yuvraj Tomar</a></h3>
@@ -1899,11 +1916,11 @@
          <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Dr_Aniruddha_Roy.jpg" alt="Speaker_Dr_Aniruddha_Roy">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Dr_Aniruddha_Roy.jpg" alt="Speaker_Dr_Aniruddha_Roy">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Anirudha Roy</a></h3>
-                        <p style="font-size:13px">Dr. Roy spearheaded Delhi State Spatial Data Infrastructure ( DSSDI) and National Spatial Data Infrastructure ( NSDI)  projects. He also served as Technical head of ESRI India and  Project Scientist  at CSRE, IIT Bombay. He has done his PhD in Environmental Science and Engg. He is currently volunteering as a member in FICCI National Space and Geospatial committee and as a technical member of ‘Geospatial Committee - LITD22 ' of  BIS.</p>
+                        <p style="font-size:13px">Dr. Roy spearheaded Delhi State Spatial Data Infrastructure ( DSSDI) and National Spatial Data Infrastructure ( NSDI) projects. He also served as Technical head of ESRI India and Project Scientist at CSRE, IIT Bombay. He has done his PhD in Environmental Science and Engg. He is currently volunteering as a member in FICCI National Space and Geospatial committee and as a technical member of ‘Geospatial Committee - LITD22 ' of BIS.</p>
                      </div>
                   </div>
                   <div class="project-content">
@@ -1919,7 +1936,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Ananth_Sampath.jpg" alt="Speaker_Ananth_Sampath">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Ananth_Sampath.jpg" alt="Speaker_Ananth_Sampath">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Ananth Sampath</a></h3>
@@ -1939,7 +1956,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Karthikeyan_Subramaniam.jpg" alt="Speaker_Karthikeyan_Subramaniam">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Karthikeyan_Subramaniam.jpg" alt="Speaker_Karthikeyan_Subramaniam">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Karthikeyan Subramaniam</a></h3>
@@ -1959,7 +1976,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Kartik_Raja.jpg" alt="Speaker_Kartik_Raja">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Kartik_Raja.jpg" alt="Speaker_Kartik_Raja">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Kartik Raja</a></h3>
@@ -1979,34 +1996,34 @@
             </div>
          </div>
       </div>
-      <div class="custom-tab-content text-center" id="tab6" >
-        <div class="row justify-content-center" bis_skin_checked="1">
-               <div class="col-lg-12" bis_skin_checked="1">
-                  <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;" bis_skin_checked="1">
-                     <!-- <span class="sub-title"><img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span> -->
-                     <h2>Dignitaries</h2>
+      <div class="custom-tab-content text-center" id="tab6">
+         <div class="row justify-content-center" bis_skin_checked="1">
+            <div class="col-lg-12" bis_skin_checked="1">
+               <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;" bis_skin_checked="1">
+                  <!-- <span class="sub-title"><img src="http://localhost/sangam-initiative/include/web/custom/technology.png" alt="javascrip:void(0)"> Team Member</span> -->
+                  <h2>Dignitaries</h2>
+               </div>
+            </div>
+         </div>
+         <div class="row mb-3" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;">
+            <div class="col-lg-3 col-sm-6">
+               <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
+                  <div class="member-img">
+                     <img src="<?php echo base_url(''); ?>include/web/custom/Chief_Narayanan_P_J.jpg" alt=" Chief_Narayanan_P_J">
                   </div>
                </div>
             </div>
-        <div class="row mb-3" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;" >
-               <div class="col-lg-3 col-sm-6" >
-                  <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;" >
-                     <div class="member-img" >
-                        <img src="<?php echo base_url('');?>include/web/custom/Chief_Narayanan_P_J.jpg" alt=" Chief_Narayanan_P_J">
-                     </div>
+            <div class="col-lg-9 col-sm-6">
+               <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
+                  <div class="text_for_outreach" style="padding-bottom:0">
+                     <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Narayanan P. J.</a></p>
+                     <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director</h5>
+                     <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">International Institute of Information Technology</h4>
                   </div>
-               </div>
-               <div class="col-lg-9 col-sm-6" >
-                  <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;" >
-                     <div class="text_for_outreach" style="padding-bottom:0" >
-                        <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Narayanan P. J.</a></p>
-                        <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director</h5>
-                        <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">International Institute of Information Technology</h4>
-                     </div>
-                     <p>P. J. Narayanan has done his Ph.D from University of Maryland, USA. He is known for his work in computer vision (3D reconstruction, structure-from-motion, computational displays), computer graphics (ray-tracing of implicit surfaces, dynamic scenes), and parallel computing on the GPU (graph algorithms, string sorting, ML techniques like graph cuts, ANN and clustering, as well as several computer vision tasks).</p>
-                  </div>
+                  <p>P. J. Narayanan has done his Ph.D from University of Maryland, USA. He is known for his work in computer vision (3D reconstruction, structure-from-motion, computational displays), computer graphics (ray-tracing of implicit surfaces, dynamic scenes), and parallel computing on the GPU (graph algorithms, string sorting, ML techniques like graph cuts, ANN and clustering, as well as several computer vision tasks).</p>
                </div>
             </div>
+         </div>
          <div class="container">
             <div class="row justify-content-center">
                <div class="col-lg-12">
@@ -2025,7 +2042,7 @@
          <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Aditya_khaitan.jpg" alt="Speaker_Aditya_khaitan">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Aditya_khaitan.jpg" alt="Speaker_Aditya_khaitan">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Aditya khaitan</a></h3>
@@ -2045,7 +2062,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Anuradha_Vattem.png" alt="Speaker_Anuradha_Vattem">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Anuradha_Vattem.png" alt="Speaker_Anuradha_Vattem">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Anuradha Vattem</a></h3>
@@ -2065,7 +2082,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Adithya_Balasubramanyam.jpg" alt="Speaker_Adithya_Balasubramanyam">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Adithya_Balasubramanyam.jpg" alt="Speaker_Adithya_Balasubramanyam">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Adithya Balasubramanyam</a></h3>
@@ -2085,7 +2102,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Chandra_Vadrevu.jpg" alt="Speaker_Chandra_Vadrevu">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Chandra_Vadrevu.jpg" alt="Speaker_Chandra_Vadrevu">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Chandra Vadrevu</a></h3>
@@ -2105,7 +2122,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Kaustav_Bhattacharya.jpg" alt="Speaker_Kaustav_Bhattacharya">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Kaustav_Bhattacharya.jpg" alt="Speaker_Kaustav_Bhattacharya">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Kaustav Bhattacharya </a></h3>
@@ -2125,7 +2142,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Rajesh_Dhyani.jpg" alt="Speaker_Rajesh_Dhyani">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rajesh_Dhyani.jpg" alt="Speaker_Rajesh_Dhyani">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Rajesh Dhyani </a></h3>
@@ -2145,7 +2162,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Rama_Devi_Lanka.jpg" alt="Speaker_Rama_Devi_Lanka">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rama_Devi_Lanka.jpg" alt="Speaker_Rama_Devi_Lanka">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Rama Devi Lanka </a></h3>
@@ -2165,7 +2182,7 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Srinivas_Chary_Vedala.jpg" alt="Speaker_Srinivas_Chary_Vedala">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Srinivas_Chary_Vedala.jpg" alt="Speaker_Srinivas_Chary_Vedala">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Srinivas Chary Vedala</a></h3>
@@ -2179,13 +2196,13 @@
                </div>
                <div class="text_for_outreach height_150">
                   <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Srinivas Chary Vedala</a></p>
-                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO  </h5>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO </h5>
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">WASH Innovation Hub</h4>
                </div>
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Sumedh_Sonkamble.jpg" alt="Speaker_Sumedh_Sonkamble">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Sumedh_Sonkamble.jpg" alt="Speaker_Sumedh_Sonkamble">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Sumedh Sonkamble</a></h3>
@@ -2199,13 +2216,13 @@
                </div>
                <div class="text_for_outreach height_150">
                   <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Sumedh Sonkamble</a></p>
-                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Engineering  </h5>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Engineering </h5>
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Neurom</h4>
                </div>
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url('');?>include/web/custom/Speaker_Anthony_Anish.jpg" alt="Speaker_Anthony_Anish">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Anthony_Anish.jpg" alt="Speaker_Anthony_Anish">
                   <div class="hover-content">
                      <div class="text text-white">
                         <h3 class="title"><a href="javascript:void(0)">Wg Cdr Anthony Anish (Retd)</a></h3>
@@ -2220,7 +2237,7 @@
                <div class="text_for_outreach height_150">
                   <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Wg Cdr Anthony Anish (Retd)</a></p>
                   <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Chief operating officer</h5>
-                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Chief operating officer</h4>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">T-Hub</h4>
                </div>
             </div>
          </div>
@@ -2229,14 +2246,15 @@
 </section>
 <script>
    const items = document.querySelectorAll(".event_accordion button");
+
    function toggleevent_accordion() {
-       const itemToggle = this.getAttribute('aria-expanded');
-       for (i = 0; i < items.length; i++) {
-           items[i].setAttribute('aria-expanded', 'false');
-       }
-       if (itemToggle == 'false') {
-           this.setAttribute('aria-expanded', 'true');
-       }
+      const itemToggle = this.getAttribute('aria-expanded');
+      for (i = 0; i < items.length; i++) {
+         items[i].setAttribute('aria-expanded', 'false');
+      }
+      if (itemToggle == 'false') {
+         this.setAttribute('aria-expanded', 'true');
+      }
    }
    items.forEach(item => item.addEventListener('click', toggleevent_accordion));
 </script>
