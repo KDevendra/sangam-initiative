@@ -1,4 +1,5 @@
 <?php include_once __DIR__ . '/../common/header.php'; ?>
+
 <section class="banner-section mt__150">
    <video autoplay muted loop id="bgVideo">
       <source src="<?php echo base_url('') ?>include/web/custom/bg_video.mp4" type="video/mp4" />
@@ -21,7 +22,7 @@
          <div class="hero-button mb-20">
             <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration"> <i class="far fa-table" aria-hidden="true"></i> Pre-Registration </a>
             <a class="main-btn golden-btn mb-10 preRegisBtn btn_green" href="<?php echo base_url(''); ?>include/web/custom/Download_EoI.pdf" download="" target="_blank">
-            <i class="far fa-download" aria-hidden="true"></i> Download EoI
+               <i class="far fa-download" aria-hidden="true"></i> Download EoI
             </a>
             <!-- <a class="main-btn golden-btn mb-10 preRegisBtn howToJoin" href="javascript:void(0)">
                <i class="far fa-user" aria-hidden="true"></i> How to Join
@@ -55,7 +56,7 @@
                      <p class="text-white fs_24">
                         <b>Welcome to "Sangam: Digital Twin"</b><br>
                         <span class="fs_18" style="font-family: 'Roboto', sans-serif;">
-                        a pioneering invitation to collaborate on the future of infrastructure planning and design.
+                           a pioneering invitation to collaborate on the future of infrastructure planning and design.
                         </span>
                      </p>
                      <p class="text-white fs_18" style="font-family: 'Roboto', sans-serif; font-size: 20px;font-style:italic">
@@ -64,7 +65,7 @@
                      <p class="text-white fs_18" style="font-family: 'Roboto', sans-serif; font-size: 20px;">
                         <span><b>public entities, infrastructure planners, tech giants, startups, and academia</b></span>
                      </p>
-                     <p class="text-white fs_18" style="font-family: 'Roboto', sans-serif; font-size: 20px;">    to break free from silos and engage in <br>
+                     <p class="text-white fs_18" style="font-family: 'Roboto', sans-serif; font-size: 20px;"> to break free from silos and engage in <br>
                         <span style="font-style: italic;"><b>Whole-of-Nation approach.</b></span>
                      </p>
                   </div>
@@ -199,8 +200,8 @@
    </section> -->
 <style>
    .desk {
-   font-size: 16px;
-   font-family: arial;
+      font-size: 16px;
+      font-family: arial;
    }
 </style>
 <section class="working-process-section">
@@ -460,8 +461,8 @@
                <h2>Process of Sangam</h2>
                <p class="fs_18">
                   <span>
-                  <b>DoT would begin this journey </b> with a campaign to engage with potential participants, <b>including industry experts, academia, and other relevant stakeholders,</b>
-                  <span style="font-style: italic;">to aware widespread awareness and interest.</span>
+                     <b>DoT would begin this journey </b> with a campaign to engage with potential participants, <b>including industry experts, academia, and other relevant stakeholders,</b>
+                     <span style="font-style: italic;">to aware widespread awareness and interest.</span>
                   </span>
                </p>
                <p class="desk"><b>DoT plans to conduct three physical (in-person) meetings before the deadline for EoI submission. </b>And planned meetings are <span style="font-style:italic">aimed to engage prospective candidates and generate enthusiasm for participation</span>.<b> <br>The agenda is crafted to offer a diverse and enriching experience,</b>
@@ -564,8 +565,8 @@
                <span class="sub-title text-white"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt="" />Why to Join</span>
                <h3>Transforming Infrastructure with Digital Twin: Sangam</h3>
                <p class="mt-1">
-                  <b>Be part of a collaborative effort to redefine infrastructure planning and design</b> <br> The <span style="font-style: italic;">"Digital Twin: Sangam"  </span><br>PoC <b> is not just a project; it's a leap into the future</b> of how we conceive, plan, and build our world.<br> <b>Your
-                  expertise and innovation can help shape sustainable, efficient, and integrated infrastructure systems </b><span style="font-style: italic;"> for generations to come.</span>
+                  <b>Be part of a collaborative effort to redefine infrastructure planning and design</b> <br> The <span style="font-style: italic;">"Digital Twin: Sangam" </span><br>PoC <b> is not just a project; it's a leap into the future</b> of how we conceive, plan, and build our world.<br> <b>Your
+                     expertise and innovation can help shape sustainable, efficient, and integrated infrastructure systems </b><span style="font-style: italic;"> for generations to come.</span>
                </p>
             </div>
          </div>
@@ -904,28 +905,28 @@
                <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 12th March 2024</h4>
                <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 11th March 2024</p>
                <div class="d-flex justify-content-center">
-                  <a class="btn btn-danger text-white mt-20" href="<?php echo base_url('registration')?>">Register Now</a>
+                  <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a>
                </div>
             </div>
          </div>
       </div>
    </div>
 </section>
-<section id="registerForTheEventDes" class="cta-bg-section bg_cover pt-50 pb-50 p-r z-1" style="background-image: url('<?php echo base_url('');?>include/web/custom/Banner_3.jpg');">
+<section id="registerForTheEventDes" class="cta-bg-section bg_cover pt-50 pb-50 p-r z-1" style="background-image: url('<?php echo base_url(''); ?>include/web/custom/Banner_3.jpg');">
    <div class="container">
       <div class="row align-items-center">
          <div class="col-lg-7">
             <div class="cta-content-box text-white mb-50 wow fadeInLeft" style="visibility: visible;">
                <div class="section-title mb-20">
-                  <span class="sub-title text-white"><img src="<?php echo base_url('');?>include/web/custom/technology_white.png" alt=""></i>Sangam 2024: Uniting Minds, Inspiring Change</span>
+                  <span class="sub-title text-white"><img src="<?php echo base_url(''); ?>include/web/custom/technology_white.png" alt=""></i>Sangam 2024: Uniting Minds, Inspiring Change</span>
                   <h2>Register Now for the Ultimate Confluence of Ideas</h2>
                </div>
                <p class="mb-35">Join us for Sangam 2024, a premier event where innovation meets inspiration. With locations in Delhi, Bangalore, and Hyderabad, Sangam offers a platform for thought leaders, industry experts, and enthusiasts to come together and exchange ideas that shape the future. Don't miss your chance to be part of this transformative experience. Register now before it's too late.</p>
-               <a class="main-btn golden-btn preRegisBtn btn_green" href="<?php echo base_url('registration');?>">Register for Event</a>
+               <a class="main-btn golden-btn preRegisBtn btn_green" href="<?php echo base_url('registration'); ?>">Register for Event</a>
             </div>
          </div>
          <div class="col-lg-5">
-            <div class="wow fadeInRight" style="visibility: visible;"><img style="border-radius: 5px;" src="<?php echo base_url('');?>include/web/custom/bg_image.jpg" alt="Image"></div>
+            <div class="wow fadeInRight" style="visibility: visible;"><img style="border-radius: 5px;" src="<?php echo base_url(''); ?>include/web/custom/bg_image.jpg" alt="Image"></div>
          </div>
       </div>
    </div>
@@ -1250,133 +1251,133 @@
                </div>
             </div>
             <div class="testimonial-slider-one wow fadeInUp">
-              <div class="single-testimonial-item">
+               <div class="single-testimonial-item">
                   <div class="testimonial-inner-content text-center">
-                      <div class="d-flex justify-content-center">
-                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_ESRI.png" alt="">
-                      </div>
-                      <div class="quote-rating-box d-flex justify-content-center">
-                          <div class="ratings-box">
-                              <h5><a href="https://www.youtube.com/watch?v=s8SB0QvuRxI"  target="_blank">ArcGIS</a></h6>
+                     <div class="d-flex justify-content-center">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/Curated_Content_ESRI.png" alt="">
+                     </div>
+                     <div class="quote-rating-box d-flex justify-content-center">
+                        <div class="ratings-box">
+                           <h5><a href="https://www.youtube.com/watch?v=s8SB0QvuRxI" target="_blank">ArcGIS</a></h6>
                               <p> <b>A Foundation for Digital Twins</b> </p>
-                          </div>
-                      </div>
-                      <div class="text-center">
-                          <h6> <a href="https://www.esri.in/" target="_blank">ESRI</a> </h6>
-                      </div>
+                        </div>
+                     </div>
+                     <div class="text-center">
+                        <h6> <a href="https://www.esri.in/" target="_blank">ESRI</a> </h6>
+                     </div>
                   </div>
-              </div>
-              <div class="single-testimonial-item">
+               </div>
+               <div class="single-testimonial-item">
                   <div class="testimonial-inner-content text-center">
-                      <div class="d-flex justify-content-center">
-                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_Blue_Sky.webp" alt="">
-                      </div>
-                      <div class="quote-rating-box d-flex justify-content-center">
-                          <div class="ratings-box">
-                              <h5><a href="https://blueskyhq.io/blog/spacetime-building-a-digital-twin-of-our-planet"  target="_blank">SpaceTime™</a></h6>
+                     <div class="d-flex justify-content-center">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/Curated_Content_Blue_Sky.webp" alt="">
+                     </div>
+                     <div class="quote-rating-box d-flex justify-content-center">
+                        <div class="ratings-box">
+                           <h5><a href="https://blueskyhq.io/blog/spacetime-building-a-digital-twin-of-our-planet" target="_blank">SpaceTime™</a></h6>
                               <p> <b>Building a Digital Twin of our Planet</b> </p>
-                          </div>
-                      </div>
-                      <div class="text-center">
-                          <h6> <a href="https://blueskyhq.io/" target="_blank">Blue Sky Analytics</a> </h6>
-                      </div>
+                        </div>
+                     </div>
+                     <div class="text-center">
+                        <h6> <a href="https://blueskyhq.io/" target="_blank">Blue Sky Analytics</a> </h6>
+                     </div>
                   </div>
-              </div>
-              <div class="single-testimonial-item">
+               </div>
+               <div class="single-testimonial-item">
                   <div class="testimonial-inner-content text-center">
-                      <div class="d-flex justify-content-center">
-                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_Genesys.jpg" alt="">
-                      </div>
-                      <div class="quote-rating-box d-flex justify-content-center">
-                          <div class="ratings-box">
-                              <h5><a href="https://www.igenesys.com/3d-digital-twin"  target="_blank">Genesys’s </a></h6>
+                     <div class="d-flex justify-content-center">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/Curated_Content_Genesys.jpg" alt="">
+                     </div>
+                     <div class="quote-rating-box d-flex justify-content-center">
+                        <div class="ratings-box">
+                           <h5><a href="https://www.igenesys.com/3d-digital-twin" target="_blank">Genesys’s </a></h6>
                               <p> <b>3D- Digital Twin</b> </p>
-                          </div>
-                      </div>
-                      <div class="text-center">
-                          <h6> <a href="https://www.igenesys.com/" target="_blank">Genesys</a> </h6>
-                      </div>
+                        </div>
+                     </div>
+                     <div class="text-center">
+                        <h6> <a href="https://www.igenesys.com/" target="_blank">Genesys</a> </h6>
+                     </div>
                   </div>
-              </div>
-              <div class="single-testimonial-item">
+               </div>
+               <div class="single-testimonial-item">
                   <div class="testimonial-inner-content text-center">
-                      <div class="d-flex justify-content-center">
-                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_Bentley.png" alt="">
-                      </div>
-                      <div class="quote-rating-box d-flex justify-content-center">
-                          <div class="ratings-box">
-                              <h5><a href="https://www.bentley.com/software/digital-twins/"  target="_blank">Digital Twins and iTwin Platform</a></h6>
+                     <div class="d-flex justify-content-center">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/Curated_Content_Bentley.png" alt="">
+                     </div>
+                     <div class="quote-rating-box d-flex justify-content-center">
+                        <div class="ratings-box">
+                           <h5><a href="https://www.bentley.com/software/digital-twins/" target="_blank">Digital Twins and iTwin Platform</a></h6>
                               <p> <b>Connect The Physical And Virtual World</b> </p>
-                          </div>
-                      </div>
-                      <div class="text-center">
-                          <h6> <a href="https://www.bentley.com/" target="_blank">Bentley</a> </h6>
-                      </div>
+                        </div>
+                     </div>
+                     <div class="text-center">
+                        <h6> <a href="https://www.bentley.com/" target="_blank">Bentley</a> </h6>
+                     </div>
                   </div>
-              </div>
-              <div class="single-testimonial-item">
+               </div>
+               <div class="single-testimonial-item">
                   <div class="testimonial-inner-content text-center">
-                      <div class="d-flex justify-content-center">
-                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_NAYAN.png" alt="">
-                      </div>
-                      <div class="quote-rating-box d-flex justify-content-center">
-                          <div class="ratings-box">
-                              <h5><a href="https://traffic.nayan.co/"  target="_blank">High Precision Video Analytics and AI Data</a></h6>
-                          </div>
-                      </div>
-                      <div class="text-center">
-                          <h6> <a href="https://nayan.co/" target="_blank">NAYAN</a> </h6>
-                      </div>
+                     <div class="d-flex justify-content-center">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/Curated_Content_NAYAN.png" alt="">
+                     </div>
+                     <div class="quote-rating-box d-flex justify-content-center">
+                        <div class="ratings-box">
+                           <h5><a href="https://traffic.nayan.co/" target="_blank">High Precision Video Analytics and AI Data</a></h6>
+                        </div>
+                     </div>
+                     <div class="text-center">
+                        <h6> <a href="https://nayan.co/" target="_blank">NAYAN</a> </h6>
+                     </div>
                   </div>
-              </div>
-              <div class="single-testimonial-item">
+               </div>
+               <div class="single-testimonial-item">
                   <div class="testimonial-inner-content text-center">
-                      <div class="d-flex justify-content-center">
-                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_JIO.png" alt="">
-                      </div>
-                      <div class="quote-rating-box d-flex justify-content-center">
-                          <div class="ratings-box">
-                              <h5><a href="https://www.jio.com/business/jio-mixed-reality"  target="_blank">Mixed Reality </a></h6>
+                     <div class="d-flex justify-content-center">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/Curated_Content_JIO.png" alt="">
+                     </div>
+                     <div class="quote-rating-box d-flex justify-content-center">
+                        <div class="ratings-box">
+                           <h5><a href="https://www.jio.com/business/jio-mixed-reality" target="_blank">Mixed Reality </a></h6>
                               <p> <b>Deliver the perfect blend of physical and digital worlds</b> </p>
-                          </div>
-                      </div>
-                      <div class="text-center">
-                          <h6> <a href="https://www.jio.com/" target="_blank">Jio</a> </h6>
-                      </div>
+                        </div>
+                     </div>
+                     <div class="text-center">
+                        <h6> <a href="https://www.jio.com/" target="_blank">Jio</a> </h6>
+                     </div>
                   </div>
-              </div>
-              <div class="single-testimonial-item">
+               </div>
+               <div class="single-testimonial-item">
                   <div class="testimonial-inner-content text-center">
-                      <div class="d-flex justify-content-center">
-                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_Microsoft.png" alt="">
-                      </div>
-                      <div class="quote-rating-box d-flex justify-content-center">
-                          <div class="ratings-box">
-                              <h5><a href="https://azure.microsoft.com/en-in/products/digital-twins"  target="_blank">Azure Digital Twins</a></h6>
+                     <div class="d-flex justify-content-center">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/Curated_Content_Microsoft.png" alt="">
+                     </div>
+                     <div class="quote-rating-box d-flex justify-content-center">
+                        <div class="ratings-box">
+                           <h5><a href="https://azure.microsoft.com/en-in/products/digital-twins" target="_blank">Azure Digital Twins</a></h6>
                               <p> <b>Create live, digital models of the physical world</b> </p>
-                          </div>
-                      </div>
-                      <div class="text-center">
-                          <h6> <a href="https://azure.microsoft.com/en-in/" target="_blank">Microsoft</a> </h6>
-                      </div>
+                        </div>
+                     </div>
+                     <div class="text-center">
+                        <h6> <a href="https://azure.microsoft.com/en-in/" target="_blank">Microsoft</a> </h6>
+                     </div>
                   </div>
-              </div>
-              <div class="single-testimonial-item">
+               </div>
+               <div class="single-testimonial-item">
                   <div class="testimonial-inner-content text-center">
-                      <div class="d-flex justify-content-center">
-                          <img src="<?php echo base_url('');?>include/web/custom/Curated_Content_Meta.jpg" alt="">
-                      </div>
-                      <div class="quote-rating-box d-flex justify-content-center">
-                          <div class="ratings-box">
-                              <h5><a href="https://about.meta.com/metaverse/#virtual-reality"  target="_blank">Virtual reality</a></h6>
+                     <div class="d-flex justify-content-center">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/Curated_Content_Meta.jpg" alt="">
+                     </div>
+                     <div class="quote-rating-box d-flex justify-content-center">
+                        <div class="ratings-box">
+                           <h5><a href="https://about.meta.com/metaverse/#virtual-reality" target="_blank">Virtual reality</a></h6>
                               <p> <b>Explore new worlds and shared experiences</b> </p>
-                          </div>
-                      </div>
-                      <div class="text-center">
-                          <h6> <a href="https://about.meta.com/" target="_blank">Meta</a> </h6>
-                      </div>
+                        </div>
+                     </div>
+                     <div class="text-center">
+                        <h6> <a href="https://about.meta.com/" target="_blank">Meta</a> </h6>
+                     </div>
                   </div>
-              </div>
+               </div>
             </div>
          </div>
       </div>

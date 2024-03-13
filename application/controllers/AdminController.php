@@ -462,7 +462,7 @@ class AdminController extends CI_Controller
                     $innovativeAspects = $this->input->post("innovative_aspects");
                     $feasibilityChallenges = $this->input->post("feasibility_and_challenges");
                     $relevance = $this->input->post("relevance");
-                    $upload_relevant_document = $this->handleFileUpload("upload_relevant_document", "uploads/upload_relevant_document/", "jpg|png|jpeg|pdf|doc|docx", "2000");
+                    $upload_relevant_document = $this->handleFileUpload("upload_relevant_document", "./uploads/upload_relevant_document/", "jpg|png|jpeg|pdf|doc|docx", "2000");
                     if (strpos($upload_relevant_document, "Error") !== false) {
                         $this->session->set_flashdata("error", $upload_relevant_document);
                         return redirect("submit-use-cases");
@@ -1449,7 +1449,25 @@ class AdminController extends CI_Controller
                 $this->session->set_flashdata("error", validation_errors());
                 return redirect("eoi-registration");
             } else {
+                $cond = ["user_id" => $this->session->login['user_id']];
+                $check = $this->BaseModel->getData("eoi_registration", $cond);
+                $check_file = empty($_FILES["upload_document"]["name"]);
+                if ($check_file === 1) {
+                  if ($check->num_rows() === 0 || empty($check->row()->upload_document)) {
+                      $this->session->set_flashdata("error", "Unable to upload a document");
+                      return redirect("eoi-registration");
+                  } else {
+                      $upload_document = $check->row()->upload_document;
+                  }
+                } else {
+                  $upload_document = $this->handleFileUpload("upload_document", "./uploads/upload_document/", "pdf", 25000);
+                  if (empty($upload_document)) {
+                      $this->session->set_flashdata("error", "Unable to upload a document");
+                      return redirect("eoi-registration");
+                  }
+                }
                 $postData = [
+                    "upload_document"=>$upload_document,
                     "full_name" => $this->input->post("full_name"),
                     "email" => $this->input->post("email"),
                     "contact_no" => $this->input->post("contact_no"),
