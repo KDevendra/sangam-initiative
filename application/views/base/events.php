@@ -1623,6 +1623,25 @@
                   </div>
                </div>
             </div>
+            <div class="row mb-3" style="box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;">
+               <div class="col-lg-3 col-sm-6" style="display: flex;justify-content: center;align-items: center;">
+                  <div class="single-team-item-two mb-20 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
+                     <div class="member-img">
+                        <img src="<?php echo base_url(''); ?>include/web/custom/Chief_Shri_Ritu_Ranjan_Mitter.jpg" alt="Chief_Shri_Ritu_Ranjan_Mitter">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-9 col-sm-6">
+                  <div class="experience-box mt-25 mb-20 text-center wow fadeInUp" data-wow-delay=".35s" style="visibility: visible; animation-delay: 0.35s; animation-name: fadeInUp;">
+                     <div class="text_for_outreach" style="padding-bottom:0">
+                        <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)" tabindex="0">Shri Ritu Ranjan Mitter </a></p>
+                        <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director General Telecom</h5>
+                        <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">DoT, GoI</h4>
+                     </div>
+                     <p>Before joining IIITB in 2002, he had served at G S Sanyal School of Telecommunication at IIT Kharagpur and later at Kirana Networks in New Jersey, USA. He is Project Officer of National Mission for Interdisciplinary Cyber Physical Systems in the areas of Advanced Communication System, from DST, Govt of India. He was PI of multiple sponsored projects from Intel, Hewlett Packard, Microsoft, Motorola Research, Tejas Networks, Nokia, Govt. of India, in the areas of Broadband Wireless MAC/QoS/Energy-saving, and IMS. His main areas of research interest are IoT and Wireless Access Network's MAC, QoS, Power saving.Dr. Das received his Ph.D. degree from the Indian Institute of Technology Kharagpur.</p>
+                  </div>
+               </div>
+            </div>
          </div>
          <div class="container">
             <div class="row justify-content-center">
@@ -1801,28 +1820,27 @@
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">IUDX Programme Unit, FSID IISC</h4>
                </div>
             </div>
-            <!-- <div class="single-project-item-four col-md-3">
+            <div class="single-project-item-four col-md-3">
                <div class="project-img">
-                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rahul_Joshi.jpg" alt="Speaker_Rahul_Joshi">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Karthikeyan_Subramaniam.jpg" alt="Speaker_Karthikeyan_Subramaniam">
                   <div class="hover-content">
                      <div class="text text-white">
-                        <h3 class="title"><a href="javascript:void(0)">Rahul Joshi</a></h3>
-
-                        <p style="font-size:13px">Rahul Joshi leads transformative initiatives within Jio’s network functions, aligning closely with the digital twin concept. His role spans from curating diverse data from various network, device and infrastructure sources to crafting actionable insights that drive the development of innovative products. He spearheads automation initiatives ensuring seamless integration of data to enhance the efficiency and customer experience of India’s telecom landscape.</p>
+                        <h3 class="title"><a href="javascript:void(0)">Karthikeyan Subramaniam</a></h3>
+                        <p style="font-size:13px">Mr Karthikeyan Subramaniam has been working in Telecommunication Systems for two decades. His primary interest has been Research and Development of managing 4G and 5G system. He is currently managing 10+ global operators as Business Head of Management SW Group, Samsung Research Institute, Bengaluru, India. He is also involved in driving operational efficiency for solution deployments that is also published in 3GPP SA5 standards.</p>
                      </div>
                   </div>
                   <div class="project-content">
                      <div class="text text-white">
-
                      </div>
                   </div>
                </div>
                <div class="text_for_outreach height_150">
-                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Rahul Joshi</a></p>
-                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">AVP &amp; Lead- Analytics &amp; Automation</h5>
-                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Reliance Jio</h4>
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Karthikeyan Subramaniam</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Business Head</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Samsung</h4>
                </div>
-               </div> -->
+            </div>
+
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
                   <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Sasikumar_Ramachandran_Nair.jpg" alt="Speaker_Sasikumar_Ramachandran_Nair">
@@ -1910,7 +1928,7 @@
          </div>
          <div class="col-lg-12">
             <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-               <h2>Panel</h2>
+               <h2>Industry Panel</h2>
             </div>
          </div>
          <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
@@ -1956,6 +1974,26 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Mr_Chinnaya_Math.jpg" alt="Speaker_Mr_Chinnaya_Math">
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Mr. Chinnaya Math</a></h3>
+                        <p style="font-size:13px">He has done his engineering in Electronics and Communication and Masters in Embedded Systems. He started his career in 2002 with DRDO and have 20-year experience in hardware and software design, development, integration, and validation. He was associated with CISCO and BOSCH in his career. He Joined Nimble Vision as a full time CEO from 2019 onwards working on various use cases of water and sewage automation.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Mr. Chinnaya Math</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO & Founder </h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Nimble Vision</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
                   <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Karthikeyan_Subramaniam.jpg" alt="Speaker_Karthikeyan_Subramaniam">
                   <div class="hover-content">
                      <div class="text text-white">
@@ -1992,6 +2030,93 @@
                   <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Kartik Raja</a></p>
                   <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder</h5>
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Mozark</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Mr_Kamalaka_Thiruvadi.jpg" alt="Speaker_Mr_Kamalaka_Thiruvadi">
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Mr. Kamalaka Thiruvadi</a></h3>
+                        <p style="font-size:13px">A Business Management professional in the Information Technology field with over 25 years of experience in Sales, Business Development, Channel Management, Building Client Relationships. Knowledge in Hardware Platform including Desktop & Mobile Computing and Geographic Information System (GIS), Image Processing software, Photogrammetry Software, CAD/CAM/CAE Applications.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Mr. Kamalaka Thiruvadi</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Mr. Kamalaka Thiruvadi</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Bentley Systems</h4>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-12">
+            <div class="section-title text-center mb-20 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+               <h2>Industry leaders</h2>
+            </div>
+         </div>
+         <div class="row speakerSection wow fadeInUp d-flex justify-content-center" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+           <div class="single-project-item-four col-md-3">
+              <div class="project-img">
+                 <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Dr_Rohini_Srivathsa.jpg" alt="Speaker_Dr_Rohini_Srivathsa">
+                 <div class="hover-content">
+                    <div class="text text-white">
+                       <h3 class="title"><a href="javascript:void(0)">Dr. Rohini Srivathsa</a></h3>
+                       <!-- <p style="font-size:13px">He has done his engineering in Electronics and Communication and Masters in Embedded Systems. He started his career in 2002 with DRDO and have 20-year experience in hardware and software design, development, integration, and validation. He was associated with CISCO and BOSCH in his career. He Joined Nimble Vision as a full time CEO from 2019 onwards working on various use cases of water and sewage automation.</p> -->
+                    </div>
+                 </div>
+                 <div class="project-content">
+                    <div class="text text-white">
+                    </div>
+                 </div>
+              </div>
+              <div class="text_for_outreach height_150">
+                 <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Dr. Rohini Srivathsa</a></p>
+                 <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CTO </h5>
+                 <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Microsoft India & South Asia</h4>
+              </div>
+           </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Mr_SS_Narayanaswamy.jpg" alt="Speaker_Mr_SS_Narayanaswamy">
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Mr. S S Narayanaswamy</a></h3>
+                        <!-- <p style="font-size:13px">Dr. Roy spearheaded Delhi State Spatial Data Infrastructure ( DSSDI) and National Spatial Data Infrastructure ( NSDI) projects. He also served as Technical head of ESRI India and Project Scientist at CSRE, IIT Bombay. He has done his PhD in Environmental Science and Engg. He is currently volunteering as a member in FICCI National Space and Geospatial committee and as a technical member of ‘Geospatial Committee - LITD22 ' of BIS.</p> -->
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Mr. S S Narayanaswamy</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Head of Innovations Centres</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Japan & Asia Pacific, Oracle</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Ali_Hussein.jpg" alt="Speaker_Ali_Hussein">
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Mr. Ali Hussein</a></h3>
+                        <!-- <p style="font-size:13px">Mr Ananth has spent 27 years in the Information technology industry. In this tenure, he has been working with customers in different industry segments like Consumer Products, Manufacturing, IT & ES, Telecom and Public Sector. This involves solving some of the customer's problems with Solution selling, Application Software, Platform software and IT infrastructure products with a good understanding of IT Services.</p> -->
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Mr. Ali Hussein</a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO </h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Eros Investments</h4>
                </div>
             </div>
          </div>
