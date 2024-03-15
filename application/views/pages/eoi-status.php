@@ -386,7 +386,11 @@
                                                    <label for="uploadDocument" class="form-label mt-2">Upload Document </label><br>
                                                    <?php
                                                    if (isset($flag) && $flag === 'view') {
-                                                       if (strpos($userDetail->upload_document, "Error") !== false) {
+                                                        if (empty($list->upload_relevant_document))
+                                                        {
+                                                           echo "No file uploaded";
+                                                        }
+                                                       elseif (strpos($userDetail->upload_document, "Error") !== false) {
                                                            echo "No file uploaded";
                                                        } else {
                                                    ?>
