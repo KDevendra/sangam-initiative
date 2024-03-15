@@ -24,12 +24,14 @@
                <img src="<?php echo base_url(''); ?>include/web/custom/Picture1.jpg" alt="Project Image" />
                <div class="hover-content">
                   <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
                      <h5>Bridging the gap between Innovation and Planning</h5>
                      <p>Come and be a part of the opening event of Sangam. Participating in Sangam outreach program gives you an opportunity to position yourself as a key player for infrastructure planning and design by connecting, collaborating and engaging in insightful discussions with professionals from diverse industries.</p>
                   </div>
                </div>
                <div class="project-content">
                   <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Delhi: India’s Enterprise Hub</a></h3> -->
                   </div>
                </div>
             </div>
@@ -37,9 +39,11 @@
                <p class="title"><a href="javascript:void(0)">Sangam – <b>Delhi</b> <br> <span>India’s Enterprise Hub</span> </a></p>
                <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIT Delhi</h5>
                <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 5th March 2024</h4>
-               <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 3rd March 2024</p>
-               <div class="d-flex justify-content-center">
-                  <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a>
+               <!-- <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 3rd March 2024</p> -->
+               <div class="d-flex justify-content-center align-item-center"style="gap: 10px;">
+                  <!-- <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a> -->
+                  <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://www.youtube.com/live/0y82KMyOqi8?si=8tB_7xbc6VIevabt" target="_blank"><img height="40px" src="<?php echo base_url(''); ?>include/web/custom/youtube.png"  alt=""> </a>
+                  <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://pib.gov.in/PressReleasePage.aspx?PRID=2011745" target="_blank"><img height="35px" src="<?php echo base_url(''); ?>include/web/custom/PIB.png"  alt=""> </a>
                </div>
             </div>
          </div>
@@ -48,12 +52,14 @@
                <img src="<?php echo base_url(''); ?>include/web/custom/Picture2.jpg" alt="Project Image" />
                <div class="hover-content">
                   <div class="text text-white">
+                     <!-- <h3 class="title"><a href="">Sangam – Bengaluru: India’s Silicon Valley</a></h3> -->
                      <h5>Confluence of Minds and Data</h5>
                      <p>Sangam- Bengaluru gives a platform for intersectoral interaction. Come and connect with industry experts, explore possibilities to contribute for better and efficient infrastructure planning and design.</p>
                   </div>
                </div>
                <div class="project-content">
                   <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Bengaluru: India’s Silicon Valley</a></h3> -->
                   </div>
                </div>
             </div>
@@ -61,9 +67,11 @@
                <p class="title"><a href="javascript:void(0)">Sangam – <b>Bangalore</b> <br> <span>India’s Silicon Valley</span> </a></p>
                <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIIT Bangalore</h5>
                <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 9th March 2024</h4>
-               <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 8th March 2024</p>
-               <div class="d-flex justify-content-center">
-                  <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a>
+               <!-- <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 8th March 2024</p> -->
+               <div class="d-flex justify-content-center" style="gap:10px">
+                  <!-- <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a> -->
+                  <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://www.youtube.com/live/xDDH7UzCgoo?si=HGgl5vba-z08hgcf" target="_blank"><img height="40px" src="<?php echo base_url(''); ?>include/web/custom/youtube.png"  alt=""> </a>
+                  <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2013083" target="_blank"><img height="35px" src="<?php echo base_url(''); ?>include/web/custom/PIB.png"  alt=""> </a>
                </div>
             </div>
          </div>
@@ -72,6 +80,7 @@
                <img src="<?php echo base_url(''); ?>include/web/custom/Picture3.jpg" alt="Project Image" />
                <div class="hover-content">
                   <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Hyderabad: India’s Innovation Hub</a></h3> -->
                      <h5>Confluence of Innovators and Opportunities</h5>
                      <p>
                         Experience Sangam- Hyderabad, an opportunity to share your ideas, knowledge and innovative solutions with professionals from diverse sectors.
@@ -80,6 +89,7 @@
                </div>
                <div class="project-content">
                   <div class="text text-white">
+                     <!-- <h3 class="title"><a href="javascript:void(0)">Sangam – Hyderabad: India’s Innovation Hub</a></h3> -->
                   </div>
                </div>
             </div>
@@ -87,9 +97,11 @@
                <p class="title"><a href="javascript:void(0)">Sangam – <b>Hyderabad</b> <br> <span>India’s Innovation Hub</span> </a></p>
                <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIIT Hyderabad</h5>
                <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 12th March 2024</h4>
-               <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 11th March 2024</p>
-               <div class="d-flex justify-content-center">
-                  <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a>
+               <!-- <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 11th March 2024</p> -->
+               <div class="d-flex justify-content-center align-item-center" style="gap:10px">
+                  <!-- <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a> -->
+                  <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://www.youtube.com/live/OiPtJ9dixEE?si=sduB_rVhbmCHNcty" target="_blank"><img src="<?php echo base_url(''); ?>include/web/custom/youtube.png" height="40px;" alt=""> </a>
+                  <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://pib.gov.in/PressReleasePage.aspx?PRID=2013934" target="_blank"><img  src="<?php echo base_url(''); ?>include/web/custom/PIB.png" height="35px"  alt=""> </a>
                </div>
             </div>
          </div>

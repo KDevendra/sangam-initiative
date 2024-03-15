@@ -1,8 +1,7 @@
 <?php include_once __DIR__ . '/../common/header.php'; ?>
-
 <section class="banner-section mt__150">
    <video autoplay muted loop id="bgVideo">
-      <source src="<?php echo base_url('') ?>include/web/custom/bg_video.mp4" type="video/mp4" />
+      <source src="<?php echo base_url(''); ?>include/web/custom/bg_video.mp4" type="video/mp4" />
    </video>
    <div class="hero-wrapper-one __mp__100">
       <div class="container text-center">
@@ -20,25 +19,14 @@
             </div>
          </div>
          <div class="hero-button mb-20">
-            <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('') ?>registration"> <i class="far fa-table" aria-hidden="true"></i> Pre-Registration </a>
-            <a class="main-btn golden-btn mb-10 preRegisBtn btn_green" href="<?php echo base_url(''); ?>include/web/custom/Download_EoI.pdf" download="" target="_blank">
-               <i class="far fa-download" aria-hidden="true"></i> Download EoI
-            </a>
-            <!-- <a class="main-btn golden-btn mb-10 preRegisBtn howToJoin" href="javascript:void(0)">
-               <i class="far fa-user" aria-hidden="true"></i> How to Join
-               </a> -->
+            <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url('expression-of-interest/'); ?>#registerNowEoI" style="background: rgb(227, 25, 25);border-radius: 16px;box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);border: 1px solid rgba(255, 255, 255, 0.18);padding: 10px;color: white;width: 300px;text-align: center;opacity: 0.9;width: fit-content;background-color: red !important;">EoI Submission Date Extended till 05 April 2024 </a>
          </div>
-         <!-- <div class="hero-button mb-20">
-            <a class="golden-btn mb-10 ___p8_22" href="javascript:void(0)">
-                Embracing the Future Together
+         <div class="hero-button mb-20">
+            <a class="main-btn golden-btn mb-10 preRegisBtn" href="<?php echo base_url(''); ?>registration"> <i class="far fa-table" aria-hidden="true"></i> Pre-Registration </a>
+            <a class="main-btn golden-btn mb-10 preRegisBtn btn_green" href="<?php echo base_url(''); ?>include/web/custom/Download_EoI.pdf" download="" target="_blank">
+            <i class="far fa-download" aria-hidden="true"></i> Download EoI
             </a>
-            <a class="golden-btn mb-10 ___p8_22" href="javascript:void(0)">
-                Crafting Blueprint
-            </a>
-            <a class="golden-btn mb-10 ___p8_22" href="javascript:void(0)">
-                Pioneering Precision
-            </a>
-            </div> -->
+         </div>
          <div class="hero-button mb-20">
             <a class="main-btn mb-10 textExploreMore" id="exploreBtn" href="javascript:void(0)"> Explore More <i class="far fa-angle-double-down" aria-hidden="true"></i> </a>
          </div>
@@ -56,7 +44,7 @@
                      <p class="text-white fs_24">
                         <b>Welcome to "Sangam: Digital Twin"</b><br>
                         <span class="fs_18" style="font-family: 'Roboto', sans-serif;">
-                           a pioneering invitation to collaborate on the future of infrastructure planning and design.
+                        a pioneering invitation to collaborate on the future of infrastructure planning and design.
                         </span>
                      </p>
                      <p class="text-white fs_18" style="font-family: 'Roboto', sans-serif; font-size: 20px;font-style:italic">
@@ -97,7 +85,7 @@
                   </div>
                   <div class="col-lg-4 col-md-6 col-sm-12">
                      <div class="about-features-item item-active text-center">
-                        <div class="hover-bg bg_cover" style="background-image: url(<?php echo base_url('') ?>include/web/custom/Environmental_Data.jpg);"></div>
+                        <div class="hover-bg bg_cover" style="background-image: url(<?php echo base_url(''); ?>include/web/custom/Environmental_Data.jpg);"></div>
                         <div class="icon"><i class="flaticon-vision"></i></div>
                         <div class="text">
                            <h3 class="title">Crafting the Blueprint</h3>
@@ -200,8 +188,8 @@
    </section> -->
 <style>
    .desk {
-      font-size: 16px;
-      font-family: arial;
+   font-size: 16px;
+   font-family: arial;
    }
 </style>
 <section class="working-process-section">
@@ -306,7 +294,7 @@
                   <li><i class="fal fa-long-arrow-right"></i>The Rise of AI: Enhancing Perception and Decision-Making <span>AI: Elevating Awareness and Insights in Digital Twins</span></li>
                   <li><i class="fal fa-long-arrow-right"></i>The Power of Community, Tools, and Standards: Accelerating Innovation <span>"Harnessing Collective Knowledge for Efficient Digital Twin Development</span></li>
                </ul>
-               <a class="main-btn primary-btn" href="<?php echo base_url('why-does-it-matter-now') ?>">Know More</a>
+               <a class="main-btn primary-btn" href="<?php echo base_url('why-does-it-matter-now'); ?>">Know More</a>
             </div>
          </div>
       </div>
@@ -461,8 +449,8 @@
                <h2>Process of Sangam</h2>
                <p class="fs_18">
                   <span>
-                     <b>DoT would begin this journey </b> with a campaign to engage with potential participants, <b>including industry experts, academia, and other relevant stakeholders,</b>
-                     <span style="font-style: italic;">to aware widespread awareness and interest.</span>
+                  <b>DoT would begin this journey </b> with a campaign to engage with potential participants, <b>including industry experts, academia, and other relevant stakeholders,</b>
+                  <span style="font-style: italic;">to aware widespread awareness and interest.</span>
                   </span>
                </p>
                <p class="desk"><b>DoT plans to conduct three physical (in-person) meetings before the deadline for EoI submission. </b>And planned meetings are <span style="font-style:italic">aimed to engage prospective candidates and generate enthusiasm for participation</span>.<b> <br>The agenda is crafted to offer a diverse and enriching experience,</b>
@@ -550,10 +538,10 @@
 </section>
 <section class="service-bgc-section p-r z-1 main-bg pt-50 pb-50" id="whyToJoinDes">
    <div class="shape shape-one">
-      <span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png" /></span>
+      <span><img src="<?php echo base_url(''); ?>include/web/custom/network.png" alt="Leaf Png" /></span>
    </div>
    <div class="shape shape-two">
-      <span><img src="<?php echo base_url('') ?>include/web/custom/network.png" alt="Leaf Png" /></span>
+      <span><img src="<?php echo base_url(''); ?>include/web/custom/network.png" alt="Leaf Png" /></span>
    </div>
    <div class="shape shape-three">
       <span><img src="<?php echo base_url(''); ?>include/web/images/shape/leaf-3.png" alt="Leaf Png" /></span>
@@ -566,7 +554,7 @@
                <h3>Transforming Infrastructure with Digital Twin: Sangam</h3>
                <p class="mt-1">
                   <b>Be part of a collaborative effort to redefine infrastructure planning and design</b> <br> The <span style="font-style: italic;">"Digital Twin: Sangam" </span><br>PoC <b> is not just a project; it's a leap into the future</b> of how we conceive, plan, and build our world.<br> <b>Your
-                     expertise and innovation can help shape sustainable, efficient, and integrated infrastructure systems </b><span style="font-style: italic;"> for generations to come.</span>
+                  expertise and innovation can help shape sustainable, efficient, and integrated infrastructure systems </b><span style="font-style: italic;"> for generations to come.</span>
                </p>
             </div>
          </div>
@@ -849,11 +837,12 @@
                <p class="title"><a href="javascript:void(0)">Sangam – <b>Delhi</b> <br> <span>India’s Enterprise Hub</span> </a></p>
                <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIT Delhi</h5>
                <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 5th March 2024</h4>
-               <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 3rd March 2024</p>
-               <div class="d-flex justify-content-center">
-                  <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a>
+               <!-- <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 3rd March 2024</p> -->
+               <div class="d-flex justify-content-center align-item-center"style="gap: 10px;">
+                  <!-- <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a> -->
+                  <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://www.youtube.com/live/0y82KMyOqi8?si=8tB_7xbc6VIevabt" target="_blank"><img height="40px" src="<?php echo base_url(''); ?>include/web/custom/youtube.png"  alt=""> </a>
+                  <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://pib.gov.in/PressReleasePage.aspx?PRID=2011745" target="_blank"><img height="35px" src="<?php echo base_url(''); ?>include/web/custom/PIB.png"  alt=""> </a>
                </div>
-                 <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://www.youtube.com/live/0y82KMyOqi8?si=8tB_7xbc6VIevabt" target="_blank"><img src="<?php echo base_url('');?>include/web/custom/youtube.png" height="22px;" alt=""> <b>Click here to watch Events</b> </a>
             </div>
          </div>
          <div class="single-project-item-four">
@@ -876,12 +865,12 @@
                <p class="title"><a href="javascript:void(0)">Sangam – <b>Bangalore</b> <br> <span>India’s Silicon Valley</span> </a></p>
                <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIIT Bangalore</h5>
                <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 9th March 2024</h4>
-               <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 8th March 2024</p>
-               <div class="d-flex justify-content-center">
-                  <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a>
+               <!-- <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 8th March 2024</p> -->
+               <div class="d-flex justify-content-center" style="gap:10px">
+                  <!-- <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a> -->
+                  <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://www.youtube.com/live/xDDH7UzCgoo?si=HGgl5vba-z08hgcf" target="_blank"><img height="40px" src="<?php echo base_url(''); ?>include/web/custom/youtube.png"  alt=""> </a>
+                  <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2013083" target="_blank"><img height="35px" src="<?php echo base_url(''); ?>include/web/custom/PIB.png"  alt=""> </a>
                </div>
-               <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://www.youtube.com/live/xDDH7UzCgoo?si=HGgl5vba-z08hgcf" target="_blank"><img src="<?php echo base_url('');?>include/web/custom/youtube.png" height="22px;" alt=""> <b>Click here to watch Events</b> </a>
-
             </div>
          </div>
          <div class="single-project-item-four">
@@ -906,11 +895,12 @@
                <p class="title"><a href="javascript:void(0)">Sangam – <b>Hyderabad</b> <br> <span>India’s Innovation Hub</span> </a></p>
                <h5><i class="far fa-map-marker" aria-hidden="true"></i> Venue: IIIT Hyderabad</h5>
                <h4><i class="far fa-calendar" aria-hidden="true"></i> Date: 12th March 2024</h4>
-               <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 11th March 2024</p>
-               <div class="d-flex justify-content-center">
-                  <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a>
+               <!-- <p> <span style="background-color: #ddddddba;color: #dc3545;border-radius: 5px;padding: 0px 5px;font-size: 15px;">Deadline</span> 11th March 2024</p> -->
+               <div class="d-flex justify-content-center align-item-center" style="gap:10px">
+                  <!-- <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a> -->
+                  <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://www.youtube.com/live/OiPtJ9dixEE?si=sduB_rVhbmCHNcty" target="_blank"><img src="<?php echo base_url(''); ?>include/web/custom/youtube.png" height="40px;" alt=""> </a>
+                  <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://pib.gov.in/PressReleasePage.aspx?PRID=2013934" target="_blank"><img  src="<?php echo base_url(''); ?>include/web/custom/PIB.png" height="35px"  alt=""> </a>
                </div>
-               <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://www.youtube.com/live/OiPtJ9dixEE?si=sduB_rVhbmCHNcty" target="_blank"><img src="<?php echo base_url('');?>include/web/custom/youtube.png" height="22px;" alt=""> <b>Click here to watch Events</b> </a>
             </div>
          </div>
       </div>
@@ -1262,8 +1252,9 @@
                      </div>
                      <div class="quote-rating-box d-flex justify-content-center">
                         <div class="ratings-box">
-                           <h5><a href="https://www.youtube.com/watch?v=s8SB0QvuRxI" target="_blank">ArcGIS</a></h6>
-                              <p> <b>A Foundation for Digital Twins</b> </p>
+                           <h5>
+                           <a href="https://www.youtube.com/watch?v=s8SB0QvuRxI" target="_blank">ArcGIS</a></h6>
+                           <p> <b>A Foundation for Digital Twins</b> </p>
                         </div>
                      </div>
                      <div class="text-center">
@@ -1278,8 +1269,9 @@
                      </div>
                      <div class="quote-rating-box d-flex justify-content-center">
                         <div class="ratings-box">
-                           <h5><a href="https://blueskyhq.io/blog/spacetime-building-a-digital-twin-of-our-planet" target="_blank">SpaceTime™</a></h6>
-                              <p> <b>Building a Digital Twin of our Planet</b> </p>
+                           <h5>
+                           <a href="https://blueskyhq.io/blog/spacetime-building-a-digital-twin-of-our-planet" target="_blank">SpaceTime™</a></h6>
+                           <p> <b>Building a Digital Twin of our Planet</b> </p>
                         </div>
                      </div>
                      <div class="text-center">
@@ -1294,8 +1286,9 @@
                      </div>
                      <div class="quote-rating-box d-flex justify-content-center">
                         <div class="ratings-box">
-                           <h5><a href="https://www.igenesys.com/3d-digital-twin" target="_blank">Genesys’s </a></h6>
-                              <p> <b>3D- Digital Twin</b> </p>
+                           <h5>
+                           <a href="https://www.igenesys.com/3d-digital-twin" target="_blank">Genesys’s </a></h6>
+                           <p> <b>3D- Digital Twin</b> </p>
                         </div>
                      </div>
                      <div class="text-center">
@@ -1310,8 +1303,9 @@
                      </div>
                      <div class="quote-rating-box d-flex justify-content-center">
                         <div class="ratings-box">
-                           <h5><a href="https://www.bentley.com/software/digital-twins/" target="_blank">Digital Twins and iTwin Platform</a></h6>
-                              <p> <b>Connect The Physical And Virtual World</b> </p>
+                           <h5>
+                           <a href="https://www.bentley.com/software/digital-twins/" target="_blank">Digital Twins and iTwin Platform</a></h6>
+                           <p> <b>Connect The Physical And Virtual World</b> </p>
                         </div>
                      </div>
                      <div class="text-center">
@@ -1326,7 +1320,8 @@
                      </div>
                      <div class="quote-rating-box d-flex justify-content-center">
                         <div class="ratings-box">
-                           <h5><a href="https://traffic.nayan.co/" target="_blank">High Precision Video Analytics and AI Data</a></h6>
+                           <h5>
+                           <a href="https://traffic.nayan.co/" target="_blank">High Precision Video Analytics and AI Data</a></h6>
                         </div>
                      </div>
                      <div class="text-center">
@@ -1341,8 +1336,9 @@
                      </div>
                      <div class="quote-rating-box d-flex justify-content-center">
                         <div class="ratings-box">
-                           <h5><a href="https://www.jio.com/business/jio-mixed-reality" target="_blank">Mixed Reality </a></h6>
-                              <p> <b>Deliver the perfect blend of physical and digital worlds</b> </p>
+                           <h5>
+                           <a href="https://www.jio.com/business/jio-mixed-reality" target="_blank">Mixed Reality </a></h6>
+                           <p> <b>Deliver the perfect blend of physical and digital worlds</b> </p>
                         </div>
                      </div>
                      <div class="text-center">
@@ -1357,8 +1353,9 @@
                      </div>
                      <div class="quote-rating-box d-flex justify-content-center">
                         <div class="ratings-box">
-                           <h5><a href="https://azure.microsoft.com/en-in/products/digital-twins" target="_blank">Azure Digital Twins</a></h6>
-                              <p> <b>Create live, digital models of the physical world</b> </p>
+                           <h5>
+                           <a href="https://azure.microsoft.com/en-in/products/digital-twins" target="_blank">Azure Digital Twins</a></h6>
+                           <p> <b>Create live, digital models of the physical world</b> </p>
                         </div>
                      </div>
                      <div class="text-center">
@@ -1373,8 +1370,9 @@
                      </div>
                      <div class="quote-rating-box d-flex justify-content-center">
                         <div class="ratings-box">
-                           <h5><a href="https://about.meta.com/metaverse/#virtual-reality" target="_blank">Virtual reality</a></h6>
-                              <p> <b>Explore new worlds and shared experiences</b> </p>
+                           <h5>
+                           <a href="https://about.meta.com/metaverse/#virtual-reality" target="_blank">Virtual reality</a></h6>
+                           <p> <b>Explore new worlds and shared experiences</b> </p>
                         </div>
                      </div>
                      <div class="text-center">
@@ -1387,10 +1385,10 @@
       </div>
    </div>
 </section>
-<div class="sticky-button-eoi">
-    <a href="<?php echo base_url('expression-of-interest/'); ?>#registerNowEoI">
-        <span style="margin-bottom:0">EoI Submission Date Extended</span>
-        <span style="margin-bottom:0">02 April 2024</span>
-    </a>
-</div>
+<!-- <div class="sticky-button-eoi">
+   <a href="<?php echo base_url('expression-of-interest/'); ?>#registerNowEoI">
+   <span style="margin-bottom:0">EoI Submission Date Extended</span>
+   <span style="margin-bottom:0">05 April 2024</span>
+   </a>
+</div> -->
 <?php include_once __DIR__ . '/../common/footer.php'; ?>
