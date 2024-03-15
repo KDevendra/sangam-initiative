@@ -1495,7 +1495,7 @@ class AdminController extends CI_Controller
                     "extent_of_involvement" => $this->input->post("extent_of_involvement") !== null ? json_encode($this->input->post("extent_of_involvement")) : null,
                     "human_alignment" => $this->input->post("human_alignment") !== null ? json_encode($this->input->post("human_alignment")) : null,
                     "other_pertinent_facts" => $this->input->post("other_pertinent_facts"),
-                    "certification" => 'Yes',
+                    "certification" => $this->input->post("certification"),
                     "core_competency" => $this->input->post("core_competency"),
                 ];
                 $existingData = $this->BaseModel->getData("eoi_registration", ["user_id" => $this->session->login["user_id"]]);

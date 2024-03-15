@@ -576,7 +576,7 @@
                                                                                                                                                 if ($userDetail->certification === 'yes') {
                                                                                                                                                    echo "checked";
                                                                                                                                                 }
-                                                                                                                                             }; ?> name="certification" id="certification" value="yes" />
+                                                                                                                                             }; ?> name="certification" id="certification" value="yes" checked readonly />
                                                    <label class="form-check-label" for="certification">I certify that the individual submitting this response is duly authorized by the relevant organization to do so on its behalf. The organization acknowledges and authorizes the submission of this response in response to the Expression of Interest (EoI).</label>
                                                 </div>
                                              </div>
@@ -585,7 +585,6 @@
                                     </div>
                                     <div class="d-flex align-items-start gap-3 mt-4">
                                        <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
-                                       <button type="submit" class="btn btn-info right ms-auto">Save Draft</button>
                                        <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                     </div>
                                  </div>
