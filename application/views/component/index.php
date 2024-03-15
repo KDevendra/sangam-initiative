@@ -530,67 +530,73 @@
                <div class="container-fluid">
                   <div id="two-column-menu"></div>
                   <?php
-                     function generateMenuHtml($menuItems, $userLevel, $dashboardAdded = false)
-                     {
-                         $currentUrl = current_url();
-                         $html = '<ul class="navbar-nav" id="navbar-nav">';
+  function generateMenuHtml($menuItems, $userLevel, $dashboardAdded = false)
+  {
+      $currentUrl = current_url();
+      $html = '<ul class="navbar-nav" id="navbar-nav">';
 
-                         if (!$dashboardAdded && $userLevel === '1') {
-                             $html .= '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('admin-dashboard') . '"><i class="ri-dashboard-3-fill"></i> <span data-key="t-Dashboard">Dashboard</span></a></li>';
-                             $dashboardAdded = true;
-                         } elseif (!$dashboardAdded && $userLevel !== '1') {
-                             $html .= '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('user-dashboard') . '"><i class="ri-dashboard-3-fill"></i> <span data-key="t-Dashboard">Dashboard</span></a></li>';
-                             $dashboardAdded = true;
-                         }
+      if (!$dashboardAdded && $userLevel === '1') {
+          $html .= '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('admin-dashboard') . '"><i class="ri-dashboard-3-fill"></i> <span data-key="t-Dashboard">Dashboard</span></a></li>';
+          $dashboardAdded = true;
+      } elseif (!$dashboardAdded && $userLevel !== '1') {
+          $html .= '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('user-dashboard') . '"><i class="ri-dashboard-3-fill"></i> <span data-key="t-Dashboard">Dashboard</span></a></li>';
+          $dashboardAdded = true;
+      }
 
-                         foreach ($menuItems as $menuItem) {
-                             $hasAccess = isset($menuItem['has_access']) ? $menuItem['has_access'] : false;
-                             if (!$hasAccess) {
-                                 continue;
-                             }
+      foreach ($menuItems as $menuItem) {
+          $hasAccess = isset($menuItem['has_access']) ? $menuItem['has_access'] : false;
+          if (!$hasAccess) {
+              continue;
+          }
 
-                             $html .= '<li class="nav-item">';
-                             $html .= '<a class="nav-link menu-link';
+          $html .= '<li class="nav-item';
 
-                             if ($currentUrl == base_url($menuItem['url'])) {
-                                 $html .= ' active';
-                             }
+          // Check if the current page URL matches the URL of the menu item and it has children
+          if (($currentUrl == base_url($menuItem['url']) || strpos($currentUrl, base_url($menuItem['url'])) !== false) && isset($menuItem['children'])) {
+              $html .= ' show'; // Add the 'show' class to keep the collapsible item open
+          }
 
-                             if (isset($menuItem['children'])) {
-                                 $html .= ' collapsed" href="#sidebar' . ucfirst($menuItem['url']) . '" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebar' . ucfirst($menuItem['url']) . '"';
-                             } else {
-                                 $html .= '" href="' . base_url($menuItem['url']) . '"';
-                             }
-                             $html .= '>';
-                             $html .= '<i class="ri-' . $menuItem['icon'] . '"></i> <span data-key="t-' . strtolower($menuItem['label']) . '">' . $menuItem['label'] . '</span>';
-                             $html .= '</a>';
-                             if (isset($menuItem['children'])) {
-                                 $html .= '<div class="collapse menu-dropdown" id="sidebar' . ucfirst($menuItem['url']) . '">';
-                                 $html .= '<ul class="nav nav-sm flex-column">';
-                                 $html .= generateMenuHtml($menuItem['children'], $userLevel, $dashboardAdded);
-                                 $html .= '</ul>';
-                                 $html .= '</div>';
-                             }
+          $html .= '">';
 
-                             $html .= '</li>';
-                         }
+          if (isset($menuItem['children'])) {
+              $html .= '<a class="nav-link menu-link collapsed" href="#sidebar' . ucfirst($menuItem['url']) . '" data-bs-toggle="collapse" role="button" aria-expanded="' . (($currentUrl == base_url($menuItem['url']) || strpos($currentUrl, base_url($menuItem['url'])) !== false) ? 'true' : 'false') . '" aria-controls="sidebar' . ucfirst($menuItem['url']) . '">';
+          } else {
+              $html .= '<a class="nav-link menu-link" href="' . base_url($menuItem['url']) . '">';
+          }
 
-                         $html .= '</ul>';
+          $html .= '<i class="ri-' . $menuItem['icon'] . '"></i> <span data-key="t-' . strtolower($menuItem['label']) . '">' . $menuItem['label'] . '</span>';
+          $html .= '</a>';
 
-                         return $html;
-                     }
+          if (isset($menuItem['children'])) {
+              $html .= '<div class="collapse menu-dropdown' . (($currentUrl == base_url($menuItem['url']) || strpos($currentUrl, base_url($menuItem['url'])) !== false) ? ' show' : '') . '" id="sidebar' . ucfirst($menuItem['url']) . '">';
+              $html .= '<ul class="nav nav-sm flex-column">';
+              $html .= generateMenuHtml($menuItem['children'], $userLevel, $dashboardAdded);
+              $html .= '</ul>';
+              $html .= '</div>';
+          }
 
-                     $userLevel = $this->session->login['user_level'];
-                     $menuItems = checkMenuAccess($userLevel);
-                     $menuHtml = generateMenuHtml($menuItems, $userLevel);
-                     echo $menuHtml;
-                     if ($userLevel === '2') {
-                         echo '<ul class="navbar-nav" id="navbar-nav">';
-                         echo '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('team') . '"><i class="ri-user-2-fill"></i> <span data-key="t-team">Team Management</span></a></li>';
-                         // echo '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('reported-issue') . '"><i class="ri-error-warning-fill"></i> <span data-key="t-Reported Issue">Reported Issue</span></a></li>';
-                         echo '</ul>';
-                     }
-                     ?>
+          $html .= '</li>';
+      }
+
+      $html .= '</ul>';
+
+      return $html;
+  }
+
+  $userLevel = $this->session->login['user_level'];
+  $menuItems = checkMenuAccess($userLevel);
+  $menuHtml = generateMenuHtml($menuItems, $userLevel);
+  echo $menuHtml;
+
+  if ($userLevel === '2') {
+      echo '<ul class="navbar-nav" id="navbar-nav">';
+      echo '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('team') . '"><i class="ri-user-2-fill"></i> <span data-key="t-team">Team Management</span></a></li>';
+      // echo '<li class="nav-item"><a class="nav-link menu-link"  href="' . base_url('reported-issue') . '"><i class="ri-error-warning-fill"></i> <span data-key="t-Reported Issue">Reported Issue</span></a></li>';
+      echo '</ul>';
+  }
+  ?>
+
+
                </div>
             </div>
             <div class="sidebar-background"></div>
@@ -691,5 +697,6 @@
             $("#userIdFocusMessage").html("");
          });
       </script>
+
    </body>
 </html>

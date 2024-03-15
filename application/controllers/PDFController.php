@@ -81,7 +81,7 @@ class PDFController extends CI_Controller {
         $previous_experience = !empty($getApplicationDetail->previous_experience) ? $getApplicationDetail->previous_experience : "";
         $achievements_recognitions = !empty($getApplicationDetail->achievements_recognitions) ? $getApplicationDetail->achievements_recognitions : "";
         $title = !empty($getApplicationDetail->title) ? $getApplicationDetail->title : "";
-        $category = !empty($getApplicationDetail->category) ? $getApplicationDetail->category : "";
+        $submission_category = !empty($getApplicationDetail->category) ? $getApplicationDetail->category : "";
         $strategic_vision = !empty($getApplicationDetail->strategic_vision) ? $getApplicationDetail->strategic_vision : "";
         $objectives = !empty($getApplicationDetail->objectives) ? $getApplicationDetail->objectives : "";
         $project_goals = !empty($getApplicationDetail->project_goals) ? $getApplicationDetail->project_goals : "";
@@ -194,7 +194,7 @@ $tbl .= <<<EOD
  </tr>
  <tr>
      <td style="border: 1px solid #0000002b;"><b>Title</b><br>$title</td>
-     <td style="border: 1px solid #0000002b;"><b>Category</b><br>$category</td>
+     <td style="border: 1px solid #0000002b;"><b>Category</b><br>$submission_category</td>
  </tr>
  <tr>
      <td colspan="2" style="border: 1px solid #0000002b;"><b>Strategic Vision</b><br>$strategic_vision</td>

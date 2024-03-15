@@ -259,15 +259,15 @@
                        <!--  <a href="https://www.youtube.com/live/OiPtJ9dixEE?si=RTIUNozSsE8U96Tc" class="youtube-live-button blink-text" target="_blank"><img src="<?php echo base_url('');?>include/web/custom/youtube_live.png"></a> -->
                         <a href="<?php echo base_url('get-involved') ?>" class="main-btn primary-btn">Get involved</a>
                         <a href="<?php echo base_url('living-list') ?>" class="main-btn primary-btn mb-10">Living List</a>
-                        <a href="<?php echo base_url('registration') ?>" class="main-btn secondary-btn mb-10 "><span class="">Register for Event</span></a>
+                        <a href="<?php echo base_url('registration') ?>" class="main-btn secondary-btn mb-10 "><span class="">Submit EoI</span></a>
                      </div>
                   </div>
                   <div class="nav-right-item">
                      <div class="menu-button d-xl-block d-none">
                        <!-- <a href="https://www.youtube.com/live/OiPtJ9dixEE?si=RTIUNozSsE8U96Tc" class="youtube-live-button blink-text" target="_blank"><img src="<?php echo base_url('');?>include/web/custom/youtube_live.png"></a> -->
                         <a href="<?php echo base_url('get-involved') ?>" class="main-btn primary-btn">Get involved</a>
-                         <a href="<?php echo base_url('living-list') ?>" class="main-btn primary-btn">Living List</a> 
-                        <a href="<?php echo base_url('registration') ?>" class="main-btn primary-btn "><span class="">Register for Event</span></a>
+                         <a href="<?php echo base_url('living-list') ?>" class="main-btn primary-btn">Living List</a>
+                        <a href="<?php echo base_url('registration') ?>" class="main-btn primary-btn "><span class="">Submit EoI</span></a>
                      </div>
                      <!-- <div class="bar-button" data-toggle="modal" data-target="#sidebar-modal">
                         <img src="<?php echo base_url(''); ?>include/web/images/bar.png" alt="Image">

@@ -853,6 +853,7 @@
                <div class="d-flex justify-content-center">
                   <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a>
                </div>
+                 <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://www.youtube.com/live/0y82KMyOqi8?si=8tB_7xbc6VIevabt" target="_blank"><img src="<?php echo base_url('');?>include/web/custom/youtube.png" height="22px;" alt=""> <b>Click here to watch Events</b> </a>
             </div>
          </div>
          <div class="single-project-item-four">
@@ -879,6 +880,8 @@
                <div class="d-flex justify-content-center">
                   <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a>
                </div>
+               <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://www.youtube.com/live/xDDH7UzCgoo?si=HGgl5vba-z08hgcf" target="_blank"><img src="<?php echo base_url('');?>include/web/custom/youtube.png" height="22px;" alt=""> <b>Click here to watch Events</b> </a>
+
             </div>
          </div>
          <div class="single-project-item-four">
@@ -907,6 +910,7 @@
                <div class="d-flex justify-content-center">
                   <a class="btn btn-success text-white mt-20" href="javascrip:void(0)">Completed</a>
                </div>
+               <a class="text-decoration-underline mt-20 text-danger d-flex justify-content-center align-items-center" href="https://www.youtube.com/live/OiPtJ9dixEE?si=sduB_rVhbmCHNcty" target="_blank"><img src="<?php echo base_url('');?>include/web/custom/youtube.png" height="22px;" alt=""> <b>Click here to watch Events</b> </a>
             </div>
          </div>
       </div>
@@ -1383,4 +1387,10 @@
       </div>
    </div>
 </section>
+<div class="sticky-button-eoi">
+    <a href="<?php echo base_url('expression-of-interest/'); ?>#registerNowEoI">
+        <span style="margin-bottom:0">EoI Submission Date Extended</span>
+        <span style="margin-bottom:0">02 April 2024</span>
+    </a>
+</div>
 <?php include_once __DIR__ . '/../common/footer.php'; ?>

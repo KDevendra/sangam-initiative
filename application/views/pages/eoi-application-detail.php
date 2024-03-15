@@ -326,6 +326,19 @@
                                           <textarea name="other_pertinent_facts" class="form-control" readonly id="other_pertinent_facts"  width="100%" rows="5"><?php if (isset($userDetail->other_pertinent_facts)) {
                                              echo  $userDetail->other_pertinent_facts;
                                              }; ?></textarea>
+                                             <label for="uploadDocument" class="form-label mt-2">Upload Document </label><br>
+                                             <?php
+                                             if (isset($flag) && $flag === 'view') {
+                                                 if (strpos($userDetail->upload_document, "Error") !== false) {
+                                                     echo "No file uploaded";
+                                                 } else {
+                                             ?>
+                                                     <a target="_blank" href="<?php echo base_url('uploads/upload_document/') . $userDetail->upload_document; ?>">View File</a>
+                                             <?php
+                                                 }
+                                             }
+                                             ?>
+
                                        </div>
                                     </div>
                                  </div>
@@ -424,7 +437,7 @@
    </div>
 </div>
 <script type="text/javascript">
-    function downloadApplication(application_id) {
+   function downloadApplication(application_id) {
         var redirectUrl = "<?php echo base_url('download-eoi-application/'); ?>" + application_id;
         window.location.href = redirectUrl;
     }

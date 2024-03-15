@@ -116,6 +116,9 @@ $route['download-submitted-speaker-request/(:any)'] = 'ReportExcelController/dow
 $route['download-submitted-speaker-request/(:any)/(:any)'] = 'ReportExcelController/downloadSubmittedSpeakerRequest/$1/$2';
 $route['download-user-list/(:any)'] = 'ReportExcelController/downloadUserList/$1';
 $route['download-user-list/(:any)/(:any)'] = 'ReportExcelController/downloadUserList/$1/$2';
+$route['download-eoi-application-list/(:any)'] = 'ReportExcelController/downloadEoIApplication/$1';
+$route['download-eoi-application-list/(:any)/(:any)'] = 'ReportExcelController/downloadEoIApplication/$1/$2';
+$route['download-submited-use-cases'] = 'ReportExcelController/downloadSubmitedUseCases';
 //route for PDFController
 $route['download-eoi-application/(:any)'] = 'PDFController/index/$1';
 //route for theme-customizer-options

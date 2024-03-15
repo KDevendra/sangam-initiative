@@ -36,7 +36,10 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header align-items-center d-flex">
-                    <h4 class="card-title mb-0 flex-grow-1">Submited Use Cases</h4>
+                   <h4 class="card-title mb-0 flex-grow-1">Submited Use Cases</h4>
+                   <div class="flex-shrink-0">
+                      <button type="button" id="downloadSubmitedUseCases" class="btn btn-primary btn-sm material-shadow-none"><i class="ri-download-fill"></i> Download Excel</button>
+                   </div>
                 </div>
                 <div class="card-body">
                     <table id="ajax-datatables" class="display table table-bordered dt-responsive" style="width: 100%;"></table>
@@ -71,14 +74,6 @@
                 {
                     title: "Title",
                     data: "title"
-                },
-                {
-                    title: "Abstract",
-                    data: "abstract"
-                },
-                {
-                    title: "Objective",
-                    data: "objective"
                 },
                 {
                     title: "Relevance",
@@ -141,5 +136,10 @@
             e.preventDefault();
             window.location.href = "<?php echo base_url('submit-use-cases/add'); ?>";
         });
+        $("#downloadSubmitedUseCases").click(function ()
+        {
+          var redirectUrl = "<?php echo base_url('download-submited-use-cases'); ?>";
+          window.location.href = redirectUrl;
+        })
     });
 </script>

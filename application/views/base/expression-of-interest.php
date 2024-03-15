@@ -200,7 +200,7 @@
         </div>
     </div>
 </section>
-<section class="cta-bg-section bg_cover pt-50 pb-20 p-r z-1" style="background-image: url(<?php echo base_url(''); ?>include/web/custom/Banner_3.jpg);">
+<section id="registerNowEoI" class="cta-bg-section bg_cover pt-50 pb-20 p-r z-1" style="background-image: url(<?php echo base_url(''); ?>include/web/custom/Banner_3.jpg);">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-12 text-center">
@@ -212,7 +212,7 @@
                     <p class="mb-10">Be part of shaping the future of infrastructure planning and design. Register now for the Expression of Interest and contribute to groundbreaking solutions</p>
                     <h3 class="mb-10">Submission of response to EoI Online</h3>
                     <div class="d-flex justify-content-center">
-                            <h4 style="color: #ff4848;background-color: #ffffffe5;width: fit-content;border-radius: 5px;padding: 10px 50px;margin-top: 18px;font-weight: bold;font-size: 20px;font-family: 'Montserrat', sans-serif;" class="mb-35">15th Feb to 15 March 2024</h4>
+                            <h4 style="color: #ff4848;background-color: #ffffffe5;width: fit-content;border-radius: 5px;padding: 10px 50px;margin-top: 18px;font-weight: bold;font-size: 20px;font-family: 'Montserrat', sans-serif;" class="mb-35">15th Feb to 02 April 2024</h4>
                     </div>
                     <a class="main-btn golden-btn preRegisBtn" style="gap: 10px;" href="<?php echo base_url('registration'); ?>"><i class="far  fa-table" aria-hidden="true"></i> Register Now</a>
 

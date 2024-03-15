@@ -42,12 +42,12 @@
                   <?php
 
                   if (property_exists($userDetail, 'status')) {
-                
+
                      $form_status = $userDetail->status;
                   } else {
-                   
+
                      $form_status = "Undefined";
-                   
+
                   }
 
                      if ($form_status === '1') {
@@ -86,9 +86,11 @@
                                                 ?>
                                              stage. To keep you updated on its progress, simply use the buttons below to view the status or reach out for assistance.
                                           </p>
-                                          <!-- <div class="d-flex gap-3 mt-4">
-                                             <a href="#!" class="btn btn-primary">Download PDF</a>
-                                          </div> -->
+                                          <div class="d-flex gap-3 mt-4">
+                                            <button type="button" class="btn btn-primary" onclick="downloadApplication('<?php echo $userDetail->application_id;?>')">
+                                               <i class="ri-download-2-line"></i> Download PDF
+                                               </button>
+                                          </div>
                                        </div>
                                        <img src="assets/images/bg-d.png" alt="" class="img-fluid">
                                     </div>
@@ -437,3 +439,9 @@
       </div>
    </div>
 </div>
+<script>
+function downloadApplication(application_id) {
+var redirectUrl = "<?php echo base_url('download-eoi-application/'); ?>" + application_id;
+window.location.href = redirectUrl;
+}
+</script>

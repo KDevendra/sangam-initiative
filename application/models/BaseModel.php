@@ -153,6 +153,26 @@ class BaseModel extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
+    public function getEoIApplicationList($status = null) {
+        $this->db->select('*');
+        $this->db->from('login');
+        $this->db->join('eoi_registration', 'login.user_id = eoi_registration.user_id');
+        if ($status !== null) {
+            $this->db->where('eoi_registration.status', $status);
+        }
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function getSubmitedUseCasesList($status = null) {
+        $this->db->select('*');
+        $this->db->from('login');
+        $this->db->join('suggest_use_cases', 'login.user_id = suggest_use_cases.user_id');
+        if ($status !== null) {
+            $this->db->where('suggest_use_cases.status', $status);
+        }
+        $query = $this->db->get();
+        return $query->result();
+    }
     public function getUserList($is_verified = null) {
         $this->db->select('*');
         $this->db->from('login');
