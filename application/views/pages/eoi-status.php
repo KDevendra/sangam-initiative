@@ -87,7 +87,7 @@
                                              stage. To keep you updated on its progress, simply use the buttons below to view the status or reach out for assistance.
                                           </p>
                                           <div class="d-flex gap-3 mt-4">
-                                            <button type="button" class="btn btn-primary" onclick="downloadApplication('<?php echo $userDetail->application_id;?>')">
+                                              <button type="button" class="btn btn-primary" onclick="downloadApplication('<?php echo $userDetail->application_id;?>')">
                                                <i class="ri-download-2-line"></i> Download PDF
                                                </button>
                                           </div>

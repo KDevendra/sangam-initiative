@@ -692,12 +692,7 @@ class AdminController extends CI_Controller
                 if ($application_id !== null) {
                     $data["flag"] = "view";
                     $user_id = $this->BaseModel->getData("eoi_registration", ["application_id" => $application_id])->row()->user_id;
-                    $existingData = $this->BaseModel->getData("eoi_registration", ["application_id" => $application_id]);
-                    if ($existingData->num_rows() > 0) {
-                        $data["userDetail"] = $existingData->row();
-                    } else {
-                        $data["userDetail"] = $this->BaseModel->getData("login", ["user_id" => $user_id])->row();
-                    }
+                    $data['userDetail'] = $this->BaseModel->getEoIApplicationData($user_id);
                     $data["userDetail"]->technological_category =
                         isset($data["userDetail"]->technological_category) && !empty($data["userDetail"]->technological_category) ? json_decode($data["userDetail"]->technological_category, true) : [];
                     $data["userDetail"]->technological_type_of_resource =
@@ -935,8 +930,7 @@ class AdminController extends CI_Controller
             $data["userDetail"] = $this->BaseModel->getData("login", ["user_id" => $this->session->login["user_id"]])->row();
         }
         $data["userDetail"]->technological_category = isset($data["userDetail"]->technological_category) && !empty($data["userDetail"]->technological_category) ? json_decode($data["userDetail"]->technological_category, true) : [];
-        $data["userDetail"]->technological_type_of_resource =
-            isset($data["userDetail"]->technological_type_of_resource) && !empty($data["userDetail"]->technological_type_of_resource) ? json_decode($data["userDetail"]->technological_type_of_resource, true) : [];
+        $data["userDetail"]->technological_type_of_resource = isset($data["userDetail"]->technological_type_of_resource) && !empty($data["userDetail"]->technological_type_of_resource) ? json_decode($data["userDetail"]->technological_type_of_resource, true) : [];
         $data["userDetail"]->technological_details = isset($data["userDetail"]->technological_details) && !empty($data["userDetail"]->technological_details) ? json_decode($data["userDetail"]->technological_details, true) : [];
         $data["userDetail"]->specification = isset($data["userDetail"]->specification) && !empty($data["userDetail"]->specification) ? json_decode($data["userDetail"]->specification, true) : [];
         $data["userDetail"]->purpose = isset($data["userDetail"]->purpose) && !empty($data["userDetail"]->purpose) ? json_decode($data["userDetail"]->purpose, true) : [];
@@ -1405,11 +1399,6 @@ class AdminController extends CI_Controller
     public function postEoIRegistration()
     {
         if ($this->input->method() === "post") {
-            $this->form_validation->set_rules("full_name", "Full Name", "trim");
-            $this->form_validation->set_rules("email", "Email", "trim|valid_email");
-            $this->form_validation->set_rules("contact_no", "Contact Number", "trim");
-            $this->form_validation->set_rules("date_of_birth", "Date of Birth", "trim");
-            $this->form_validation->set_rules("experience", "Experience", "trim");
             if ($this->input->post("registration_step") === "Step_2_Additional_Information") {
                 $this->form_validation->set_rules("previous_experience", "Previous Experience", "trim");
                 $this->form_validation->set_rules("achievements_recognitions", "Achievements and Recognitions", "trim");
@@ -1468,11 +1457,11 @@ class AdminController extends CI_Controller
                 }
                 $postData = [
                     "upload_document"=>$upload_document,
-                    "full_name" => $this->input->post("full_name"),
-                    "email" => $this->input->post("email"),
-                    "contact_no" => $this->input->post("contact_no"),
-                    "date_of_birth" => $this->input->post("date_of_birth"),
-                    "experience" => $this->input->post("experience"),
+                    // "full_name" => $this->input->post("full_name"),
+                    // "email" => $this->input->post("email"),
+                    // "contact_no" => $this->input->post("contact_no"),
+                    // "date_of_birth" => $this->input->post("date_of_birth"),
+                    // "experience" => $this->input->post("experience"),
                     "previous_experience" => $this->input->post("previous_experience"),
                     "achievements_recognitions" => $this->input->post("achievements_recognitions"),
                     "title" => $this->input->post("title"),
@@ -1496,7 +1485,7 @@ class AdminController extends CI_Controller
                     "human_alignment" => $this->input->post("human_alignment") !== null ? json_encode($this->input->post("human_alignment")) : null,
                     "other_pertinent_facts" => $this->input->post("other_pertinent_facts"),
                     "certification" => $this->input->post("certification"),
-                    "core_competency" => $this->input->post("core_competency"),
+                    // "core_competency" => $this->input->post("core_competency"),
                 ];
                 $existingData = $this->BaseModel->getData("eoi_registration", ["user_id" => $this->session->login["user_id"]]);
                 if ($existingData->num_rows() > 0) {

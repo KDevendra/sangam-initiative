@@ -30,28 +30,28 @@
                      <div class="row gy-5">
                         <div class="col-lg-4">
                            <div class="nav flex-column custom-nav nav-pills" role="tablist" aria-orientation="vertical">
-                              <button class="nav-link active" id="personal-information-tab" data-bs-toggle="pill" data-bs-target="#personal-information" type="button" role="tab" aria-controls="personal-information" aria-selected="true">
+                              <button disabled class="nav-link active" id="personal-information-tab" data-bs-toggle="pill" data-bs-target="#personal-information" type="button" role="tab" aria-controls="personal-information" aria-selected="true">
                                  <span class="step-title me-2"> <i class="ri-shield-user-fill"></i> Step 1 </span> Personal Information
                               </button>
-                              <button class="nav-link" id="additiona-information-tab" data-bs-toggle="pill" data-bs-target="#additiona-information" type="button" role="tab" aria-controls="additiona-information" aria-selected="false">
+                              <button disabled class="nav-link" id="additiona-information-tab" data-bs-toggle="pill" data-bs-target="#additiona-information" type="button" role="tab" aria-controls="additiona-information" aria-selected="false">
                                  <span class="step-title me-2"> <i class="ri-file-info-fill"></i> Step 2 </span> Additional Information
                               </button>
-                              <button class="nav-link" id="details-of-submission-tab" data-bs-toggle="pill" data-bs-target="#details-of-submission" type="button" role="tab" aria-controls="details-of-submission" aria-selected="false">
+                              <button disabled class="nav-link" id="details-of-submission-tab" data-bs-toggle="pill" data-bs-target="#details-of-submission" type="button" role="tab" aria-controls="details-of-submission" aria-selected="false">
                                  <span class="step-title me-2"> <i class="ri-lightbulb-flash-fill"></i> Step 3 </span> Details of Submission
                               </button>
-                              <button class="nav-link" id="technological-resources-tab" data-bs-toggle="pill" data-bs-target="#technological-resources" type="button" role="tab" aria-controls="technological-resources" aria-selected="false">
+                              <button disabled class="nav-link" id="technological-resources-tab" data-bs-toggle="pill" data-bs-target="#technological-resources" type="button" role="tab" aria-controls="technological-resources" aria-selected="false">
                                  <span class="step-title me-2"> <i class="ri-file-edit-fill"></i> Step 4 </span> Technological Resources
                               </button>
-                              <button class="nav-link" id="huuman-resources-commitment-tab" data-bs-toggle="pill" data-bs-target="#huuman-resources-commitment" type="button" role="tab" aria-controls="huuman-resources-commitment" aria-selected="false">
+                              <button disabled class="nav-link" id="huuman-resources-commitment-tab" data-bs-toggle="pill" data-bs-target="#huuman-resources-commitment" type="button" role="tab" aria-controls="huuman-resources-commitment" aria-selected="false">
                                  <span class="step-title me-2"> <i class="ri-survey-fill"></i> Step 5 </span> Human Resources Commitment
                               </button>
-                              <button class="nav-link" id="other-information-tab" data-bs-toggle="pill" data-bs-target="#other-information" type="button" role="tab" aria-controls="other-information" aria-selected="false">
+                              <button disabled class="nav-link" id="other-information-tab" data-bs-toggle="pill" data-bs-target="#other-information" type="button" role="tab" aria-controls="other-information" aria-selected="false">
                                  <span class="step-title me-2"> <i class="ri-booklet-fill"></i> Step 6 </span> Other Information
                               </button>
-                              <button class="nav-link" id="certification-tab" data-bs-toggle="pill" data-bs-target="#certification" type="button" role="tab" aria-controls="certification" aria-selected="false">
+                              <button disabled class="nav-link" id="certification-tab" data-bs-toggle="pill" data-bs-target="#certification" type="button" role="tab" aria-controls="certification" aria-selected="false">
                                  <span class="step-title me-2"> <i class="ri-shield-check-fill"></i> Step 7 </span> Certification
                               </button>
-                              <button class="nav-link" id="lock-application-tab" data-bs-toggle="pill" data-bs-target="#lock-application" type="button" role="tab" aria-controls="lock-application" aria-selected="false">
+                              <button disabled class="nav-link" id="lock-application-tab" data-bs-toggle="pill" data-bs-target="#lock-application" type="button" role="tab" aria-controls="lock-application" aria-selected="false">
                                  <span class="step-title me-2"> <i class="ri-file-lock-fill"></i> Step 8 </span> Lock Application Submission
                               </button>
                            </div>
@@ -233,7 +233,7 @@
                                     </div>
                                     <div class="d-flex align-items-start gap-3 mt-4">
                                        <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
-                                       <button type="submit" class="btn btn-info right ms-auto">Save Draft</button>
+                                      <button type="submit" class="btn btn-info right ms-auto saveDraftBtn">Save Draft</button>
                                        <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                     </div>
                                  </div>
@@ -298,7 +298,7 @@
                                     </div>
                                     <div class="d-flex align-items-start gap-3 mt-4">
                                        <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
-                                       <button type="submit" name="details_of_submission" value="details_of_submission" class="btn btn-info right ms-auto">Save Draft</button>
+                                       <button type="submit" class="btn btn-info right ms-auto saveDraftBtn">Save Draft</button>
                                        <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                     </div>
                                  </div>
@@ -403,7 +403,7 @@
                                     </div>
                                     <div class="d-flex align-items-start gap-3 mt-4">
                                        <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
-                                       <button type="submit" class="btn btn-info right ms-auto">Save Draft</button>
+                                      <button type="submit" class="btn btn-info right ms-auto saveDraftBtn">Save Draft</button>
                                        <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                     </div>
                                  </div>
@@ -522,7 +522,7 @@
                                     </div>
                                     <div class="d-flex align-items-start gap-3 mt-4">
                                        <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
-                                       <button type="submit" class="btn btn-info right ms-auto">Save Draft</button>
+                                        <button type="submit" class="btn btn-info right ms-auto saveDraftBtn">Save Draft</button>
                                        <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                     </div>
                                  </div>
@@ -541,9 +541,9 @@
                                                 </div>
                                              </label>
                                              <input type="file" class="form-control" name="upload_document" id="upload_document">
-                                             <?php if (isset($userDetail->upload_document) && !empty($userDetail->upload_document)) : ?>
-                                                <a target="_blank" href="<?php echo base_url('uploads/upload_document/') . $userDetail->upload_document; ?>">View File</a>
-                                             <?php endif; ?>
+                                             <?php if (isset($userDetail->upload_document) && !empty($userDetail->upload_document) && strpos($userDetail->upload_document, "Error") === false) : ?>
+                                                                                   <a target="_blank" href="<?php echo base_url('uploads/upload_document/') . $userDetail->upload_document; ?>">View File</a>
+                                                                               <?php endif; ?>
                                           </div>
                                           <div class="col-sm-12">
                                              <label for="other_pertinent_facts" id="additionalInformation" class="form-label">
@@ -560,7 +560,7 @@
                                     </div>
                                     <div class="d-flex align-items-start gap-3 mt-4">
                                        <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
-                                       <button type="submit" class="btn btn-info right ms-auto">Save Draft</button>
+                                    <button type="submit" class="btn btn-info right ms-auto saveDraftBtn">Save Draft</button>
                                        <button type="button" class="btn btn-primary btn-label right ms-auto goToNextStep"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Next Step</button>
                                     </div>
                                  </div>
@@ -620,173 +620,356 @@
                                                             </div>
                                                          </div>
                                                          <div class="card-body p-4">
-                                                            <div class="d-flex">
-                                                               <div class="flex-shrink-0 me-3">
-                                                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle text-success icon-dual-success icon-xs">
-                                                                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                                     <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                                  </svg>
-                                                               </div>
-                                                               <div class="flex-grow-1">
-                                                                  <h5>Personal Information
-                                                                  </h5>
-                                                                  <ul class="text-muted">
-                                                                     <li>
-                                                                        <p>Ensure all personal details are accurate and up-to-date.
-                                                                        </p>
-                                                                     </li>
-                                                                     <li>
-                                                                        <p>Provide contact information that is readily accessible for correspondence.
-                                                                        </p>
-                                                                     </li>
-                                                                  </ul>
-                                                               </div>
-                                                            </div>
-                                                            <div class="d-flex">
-                                                               <div class="flex-shrink-0 me-3">
-                                                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle text-success icon-dual-success icon-xs">
-                                                                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                                     <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                                  </svg>
-                                                               </div>
-                                                               <div class="flex-grow-1">
-                                                                  <h5>Additional Information</h5>
-                                                                  <ul class="text-muted">
-                                                                     <li>
-                                                                        <p>Complete all additional fields with relevant details.
-                                                                        </p>
-                                                                     </li>
-                                                                     <li>
-                                                                        <p>Double-check the provided information for accuracy and relevance.
-                                                                        </p>
-                                                                     </li>
-                                                                  </ul>
-                                                               </div>
-                                                            </div>
-                                                            <div class="d-flex">
-                                                               <div class="flex-shrink-0 me-3">
-                                                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle text-success icon-dual-success icon-xs">
-                                                                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                                     <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                                  </svg>
-                                                               </div>
-                                                               <div class="flex-grow-1">
-                                                                  <h5>Details of Submission</h5>
-                                                                  <ul class="text-muted">
-                                                                     <li>
-                                                                        <p>Provide comprehensive details regarding the submission as .
-                                                                        </p>
-                                                                     </li>
-                                                                     <li>
-                                                                        <p>Include all necessary attachments or documents according to the submission guidelines.
-                                                                        </p>
-                                                                     </li>
-                                                                  </ul>
-                                                               </div>
-                                                            </div>
-                                                            <div class="d-flex">
-                                                               <div class="flex-shrink-0 me-3">
-                                                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle text-success icon-dual-success icon-xs">
-                                                                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                                     <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                                  </svg>
-                                                               </div>
-                                                               <div class="flex-grow-1">
-                                                                  <h5>Technological Resources
-                                                                  </h5>
-                                                                  <ul class="text-muted">
-                                                                     <li>
-                                                                        <p>List all technological resources available for the project.
-                                                                        </p>
-                                                                     </li>
-                                                                     <li>
-                                                                        <p>Provide accurate information about the capabilities and specifications of each resource.
-                                                                        </p>
-                                                                     </li>
-                                                                  </ul>
-                                                               </div>
-                                                            </div>
-                                                            <div class="d-flex">
-                                                               <div class="flex-shrink-0 me-3">
-                                                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle text-success icon-dual-success icon-xs">
-                                                                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                                     <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                                  </svg>
-                                                               </div>
-                                                               <div class="flex-grow-1">
-                                                                  <h5>Human Resources Commitment
-                                                                  </h5>
-                                                                  <ul class="text-muted">
-                                                                     <li>
-                                                                        <p>Specify the commitment of human resources to the project.</p>
-                                                                     </li>
-                                                                     <li>
-                                                                        <p>Include details about the qualifications and expertise of the team members.
-                                                                        </p>
-                                                                     </li>
-                                                                  </ul>
-                                                               </div>
-                                                            </div>
-                                                            <div class="d-flex">
-                                                               <div class="flex-shrink-0 me-3">
-                                                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle text-success icon-dual-success icon-xs">
-                                                                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                                     <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                                  </svg>
-                                                               </div>
-                                                               <div class="flex-grow-1">
-                                                                  <h5>Other Information</h5>
-                                                                  <ul class="text-muted">
-                                                                     <li>
-                                                                        <p>Certify your organization's authorization to submit the EoI response.
-                                                                        </p>
-                                                                     </li>
-                                                                     <li>
-                                                                        <p>Confirm that all information provided is accurate and complete.
-                                                                        </p>
-                                                                     </li>
-                                                                  </ul>
-                                                               </div>
-                                                            </div>
-                                                            <div class="d-flex">
-                                                               <div class="flex-shrink-0 me-3">
-                                                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle text-success icon-dual-success icon-xs">
-                                                                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                                     <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                                  </svg>
-                                                               </div>
-                                                               <div class="flex-grow-1">
-                                                                  <h5>Lock Application Submission
-                                                                  </h5>
-                                                                  <ul class="text-muted">
-                                                                     <li>
-                                                                        <p>Review the entire submission for any errors or omissions</p>
-                                                                     </li>
-                                                                     <li>
-                                                                        <p>Once satisfied with the submission, lock the application to finalize it.
-                                                                        </p>
-                                                                     </li>
-                                                                     <li>
-                                                                        <p>By locking the submission, you confirm its accuracy and completeness.
-                                                                        </p>
-                                                                     </li>
-                                                                     <li>
-                                                                        <p>Note: Final submission does not allow access to change details.
-                                                                        </p>
-                                                                     </li>
-                                                                  </ul>
-                                                               </div>
-                                                            </div>
-                                                            <p>Thank you for your attention to these submission guidelines. Your thoroughness ensures the integrity and quality of the EoI response</p>
-                                                            <div class="text-end">
+                                                           <div class="tab-content">
+                                                              <?php if (!empty($this->session->flashdata('error'))) { ?>
+                                                              <div class="alert alert-danger alert-dismissible fade show material-shadow" role="alert">
+                                                                 <?php echo $this->session->flashdata('error'); ?>
+                                                              </div>
+                                                              <?php } ?>
+                                                              <?php if (!empty($this->session->flashdata('success'))) { ?>
+                                                              <div class="alert alert-success alert-dismissible fade show material-shadow" role="alert">
+                                                                 <?php echo $this->session->flashdata('success'); ?>
+                                                              </div>
+                                                              <?php } ?>
+                                                              <div class="tab-pane fade active show mt-2" id="personal-information" role="tabpanel" aria-labelledby="personal-information-tab">
+                                                                 <div>
+                                                                    <h5 class="text-primary">Personal Information</h5>
+                                                                 </div>
+                                                                 <div>
+                                                                    <div class="row g-3">
+                                                                       <div class="col-sm-4">
+                                                                          <label for="firstName" class="form-label">Full Name</label>
+                                                                          <input type="text"  class="form-control" readonly id="full_name" name="full_name"  value="<?php  if (isset($userDetail->full_name)) {
+                                                                             echo  $userDetail->full_name;
+                                                                             }; ?>" />
+                                                                       </div>
+                                                                       <div class="col-sm-4">
+                                                                          <label for="email" class="form-label">Email</label>
+                                                                          <input type="text"  class="form-control" readonly id="email" name="email"  value="<?php if (isset($userDetail->email)) {
+                                                                             echo  $userDetail->email;
+                                                                             }; ?>" />
+                                                                       </div>
+                                                                       <div class="col-sm-4">
+                                                                          <label for="phoneNumber" class="form-label">Phone Number</label>
+                                                                          <input type="text"  class="form-control" readonly id="phoneNumber" name="contact_no"  value="<?php if (isset($userDetail->contact_no)) {
+                                                                             echo  $userDetail->contact_no;
+                                                                             }; ?>" />
+                                                                       </div>
+                                                                       <div class="col-sm-4">
+                                                                          <label for="phoneNumber" class="form-label">Date of Birth</label>
+                                                                          <input type="date"  class="form-control" readonly id="date_of_birth" name="date_of_birth"  value="<?php if (isset($userDetail->date_of_birth)) {
+                                                                             echo  $userDetail->date_of_birth;
+                                                                             }; ?>" />
+                                                                       </div>
+                                                                       <?php
+                                                                          if (isset($userDetail->register_as) && $userDetail->register_as === 'Individual') {
+                                                                          ?>
+                                                                       <div class="col-sm-4">
+                                                                          <label for="phoneNumber" class="form-label">Experience</label>
+                                                                          <input type="text"  class="form-control" readonly id="experience" name="experience"  value="<?php echo isset($userDetail->experience) ? $userDetail->experience : ''; ?>" />
+                                                                       </div>
+                                                                       <?php
+                                                                          }
+                                                                          ?>
+                                                                       <div class="col-sm-8">
+                                                                          <label for="phoneNumber" class="form-label">Core Competencies</label>
+                                                                          <input type="text"  class="form-control" readonly id="core_competency" name="core_competency" value="<?php if (isset($userDetail->core_competency)) {
+                                                                             echo  $userDetail->core_competency;
+                                                                             }; ?>" />
+                                                                       </div>
+                                                                       <?php
+                                                                          if (isset($userDetail->register_as) && $userDetail->register_as === 'Organization') {
+                                                                          ?>
+                                                                       <div class="col-sm-4">
+                                                                          <label for="phoneNumber" class="form-label">Organization Name</label>
+                                                                          <input type="text"  class="form-control" readonly id="organization_name" name="organization_name"  value="<?php echo isset($userDetail->organization_name) ? $userDetail->organization_name : ''; ?>" />
+                                                                       </div>
+                                                                       <?php
+                                                                          }
+                                                                          ?>
+                                                                       <?php
+                                                                          if (isset($userDetail->register_as) && $userDetail->register_as === 'Organization') {
+                                                                          ?>
+                                                                       <div class="col-sm-4">
+                                                                          <label for="phoneNumber" class="form-label">Website URL of the organisation </label>
+                                                                          <input type="text"  class="form-control" readonly id="website_url" name="website_url"  value="<?php echo isset($userDetail->website_url) ? $userDetail->website_url : ''; ?>" />
+                                                                       </div>
+                                                                       <?php
+                                                                          }
+                                                                          ?>
+                                                                       <?php
+                                                                          if (isset($userDetail->register_as) && $userDetail->register_as === 'Organization') {
+                                                                          ?>
+                                                                       <div class="col-sm-4">
+                                                                          <label for="phoneNumber" class="form-label">Organization Email </label>
+                                                                          <input type="text"  class="form-control" readonly id="email" name="email"  value="<?php echo isset($userDetail->email) ? $userDetail->email : ''; ?>" />
+                                                                       </div>
+                                                                       <?php
+                                                                          }
+                                                                          ?>
+                                                                       <?php
+                                                                          if (isset($userDetail->register_as) && $userDetail->register_as === 'Organization') {
+                                                                          ?>
+                                                                       <div class="col-sm-4">
+                                                                          <label for="phoneNumber" class="form-label">Potential Interest Areas</label>
+                                                                          <input type="text"  class="form-control" readonly id="potential_interest_areas" name="potential_interest_areas"  value="<?php echo isset($userDetail->potential_interest_areas) ? implode(',', json_decode($userDetail->potential_interest_areas)) : ''; ?>" />
+                                                                       </div>
+                                                                       <?php
+                                                                          }
+                                                                          ?>
+                                                                       <?php
+                                                                          if (isset($userDetail->register_as) && $userDetail->register_as === 'Organization') {
+                                                                          ?>
+                                                                       <div class="col-sm-4">
+                                                                          <label for="phoneNumber" class="form-label">Office Address</label>
+                                                                          <input type="text"  class="form-control" readonly id="office_address" name="office_address"  value="<?php echo isset($userDetail->office_address) ? $userDetail->office_address : ''; ?>" />
+                                                                       </div>
+                                                                       <?php
+                                                                          }
+                                                                          ?>
+                                                                       <?php
+                                                                          if (isset($userDetail->register_as) && $userDetail->register_as === 'Organization') {
+                                                                          ?>
+                                                                       <div class="col-sm-4">
+                                                                          <label for="phoneNumber" class="form-label">Organisation HQ address</label>
+                                                                          <input type="text"  class="form-control" readonly id="organisation_hq_address" name="organisation_hq_address"  value="<?php echo isset($userDetail->organisation_hq_address) ? $userDetail->organisation_hq_address : ''; ?>" />
+                                                                       </div>
+                                                                       <?php
+                                                                          }
+                                                                          ?>
+                                                                    </div>
+                                                                 </div>
+                                                              </div>
+                                                              <div class="tab-pane fade active show mt-2" id="additiona-information" role="tabpanel" aria-labelledby="additiona-information-tab">
+                                                                 <div>
+                                                                    <h5 class="text-primary">Additional Information</h5>
+                                                                 </div>
+                                                                 <div>
+                                                                    <div class="row g-3">
+                                                                       <div class="col-sm-12">
+                                                                          <label for="previous_experience" id="additionalInformation" class="form-label">
+                                                                          <span>Previous Experience in Related Projects</span>
+                                                                          </label>
+                                                                          <textarea name="previous_experience" class="form-control" readonly id="previous_experience" width="100%" rows="3" ><?php if (isset($userDetail->previous_experience)) {
+                                                                             echo  $userDetail->previous_experience;
+                                                                             }; ?></textarea>
+                                                                       </div>
+                                                                       <div class="col-sm-12">
+                                                                          <label for="achievements_recognitions" id="additionalInformation" class="form-label">
+                                                                          <span>Achievements or Recognitions</span>
+                                                                          </label>
+                                                                          <textarea name="achievements_recognitions" class="form-control" readonly id="achievements_recognitions" width="100%" rows="3" ><?php if (isset($userDetail->achievements_recognitions)) {
+                                                                             echo  $userDetail->achievements_recognitions;
+                                                                             }; ?></textarea>
+                                                                       </div>
+                                                                    </div>
+                                                                 </div>
+                                                              </div>
+                                                              <div class="tab-pane fade active show mt-2" id="details-of-submission" role="tabpanel" aria-labelledby="details-of-submission-tab">
+                                                                 <div>
+                                                                    <h5 class="text-primary">Details of Submission</h5>
+                                                                 </div>
+                                                                 <div>
+                                                                    <div class="row g-3">
+                                                                       <div class="col-sm-4">
+                                                                          <label for="title" class="form-label">Title</label> <input type="text" class="form-control" readonly id="title" name="title"  value="<?php if (isset($userDetail->title)) {
+                                                                             echo  $userDetail->title;
+                                                                             }; ?>" />
+                                                                       </div>
+                                                                       <div class="col-sm-4">
+                                                                          <label for="category" class="form-label">Category</label> <input type="text" class="form-control" readonly id="category" name="category"  value="<?php if (isset($userDetail->category)) {
+                                                                             echo  $userDetail->category;
+                                                                             }; ?>" />
+                                                                       </div>
+                                                                       <div class="col-sm-4">
+                                                                          <label for="strategic_vision" class="form-label"> Strategic Vision</label>
+                                                                          <textarea name="strategic_vision"  class="form-control" readonly name="strategic_vision" id="strategic_vision" width="100%" rows="2"><?php if (isset($userDetail->strategic_vision)) {
+                                                                             echo  $userDetail->strategic_vision;
+                                                                             }; ?></textarea>
+                                                                       </div>
+                                                                       <div class="col-sm-4">
+                                                                          <label for="objectives" class="form-label"> Objectives</label>
+                                                                          <textarea name="objectives"  class="form-control" readonly name="objectives" id="objectives" width="100%" rows="2"><?php if (isset($userDetail->objectives)) {
+                                                                             echo  $userDetail->objectives;
+                                                                             }; ?></textarea>
+                                                                       </div>
+                                                                       <div class="col-sm-4">
+                                                                          <label for="project_goals" id="additionalInformation" class="form-label">
+                                                                          <span>Alignment with Project Goals</span>
+                                                                          </label>
+                                                                          <textarea name="project_goals"  name="project_goals" class="form-control" readonly id="project_goals" width="100%" rows="2"><?php if (isset($userDetail->project_goals)) {
+                                                                             echo  $userDetail->project_goals;
+                                                                             }; ?></textarea>
+                                                                       </div>
+                                                                       <div class="col-sm-4">
+                                                                          <label for="contribution_to_project_goals" id="additionalInformation" class="form-label">
+                                                                          <span>Contribution to Project Goals</span>
+                                                                          </label>
+                                                                          <textarea name="contribution_to_project_goals"  name="contribution_to_project_goals" class="form-control" readonly id="contribution_to_project_goals" width="100%" rows="2"><?php if (isset($userDetail->contribution_to_project_goals)) {
+                                                                             echo  $userDetail->contribution_to_project_goals;
+                                                                             }; ?></textarea>
+                                                                       </div>
+                                                                    </div>
+                                                                 </div>
+                                                              </div>
+                                                              <div class="tab-pane fade active show mt-2" id="technological-resources" role="tabpanel" aria-labelledby="technological-resources-tab">
+                                                                 <div>
+                                                                    <h5 class="text-primary">Technological Resources</h5>
+                                                                 </div>
+                                                                 <div>
+                                                                    <div class="row g-3">
+                                                                       <div id="resourceSection">
+                                                                          <div class="table-responsive">
+                                                                             <table class="table table-bordered table-nowrap">
+                                                                                <thead>
+                                                                                   <tr>
+                                                                                      <th scope="col">S.No.</th>
+                                                                                      <th scope="col">Category</th>
+                                                                                      <th scope="col">Type of resource</th>
+                                                                                      <th scope="col">Details of Resource</th>
+                                                                                      <th scope="col">Specification</th>
+                                                                                      <th scope="col">Purpose of Resource</th>
+                                                                                      <th scope="col">Alignment</th>
+                                                                                   </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                   <?php $i=1; foreach ($technical_details as $detail) :?>
+                                                                                   <tr>
+                                                                                      <th scope="row"><?php echo $i++;?></th>
+                                                                                      <td><?php echo $detail['category']; ?></td>
+                                                                                      <td><?php echo $detail['type_of_resource']; ?></td>
+                                                                                      <td><?php echo $detail['details']; ?></td>
+                                                                                      <td><?php echo $detail['specification']; ?></td>
+                                                                                      <td><?php echo $detail['purpose']; ?></td>
+                                                                                      <td><?php echo $detail['alignment']; ?></td>
+                                                                                   </tr>
+                                                                                   <?php endforeach; ?>
+                                                                                </tbody>
+                                                                             </table>
+                                                                          </div>
+                                                                       </div>
+                                                                    </div>
+                                                                 </div>
+                                                              </div>
+                                                              <div class="tab-pane fade active show" id="huuman-resources-commitment" role="tabpanel" aria-labelledby="huuman-resources-commitment-tab">
+                                                                 <div>
+                                                                    <h5 class="text-primary">Human Resources Commitment</h5>
+                                                                 </div>
+                                                                 <div>
+                                                                    <div class="row g-3">
+                                                                       <div id="humanResourceSection">
+                                                                          <div class="table-responsive">
+                                                                             <table class="table table-bordered table-nowrap">
+                                                                                <thead>
+                                                                                   <tr>
+                                                                                      <th scope="col">S.No.</th>
+                                                                                      <th scope="col">Category</th>
+                                                                                      <th scope="col">Type of resource</th>
+                                                                                      <th scope="col">Name and contact details</th>
+                                                                                      <th scope="col">Role</th>
+                                                                                      <th scope="col">Experience</th>
+                                                                                      <th scope="col">Extent of involvement in PoC</th>
+                                                                                      <th scope="col">Alignment</th>
+                                                                                   </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                   <?php $i=1; foreach ($human_resources as $detail) :?>
+                                                                                   <tr>
+                                                                                      <th scope="row"><?php echo $i++;?></th>
+                                                                                      <td><?php echo $detail['human_category']; ?></td>
+                                                                                      <td><?php echo $detail['human_type_of_resource']; ?></td>
+                                                                                      <td><?php echo $detail['human_details']; ?></td>
+                                                                                      <td><?php echo $detail['human_experience']; ?></td>
+                                                                                      <td><?php echo $detail['role']; ?></td>
+                                                                                      <td><?php echo $detail['extent_of_involvement']; ?></td>
+                                                                                      <td><?php echo $detail['human_alignment']; ?></td>
+                                                                                   </tr>
+                                                                                   <?php endforeach; ?>
+                                                                                </tbody>
+                                                                             </table>
+                                                                          </div>
+                                                                       </div>
+                                                                    </div>
+                                                                 </div>
+                                                              </div>
+                                                              <div class="tab-pane fade active show mt-2" id="other-information" role="tabpanel" aria-labelledby="other-information-tab">
+                                                                 <div>
+                                                                    <h5 class="text-primary">Other Information</h5>
+                                                                 </div>
+                                                                 <div>
+                                                                    <div class="row g-3">
+                                                                       <div class="col-sm-12">
+                                                                          <label for="other_pertinent_facts" id="additionalInformation" class="form-label">
+                                                                          </label>
+                                                                          <textarea name="other_pertinent_facts" class="form-control" readonly id="other_pertinent_facts"  width="100%" rows="5"><?php if (isset($userDetail->other_pertinent_facts)) {
+                                                                             echo  $userDetail->other_pertinent_facts;
+                                                                             }; ?></textarea>
+                                                                             <label for="uploadDocument" class="form-label mt-2">Upload Document </label><br>
+                                                                             <?php
+                                                                             if (isset($flag) && $flag === 'view') {
+                                                                                  if (empty($list->upload_relevant_document))
+                                                                                  {
+                                                                                     echo "No file uploaded";
+                                                                                  }
+                                                                                 elseif (strpos($userDetail->upload_document, "Error") !== false) {
+                                                                                     echo "No file uploaded";
+                                                                                 } else {
+                                                                             ?>
+                                                                                     <a target="_blank" href="<?php echo base_url('uploads/upload_document/') . $userDetail->upload_document; ?>">View File</a>
+                                                                             <?php
+                                                                                 }
+                                                                             }
+                                                                             ?>
+                                                                       </div>
+                                                                    </div>
+                                                                 </div>
+                                                              </div>
+                                                              <div class="tab-pane fade active show mt-2" id="certification" role="tabpanel" aria-labelledby="certification-tab">
+                                                                 <div>
+                                                                    <h5 class="text-primary">Certification</h5>
+                                                                    <div>
+                                                                       <div class="row g-3">
+                                                                          <div class="col-sm-12">
+                                                                             <div class="form-check form-check-inline">
+                                                                                <input class="form-check-input" type="radio" <?php if (isset($userDetail->certification)) {
+                                                                                   if ($userDetail->certification === 'yes') {
+                                                                                      echo "checked";
+                                                                                   }
+                                                                                   }; ?> name="certification" id="certification" value="yes" />
+                                                                                <label class="form-check-label" for="certification">I certify that the individual submitting this response is duly authorized by the relevant organization to do so on its behalf. The organization acknowledges and authorizes the submission of this response in response to the Expression of Interest (EoI).</label>
+                                                                             </div>
+                                                                          </div>
+                                                                       </div>
+                                                                    </div>
+                                                                 </div>
+                                                              </div>
+                                                              <div class="tab-pane fade active show mt-2" id="lock-application" role="tabpanel" aria-labelledby="lock-application-tab">
+                                                                 <div>
+                                                                    <div>
+                                                                       <div class="row g-3">
+                                                                          <div class="col-sm-12">
+                                                                          </div>
+                                                                       </div>
+                                                                    </div>
+                                                                 </div>
+                                                              </div>
+                                                           </div>
+                                                           <div class="text-end">
                                                                <?php
                                                                if ($userDetail->status === '0') {
                                                                ?>
-                                                                  <a href="javascript:void(0)"> <button type="button" id="finalSubmit" name="final_submit" value="yes" class="btn btn-danger">Final Submit</button></a>
+                                                               <div class="d-flex align-items-start gap-3 mt-4">
+                                    <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                        <button type="button" onclick="downloadApplication('<?php echo $userDetail->application_id;?>')" class="btn btn-info right ms-auto" style="display:block;"><i class="ri-download-2-line"></i> Download PDF</button>
+
+                                    <button type="button" class="btn btn-danger btn-label right ms-auto"  id="finalSubmit" ><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Final Submit</button>
+                                 </div>
                                                                <?php } else {
                                                                ?>
                                                                   <div class="d-flex align-items-start gap-3 mt-4">
                                                                      <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                                     <button type="button" onclick="downloadApplication('<?php echo $userDetail->application_id;?>')" class="btn btn-info right ms-auto" style="display:block;"><i class="ri-download-2-line"></i> Download PDF</button>
+
                                                                      <button type="button" disabled class="btn btn-primary btn-label right ms-auto"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Application Locked</button>
                                                                   </div>
                                                                <?php
@@ -842,7 +1025,10 @@
 <script>
    var maxResourceGroups = 8;
    var maxhumanResourceGroups = 8;
-
+   function downloadApplication(application_id) {
+   var redirectUrl = "<?php echo base_url('download-eoi-application/'); ?>" + application_id;
+   window.location.href = redirectUrl;
+   }
    function validateFields() {
       var isValid = true;
       var registrationStepValue = $("input[name='registration_step']").val();
@@ -1041,7 +1227,7 @@
                            icon: "success"
                         }).then((result) => {
                            if (result.isConfirmed) {
-                              window.location.href = "<?php echo base_url('eoi-registration') ?>";
+                              window.location.href = "<?php echo base_url('eoi-status') ?>";
                            }
                         })
                      } else if (response.status === "validation_errors") {

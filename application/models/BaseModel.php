@@ -123,9 +123,20 @@ class BaseModel extends CI_Model {
         $query = $this->db->get('visitors');
         return $query->num_rows() == 0;
     }
-    public function getDataByStatus($statusArray) {
-        $this->db->where_in('status', $statusArray);
-        return $this->db->get('eoi_registration')->result_array();
+
+    public function getDataByStatus($statusArray = null) {
+        $this->db->select('*');
+        $this->db->from('login');
+        $this->db->join('eoi_registration', 'login.user_id = eoi_registration.user_id');
+        if ($statusArray !== null) {
+            if (is_array($statusArray)) {
+                $this->db->where_in('eoi_registration.status', $statusArray);
+            } else {
+                $this->db->where('eoi_registration.status', $statusArray);
+            }
+        }
+        $query = $this->db->get();
+        return $query->result_array();
     }
     public function getUserData($user_id) {
         $this->db->select('*');
