@@ -51,7 +51,7 @@
                                         <input type="text" class="form-control" placeholder="Enter a concise and descriptive title" id="useCaseTitle" name="title">
                                     <?php } ?>
                                 </div>
-                                <div class="col-md-4 mt-3">
+                                <div class="<?php if($flag === 'view') {echo "col-md-12";}else{echo "col-md-4";}?> mt-3">
                                     <label for="abstract">Abstract <span class="text-danger">*</span></label>
                                     <?php if (isset($flag) && $flag === 'view') { ?>
                                         <p><?php echo $userDetail->abstract; ?></p>
@@ -60,7 +60,7 @@
                                     <?php } ?>
                                 </div>
 
-                                <div class="col-md-4 mt-3">
+                                <div class="<?php if($flag === 'view') {echo "col-md-12";}else{echo "col-md-4";}?> mt-3">
                                     <label for="objective">Objective <span class="text-danger">*</span></label>
                                     <?php if (isset($flag) && $flag === 'view') { ?>
                                         <p><?php echo $userDetail->objective; ?></p>
