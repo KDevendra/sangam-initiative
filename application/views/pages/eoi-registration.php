@@ -220,10 +220,7 @@
                                                    <a href="javascript:void(0)" class="text-muted"><i class="ri-info-i"></i></a>
                                                 </div>
                                              </label>
-                                             <?php pr($userDetail->previous_experience);?>
-                                             <textarea name="previous_experience" class="form-control" id="previous_experience" width="100%" rows="3" placeholder="Write your previous experience "><?php if (isset($userDetail->previous_experience)) {
-                                                                                                                                                                                                         echo  $userDetail->previous_experience;
-                                                                                                                                                                                                      }; ?></textarea>
+                                             <textarea name="previous_experience" class="form-control" id="previous_experience" width="100%" rows="3" placeholder="Write your previous experience "><?php if (isset($userDetail->previous_experience)) {echo  $userDetail->previous_experience;} ?></textarea>
                                              <div class="invalid-feedback">Please enter a previous experience in related projects</div>
                                           </div>
                                           <div class="col-sm-12">
@@ -233,9 +230,7 @@
                                                    <a href="javascript:void(0)" class="text-muted"><i class="ri-info-i"></i></a>
                                                 </div>
                                              </label>
-                                             <textarea name="achievements_recognitions" class="form-control" id="achievements_recognitions" width="100%" rows="3" placeholder="Write your achievements or recognitions "><?php if (isset($userDetail->achievements_recognitions)) {
-                                                                                                                                                                                                                              echo  $userDetail->achievements_recognitions;
-                                                                                                                                                                                                                           }; ?></textarea>
+                                             <textarea name="achievements_recognitions" class="form-control" id="achievements_recognitions" width="100%" rows="3" placeholder="Write your achievements or recognitions "><?php if (isset($userDetail->achievements_recognitions)) {echo  $userDetail->achievements_recognitions;} ?></textarea>
                                              <div class="invalid-feedback">Please enter a achievements or recognitions</div>
                                           </div>
                                        </div>
@@ -562,6 +557,7 @@
                                                 </div>
                                              </label>
                                              <textarea name="other_pertinent_facts" class="form-control" id="other_pertinent_facts" placeholder="Please enter a other pertinent facts or offerings" width="100%" rows="5"><?php if (isset($userDetail->other_pertinent_facts)) {
+                                               echo $userDetail->other_pertinent_facts;
                                                                                                                                                                                                                            }; ?></textarea>
                                              <div class="invalid-feedback">Please enter a other pertinent facts or offerings</div>
                                           </div>
@@ -648,25 +644,25 @@
                                                                     <div class="row g-3">
                                                                        <div class="col-sm-4">
                                                                           <label for="firstName" class="form-label">Full Name</label>
-                                                                          <input type="text"  class="form-control" readonly id="full_name" name="full_name"  value="<?php  if (isset($userDetail->full_name)) {
+                                                                          <input type="text"  class="form-control" readonly id="full_name"   value="<?php  if (isset($userDetail->full_name)) {
                                                                              echo  $userDetail->full_name;
                                                                              }; ?>" />
                                                                        </div>
                                                                        <div class="col-sm-4">
                                                                           <label for="email" class="form-label">Email</label>
-                                                                          <input type="text"  class="form-control" readonly id="email" name="email"  value="<?php if (isset($userDetail->email)) {
+                                                                          <input type="text"  class="form-control" readonly id="email"   value="<?php if (isset($userDetail->email)) {
                                                                              echo  $userDetail->email;
                                                                              }; ?>" />
                                                                        </div>
                                                                        <div class="col-sm-4">
                                                                           <label for="phoneNumber" class="form-label">Phone Number</label>
-                                                                          <input type="text"  class="form-control" readonly id="phoneNumber" name="contact_no"  value="<?php if (isset($userDetail->contact_no)) {
+                                                                          <input type="text"  class="form-control" readonly id="phoneNumber"   value="<?php if (isset($userDetail->contact_no)) {
                                                                              echo  $userDetail->contact_no;
                                                                              }; ?>" />
                                                                        </div>
                                                                        <div class="col-sm-4">
                                                                           <label for="phoneNumber" class="form-label">Date of Birth</label>
-                                                                          <input type="date"  class="form-control" readonly id="date_of_birth" name="date_of_birth"  value="<?php if (isset($userDetail->date_of_birth)) {
+                                                                          <input type="date"  class="form-control" readonly id="date_of_birth"   value="<?php if (isset($userDetail->date_of_birth)) {
                                                                              echo  $userDetail->date_of_birth;
                                                                              }; ?>" />
                                                                        </div>
@@ -675,14 +671,14 @@
                                                                           ?>
                                                                        <div class="col-sm-4">
                                                                           <label for="phoneNumber" class="form-label">Experience</label>
-                                                                          <input type="text"  class="form-control" readonly id="experience" name="experience"  value="<?php echo isset($userDetail->experience) ? $userDetail->experience : ''; ?>" />
+                                                                          <input type="text"  class="form-control" readonly id="experience"   value="<?php echo isset($userDetail->experience) ? $userDetail->experience : ''; ?>" />
                                                                        </div>
                                                                        <?php
                                                                           }
                                                                           ?>
                                                                        <div class="col-sm-8">
                                                                           <label for="phoneNumber" class="form-label">Core Competencies</label>
-                                                                          <input type="text"  class="form-control" readonly id="core_competency" name="core_competency" value="<?php if (isset($userDetail->core_competency)) {
+                                                                          <input type="text"  class="form-control" readonly id="core_competency"value="<?php if (isset($userDetail->core_competency)) {
                                                                              echo  $userDetail->core_competency;
                                                                              }; ?>" />
                                                                        </div>
@@ -691,7 +687,7 @@
                                                                           ?>
                                                                        <div class="col-sm-4">
                                                                           <label for="phoneNumber" class="form-label">Organization Name</label>
-                                                                          <input type="text"  class="form-control" readonly id="organization_name" name="organization_name"  value="<?php echo isset($userDetail->organization_name) ? $userDetail->organization_name : ''; ?>" />
+                                                                          <input type="text"  class="form-control" readonly id="organization_name"   value="<?php echo isset($userDetail->organization_name) ? $userDetail->organization_name : ''; ?>" />
                                                                        </div>
                                                                        <?php
                                                                           }
@@ -701,7 +697,7 @@
                                                                           ?>
                                                                        <div class="col-sm-4">
                                                                           <label for="phoneNumber" class="form-label">Website URL of the organisation </label>
-                                                                          <input type="text"  class="form-control" readonly id="website_url" name="website_url"  value="<?php echo isset($userDetail->website_url) ? $userDetail->website_url : ''; ?>" />
+                                                                          <input type="text"  class="form-control" readonly id="website_url"   value="<?php echo isset($userDetail->website_url) ? $userDetail->website_url : ''; ?>" />
                                                                        </div>
                                                                        <?php
                                                                           }
@@ -711,7 +707,7 @@
                                                                           ?>
                                                                        <div class="col-sm-4">
                                                                           <label for="phoneNumber" class="form-label">Organization Email </label>
-                                                                          <input type="text"  class="form-control" readonly id="email" name="email"  value="<?php echo isset($userDetail->email) ? $userDetail->email : ''; ?>" />
+                                                                          <input type="text"  class="form-control" readonly id="email"   value="<?php echo isset($userDetail->email) ? $userDetail->email : ''; ?>" />
                                                                        </div>
                                                                        <?php
                                                                           }
@@ -731,9 +727,8 @@
                                                                         $potential_interest_areas = is_array($decoded_areas) && json_last_error() === JSON_ERROR_NONE ? implode(',', $decoded_areas) : $potential_interest_areas;
 
                                                                         ?>
-                                                                        <input type="text" class="form-control" readonly id="potential_interest_areas" name="potential_interest_areas" value="<?php echo $potential_interest_areas; ?>" />
+                                                                        <input type="text" class="form-control" readonly id="potential_interest_areas" value="<?php echo $potential_interest_areas; ?>" />
 
-                                                                                                                                                  <input type="text"  class="form-control" readonly id="potential_interest_areas" name="potential_interest_areas"  value="<?php echo isset($userDetail->potential_interest_areas) ? implode(',', json_decode($userDetail->potential_interest_areas)) : ''; ?>" />
                                                                        </div>
                                                                        <?php
                                                                           }
@@ -743,7 +738,7 @@
                                                                           ?>
                                                                        <div class="col-sm-4">
                                                                           <label for="phoneNumber" class="form-label">Office Address</label>
-                                                                          <input type="text"  class="form-control" readonly id="office_address" name="office_address"  value="<?php echo isset($userDetail->office_address) ? $userDetail->office_address : ''; ?>" />
+                                                                          <input type="text"  class="form-control" readonly id="office_address"   value="<?php echo isset($userDetail->office_address) ? $userDetail->office_address : ''; ?>" />
                                                                        </div>
                                                                        <?php
                                                                           }
@@ -753,7 +748,7 @@
                                                                           ?>
                                                                        <div class="col-sm-4">
                                                                           <label for="phoneNumber" class="form-label">Organisation HQ address</label>
-                                                                          <input type="text"  class="form-control" readonly id="organisation_hq_address" name="organisation_hq_address"  value="<?php echo isset($userDetail->organisation_hq_address) ? $userDetail->organisation_hq_address : ''; ?>" />
+                                                                          <input type="text"  class="form-control" readonly id="organisation_hq_address"   value="<?php echo isset($userDetail->organisation_hq_address) ? $userDetail->organisation_hq_address : ''; ?>" />
                                                                        </div>
                                                                        <?php
                                                                           }
@@ -771,7 +766,7 @@
                                                                           <label for="previous_experience" id="additionalInformation" class="form-label">
                                                                           <span>Previous Experience in Related Projects</span>
                                                                           </label>
-                                                                          <textarea name="previous_experience" class="form-control" readonly id="previous_experience" width="100%" rows="3" ><?php if (isset($userDetail->previous_experience)) {
+                                                                          <textarea  class="form-control" readonly id="previous_experience" width="100%" rows="3" ><?php if (isset($userDetail->previous_experience)) {
                                                                              echo  $userDetail->previous_experience;
                                                                              }; ?></textarea>
                                                                        </div>
@@ -779,7 +774,7 @@
                                                                           <label for="achievements_recognitions" id="additionalInformation" class="form-label">
                                                                           <span>Achievements or Recognitions</span>
                                                                           </label>
-                                                                          <textarea name="achievements_recognitions" class="form-control" readonly id="achievements_recognitions" width="100%" rows="3" ><?php if (isset($userDetail->achievements_recognitions)) {
+                                                                          <textarea  class="form-control" readonly id="achievements_recognitions" width="100%" rows="3" ><?php if (isset($userDetail->achievements_recognitions)) {
                                                                              echo  $userDetail->achievements_recognitions;
                                                                              }; ?></textarea>
                                                                        </div>
@@ -793,24 +788,24 @@
                                                                  <div>
                                                                     <div class="row g-3">
                                                                        <div class="col-sm-4">
-                                                                          <label for="title" class="form-label">Title</label> <input type="text" class="form-control" readonly id="title" name="title"  value="<?php if (isset($userDetail->title)) {
+                                                                          <label for="title" class="form-label">Title</label> <input type="text" class="form-control" readonly id="title"  value="<?php if (isset($userDetail->title)) {
                                                                              echo  $userDetail->title;
                                                                              }; ?>" />
                                                                        </div>
                                                                        <div class="col-sm-4">
-                                                                          <label for="category" class="form-label">Category</label> <input type="text" class="form-control" readonly id="category" name="category"  value="<?php if (isset($userDetail->category)) {
+                                                                          <label for="category" class="form-label">Category</label> <input type="text" class="form-control" readonly id="category"   value="<?php if (isset($userDetail->category)) {
                                                                              echo  $userDetail->category;
                                                                              }; ?>" />
                                                                        </div>
                                                                        <div class="col-sm-4">
                                                                           <label for="strategic_vision" class="form-label"> Strategic Vision</label>
-                                                                          <textarea name="strategic_vision"  class="form-control" readonly name="strategic_vision" id="strategic_vision" width="100%" rows="2"><?php if (isset($userDetail->strategic_vision)) {
+                                                                          <textarea   class="form-control" readonly  id="strategic_vision" width="100%" rows="2"><?php if (isset($userDetail->strategic_vision)) {
                                                                              echo  $userDetail->strategic_vision;
                                                                              }; ?></textarea>
                                                                        </div>
                                                                        <div class="col-sm-4">
                                                                           <label for="objectives" class="form-label"> Objectives</label>
-                                                                          <textarea name="objectives"  class="form-control" readonly name="objectives" id="objectives" width="100%" rows="2"><?php if (isset($userDetail->objectives)) {
+                                                                          <textarea   class="form-control" readonly  id="objectives" width="100%" rows="2"><?php if (isset($userDetail->objectives)) {
                                                                              echo  $userDetail->objectives;
                                                                              }; ?></textarea>
                                                                        </div>
@@ -818,7 +813,7 @@
                                                                           <label for="project_goals" id="additionalInformation" class="form-label">
                                                                           <span>Alignment with Project Goals</span>
                                                                           </label>
-                                                                          <textarea name="project_goals"  name="project_goals" class="form-control" readonly id="project_goals" width="100%" rows="2"><?php if (isset($userDetail->project_goals)) {
+                                                                          <textarea   class="form-control" readonly id="project_goals" width="100%" rows="2"><?php if (isset($userDetail->project_goals)) {
                                                                              echo  $userDetail->project_goals;
                                                                              }; ?></textarea>
                                                                        </div>
@@ -826,7 +821,7 @@
                                                                           <label for="contribution_to_project_goals" id="additionalInformation" class="form-label">
                                                                           <span>Contribution to Project Goals</span>
                                                                           </label>
-                                                                          <textarea name="contribution_to_project_goals"  name="contribution_to_project_goals" class="form-control" readonly id="contribution_to_project_goals" width="100%" rows="2"><?php if (isset($userDetail->contribution_to_project_goals)) {
+                                                                          <textarea   class="form-control" readonly id="contribution_to_project_goals" width="100%" rows="2"><?php if (isset($userDetail->contribution_to_project_goals)) {
                                                                              echo  $userDetail->contribution_to_project_goals;
                                                                              }; ?></textarea>
                                                                        </div>
@@ -922,25 +917,13 @@
                                                                        <div class="col-sm-12">
                                                                           <label for="other_pertinent_facts" id="additionalInformation" class="form-label">
                                                                           </label>
-                                                                          <textarea name="other_pertinent_facts" class="form-control" readonly id="other_pertinent_facts"  width="100%" rows="5"><?php if (isset($userDetail->other_pertinent_facts)) {
+                                                                          <textarea  class="form-control" readonly id="other_pertinent_facts"  width="100%" rows="5"><?php if (isset($userDetail->other_pertinent_facts)) {
                                                                              echo  $userDetail->other_pertinent_facts;
                                                                              }; ?></textarea>
                                                                              <label for="uploadDocument" class="form-label mt-2">Upload Document </label><br>
-                                                                             <?php
-                                                                             if (isset($flag) && $flag === 'view') {
-                                                                                  if (empty($list->upload_relevant_document))
-                                                                                  {
-                                                                                     echo "No file uploaded";
-                                                                                  }
-                                                                                 elseif (strpos($userDetail->upload_document, "Error") !== false) {
-                                                                                     echo "No file uploaded";
-                                                                                 } else {
-                                                                             ?>
-                                                                                     <a target="_blank" href="<?php echo base_url('uploads/upload_document/') . $userDetail->upload_document; ?>">View File</a>
-                                                                             <?php
-                                                                                 }
-                                                                             }
-                                                                             ?>
+                                                                             <?php if (isset($userDetail->upload_document) && !empty($userDetail->upload_document) && strpos($userDetail->upload_document, "Error") === false) : ?>
+                                                                                                                   <a target="_blank" href="<?php echo base_url('uploads/upload_document/') . $userDetail->upload_document; ?>">View File</a>
+                                                                                                               <?php endif; ?>
                                                                        </div>
                                                                     </div>
                                                                  </div>
@@ -956,7 +939,7 @@
                                                                                    if ($userDetail->certification === 'yes') {
                                                                                       echo "checked";
                                                                                    }
-                                                                                   }; ?> name="certification" id="certification" value="yes" />
+                                                                                   }; ?>  id="certification" value="yes" />
                                                                                 <label class="form-check-label" for="certification">I certify that the individual submitting this response is duly authorized by the relevant organization to do so on its behalf. The organization acknowledges and authorizes the submission of this response in response to the Expression of Interest (EoI).</label>
                                                                              </div>
                                                                           </div>
