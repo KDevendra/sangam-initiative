@@ -162,9 +162,17 @@
                                           ?>
                                              <div class="col-sm-6">
                                                 <label for="phoneNumber" class="form-label">Potential Interest Areas</label>
-                                                <input type="text" readonly class="form-control" id="potential_interest_areas" name="potential_interest_areas" placeholder="Enter potential_interest_areas" value="<?php if (isset($userDetail->potential_interest_areas)) {
-                                                                                                                                                                                                                        echo $userDetail->potential_interest_areas;
-                                                                                                                                                                                                                     }; ?>" />
+                                                <?php
+                                              $potential_interest_areas = isset($userDetail->potential_interest_areas) ? $userDetail->potential_interest_areas : '';
+
+                                              // Check if the value is a JSON string
+                                              $decoded_areas = json_decode($potential_interest_areas);
+
+                                              // If JSON decoding is successful and it's an array, implode the array; otherwise, use the original value
+                                              $potential_interest_areas = is_array($decoded_areas) && json_last_error() === JSON_ERROR_NONE ? implode(',', $decoded_areas) : $potential_interest_areas;
+
+                                              ?>
+                                              <input type="text" class="form-control" readonly id="potential_interest_areas" name="potential_interest_areas" value="<?php echo $potential_interest_areas; ?>" />
                                                 <div class="invalid-feedback">Please enter an Potential Interest Areas</div>
                                              </div>
                                           <?php
@@ -712,7 +720,19 @@
                                                                           ?>
                                                                        <div class="col-sm-4">
                                                                           <label for="phoneNumber" class="form-label">Potential Interest Areas</label>
-                                                                          <input type="text"  class="form-control" readonly id="potential_interest_areas" name="potential_interest_areas"  value="<?php echo isset($userDetail->potential_interest_areas) ? implode(',', json_decode($userDetail->potential_interest_areas)) : ''; ?>" />
+                                                                          <?php
+                                                                        $potential_interest_areas = isset($userDetail->potential_interest_areas) ? $userDetail->potential_interest_areas : '';
+
+                                                                        // Check if the value is a JSON string
+                                                                        $decoded_areas = json_decode($potential_interest_areas);
+
+                                                                        // If JSON decoding is successful and it's an array, implode the array; otherwise, use the original value
+                                                                        $potential_interest_areas = is_array($decoded_areas) && json_last_error() === JSON_ERROR_NONE ? implode(',', $decoded_areas) : $potential_interest_areas;
+
+                                                                        ?>
+                                                                        <input type="text" class="form-control" readonly id="potential_interest_areas" name="potential_interest_areas" value="<?php echo $potential_interest_areas; ?>" />
+
+                                                                                                                                                  <input type="text"  class="form-control" readonly id="potential_interest_areas" name="potential_interest_areas"  value="<?php echo isset($userDetail->potential_interest_areas) ? implode(',', json_decode($userDetail->potential_interest_areas)) : ''; ?>" />
                                                                        </div>
                                                                        <?php
                                                                           }
@@ -959,18 +979,18 @@
                                                                if ($userDetail->status === '0') {
                                                                ?>
                                                                <div class="d-flex align-items-start gap-3 mt-4">
-                                    <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
-                                        <button type="button" onclick="downloadApplication('<?php echo $userDetail->application_id;?>')" class="btn btn-info right ms-auto" style="display:block;"><i class="ri-download-2-line"></i> Download PDF</button>
+                                                              <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
+                                                                  <button type="button" onclick="downloadApplication('<?php echo $userDetail->application_id;?>')" class="btn btn-info right ms-auto" style="display:block;"><i class="ri-download-2-line"></i> Download PDF</button>
 
-                                    <button type="button" class="btn btn-danger btn-label right ms-auto"  id="finalSubmit" ><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Final Submit</button>
-                                 </div>
+                                                              <button type="button" class="btn btn-danger btn-label right ms-auto"  id="finalSubmit" ><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Final Submit</button>
+                                                           </div>
                                                                <?php } else {
                                                                ?>
                                                                   <div class="d-flex align-items-start gap-3 mt-4">
                                                                      <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
                                                                      <button type="button" onclick="downloadApplication('<?php echo $userDetail->application_id;?>')" class="btn btn-info right ms-auto" style="display:block;"><i class="ri-download-2-line"></i> Download PDF</button>
 
-                                                                     <button type="button" disabled class="btn btn-primary btn-label right ms-auto"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Application Locked</button>
+                                                                     <button type="button" disabled class="btn btn-primary btn-label right ms-auto"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Application Submitted</button>
                                                                   </div>
                                                                <?php
                                                                }
