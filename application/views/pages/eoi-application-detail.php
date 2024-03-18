@@ -134,8 +134,10 @@
                                           ?>
                                        <div class="col-sm-4">
                                           <label for="phoneNumber" class="form-label">Potential Interest Areas</label>
-                                          <input type="text"  class="form-control" readonly id="potential_interest_areas" name="potential_interest_areas"  value="<?php echo isset($userDetail->potential_interest_areas) ? implode(',', json_decode($userDetail->potential_interest_areas)) : ''; ?>" />
-                                       </div>
+                                          <input type="text"  class="form-control" readonly id="potential_interest_areas" name="potential_interest_areas" value="<?php if (isset($userDetail->potential_interest_areas)) {
+                                             echo  $userDetail->potential_interest_areas;
+                                             }; ?>" />
+                                        </div>
                                        <?php
                                           }
                                           ?>

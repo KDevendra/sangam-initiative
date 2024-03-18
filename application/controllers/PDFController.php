@@ -94,6 +94,7 @@ class PDFController extends CI_Controller {
         $organisation_hq_address = !empty($getApplicationDetail->organisation_hq_address) ? $getApplicationDetail->organisation_hq_address : "";
         $website_url = !empty($getApplicationDetail->website_url) ? $getApplicationDetail->website_url : "";
         $register_as = !empty($getApplicationDetail->register_as) ? $getApplicationDetail->register_as : "";
+        $other_pertinent_facts = !empty($getApplicationDetail->other_pertinent_facts) ? $getApplicationDetail->other_pertinent_facts : "";
         $getApplicationDetail->technological_category = isset($getApplicationDetail->technological_category) && !empty($getApplicationDetail->technological_category) ? json_decode($getApplicationDetail->technological_category, true) : [];
         $getApplicationDetail->technological_type_of_resource = isset($getApplicationDetail->technological_type_of_resource) && !empty($getApplicationDetail->technological_type_of_resource) ? json_decode($getApplicationDetail->technological_type_of_resource, true) : [];
         $getApplicationDetail->technological_details = isset($getApplicationDetail->technological_details) && !empty($getApplicationDetail->technological_details) ? json_decode($getApplicationDetail->technological_details, true) : [];
@@ -261,7 +262,7 @@ $tbl .= <<<EOD
     <th colspan="2" align="center">Other Information</th>
 </tr>
 <tr>
-    <td colspan="2" style="border: 1px solid #0000002b;"><b>Objectives</b><br>$objectives</td>
+    <td colspan="2" style="border: 1px solid #0000002b;">$other_pertinent_facts</td>
 </tr>
 <tr style="background-color: #405189; font-size: 18px; color: #fff;">
     <th colspan="2" align="center">Certification</th>

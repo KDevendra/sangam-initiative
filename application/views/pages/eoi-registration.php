@@ -602,8 +602,8 @@
                                                          <div class="bg-warning-subtle position-relative">
                                                             <div class="card-body p-5">
                                                                <div class="text-center">
-                                                                  <h3>Lock Application Submission</h3>
-                                                                  <p class="mb-0 text-muted">Certify your organization's authorization to submit the Expression of Interest (EoI) response.</p>
+                                                                  <h3>Application Preview</h3>
+                                                                  <p class="mb-0 text-muted">Please check all the steps before the final submit of application.</p>
                                                                </div>
                                                             </div>
                                                             <div class="shape">
