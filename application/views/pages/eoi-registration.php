@@ -220,6 +220,7 @@
                                                    <a href="javascript:void(0)" class="text-muted"><i class="ri-info-i"></i></a>
                                                 </div>
                                              </label>
+                                             <?php pr($userDetail->previous_experience);?>
                                              <textarea name="previous_experience" class="form-control" id="previous_experience" width="100%" rows="3" placeholder="Write your previous experience "><?php if (isset($userDetail->previous_experience)) {
                                                                                                                                                                                                          echo  $userDetail->previous_experience;
                                                                                                                                                                                                       }; ?></textarea>
