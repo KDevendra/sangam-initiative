@@ -1,6 +1,17 @@
 .catpchaparent {
 	display: flex;
 }
+.dropzone {
+  min-height: 150px;
+  border: 1px solid rgba(0,0,0,.8);
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+  border-radius: 5px;
+  padding: 20px 20px;
+  border-style: dashed !important;
+}
 #updatedTeamDetail{padding-bottom: 20px}
 .error{color: #f06548;}
 .iti--allow-dropdown{width: 100% !important}

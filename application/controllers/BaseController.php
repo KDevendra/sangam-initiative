@@ -14,56 +14,61 @@ class BaseController extends CI_Controller {
         }
     }
     public function index() {
-        $data['title'] = "Home: " . $this->projectTitle;
+        $data['title'] = "Home | " . $this->projectTitle;
         $data['curatedContentList'] = $this->BaseModel->getData('curated_content', ['status'=>2])->result_array();
         $this->load->view('base/index', $data);
     }
     public function about() {
-        $data['title'] = "About: " . $this->projectTitle;
+        $data['title'] = "About | " . $this->projectTitle;
         $this->load->view('base/about', $data);
     }
     public function livingList() {
-        $data['title'] = "Living List: " . $this->projectTitle;
+        $data['title'] = "Living List | " . $this->projectTitle;
         $this->load->view('base/living-list', $data);
     }
     public function whySangam() {
-        $data['title'] = "Why Sangam: " . $this->projectTitle;
+        $data['title'] = "Why Sangam | " . $this->projectTitle;
         $this->load->view('base/why-does-it-matter-now', $data);
     }
     public function sangamTimeline() {
-        $data['title'] = "Sangam Timeline: " . $this->projectTitle;
+        $data['title'] = "Sangam Timeline | " . $this->projectTitle;
         $this->load->view('base/sangam-timeline', $data);
     }
+    public function gallery() {
+        $data['title'] = "Gallery | " . $this->projectTitle;
+        $data["galleryImages"] = $this->db->order_by('id', 'DESC')->get("gallery_images")->result_array();
+        $this->load->view('base/gallery', $data);
+    }
     public function whyNow() {
-        $data['title'] = "why-now: " . $this->projectTitle;
+        $data['title'] = "why-now | " . $this->projectTitle;
         $this->load->view('base/why-now', $data);
     }
     public function whyJoin() {
-        $data['title'] = "Why Join: " . $this->projectTitle;
+        $data['title'] = "Why Join | " . $this->projectTitle;
         $this->load->view('base/why-join', $data);
     }
     public function participate() {
-        $data['title'] = "Participate: " . $this->projectTitle;
+        $data['title'] = "Participate | " . $this->projectTitle;
         $this->load->view('base/participate', $data);
     }
     public function process() {
-        $data['title'] = "Process: " . $this->projectTitle;
+        $data['title'] = "Process | " . $this->projectTitle;
         $this->load->view('base/process', $data);
     }
     public function faqs() {
-        $data['title'] = "FAQ's: " . $this->projectTitle;
+        $data['title'] = "FAQ's | " . $this->projectTitle;
         $this->load->view('base/faqs', $data);
     }
     public function curatedContent() {
-        $data['title'] = "Curated Content: " . $this->projectTitle;
+        $data['title'] = "Curated Content | " . $this->projectTitle;
         $this->load->view('base/curated-content', $data);
     }
     public function preRegistration() {
-        $data['title'] = "Pre Registration: " . $this->projectTitle;
+        $data['title'] = "Pre Registration | " . $this->projectTitle;
         $this->load->view('base/pre-registration', $data);
     }
     public function events() {
-        $data['title'] = "Upcoming Events: " . $this->projectTitle;
+        $data['title'] = "Upcoming Events | " . $this->projectTitle;
         $preRegistrations = $this->BaseModel->getData("login", ['user_level' => 2])->result_array();
         $participantsPerEvent  = $this->BaseModel->getData("event_registration")->result_array();
         $verifiedCount = 0;
@@ -82,75 +87,75 @@ class BaseController extends CI_Controller {
         $this->load->view('base/events', $data);
     }
     public function joinAsSpeaker() {
-        $data['title'] = "Join as Speaker: " . $this->projectTitle;
+        $data['title'] = "Join as Speaker | " . $this->projectTitle;
         $this->load->view('base/join-as-speaker', $data);
     }
     public function upcomingEvents() {
-        $data['title'] = "Upcoming Events: " . $this->projectTitle;
+        $data['title'] = "Upcoming Events | " . $this->projectTitle;
         $this->load->view('base/upcoming-events', $data);
     }
     public function dashboard() {
-        $data['title'] = "Dashboard: " . $this->projectTitle;
+        $data['title'] = "Dashboard | " . $this->projectTitle;
         $this->load->view('base/dashboard', $data);
     }
     public function whyAttend() {
-        $data['title'] = "Why Attend: " . $this->projectTitle;
+        $data['title'] = "Why Attend | " . $this->projectTitle;
         $this->load->view('base/why-attend', $data);
     }
     public function speakers() {
-        $data['title'] = "Speakers: " . $this->projectTitle;
+        $data['title'] = "Speakers | " . $this->projectTitle;
         $this->load->view('base/speakers', $data);
     }
     public function schedule() {
-        $data['title'] = "Schedule: " . $this->projectTitle;
+        $data['title'] = "Schedule | " . $this->projectTitle;
         $this->load->view('base/schedule', $data);
     }
     public function registerEvent() {
-        $data['title'] = "Register Event: " . $this->projectTitle;
+        $data['title'] = "Register Event | " . $this->projectTitle;
         $this->load->view('base/register-event', $data);
     }
     public function expressionOfInterest() {
-        $data['title'] = "Expression of Interest: " . $this->projectTitle;
+        $data['title'] = "Expression of Interest | " . $this->projectTitle;
         $this->load->view('base/expression-of-interest', $data);
     }
     public function aboutEoi() {
-        $data['title'] = "About EoI: " . $this->projectTitle;
+        $data['title'] = "About EoI | " . $this->projectTitle;
         $this->load->view('base/about-eoi', $data);
     }
     public function purposeEoi() {
-        $data['title'] = "Purpose EoI: " . $this->projectTitle;
+        $data['title'] = "Purpose EoI | " . $this->projectTitle;
         $this->load->view('base/purpose-eoi', $data);
     }
     public function stagesEoi() {
-        $data['title'] = "Stages EoI: " . $this->projectTitle;
+        $data['title'] = "Stages EoI | " . $this->projectTitle;
         $this->load->view('base/stages-eoi', $data);
     }
     public function whyParticipate() {
-        $data['title'] = "Why Participate: " . $this->projectTitle;
+        $data['title'] = "Why Participate | " . $this->projectTitle;
         $this->load->view('base/why-participate', $data);
     }
     public function participationDetails() {
-        $data['title'] = "Participation Details: " . $this->projectTitle;
+        $data['title'] = "Participation Details | " . $this->projectTitle;
         $this->load->view('base/participation-details', $data);
     }
     public function submitResponse() {
-        $data['title'] = "Submit Response: " . $this->projectTitle;
+        $data['title'] = "Submit Response | " . $this->projectTitle;
         $this->load->view('base/submit-response', $data);
     }
     public function registration() {
-        $data['title'] = "Registration :: " . $this->projectTitle;
+        $data['title'] = "Registration : | " . $this->projectTitle;
         $this->load->view('base/sign-up', $data);
     }
     public function getInvolved() {
-        $data['title'] = "Get Involved : " . $this->projectTitle;
+        $data['title'] = "Get Involved  | " . $this->projectTitle;
         $this->load->view('base/get-involved', $data);
     }
     public function suggestUseCases() {
-        $data['title'] = "Suggest Use Cases : " . $this->projectTitle;
+        $data['title'] = "Suggest Use Cases  | " . $this->projectTitle;
         $this->load->view('base/submit-use-cases', $data);
     }
     public function curatedContentDetail($page_slug) {
-        $data["title"] = "Curated Content : " . $this->projectTitle;
+        $data["title"] = "Curated Content  | " . $this->projectTitle;
         $data["curatedContentDetail"] = $this->BaseModel->getData("curated_content", ["page_slug" => $page_slug])->row();
         $this->load->view("base/curated-content", $data);
     }
@@ -233,13 +238,13 @@ class BaseController extends CI_Controller {
                 if (rename($oldFilePath, $newFilePath)) {
                     return $uniqueFilename;
                 } else {
-                    return "Error: Unable to rename the uploaded file.";
+                    return "Error | Unable to rename the uploaded file.";
                 }
             } else {
-                return "Error: " . $CI->upload->display_errors();
+                return "Error | " . $CI->upload->display_errors();
             }
         } else {
-            return "Error: No file selected for upload.";
+            return "Error | No file selected for upload.";
         }
     }
     public function submitSpeakerRequest() {

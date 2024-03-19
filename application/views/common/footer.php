@@ -113,6 +113,7 @@
 <script src="<?php echo base_url(''); ?>include/web/vendor/jquery-ui/jquery-ui.min.js"></script>
 <script src="<?php echo base_url(''); ?>include/web/vendor/wow.min.js"></script>
 <script src="<?php echo base_url(''); ?>include/web/js/theme.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" integrity="sha512-C1zvdb9R55RAkl6xCLTPt+Wmcz6s+ccOvcr6G57lbm8M2fbgn2SUjUJbQ13fEyjuLViwe97uJvwa1EUf4F1Akw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     function scrollToElement(targetElementId, offset) {
         var $targetElement = $('#' + targetElementId);
@@ -236,10 +237,10 @@
         });
         $('.speakersBtn').on('click', function(event) {
             event.preventDefault();
-            var targetOffset = $('#speakersDes__').offset().top - 5000; // Adjusted with -200 offset
+            var targetOffset = $('#speakersDes__').offset().top - 5000;
             $('html, body').animate({
                 scrollTop: targetOffset
-            }, 500); // Adjust the animation speed as needed
+            }, 500); 
 
             var buttonId = $(this).attr('id');
             localStorage.setItem(buttonId + '_scrollTarget', 'speakersDes__');
@@ -480,6 +481,23 @@
         $('#speakersDes #' + tabId).show();
     });
     });
+    $('.popup-gallery').magnificPopup({
+  		delegate: 'a',
+  		type: 'image',
+  		tLoading: 'Loading image #%curr%...',
+  		mainClass: 'mfp-img-mobile',
+  		gallery: {
+  			enabled: true,
+  			navigateByImgClick: true,
+  			preload: [0,1]
+  		},
+  		image: {
+  			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+  			titleSrc: function(item) {
+  				return item.el.attr('title') + '<small>Sangam Initiative</small>';
+  			}
+  		}
+  	});
     const cookieBox = document.querySelector(".wrapper"),
         buttons = document.querySelectorAll(".button");
     const executeCodes = () => {

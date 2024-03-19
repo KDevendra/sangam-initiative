@@ -22,6 +22,8 @@
       <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/css/default.css">
       <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/css/style.css">
       <link rel="stylesheet" href="<?php echo base_url(''); ?>include/web/css/custom.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
    </head>
    <body>
       <!-- <div class="preloader">
@@ -252,6 +254,7 @@
                                  <li><a href="<?php echo base_url('registration'); ?>">Submit Response</a></li>
                               </ul>
                            </li>
+                           <li class="menu-item"><a href="<?php echo base_url('gallery');?>" >Gallery</a></li>
                            <li class="menu-item"><a href="javascript:void(0)" class="contactUsBtn">Contact Us</a></li>
                         </ul>
                      </nav>

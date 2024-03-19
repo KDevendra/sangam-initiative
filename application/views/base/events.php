@@ -1320,7 +1320,7 @@
             </div>
          </div>
          <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s">
-            <div class="single-project-item-four col-md-3">
+            <!-- <div class="single-project-item-four col-md-3">
                <div class="project-img">
                   <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Abhilasha_Purwar.jpg" alt="Speaker_Abhilasha_Purwar" />
                   <div class="hover-content">
@@ -1339,7 +1339,7 @@
                   <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Founder & CEO</h5>
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Blue Sky Analytics</h4>
                </div>
-            </div>
+            </div> -->
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
                   <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Amit_Shrivastava.jpg" alt="Speaker_Amit_Shrivastava" />
@@ -1380,7 +1380,7 @@
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Airtel</h4>
                </div>
             </div>
-            <div class="single-project-item-four col-md-3">
+            <!-- <div class="single-project-item-four col-md-3">
                <div class="project-img">
                   <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Ali_Hussein.jpg" alt="Speaker_Ali_Hussein" />
                   <div class="hover-content">
@@ -1399,7 +1399,7 @@
                   <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Chief Executive Officer </h5>
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Eros Now at Eros International PLC</h4>
                </div>
-            </div>
+            </div> -->
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
                   <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Dr_Aniruddha_Roy.jpg" alt="Speaker_Dr_Aniruddha_Roy" />
@@ -1486,6 +1486,28 @@
             </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Priyadashani.jpeg" alt="Speaker_Priyadashani" />
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Priyadarshini Sreenivasa</a>
+                        </h3>
+                        <p style="font-size:13px">Law and public policy specialist, an attorney with extensive experience in litigation, corporate laws and in-house practice, with a focus on risk mitigation, dispute resolution, advisory, legal compliance and strategy. Adding value to business by applying legal strategies to business problems. Demonstrated abilities to introduce strategy and management tools, to streamline corporate in-house legal affairs. Valuable experience from courtroom practice and cross-functional policy, risk and legal advisory planning.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Priyadarshini Sreenivasa                     </a>
+                  </p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Public Policy Manager</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">WhatsApp</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
                   <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rahul_Joshi.jpg" alt="Speaker_Rahul_Joshi" />
                   <div class="hover-content">
                      <div class="text text-white">
@@ -1564,6 +1586,26 @@
                   <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Vikram Malhotra </a></p>
                   <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Senior Specialist - Gen AI and Digital Twin </h5>
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Microsoft India</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Vikaram.jpg" alt="Speaker_Vikaram" />
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Vikram Tanna </a></h3>
+                        <p style="font-size:13px">With over two decades of experience in technology, media, and gaming, Vikram is currently the CEO of Mzaalo - a blockchain powered global entertainment ecosystem, where users earn rewards, brands advertise with trust and creators build economies. He has spearheaded the launch and built mass adoption of Mzaalo dApp - the world’s first video streaming dApp that democratises premium content access and rewards users by tokenizing their time and attention.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Vikram Tanna </a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">CEO at Mzaalo (Xfinite Global plc)</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Eros Investment</h4>
                </div>
             </div>
          </div>
@@ -2177,6 +2219,26 @@
             </div>
          </div>
          <div class="row speakerSection wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+           <div class="single-project-item-four col-md-3">
+              <div class="project-img">
+                 <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Ankit_Dhadda.jpg" alt="Speaker_Ankit_Dhadda">
+                 <div class="hover-content">
+                    <div class="text text-white">
+                       <h3 class="title"><a href="javascript:void(0)">Ankit Dhadda</a></h3>
+                       <p style="font-size:13px">Ankit Dhadda is a digital marketing and product professional with over 15 years of experience across education, personal finance & media. He currently works in realty labs at Meta focusing on developer and India market solutions.</p>
+                    </div>
+                 </div>
+                 <div class="project-content">
+                    <div class="text text-white">
+                    </div>
+                 </div>
+              </div>
+              <div class="text_for_outreach height_150">
+                 <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Ankit Dhadda</a></p>
+                 <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Partner Manager</h5>
+                 <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Realty labs, Meta</h4>
+              </div>
+           </div>
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
                   <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Aditya_khaitan.jpg" alt="Speaker_Aditya_khaitan">
@@ -2277,6 +2339,47 @@
                   <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">TCS TwinX</h4>
                </div>
             </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Nitin_Sharma.jpeg" alt="Speaker_Nitin_Sharma">
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Nitin Sharma </a></h3>
+                        <p style="font-size:13px">He has 26+ years of Software and Wireless Communication industry in the fields of engineering, management and intellectual property. The key responsibilities include developing India Patent Prosecution Strategy, 5G and AI/ML Technology Patent Portfolio management, IP Education and driving initiatives around managing innovation in the organization.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Nitin Sharma </a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Technology Counsel</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Qualcomm</h4>
+               </div>
+            </div>
+            <div class="single-project-item-four col-md-3">
+               <div class="project-img">
+                  <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rajeev.jpeg" alt="Speaker_Rajeev">
+                  <div class="hover-content">
+                     <div class="text text-white">
+                        <h3 class="title"><a href="javascript:void(0)">Rajeev Verma </a></h3>
+                        <p style="font-size:13px">Rajeev verma is a seasoned Cloud Technical Architect with 20+ years of experience designing and deploying scalable cloud solutions across GCP, AWS, and Azure. He has a Proven track record in driving cloud migrations, optimizing cloud infrastructure, and implementing robust security protocols. He is adept at translating business needs into effective cloud architectures.</p>
+                     </div>
+                  </div>
+                  <div class="project-content">
+                     <div class="text text-white">
+                     </div>
+                  </div>
+               </div>
+               <div class="text_for_outreach height_150">
+                  <p class="title" style="margin-bottom: 5px; font-weight: bold;"><a href="javascript:void(0)">Rajeev Verma </a></p>
+                  <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Cloud Technical Architect</h5>
+                  <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">Google Cloud</h4>
+               </div>
+            </div>
+
             <div class="single-project-item-four col-md-3">
                <div class="project-img">
                   <img style="height: 330px;" src="<?php echo base_url(''); ?>include/web/custom/Speaker_Rajesh_Dhyani.jpg" alt="Speaker_Rajesh_Dhyani">
