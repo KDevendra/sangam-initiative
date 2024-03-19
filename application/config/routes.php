@@ -15,6 +15,7 @@ $route['submit-speaker-request'] = 'BaseController/submitSpeakerRequest';
 $route['events'] = 'BaseController/events';
 $route['expression-of-interest'] = 'BaseController/expressionOfInterest';
 $route['sangam-timeline'] = 'BaseController/sangamTimeline';
+$route['gallery'] = 'BaseController/gallery';
 $route['curated/(:any)'] = 'BaseController/curatedContentDetail/$1';
 // route for authorization
 $route['sign-up'] = 'Authorization/signUp';
@@ -71,6 +72,7 @@ $route['verifed-users'] = 'AdminController/verifedUsers';
 $route['unverified-users'] = 'AdminController/unverifiedUsers';
 $route['get-unverified-user-list'] = 'AdminController/getUnverifiedUserList';
 $route['get-verified-user-list'] = 'AdminController/getVerifiedUserList';
+$route['get-gallery-images'] = 'AdminController/getgalleryImages';
 $route['users'] = 'AdminController/users';
 $route['users/(:any)'] = 'AdminController/users/$1';
 $route['users/(:any)/(:any)'] = 'AdminController/users/$1/$2';
@@ -104,6 +106,8 @@ $route['user-curated-content/view/(:any)'] = 'AdminController/eventRegistrationV
 $route['user-curated-content-ation/(:any)/(:any)'] = 'AdminController/userCuratedContentAction/$1/$2';
 $route['post-send-message'] = 'AdminController/postSendMessage';
 $route['send-busk-message'] = 'AdminController/sendBuskMessage';
+$route['manage-gallery'] = 'AdminController/managegallery';
+$route['delete-image/(:any)/(:any)'] = 'AdminController/deleteImage/$1/$2';
 //route for team
 $route['team'] = 'TeamManagementController/team';
 $route['get-team-list'] = 'AdminController/getTeamList';

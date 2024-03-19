@@ -26,6 +26,8 @@
       <script src="<?php echo base_url(''); ?>include/admin/libs/moment/moment.js"></script>
       <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
+      <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
    </head>
    <body>
       <div id="layout-wrapper">

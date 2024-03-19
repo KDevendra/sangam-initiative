@@ -4519,7 +4519,7 @@ position: absolute;
 .project-filter li.active:after {
   visibility: visible;
   opacity: 1;
-  width: 40px;
+  width: 100%;
 }
 
 .projects-slider-one {
@@ -4609,8 +4609,15 @@ position: absolute;
 }
 
 .single-project-item .project-img img {
-  border-radius: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
+
+.single-project-item .project-img img:hover {
+  transform: scale(1.1);
+}
+
 
 .single-project-item .project-img .hover-content {
   position: absolute;
