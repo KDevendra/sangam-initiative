@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <ul class="project-filter mb-50 d-flex justify-content-center">
-                    <li class="active" data-filter="*">Show All</li>
+                    <li class="active" data-filter="*">All</li>
                     <li data-filter=".delhi">Delhi</li>
                     <li data-filter=".bangalore">Bangalore</li>
                     <li data-filter=".hyderabad">Hyderabad</li>

@@ -4611,7 +4611,8 @@ position: absolute;
 .single-project-item .project-img img {
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  transition: transform 0.3s ease;
+  height: 160px;
 }
 
 .single-project-item .project-img img:hover {
