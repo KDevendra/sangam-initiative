@@ -216,11 +216,13 @@
                                           <div class="col-sm-12">
                                              <label for="previous_experience" id="additionalInformation" class="form-label">
                                                 <span>Previous Experience in Related Projects</span>
+
                                                 <div data-bs-toggle="tooltip" data-bs-placement="top" title="Please provide details of any previous experience in projects related to infrastructure planning and design, Digital Twin technology, or relevant fields.">
                                                    <a href="javascript:void(0)" class="text-muted"><i class="ri-info-i"></i></a>
                                                 </div>
                                              </label>
                                              <textarea name="previous_experience" class="form-control" id="previous_experience" width="100%" rows="3" placeholder="Write your previous experience "><?php if (isset($userDetail->previous_experience)) {echo  $userDetail->previous_experience;} ?></textarea>
+                                             <small class="text-danger">Limit 3000 characters</small>
                                              <div class="invalid-feedback">Please enter a previous experience in related projects</div>
                                           </div>
                                           <div class="col-sm-12">
@@ -231,6 +233,7 @@
                                                 </div>
                                              </label>
                                              <textarea name="achievements_recognitions" class="form-control" id="achievements_recognitions" width="100%" rows="3" placeholder="Write your achievements or recognitions "><?php if (isset($userDetail->achievements_recognitions)) {echo  $userDetail->achievements_recognitions;} ?></textarea>
+                                             <small class="text-danger">Limit 3000 characters</small>
                                              <div class="invalid-feedback">Please enter a achievements or recognitions</div>
                                           </div>
                                        </div>
@@ -559,6 +562,7 @@
                                              <textarea name="other_pertinent_facts" class="form-control" id="other_pertinent_facts" placeholder="Please enter a other pertinent facts or offerings" width="100%" rows="5"><?php if (isset($userDetail->other_pertinent_facts)) {
                                                echo $userDetail->other_pertinent_facts;
                                                                                                                                                                                                                            }; ?></textarea>
+                                                                                                                                                                                                                           <small class="text-danger">Limit 3000 characters</small>
                                              <div class="invalid-feedback">Please enter a other pertinent facts or offerings</div>
                                           </div>
                                        </div>

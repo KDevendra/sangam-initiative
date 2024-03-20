@@ -3,9 +3,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class PDFController extends CI_Controller {
     public function __construct() {
         parent::__construct();
-        if (!isset($this->session->login['user_level']) || empty($this->session->login['login_id'])) {
-            redirect('login');
-        }
+        // if (!isset($this->session->login['user_level']) || empty($this->session->login['login_id'])) {
+        //     redirect('login');
+        // }
         date_default_timezone_set('Asia/Kolkata');
         $this->load->model('BaseModel');
         $this->load->helper('common_helper');

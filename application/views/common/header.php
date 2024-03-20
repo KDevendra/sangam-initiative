@@ -241,6 +241,7 @@
                                  <li><a href="<?php echo base_url('events/')?>#speakersDes">Speakers</a></li>
                                  <li><a href="javascript:void(0)" class="scheduleBtn">Schedule</a></li>
                                  <li><a href="javascript:void(0)" class="registerForTheEventBtn">Register for the event</a></li>
+                                 <li><a href="<?php echo base_url('gallery');?>" >Gallery</a></li>
                               </ul>
                            </li>
                            <li class="menu-item has-children">
@@ -254,7 +255,7 @@
                                  <li><a href="<?php echo base_url('registration'); ?>">Submit Response</a></li>
                               </ul>
                            </li>
-                           <li class="menu-item"><a href="<?php echo base_url('gallery');?>" >Gallery</a></li>
+
                            <li class="menu-item"><a href="javascript:void(0)" class="contactUsBtn">Contact Us</a></li>
                         </ul>
                      </nav>

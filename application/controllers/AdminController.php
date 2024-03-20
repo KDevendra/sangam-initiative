@@ -751,7 +751,7 @@ class AdminController extends CI_Controller {
                 $user_id = $this->BaseModel->getData("event_registration", ["application_id" => $application_id])->row()->user_id;
                 $applicationDetail = $this->BaseModel->getEventApplicationData($user_id);
                 $templateFile = FCPATH . "include/email/admin/temp_email_eoi_application_approve_format.html";
-                $subject = "Approval of Expression of Interest (EoI) Application";
+                $subject = "Approval of EoI Application -Sangam: Digital Twin Initiative";
                 $messageBody = file_get_contents($templateFile);
                 $placeholders = ["{application_id}", "{full_name}", "{email}", "{phone_number}"];
                 $values = [$applicationDetail->application_id, $applicationDetail->full_name, $applicationDetail->email, $applicationDetail->contact_no];
@@ -1324,8 +1324,8 @@ class AdminController extends CI_Controller {
     public function postEoIRegistration() {
         if ($this->input->method() === "post") {
             if ($this->input->post("registration_step") === "Step_2_Additional_Information") {
-                $this->form_validation->set_rules("previous_experience", "Previous Experience", "trim");
-                $this->form_validation->set_rules("achievements_recognitions", "Achievements and Recognitions", "trim");
+                $this->form_validation->set_rules("previous_experience", "Previous Experience", "trim|max_length[3000]");
+                $this->form_validation->set_rules("achievements_recognitions", "Achievements and Recognitions", "trim|max_length[3000]");
             }
             if ($this->input->post("registration_step") === "Step_3_Details_of_Submission") {
                 $this->form_validation->set_rules("title", "Title", "trim|required");
@@ -1353,7 +1353,7 @@ class AdminController extends CI_Controller {
                 $this->form_validation->set_rules("human_alignment[]", "Human Alignment", "trim");
             }
             if ($this->input->post("registration_step") === "Step_6_Other_Information") {
-                $this->form_validation->set_rules("other_pertinent_facts", "Other Pertinent Facts", "trim");
+                $this->form_validation->set_rules("other_pertinent_facts", "Other Pertinent Facts", "trim|max_length[3000]");
             }
             if ($this->input->post("registration_step") === "Step_7_Certification") {
                 $this->form_validation->set_rules("certification", "Certification", "trim|required");
