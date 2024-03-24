@@ -222,7 +222,7 @@
                                                 </div>
                                              </label>
                                              <textarea name="previous_experience" class="form-control" id="previous_experience" width="100%" rows="3" placeholder="Write your previous experience "><?php if (isset($userDetail->previous_experience)) {echo  $userDetail->previous_experience;} ?></textarea>
-                                             <small class="text-danger">Limit 3000 characters</small>
+                                             <small class="text-primary">Limit 3000 characters</small>
                                              <div class="invalid-feedback">Please enter a previous experience in related projects</div>
                                           </div>
                                           <div class="col-sm-12">
@@ -233,7 +233,7 @@
                                                 </div>
                                              </label>
                                              <textarea name="achievements_recognitions" class="form-control" id="achievements_recognitions" width="100%" rows="3" placeholder="Write your achievements or recognitions "><?php if (isset($userDetail->achievements_recognitions)) {echo  $userDetail->achievements_recognitions;} ?></textarea>
-                                             <small class="text-danger">Limit 3000 characters</small>
+                                             <small class="text-primary">Limit 3000 characters</small>
                                              <div class="invalid-feedback">Please enter a achievements or recognitions</div>
                                           </div>
                                        </div>
@@ -255,12 +255,14 @@
                                              <label for="title" class="form-label">Title <span class="text-danger">*</span></label> <input type="text" class="form-control" id="title" name="title" placeholder="Enter title" value="<?php if (isset($userDetail->title)) {
                                                                                                                                                                                                                                           echo  $userDetail->title;
                                                                                                                                                                                                                                        }; ?>" />
+                                                                                                                                                                                                                                          <small class="text-primary">Limit 100 characters</small>
                                              <div class="invalid-feedback">Please enter a title</div>
                                           </div>
                                           <div class="col-sm-6">
                                              <label for="category" class="form-label">Category <span class="text-danger">*</span></label> <input type="text" class="form-control" id="category" name="category" placeholder="Enter category" value="<?php if (isset($userDetail->category)) {
                                                                                                                                                                                                                                                          echo  $userDetail->category;
                                                                                                                                                                                                                                                       }; ?>" />
+                                                                                                                                                                                                                                                      <small class="text-primary">Limit 100 characters</small>
                                              <div class="invalid-feedback">Please enter a category</div>
                                           </div>
                                           <div class="col-sm-6">
@@ -268,6 +270,7 @@
                                              <textarea name="strategic_vision" placeholder="Write vision" class="form-control" name="strategic_vision" id="strategic_vision" width="100%" rows="2"><?php if (isset($userDetail->strategic_vision)) {
                                                                                                                                                                                                       echo  $userDetail->strategic_vision;
                                                                                                                                                                                                    }; ?></textarea>
+                                                                                                                                                                                                    <small class="text-primary">Limit 500 characters</small>
                                              <div class="invalid-feedback">Please enter a vision</div>
                                           </div>
                                           <div class="col-sm-6">
@@ -275,6 +278,7 @@
                                              <textarea name="objectives" placeholder="Write objectives" class="form-control" name="objectives" id="objectives" width="100%" rows="2"><?php if (isset($userDetail->objectives)) {
                                                                                                                                                                                           echo  $userDetail->objectives;
                                                                                                                                                                                        }; ?></textarea>
+                                                                                                                                                                                       <small class="text-primary">Limit 500 characters</small>
                                              <div class="invalid-feedback">Please enter a objectives</div>
                                           </div>
                                           <div class="col-sm-6">
@@ -287,6 +291,7 @@
                                              <textarea name="project_goals" placeholder="Write project goals" name="project_goals" class="form-control" id="project_goals" width="100%" rows="2"><?php if (isset($userDetail->project_goals)) {
                                                                                                                                                                                                       echo  $userDetail->project_goals;
                                                                                                                                                                                                    }; ?></textarea>
+                                                                                                                                                                                                    <small class="text-primary">Limit 1200 characters</small>
                                              <div class="invalid-feedback">Please enter a alignment with project goals</div>
                                           </div>
                                           <div class="col-sm-6">
@@ -299,6 +304,7 @@
                                              <textarea name="contribution_to_project_goals" placeholder="Write contribution" name="contribution_to_project_goals" class="form-control" id="contribution_to_project_goals" width="100%" rows="2"><?php if (isset($userDetail->contribution_to_project_goals)) {
                                                                                                                                                                                                                                                    echo  $userDetail->contribution_to_project_goals;
                                                                                                                                                                                                                                                 }; ?></textarea>
+                                                                                                                                                                                                                                                <small class="text-primary">Limit 1200 characters</small>
                                              <div class="invalid-feedback">Please enter a contribution to project goals</div>
                                           </div>
                                        </div>
@@ -562,7 +568,7 @@
                                              <textarea name="other_pertinent_facts" class="form-control" id="other_pertinent_facts" placeholder="Please enter a other pertinent facts or offerings" width="100%" rows="5"><?php if (isset($userDetail->other_pertinent_facts)) {
                                                echo $userDetail->other_pertinent_facts;
                                                                                                                                                                                                                            }; ?></textarea>
-                                                                                                                                                                                                                           <small class="text-danger">Limit 3000 characters</small>
+                                                                                                                                                                                                                           <small class="text-primary">Limit 3000 characters</small>
                                              <div class="invalid-feedback">Please enter a other pertinent facts or offerings</div>
                                           </div>
                                        </div>
@@ -795,23 +801,27 @@
                                                                           <label for="title" class="form-label">Title</label> <input type="text" class="form-control" readonly id="title"  value="<?php if (isset($userDetail->title)) {
                                                                              echo  $userDetail->title;
                                                                              }; ?>" />
+                                                                             <small class="text-primary">Limit 100 characters</small>
                                                                        </div>
                                                                        <div class="col-sm-4">
                                                                           <label for="category" class="form-label">Category</label> <input type="text" class="form-control" readonly id="category"   value="<?php if (isset($userDetail->category)) {
                                                                              echo  $userDetail->category;
                                                                              }; ?>" />
+                                                                             <small class="text-primary">Limit 100 characters</small>
                                                                        </div>
                                                                        <div class="col-sm-4">
                                                                           <label for="strategic_vision" class="form-label"> Strategic Vision</label>
                                                                           <textarea   class="form-control" readonly  id="strategic_vision" width="100%" rows="2"><?php if (isset($userDetail->strategic_vision)) {
                                                                              echo  $userDetail->strategic_vision;
                                                                              }; ?></textarea>
+                                                                             <small class="text-primary">Limit 500 characters</small>
                                                                        </div>
                                                                        <div class="col-sm-4">
                                                                           <label for="objectives" class="form-label"> Objectives</label>
                                                                           <textarea   class="form-control" readonly  id="objectives" width="100%" rows="2"><?php if (isset($userDetail->objectives)) {
                                                                              echo  $userDetail->objectives;
                                                                              }; ?></textarea>
+                                                                             <small class="text-primary">Limit 500 characters</small>
                                                                        </div>
                                                                        <div class="col-sm-4">
                                                                           <label for="project_goals" id="additionalInformation" class="form-label">
@@ -820,6 +830,7 @@
                                                                           <textarea   class="form-control" readonly id="project_goals" width="100%" rows="2"><?php if (isset($userDetail->project_goals)) {
                                                                              echo  $userDetail->project_goals;
                                                                              }; ?></textarea>
+                                                                             <small class="text-primary">Limit 1200 characters</small>
                                                                        </div>
                                                                        <div class="col-sm-4">
                                                                           <label for="contribution_to_project_goals" id="additionalInformation" class="form-label">
@@ -828,6 +839,7 @@
                                                                           <textarea   class="form-control" readonly id="contribution_to_project_goals" width="100%" rows="2"><?php if (isset($userDetail->contribution_to_project_goals)) {
                                                                              echo  $userDetail->contribution_to_project_goals;
                                                                              }; ?></textarea>
+                                                                             <small class="text-primary">Limit 1200 characters</small>
                                                                        </div>
                                                                     </div>
                                                                  </div>

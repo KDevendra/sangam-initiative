@@ -1245,6 +1245,25 @@
                </div>
             </div>
             <div class="testimonial-slider-one wow fadeInUp">
+               <?php foreach ($curatedContentList as $list): ?>
+                 <div class="single-testimonial-item">
+                    <div class="testimonial-inner-content text-center">
+                       <div class="d-flex justify-content-center">
+                          <img src="<?php if (isset($list['image']) && !empty($list['image'])) { echo base_url('uploads/cc_image/') . $list['image'];}?>" alt="<?php if (isset($list['title']) && !empty($list['title'])) { echo $list['title'];}else{echo "";}?>">
+                       </div>
+                       <div class="quote-rating-box d-flex justify-content-center">
+                          <div class="ratings-box">
+                             <h5>
+                             <a href="<?php if (isset($list['title_link']) && !empty($list['title_link'])) { echo $list['title_link'];}else{echo "javascript:void(0)";}?>" ><?php if (isset($list['title']) && !empty($list['title'])) { echo $list['title'];}else{echo "";}?></a></h6>
+                             <p><b><?php if (isset($list['sub_title']) && !empty($list['sub_title'])) { echo $list['sub_title'];}else{echo "";}?></b> </p>
+                          </div>
+                       </div>
+                       <div class="text-center">
+                          <h6> <a href="<?php if (isset($list['custom_title_link']) && !empty($list['custom_title_link'])) { echo $list['custom_title_link'];}else{echo "";}?>" target="_blank"><?php if (isset($list['custom_title']) && !empty($list['custom_title'])) { echo $list['custom_title'];}else{echo "";}?></a> </h6>
+                       </div>
+                    </div>
+                 </div>
+               <?php endforeach; ?>
                <div class="single-testimonial-item">
                   <div class="testimonial-inner-content text-center">
                      <div class="d-flex justify-content-center">

@@ -56,7 +56,7 @@ class ReportExcelController extends CI_Controller {
                 } else {
                     $organization_name = '';
                 }
-                fputcsv($handle, [$i++, $list->registration_id, $list->user_id, $list->full_name, $list->email, $list->phone_number, $list->event_name, $list->location, $list->event_date, $list->plan_to_submit_response, $list->reason_to_attend, $list->ask_questions, $list->questions_to_speaker, $list->register_as, $list->date_of_birth, $list->core_competency, $list->other_core_competencie, $list->experience, $list->organization_name, $list->alternate_email, $list->potential_interest_areas, $list->office_address, $list->organisation_hq_address, $list->website_url, $list->created_at, $status_text, ]);
+                fputcsv($handle, [$i++, $list->registration_id, $list->user_id, $list->full_name, $list->email, $list->contact_no, $list->event_name, $list->location, $list->event_date, $list->plan_to_submit_response, $list->reason_to_attend, $list->ask_questions, $list->questions_to_speaker, $list->register_as, $list->date_of_birth, $list->core_competency, $list->other_core_competencie, $list->experience, $list->organization_name, $list->alternate_email, $list->potential_interest_areas, $list->office_address, $list->organisation_hq_address, $list->website_url, $list->created_at, $status_text, ]);
             }
             fclose($handle);
             exit();
@@ -118,7 +118,7 @@ class ReportExcelController extends CI_Controller {
             fputcsv($handle, ["S.No.", "Applications ID", "Full Name", "Email ID", "Contact Number", "Previous Speaking Experience", "Additional Information", "Title of the Topic", "Topic Details", "Upload Photo", "Datetime"]);
             $i = 1;
             foreach ($application_list as $list) {
-                fputcsv($handle, [$i++, $list['ap_req'], $list['full_name'], $list['email'], $list['phone_number'], $list['previous_speaking_experience'], $list['additional_information'], $list['topic_title'], $list['topic_details'], $list['photo_upload'], $list['submission_date'], ]);
+                fputcsv($handle, [$i++, $list['ap_req'], $list['full_name'], $list['email'], $list['contact_no'], $list['previous_speaking_experience'], $list['additional_information'], $list['topic_title'], $list['topic_details'], $list['photo_upload'], $list['submission_date'], ]);
             }
             fclose($handle);
             exit();
@@ -218,14 +218,14 @@ class ReportExcelController extends CI_Controller {
                 } else {
                     $organization_name = '';
                 }
-                if (empty($list->upload_relevant_document)) {
+                if (isset($list->upload_relevant_document) && strpos($list->upload_relevant_document, "Error") !== false) {
                     $upload_document = "No file uploaded";
                 } elseif (strpos($list->upload_relevant_document, "Error") !== false) {
                     $upload_document = "Error: No file uploaded";
                 } else {
                     $upload_document = '=HYPERLINK("' . base_url("uploads/upload_relevant_document/") . $list->upload_relevant_document . '", "View Upload Document")';
                 }
-                fputcsv($handle, [$i++, isset($list->case_id) ? $list->case_id : '', isset($list->user_id) ? $list->user_id : '', isset($list->full_name) ? $list->full_name : '', isset($list->email) ? $list->email : '', isset($list->phone_number) ? $list->phone_number : '', isset($list->register_as) ? $list->register_as : '', isset($list->date_of_birth) ? $list->date_of_birth : '', isset($list->core_competency) ? $list->core_competency : '', isset($list->other_core_competencie) ? $list->other_core_competencie : '', isset($list->experience) ? $list->experience : '', isset($list->organization_name) ? $list->organization_name : '', isset($list->alternate_email) ? $list->alternate_email : '', isset($list->potential_interest_areas) ? $list->potential_interest_areas : '', isset($list->office_address) ? $list->office_address : '', isset($list->organisation_hq_address) ? $list->organisation_hq_address : '', isset($list->website_url) ? $list->website_url : '', isset($list->title) ? $list->title : '', isset($list->objective) ? $list->objective : '', isset($list->target_areas) ? $list->target_areas : '', isset($list->relevance) ? $list->relevance : '', isset($list->technologies_used) ? $list->technologies_used : '', isset($list->data_sources) ? $list->data_sources : '', isset($list->expected_outcomes) ? $list->expected_outcomes : '', isset($list->innovative_aspects) ? $list->innovative_aspects : '', isset($list->feasibility_and_challenges) ? $list->feasibility_and_challenges : '', isset($upload_document) ? $upload_document : '', isset($list->created_at) ? $list->created_at : '', ]);
+                fputcsv($handle, [$i++, isset($list->case_id) ? $list->case_id : '', isset($list->user_id) ? $list->user_id : '', isset($list->full_name) ? $list->full_name : '', isset($list->email) ? $list->email : '', isset($list->contact_no) ? $list->contact_no : '', isset($list->register_as) ? $list->register_as : '', isset($list->date_of_birth) ? $list->date_of_birth : '', isset($list->core_competency) ? $list->core_competency : '', isset($list->other_core_competencie) ? $list->other_core_competencie : '', isset($list->experience) ? $list->experience : '', isset($list->organization_name) ? $list->organization_name : '', isset($list->alternate_email) ? $list->alternate_email : '', isset($list->potential_interest_areas) ? $list->potential_interest_areas : '', isset($list->office_address) ? $list->office_address : '', isset($list->organisation_hq_address) ? $list->organisation_hq_address : '', isset($list->website_url) ? $list->website_url : '', isset($list->title) ? $list->title : '', isset($list->objective) ? $list->objective : '', isset($list->target_areas) ? $list->target_areas : '', isset($list->relevance) ? $list->relevance : '', isset($list->technologies_used) ? $list->technologies_used : '', isset($list->data_sources) ? $list->data_sources : '', isset($list->expected_outcomes) ? $list->expected_outcomes : '', isset($list->innovative_aspects) ? $list->innovative_aspects : '', isset($list->feasibility_and_challenges) ? $list->feasibility_and_challenges : '', isset($upload_document) ? $upload_document : '', isset($list->created_at) ? $list->created_at : '', ]);
             }
             fclose($handle);
             exit();

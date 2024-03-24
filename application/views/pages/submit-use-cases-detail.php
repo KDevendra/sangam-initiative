@@ -133,18 +133,21 @@
 
                                 <div class="col-md-4 mt-3">
                                     <label for="uploadRelevantDocument">  Upload Relevant Document  <span class="text-danger">(PDF & Max Size:2MB)</span></label>
+
                                     <?php if (isset($flag) && $flag === 'view') { ?>
                                       <?php
-                                      if(!empty($userDetail->upload_relevant_document))
-                                      {
-                                        ?>
-                                        <p>  <a target="_blank" href="<?php echo base_url('uploads/upload_relevant_document/').$userDetail->upload_relevant_document;?>">View File</a></p>
-                                      <?php
-                                    }
-                                      else
-                                      {
-                                        echo "No file uploaded";
-                                      }
+                                      if (isset($userDetail->upload_relevant_document) && strpos($userDetail->upload_relevant_document, "Error") !== false) {
+
+                                              echo "Error: The upload_relevant_document contains the substring 'Error'.";
+                                          } elseif (isset($userDetail->upload_relevant_document) && !empty($userDetail->upload_relevant_document)) {
+
+                                              $fileLink = base_url('uploads/upload_relevant_document/') . $userDetail->upload_relevant_document;
+
+                                              echo "<a href='" . $fileLink . "' target='_blank'>View File</a>";
+                                          } else {
+
+                                              echo "No upload_relevant_document available.";
+                                          }
 
                                       ?>
                                     <?php } else { ?>

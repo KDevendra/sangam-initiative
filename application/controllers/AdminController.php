@@ -560,22 +560,23 @@ class AdminController extends CI_Controller {
         try {
             if ($this->input->post()) {
                 $this->form_validation->set_rules("title", "title", "trim|required");
-                $this->form_validation->set_rules("content", "description", "trim|required");
+                $this->form_validation->set_rules("sub_title", "sub title", "trim|required");
                 if ($this->form_validation->run() === false) {
                     $this->session->set_flashdata("error", validation_errors());
                     return redirect("curated-content/add");
                 } else {
                     $title = $this->input->post("title");
                     $sub_title = $this->input->post("sub_title");
-                    $image = $_FILES['attachment']['name'];
-                    $content = $this->input->post("content");
-                    $link = $this->input->post("link");
+                    $title_link = $this->input->post("title_link");
+                    $custom_title = $this->input->post("custom_title");
+                    $custom_title_link = $this->input->post("custom_title_link");
                     $cc_id = $this->input->post("cc_id");
-                    $image_file = null;
-                    if (!empty($image)) {
-                        $image_file = $this->handleFileUpload("attachment", "uploads/cc_image/", "jpg|png|jpeg", 2000);
+                    $cc_image = $this->handleFileUpload("cc_image", "./uploads/cc_image/", "jpg|png|jpeg", "2000");
+                    if (strpos($cc_image, "Error") !== false) {
+                        $this->session->set_flashdata("error", $cc_image);
+                        return redirect("curated-content/add");
                     }
-                    $postData = ["title" => $title, "sub_title" => $sub_title, "content" => $content, "page_slug" => str_replace(" ", "-", strtolower($title)), "link" => $link, "user_id" => $this->session->login["user_id"], "author_name" => $this->session->login["user_name"], "created_at" => date("Y-m-d H:i:s"), ];
+                    $postData = ["title" => $title, "sub_title" => $sub_title, "image" => $cc_image,"title_link" => $title_link,"custom_title" => $custom_title,"custom_title_link" => $custom_title_link, "page_slug" => str_replace(" ", "-", strtolower($title)), "user_id" => $this->session->login["user_id"], "author_name" => $this->session->login["user_name"], "created_at" => date("Y-m-d H:i:s"), ];
                     if (empty($cc_id)) {
                         $query = $this->BaseModel->insertData("curated_content", $postData);
                         if ($query) {
@@ -1328,12 +1329,12 @@ class AdminController extends CI_Controller {
                 $this->form_validation->set_rules("achievements_recognitions", "Achievements and Recognitions", "trim|max_length[3000]");
             }
             if ($this->input->post("registration_step") === "Step_3_Details_of_Submission") {
-                $this->form_validation->set_rules("title", "Title", "trim|required");
-                $this->form_validation->set_rules("category", "Category", "trim|required");
-                $this->form_validation->set_rules("strategic_vision", "Strategic Vision", "trim|required");
-                $this->form_validation->set_rules("objectives", "Objectives", "trim|required");
-                $this->form_validation->set_rules("project_goals", "Project Goals", "trim|required");
-                $this->form_validation->set_rules("contribution_to_project_goals", "Contribution to Project Goals", "trim|required");
+                $this->form_validation->set_rules("title", "Title", "trim|required|max_length[100]");
+                $this->form_validation->set_rules("category", "Category", "trim|required|max_length[100]");
+                $this->form_validation->set_rules("strategic_vision", "Strategic Vision", "trim|required|max_length[500]");
+                $this->form_validation->set_rules("objectives", "Objectives", "trim|required|max_length[500]");
+                $this->form_validation->set_rules("project_goals", "Project Goals", "trim|required|max_length[1200]");
+                $this->form_validation->set_rules("contribution_to_project_goals", "Contribution to Project Goals", "trim|required|max_length[1200]");
             }
             if ($this->input->post("registration_step") === "Step_4_Technological_Resources") {
                 $this->form_validation->set_rules("technological_category[]", "Technological Category", "trim");
@@ -1602,6 +1603,18 @@ class AdminController extends CI_Controller {
                     $response = ["status" => "success", "message" => "The curated content has been successfully rejected."];
                 } else {
                     $response = ["status" => "error", "message" => "Unable to update the curated content status. Please try again later."];
+                }
+                if ($this->input->is_ajax_request()) {
+                    $this->output->set_content_type("application/json");
+                    echo json_encode($response);
+                }
+            break;
+            case "delete":
+                $query = $this->BaseModel->deleteData("curated_content", ["cc_id" => $cc_id]);
+                if ($query) {
+                    $response = ["status" => "success", "message" => "The curated content has been successfully deleted."];
+                } else {
+                    $response = ["status" => "error", "message" => "Unable to delete the curated content. Please try again later."];
                 }
                 if ($this->input->is_ajax_request()) {
                     $this->output->set_content_type("application/json");

@@ -1692,7 +1692,10 @@
                         <h5 style="color: #2f2f2f;font-size: 17px;font-family: 'Montserrat', sans-serif;font-weight: bold;">Director General Telecom</h5>
                         <h4 style="color: #2f2f2f;font-size: 16px;font-family: 'Montserrat', sans-serif;font-weight: 500;">DoT, GoI</h4>
                      </div>
-                     <p>Before joining IIITB in 2002, he had served at G S Sanyal School of Telecommunication at IIT Kharagpur and later at Kirana Networks in New Jersey, USA. He is Project Officer of National Mission for Interdisciplinary Cyber Physical Systems in the areas of Advanced Communication System, from DST, Govt of India. He was PI of multiple sponsored projects from Intel, Hewlett Packard, Microsoft, Motorola Research, Tejas Networks, Nokia, Govt. of India, in the areas of Broadband Wireless MAC/QoS/Energy-saving, and IMS. His main areas of research interest are IoT and Wireless Access Network's MAC, QoS, Power saving.Dr. Das received his Ph.D. degree from the Indian Institute of Technology Kharagpur.</p>
+                     <p>Before joining IIITB in 2002, he had served at G S Sanyal School of Telecommunication at IIT Kharagpur and later at Kirana Networks in New Jersey, USA. He is Project Officer of National Mission for Interdisciplinary Cyber Physical Systems in the areas of Advanced Communication System, from DST, Govt of India.
+                       Sh. Ritu Ranjan Mittar is an ITS officer of 1985 batch having experience of over 30 years of services in various capacities in Department of Telecommunications, Government of India. He is having very vast experience in the area of Standardization of Telecom Equipment & Networks.
+                       <!-- He was PI of multiple sponsored projects from Intel, Hewlett Packard, Microsoft, Motorola Research, Tejas Networks, Nokia, Govt. of India, in the areas of Broadband Wireless MAC/QoS/Energy-saving, and IMS. His main areas of research interest are IoT and Wireless Access Network's MAC, QoS, Power saving.Dr. Das received his Ph.D. degree from the Indian Institute of Technology Kharagpur. -->
+                     </p>
                   </div>
                </div>
             </div>

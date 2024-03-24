@@ -331,13 +331,18 @@
                                              <label for="uploadDocument" class="form-label mt-2">Upload Document </label><br>
                                              <?php
                                              if (isset($flag) && $flag === 'view') {
-                                                 if (strpos($userDetail->upload_document, "Error") !== false) {
-                                                     echo "No file uploaded";
-                                                 } else {
-                                             ?>
-                                                     <a target="_blank" href="<?php echo base_url('uploads/upload_document/') . $userDetail->upload_document; ?>">View File</a>
-                                             <?php
-                                                 }
+                                                 if (isset($userDetail->upload_document) && strpos($userDetail->upload_document, "Error") !== false) {
+
+                                                         echo "Error: The upload_document contains the substring 'Error'.";
+                                                     } elseif (isset($userDetail->upload_document) && !empty($userDetail->upload_document)) {
+
+                                                         $fileLink = base_url('uploads/upload_document/') . $userDetail->upload_document;
+
+                                                         echo "<a href='" . $fileLink . "' target='_blank'>View File</a>";
+                                                     } else {
+
+                                                         echo "No upload_document available.";
+                                                     }
                                              }
                                              ?>
 

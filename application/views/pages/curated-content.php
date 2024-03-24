@@ -53,6 +53,62 @@ function editCuratedContent(cc_id) {
     var redirectUrl = "<?php echo base_url('curated-content/edit/'); ?>" + cc_id;
     window.location.href = redirectUrl;
 }
+function deleteCuratedContent(cc_id) {
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            confirmButton: "btn btn-success",
+            cancelButton: "btn btn-danger",
+        },
+        buttonsStyling: false,
+    });
+    swalWithBootstrapButtons
+        .fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel!",
+            reverseButtons: true,
+        })
+        .then((result) => {
+            if (result.isConfirmed) {
+              $.ajax({
+                  type: "POST",
+                  url: "<?php echo base_url('user-curated-content-ation/delete/'); ?>" + cc_id,
+                  dataType: "json",
+                  success: function (response) {
+                      console.log(response);
+                      if (response.status === "success") {
+                          swalWithBootstrapButtons
+                              .fire({
+                                  title: "Deleted!",
+                                  text: "Curated content has been deleted.",
+                                  icon: "success",
+                              })
+                              .then(function () {
+                                  var dataTable = initializeDataTable();
+                              });
+                      }
+                  },
+                  error: function (xhr, status, error) {
+                      swalWithBootstrapButtons.fire({
+                          title: "Error",
+                          text: "An error occurred while approve the application.",
+                          icon: "error",
+                      });
+                  },
+              });
+
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                swalWithBootstrapButtons.fire({
+                    title: "Cancelled",
+                    text: "Your curated content safe :)",
+                    icon: "error",
+                });
+            }
+        });
+}
 function approveCuratedContent(cc_id) {
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
@@ -102,7 +158,7 @@ function approveCuratedContent(cc_id) {
             } else if (result.dismiss === Swal.DismissReason.cancel) {
                 swalWithBootstrapButtons.fire({
                     title: "Cancelled",
-                    text: "Your imaginary application is safe :)",
+                    text: "Your curated content safe :)",
                     icon: "error",
                 });
             }
@@ -157,7 +213,7 @@ function rejectCuratedContent(cc_id) {
             } else if (result.dismiss === Swal.DismissReason.cancel) {
                 swalWithBootstrapButtons.fire({
                     title: "Cancelled",
-                    text: "Your imaginary application is safe :)",
+                    text: "Your curated content safe :)",
                     icon: "error",
                 });
             }
@@ -241,18 +297,26 @@ function initializeDataTable() {
                                 "</button>" +
                                 "</div>");
                         } else {
-                            var buttons =
-                                '<div class="btn-group" role="group" aria-label="Action buttons">' +
-                                '<button type="button" class="btn btn-primary btn-sm" onclick="viewCuratedContent(\'' +
-                                row.cc_id +
-                                "')\">" +
-                                '<i class="ri-eye-line align-middle"></i> View' +
-                                "</button>" +
-                                '<button type="button" class="btn btn-warning btn-sm" onclick="editCuratedContent(\'' +
-                                row.cc_id +
-                                "')\">" +
-                                '<i class="ri-edit-2-fill align-middle"></i> Edit' +
-                                "</button><div>";
+                          var buttons =
+                        '<div class="btn-group" role="group" aria-label="Action buttons">' +
+                        '<button type="button" class="btn btn-primary btn-sm" onclick="viewCuratedContent(\'' +
+                        row.cc_id +
+                        "')\">" +
+                        '<i class="ri-eye-line align-middle"></i> View' +
+                        "</button>" +
+                        '<button type="button" class="btn btn-warning btn-sm" onclick="editCuratedContent(\'' +
+                        row.cc_id +
+                        "')\">" +
+                        '<i class="ri-edit-2-fill align-middle"></i> Edit' +
+                        "</button>" +
+                        '<button type="button" class="btn btn-danger btn-sm" onclick="deleteCuratedContent(\'' +
+                        row.cc_id +
+                        "')\">" +
+                        '<i class="ri-delete-bin-6-fill"></i> Delete' +
+                        "</button>" +
+                        "</div>";
+
+
                         }
                     } else {
                         buttons +=

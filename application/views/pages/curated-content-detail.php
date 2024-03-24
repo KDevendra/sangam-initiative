@@ -26,9 +26,9 @@
                </div>
                <div class="card-body form-steps">
                   <form class="vertical-navs-step" action="<?php echo base_url('submit-curated-content');?>" method="post" enctype="multipart/form-data" >
-                    <input type="hidden" name="cc_id" value="<?php if (!empty($curatedContentDetail->cc_id)) {
-                      echo  $curatedContentDetail->cc_id;
-                    }?>">
+                     <input type="hidden" name="cc_id" value="<?php if (!empty($curatedContentDetail->cc_id)) {
+                        echo  $curatedContentDetail->cc_id;
+                        }?>">
                      <div class="row gy-5">
                         <div class="col-lg-12">
                            <div class="px-lg-4">
@@ -49,19 +49,24 @@
                                     <div>
                                        <div class="row g-3">
                                           <?php if (isset($flag) && $flag === 'view') { ?>
-                                          <div class="col-sm-3">
+                                          <div class="col-sm-4">
                                              <label for="firstName" class="form-label">Status</label>
                                              <?php if ($curatedContentDetail->status === '1') { ?>
                                              <p><span class="badge bg-info">Pending</span></p>
-                                           <?php } else if ($curatedContentDetail->status === '2') { ?>
+                                             <?php } else if ($curatedContentDetail->status === '2') { ?>
                                              <p><span class="badge bg-success">Approved</span></p>
                                              <?php } else { ?>
                                              <p><span class="badge bg-danger">Rejected</span></p>
                                              <?php } ?>
                                           </div>
                                           <?php } ?>
-                                          <div class="col-sm-3">
-                                             <label for="firstName" class="form-label">Title <span class="text-danger">*</span></label>
+                                          <div class="col-sm-4">
+                                             <label for="firstName" class="form-label">
+                                                Title <?php if (isset($flag) && $flag === 'view') { ?>
+                                                <?php } else { ?>
+                                                <span class="text-danger">*</span>
+                                                <?php } ?>
+                                             </label>
                                              <?php if (isset($flag) && $flag === 'view') { ?>
                                              <p><?php echo $curatedContentDetail->title; ?></p>
                                              <?php } else { ?>
@@ -70,8 +75,29 @@
                                                 }; ?>" />
                                              <?php } ?>
                                           </div>
-                                          <div class="col-sm-3">
-                                             <label for="sub_title" class="form-label">Sub Title</label>
+                                          <div class="col-sm-4">
+                                             <label for="firstName" class="form-label">Title Link </label>
+                                             <?php if (isset($flag) && $flag === 'view') { ?>
+                                             <p>
+                                                <?php
+                                                   if (isset($curatedContentDetail->title_link) && !empty($curatedContentDetail->title_link)) {
+                                                       echo "<a href='" . $curatedContentDetail->title_link . "' target='_blank'>View Link</a>";
+                                                   }
+                                                   ?>
+                                             </p>
+                                             <?php } else { ?>
+                                             <input type="text"  class="form-control" id="title_link" name="title_link" placeholder="Enter Title Link" value="<?php if (isset($curatedContentDetail->title_link)) {
+                                                echo  $curatedContentDetail->title_link;
+                                                }; ?>" />
+                                             <?php } ?>
+                                          </div>
+                                          <div class="col-sm-4">
+                                             <label for="sub_title" class="form-label">
+                                                Sub Title <?php if (isset($flag) && $flag === 'view') { ?>
+                                                <?php } else { ?>
+                                                <span class="text-danger">*</span>
+                                                <?php } ?>
+                                             </label>
                                              <?php if (isset($flag) && $flag === 'view') { ?>
                                              <p><?php echo $curatedContentDetail->sub_title; ?></p>
                                              <?php } else { ?>
@@ -80,40 +106,64 @@
                                                 }; ?>" />
                                              <?php } ?>
                                           </div>
-                                          <div class="col-sm-3">
-                                             <label for="image" class="form-label">Image</label>
+                                          <div class="col-sm-4">
+                                             <label for="link" class="form-label">Custom</label>
                                              <?php if (isset($flag) && $flag === 'view') { ?>
-                                             <p>  <a target="_blank" href="<?php echo base_url('uploads/cc_image/').$curatedContentDetail->image;?>">View File</a></p>
+                                             <p><?php echo $curatedContentDetail->custom_title; ?></p>
                                              <?php } else { ?>
-                                             <input type="file"  class="form-control" id="attachment" name="attachment"  />
-                                             <?php if (isset($flag) && $flag === 'edit' && !empty($curatedContentDetail->image))
-                                             {
-                                            ?>
-                                            <a target="_blank" href="<?php echo base_url('uploads/cc_image/').$curatedContentDetail->image;?>">View File</a>
-                                              <?php
-                                           }?>
-                                             <?php } ?>
-                                          </div>
-                                          <div class="col-sm-3">
-                                             <label for="link" class="form-label">Link</label>
-                                             <?php if (isset($flag) && $flag === 'view') { ?>
-                                             <p><a target="_blank" href="<?php echo $curatedContentDetail->link; ?>">View Link</a> </p>
-                                             <?php } else { ?>
-                                             <input type="url"  class="form-control" id="link" name="link" placeholder="Enter Link URL"  value="<?php if (isset($curatedContentDetail->link)) {
-                                                echo  $curatedContentDetail->link;
+                                             <input type="text"  class="form-control" id="custom_title" name="custom_title" placeholder="Enter Link URL"  value="<?php if (isset($curatedContentDetail->custom_title)) {
+                                                echo  $curatedContentDetail->custom_title;
                                                 }; ?>" />
                                              <?php } ?>
                                           </div>
-                                          <div class="<?php if (isset($flag) && $flag === 'view') {
-                                             echo "col-sm-9";
-                                             } else {
-                                             echo "col-sm-12";
-                                             } ?>">
-                                             <label for="description" class="form-label">Description <span class="text-danger">*</span></label>
+                                          <div class="col-sm-4">
+                                             <label for="link" class="form-label">Custom Link</label>
                                              <?php if (isset($flag) && $flag === 'view') { ?>
-                                             <p><?php echo $curatedContentDetail->content; ?></p>
+                                             <p>
+                                                <?php
+                                                   if (isset($curatedContentDetail->custom_title_link) && !empty($curatedContentDetail->custom_title_link)) {
+                                                       echo "<a href='" . $curatedContentDetail->custom_title_link . "' target='_blank'>View Link</a>";
+                                                   }
+                                                   ?>
+                                             </p>
                                              <?php } else { ?>
-                                             <textarea name="content" id="content"><?php if (isset($curatedContentDetail->content)) {echo $curatedContentDetail->content;} ?></textarea>
+                                             <input type="text"  class="form-control" id="custom_title_link" name="custom_title_link" placeholder="Enter Link URL"  value="<?php if (isset($curatedContentDetail->custom_title_link)) {
+                                                echo  $curatedContentDetail->custom_title_link;
+                                                }; ?>" />
+                                             <?php } ?>
+                                          </div>
+                                          <div class="col-sm-4">
+                                             <label for="image" class="form-label">
+                                                Image <?php if (isset($flag) && $flag === 'view') { ?>
+                                                <?php } else { ?>
+                                                <span class="text-danger">*</span>
+                                                <?php } ?>
+                                             </label>
+                                             <?php if (isset($flag) && $flag === 'view') { ?>
+                                             <p>
+                                                <?php
+                                                if (isset($list->image) && strpos($list->image, "Error") !== false) {
+                                                    
+                                                        echo "Error: The image contains the substring 'Error'.";
+                                                    } elseif (isset($curatedContentDetail->image) && !empty($curatedContentDetail->image)) {
+
+                                                        $fileLink = base_url('uploads/cc_image/') . $curatedContentDetail->image;
+
+                                                        echo "<a href='" . $fileLink . "' target='_blank'>View File</a>";
+                                                    } else {
+
+                                                        echo "No image available.";
+                                                    }
+                                                   ?>
+                                             </p>
+                                             <?php } else { ?>
+                                             <input type="file"  class="form-control" id="cc_image" name="cc_image"  />
+                                             <?php if (isset($flag) && $flag === 'edit' && !empty($curatedContentDetail->image))
+                                                {
+                                                ?>
+                                             <a target="_blank" href="<?php echo base_url('uploads/cc_image/').$curatedContentDetail->image;?>">View File</a>
+                                             <?php
+                                                }?>
                                              <?php } ?>
                                           </div>
                                        </div>
@@ -136,13 +186,3 @@
       </div>
    </div>
 </div>
-<script>
-   ClassicEditor
-     .create( document.querySelector( '#content' ) )
-     .then( content => {
-       console.log( content );
-     } )
-     .catch( error => {
-       console.error( error );
-     } );
-</script>
