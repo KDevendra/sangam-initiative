@@ -151,6 +151,23 @@ class AdminController extends CI_Controller {
         $data["page_name"] = "theme/project-settings";
         $this->load->view("component/index", $data);
     }
+    public function expressionOfInterest() {
+        $data["title"] = "Expression of Interest: " . $this->projectTitle;
+        $data["page_name"] = "pages/expression-of-interest";
+        $data["checkEoIApplication"] = $this->BaseModel->getData('eoi_registration', ['user_id' => $this->session->login['user_id']]);
+
+        $canReapply = false;
+        foreach ($data["checkEoIApplication"]->result_array() as $application) {
+            if ($application['status'] == 3 && $application['is_active'] == 0) {
+                $canReapply = true;
+                break;
+            }
+        }
+        $data["canReapply"] = $canReapply;
+
+        $this->load->view("component/index", $data);
+    }
+
     public function managegallery() {
         $data["title"] = "Manage gallery | " . $this->projectTitle;
         $data["page_name"] = "pages/manage-gallery";
@@ -857,16 +874,25 @@ class AdminController extends CI_Controller {
         }
         $this->load->view("component/index", $data);
     }
-    public function eoiRegistration() {
+    public function eoiRegistration($application_id = null) {
         $this->checkUserLevel([2]);
         $data["title"] = "EoI Form : " . $this->projectTitle;
         $data["page_name"] = "pages/eoi-registration";
-        $existingData = $this->BaseModel->getData("eoi_registration", ["user_id" => $this->session->login["user_id"]]);
-        if ($existingData->num_rows() > 0) {
-            $data["userDetail"] = $this->BaseModel->getUserData($this->session->login["user_id"])->row();
+        if (!empty($application_id)) {
+            if ($application_id === "re-apply") {
+              $data["userDetail"] = $this->BaseModel->getData("login", ["user_id" => $this->session->login["user_id"]])->row();
+            } else {
+              $data['userDetail'] = $this->BaseModel->getEoIRegistration($application_id);
+            }
         } else {
-            $data["userDetail"] = $this->BaseModel->getData("login", ["user_id" => $this->session->login["user_id"]])->row();
+          $existingData = $this->BaseModel->getData("eoi_registration", ["user_id" => $this->session->login["user_id"]]);
+          if ($existingData->num_rows() > 0) {
+              $data["userDetail"] = $this->BaseModel->getUserData($this->session->login["user_id"])->row();
+          } else {
+              $data["userDetail"] = $this->BaseModel->getData("login", ["user_id" => $this->session->login["user_id"]])->row();
+          }
         }
+        // dd($data["userDetail"]);
         $data["userDetail"]->technological_category = isset($data["userDetail"]->technological_category) && !empty($data["userDetail"]->technological_category) ? json_decode($data["userDetail"]->technological_category, true) : [];
         $data["userDetail"]->technological_type_of_resource = isset($data["userDetail"]->technological_type_of_resource) && !empty($data["userDetail"]->technological_type_of_resource) ? json_decode($data["userDetail"]->technological_type_of_resource, true) : [];
         $data["userDetail"]->technological_details = isset($data["userDetail"]->technological_details) && !empty($data["userDetail"]->technological_details) ? json_decode($data["userDetail"]->technological_details, true) : [];
@@ -909,15 +935,19 @@ class AdminController extends CI_Controller {
         }
         $this->load->view("component/index", $data);
     }
-    public function eoiStatus() {
+    public function eoiStatus($application_id = null) {
         $this->checkUserLevel([2]);
         $data["title"] = "EoI Form : " . $this->projectTitle;
         $data["page_name"] = "pages/eoi-status";
-        $existingData = $this->BaseModel->getData("eoi_registration", ["user_id" => $this->session->login["user_id"]]);
-        if ($existingData->num_rows() > 0) {
-            $data["userDetail"] = $this->BaseModel->getUserData($this->session->login["user_id"])->row();
+        if (!empty($application_id)) {
+          $data['userDetail'] = $this->BaseModel->getEoIRegistration($application_id);
         } else {
-            $data["userDetail"] = $this->BaseModel->getData("login", ["user_id" => $this->session->login["user_id"]])->row();
+          $existingData = $this->BaseModel->getData("eoi_registration", ["user_id" => $this->session->login["user_id"]]);
+          if ($existingData->num_rows() > 0) {
+              $data["userDetail"] = $this->BaseModel->getUserData($this->session->login["user_id"])->row();
+          } else {
+              $data["userDetail"] = $this->BaseModel->getData("login", ["user_id" => $this->session->login["user_id"]])->row();
+          }
         }
         $data["userDetail"]->technological_category = isset($data["userDetail"]->technological_category) && !empty($data["userDetail"]->technological_category) ? json_decode($data["userDetail"]->technological_category, true) : [];
         $data["userDetail"]->technological_type_of_resource = isset($data["userDetail"]->technological_type_of_resource) && !empty($data["userDetail"]->technological_type_of_resource) ? json_decode($data["userDetail"]->technological_type_of_resource, true) : [];
@@ -1166,6 +1196,22 @@ class AdminController extends CI_Controller {
             echo json_encode(["status" => "error", "message" => "Internal server error."]);
         }
     }
+    public function getExpressionOfInterest() {
+        $this->checkUserLevel([2]);
+        try {
+            $eoi_registration_list = $this->BaseModel->getUserEoIApplicationList($this->session->login["user_id"]);
+            if ($eoi_registration_list !== null) {
+                $responseData = ["status" => "success", "data" => $eoi_registration_list];
+            } else {
+                $responseData = ["status" => "error", "message" => "Error fetching eoi_registration data."];
+            }
+            echo json_encode($responseData);
+        }
+        catch(Exception $e) {
+            log_message("error", $e->getMessage());
+            echo json_encode(["status" => "error", "message" => "Internal server error."]);
+        }
+    }
     public function getSuggestedUseCases() {
         $this->checkUserLevel([1]);
         try {
@@ -1386,6 +1432,7 @@ class AdminController extends CI_Controller {
                 // "contact_no" => $this->input->post("contact_no"),
                 // "date_of_birth" => $this->input->post("date_of_birth"),
                 // "experience" => $this->input->post("experience"),
+                "is_active"=> 1,
                 "previous_experience" => $this->input->post("previous_experience"), "achievements_recognitions" => $this->input->post("achievements_recognitions"), "title" => $this->input->post("title"), "category" => $this->input->post("category"), "strategic_vision" => $this->input->post("strategic_vision"), "objectives" => $this->input->post("objectives"), "project_goals" => $this->input->post("project_goals"), "contribution_to_project_goals" => $this->input->post("contribution_to_project_goals"), "technological_category" => $this->input->post("technological_category") !== null ? json_encode($this->input->post("technological_category")) : null, "technological_type_of_resource" => $this->input->post("technological_type_of_resource") !== null ? json_encode($this->input->post("technological_type_of_resource")) : null, "technological_details" => $this->input->post("technological_details") !== null ? json_encode($this->input->post("technological_details")) : null, "specification" => $this->input->post("specification") !== null ? json_encode($this->input->post("specification")) : null, "purpose" => $this->input->post("purpose") !== null ? json_encode($this->input->post("purpose")) : null, "alignment" => $this->input->post("alignment") !== null ? json_encode($this->input->post("alignment")) : null, "human_category" => $this->input->post("human_category") !== null ? json_encode($this->input->post("human_category")) : null, "human_type_of_resource" => $this->input->post("human_type_of_resource") !== null ? json_encode($this->input->post("human_type_of_resource")) : null, "human_details" => $this->input->post("human_details") !== null ? json_encode($this->input->post("human_details")) : null, "human_experience" => $this->input->post("human_experience") !== null ? json_encode($this->input->post("human_experience")) : null, "role" => $this->input->post("role") !== null ? json_encode($this->input->post("role")) : null, "extent_of_involvement" => $this->input->post("extent_of_involvement") !== null ? json_encode($this->input->post("extent_of_involvement")) : null, "human_alignment" => $this->input->post("human_alignment") !== null ? json_encode($this->input->post("human_alignment")) : null, "other_pertinent_facts" => $this->input->post("other_pertinent_facts"), "certification" => $this->input->post("certification"),
                 // "core_competency" => $this->input->post("core_competency"),
                 ];
@@ -1428,7 +1475,7 @@ class AdminController extends CI_Controller {
     public function postFinalSubmit() {
         try {
             $postData = ["status" => 1];
-            $cond = ["user_id" => $this->session->login["user_id"]];
+            $cond = ["application_id" => $this->input->post('application_id')];
             $query = $this->BaseModel->updateData("eoi_registration", $postData, $cond);
             if ($query) {
                 $response = ["message" => "Registration Completed."];
@@ -1625,6 +1672,26 @@ class AdminController extends CI_Controller {
             break;
         }
     }
+    public function userExpressionOfInterestAction($action = null, $application_id = null) {
+        $this->checkUserLevel([2]);
+        $data["title"] = $action . "EoI Registration Action : " . $this->projectTitle;
+        switch ($action) {
+            case "delete":
+                $query = $this->BaseModel->deleteData("eoi_registration", ["application_id" => $application_id]);
+                if ($query) {
+                    $response = ["status" => "success", "message" => "The eoi application has been successfully deleted."];
+                } else {
+                    $response = ["status" => "error", "message" => "Unable to delete the eoi application. Please try again later."];
+                }
+                if ($this->input->is_ajax_request()) {
+                    $this->output->set_content_type("application/json");
+                    echo json_encode($response);
+                }
+            break;
+            default:
+            break;
+        }
+    }
     public function postSendMessage() {
         try {
             $response = [];
@@ -1733,7 +1800,7 @@ class AdminController extends CI_Controller {
         $location = $this->input->post('location');
         $config["upload_path"] = "uploads/gallery/";
         $config["allowed_types"] = "gif|jpg|jpeg|png";
-        $config["max_size"] = 2048;
+        $config["max_size"] = 5048;
         $this->upload->initialize($config);
         if ($this->upload->do_upload("file")) {
             $data = $this->upload->data();

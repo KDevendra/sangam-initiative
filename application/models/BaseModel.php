@@ -146,6 +146,14 @@ class BaseModel extends CI_Model {
         $query = $this->db->get();
         return $query;
     }
+    public function getEoIRegistration($application_id) {
+        $this->db->select('*');
+        $this->db->from('login');
+        $this->db->join('eoi_registration', 'login.user_id = eoi_registration.user_id');
+        $this->db->where('eoi_registration.application_id', $application_id);
+        $query = $this->db->get();
+        return $query->row();
+    }
     public function getEventApplicationData($user_id) {
         $this->db->select('*');
         $this->db->from('login');
@@ -173,6 +181,16 @@ class BaseModel extends CI_Model {
         }
         $query = $this->db->get();
         return $query->result();
+    }
+    public function getUserEoIApplicationList($user_id = null) {
+        $this->db->select('*');
+        $this->db->from('login');
+        $this->db->join('eoi_registration', 'login.user_id = eoi_registration.user_id');
+        if ($user_id !== null) {
+            $this->db->where('eoi_registration.user_id', $user_id);
+        }
+        $query = $this->db->get();
+        return $query->result_array();
     }
     public function getSubmitedUseCasesList($status = null) {
         $this->db->select('*');

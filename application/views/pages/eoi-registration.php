@@ -981,7 +981,7 @@
                                                                <div class="d-flex align-items-start gap-3 mt-4">
                                                               <button type="button" class="btn btn-light btn-label goToPreviousStep"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Previous Step</button>
                                                                   <button type="button" onclick="downloadApplication('<?php echo $userDetail->application_id;?>')" class="btn btn-info right ms-auto" style="display:block;"><i class="ri-download-2-line"></i> Download PDF</button>
-
+                                                                  <input type="hidden" name="application_id" id="application_id" value="<?php echo $userDetail->application_id;?>">
                                                               <button type="button" class="btn btn-danger btn-label right ms-auto"  id="finalSubmit" ><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Final Submit</button>
                                                            </div>
                                                                <?php } else {
@@ -1216,7 +1216,7 @@
          }
       });
       $('#finalSubmit').click(function() {
-
+        var application_id = $("#application_id").val();
          Swal.fire({
             title: "Are you sure?",
             text: "By clicking 'I'm Understand', you will submit the form.",
@@ -1232,6 +1232,7 @@
                $.ajax({
                   url: "<?php echo base_url('post-final-submit'); ?>",
                   type: "post",
+                  data : {application_id:application_id},
                   beforeSend: showLoader,
                   success: function(response) {
                      hideLoader();

@@ -208,29 +208,46 @@ function hideLoader() {
 var $ = jQuery.noConflict();
 $(document).ready(function () {
     var dataTable = initializeDataTable();
-    var myDropzone = new Dropzone("#my-awesome-dropzone", {
-        url: "<?php echo base_url('AdminController/upload_image');?>",
-        maxFilesize: 5,
-        acceptedFiles: "image/*",
-        addRemoveLinks: true,
-        dictDefaultMessage: "Drop images here or click to upload",
-        autoProcessQueue: false,
-        init: function () {
-            var dropzone = this;
-            document.getElementById("uploadButton").addEventListener("click", function () {
-                dropzone.processQueue();
-            });
-            this.on("sending", function (file, xhr, formData) {
-                formData.append("event_name", document.getElementById("event_name").value);
-                formData.append("location", document.getElementById("location").value);
-            });
-            this.on("success", function (file, response) {
-                console.log(response);
-                dropzone.removeFile(file);
-            });
-            this.on("removedfile", function (file) {});
-        },
-    });
+var myDropzone = new Dropzone("#my-awesome-dropzone", {
+    url: "<?php echo base_url('AdminController/upload_image');?>",
+    maxFilesize: 5,
+    acceptedFiles: "image/*",
+    addRemoveLinks: true,
+    dictDefaultMessage: "Drop images here or click to upload",
+    autoProcessQueue: false,
+    init: function () {
+        var dropzone = this;
+
+        // Add event listener to upload button
+        document.getElementById("uploadButton").addEventListener("click", function () {
+            dropzone.processQueue();
+        });
+
+        // Append additional data to the form data before sending
+        this.on("sending", function (file, xhr, formData) {
+            formData.append("event_name", document.getElementById("event_name").value);
+            formData.append("location", document.getElementById("location").value);
+        });
+
+        // Success event handler
+        this.on("success", function (file, response) {
+            console.log(response);
+            dropzone.removeFile(file);
+        });
+
+        // Error event handler
+        this.on("error", function (file, errorMessage) {
+            // Display error message using alert
+            alert(errorMessage);
+        });
+
+        // Removed file event handler
+        this.on("removedfile", function (file) {
+            // Do something when file is removed
+        });
+    }
+});
+
     $("#event_name").change(function () {
         var selectedEvent = $(this).val();
         var venueInput = $("#location");
