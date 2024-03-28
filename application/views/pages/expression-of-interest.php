@@ -64,7 +64,7 @@
        window.location.href = redirectUrl;
    }
    function editExpressionOfInterest(application_id) {
-       var redirectUrl = "<?php echo base_url('eoi-registration/'); ?>" + application_id;
+       var redirectUrl = "<?php echo base_url('eoi-registration/edit/'); ?>" + application_id;
        window.location.href = redirectUrl;
    }
    function downloadApplication(application_id) {

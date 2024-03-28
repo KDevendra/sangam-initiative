@@ -27,6 +27,9 @@
                <div class="card-body form-steps">
                   <form class="vertical-navs-step" action="<?php echo base_url('submit-eoi-registration'); ?>" method="post" enctype="multipart/form-data">
                      <input type="hidden" name="registration_step" />
+                     <?php if (isset($re_apply)): ?>
+                        <input type="hidden" name="re_apply" value="re_apply">
+                     <?php endif; ?>
                      <div class="row gy-5">
                         <div class="col-lg-4">
                            <div class="nav flex-column custom-nav nav-pills" role="tablist" aria-orientation="vertical">

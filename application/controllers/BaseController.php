@@ -39,6 +39,11 @@ class BaseController extends CI_Controller {
         $data["galleryImages"] = $this->db->order_by('id', 'DESC')->get("gallery_images")->result_array();
         $this->load->view('base/gallery', $data);
     }
+    public function mediaContent() {
+        $data['title'] = "Media Content | " . $this->projectTitle;
+        $data["media"] = $this->db->order_by('id', 'DESC')->get("media")->result_array();
+        $this->load->view('base/media-content', $data);
+    }
     public function whyNow() {
         $data['title'] = "why-now | " . $this->projectTitle;
         $this->load->view('base/why-now', $data);

@@ -255,7 +255,7 @@
                                  <li><a href="<?php echo base_url('registration'); ?>">Submit Response</a></li>
                               </ul>
                            </li>
-
+                           <li class="menu-item"><a href="<?php echo base_url('media-content')?>">Media</a></li>
                            <li class="menu-item"><a href="javascript:void(0)" class="contactUsBtn">Contact Us</a></li>
                         </ul>
                      </nav>
